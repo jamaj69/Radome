@@ -7,6 +7,8 @@ Each band has a specific antenna, preselector, limiter, LNA, converter when need
 \]
 The system performs three reductions: band-level detection, face-level fusion and global radome fusion. Raw samples remain local and are preserved around triggers. Normal network traffic consists of event descriptors, telemetry, summaries and selected I/Q captures rather than permanent aggregate ADC streaming.
 
+Every antenna assigned to a band has its own shielded acquisition module containing at least one ADC and one band ASIC. The modules are separated by conductive partitions, RF gaskets and controlled cable/fibre feedthroughs. A central face module, the FFASIC, receives events from all band modules, performs intra-face correlation and interfaces with timing, thermal monitoring, power and the optical link.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{fig03_modulo_face.png}
@@ -26,3 +28,5 @@ Cada banda possui antena específica, pré-seletor, limitador, LNA, conversor qu
 \text{antena}\rightarrow\text{front-end RF}\rightarrow\text{ADC}\rightarrow\text{DDC/PFB/FFT}\rightarrow\text{detector}\rightarrow\text{evento}.
 \]
 O sistema executa três reduções: detecção na banda, fusão na face e fusão global do radome. As amostras brutas permanecem locais e são preservadas ao redor de gatilhos. O tráfego normal contém descritores, telemetria, resumos e capturas I/Q selecionadas, não o streaming permanente de todos os ADCs.
+
+Cada antena atribuída a uma faixa possui seu próprio módulo de aquisição blindado, contendo pelo menos um ADC e um ASIC da faixa. Os módulos são separados por partições condutivas, juntas RF e passagens controladas para cabos e fibras. Um módulo central da face, o FFASIC, recebe eventos de todos os módulos de faixa, executa a correlação interna e se conecta ao sincronismo, monitoramento térmico, energia e enlace óptico.

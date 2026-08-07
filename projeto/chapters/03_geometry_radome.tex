@@ -9,6 +9,17 @@ with Euler consistency $V-E+F=2$. For preliminary radius $R=\SI{3.1445}{m}$, the
 
 The mechanical skeleton, dielectric panels and internal RF modules have different but coordinated geometries. A face is a mechanical and computational sector, not an electromagnetically isolated region. Angular overlap between neighbouring faces is required for calibration, interpolation and direction estimation.
 
+The nominal triangular face uses a 2 m side dimension. A Yagi (fishbone) antenna is mounted outside the dielectric face and supported by a mast fixed at the triangular base. The mast interface must include a sealed RF feedthrough, mechanical load transfer and lightning/EMC treatment. The external antenna is assigned to a defined band; it is not a universal radiator.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig11_face_yagi_camadas.pdf}
+\caption{Two-metre triangular face with external Yagi, mast support, shielded band modules, central face module and internal structural joints.}
+\label{fig:face-yagi}
+\end{figure}
+
+The internal joints form continuous load paths between the triangular frame members and the neighbouring faces. Sealed structural seams, local gussets and an internal ring or node plate transfer wind, vibration and maintenance loads without relying on the dielectric skin alone. The joint design must be verified by structural analysis and environmental tests.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{fig02_zonamento_radome.png}
@@ -24,3 +35,14 @@ V=32,\qquad E=90,\qquad F=60,
 com consistência de Euler $V-E+F=2$. Para raio preliminar $R=\SI{3.1445}{m}$, o envelope fechado possui diâmetro $D=2R=\SI{6.2890}{m}$. O raio não deve ser confundido com a altura de uma estrutura fechada.
 
 O esqueleto mecânico, os painéis dielétricos e os módulos RF internos possuem geometrias diferentes, porém coordenadas. Uma face é um setor mecânico e computacional, não uma região eletromagneticamente isolada. A sobreposição angular entre faces vizinhas é necessária para calibração, interpolação e estimação de direção.
+
+A face triangular nominal possui lado de 2 m. Uma antena Yagi (``espinha de peixe'') é montada externamente à face dielétrica e sustentada por uma haste fixada na base triangular. A interface da haste deve conter passagem RF vedada, transferência mecânica de carga e tratamento de descargas e EMC. A antena externa é atribuída a uma faixa definida; não é um radiador universal.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig11_face_yagi_camadas.pdf}
+\caption{Face triangular de 2 m com Yagi externa, haste de sustentação, módulos blindados por faixa, módulo central da face e junções estruturais internas.}
+\label{fig:face-yagi-pt}
+\end{figure}
+
+As junções internas formam caminhos contínuos de carga entre os membros da estrutura triangular e as faces vizinhas. Costuras estruturais vedadas, reforços locais e um anel ou placa nodal interna transferem cargas de vento, vibração e manutenção sem depender apenas da pele dielétrica. O conjunto deve ser verificado por análise estrutural e ensaios ambientais.
