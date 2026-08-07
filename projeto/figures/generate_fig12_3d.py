@@ -68,17 +68,29 @@ for end, color, label in [(offset + np.array([0.0, 0.0, -1.0]), "#3c8c83", "fibr
     ax.plot([central[0], end[0]], [central[1], end[1]], [central[2], end[2]], color=color, linewidth=2)
     ax.text(*end, label, fontsize=9, color=color)
 
-# External VHF Yagi: mast from the triangular base and boom with directors.
+# External VHF Yagi: mast, longitudinal boom, reflector, folded driven element and directors.
 mast_base = offset + np.array([0.0, -0.15, 0.0])
-mast_top = offset + np.array([0.0, -0.15, 2.15])
+mast_top = offset + np.array([0.0, -0.35, 2.35])
 ax.plot([mast_base[0], mast_top[0]], [mast_base[1], mast_top[1]], [mast_base[2], mast_top[2]], color="#754b2b", linewidth=4)
-boom_start = offset + np.array([-1.05, -0.15, 2.15])
-boom_end = offset + np.array([1.25, -0.15, 2.15])
-ax.plot([boom_start[0], boom_end[0]], [boom_start[1], boom_end[1]], [boom_start[2], boom_end[2]], color="#754b2b", linewidth=4)
-for x in np.linspace(-0.8, 0.95, 6):
-    top = offset + np.array([x, -0.15, 2.15])
-    ax.plot([top[0], top[0]], [top[1] - 0.34, top[1] + 0.34], [top[2], top[2]], color="#754b2b", linewidth=2)
-ax.text(*(offset + np.array([0.0, -1.05, 2.65])), "VHF YAGI / ANTENA VHF", ha="center", fontsize=10, color="#754b2b", weight="bold")
+boom_start = offset + np.array([-1.45, -0.35, 2.35])
+boom_end = offset + np.array([1.55, -0.35, 2.35])
+ax.plot([boom_start[0], boom_end[0]], [boom_start[1], boom_end[1]], [boom_start[2], boom_end[2]], color="#6d7074", linewidth=5)
+# Reflector, driven folded loop and tapered directors.
+reflector = offset + np.array([-1.25, -0.35, 2.35])
+ax.plot([reflector[0], reflector[0]], [reflector[1] - 0.63, reflector[1] + 0.63], [reflector[2], reflector[2]], color="#9a6b2f", linewidth=4)
+driven_x = offset[0] - 0.35
+loop_y = offset[1] - 0.35
+loop_z = offset[2] + 2.35
+loop_y_values = [loop_y - 0.5, loop_y - 0.62, loop_y - 0.62, loop_y - 0.5, loop_y + 0.5, loop_y + 0.62, loop_y + 0.62, loop_y + 0.5]
+loop_z_values = [loop_z, loop_z + 0.18, loop_z + 0.18, loop_z, loop_z, loop_z + 0.18, loop_z + 0.18, loop_z]
+ax.plot([driven_x] * len(loop_y_values), loop_y_values, loop_z_values, color="#b9792e", linewidth=3)
+for index, x in enumerate(np.linspace(-0.05, 1.35, 5)):
+    top = offset + np.array([x, -0.35, 2.35])
+    half_span = 0.52 - index * 0.055
+    ax.plot([top[0], top[0]], [top[1] - half_span, top[1] + half_span], [top[2], top[2]], color="#6d7074", linewidth=2.5)
+# Clamp and short feed stalk, matching a practical external mounting arrangement.
+ax.plot([offset[0] - 0.1, offset[0] - 0.1], [offset[1] - 0.35, offset[1] - 0.35], [offset[2] + 1.9, offset[2] + 2.35], color="#c08a32", linewidth=5)
+ax.text(*(offset + np.array([0.05, -1.05, 2.85])), "VHF YAGI / ANTENA VHF", ha="center", fontsize=10, color="#754b2b", weight="bold")
 
 # Dimension annotation for the 2 m triangular side.
 p0, p1 = base[0], base[1]
