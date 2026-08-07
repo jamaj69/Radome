@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs,longtable,array}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage[numbers,sort&compress]{natbib}
+
+\graphicspath{{figures/}}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black,pdftitle={RADOME V1 -- Technical Project}}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=2pt,topsep=4pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{RADOME V1}
+\rhead{Technical Project / Projeto Técnico}
+\cfoot{\thepage}
+\setlength{\headheight}{14pt}
+
+\newcommand{\SI}[2]{\ensuremath{#1\,\mathrm{#2}}}
+\newcommand{\radome}{\textsc{RADOME}}
+
+\title{\textbf{RADOME V1}\\[0.5em]\large Distributed Multiband Conformal Radome Network\\Rede Distribuída de Radomes Conformais Multifaixa}
+\author{Technical and Scientific Project / Projeto Técnico e Científico}
+\date{August 2026 / Agosto de 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This project defines a distributed passive electromagnetic sensing network based on geodesic and conformal radomes. It integrates multiband vector reception, opportunistic illumination, local event processing, precise timing, end-to-end calibration, passive multistatic localization and resilient mountain infrastructure. The document is conceptual and intended for research, simulation, prototyping and experimental validation.
+\end{abstract}
+
+\begin{center}
+\textbf{Resumo}
+\end{center}
+Este projeto define uma rede distribuída de sensoriamento eletromagnético passivo baseada em radomes geodésicos e conformais. Integra recepção vetorial multifaixa, iluminação de oportunidade, processamento local de eventos, sincronização precisa, calibração ponta a ponta, localização passiva multiestática e infraestrutura resiliente de montanha. O documento é conceitual e destina-se a pesquisa, simulação, prototipagem e validação experimental.
+
+\tableofcontents
+\listoffigures
+
+\input{chapters/01_scope}
+\input{chapters/02_system_architecture}
+\input{chapters/03_geometry_radome}
+\input{chapters/04_multiband_polarimetry}
+\input{chapters/05_electronics_processing}
+\input{chapters/06_timing_localization}
+\input{chapters/07_passive_radar}
+\input{chapters/08_infrastructure_validation}
+\input{chapters/09_literature_review}
+\input{chapters/10_conclusion}
+\appendix
+\input{chapters/11_detection_record}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

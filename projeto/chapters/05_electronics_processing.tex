@@ -1,0 +1,28 @@
+\chapter{Distributed Electronics and Event Processing / Eletrônica Distribuída e Processamento de Eventos}
+
+\section*{English}
+Each band has a specific antenna, preselector, limiter, LNA, converter when needed, coherent ADC, FPGA/ASIC and circular memory. The local chain is:
+\[
+\text{antenna}\rightarrow\text{RF front-end}\rightarrow\text{ADC}\rightarrow\text{DDC/PFB/FFT}\rightarrow\text{detector}\rightarrow\text{event}.
+\]
+The system performs three reductions: band-level detection, face-level fusion and global radome fusion. Raw samples remain local and are preserved around triggers. Normal network traffic consists of event descriptors, telemetry, summaries and selected I/Q captures rather than permanent aggregate ADC streaming.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig03_modulo_face.png}
+\caption{Triangular RF face module / Módulo triangular de face RF.}
+\label{fig:face}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig06_cadeia_rf.png}
+\caption{RF chain and edge processing / Cadeia RF e processamento de borda.}
+\label{fig:rfchain}
+\end{figure}
+
+\section*{Português}
+Cada banda possui antena específica, pré-seletor, limitador, LNA, conversor quando necessário, ADC coerente, FPGA/ASIC e memória circular. A cadeia local é:
+\[
+\text{antena}\rightarrow\text{front-end RF}\rightarrow\text{ADC}\rightarrow\text{DDC/PFB/FFT}\rightarrow\text{detector}\rightarrow\text{evento}.
+\]
+O sistema executa três reduções: detecção na banda, fusão na face e fusão global do radome. As amostras brutas permanecem locais e são preservadas ao redor de gatilhos. O tráfego normal contém descritores, telemetria, resumos e capturas I/Q selecionadas, não o streaming permanente de todos os ADCs.

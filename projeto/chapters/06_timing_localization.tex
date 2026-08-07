@@ -1,0 +1,44 @@
+\chapter{Timing, Calibration and Localization / Sincronização, Calibração e Localização}
+
+\section*{English}
+White Rabbit or IEEE 1588 HA can distribute deterministic time and frequency over fibre, but timing synchronization is not automatically carrier-phase coherence at Ka. The phase uncertainty is:
+\[
+\sigma_\phi=2\pi f\sigma_t.
+\]
+Every sample must be linked to a common epoch and corrected for measured channel delay:
+\[
+t_{i,j,n}=T_{\mathrm{epoch}}+\frac{n}{f_{s,i,j}}+\delta_{i,j},\qquad t_i^\ast=t_i-\tau_i(f,T).
+\]
+For an illuminator $T$, target $x$ and receiver $R_i$, the bistatic excess path is:
+\[
+\Delta\rho_i=\lVert x-T\rVert+\lVert x-R_i\rVert-\lVert T-R_i\rVert=c\Delta\tau_i.
+\]
+AOA, TDOA and FDOA are fused with covariance, propagation models and geometric dilution of precision.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig07_sincronizacao.png}
+\caption{Timing and uncertainty budget / Sincronização e orçamento de incerteza.}
+\label{fig:timing}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig08_geometria_bistatica.png}
+\caption{Bistatic geometry / Geometria biestática.}
+\label{fig:bistatic}
+\end{figure}
+
+\section*{Português}
+White Rabbit ou IEEE 1588 HA pode distribuir tempo e frequência determinísticos por fibra, mas sincronização temporal não equivale automaticamente à coerência de fase da portadora em Ka. A incerteza de fase é:
+\[
+\sigma_\phi=2\pi f\sigma_t.
+\]
+Cada amostra deve ser associada a uma época comum e corrigida pelo atraso medido da cadeia:
+\[
+t_{i,j,n}=T_{\mathrm{epoch}}+\frac{n}{f_{s,i,j}}+\delta_{i,j},\qquad t_i^\ast=t_i-\tau_i(f,T).
+\]
+Para iluminador $T$, alvo $x$ e receptor $R_i$, o excesso de caminho biestático é:
+\[
+\Delta\rho_i=\lVert x-T\rVert+\lVert x-R_i\rVert-\lVert T-R_i\rVert=c\Delta\tau_i.
+\]
+AOA, TDOA e FDOA são fundidos com covariância, modelos de propagação e diluição geométrica de precisão.
