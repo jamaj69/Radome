@@ -39,7 +39,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Este documento consolida os documentos conceituais, arquitetônicos, eletrônicos, de infraestrutura e de revisão de literatura disponíveis no projeto Radome. A proposta descreve uma rede distribuída de radomes geodésicos instalados em sítios elevados, com recepção passiva multifaixa, aquisição polarimétrica, processamento local orientado a eventos, sincronização temporal distribuída e fusão estatística para radiogoniometria, localização e rastreamento. O texto preserva os limites físicos identificados na revisão: não existe uma antena única adequada de HF a Ka, sincronismo temporal não equivale automaticamente a coerência de fase em Ka e nenhuma precisão operacional pode ser declarada sem orçamento de enlace, calibração e validação de campo.
+Este documento consolida os documentos conceituais, arquitetônicos, eletrônicos, de infraestrutura e de revisão de literatura disponíveis no projeto Radome. A proposta descreve uma rede distribuída de radomes geodésicos instalados em sítios elevados, com abertura híbrida, antenas Yagi externas para VHF, antenas menores para UHF e micro-ondas, aquisição polarimétrica, processamento local orientado a eventos, sincronização temporal distribuída e fusão estatística para radiogoniometria, localização e rastreamento. O projeto mantém cadeias próprias por família de antenas e uma interface comum de sincronismo, calibração e fusão; nenhuma precisão operacional pode ser declarada sem orçamento de enlace, calibração e validação de campo.
 \end{abstract}
 
 \tableofcontents
@@ -108,7 +108,7 @@ A solução mecânica combina esqueleto triangulado, painéis dielétricos e mó
 
 \chapter{Abertura multifaixa e polarimetria}
 
-A proposta revisada abandona a ideia de uma antena universal de 3 MHz a 40 GHz. Cada família espectral possui elementos, filtros, conversores e taxas de amostragem próprios.
+A proposta revisada utiliza uma abertura híbrida: uma Yagi externa direcional para VHF, antenas menores e tiles para UHF e micro-ondas, e sensores próprios para HF. Cada família espectral possui elementos, filtros, conversores e taxas de amostragem próprios, integrados pela estrutura e pelos serviços comuns da face.
 
 \begin{figure}[H]
 \centering
