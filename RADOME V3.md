@@ -30,6 +30,16 @@ O V3, entretanto, faz quatro mudanças fundamentais:
 3. substitui o conceito de streaming permanente dos ADCs por **processamento distribuído orientado a eventos**;
 4. introduz formalmente uma arquitetura de sincronização baseada em **referência atômica central, timestamping por hardware e calibração contínua dos atrasos dos canais**.
 
+```mermaid
+flowchart LR
+	A[Fontes RF e iluminadores] --> B[60 faces receptoras]
+	B --> C[Processamento local e buffers]
+	C --> D[Macrofaces estruturais]
+	D --> E[RASIC redundante]
+	E --> F[Fusão temporal e espacial]
+	F --> G[Eventos, trilhas e telemetria]
+```
+
 ---
 
 # 2. Geometria fundamental
@@ -40,23 +50,23 @@ O V3 parte de um icosaedro regular.
 
 Um icosaedro possui:
 
-\[
+$$
 V_0=12,\qquad
 E_0=30,\qquad
 F_0=20.
-\]
+$$
 
 Cada uma das 20 faces triangulares originais é subdividida em três faces.
 
 Para uma macroface definida pelos vértices
 
-\[
+$$
 \mathbf v_1,\mathbf v_2,\mathbf v_3,
-\]
+$$
 
 define-se um novo vértice radial:
 
-\[
+$$
 \mathbf c=
 R
 \frac{
@@ -64,27 +74,27 @@ R
 }{
 \left\|\mathbf v_1+\mathbf v_2+\mathbf v_3\right\|
 }.
-\]
+$$
 
 A antiga face é então substituída pelas três faces:
 
-\[
+$$
 (\mathbf v_1,\mathbf v_2,\mathbf c),
-\]
+$$
 
-\[
+$$
 (\mathbf v_2,\mathbf v_3,\mathbf c),
-\]
+$$
 
-\[
+$$
 (\mathbf v_3,\mathbf v_1,\mathbf c).
-\]
+$$
 
 Portanto,
 
-\[
+$$
 20\times3=60
-\]
+$$
 
 faces receptoras.
 
@@ -92,37 +102,48 @@ Essa construção elimina a inconsistência existente no V2, no qual inicialment
 
 No V3 existem:
 
-\[
+$$
 V=12+20=32
-\]
+$$
 
 vértices,
 
-\[
+$$
 E=30+60=90
-\]
+$$
 
 arestas e
 
-\[
+$$
 F=60
-\]
+$$
 
 faces.
 
 A consistência topológica pode ser verificada diretamente pela relação de Euler:
 
-\[
+$$
 V-E+F
 =
 32-90+60
 =
 2.
-\]
+$$
 
 Portanto, trata-se de uma superfície poliédrica fechada e geometricamente consistente.
 
 A malha resultante pode ser descrita como uma **malha triakis-icosaédrica parametrizada de 60 faces**.
+
+```mermaid
+flowchart TB
+	I[Icosaedro regular<br/>20 faces] --> M[Subdivisão de cada macroface]
+	M --> F1[Face receptora 1]
+	M --> F2[Face receptora 2]
+	M --> F3[Face receptora 3]
+	F1 --> R[60 faces RF no total]
+	F2 --> R
+	F3 --> R
+```
 
 ---
 
@@ -130,17 +151,17 @@ A malha resultante pode ser descrita como uma **malha triakis-icosaédrica param
 
 O V3 preserva aproximadamente o envelope dimensional do V2:
 
-\[
+$$
 R=3,1445\text{ m}
-\]
+$$
 
 e portanto:
 
-\[
+$$
 D=2R
 =
 6,2890\text{ m}.
-\]
+$$
 
 Mas há uma correção importante:
 
@@ -148,9 +169,9 @@ Mas há uma correção importante:
 
 Consequentemente, uma estrutura fechada possui também aproximadamente:
 
-\[
+$$
 H=6,289\text{ m}.
-\]
+$$
 
 O valor de 3,1445 m corresponde ao **raio**, não à altura de uma estrutura contendo as 60 faces.
 
@@ -164,51 +185,51 @@ Se posteriormente for necessária uma construção exclusivamente hemisférica a
 
 Adotando:
 
-\[
+$$
 R=3,1445\text{ m},
-\]
+$$
 
 a aresta entre dois vértices originais do icosaedro passa a ser aproximadamente:
 
-\[
+$$
 L_b=3,3063\text{ m}.
-\]
+$$
 
 As novas arestas que ligam o centro radializado da macroface aos vértices originais possuem aproximadamente:
 
-\[
+$$
 L_s=2,0152\text{ m}.
-\]
+$$
 
 Portanto, cada uma das 60 faces é um triângulo isósceles aproximadamente:
 
-\[
+$$
 2,015\text{ m}\times
 2,015\text{ m}\times
 3,306\text{ m}.
-\]
+$$
 
 Isso é especialmente conveniente porque preserva a dimensão característica de aproximadamente **2 metros** utilizada no projeto anterior, sem exigir pirâmides tetraédricas extremamente salientes.
 
 A área plana correspondente a cada abertura estrutural é aproximadamente:
 
-\[
+$$
 A_p\approx1,905\text{ m}^2.
-\]
+$$
 
 A área estrutural plana total é:
 
-\[
+$$
 A_{60}\approx114,3\text{ m}^2.
-\]
+$$
 
 Caso o painel externo seja moldado seguindo exatamente a superfície esférica de raio \(R\), cada setor ocupa aproximadamente:
 
-\[
+$$
 A_s=
 \frac{4\pi R^2}{60}
 \approx2,071\text{ m}^2.
-\]
+$$
 
 ---
 
@@ -224,13 +245,13 @@ As 20 macrofaces originais formam 20 módulos estruturais.
 
 Cada macroface contém exatamente três faces receptoras:
 
-\[
+$$
 20\ \text{macrofaces}
 \times
 3\ \text{faces RF}
 =
 60\ \text{faces RF}.
-\]
+$$
 
 ### Superfície aerodinâmica
 
@@ -238,9 +259,9 @@ Os painéis externos não precisam ser planos.
 
 Cada abertura pode receber um painel PRFV ligeiramente curvo, moldado segundo:
 
-\[
+$$
 x^2+y^2+z^2=R^2.
-\]
+$$
 
 Dessa forma, o esqueleto continua sendo geodésico e triangulado, enquanto o envelope meteorológico aproxima-se muito mais de uma esfera contínua.
 
@@ -260,27 +281,27 @@ No V3 cada célula é um **tronco piramidal radial**.
 
 Se o raio externo é \(R_o\), define-se uma superfície interna:
 
-\[
+$$
 R_i=kR_o,
-\]
+$$
 
 onde, preliminarmente,
 
-\[
+$$
 0,50\le k\le0,65.
-\]
+$$
 
 Como referência inicial pode-se utilizar:
 
-\[
+$$
 k\approx0,55.
-\]
+$$
 
 Assim:
 
-\[
+$$
 R_i\approx1,73\text{ m}.
-\]
+$$
 
 Cada face externa e sua correspondente face interna são geometricamente semelhantes.
 
@@ -333,13 +354,13 @@ O V3 preserva o conceito, mas transforma cada face em uma unidade multicanal.
 
 Uma configuração inicial é:
 
-\[
+$$
 3\ \text{faixas espectrais}
 \times
 2\ \text{polarizações}
 =
 6\ \text{cadeias de aquisição por face}.
-\]
+$$
 
 Isso não constitui um limite.
 
@@ -347,7 +368,7 @@ Arrays de micro-ondas ou ondas milimétricas poderão utilizar significativament
 
 A estrutura lógica mínima passa a ser:
 
-\[
+$$
 \text{Antena}
 \rightarrow
 \text{Pré-seletor}
@@ -361,11 +382,20 @@ A estrutura lógica mínima passa a ser:
 ADC
 \rightarrow
 ASIC/FPGA.
-\]
+$$
 
 Portanto, **não existe apenas um ADC e um ASIC por face**.
 
 Existem múltiplas cadeias simultâneas e independentes de conversão e processamento.
+
+```mermaid
+flowchart LR
+	A[Antena por banda] --> B[Preseletor e LNA]
+	B --> C[Conversor ou amostragem direta]
+	C --> D[ADC coerente]
+	D --> E[ASIC/FPGA local]
+	E --> F[Evento e buffer circular]
+```
 
 ---
 
@@ -377,15 +407,15 @@ A FPU é responsável por todos os dados provenientes daquela direção.
 
 Sua arquitetura inclui:
 
-\[
+$$
 N_\text{ADC}\geq 2
-\]
+$$
 
 e, na configuração multiespectral completa, potencialmente:
 
-\[
+$$
 N_\text{ADC}=6,\ 8,\ 12,\ldots
-\]
+$$
 
 dependendo da quantidade de bandas, polarizações e elementos de array.
 
@@ -401,7 +431,7 @@ O FPGA/ASIC não executa simplesmente uma FFT.
 
 Cada canal realiza uma cadeia semelhante a:
 
-\[
+$$
 ADC
 \rightarrow
 DDC
@@ -413,7 +443,7 @@ FFT
 detecção
 \rightarrow
 extração de características.
-\]
+$$
 
 Dependendo do tipo de sinal, o ASIC poderá calcular localmente:
 
@@ -443,12 +473,12 @@ Isso permite que a face processe o fluxo em tempo real sem transmitir permanente
 
 Para cada canal:
 
-\[
+$$
 M_i=
 \frac{
 f_{s,i}b_iT_b
 }{8},
-\]
+$$
 
 onde:
 
@@ -458,33 +488,33 @@ onde:
 
 Para toda a face:
 
-\[
+$$
 M_\text{face}
 =
 \sum_iM_i.
-\]
+$$
 
 Exemplo meramente dimensional:
 
 se seis canais produzissem simultaneamente
 
-\[
+$$
 1\text{ GS/s}\times12\text{ bits}
-\]
+$$
 
 e fossem mantidos durante:
 
-\[
+$$
 T_b=100\text{ ms},
-\]
+$$
 
 seriam necessários aproximadamente:
 
-\[
+$$
 M_\text{face}
 =
 0,9\text{ GB}.
-\]
+$$
 
 Buffers DDR/HBM da ordem de vários gigabytes permitem, portanto, preservar janelas significativas sem enviar o fluxo continuamente ao núcleo.
 
@@ -494,16 +524,16 @@ Buffers DDR/HBM da ordem de vários gigabytes permitem, portanto, preservar jane
 
 Ao detectar um evento em:
 
-\[
+$$
 t_0,
-\]
+$$
 
 a face preserva no buffer uma janela:
 
-\[
+$$
 [t_0-T_\text{pre},
 t_0+T_\text{post}].
-\]
+$$
 
 O material bruto não é imediatamente transmitido.
 
@@ -536,15 +566,15 @@ Esse pacote é muitas ordens de grandeza menor do que as amostras que o originar
 
 Consequentemente, não é correto dimensionar o tráfego operacional fazendo simplesmente:
 
-\[
+$$
 60\times N_\text{ADC}\times f_s\times N_\text{bits}.
-\]
+$$
 
 Esse número representa a **capacidade interna de aquisição**, não a demanda permanente da rede óptica.
 
 O tráfego normal é aproximadamente:
 
-\[
+$$
 R_\text{rede}
 =
 R_\text{alertas}
@@ -554,68 +584,68 @@ R_\text{telemetria}
 R_\text{resumos espectrais}
 +
 R_\text{capturas solicitadas}.
-\]
+$$
 
 Sendo:
 
-\[
+$$
 R_\text{alertas}
 =
 \lambda
 B_\text{evento},
-\]
+$$
 
 onde \(\lambda\) é a taxa de eventos.
 
 Por exemplo, mesmo que uma face produzisse:
 
-\[
+$$
 200\ \text{eventos/s}
-\]
+$$
 
 com descritores relativamente grandes de:
 
-\[
+$$
 2\text{ kB},
-\]
+$$
 
 o tráfego seria:
 
-\[
+$$
 200\times2\,000\times8
 =
 3,2\text{ Mbit/s}.
-\]
+$$
 
 Para 60 faces:
 
-\[
+$$
 192\text{ Mbit/s}.
-\]
+$$
 
 Mesmo um cenário muito mais agressivo de:
 
-\[
+$$
 1\,000\ \text{eventos/s/face}
-\]
+$$
 
 com:
 
-\[
+$$
 4\text{ kB/evento}
-\]
+$$
 
 corresponderia a aproximadamente:
 
-\[
+$$
 32\text{ Mbit/s por face}
-\]
+$$
 
 ou:
 
-\[
+$$
 1,92\text{ Gbit/s}
-\]
+$$
 
 para todo o radome.
 
@@ -631,7 +661,7 @@ O núcleo central não precisa receber as amostras antes de decidir se um fenôm
 
 O fluxo correto é:
 
-\[
+$$
 \text{RF}
 \rightarrow
 \text{detecção local}
@@ -639,15 +669,15 @@ O fluxo correto é:
 \text{timestamp}
 \rightarrow
 \text{alerta}.
-\]
+$$
 
 Quando o computador central recebe um evento relevante da face \(F_i\), ele procura eventos temporalmente compatíveis nas faces vizinhas.
 
 Se necessário, envia:
 
-\[
+$$
 \text{FREEZE}(t_0-\Delta t_1,\ t_0+\Delta t_2)
-\]
+$$
 
 para outras FPUs.
 
@@ -665,17 +695,17 @@ O instante usado na correlação nunca será:
 
 O evento será definido pelo instante físico da amostragem:
 
-\[
+$$
 t_\text{evento}.
-\]
+$$
 
 Assim:
 
-\[
+$$
 t_\text{evento}
 \neq
 t_\text{recepção do pacote}.
-\]
+$$
 
 A rede pode introduzir latência variável sem destruir a informação espacial.
 
@@ -691,15 +721,15 @@ O ATC possui como referência primária um oscilador atômico, preferencialmente
 
 Ele produz pelo menos:
 
-\[
+$$
 10\text{ MHz}
-\]
+$$
 
 e
 
-\[
+$$
 1PPS.
-\]
+$$
 
 Sistemas comerciais de referência de rubídio fornecem precisamente saídas como 10 MHz e 1 PPS e podem disciplinar a referência usando um 1 PPS externo.
 
@@ -721,23 +751,23 @@ O relógio atômico não deve sofrer correções abruptas.
 
 Uma malha lenta de disciplining corrige progressivamente:
 
-\[
+$$
 \Delta f
-\]
+$$
 
 e
 
-\[
+$$
 \Delta t.
-\]
+$$
 
 Osciladores atômicos de rubídio podem justamente combinar estabilidade local com correção de longo prazo através de 1 PPS externo.
 
 Em perda de GNSS, o sistema entra em:
 
-\[
+$$
 \text{ATOMIC HOLDOVER}.
-\]
+$$
 
 ---
 
@@ -751,7 +781,7 @@ White Rabbit foi desenvolvido precisamente para distribuir tempo e frequência p
 
 A hierarquia passa a ser:
 
-\[
+$$
 \text{Atomic Clock}
 \rightarrow
 \text{Timing Grandmaster}
@@ -763,7 +793,7 @@ A hierarquia passa a ser:
 \text{Clock Cleaner/PLL}
 \rightarrow
 ADC/ASIC.
-\]
+$$
 
 ---
 
@@ -785,11 +815,11 @@ Portanto cada FPU recebe:
 
 A cadeia passa a preservar a relação:
 
-\[
+$$
 \text{amostra }n
 \longleftrightarrow
 t_n.
-\]
+$$
 
 ---
 
@@ -799,14 +829,14 @@ O timestamp deve ser gerado dentro da lógica próxima ao ADC, e não no sistema
 
 Pode-se representar:
 
-\[
+$$
 t_n=
 T_\text{epoch}
 +
 \frac{n}{f_s}
 +
 \delta_i,
-\]
+$$
 
 onde:
 
@@ -823,9 +853,9 @@ Mesmo relógios perfeitamente sincronizados não garantem TDoA correto.
 
 Cada cadeia apresenta atraso:
 
-\[
+$$
 \tau_i(f,T)
-\]
+$$
 
 dependente de:
 
@@ -844,21 +874,21 @@ Um pulso ou sinal conhecido é injetado periodicamente nos receptores.
 
 Mede-se:
 
-\[
+$$
 \tau_i(f,T)
-\]
+$$
 
 para cada canal.
 
 O timestamp corrigido torna-se:
 
-\[
+$$
 t_i^\ast
 =
 t_i
 -
 \tau_i(f,T).
-\]
+$$
 
 Essa calibração será repetida automaticamente durante toda a operação.
 
@@ -874,27 +904,27 @@ e
 
 Após receber alertas de múltiplas faces, o processador central calcula:
 
-\[
+$$
 \Delta t_{ij}
 =
 t_i^\ast-t_j^\ast.
-\]
+$$
 
 Conhecendo as coordenadas das antenas:
 
-\[
+$$
 \mathbf r_i,\mathbf r_j,
-\]
+$$
 
 a direção \(\hat{\mathbf s}\) satisfaz aproximadamente:
 
-\[
+$$
 c\Delta t_{ij}
 =
 (\mathbf r_i-\mathbf r_j)
 \cdot
 \hat{\mathbf s}.
-\]
+$$
 
 Com muitas faces simultaneamente disponíveis, o problema torna-se sobredeterminado e pode ser resolvido por estimação robusta.
 
@@ -915,21 +945,21 @@ A FFT local não deve descartar necessariamente a fase.
 
 Para determinados modos de aquisição são preservados valores complexos:
 
-\[
+$$
 X_k=I_k+jQ_k.
-\]
+$$
 
 Assim o núcleo poderá utilizar:
 
-\[
+$$
 \phi_i-\phi_j
-\]
+$$
 
 além de:
 
-\[
+$$
 t_i-t_j.
-\]
+$$
 
 Isso permite modos interferométricos e formas de beamforming digital entre subconjuntos de faces.
 
@@ -974,21 +1004,21 @@ O Capture Plane pode utilizar a capacidade restante dos links de 10/25 Gb/s ou u
 
 A estrutura física do sistema passa a possuir três níveis:
 
-\[
+$$
 60\ \text{Face Processing Units}
-\]
+$$
 
 agrupadas mecanicamente em:
 
-\[
+$$
 20\ \text{Macroface Service Nodes},
-\]
+$$
 
 cada um atendendo três faces, convergindo para:
 
-\[
+$$
 1\ \text{Central Timing and Fusion Core}.
-\]
+$$
 
 Um Macroface Service Node pode compartilhar entre suas três FPUs:
 
@@ -1022,9 +1052,9 @@ A solução poderá utilizar:
 
 O requisito passa a ser eletromagnético:
 
-\[
+$$
 |S_{21}(f)|<S_\text{max}(f),
-\]
+$$
 
 medido entre células.
 
@@ -1040,17 +1070,17 @@ O PRFV do V2 permanece como candidato, mas sua espessura não será fixada simpl
 
 A composição deverá ser otimizada em função de:
 
-\[
+$$
 \epsilon_r(f,T),
-\]
+$$
 
-\[
+$$
 \tan\delta(f,T),
-\]
+$$
 
-\[
+$$
 t,
-\]
+$$
 
 polarização e ângulo de incidência.
 
@@ -1073,17 +1103,17 @@ O threshold de alerta não deve ser fixo.
 
 Cada FPU mantém um modelo local do ruído:
 
-\[
+$$
 N_i(f,t).
-\]
+$$
 
 O trigger pode utilizar:
 
-\[
+$$
 P_i(f,t)
 >
 N_i(f,t)+\Delta.
-\]
+$$
 
 Além da potência, podem ser empregados simultaneamente detectores de:
 
@@ -1103,24 +1133,24 @@ A rede central pode alterar dinamicamente a sensibilidade de determinadas faces.
 
 Suponha que a face 17 detecte um evento em:
 
-\[
+$$
 t=t_0.
-\]
+$$
 
 Ela transmite:
 
-\[
+$$
 E_{17}(t_0).
-\]
+$$
 
 O servidor central verifica imediatamente as faces vizinhas e geometricamente compatíveis.
 
 Mesmo que a face 18 tenha observado o fenômeno abaixo de seu threshold, o núcleo pode solicitar:
 
-\[
+$$
 \operatorname{READ}_{18}
 (t_0-100\mu s,t_0+100\mu s).
-\]
+$$
 
 Dessa forma:
 
@@ -1138,25 +1168,25 @@ Dados irrelevantes podem ser sobrescritos continuamente.
 
 Eventos classificados como importantes recebem um ID global:
 
-\[
+$$
 EventID.
-\]
+$$
 
 Os buffers associados permanecem bloqueados até que o núcleo central determine:
 
-\[
+$$
 \text{DELETE},
-\]
+$$
 
-\[
+$$
 \text{RETAIN},
-\]
+$$
 
 ou
 
-\[
+$$
 \text{TRANSFER}.
-\]
+$$
 
 Isso reduz drasticamente a exigência de transporte contínuo.
 
@@ -1170,7 +1200,7 @@ Portanto, o antigo valor de 30–60 W por face não deve permanecer como requisi
 
 No V3:
 
-\[
+$$
 P_\text{face}
 =
 P_\text{RF}
@@ -1184,17 +1214,17 @@ P_\text{memory}
 P_\text{optical}
 +
 P_\text{DC/DC}.
-\]
+$$
 
 E:
 
-\[
+$$
 P_\text{total}
 =
 60P_\text{face}
 +
 P_\text{central}.
-\]
+$$
 
 O orçamento térmico só será congelado após a definição efetiva dos conversores e ASICs.
 
@@ -1204,7 +1234,7 @@ O orçamento térmico só será congelado após a definição efetiva dos conver
 
 O calor deve seguir deliberadamente:
 
-\[
+$$
 \text{ASIC/ADC}
 \rightarrow
 \text{cold plate}
@@ -1212,7 +1242,7 @@ O calor deve seguir deliberadamente:
 \text{estrutura condutiva}
 \rightarrow
 \text{sistema térmico}.
-\]
+$$
 
 Partes das paredes das células podem atuar como heat spreaders, desde que isso não prejudique a blindagem ou altere o comportamento das antenas.
 
@@ -1226,9 +1256,9 @@ Entretanto, não se considera mais que a dissipação eletrônica, por si só, g
 
 Mantém-se como arquitetura de referência:
 
-\[
+$$
 48\text{ VDC}
-\]
+$$
 
 distribuído pelo radome.
 
@@ -1250,37 +1280,37 @@ O V2 já previa distribuição de 48 V com reguladores locais, princípio preser
 
 O Central Timing and Fusion Core contém pelo menos os seguintes subsistemas:
 
-\[
+$$
 \boxed{\text{Atomic Timing Core}}
-\]
+$$
 
-\[
+$$
 \boxed{\text{Optical Network Core}}
-\]
+$$
 
-\[
+$$
 \boxed{\text{Event Correlator}}
-\]
+$$
 
-\[
+$$
 \boxed{\text{Raw Capture Storage}}
-\]
+$$
 
-\[
+$$
 \boxed{\text{Calibration Engine}}
-\]
+$$
 
-\[
+$$
 \boxed{\text{Thermal Controller}}
-\]
+$$
 
-\[
+$$
 \boxed{\text{Power Supervisor}}
-\]
+$$
 
-\[
+$$
 \boxed{\text{External Data Gateway}}
-\]
+$$
 
 A arquitetura de fusão central prevista no V2 permanece válida conceitualmente, mas passa agora a trabalhar prioritariamente com eventos temporalmente coerentes, e não com 60 fluxos brutos permanentes.
 
@@ -1292,27 +1322,27 @@ Embora exista um relógio atômico central lógico, o sistema não deverá possu
 
 A implementação recomendada possui:
 
-\[
+$$
 ATC_A
-\]
+$$
 
 e
 
-\[
+$$
 ATC_B.
-\]
+$$
 
 Um opera como referência ativa e o outro acompanha continuamente:
 
-\[
+$$
 \Delta t_{AB}
-\]
+$$
 
 e
 
-\[
+$$
 \Delta f_{AB}.
-\]
+$$
 
 O sistema registra também a discrepância entre referências GNSS, relógios atômicos e os clocks recuperados pelas faces.
 
@@ -1342,73 +1372,73 @@ As fibras de dados e sincronismo são particularmente vantajosas porque não con
 
 O Radome V3 pode ser visualizado radialmente como:
 
-\[
+$$
 \boxed{\text{ambiente externo}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{painel dielétrico esférico}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{antenas multibanda}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{front-end RF}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{múltiplos ADCs}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{ASIC/FPGA + buffer local}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{parede/septo RF}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{fibra + 48 V}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{núcleo central}}
-\]
+$$
 
 ---
 
@@ -1416,13 +1446,13 @@ O Radome V3 pode ser visualizado radialmente como:
 
 A unidade fundamental do V3 deixa, portanto, de ser:
 
-\[
+$$
 \text{uma pirâmide}.
-\]
+$$
 
 Passa a ser:
 
-\[
+$$
 \boxed{
 \text{Face RF}
 +
@@ -1432,13 +1462,13 @@ Passa a ser:
 +
 \text{buffer}
 }
-\]
+$$
 
 e existem exatamente:
 
-\[
+$$
 60
-\]
+$$
 
 dessas unidades.
 
@@ -1450,89 +1480,89 @@ Três unidades formam uma macroface estrutural.
 
 O fluxo completo de um evento é:
 
-\[
+$$
 \boxed{\text{onda RF}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{antena}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{front-end}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{ADC}_1,\text{ADC}_2,\ldots,\text{ADC}_N}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{ASIC/FPGA}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{FFT/PFB/detector}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{timestamp atômico}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{Event Descriptor}}
-\]
+$$
 
-\[
+$$
 \downarrow\text{ fibra}
-\]
+$$
 
-\[
+$$
 \boxed{\text{correlador central}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{solicitação seletiva de I/Q}}
-\]
+$$
 
-\[
+$$
 \downarrow
-\]
+$$
 
-\[
+$$
 \boxed{\text{TDoA/fase/direção/classificação}}
-\]
+$$
 
 ---
 
@@ -1542,9 +1572,9 @@ Essa arquitetura altera profundamente o problema de largura de banda.
 
 A grandeza:
 
-\[
+$$
 \sum f_sN_\text{bits}
-\]
+$$
 
 define a capacidade computacional que deve existir **dentro das faces**.
 
@@ -1552,13 +1582,13 @@ Ela não define diretamente a capacidade necessária do backbone óptico.
 
 A rede central deve ser dimensionada principalmente por:
 
-\[
+$$
 \text{taxa de eventos}
 +
 \text{capturas solicitadas}
 +
 \text{margem de diagnóstico}.
-\]
+$$
 
 Portanto, centenas de ADCs operando simultaneamente no radome são compatíveis com um backbone de capacidade muito menor que o fluxo bruto agregado, desde que:
 
@@ -1573,47 +1603,47 @@ Portanto, centenas de ADCs operando simultaneamente no radome são compatíveis 
 
 Com essas alterações, o Radome V3 passa a possuir uma hierarquia geometricamente e computacionalmente consistente:
 
-\[
+$$
 \boxed{
 20\ \text{macrofaces estruturais}
 }
-\]
+$$
 
-\[
+$$
 \boxed{
 60\ \text{faces receptoras}
 }
-\]
+$$
 
-\[
+$$
 \boxed{
 60\ \text{células RF radiais truncadas}
 }
-\]
+$$
 
-\[
+$$
 \boxed{
 60\ \text{FPUs}
 }
-\]
+$$
 
-\[
+$$
 \boxed{
 N\gg60\ \text{ADCs/ASICs}
 }
-\]
+$$
 
-\[
+$$
 \boxed{
 1\ \text{tempo atômico comum}
 }
-\]
+$$
 
-\[
+$$
 \boxed{
 1\ \text{sistema central de correlação}
 }
-\]
+$$
 
 O resultado é uma arquitetura em que **a digitalização é massivamente paralela, mas a comunicação é seletiva**.
 
@@ -1621,18 +1651,18 @@ A informação que atravessa continuamente o radome não é o sinal bruto.
 
 É principalmente:
 
-\[
+$$
 \boxed{
 \text{“o que ocorreu, onde foi detectado e exatamente quando ocorreu”}
 }
-\]
+$$
 
 e somente após essa primeira decisão o sistema recupera:
 
-\[
+$$
 \boxed{
 \text{“as amostras necessárias para provar e caracterizar o evento”}.
 }
-\]
+$$
 
 Esse passa a ser o princípio central do **Radome V3**.
