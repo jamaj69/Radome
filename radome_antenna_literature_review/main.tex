@@ -1,0 +1,1100 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{english}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\usepackage{xurl}
+\usepackage{microtype}
+\setlength{\emergencystretch}{3em}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Broadband Antennas Integrated with Radome Faces for Passive Detection of Clandestine or Anomalous RF Signals},
+  pdfauthor={Literature review based on Consensus search results},
+  pdflang={en},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Broadband Antennas Integrated with Radome Faces for Passive
+Detection of Clandestine or Anomalous RF Signals}
+\author{Literature review based on Consensus search results}
+\date{6 August 2026}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\section{Search method}\label{search-method}
+
+This review used a \textbf{Decomposition framework} with five sub-areas:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  broadband antenna architectures and radome-face placement;
+\item
+  electromagnetic effects and functional radomes;
+\item
+  passive emitter detection, direction finding, and localization;
+\item
+  clandestine, anomalous, and deviated-signal identification; and
+\item
+  receiver integration, calibration, and operational validation.
+\end{enumerate}
+
+The search comprised one reconnaissance query followed by a ten-query
+standard review: five sub-area searches, two review searches, two
+era-gated searches (through 2015 and from 2021 onward), and one
+follow-up centered on the most-cited paper. The available Consensus
+connector returned at most ten papers per query. Filters such as
+\texttt{human} and minimum sample size were inapplicable to this
+engineering topic; the connector did not expose SJR filtering. Only
+papers returned and fetched from Consensus during the session are cited
+here.
+
+\section{Topic overview}\label{topic-overview}
+
+The literature supports the feasibility of integrating broadband or
+ultra-wideband receiving antennas with conformal radomes for passive RF
+monitoring, but the evidence is divided into largely separate streams.
+The \textbf{antenna/radome literature} is comparatively mature, with
+measured prototypes evaluating impedance bandwidth, gain, insertion
+loss, angular stability, cavity resonances, and radar cross-section. The
+\textbf{passive detection literature} is also mature at the algorithmic
+level, particularly for spectrum sensing, direction of arrival (DOA),
+time difference of arrival (TDOA), frequency difference of arrival
+(FDOA), and specific-emitter identification. The sparse area is their
+end-to-end intersection: few returned studies jointly demonstrate a
+broadband conformal radome aperture, a calibrated multichannel receiver,
+detection of previously unknown emissions, emitter classification, and
+localization under realistic platform and propagation conditions. In
+particular, stealth-oriented frequency-selective-surface (FSS) radomes
+may deliberately reject out-of-band signals, creating a direct conflict
+with the objective of listening over the broadest possible spectrum
+\citep{costa2012, lv2021, sheng2024, xing2022}.
+
+The closest terminology for the combined topic is: \textbf{conformal
+ultra-wideband radio direction finder}, \textbf{passive emitter
+surveillance}, \textbf{ESM/ELINT receiving array},
+\textbf{radome-integrated spectrum-monitoring aperture},
+\textbf{specific emitter identification}, \textbf{open-set RF anomaly
+detection}, and \textbf{co-aperture passive direction-finding antenna}.
+
+A crucial systems distinction is that \textbf{antenna coverage
+bandwidth} is not equivalent to \textbf{instantaneous receiver
+bandwidth}. A physically broadband antenna may span many octaves while
+the RF front end, ADC, channelizer, data transport, or processor
+observes only a much narrower portion at any instant
+\citep{flak2022, madanayake2024, subbaraman2022}.
+
+\section{Start here: priority reading
+order}\label{start-here-priority-reading-order}
+
+\subsection{1. Closest review to the complete antenna
+problem}\label{closest-review-to-the-complete-antenna-problem}
+
+\href{https://consensus.app/papers/details/04301748949257caa17485d3480352f2/?utm_source=chatgpt}{\textbf{Wideband
+Antennas of Passive Seekers for Anti Radiation Missiles}}, Gupta et
+al.~(2023), compares spiral, log-periodic, printed Vivaldi, and
+all-metal Vivaldi antennas and distinguishes concealed-behind-radome,
+flush-mounted, and conformal arrangements \citep{gupta2023}. It is the
+most direct returned overview of antenna placement for passive wideband
+reception. While reading, check whether its application-specific
+assumptions on size, frequency range, polarization, and angular coverage
+match the intended platform.
+
+\subsection{2. Seminal functional-radome
+paper}\label{seminal-functional-radome-paper}
+
+\href{https://consensus.app/papers/details/1811b78b36fa5cc0840c16f9dd6f2a1b/?utm_source=chatgpt}{\textbf{A
+Frequency Selective Radome With Wideband Absorbing Properties}}, Costa
+and Monorchio (2012), establishes an influential architecture combining
+an FSS passband with wideband out-of-band absorption \citep{costa2012}.
+The key design tension is that a radome advantageous for stealth may be
+inappropriate for broad-spectrum interception because out-of-band
+absorption removes potentially relevant emissions.
+
+\subsection{3. Foundational integrated conformal direction
+finder}\label{foundational-integrated-conformal-direction-finder}
+
+\href{https://consensus.app/papers/details/5f166a5e2c715f25a2cfa7d55f20749f/?utm_source=chatgpt}{\textbf{Design
+and Full-Wave Analysis of Conformal Ultra-Wideband Radio Direction
+Finders}}, Caratelli, Liberal, and Yarovoy (2011), develops a conformal
+circular array covering 250 MHz--3.3 GHz and explicitly includes
+coupling compensation, array geometry, and ambiguity analysis
+\citep{caratelli2011}. Its main lesson is that calibration and manifold
+distortion are as important as nominal antenna bandwidth for reliable
+DOA estimation.
+
+\subsection{4. Broad orientation for emitter
+identity}\label{broad-orientation-for-emitter-identity}
+
+\href{https://consensus.app/papers/details/85a1acc05180584992b4bd752a62599e/?utm_source=chatgpt}{\textbf{A
+Comprehensive Survey on Radio Frequency Fingerprinting: Traditional
+Approaches, Deep Learning, and Open Challenges}}, Jagannath, Jagannath,
+and Kumar (2022), connects SIGINT, RF fingerprinting, conventional
+features, deep learning, datasets, and security applications
+\citep{jagannath2022}. Pay particular attention to the difference
+between closed-set device classification and recognizing an emitter that
+was absent from training.
+
+\subsection{5. Current radome frontier}\label{current-radome-frontier}
+
+\href{https://consensus.app/papers/details/6cb5b6043f755325b7abd988656c9afd/?utm_source=chatgpt}{\textbf{A
+Conformal Miniaturized Bandpass Frequency-Selective Surface With Stable
+Frequency Response for Radome Applications}}, Sheng et al.~(2024),
+reports measured stability for a curved X-band FSS, including large
+incidence angles and bending \citep{sheng2024}. Frequency stability
+alone, however, does not prove preservation of phase, group delay, or
+array-manifold accuracy required for direction finding.
+
+\subsection{6. Current open-set detection
+frontier}\label{current-open-set-detection-frontier}
+
+\href{https://consensus.app/papers/details/66ce93d9ddd05433ac370321a0d58745/?utm_source=chatgpt}{\textbf{An
+Open-Set Supervised Anomaly Detection Method for Unauthorized
+Broadcasting Identification}}, Zhang et al.~(2025), directly addresses
+unauthorized broadcasting in an open-set setting using temporal
+representation learning and support-vector data description
+\citep{zhang2025open}. The central evaluation issue is whether
+performance remains stable across receivers, propagation channels,
+center-frequency changes, and truly unseen emitters.
+
+\subsection{7. Key controversy and
+vulnerability}\label{key-controversy-and-vulnerability}
+
+\href{https://consensus.app/papers/details/29ea0ff4b51857cca284e60d8c9c9d19/?utm_source=chatgpt}{\textbf{Robustness
+of Deep Learning-Based Specific Emitter Identification under Adversarial
+Attacks}}, Sun et al.~(2022), shows that small deliberately constructed
+perturbations can seriously degrade deep-learning-based specific-emitter
+identification, while adversarial training partially restores
+performance \citep{sun2022}. A classifier with high ordinary test
+accuracy is therefore not automatically suitable for detecting a
+deliberately camouflaged or deviated signal.
+
+\section{Cross-search signals}\label{cross-search-signals}
+
+\subsection{Repeat-hit papers}\label{repeat-hit-papers}
+
+No paper met the strict criterion of appearing in three distinct
+sub-area searches. This is itself informative: the five branches remain
+weakly integrated.
+
+The strongest repeat hits across the reconnaissance, sub-area, and
+review stages were:
+
+\begin{itemize}
+\tightlist
+\item
+  Gupta et al.~(2023): three appearances overall \citep{gupta2023}.
+\item
+  Gharat et al.~(2026): three appearances overall \citep{gharat2026}.
+\item
+  Costa and Monorchio (2012): functional-radome search and seminal-paper
+  follow-up \citep{costa2012}.
+\item
+  Soltanieh et al.~(2020): anomaly/SEI search and review search
+  \citep{soltanieh2020}.
+\item
+  Xing et al.~(2022): radome search and post-2021 era search
+  \citep{xing2022}.
+\item
+  Madanayake et al.~(2024): integration search and post-2021 era search
+  \citep{madanayake2024}.
+\item
+  Tahseen et al.~(2021): reconnaissance and radome-review search
+  \citep{tahseen2021}.
+\end{itemize}
+
+These repetitions identify useful bridge papers, but they should not be
+interpreted as proof of foundational status by themselves.
+
+\subsection{Citation velocity}\label{citation-velocity}
+
+Citation velocity was approximated as the Consensus citation count
+divided by \texttt{max(1,\ 2026\ -\ publication\ year)}. It is
+descriptive only: recent survey articles are favored, and database
+citation counts can change.
+
+\begin{longtable}[]{@{}lrr@{}}
+\toprule\noalign{}
+Paper & Consensus citations & Approx. citations/year \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Jagannath et al.~2022 \citep{jagannath2022} & 263 & 65.8 \\
+Soltanieh et al.~2020 \citep{soltanieh2020} & 339 & 56.5 \\
+Costa and Monorchio 2012 \citep{costa2012} & 678 & 48.4 \\
+Taherpour et al.~2010 \citep{taherpour2010} & 441 & 27.6 \\
+Sheng et al.~2024 \citep{sheng2024} & 53 & 26.5 \\
+Lv et al.~2021 \citep{lv2021} & 67 & 13.4 \\
+Xing et al.~2022 \citep{xing2022} & 47 & 11.8 \\
+Omar and Shen 2018 \citep{omar2018} & 77 & 9.6 \\
+\end{longtable}
+
+Normalized citation rate favors recent surveys, while total citations
+more clearly identify Costa--Monorchio and Taherpour et al.~as
+long-standing reference points.
+
+\section{How the field got here}\label{how-the-field-got-here}
+
+The early literature treated passive RF direction finding largely as an
+array-design and estimation problem. By 2010--2012, researchers were
+integrating broadband conformal arrays with calibration methods and
+developing blind multiple-antenna spectrum detectors
+\citep{caratelli2011, liberal2011, taherpour2010}. During the same
+period, frequency-selective radomes evolved from protective dielectric
+covers into functional electromagnetic structures capable of
+transmitting selected bands while absorbing others \citep{costa2012}.
+
+The next phase emphasized flush integration, cavity control, compact FSS
+structures, and low-RCS antenna--radome co-design
+\citep{lv2021, omar2018, tianang2017, xing2022}. In parallel,
+\textbf{specific emitter identification} increasingly became known as
+\textbf{RF fingerprinting}, moving from handcrafted transient and
+spectrum features toward deep learning and open-set anomaly detection
+\citep{jagannath2022, soltanieh2020, zhang2025open}. Recent work adds
+real-time channelization, FPGA/SDR acceleration, and adaptive
+monitoring, but the hardware and signal-intelligence branches remain
+only partially integrated
+\citep{flak2022, gharat2026, madanayake2024, sorecau2026}.
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+Year
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Milestone
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Significance
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+2010 & Blind multiple-antenna spectrum sensing \citep{taherpour2010} &
+Establishes detection under unknown channel, noise, and source
+parameters. \\
+2011 & Conformal UWB radio direction finders
+\citep{caratelli2011, liberal2011} & Integrates wideband elements,
+circular geometry, coupling analysis, and calibration. \\
+2012 & Wideband absorptive frequency-selective radome \citep{costa2012}
+& Makes the radome an active part of spectral selectivity and signature
+control. \\
+2012 & Compact 70--3000 MHz DF antenna \citep{bailey2012} & Demonstrates
+end-to-end receiver/antenna integration over a broad band. \\
+2017--2018 & Flush Vivaldi and thin conformal 3-D FSS systems
+\citep{tianang2017, omar2018} & Addresses cavity resonances, structural
+thickness, and curved integration. \\
+2020--2022 & RF fingerprinting surveys and deep-learning transition
+\citep{soltanieh2020, jagannath2022} & Shifts identification from
+handcrafted features toward data-driven models. \\
+2021--2024 & Hybrid radomes and co-designed antenna--FSS structures
+\citep{lv2021, sheng2024, xing2022} & Combines passband transmission,
+absorption, diffusion, conformality, and RCS control. \\
+2024--2026 & Multichannel spectrum intelligence and open-set anomaly
+monitoring
+\citep{gharat2026, madanayake2024, sorecau2026, zhang2025open} & Moves
+toward real-time detection, directional channelization, and
+unknown-emitter recognition. \\
+\end{longtable}
+
+\subsection{Terminology shifts}\label{terminology-shifts}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Radio direction finder / RDF} became \textbf{DOA estimation},
+  \textbf{passive emitter localization}, and \textbf{spectrum
+  intelligence}.
+\item
+  \textbf{Emitter recognition} became \textbf{specific emitter
+  identification / SEI}, then \textbf{RF fingerprinting / RFF}.
+\item
+  \textbf{Illegal radio monitoring} increasingly appears as
+  \textbf{unauthorized broadcasting identification} and \textbf{open-set
+  RF anomaly detection}.
+\item
+  \textbf{Frequency-selective radome} expanded into \textbf{absorptive
+  FSR}, \textbf{rasorber radome}, \textbf{absorptive-diffusive radome},
+  and \textbf{active/tunable FSS}.
+\item
+  \textbf{Shared aperture} also appears as \textbf{co-aperture},
+  \textbf{common-radome}, and \textbf{multifunctional aperture}.
+\end{itemize}
+
+\section{Sub-area guide 1: broadband antenna architectures and
+radome-face
+placement}\label{sub-area-guide-1-broadband-antenna-architectures-and-radome-face-placement}
+
+\subsection{What the research shows}\label{what-the-research-shows}
+
+Conformal elliptical dipoles, spirals, and Vivaldi/tapered-slot antennas
+are recurring candidates because they combine broad impedance bandwidth
+with geometries suitable for circular, cylindrical, or flush
+installation
+\citep{caratelli2011, gupta2023, liberal2011, pi2025, tianang2017}.
+Wideband DOA performance depends strongly on the calibrated array
+manifold: mutual coupling, structural scattering, element curvature, and
+radome effects can introduce angular bias even when return loss and gain
+appear acceptable \citep{caratelli2011, liberal2011}.
+
+Cavity-backed Vivaldi structures can deliver flush mounting, but cavity
+eigenmodes may produce severe in-band resonances unless explicitly
+suppressed \citep{tianang2017}. A recent co-aperture spiral concept
+proposes 2--40 GHz coverage under a common radome, but the returned work
+reports simulation rather than complete field validation \citep{pi2025}.
+
+\subsection{Key papers}\label{key-papers}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://consensus.app/papers/details/04301748949257caa17485d3480352f2/?utm_source=chatgpt}{\textbf{Wideband
+  Antennas of Passive Seekers for Anti Radiation Missiles}}, Gupta et
+  al.~(2023), Consensus citation count 1: best returned comparison of
+  concealed, flush, and conformal passive-seeker arrangements
+  \citep{gupta2023}.
+\item
+  \href{https://consensus.app/papers/details/5f166a5e2c715f25a2cfa7d55f20749f/?utm_source=chatgpt}{\textbf{Design
+  and Full-Wave Analysis of Conformal Ultra-Wideband Radio Direction
+  Finders}}, Caratelli et al.~(2011), 17 citations: integrates element,
+  array, calibration, and DOA considerations \citep{caratelli2011}.
+\item
+  \href{https://consensus.app/papers/details/962901757e715c669ba9962b91c0b96b/?utm_source=chatgpt}{\textbf{Conformal
+  Antenna Array for Ultra-Wideband Direction-of-Arrival Estimation}},
+  Liberal et al.~(2011), 9 citations: explicitly includes a protective
+  radome and coupling compensation \citep{liberal2011}.
+\item
+  \href{https://consensus.app/papers/details/747aac0a449e5797ad83ea444fb20680/?utm_source=chatgpt}{\textbf{Ultra-Wideband
+  Lossless Cavity-Backed Vivaldi Antenna}}, Tianang et al.~(2017), 42
+  citations: important treatment of cavity-induced resonances in flush
+  arrays \citep{tianang2017}.
+\item
+  \href{https://consensus.app/papers/details/7848c93584d354f19ce7554e9d95de54/?utm_source=chatgpt}{\textbf{A
+  Compact Airborne Co-Aperture Cavity-Backed Spiral Antenna Design}}, Pi
+  (2025), 0 citations: emerging common-radome concept spanning two bands
+  over 2--40 GHz \citep{pi2025}.
+\end{itemize}
+
+\subsection{Search terms}\label{search-terms}
+
+conformal UWB antenna; passive seeker antenna; radio direction finder;
+cavity-backed Vivaldi; cavity-backed spiral; sinuous antenna;
+flush-mounted broadband array; co-aperture antenna; amplitude-tracking
+antenna set; phase-matched DF antenna.
+
+\subsection{Boolean searches}\label{boolean-searches}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{("conformal antenna" OR "flush{-}mounted antenna" OR "embedded antenna")}
+\NormalTok{AND ("ultra{-}wideband" OR wideband)}
+\NormalTok{AND ("direction finding" OR "passive emitter" OR ESM OR ELINT)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{(Vivaldi OR "tapered slot" OR spiral OR sinuous OR "log{-}periodic")}
+\NormalTok{AND (radome OR "common aperture" OR "co{-}aperture")}
+\NormalTok{AND (receive OR surveillance OR "direction finding")}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Sub-area guide 2: electromagnetic effects and functional radome
+technologies}\label{sub-area-guide-2-electromagnetic-effects-and-functional-radome-technologies}
+
+\subsection{What the research shows}\label{what-the-research-shows-1}
+
+The radome must be treated as part of the receiving transfer function
+rather than merely as a mechanical cover. FSS and hybrid radomes can
+provide low-loss transmission windows together with out-of-band
+absorption or diffuse scattering \citep{costa2012, lv2021, xing2022}.
+Curved and conformal implementations increasingly demonstrate stable
+center frequency under oblique incidence, but most report insertion loss
+and radiation performance rather than phase-delay uniformity across an
+array aperture \citep{omar2018, sheng2024}. A recent conformal-FSS
+mini-review also identifies materials, simulation, manufacturing, and
+practical implementation as continuing challenges \citep{korkut2024}.
+
+For broad-spectrum monitoring, the design objective differs from that of
+a conventional stealth radome. A narrow FSS passband may protect an
+intended radar or communications band while making the system deaf to
+unauthorized emissions outside that window
+\citep{costa2012, tahseen2021}. The radome therefore needs either a
+genuinely broad transparent region, multiple transparent windows, or a
+controllable transmission state.
+
+\subsection{Key papers}\label{key-papers-1}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://consensus.app/papers/details/1811b78b36fa5cc0840c16f9dd6f2a1b/?utm_source=chatgpt}{\textbf{A
+  Frequency Selective Radome With Wideband Absorbing Properties}}, Costa
+  and Monorchio (2012), 678 citations: seminal passband-plus-absorber
+  architecture \citep{costa2012}.
+\item
+  \href{https://consensus.app/papers/details/905ccf75368255a78a236f083a31e9ee/?utm_source=chatgpt}{\textbf{Thin
+  3-D Bandpass Frequency-Selective Structure Based on Folded Substrate
+  for Conformal Radome Applications}}, Omar and Shen (2018), 77
+  citations: fabricated semicylindrical FSS radome with broadband-horn
+  integration \citep{omar2018}.
+\item
+  \href{https://consensus.app/papers/details/62fa6b42c0305286b6a3a4c60ea60a46/?utm_source=chatgpt}{\textbf{Hybrid
+  Absorptive-Diffusive Frequency Selective Radome}}, Lv et al.~(2021),
+  67 citations: broad transmission window with absorption and diffusion
+  sidebands \citep{lv2021}.
+\item
+  \href{https://consensus.app/papers/details/7a9db905b6b953c3a6f429fe051d4096/?utm_source=chatgpt}{\textbf{A
+  Low-RCS and Wideband Circularly Polarized Array Antenna Co-Designed
+  With a High-Performance AMC-FSS Radome}}, Xing et al.~(2022), 47
+  citations: measured co-design with less than 1 dB reported gain
+  deterioration across its operating band \citep{xing2022}.
+\item
+  \href{https://consensus.app/papers/details/6cb5b6043f755325b7abd988656c9afd/?utm_source=chatgpt}{\textbf{A
+  Conformal Miniaturized Bandpass Frequency-Selective Surface With
+  Stable Frequency Response for Radome Applications}}, Sheng et
+  al.~(2024), 53 citations: strong recent result on curved-FSS angular
+  stability \citep{sheng2024}.
+\end{itemize}
+
+\subsection{Search terms}\label{search-terms-1}
+
+frequency-selective radome; FSS radome; rasorber; absorptive
+frequency-selective radome; transmitarray radome; radome insertion loss;
+radome boresight error; radome depolarization; radome group delay;
+active tunable radome.
+
+\subsection{Boolean searches}\label{boolean-searches-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{(radome OR "antenna cover")}
+\NormalTok{AND ("frequency selective surface" OR FSS OR rasorber OR metasurface)}
+\NormalTok{AND (wideband OR broadband OR multiband)}
+\NormalTok{AND ("insertion loss" OR "angular stability" OR "boresight error")}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{("conformal radome" OR "curved FSS")}
+\NormalTok{AND (transmission OR passband)}
+\NormalTok{AND (phase OR "group delay" OR depolarization OR aberration)}
+\NormalTok{AND (array OR "direction finding")}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Sub-area guide 3: passive emitter detection, direction finding,
+and
+localization}\label{sub-area-guide-3-passive-emitter-detection-direction-finding-and-localization}
+
+\subsection{What the research shows}\label{what-the-research-shows-2}
+
+Blind multiple-antenna spectrum sensing can outperform conventional
+energy detection when channel gain, source statistics, and noise
+variance are uncertain \citep{taherpour2010}. Once a signal is detected,
+localization commonly uses AoA/DOA, TDOA, FDOA, or combinations of them.
+TDOA/FDOA methods can achieve strong accuracy, but receiver geometry,
+synchronization, platform motion, and computational load are central
+constraints \citep{liu2019, pine2021}.
+
+For radome-mounted arrays, calibration is not an optional
+post-processing refinement. Directional errors can create biased
+bearings or ghost emitter positions; joint localization and
+self-calibration methods attempt to correct those effects
+\citep{zhang2023calibration}. The older conformal-RDF literature already
+recognized mutual coupling and support-structure distortion as
+array-manifold problems \citep{caratelli2011, liberal2011}.
+
+\subsection{Key papers}\label{key-papers-2}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://consensus.app/papers/details/dd361298468d58a9a3f6b6af0c34e977/?utm_source=chatgpt}{\textbf{Multiple
+  Antenna Spectrum Sensing in Cognitive Radios}}, Taherpour et
+  al.~(2010), 441 citations: foundational blind multiple-antenna
+  detector under parameter uncertainty \citep{taherpour2010}.
+\item
+  \href{https://consensus.app/papers/details/5f166a5e2c715f25a2cfa7d55f20749f/?utm_source=chatgpt}{\textbf{Design
+  and Full-Wave Analysis of Conformal Ultra-Wideband Radio Direction
+  Finders}}, Caratelli et al.~(2011), 17 citations: connects antenna
+  nonidealities directly to DOA performance \citep{caratelli2011}.
+\item
+  \href{https://consensus.app/papers/details/47ae35140d8e563486d4808c6acd8485/?utm_source=chatgpt}{\textbf{Computationally
+  Efficient TDOA and FDOA Estimation Algorithm in Passive Emitter
+  Localisation}}, Liu et al.~(2019), 14 citations: targets real-time
+  feasibility and multi-emitter cross-term suppression \citep{liu2019}.
+\item
+  \href{https://consensus.app/papers/details/035e2d1ded6e5316b49b04c2007445cb/?utm_source=chatgpt}{\textbf{The
+  Geometry of Far-Field Passive Source Localization With TDOA and
+  FDOA}}, Pine et al.~(2021), 36 citations: clarifies when TDOA/FDOA
+  measurements geometrically constrain far-field sources
+  \citep{pine2021}.
+\item
+  \href{https://consensus.app/papers/details/a785d6a4988c51bcb3d4c3b896010b09/?utm_source=chatgpt}{\textbf{Passive
+  Joint Emitter Localization with Sensor Self-Calibration}}, Zhang et
+  al.~(2023), 8 citations: addresses calibration bias in distributed
+  passive arrays \citep{zhang2023calibration}.
+\end{itemize}
+
+\subsection{Search terms}\label{search-terms-2}
+
+passive emitter localization; radio direction finding; angle of arrival;
+direction of arrival; amplitude-comparison DF; phase interferometer;
+TDOA/FDOA; direct position determination; array-manifold calibration;
+noncooperative emitter.
+
+\subsection{Boolean searches}\label{boolean-searches-2}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{("passive emitter" OR "noncooperative emitter" OR "radio source")}
+\NormalTok{AND (localization OR geolocation OR "direction finding")}
+\NormalTok{AND (DOA OR AOA OR TDOA OR FDOA OR interferometry)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{("wideband direction finding" OR "broadband direction finding")}
+\NormalTok{AND (calibration OR "array manifold" OR coupling OR radome)}
+\NormalTok{AND (multichannel OR array)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Sub-area guide 4: clandestine, anomalous, and deviated-signal
+identification}\label{sub-area-guide-4-clandestine-anomalous-and-deviated-signal-identification}
+
+\subsection{What the research shows}\label{what-the-research-shows-3}
+
+RF fingerprinting uses hardware-dependent imperfections to associate a
+received waveform with a device or emitter. Surveys show a progression
+from manually designed transient and modulation features to deep neural
+representations \citep{jagannath2022, soltanieh2020}. Much of the
+literature, however, assumes a \textbf{closed set}, in which every
+emitter observed at test time belongs to a known training class.
+
+Clandestine-signal detection usually requires an open-set or anomaly
+formulation. Illegal-FM monitoring has been demonstrated using
+specific-emitter features and outlier detection \citep{guo2021}, while
+recent work explicitly models unauthorized transmissions not fully
+represented in training \citep{zhang2025open}. Frequency-hopping
+emitters can also be fingerprinted \citep{kang2021}, but adversarial
+perturbations may make deep SEI systems unreliable against an adaptive
+opponent \citep{sun2022}.
+
+\subsection{Key papers}\label{key-papers-3}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://consensus.app/papers/details/1c3cd42586205e0280356e90cb7ab147/?utm_source=chatgpt}{\textbf{A
+  Review of Radio Frequency Fingerprinting Techniques}}, Soltanieh et
+  al.~(2020), 339 citations: core taxonomy of transient and
+  modulated-signal fingerprints \citep{soltanieh2020}.
+\item
+  \href{https://consensus.app/papers/details/85a1acc05180584992b4bd752a62599e/?utm_source=chatgpt}{\textbf{A
+  Comprehensive Survey on Radio Frequency Fingerprinting: Traditional
+  Approaches, Deep Learning, and Open Challenges}}, Jagannath et
+  al.~(2022), 263 citations: broad connection among SIGINT, datasets,
+  ML, and RFF \citep{jagannath2022}.
+\item
+  \href{https://consensus.app/papers/details/b81586a8d9ee5753a4b48df60568f585/?utm_source=chatgpt}{\textbf{An
+  SEI-Based Identification Scheme for Illegal FM Broadcast}}, Guo et
+  al.~(2021), 7 citations: direct application to legal-versus-illegal FM
+  emitters \citep{guo2021}.
+\item
+  \href{https://consensus.app/papers/details/29ea0ff4b51857cca284e60d8c9c9d19/?utm_source=chatgpt}{\textbf{Robustness
+  of Deep Learning-Based Specific Emitter Identification under
+  Adversarial Attacks}}, Sun et al.~(2022), 22 citations: demonstrates
+  an important security weakness in neural SEI \citep{sun2022}.
+\item
+  \href{https://consensus.app/papers/details/66ce93d9ddd05433ac370321a0d58745/?utm_source=chatgpt}{\textbf{An
+  Open-Set Supervised Anomaly Detection Method for Unauthorized
+  Broadcasting Identification}}, Zhang et al.~(2025), 0 citations:
+  closest direct match to unknown unauthorized-signal detection
+  \citep{zhang2025open}.
+\end{itemize}
+
+\subsection{Search terms}\label{search-terms-3}
+
+specific emitter identification; SEI; radio-frequency fingerprinting; RF
+fingerprint; unauthorized broadcasting; illegal-emitter identification;
+open-set RF classification; unknown emitter; spectrum anomaly detection;
+low-probability-of-intercept signal; frequency-hopping emitter
+identification.
+
+\subsection{Boolean searches}\label{boolean-searches-3}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{("specific emitter identification" OR "RF fingerprinting" OR "radio frequency fingerprint")}
+\NormalTok{AND ("open set" OR unknown OR unauthorized OR illegal OR anomaly)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{("clandestine signal" OR "unauthorized transmission" OR "illegal broadcast"}
+\NormalTok{ OR "deceptive emitter" OR spoofing)}
+\NormalTok{AND (detection OR identification OR classification)}
+\NormalTok{AND (spectrum OR RF OR radio)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{("frequency hopping" OR "low probability of intercept" OR burst)}
+\NormalTok{AND ("emitter identification" OR "anomaly detection" OR fingerprinting)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Sub-area guide 5: integration, calibration, and operational
+validation}\label{sub-area-guide-5-integration-calibration-and-operational-validation}
+
+\subsection{What the research shows}\label{what-the-research-shows-4}
+
+Antenna bandwidth does not determine how much spectrum can be observed
+simultaneously. SDR systems remain limited by ADC rate, RF-front-end
+linearity, host-transfer bandwidth, channelization complexity, storage,
+and processing \citep{flak2022, subbaraman2022}. Fast sweeping increases
+frequency coverage but introduces blind time, creating a risk of missing
+short bursts or hopping signals.
+
+Recent systems address this through FPGA acceleration, multichannel
+SDRs, directional sub-band processing, and adaptive high-resolution
+analysis \citep{gharat2026, madanayake2024, sorecau2026}. Receiver
+saturation and intermodulation are especially important for
+clandestine-signal detection because a weak unauthorized emitter may
+coexist with much stronger legitimate transmitters. The fetched
+Consensus record for the recent multipath RFSoC front end did not expose
+its abstract, so only its bibliographic metadata is used here
+\citep{kovacs2025}.
+
+\subsection{Key papers}\label{key-papers-4}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://consensus.app/papers/details/fe357d36f1dc5626b1f9d7fae0ff75a7/?utm_source=chatgpt}{\textbf{Hardware-Accelerated
+  Real-Time Spectrum Analyzer With a Broadband Fast Sweep Feature Based
+  on the Cost-Effective SDR Platform}}, Flak (2022), 16 citations:
+  quantifies real-time bandwidth and sweep-speed trade-offs
+  \citep{flak2022}.
+\item
+  \href{https://consensus.app/papers/details/f527168041d95e7ba00d1be0e2d79a21/?utm_source=chatgpt}{\textbf{Observing
+  Wideband RF Spectrum with Low-Cost, Resource-Limited SDRs}},
+  Subbaraman et al.~(2022), 0 citations: identifies backhaul and
+  processing as barriers to real-time wideband observation
+  \citep{subbaraman2022}.
+\item
+  \href{https://consensus.app/papers/details/1f33f743e5f75b38b47a1905f27c7a5f/?utm_source=chatgpt}{\textbf{Design
+  of Multichannel Spectrum Intelligence Systems Using Approximate DFT
+  for Antenna-Array Spectrum Perception}}, Madanayake et al.~(2024), 13
+  citations: integrates directional sensing, channelization, and
+  adaptive spectral attention \citep{madanayake2024}.
+\item
+  \href{https://consensus.app/papers/details/9d218ae20f9b5c1dae9b17a3583aece9/?utm_source=chatgpt}{\textbf{Wideband
+  Monitoring System of Drone Emissions Based on SDR Technology with
+  RFNoC Architecture}}, Sorecau et al.~(2026), 3 citations: multichannel
+  architecture intended to capture frequency-hopping drone emissions
+  \citep{sorecau2026}.
+\item
+  \href{https://consensus.app/papers/details/6719301371565fb4bacbf2c123a0d12d/?utm_source=chatgpt}{\textbf{Real-Time
+  Passive RF Spectrum Monitoring and Localization Using Adaptive Signal
+  Analysis}}, Gharat et al.~(2026), 0 citations: combines adaptive
+  anomaly thresholds and directional localization in a low-cost
+  framework \citep{gharat2026}.
+\end{itemize}
+
+\subsection{Search terms}\label{search-terms-4}
+
+instantaneous RF bandwidth; wideband spectrum monitoring; SDR
+channelizer; RFSoC spectrum analyzer; multichannel digital receiver;
+receiver blind time; dynamic range; spurious-free dynamic range; array
+calibration; real-time spectrum intelligence.
+
+\subsection{Boolean searches}\label{boolean-searches-4}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{("wideband spectrum monitoring" OR "spectrum intelligence")}
+\NormalTok{AND (SDR OR RFSoC OR FPGA OR channelizer)}
+\NormalTok{AND ("real time" OR multichannel)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{("passive RF monitoring" OR "emitter surveillance")}
+\NormalTok{AND ("dynamic range" OR linearity OR saturation OR "blind time")}
+\NormalTok{AND (array OR antenna OR receiver)}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Key research groups}\label{key-research-groups}
+
+The returned Consensus metadata did not expose affiliations. Therefore,
+affiliations are deliberately not inferred or invented; they should be
+checked on the linked paper pages or publisher records.
+
+\subsection{I. Liberal, D. Caratelli, and A.
+Yarovoy}\label{i.-liberal-d.-caratelli-and-a.-yarovoy}
+
+Their recurring work covers conformal UWB arrays, radio direction
+finding, coupling compensation, and array-manifold calibration. Three
+closely related pre-2015 records appeared in the era-gated search. A
+representative paper is Caratelli et al.~(2011) \citep{caratelli2011}.
+
+\subsection{F. Costa, A. Monorchio, and G.
+Manara}\label{f.-costa-a.-monorchio-and-g.-manara}
+
+This group recurs around frequency-selective surfaces, electromagnetic
+absorbers, equivalent-circuit modeling, and functional radomes. The
+representative paper in the returned set is Costa and Monorchio (2012)
+\citep{costa2012}.
+
+\subsection{Zhongxiang Shen and
+collaborators}\label{zhongxiang-shen-and-collaborators}
+
+The returned papers cover conformal 3-D FSS structures,
+absorptive-diffusive radomes, wide-angle transmission, and RCS
+reduction. Recurring collaborators include A. Omar, Qihao Lv, and C.
+Jin. A representative paper is Lv et al.~(2021) \citep{lv2021}.
+
+\subsection{X. Sheng, Ning Liu, and
+collaborators}\label{x.-sheng-ning-liu-and-collaborators}
+
+Their work centers on equivalent-circuit-based bandpass FSS design,
+conformal stability, wide rejection bands, and radome applications. A
+representative paper is Sheng et al.~(2024) \citep{sheng2024}.
+
+\subsection{M. Sorecau, E. Sorecau, P. Bechet, and
+collaborators}\label{m.-sorecau-e.-sorecau-p.-bechet-and-collaborators}
+
+The returned work focuses on SDR spectrum monitoring, swept versus
+real-time observation, multichannel RFNoC architectures, and
+drone-emission detection. A representative paper is Sorecau et
+al.~(2026) \citep{sorecau2026}.
+
+\section{Open questions and gaps}\label{open-questions-and-gaps}
+
+\subsection{Methodological gaps}\label{methodological-gaps}
+
+\subsubsection{Lack of end-to-end
+evaluation}\label{lack-of-end-to-end-evaluation}
+
+Most antenna and radome papers terminate at S-parameters, gain,
+radiation patterns, RCS, or transmission coefficients. Detection papers
+generally begin with already digitized signals. Few returned studies
+measured the full chain
+
+\begin{quote}
+radome -\textgreater{} antenna array -\textgreater{} RF front end
+-\textgreater{} ADC/channelizer -\textgreater{} detector -\textgreater{}
+classifier -\textgreater{} direction/localization output
+\end{quote}
+
+under the same experimental conditions.
+
+\textbf{Why it matters:} a radome may have acceptable average insertion
+loss while introducing frequency- and angle-dependent phase errors that
+degrade DOA or RF fingerprints.
+
+\subsubsection{Closed-set and dataset-leakage
+risks}\label{closed-set-and-dataset-leakage-risks}
+
+RF-fingerprinting studies often evaluate known devices under conditions
+similar to training \citep{jagannath2022, soltanieh2020}. Open-set work
+is emerging \citep{zhang2025open}, but channel, receiver, and location
+effects can accidentally become part of the learned fingerprint.
+
+\textbf{Why it matters:} a system may classify the laboratory channel or
+receiver chain rather than the clandestine transmitter.
+
+\subsubsection{Insufficient adversarial
+testing}\label{insufficient-adversarial-testing}
+
+Sun et al.~show that deliberately perturbed emissions can defeat deep
+SEI \citep{sun2022}. This issue is not routinely incorporated into
+antenna/radome or spectrum-monitoring validation.
+
+\textbf{Why it matters:} a clandestine source may intentionally imitate
+an authorized waveform or suppress its hardware fingerprint.
+
+\subsubsection{Inconsistent metrics}\label{inconsistent-metrics}
+
+The branches use different outcome measures: VSWR, gain, insertion loss,
+and RCS for hardware; probability of detection and false alarm for
+sensing; angular RMSE for localization; and accuracy or AUC for
+classification.
+
+\textbf{Why it matters:} there is no accepted system-level metric
+connecting radome loss and distortion to the probability of detecting
+and identifying a weak emitter.
+
+\subsection{Population and context
+gaps}\label{population-and-context-gaps}
+
+\subsubsection{No demonstrated seamless multi-octave
+system}\label{no-demonstrated-seamless-multi-octave-system}
+
+The returned works cover useful but different ranges: 250 MHz--3.3 GHz
+\citep{caratelli2011, liberal2011}, 1.5--7.5 GHz \citep{tianang2017},
+X-band radomes \citep{sheng2024, tahseen2021}, and a proposed 2--40 GHz
+co-aperture receiver \citep{pi2025}.
+
+\textbf{Why it matters:} a single broad-spectrum radome face may require
+several sub-arrays and receiver paths rather than one universal element.
+
+\subsubsection{Weak, short-duration, and frequency-hopping
+emitters}\label{weak-short-duration-and-frequency-hopping-emitters}
+
+Real-time monitoring papers recognize hopping or transient signals
+\citep{flak2022, sorecau2026}, but complete evaluation with weak
+emitters, strong adjacent transmitters, multipath, and platform motion
+is sparse.
+
+\textbf{Why it matters:} sweep-based receivers can miss short
+transmissions, while wide instantaneous receivers may saturate or exceed
+processing capacity.
+
+\subsubsection{Environmental and structural
+aging}\label{environmental-and-structural-aging}
+
+The returned conformal-radome studies focus mostly on electromagnetic
+prototypes. Thermal gradients, moisture, vibration, erosion,
+manufacturing tolerances, and long-term dielectric changes are not
+integrated with classification and DOA calibration.
+
+\textbf{Why it matters:} slow structural drift can look like a signal
+deviation or corrupt a stored emitter baseline.
+
+\subsubsection{Airborne and curved-platform field
+datasets}\label{airborne-and-curved-platform-field-datasets}
+
+Several papers target airborne or UAV platforms
+\citep{gupta2023, pi2025, sorecau2026}, but public, reproducible
+datasets combining curved arrays, radome distortion, and emitter
+identity appear sparse in the returned literature.
+
+\textbf{Why it matters:} laboratory models may not transfer to a moving
+platform with changing orientation, polarization, and multipath.
+
+\subsection{Conceptual and theoretical
+gaps}\label{conceptual-and-theoretical-gaps}
+
+\subsubsection{Stealth radome versus listening
+radome}\label{stealth-radome-versus-listening-radome}
+
+FSS radomes commonly suppress out-of-band exposure
+\citep{costa2012, lv2021, xing2022}. A surveillance system, by contrast,
+seeks sensitivity to signals outside the expected band.
+
+\textbf{Why it matters:} optimizing for low RCS and optimizing for
+broad-spectrum listening can be contradictory objectives. A tunable,
+segmented, or deliberately wide-transmission radome may be required.
+
+\subsubsection{Emitter identity versus signal
+deviation}\label{emitter-identity-versus-signal-deviation}
+
+RF fingerprinting asks, ``Which physical transmitter produced this
+waveform?'' Anomaly detection asks, ``Does this observation differ from
+expected behavior?'' These are related but not equivalent.
+
+\textbf{Why it matters:} a known transmitter can change modulation or
+operating parameters without changing hardware, while a deceptive
+transmitter can imitate the nominal waveform but retain a different
+hardware fingerprint.
+
+\subsubsection{Antenna bandwidth versus receiver
+observability}\label{antenna-bandwidth-versus-receiver-observability}
+
+A 2--40 GHz antenna does not imply simultaneous 38 GHz observation.
+Receiver bandwidth, channelization, and data transport determine what is
+actually visible \citep{flak2022, madanayake2024, subbaraman2022}.
+
+\textbf{Why it matters:} system specifications should separately state
+antenna coverage, instantaneous bandwidth, sweep revisit time, and
+probability of intercept.
+
+\subsubsection{Propagation fingerprint versus emitter
+fingerprint}\label{propagation-fingerprint-versus-emitter-fingerprint}
+
+Radome response, antenna pattern, multipath, receiver nonlinearity, and
+transmitter hardware all affect the measured waveform.
+
+\textbf{Why it matters:} without domain-invariant models or controlled
+calibration, a classifier can confuse location and channel changes with
+a new or deviating emitter.
+
+\section{Recommended research
+architecture}\label{recommended-research-architecture}
+
+The literature supports a modular research program rather than
+attempting a universal antenna immediately:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Segment the desired spectrum into technically realistic sub-bands.
+\item
+  Use conformal or flush broadband elements appropriate to each band,
+  such as spiral or sinuous structures at lower bands and Vivaldi or
+  tapered-slot elements at higher bands.
+\item
+  Treat the radome as a calibrated complex transfer function
+  \(H(f,\theta,\phi,p)\), including amplitude, phase, polarization, and
+  incidence angle.
+\item
+  Use synchronized multichannel reception for DOA and a separate
+  wideband or swept path for discovery.
+\item
+  Separate the inference chain into signal-presence detection, waveform
+  characterization, known-emitter matching, open-set anomaly detection,
+  and localization.
+\item
+  Evaluate the complete system using both ordinary and deliberately
+  deceptive emitters while varying SNR, channel, orientation,
+  temperature, and radome condition.
+\end{enumerate}
+
+The most defensible thesis-level gap emerging from the returned
+literature is:
+
+\begin{quote}
+\textbf{Joint co-design and experimental validation of a conformal
+broadband antenna--radome--receiver system for open-set passive emitter
+detection, specific-emitter identification, and direction finding, with
+explicit calibration of radome- and platform-induced distortions.}
+\end{quote}
+
+\section{Limitations of this review}\label{limitations-of-this-review}
+
+The review is bounded by the papers returned by Consensus in this
+session, the ten-results-per-query limit, and the metadata exposed by
+the connector. Citation counts are provisional and will change. Some
+technically relevant defense and industrial work may be classified,
+proprietary, poorly indexed, or published outside peer-reviewed venues.
+The exact-title follow-up for the most-cited radome paper returned only
+four results; no outside material was silently added.
+
+\renewcommand\refname{References}
+  \bibliography{references}
+
+\end{document}
