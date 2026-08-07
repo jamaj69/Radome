@@ -50,14 +50,14 @@ A face triangular nominal possui lado de 2 m. Uma antena Yagi (``espinha de peix
 
 As junções internas formam caminhos contínuos de carga entre os membros da estrutura triangular e as faces vizinhas. Costuras estruturais vedadas, reforços locais e um anel ou placa nodal interna transferem cargas de vento, vibração e manutenção sem depender apenas da pele dielétrica. O conjunto deve ser verificado por análise estrutural e ensaios ambientais.
 
-The Blender model makes the mounting convention explicit: the mast is aligned with the face normal and carries the antenna away from the dielectric surface; the Yagi boom is aligned with a local tangent direction of the triangular face, and its directors remain in the tangent plane. This is the intended mechanical orientation for the VHF aperture.
+The Blender model makes the mounting convention explicit: the support mast and the Yagi boom share the same local tangent direction of the triangular face. The directors span the second tangent direction, and no antenna axis is assigned to the face normal. This is the intended mechanical orientation for the VHF aperture.
 
-O modelo Blender torna explícita a convenção de montagem: a haste está alinhada com a normal da face e afasta a antena da superfície dielétrica; a lança da Yagi está alinhada com uma direção tangente local da face triangular, e seus elementos permanecem no plano tangente. Essa é a orientação mecânica pretendida para a abertura VHF.
+O modelo Blender torna explícita a convenção de montagem: a haste de suporte e a lança da Yagi compartilham a mesma direção tangente local da face triangular. Os elementos transversais ocupam a segunda direção tangente, e nenhum eixo da antena é orientado pela normal da face. Essa é a orientação mecânica pretendida para a abertura VHF.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig13_radome_blender.png}
-\caption{Blender 3D model: the VHF Yagi boom is tangent to the face and the support mast is normal to the face / Modelo Blender 3D: a lança da Yagi VHF é tangente à face e a haste de suporte é normal à face.}
+\caption{Blender 3D model: the VHF Yagi boom and support mast share the tangent direction of the face / Modelo Blender 3D: a lança e a haste da Yagi VHF compartilham a direção tangente da face.}
 \label{fig:blender-yagi}
 \end{figure}
 
