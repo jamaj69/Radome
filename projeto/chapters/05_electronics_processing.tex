@@ -9,6 +9,8 @@ The system performs three reductions: band-level detection, face-level fusion an
 
 Every antenna assigned to a band has its own shielded acquisition module containing at least one ADC and one band ASIC. The modules are separated by conductive partitions, RF gaskets and controlled cable/fibre feedthroughs. A central face module, the FFASIC, receives events from all band modules, performs intra-face correlation and interfaces with timing, thermal monitoring, power and the optical link.
 
+Thermally, each shielded module is mounted to a conductive cold plate connected to a controlled heat path. The RF cavity, digital processing electronics and power conversion are physically partitioned so that heat sources and digital EMI do not share an uncontrolled volume with the sensitive RF aperture. Temperature sensors are attached to the LNA, ADC, ASIC, clock and cold plate; thermal drift is recorded as metadata and triggers recalibration when the validated range is exceeded.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{fig03_modulo_face.png}
@@ -30,3 +32,5 @@ Cada banda possui antena específica, pré-seletor, limitador, LNA, conversor qu
 O sistema executa três reduções: detecção na banda, fusão na face e fusão global do radome. As amostras brutas permanecem locais e são preservadas ao redor de gatilhos. O tráfego normal contém descritores, telemetria, resumos e capturas I/Q selecionadas, não o streaming permanente de todos os ADCs.
 
 Cada antena atribuída a uma faixa possui seu próprio módulo de aquisição blindado, contendo pelo menos um ADC e um ASIC da faixa. Os módulos são separados por partições condutivas, juntas RF e passagens controladas para cabos e fibras. Um módulo central da face, o FFASIC, recebe eventos de todos os módulos de faixa, executa a correlação interna e se conecta ao sincronismo, monitoramento térmico, energia e enlace óptico.
+
+Termicamente, cada módulo blindado é montado sobre uma placa fria condutiva ligada a um caminho térmico controlado. A cavidade RF, a eletrônica digital e a conversão de energia são fisicamente particionadas para que fontes de calor e EMI digital não compartilhem um volume não controlado com a abertura RF sensível. Sensores de temperatura são instalados no LNA, ADC, ASIC, clock e placa fria; a deriva térmica é registrada nos metadados e aciona recalibração quando a faixa validada é excedida.
