@@ -14,6 +14,8 @@ Together with surveyed node coordinates, aircraft ephemeris hypotheses and propa
 
 ADS-B supplies a cooperative identity and state report, while the two-node RF geometry supplies an independent consistency check based on received power, AOA, TDOA and Doppler.
 
+The nominal 100 km baseline remains a screening geometry, not an approved deployment distance. With the proposed screening heights of 1000 m for a station and 10000 m for an aircraft (\texttt{EXP-010}), a standard effective-Earth radio-horizon calculation gives approximately 542 km of mutual geometric horizon. This only shows that 100 km is not excluded by curvature in that example. Terrain masking, antenna patterns, link margin, common visibility, GDOP, spectrum authorization and actual site coordinates must still close before field deployment.
+
 \subsection*{Independent UHF illuminators / Iluminadores UHF independentes}
 Known UHF television or other broadcast transmitters can provide an independent triangulation test alongside ADS-B. Their direct signals can be used to calibrate AOA, timing, received-power mapping and site geometry when transmitter coordinates and waveform characteristics are known. Their reflected signals can also support a separate bistatic experiment, but direct-emitter verification and target-reflection localization must not be mixed in the same estimator without an explicit propagation model.
 
@@ -53,6 +55,8 @@ Dois nós radome (\texttt{EXP-005}), separados por uma linha de base proposta de
 Com as coordenadas levantadas dos nós, hipóteses de efemérides da aeronave e incerteza de propagação, esses observáveis produzem uma região de consistência para altitude, posição e velocidade. O resultado verifica se os parâmetros transmitidos são compatíveis com a observação física; não é uma garantia cega de que todo parâmetro transmitido seja verdadeiro.
 
 O ADS-B fornece uma identidade e um estado cooperativos, enquanto a geometria RF dos dois nós fornece uma verificação independente baseada em potência recebida, AOA, TDOA e Doppler.
+
+A linha de base nominal de 100 km permanece uma geometria de triagem, não uma distância de implantação aprovada. Com as alturas propostas para triagem de 1000 m para a estação e 10000 m para a aeronave (\texttt{EXP-010}), um cálculo padrão de horizonte radioelétrico com Terra efetiva fornece aproximadamente 542 km de horizonte geométrico mútuo. Isso demonstra apenas que a curvatura não exclui 100 km nesse exemplo. Mascaramento pelo terreno, diagramas das antenas, margem de enlace, visibilidade comum, GDOP, autorização de espectro e coordenadas reais dos sítios ainda precisam ser fechados antes do ensaio de campo.
 
 \subsection*{Iluminadores UHF independentes}
 Transmissores conhecidos de televisão UHF ou de outros serviços de radiodifusão podem fornecer um teste independente de triangulação junto com o ADS-B. Seus sinais diretos podem ser usados para calibrar AOA, sincronismo, mapeamento de potência recebida e geometria do sítio quando as coordenadas do transmissor e as características da forma de onda forem conhecidas. Seus sinais refletidos também podem apoiar um experimento biestático separado, mas a verificação de emissor direto e a localização por reflexão do alvo não devem ser misturadas no mesmo estimador sem um modelo explícito de propagação.

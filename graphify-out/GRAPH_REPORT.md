@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-08)
 
 ## Corpus Check
-- 27 files · ~356,888 words
+- 28 files · ~357,327 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 509 nodes · 500 edges · 42 communities (38 shown, 4 thin omitted)
+- 516 nodes · 509 edges · 50 communities (46 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `660ad44f`
+- Built from commit: `8e15f3a3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -41,18 +41,26 @@
 - English
 - Start here: priority reading order
 - Key research groups
+- verify_c3_acquisition_budget.py
 - Sub-area guide 1: broadband antenna architectures and radome-face placement
 - Sub-area guide 2: electromagnetic effects and functional radome technologies
 - Sub-area guide 3: passive emitter detection, direction finding, and localization
 - Sub-area guide 4: clandestine, anomalous, and deviated-signal identification
 - Sub-area guide 5: integration, calibration, and operational validation
+- Key research groups
 - Blender Baseline: 35S Radome and Concrete Base
+- Sub-area guide 1: broadband antenna architectures and radome-face placement
 - 17. Recalibração constante do relógio
 - RADOME V3
 - 24. Dois planos de comunicação
 - 5. Casco externo e estrutura interna
+- Sub-area guide 2: electromagnetic effects and functional radome technologies
 - build.sh
 - 2. Geometria fundamental
+- Sub-area guide 3: passive emitter detection, direction finding, and localization
+- Sub-area guide 4: clandestine, anomalous, and deviated-signal identification
+- Cross-search signals
+- Sub-area guide 5: integration, calibration, and operational validation
 - Cross-search signals
 
 ## God Nodes (most connected - your core abstractions)
@@ -73,7 +81,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (42 total, 4 thin omitted)
+## Communities (50 total, 4 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -128,8 +136,8 @@ Cohesion: 0.22
 Nodes (8): Broadband Antennas Integrated with Radome Faces for Passive Detection of Clandestine or Anomalous RF Signals, How the field got here, Limitations of this review, Recommended research architecture, References, Search method, Terminology shifts, Topic overview
 
 ### Community 13 - "review.md"
-Cohesion: 0.05
-Nodes (42): Boolean searches, Boolean searches, Boolean searches, Boolean searches, Boolean searches, Broadband Antennas Integrated with Radome Faces for Passive Detection of Clandestine or Anomalous RF Signals, Citation velocity, Cross-search signals (+34 more)
+Cohesion: 0.22
+Nodes (8): Broadband Antennas Integrated with Radome Faces for Passive Detection of Clandestine or Anomalous RF Signals, How the field got here, Limitations of this review, Recommended research architecture, References, Search method, Terminology shifts, Topic overview
 
 ### Community 14 - "Start here: priority reading order"
 Cohesion: 0.25
@@ -171,6 +179,10 @@ Nodes (8): 1. Closest review to the complete antenna problem, 2. Seminal functio
 Cohesion: 0.33
 Nodes (6): F. Costa, A. Monorchio, and G. Manara, I. Liberal, D. Caratelli, and A. Yarovoy, Key research groups, M. Sorecau, E. Sorecau, P. Bechet, and collaborators, X. Sheng, Ning Liu, and collaborators, Zhongxiang Shen and collaborators
 
+### Community 27 - "verify_c3_acquisition_budget.py"
+Cohesion: 0.43
+Nodes (4): CapturePath, main(), mutual_horizon_km(), radio_horizon_km()
+
 ### Community 28 - "Sub-area guide 1: broadband antenna architectures and radome-face placement"
 Cohesion: 0.40
 Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 1: broadband antenna architectures and radome-face placement, What the research shows
@@ -191,9 +203,17 @@ Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 4: clandes
 Cohesion: 0.40
 Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 5: integration, calibration, and operational validation, What the research shows
 
+### Community 33 - "Key research groups"
+Cohesion: 0.33
+Nodes (6): F. Costa, A. Monorchio, and G. Manara, I. Liberal, D. Caratelli, and A. Yarovoy, Key research groups, M. Sorecau, E. Sorecau, P. Bechet, and collaborators, X. Sheng, Ning Liu, and collaborators, Zhongxiang Shen and collaborators
+
 ### Community 34 - "Blender Baseline: 35S Radome and Concrete Base"
 Cohesion: 0.50
 Nodes (3): Blender Baseline: 35S Radome and Concrete Base, Geometry, Known presentation issues for the next revision
+
+### Community 36 - "Sub-area guide 1: broadband antenna architectures and radome-face placement"
+Cohesion: 0.40
+Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 1: broadband antenna architectures and radome-face placement, What the research shows
 
 ### Community 37 - "17. Recalibração constante do relógio"
 Cohesion: 0.67
@@ -211,7 +231,27 @@ Nodes (3): 24. Dois planos de comunicação, Capture Plane, Control/Event Plane
 Cohesion: 0.67
 Nodes (3): 5. Casco externo e estrutura interna, Estrutura mecânica, Superfície aerodinâmica
 
+### Community 41 - "Sub-area guide 2: electromagnetic effects and functional radome technologies"
+Cohesion: 0.40
+Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 2: electromagnetic effects and functional radome technologies, What the research shows
+
+### Community 45 - "Sub-area guide 3: passive emitter detection, direction finding, and localization"
+Cohesion: 0.40
+Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 3: passive emitter detection, direction finding, and localization, What the research shows
+
+### Community 46 - "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification"
+Cohesion: 0.40
+Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 4: clandestine, anomalous, and deviated-signal identification, What the research shows
+
 ### Community 47 - "Cross-search signals"
+Cohesion: 0.67
+Nodes (3): Citation velocity, Cross-search signals, Repeat-hit papers
+
+### Community 48 - "Sub-area guide 5: integration, calibration, and operational validation"
+Cohesion: 0.40
+Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 5: integration, calibration, and operational validation, What the research shows
+
+### Community 49 - "Cross-search signals"
 Cohesion: 0.67
 Nodes (3): Citation velocity, Cross-search signals, Repeat-hit papers
 
@@ -224,9 +264,9 @@ Nodes (3): Citation velocity, Cross-search signals, Repeat-hit papers
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **What connects `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` to the rest of the system?**
   _385 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**

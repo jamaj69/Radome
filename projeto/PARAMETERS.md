@@ -67,6 +67,10 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | RF-009 | Faixa da abertura/array aeronáutico dedicado | 960–1215 | MHz | Proposto | `DECISIONS.md` ADR-010 | Antenas/RF | Selecionar topologia e medir ganho, padrão e acoplamento |
 | RF-010 | Caminho receptor UAT | abertura RF-009 → preselector 978 → limitador/LNA → ADC coerente → canal FPGA UAT | — | Proposto | `DECISIONS.md` ADR-010 | RF/eletrônica | Dimensionar largura, NF, IP3, amostragem e faixa dinâmica C3 |
 | RF-011 | Caminho receptor 1090ES | abertura RF-009 → preselector 1090 → limitador/LNA → ADC coerente → canal FPGA 1090ES | — | Proposto | `DECISIONS.md` ADR-010 | RF/eletrônica | Dimensionar largura, NF, IP3, amostragem e faixa dinâmica C3 |
+| RF-012 | Baseline de captura UAT/1090ES | 8 MS/s, I/Q 16+16 bit, 2 canais por nó | — | Proposto | `spectral/verify_c3_acquisition_budget.py` | RF/dados | Confirmar largura ocupada, aliasing e implementação ADC/DDC |
+| RF-013 | Baseline de captura UHF direta | 25 MS/s, I/Q 16+16 bit, 1 canal por nó | — | Proposto | `spectral/verify_c3_acquisition_budget.py` | RF/dados | Ajustar à forma de onda e largura do transmissor selecionado |
+| RF-014 | Baseline de captura biestática UHF | 25 MS/s, I/Q 16+16 bit, 2 canais por nó | — | Proposto | `spectral/verify_c3_acquisition_budget.py` | RF/dados | Validar coerência entre referência e vigilância |
+| RF-015 | NF, IP3 e faixa dinâmica utilizável | não atribuídos | — | Proposto | `spectral/verify_c3_acquisition_budget.py` | RF/eletrônica | Fechar orçamento em cascata após campanha RFI e seleção de componentes |
 | ANT-001 | LPDA VHF candidata: faixa de projeto | 71.5–323 | MHz | Derivado | `antenna_designs/lpda_vhf_72_320.md` | Antenas/RF | Simulação NEC/openEMS e OTA |
 | ANT-002 | LPDA VHF candidata: τ / σ | 0.86 / 0.16 | — | Proposto | `antenna_designs/lpda_vhf_72_320.md` | Antenas/RF | Otimização de ganho e impedância |
 | ANT-003 | LPDA VHF candidata: elementos | 11 | elemento | Derivado | `antenna_designs/lpda_vhf_72_320.md` | Antenas/RF | Confirmar região ativa por frequência |
@@ -94,6 +98,8 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | EXP-006 | Protocolo de emissor direto cooperativo | ADS-B 1090ES; UAT contextual | — | Proposto | `07_passive_radar.tex`; `DECISIONS.md` ADR-011 | RF/experimentos | Decodificação, associação e resíduos contra estado GNSS transmitido |
 | EXP-007 | Protocolo de calibração por transmissor conhecido | sinal direto UHF com posição e forma de onda conhecidas | — | Proposto | `07_passive_radar.tex`; `DECISIONS.md` ADR-011 | Metrologia/experimentos | Resíduos de AOA, atraso e potência contra levantamento independente |
 | EXP-008 | Protocolo de reflexão biestática | canais simultâneos de referência e vigilância | — | Proposto | `07_passive_radar.tex`; `DECISIONS.md` ADR-011 | Radar passivo | Pd/Pfa e erros atraso–Doppler contra alvo controlado ou rastreado |
+| EXP-009 | Janela de captura bruta de triagem | 10 | s | Proposto | `spectral/verify_c3_acquisition_budget.py` | Dados/experimentos | Ajustar por protocolo após medir ocupação e taxa de eventos |
+| EXP-010 | Alturas de triagem para horizonte | estação 1000; aeronave 10000 | m | Proposto | `spectral/verify_c3_acquisition_budget.py` | Sistemas/sítio | Substituir por terreno, sítios e trajetória reais |
 
 ## Resultado da revisão C0
 
