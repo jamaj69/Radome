@@ -40,6 +40,7 @@ board_mat = material("RF PCB", (0.08, 0.33, 0.20), roughness=0.4)
 ffasic_mat = material("FFASIC central module", (0.38, 0.25, 0.62), metallic=0.3, roughness=0.28)
 yagi_mat = material("Yagi aluminium", (0.67, 0.70, 0.72), metallic=0.82, roughness=0.2)
 yagi_gold = material("Yagi bracket", (0.82, 0.50, 0.06), metallic=0.65, roughness=0.25)
+yagi_cross_mat = material("Crossed Yagi aluminium", (0.32, 0.58, 0.82), metallic=0.78, roughness=0.22)
 mast_mat = material("Mast", (0.20, 0.22, 0.24), metallic=0.7, roughness=0.25)
 white_mat = material("White", (0.92, 0.94, 0.95), roughness=0.45)
 base_mat = material("Concrete base", (0.42, 0.45, 0.47), roughness=0.88)
@@ -185,30 +186,41 @@ for point in base:
     bpy.context.object.name = "Internal node plate"
     bpy.context.object.data.materials.append(frame_mat)
 
-# External antenna: the support strut from the inward apex continues as the
-# Yagi boom. The boom and support are collinear; the parasitic elements are
-# transverse to that common axis.
+# External crossed Yagis: both booms continue from the same apex-support axis.
+# Their transverse elements occupy orthogonal planes, producing two distinct
+# linear polarizations while preserving independent band dimensions.
 yagi_x = offset.x + 0.32
 mast_base = apex
 mast_top = Vector((yagi_x, 0.0, 0.0))
 cylinder_between("Antenna support from inward pyramid apex", mast_base, mast_top, 0.065, mast_mat)
 boom_end = Vector((offset.x + 2.75, 0.0, 0.0))
-cylinder_between("Yagi boom extension of apex support", mast_top, boom_end, 0.045, yagi_mat)
-# Reflector at bottom, driven folded loop, and directors.
-cylinder_between("Yagi reflector", Vector((yagi_x, 0.0, 0.0)), Vector((yagi_x, 0.0, 0.78)), 0.035, yagi_mat)
-for x, half in [(0.62, 0.47), (1.03, 0.43), (1.43, 0.39), (1.83, 0.35), (2.23, 0.31), (2.62, 0.27)]:
-    x_position = offset.x + x
-    cylinder_between("Yagi transverse element", Vector((x_position, -half, 0.0)), Vector((x_position, half, 0.0)), 0.022, yagi_mat)
-# Folded driven element as a rectangular rounded loop approximated by four cylinders.
-loop_x = offset.x + 1.35
-loop_half_y = 0.58
-loop_half_z = 0.12
-cylinder_between("Yagi folded driven element", Vector((loop_x, -loop_half_y, -loop_half_z)), Vector((loop_x, loop_half_y, -loop_half_z)), 0.032, yagi_gold)
-cylinder_between("Yagi folded driven element", Vector((loop_x, loop_half_y, -loop_half_z)), Vector((loop_x, loop_half_y, loop_half_z)), 0.032, yagi_gold)
-cylinder_between("Yagi folded driven element", Vector((loop_x, loop_half_y, loop_half_z)), Vector((loop_x, -loop_half_y, loop_half_z)), 0.032, yagi_gold)
-cylinder_between("Yagi folded driven element", Vector((loop_x, -loop_half_y, loop_half_z)), Vector((loop_x, -loop_half_y, -loop_half_z)), 0.032, yagi_gold)
-# Feed stalk and bracket.
-cylinder_between("Yagi feed stalk", Vector((yagi_x, 0, 0)), Vector((offset.x + 1.38, 0, 0)), 0.035, yagi_gold)
+def crossed_yagi(prefix, color_mat, element_axis, offset_y=0.0, offset_z=0.0, scale=1.0):
+    boom_start = Vector((yagi_x, offset_y, offset_z))
+    cylinder_between(prefix + " boom", boom_start, boom_end + Vector((0, offset_y, offset_z)), 0.04, color_mat)
+    lengths = [(0.62, 1.00), (1.03, 0.86), (1.43, 0.74), (1.83, 0.62), (2.23, 0.52), (2.62, 0.45)]
+    for x, half in lengths:
+        x_position = offset.x + x
+        half *= scale
+        if element_axis == "y":
+            a = Vector((x_position, offset_y - half, offset_z))
+            b = Vector((x_position, offset_y + half, offset_z))
+        else:
+            a = Vector((x_position, offset_y, offset_z - half))
+            b = Vector((x_position, offset_y, offset_z + half))
+        cylinder_between(prefix + " transverse element", a, b, 0.022, color_mat)
+    loop_x = offset.x + 1.35
+    half = 0.58 * scale
+    if element_axis == "y":
+        loop_points = [Vector((loop_x, offset_y - half, offset_z - 0.12)), Vector((loop_x, offset_y + half, offset_z - 0.12)), Vector((loop_x, offset_y + half, offset_z + 0.12)), Vector((loop_x, offset_y - half, offset_z + 0.12))]
+    else:
+        loop_points = [Vector((loop_x, offset_y - 0.12, offset_z - half)), Vector((loop_x, offset_y - 0.12, offset_z + half)), Vector((loop_x, offset_y + 0.12, offset_z + half)), Vector((loop_x, offset_y + 0.12, offset_z - half))]
+    for start, end in zip(loop_points, loop_points[1:] + loop_points[:1]):
+        cylinder_between(prefix + " folded driven element", start, end, 0.032, yagi_gold)
+
+crossed_yagi("Yagi A VHF-low polarization-Y", yagi_mat, "y", offset_z=0.10, scale=1.0)
+crossed_yagi("Yagi B VHF-high polarization-Z", yagi_cross_mat, "z", offset_y=0.10, scale=0.62)
+# Shared feed bracket at the external face interface.
+cylinder_between("Crossed Yagi feed bracket", Vector((yagi_x, 0, 0)), Vector((offset.x + 1.38, 0, 0)), 0.035, yagi_gold)
 bpy.ops.mesh.primitive_cube_add(size=1, location=offset + Vector((1.37, 0, -0.85)))
 bracket = bpy.context.object
 bracket.name = "Yagi base bracket"

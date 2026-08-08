@@ -19,22 +19,34 @@
 <text x="290" y="358" text-anchor="middle" class="t">abertura dielétrica RF</text>
 <!-- external Yagi: longitudinal support/boom continues from the internal apex; elements are transverse -->
 <circle cx="290" cy="520" r="12" fill="#b74747"/>
-<line x1="290" y1="520" x2="290" y2="705" stroke="#7b4b2a" stroke-width="8"/>
-<line x1="290" y1="570" x2="290" y2="705" stroke="#d08a2e" stroke-width="4"/>
+<line x1="290" y1="520" x2="290" y2="820" stroke="#7b4b2a" stroke-width="8"/>
+<line x1="290" y1="570" x2="290" y2="820" stroke="#d08a2e" stroke-width="4"/>
+<!-- reflector and six transverse directors, scaled from 2.00 m down to 1.05 m -->
 <line x1="210" y1="610" x2="370" y2="610" stroke="#7b4b2a" stroke-width="7"/>
-<line x1="235" y1="585" x2="235" y2="635" stroke="#7b4b2a" stroke-width="4"/>
-<line x1="268" y1="582" x2="268" y2="638" stroke="#7b4b2a" stroke-width="4"/>
-<line x1="312" y1="582" x2="312" y2="638" stroke="#7b4b2a" stroke-width="4"/>
-<line x1="345" y1="585" x2="345" y2="635" stroke="#7b4b2a" stroke-width="4"/>
-<text x="390" y="600" class="s">support/boom axis</text>
-<text x="305" y="584" class="s">apex support / suporte no vértice</text>
-<text x="290" y="755" text-anchor="middle" class="t">External VHF Yagi / Yagi VHF externa</text>
-<text x="290" y="778" text-anchor="middle" class="s">largest transverse element = 2.00 m; feed through sealed face interface</text>
+<line x1="218" y1="645" x2="362" y2="645" stroke="#6d7074" stroke-width="5"/>
+<line x1="225" y1="680" x2="355" y2="680" stroke="#6d7074" stroke-width="5"/>
+<line x1="232" y1="715" x2="348" y2="715" stroke="#6d7074" stroke-width="5"/>
+<line x1="240" y1="750" x2="340" y2="750" stroke="#6d7074" stroke-width="4"/>
+<line x1="247" y1="785" x2="333" y2="785" stroke="#6d7074" stroke-width="4"/>
+<line x1="254" y1="820" x2="326" y2="820" stroke="#6d7074" stroke-width="4"/>
+<!-- crossed Yagi B: smaller elements in the orthogonal polarization plane -->
+<line x1="238" y1="620" x2="342" y2="650" stroke="#416f9d" stroke-width="4"/>
+<line x1="245" y1="655" x2="335" y2="681" stroke="#416f9d" stroke-width="4"/>
+<line x1="252" y1="690" x2="328" y2="712" stroke="#416f9d" stroke-width="4"/>
+<line x1="259" y1="725" x2="321" y2="743" stroke="#416f9d" stroke-width="3"/>
+<line x1="266" y1="760" x2="314" y2="774" stroke="#416f9d" stroke-width="3"/>
+<line x1="273" y1="795" x2="307" y2="805" stroke="#416f9d" stroke-width="3"/>
+<!-- folded driven element around the support axis -->
+<path d="M230,690 C215,680 215,665 230,655 L350,655 C365,665 365,680 350,690" fill="none" stroke="#b9792e" stroke-width="5"/>
+<text x="390" y="575" class="s">common boom / eixo comum</text>
+<text x="390" y="595" class="s">apex support / vértice interno</text>
+<text x="290" y="850" text-anchor="middle" class="t">External VHF Yagi / Yagi VHF externa</text>
+<text x="290" y="872" text-anchor="middle" class="s">A larger / maior, pol. Y: 2.00, 1.80, 1.62, 1.45, 1.25, 1.08 m</text>
+<text x="290" y="890" text-anchor="middle" class="s">B smaller / menor, pol. Z: scaled elements, orthogonal 90 deg</text>
 <!-- dimensions -->
 <line x1="80" y1="535" x2="500" y2="535" stroke="#9a4c2b" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
 <text x="290" y="560" text-anchor="middle" class="dim">2.00 m triangular face side / lado da face</text>
-<line x1="210" y1="625" x2="370" y2="625" stroke="#9a4c2b" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-<text x="290" y="650" text-anchor="middle" class="dim">2.00 m largest transverse element / maior elemento transversal</text>
+<text x="380" y="615" class="dim">2.00 m max.</text>
 <line x1="55" y1="155" x2="55" y2="520" stroke="#9a4c2b" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
 <text x="40" y="345" transform="rotate(-90 40 345)" text-anchor="middle" class="dim">preliminary height / altura</text>
 

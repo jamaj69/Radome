@@ -11,12 +11,12 @@ For the site model, the equatorial plane is the radome mid-plane. The lower cut 
 
 The mechanical skeleton, dielectric panels and internal RF modules have different but coordinated geometries. A face is a mechanical and computational sector, not an electromagnetically isolated region. Angular overlap between neighbouring faces is required for calibration, interpolation and direction estimation.
 
-The nominal triangular face uses a 2 m side dimension. The external VHF Yagi is mounted on the outer face through a support/boom axis that continues from the pyramid apex through the sealed face interface. Its parasitic elements are transverse to that axis; the largest transverse element is specified as 2 m. The support transfers mechanical loads to the internal apex and triangular frame. The external antenna is assigned to VHF and is not a universal radiator.
+The nominal triangular face uses a 2 m side dimension. Two external crossed VHF Yagis share the support/boom axis that continues from the pyramid apex through the sealed face interface. The parasitic elements of both antennas are transverse to the mast, but occupy orthogonal planes and provide distinct linear polarizations at 90 degrees. Yagi A uses the larger scaled set, with a 2 m maximum transverse element; Yagi B uses smaller elements for a higher VHF sub-band. Each antenna has an independent feed, ADC and ASIC.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig11_face_yagi_camadas.pdf}
-\caption{Two-metre triangular face with external Yagi, mast support, shielded band modules, central face module and internal structural joints.}
+\caption{Two-metre triangular face with external VHF Yagi: longitudinal support/boom, folded driven element and six transverse elements scaled from 2.00 m to 1.05 m.}
 \label{fig:face-yagi}
 \end{figure}
 
@@ -43,12 +43,12 @@ Para o modelo de sítio, o plano equatorial é o plano médio do radome. O corte
 
 O esqueleto mecânico, os painéis dielétricos e os módulos RF internos possuem geometrias diferentes, porém coordenadas. Uma face é um setor mecânico e computacional, não uma região eletromagneticamente isolada. A sobreposição angular entre faces vizinhas é necessária para calibração, interpolação e estimação de direção.
 
-A face triangular nominal possui lado de 2 m. A Yagi VHF externa é montada na face externa por um eixo haste/lança que continua do vértice da pirâmide, atravessa a interface vedada e segue para fora. Seus elementos parasitas são transversais a esse eixo; o maior elemento transversal é especificado com 2 m. O suporte transfere as cargas mecânicas para o vértice interno e a moldura triangular. A antena externa é atribuída à faixa VHF e não é um radiador universal.
+A face triangular nominal possui lado de 2 m. Duas Yagis VHF externas cruzadas compartilham o eixo haste/lança que continua do vértice da pirâmide, atravessa a interface vedada e segue para fora. Os elementos parasitas de ambas são transversais ao mastro, mas ocupam planos ortogonais e fornecem polarizações lineares distintas a 90 graus. A Yagi A usa o conjunto maior, com elemento transversal máximo de 2 m; a Yagi B usa elementos menores para uma subfaixa VHF superior. Cada antena possui alimentação, ADC e ASIC independentes.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig11_face_yagi_camadas.pdf}
-\caption{Face triangular de 2 m com Yagi externa, haste de sustentação, módulos blindados por faixa, módulo central da face e junções estruturais internas.}
+\caption{Face triangular de 2 m com Yagi VHF externa: eixo longitudinal haste/lança, elemento excitado dobrado e seis elementos transversais em escala de 2,00 m a 1,05 m.}
 \label{fig:face-yagi-pt}
 \end{figure}
 
