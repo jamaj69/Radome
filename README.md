@@ -1,5 +1,7 @@
 # RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network
 
+> **Startup context:** before working on this repository, read `AGENTS.md`, this `README.md`, `SUMARIO_E_ROADMAP.md` and `ROADMAP_CORRECOES.md`, in that order. The mandatory recovery protocol is defined in `AGENTS.md`.
+
 ## Overview
 
 This repository consolidates a technical and scientific conception for a distributed network of geodesic radome-based sensing stations intended for passive electromagnetic surveillance, direction finding, and geolocation. The proposed architecture is designed for deployment in elevated mountain sites across Brazil, integrating multiband reception, precise time synchronization, local edge processing, and centralized fusion of observations.

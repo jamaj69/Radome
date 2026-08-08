@@ -2,6 +2,41 @@
 
 This repository contains the bilingual technical project for a distributed multiband passive electromagnetic sensing network. The main article is assembled from modular LaTeX chapters in `projeto/`.
 
+## Mandatory Startup Context Recovery
+
+Every agent that opens or resumes work in this repository must recover the stable project context before declaring itself ready, proposing changes or executing project work.
+
+Read, in this order:
+
+1. `AGENTS.md` — operating, generation and validation rules;
+2. `README.md` — mission, scope and repository map;
+3. `SUMARIO_E_ROADMAP.md` — consolidated technical context and development path;
+4. `ROADMAP_CORRECOES.md` — active inconsistency-remediation plan and current gates;
+5. `graphify-out/wiki/SESSION_CONTEXT.md`, when present — compact generated context.
+
+After those reads, use Graphify for focused retrieval when `graphify-out/graph.json` exists. Only then report that context recovery is complete. Do not claim readiness merely because the files exist: their current contents must have been read during the session.
+
+If one of the four required Markdown files is missing or unreadable, report the missing file and do not claim full readiness. Work needed to restore the missing context file is still allowed.
+
+## Graphify
+
+Graphify is installed in the shared Python environment, not necessarily in the shell `PATH`. Invoke it only as:
+
+```bash
+/home/python/pyenv/bin/python -m graphify <command>
+```
+
+Repository workflow:
+
+- use `query "<question>" --budget 1500` for focused project questions;
+- use `path`, `explain`, `affected` and `god-nodes` for relationships and impact;
+- use `update .` after relevant document or script changes;
+- use `extract . --code-only` only when rebuilding the local graph from scratch without an LLM backend;
+- consult `graphify-out/wiki/index.md` for broad navigation when available;
+- do not treat generated graph relationships as engineering evidence: requirements and technical claims still require source documents, calculations or measurements.
+
+If Graphify is unavailable, continue with `rg` and the stable context files, state the limitation, and do not fabricate graph results.
+
 ## Project Layout
 
 - `projeto/projetov1.tex`: master LaTeX document;
@@ -138,3 +173,16 @@ git log -1 --oneline
 ```
 
 The repository remote is `git@github.com:jamaj69/Radome.git`.
+
+## graphify
+
+This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
+
+When the user types `/graphify`, use the installed graphify skill or instructions before doing anything else.
+
+Rules:
+- For codebase questions, first run `/home/python/pyenv/bin/python -m graphify query "<question>" --budget 1500` when graphify-out/graph.json exists. Use the same module invocation with `path "<A>" "<B>"` for relationships and `explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
+- Dirty graphify-out/ files are expected after hooks or incremental updates; dirty graph files are not a reason to skip graphify. Only skip graphify if the task is about stale or incorrect graph output, or the user explicitly says not to use it.
+- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
+- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
+- After modifying code or project documentation, run `/home/python/pyenv/bin/python -m graphify update .` to keep the graph current (AST-only, no API cost).
