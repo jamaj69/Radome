@@ -40,13 +40,13 @@
 <path d="M230,690 C215,680 215,665 230,655 L350,655 C365,665 365,680 350,690" fill="none" stroke="#b9792e" stroke-width="5"/>
 <text x="390" y="575" class="s">common boom / eixo comum</text>
 <text x="390" y="595" class="s">apex support / vértice interno</text>
-<text x="290" y="850" text-anchor="middle" class="t">External VHF Yagi / Yagi VHF externa</text>
-<text x="290" y="872" text-anchor="middle" class="s">A larger / maior, pol. Y: 2.00, 1.80, 1.62, 1.45, 1.25, 1.08 m</text>
-<text x="290" y="890" text-anchor="middle" class="s">B smaller / menor, pol. Z: scaled elements, orthogonal 90 deg</text>
+<text x="290" y="850" text-anchor="middle" class="t">External crossed VHF + UHF Yagis / Yagis VHF + UHF cruzadas</text>
+<text x="290" y="872" text-anchor="middle" class="s">A VHF larger / maior, pol. Y: 2.00, 1.80, 1.62, 1.45, 1.25, 1.08 m</text>
+<text x="290" y="890" text-anchor="middle" class="s">B UHF smaller / menor, pol. Z: scaled elements, orthogonal 90 deg</text>
 <!-- dimensions -->
 <line x1="80" y1="535" x2="500" y2="535" stroke="#9a4c2b" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
 <text x="290" y="560" text-anchor="middle" class="dim">2.00 m triangular face side / lado da face</text>
-<text x="380" y="615" class="dim">2.00 m max.</text>
+<text x="380" y="615" class="dim">VHF max. 2.00 m</text>
 <line x1="55" y1="155" x2="55" y2="520" stroke="#9a4c2b" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
 <text x="40" y="345" transform="rotate(-90 40 345)" text-anchor="middle" class="dim">preliminary height / altura</text>
 

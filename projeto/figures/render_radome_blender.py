@@ -217,8 +217,8 @@ def crossed_yagi(prefix, color_mat, element_axis, offset_y=0.0, offset_z=0.0, sc
     for start, end in zip(loop_points, loop_points[1:] + loop_points[:1]):
         cylinder_between(prefix + " folded driven element", start, end, 0.032, yagi_gold)
 
-crossed_yagi("Yagi A VHF-low polarization-Y", yagi_mat, "y", offset_z=0.10, scale=1.0)
-crossed_yagi("Yagi B VHF-high polarization-Z", yagi_cross_mat, "z", offset_y=0.10, scale=0.62)
+crossed_yagi("Yagi A VHF polarization-Y", yagi_mat, "y", offset_z=0.10, scale=1.0)
+crossed_yagi("Yagi B UHF polarization-Z", yagi_cross_mat, "z", offset_y=0.10, scale=0.62)
 # Shared feed bracket at the external face interface.
 cylinder_between("Crossed Yagi feed bracket", Vector((yagi_x, 0, 0)), Vector((offset.x + 1.38, 0, 0)), 0.035, yagi_gold)
 bpy.ops.mesh.primitive_cube_add(size=1, location=offset + Vector((1.37, 0, -0.85)))

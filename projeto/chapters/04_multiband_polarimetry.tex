@@ -1,7 +1,7 @@
 \chapter{Multiband Aperture and Polarimetry / Abertura Multifaixa e Polarimetria}
 
 \section*{English}
-The aperture is intentionally hybrid rather than uniform across the spectrum. Two external crossed VHF Yagis provide orthogonal linear polarizations: one uses larger elements for a lower VHF sub-band and the other uses smaller elements for a higher VHF sub-band. Smaller UHF, L/S/C, X/Ku and K/Ka antennas or tiles occupy the face layers and local mounts. HF uses loops, crossed dipoles and platform-mode diversity. Each antenna family has its own filtering, conversion and sampling strategy, while the face preserves a common timing, calibration and fusion interface.
+The aperture is intentionally hybrid rather than uniform across the spectrum. One external VHF Yagi and one external UHF Yagi share a mast and provide orthogonal linear polarizations: the VHF antenna uses larger elements and the UHF antenna uses smaller elements. Smaller L/S/C, X/Ku and K/Ka antennas or tiles occupy the face layers and local mounts. HF uses loops, crossed dipoles and platform-mode diversity. Each antenna family has its own filtering, conversion and sampling strategy, while the face preserves a common timing, calibration and fusion interface.
 
 Each relevant element provides two coherent orthogonal ports. In a local $x$--$y$ basis:
 \[
@@ -10,7 +10,7 @@ E_{\mathrm{RHCP}}=\frac{E_x-jE_y}{\sqrt{2}},\qquad E_{\mathrm{LHCP}}=\frac{E_x+j
 For a curved surface, local bases must be rotated to a common coordinate system before fusion. Polarimetric calibration is a function of frequency, angle, temperature, amplitude balance, phase and mutual coupling.
 
 \subsection*{Engineering innovation / Inovação de engenharia}
-The crossed-Yagi solution is a central engineering innovation of this project. It converts a difficult broadband and polarization requirement into a mechanically integrated dual-aperture assembly: the larger Yagi covers a lower VHF sub-band, the smaller Yagi covers a higher VHF sub-band, and their transverse elements are arranged in orthogonal planes for 90-degree polarization diversity. Each antenna remains independently matched, digitized and calibrated, while the face-level interface combines their observations. This provides aggregate spectral coverage and polarization diversity without claiming that one physical Yagi covers the entire spectrum.
+The crossed-Yagi solution is a central engineering innovation of this project. It converts a difficult broadband and polarization requirement into a mechanically integrated dual-aperture assembly: the larger Yagi covers VHF, the smaller Yagi covers UHF, and their transverse elements are arranged in orthogonal planes for 90-degree polarization diversity. Each antenna remains independently matched, digitized and calibrated, while the face-level interface combines their observations. This provides aggregate spectral coverage and polarization diversity without claiming that one physical Yagi covers both bands.
 
 \begin{figure}[H]
 \centering
@@ -27,7 +27,7 @@ The crossed-Yagi solution is a central engineering innovation of this project. I
 \end{figure}
 
 \section*{Português}
-A abertura é deliberadamente híbrida, e não uniforme em todo o espectro. Duas Yagis VHF externas cruzadas fornecem polarizações lineares ortogonais: uma usa elementos maiores para uma subfaixa VHF inferior e a outra usa elementos menores para uma subfaixa VHF superior. Antenas ou tiles menores de UHF, L/S/C, X/Ku e K/Ka ocupam as camadas da face e seus suportes locais. HF utiliza loops, dipolos cruzados e diversidade de modos da plataforma. Cada família de antenas possui filtragem, conversão e amostragem próprias, enquanto a face preserva uma interface comum de sincronismo, calibração e fusão.
+A abertura é deliberadamente híbrida, e não uniforme em todo o espectro. Uma Yagi VHF externa e uma Yagi UHF externa compartilham o mastro e fornecem polarizações lineares ortogonais: a antena VHF usa elementos maiores e a antena UHF usa elementos menores. Antenas ou tiles menores de L/S/C, X/Ku e K/Ka ocupam as camadas da face e seus suportes locais. HF utiliza loops, dipolos cruzados e diversidade de modos da plataforma. Cada família de antenas possui filtragem, conversão e amostragem próprias, enquanto a face preserva uma interface comum de sincronismo, calibração e fusão.
 
 Cada elemento relevante fornece duas portas ortogonais coerentes. Em uma base local $x$--$y$:
 \[
@@ -36,4 +36,4 @@ E_{\mathrm{RHCP}}=\frac{E_x-jE_y}{\sqrt{2}},\qquad E_{\mathrm{LHCP}}=\frac{E_x+j
 Em uma superfície curva, as bases locais devem ser rotacionadas para um sistema comum antes da fusão. A calibração polarimétrica depende de frequência, ângulo, temperatura, equilíbrio de amplitude, fase e acoplamento mútuo.
 
 \subsection*{Inovação de engenharia}
-A solução de Yagis cruzadas é uma inovação central de engenharia deste projeto. Ela transforma um requisito difícil de largura de banda e polarização em um conjunto dual de aberturas mecanicamente integrado: a Yagi maior cobre uma subfaixa VHF inferior, a Yagi menor cobre uma subfaixa VHF superior e seus elementos transversais são dispostos em planos ortogonais para diversidade de polarização a 90 graus. Cada antena permanece casada, digitalizada e calibrada de forma independente, enquanto a interface da face combina as observações. Assim, obtém-se cobertura espectral agregada e diversidade de polarização sem afirmar que uma única Yagi cubra todo o espectro.
+A solução de Yagis cruzadas é uma inovação central de engenharia deste projeto. Ela transforma um requisito difícil de largura de banda e polarização em um conjunto dual de aberturas mecanicamente integrado: a Yagi maior cobre VHF, a Yagi menor cobre UHF e seus elementos transversais são dispostos em planos ortogonais para diversidade de polarização a 90 graus. Cada antena permanece casada, digitalizada e calibrada de forma independente, enquanto a interface da face combina as observações. Assim, obtém-se cobertura espectral agregada e diversidade de polarização sem afirmar que uma única Yagi cubra as duas bandas.

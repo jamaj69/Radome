@@ -11,12 +11,12 @@ For the site model, the equatorial plane is the radome mid-plane. The lower cut 
 
 The mechanical skeleton, dielectric panels and internal RF modules have different but coordinated geometries. A face is a mechanical and computational sector, not an electromagnetically isolated region. Angular overlap between neighbouring faces is required for calibration, interpolation and direction estimation.
 
-The nominal triangular face uses a 2 m side dimension. Two external crossed VHF Yagis share the support/boom axis that continues from the pyramid apex through the sealed face interface. The parasitic elements of both antennas are transverse to the mast, but occupy orthogonal planes and provide distinct linear polarizations at 90 degrees. Yagi A uses the larger scaled set, with a 2 m maximum transverse element; Yagi B uses smaller elements for a higher VHF sub-band. Each antenna has an independent feed, ADC and ASIC.
+The nominal triangular face uses a 2 m side dimension. One external VHF Yagi and one external UHF Yagi share the support/boom axis that continues from the pyramid apex through the sealed face interface. The parasitic elements of both antennas are transverse to the mast, but occupy orthogonal planes and provide distinct linear polarizations at 90 degrees. The VHF Yagi uses the larger scaled set, with a 2 m maximum transverse element; the UHF Yagi uses smaller elements. Each antenna has an independent feed, ADC and ASIC.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig11_face_yagi_camadas.pdf}
-\caption{Two-metre triangular face with two external crossed VHF Yagis: orthogonal transverse elements, independent feeds and distinct scales.}
+\caption{Two-metre triangular face with crossed external VHF and UHF Yagis: orthogonal transverse elements, independent feeds and distinct scales.}
 \label{fig:face-yagi}
 \end{figure}
 
@@ -43,25 +43,25 @@ Para o modelo de sítio, o plano equatorial é o plano médio do radome. O corte
 
 O esqueleto mecânico, os painéis dielétricos e os módulos RF internos possuem geometrias diferentes, porém coordenadas. Uma face é um setor mecânico e computacional, não uma região eletromagneticamente isolada. A sobreposição angular entre faces vizinhas é necessária para calibração, interpolação e estimação de direção.
 
-A face triangular nominal possui lado de 2 m. Duas Yagis VHF externas cruzadas compartilham o eixo haste/lança que continua do vértice da pirâmide, atravessa a interface vedada e segue para fora. Os elementos parasitas de ambas são transversais ao mastro, mas ocupam planos ortogonais e fornecem polarizações lineares distintas a 90 graus. A Yagi A usa o conjunto maior, com elemento transversal máximo de 2 m; a Yagi B usa elementos menores para uma subfaixa VHF superior. Cada antena possui alimentação, ADC e ASIC independentes.
+A face triangular nominal possui lado de 2 m. Uma Yagi VHF externa e uma Yagi UHF externa compartilham o eixo haste/lança que continua do vértice da pirâmide, atravessa a interface vedada e segue para fora. Os elementos parasitas de ambas são transversais ao mastro, mas ocupam planos ortogonais e fornecem polarizações lineares distintas a 90 graus. A Yagi VHF usa o conjunto maior, com elemento transversal máximo de 2 m; a Yagi UHF usa elementos menores. Cada antena possui alimentação, ADC e ASIC independentes.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig11_face_yagi_camadas.pdf}
-\caption{Face triangular de 2 m com duas Yagis VHF externas cruzadas: elementos transversais ortogonais, alimentações independentes e escalas distintas.}
+\caption{Face triangular de 2 m com Yagis VHF e UHF externas cruzadas: elementos transversais ortogonais, alimentações independentes e escalas distintas.}
 \label{fig:face-yagi-pt}
 \end{figure}
 
 As junções internas formam caminhos contínuos de carga entre os membros da estrutura triangular e as faces vizinhas. Costuras estruturais vedadas, reforços locais e um anel ou placa nodal interna transferem cargas de vento, vibração e manutenção sem depender apenas da pele dielétrica. O conjunto deve ser verificado por análise estrutural e ensaios ambientais.
 
-The Blender model makes the mounting convention explicit: the triangular RF face lies on the outer radome surface, while the pyramid volume and its apex are directed inward. A support strut starts at the internal apex, passes through the face interface and continues as the external Yagi boom. The boom is the same axis as the support; the parasitic elements are transverse to this axis.
+The Blender model makes the mounting convention explicit: the triangular RF face lies on the outer radome surface, while the pyramid volume and its apex are directed inward. A support strut starts at the internal apex, passes through the face interface and continues as the common boom axis of the external VHF and UHF Yagis. The elements of both antennas are transverse to this axis and occupy orthogonal planes.
 
-O modelo Blender torna explícita a convenção de montagem: a face RF triangular está na superfície externa do radome, enquanto o volume da pirâmide e seu vértice apontam para dentro. Uma haste de suporte parte do vértice interno, atravessa a interface da face e continua como a lança externa da Yagi. A lança é o mesmo eixo da haste; os elementos parasitas são transversais a esse eixo.
+O modelo Blender torna explícita a convenção de montagem: a face RF triangular está na superfície externa do radome, enquanto o volume da pirâmide e seu vértice apontam para dentro. Uma haste de suporte parte do vértice interno, atravessa a interface da face e continua como o eixo comum das lanças das Yagis VHF e UHF externas. Os elementos de ambas as antenas são transversais a esse eixo e ocupam planos ortogonais.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig13_radome_blender.png}
-\caption{Blender 3D model: the triangular face is external, the pyramid apex is internal, and the VHF Yagi is mounted outside / Modelo Blender 3D: a face triangular é externa, o vértice da pirâmide é interno e a Yagi VHF é montada externamente.}
+\caption{Blender 3D model: external triangular face, internal pyramid apex and crossed VHF/UHF Yagis / Modelo Blender 3D: face triangular externa, vértice interno da pirâmide e Yagis VHF/UHF cruzadas.}
 \label{fig:blender-yagi}
 \end{figure}
 
@@ -75,7 +75,7 @@ O modelo Blender torna explícita a convenção de montagem: a face RF triangula
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig13_radome_blender.png}
-\caption{Blender Eevee render of the radome and exploded face. The external VHF Yagi uses a support/boom axis continuing from the internal apex; its parasitic elements are transverse to that axis.}
+\caption{Blender Eevee render of the radome and exploded face. The external VHF and UHF Yagis share the support/boom axis and use orthogonal transverse elements.}
 \label{fig:radome-blender}
 \end{figure}
 

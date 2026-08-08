@@ -2,12 +2,12 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Distributed sensing architecture / Arquitetura distribuída de sensoriamento.\relax }}{5}{figure.caption.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Two-metre triangular face with two external crossed VHF Yagis: orthogonal transverse elements, independent feeds and distinct scales.\relax }}{8}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Two-metre triangular face with crossed external VHF and UHF Yagis: orthogonal transverse elements, independent feeds and distinct scales.\relax }}{8}{figure.caption.9}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Functional zoning / Zoneamento funcional.\relax }}{9}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Face triangular de 2 m com duas Yagis VHF externas cruzadas: elementos transversais ortogonais, alimentações independentes e escalas distintas.\relax }}{11}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Blender 3D model: the triangular face is external, the pyramid apex is internal, and the VHF Yagi is mounted outside / Modelo Blender 3D: a face triangular é externa, o vértice da pirâmide é interno e a Yagi VHF é montada externamente.\relax }}{12}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Face triangular de 2 m com Yagis VHF e UHF externas cruzadas: elementos transversais ortogonais, alimentações independentes e escalas distintas.\relax }}{11}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Blender 3D model: external triangular face, internal pyramid apex and crossed VHF/UHF Yagis / Modelo Blender 3D: face triangular externa, vértice interno da pirâmide e Yagis VHF/UHF cruzadas.\relax }}{12}{figure.caption.14}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Internal Blender inspection view with the transparent shell, radial structural ties, service trunks, central timing/fusion core and representative shielded band modules / Vista interna de inspeção no Blender com casca transparente, tirantes radiais, troncos de serviço, núcleo central de sincronismo/fusão e módulos blindados de faixa.\relax }}{13}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Blender Eevee render of the radome and exploded face. The external VHF Yagi uses a support/boom axis continuing from the internal apex; its parasitic elements are transverse to that axis.\relax }}{14}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Blender Eevee render of the radome and exploded face. The external VHF and UHF Yagis share the support/boom axis and use orthogonal transverse elements.\relax }}{13}{figure.caption.16}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Recommended spectral partition / Particionamento espectral recomendado.\relax }}{16}{figure.caption.20}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Vector polarimetric acquisition / Aquisição polarimétrica vetorial.\relax }}{16}{figure.caption.21}%
