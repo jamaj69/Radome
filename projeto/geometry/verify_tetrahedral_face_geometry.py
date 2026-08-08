@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Verify an 80-face radome assembled from inward regular tetrahedra.
+"""Verify an 80-face radome assembled from shallow tetrahedral cells.
 
 Each regular icosahedron macroface is subdivided in its own plane into four
 equilateral receiver faces.  Unlike spherical projection, this construction
 preserves a 2 m edge on every receiver face and therefore permits regular
-2 m tetrahedral modules.
+2 m external faces while reserving an internal service core.
 """
 
 from __future__ import annotations
@@ -15,6 +15,7 @@ import math
 
 FACE_EDGE_M = 2.0
 MACRO_EDGE_M = 2.0 * FACE_EDGE_M
+PYRAMID_HEIGHT_M = 0.75
 TOLERANCE_M = 1e-8
 
 
@@ -96,7 +97,7 @@ def outward_triangle(points):
     return tuple(points)
 
 
-def tetrahedral_modules(common_apex=False):
+def tetrahedral_modules(common_apex=False, apex_depth_m=None):
     vertices, macrofaces = regular_icosahedron(MACRO_EDGE_M)
     receiver_faces = []
     modules = []
@@ -111,7 +112,11 @@ def tetrahedral_modules(common_apex=False):
             tangent_u = normalize(subtract(face[1], face[0]))
             outward_normal = normalize(cross(subtract(face[1], face[0]), subtract(face[2], face[0])))
             tangent_v = normalize(cross(outward_normal, tangent_u))
-            apex = (0.0, 0.0, 0.0) if common_apex else subtract(face_center, scale(outward_normal, tetrahedron_height))
+            if common_apex:
+                apex = (0.0, 0.0, 0.0)
+            else:
+                depth = tetrahedron_height if apex_depth_m is None else apex_depth_m
+                apex = subtract(face_center, scale(outward_normal, depth))
             receiver_faces.append(face)
             modules.append(
                 {
@@ -173,7 +178,7 @@ def face_edge_key(a, b):
 
 def main():
     vertices, receiver_faces, regular_modules = tetrahedral_modules()
-    _, _, fitted_modules = tetrahedral_modules(common_apex=True)
+    _, _, shallow_modules = tetrahedral_modules(apex_depth_m=PYRAMID_HEIGHT_M)
     edge_lengths = []
     edge_uses = {}
     for face_index, face in enumerate(receiver_faces):
@@ -189,14 +194,18 @@ def main():
         )
 
     regular_collisions = module_collisions(regular_modules)
-    fitted_collisions = module_collisions(fitted_modules)
+    shallow_collisions = module_collisions(shallow_modules)
+    shallow_sweep = []
+    for apex_depth_m in (0.20, 0.40, 0.60, 0.80, 1.00):
+        _, _, swept_modules = tetrahedral_modules(apex_depth_m=apex_depth_m)
+        shallow_sweep.append((apex_depth_m, len(module_collisions(swept_modules))))
 
     circumradius = max(length(vertex) for vertex in vertices)
     inradius = min(dot(module["center"], module["normal"]) for module in regular_modules)
     regular_apex_radii = [length(module["apex"]) for module in regular_modules]
-    fitted_lateral_edges = [
-        length(vertex)
-        for module in fitted_modules
+    shallow_lateral_edges = [
+        length(subtract(vertex, module["apex"]))
+        for module in shallow_modules
         for vertex in module["face"]
     ]
     shared_edges = sum(1 for uses in edge_uses.values() if len(uses) == 2)
@@ -208,10 +217,18 @@ def main():
         raise SystemExit("A 2 m edge constraint failed.")
     if boundary_edges != 0 or shared_edges != 120:
         raise SystemExit("Closed receiver-face adjacency failed.")
-    if fitted_collisions:
-        raise SystemExit("Common-apex tetrahedral partition unexpectedly overlaps.")
+    if shallow_collisions:
+        raise SystemExit("Shallow tetrahedral modules unexpectedly overlap.")
 
-    print("RADOME regular-tetrahedral face verifier")
+    adjacent_apex_distances = []
+    for uses in edge_uses.values():
+        if len(uses) == 2:
+            adjacent_apex_distances.append(
+                length(subtract(shallow_modules[uses[0]]["apex"], shallow_modules[uses[1]]["apex"]))
+            )
+    minimum_free_core_radius = inradius - PYRAMID_HEIGHT_M
+
+    print("RADOME shallow-tetrahedral face verifier")
     print(f"receiver faces: {len(receiver_faces)}")
     print(f"shared outer edges: {shared_edges}; boundary edges: {boundary_edges}")
     print(f"all face and tetrahedron edges: {FACE_EDGE_M:.4f} m")
@@ -223,13 +240,20 @@ def main():
     print(f"regular-tetrahedron volumetric collisions: {len(regular_collisions)}")
     for left, right, penetration in regular_collisions[:5]:
         print(f"  {left} x {right}: SAT penetration >= {penetration:.6f} m")
-    print("buildable common-apex partition:")
-    print(f"  volumetric module collisions: {len(fitted_collisions)}")
-    print(f"  shared Faraday side-wall interfaces: {shared_edges}")
-    print(f"  lateral edge range: {min(fitted_lateral_edges):.4f}..{max(fitted_lateral_edges):.4f} m")
+    print("full-face shallow-pyramid sweep:")
+    for apex_depth_m, collision_count in shallow_sweep:
+        print(f"  h={apex_depth_m:.2f} m: {collision_count} collisions")
+    print("adopted shallow-pyramid assembly:")
+    print(f"  normal height: {PYRAMID_HEIGHT_M:.4f} m")
+    print(f"  volumetric module collisions: {len(shallow_collisions)}")
+    print(f"  independent Faraday side walls: {len(shallow_modules) * 3}")
+    print(f"  inter-cell cable/fibre corridors: {shared_edges}")
+    print(f"  lateral edges: {min(shallow_lateral_edges):.4f}..{max(shallow_lateral_edges):.4f} m")
+    print(f"  adjacent apex separation: {min(adjacent_apex_distances):.4f}..{max(adjacent_apex_distances):.4f} m")
+    print(f"  minimum free-core radius: {minimum_free_core_radius:.4f} m")
     if regular_collisions:
         print("finding: all-six-edges-at-2 m is incompatible with the closed inward assembly")
-        print("adopted interpretation: 2 m external face edges with tetrahedra sharing the structural centre")
+        print("adopted interpretation: 2 m external face edges with independent shallow inward apexes")
 
 
 if __name__ == "__main__":

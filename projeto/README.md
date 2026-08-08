@@ -23,9 +23,9 @@ The previous Blender scene is preserved in `figures/baseline_35S_concrete_base/`
 
 A cena Blender anterior está preservada em `figures/baseline_35S_concrete_base/`. Essa baseline histórica contém o corte do radome em 35 graus sul, a base de concreto armado de 4 m x 4 m x 3 m, a abertura de acesso, a pirâmide interna e a Yagi VHF externa. A ADR-012 substitui sua geometria projetada de faces, mas não sobrescreve a cena preservada.
 
-The tetrahedral candidate is generated separately. It shows seven contiguous 2 m faces, common Faraday side walls, conductive seams, two shielded ADC/ASIC enclosures per dual-polarized aperture and the local tangent/normal bases.
+The tetrahedral candidate is generated separately. It shows seven contiguous 2 m faces with 0.75 m inward depth, independent Faraday side walls, inter-cell power/fibre corridors, a reserved internal core, two shielded ADC/ASIC enclosures per dual-polarized aperture and the local tangent/normal bases.
 
-A candidata tetraédrica é gerada separadamente. Ela mostra sete faces contíguas de 2 m, paredes Faraday laterais comuns, juntas condutivas, dois invólucros ADC/ASIC blindados por abertura dual-pol e as bases tangentes/normais locais.
+A candidata tetraédrica é gerada separadamente. Ela mostra sete faces contíguas de 2 m com profundidade interna de 0,75 m, paredes Faraday independentes, corredores intercelulares de energia/fibra, núcleo interno reservado, dois invólucros ADC/ASIC blindados por abertura dual-pol e as bases tangentes/normais locais.
 
 ```bash
 python3 geometry/verify_tetrahedral_face_geometry.py

@@ -47,16 +47,20 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | GEO-015 | Classe de aresta das faces externas | 2.0000 | m | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Engenharia geométrica | Verificador ADR-012 |
 | GEO-016 | Altura do segmento cortado da candidata anterior | 5.7584 | m | Histórico | `geometry/verify_radome_geometry.py`; ADR-009 | Engenharia geométrica | Não controla ADR-012 |
 | GEO-017 | Raio circunscrito / inraio do envelope ADR-012 | 3.8042 / 3.0230 | m | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Engenharia geométrica | Recalcular borda e apoio |
-| GEO-018 | Arestas laterais das células até o hub comum | 3.2361–3.8042 | m | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Estruturas | Dimensionar painéis, hub e montagem |
+| GEO-018 | Arestas laterais das células tetraédricas rasas | 1.3769 | m | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Estruturas | Dimensionar painéis, juntas e montagem |
 | GEO-019 | Colisões de tetraedros regulares de aresta 2 m | 120 | colisão | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Engenharia geométrica | Configuração regular bloqueada |
-| GEO-020 | Colisões da partição tetraédrica de hub comum | 0 | colisão | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Engenharia geométrica | Validar tolerâncias e espessuras reais |
+| GEO-020 | Colisões das células tetraédricas com altura de 0,75 m | 0 | colisão | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Engenharia geométrica | Validar tolerâncias e espessuras reais |
+| GEO-021 | Altura normal centro da face–ápice local | 0.7500 | m | Proposto | `geometry/verify_tetrahedral_face_geometry.py`; ADR-012 | Estruturas/EMC | Otimizar volume, rigidez e acessibilidade |
+| GEO-022 | Raio mínimo do núcleo interno livre | 2.2730 | m | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Integração | Reservar distribuição central e manutenção |
+| GEO-023 | Separação entre ápices de células vizinhas | 0.5435–1.1547 | m | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Integração | Dimensionar corredores e raios de curvatura |
 | CIV-001 | Planta da base de concreto | 4 × 4 | m | Proposto | `08_infrastructure_validation.tex` | Engenharia civil | Não suporta diretamente o anel C2 sem transição |
 | CIV-002 | Altura estrutural livre da base | 3 | m | Proposto | `08_infrastructure_validation.tex` | Engenharia civil | Estudo estrutural e de acesso |
 | CIV-003 | Envelope quadrado mínimo da transição de apoio C2 | 6.6 × 6.6 | m | Proposto | `geometry/verify_radome_geometry.py`; `03_geometry_radome.tex` | Engenharia civil | Grade beam ou moldura estrutural a detalhar |
 | MEC-001 | Elemento transversal máximo da Yagi VHF | 2 | m | Proposto | `03_geometry_radome.tex` | Antenas/estruturas | Modelo EM e cargas de vento |
 | MEC-002 | Ângulo nominal entre os planos das Yagis VHF e UHF | 90 | grau | Proposto | `03_geometry_radome.tex` | Antenas/estruturas | Verificar montagem; não usar como base polarimétrica entre faixas |
-| MEC-003 | Interfaces laterais Faraday compartilhadas | 120 | parede | Derivado | `geometry/verify_tetrahedral_face_geometry.py`; ADR-012 | EMC/estruturas | Detalhar junta RF, bonding e manutenção |
+| MEC-003 | Paredes laterais Faraday independentes | 240 | parede | Derivado | `geometry/verify_tetrahedral_face_geometry.py`; ADR-012 | EMC/estruturas | Detalhar espessura, juntas RF e bonding |
 | MEC-004 | Invólucros ADC/ASIC por face dual-pol | 2 | invólucro | Proposto | `render_tetrahedral_face_cluster_blender.py`; `05_electronics_processing.tex` | EMC/eletrônica | Ensaiar SE, emissões, térmica e acoplamento |
+| MEC-005 | Corredores intercelulares de cabos e fibras | 120 | corredor | Derivado | `geometry/verify_tetrahedral_face_geometry.py`; ADR-012 | Integração/EMC | Separar energia de fibra/RF e validar acesso |
 
 ## Plano espectral e antenas
 

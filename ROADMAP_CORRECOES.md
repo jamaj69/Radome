@@ -61,9 +61,9 @@
 
 ### Revisão tetraédrica ADR-012
 
-A exigência posterior de faces externas equiláteras de 2 m tornou incompatível a projeção esférica que produzia duas classes de corda. O novo verificador preserva 80 faces por subdivisão planar das macrofaces e testa dois casos: tetraedros regulares com seis arestas de 2 m, que geram 120 interpenetrações, e células tetraédricas com face externa de 2 m e hub comum, que formam uma partição sem colisões e 120 paredes laterais compartilhadas. O render `fig16_tetrahedral_face_cluster.png` mostra sete faces contíguas, bases tangentes locais, antenas ortogonais, caixas ADC/ASIC blindadas e encaixes condutivos.
+A exigência posterior de faces externas equiláteras de 2 m tornou incompatível a projeção esférica que produzia duas classes de corda. O novo verificador preserva 80 faces por subdivisão planar das macrofaces e testa dois casos: tetraedros regulares com seis arestas de 2 m, que geram 120 interpenetrações, e células tetraédricas rasas com altura de 0,75 m, que não colidem. A candidata rasa possui 240 paredes Faraday independentes, 120 corredores intercelulares e núcleo interno livre com raio mínimo de 2,2730 m. O render `fig16_tetrahedral_face_cluster.png` mostra sete faces contíguas, bases tangentes locais, antenas ortogonais, caixas ADC/ASIC blindadas, núcleo reservado e rotas de energia/fibra.
 
-O C2 é reaberto porque o corte circular, o anel de apoio e a transição civil anteriores pertencem à candidata projetada. O novo gate exige selecionar módulos inteiros para a borda inferior, resolver o congestionamento no hub comum, introduzir espessuras e folgas sem perder continuidade Faraday e recalcular a fundação.
+O C2 é reaberto porque o corte circular, o anel de apoio e a transição civil anteriores pertencem à candidata projetada. O novo gate exige selecionar módulos inteiros para a borda inferior, dimensionar juntas e corredores com espessuras e folgas reais, comprovar continuidade Faraday e recalcular a fundação.
 
 ## Onda 3 — fechar o plano espectral e os experimentos
 
