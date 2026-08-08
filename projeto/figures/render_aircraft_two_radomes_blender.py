@@ -133,6 +133,7 @@ text("Altitude/state: hypothesis + covariance", (2.0, -7.3, 7.3), 0.38, white_ma
 text("Result: consistency track, not blind truth validation", (0, -7.3, 6.25), 0.32, white_mat)
 text("978 MHz UAT: contextual alternative, mainly US general aviation", (0, -7.3, 5.65), 0.25, white_mat)
 text("Independent UHF TV / UHF TV independente: direct reference or bistatic illuminator", (0, -7.3, 5.05), 0.22, white_mat)
+text("Cell towers: multiple known carriers / Torres celulares: múltiplas portadoras conhecidas", (0, -7.3, 4.5), 0.22, white_mat)
 
 # Ground plane.
 bpy.ops.mesh.primitive_plane_add(size=180, location=(0, 0, -1.5))
