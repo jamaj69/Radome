@@ -75,3 +75,12 @@
 - **Corte inferior:** o corte deixa de ser controlado por “latitude” textual e passa a ser registrado como $z/R=-0{,}573576$ ou ângulo polar de 125°; o segmento cortado possui 51 vértices, 124 arestas, 74 faces e Euler igual a 1.
 - **Limite:** a projeção esférica gera duas classes de corda; portanto, o lado nominal de 2 m não pode ser aplicado simultaneamente a todas as faces sem declarar a regra de escala.
 - **Fonte:** `geometry/verify_radome_geometry.py`.
+
+## ADR-010 — Lacunas deliberadas e cadeia aeronáutica dedicada
+
+- **Data:** 8 de agosto de 2026
+- **Estado:** aceita no nível arquitetural
+- **Decisão:** o primeiro demonstrador não buscará cobertura espectral contínua. As faixas de 323–470 MHz e 860–960 MHz ficam deliberadamente sem cadeia receptora; a margem simulada da LPDA até aproximadamente 323 MHz não cria requisito além da faixa VHF selecionada.
+- **Cadeia aeronáutica:** uma abertura ou array dedicado de 960–1215 MHz alimentará dois caminhos simultâneos e independentes: preselector de serviço em 978 MHz, limitador/LNA, ADC coerente e canal FPGA UAT; e preselector de serviço em 1090 MHz, limitador/LNA, ADC coerente e canal FPGA 1090ES.
+- **Separação:** a Yagi UHF de 470–860 MHz não fundamenta recepção em 978 ou 1090 MHz. A cadeia aeronáutica também não implica cobertura contínua de toda a faixa de 960–1215 MHz.
+- **Limite:** topologia da abertura, larguras de filtro, NF, IP3, faixa dinâmica, taxa de amostragem e volume de dados permanecem propostos até o dimensionamento quantitativo do C3.

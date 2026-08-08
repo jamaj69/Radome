@@ -42,7 +42,7 @@ plt.close(fig)
 fig, ax = plt.subplots(figsize=(14, 7), dpi=180)
 ax.set_xscale("log")
 ax.set_xlim(3e6, 40e9)
-ax.set_ylim(-0.95, 6.0)
+ax.set_ylim(-0.95, 7.0)
 ax.grid(True, which="both", axis="x", color="#d9e0e5", linewidth=0.7)
 ax.set_title("Spectral partition and selected external antennas\nParticionamento espectral e antenas externas selecionadas", fontsize=18, color="#17324d", pad=16)
 ax.set_xlabel("Frequency / Frequência (Hz, logarithmic scale)", fontsize=11)
@@ -50,6 +50,7 @@ rows = [
     ("HF", 3e6, 30e6, "loops / modes", "#85aa7e"),
     ("VHF", 30e6, 300e6, "external Yagi", "#d08b4d"),
     ("UHF", 470e6, 860e6, "crossed Yagi", "#5f91b7"),
+    ("AVIATION", 960e6, 1215e6, "UAT / 1090ES", "#4f7f73"),
     ("L/S/C", 1e9, 8e9, "sinuous / Vivaldi", "#d99a59"),
     ("X/Ku", 8e9, 18e9, "tiles", "#9588bd"),
     ("K/Ka", 18e9, 40e9, "dual-pol tiles", "#bd7777"),
@@ -58,13 +59,16 @@ for idx, (name, low, high, detail, color) in enumerate(rows):
     y = idx
     ax.barh(y, high - low, left=low, height=0.56, align="center", color=color, alpha=0.9, edgecolor="#52606d", linewidth=0.8)
     center = np.sqrt(low * high)
-    ax.text(center, y, f"{name}\n{detail}", ha="center", va="center", color="white", fontsize=7.5, weight="bold")
+    if name == "AVIATION":
+        ax.text(1.28e9, y, f"{name}\n{detail}", ha="left", va="center", color="#263746", fontsize=7.5, weight="bold")
+    else:
+        ax.text(center, y, f"{name}\n{detail}", ha="center", va="center", color="white", fontsize=7.5, weight="bold")
 ax.set_yticks([])
-for value, label in [(3e6, "3 MHz"), (30e6, "30 MHz"), (300e6, "300 MHz"), (470e6, "470 MHz"), (860e6, "860 MHz"), (1e9, "1 GHz"), (8e9, "8 GHz"), (18e9, "18 GHz"), (40e9, "40 GHz")]:
+for value, label in [(3e6, "3 MHz"), (30e6, "30 MHz"), (300e6, "300 MHz"), (470e6, "470 MHz"), (860e6, "860 MHz"), (960e6, "960 MHz"), (1215e6, "1215 MHz"), (8e9, "8 GHz"), (18e9, "18 GHz"), (40e9, "40 GHz")]:
     ax.axvline(value, color="#52606d", linewidth=0.8, alpha=0.65)
-    ax.text(value, 5.63, label, rotation=90, ha="center", va="top", fontsize=8, color="#263746")
-ax.text(4e6, -0.65, "The VHF and UHF Yagis are distinct antennas with distinct RF chains; their aggregate coverage is intentional.", fontsize=8.5, color="#52606d")
-ax.text(4e6, -0.82, "As Yagis VHF e UHF são antenas distintas, com cadeias RF distintas; a cobertura agregada é intencional.", fontsize=8.5, color="#52606d")
+    ax.text(value, 6.63, label, rotation=90, ha="center", va="top", fontsize=8, color="#263746")
+ax.text(4e6, -0.65, "The 323–470 MHz and 860–960 MHz gaps are deliberate; aviation services use a dedicated chain.", fontsize=8.5, color="#52606d")
+ax.text(4e6, -0.82, "As lacunas de 323–470 MHz e 860–960 MHz são deliberadas; serviços aeronáuticos usam cadeia dedicada.", fontsize=8.5, color="#52606d")
 fig.savefig(f"{OUT}/fig04_particionamento_espectro.png", bbox_inches="tight", facecolor="white")
 plt.close(fig)
 

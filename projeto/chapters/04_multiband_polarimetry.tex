@@ -3,6 +3,8 @@
 \section*{English}
 The aperture is intentionally hybrid rather than uniform across the spectrum. One external single-polarization VHF Yagi and one external single-polarization UHF Yagi share a mast: the VHF antenna uses larger elements and the UHF antenna uses smaller elements. Their orthogonal mechanical planes provide orientation diversity across different bands, not two polarization components of one signal. Smaller L/S/C, X/Ku and K/Ka antennas or tiles occupy the face layers and local mounts. HF uses loops, crossed dipoles and platform-mode diversity. Each antenna family has its own filtering, conversion and sampling strategy, while the face preserves a common timing, calibration and fusion interface.
 
+The first demonstrator does not claim continuous spectral coverage. The 323--470 MHz and 860--960 MHz intervals are deliberately unassigned. A dedicated 960--1215 MHz aviation aperture or array supplies two simultaneous independent paths: a 978 MHz UAT preselector, limiter/LNA, coherent ADC and FPGA channel; and a 1090 MHz 1090ES preselector, limiter/LNA, coherent ADC and FPGA channel. Neither path is assigned to the 470--860 MHz UHF Yagi, and the aviation aperture does not imply continuous monitoring across its full tuning range.
+
 Polarimetric synthesis is permitted only in a same-band module that provides two simultaneous, coherent orthogonal ports at the same frequency (\texttt{POL-001}). In a local $x$--$y$ basis:
 \[
 E_{\mathrm{RHCP}}=\frac{E_x-jE_y}{\sqrt{2}},\qquad E_{\mathrm{LHCP}}=\frac{E_x+jE_y}{\sqrt{2}}.
@@ -38,6 +40,8 @@ For wider VHF discovery coverage, an 11-element 72--320 MHz LPDA with a 2 m maxi
 
 \section*{Português}
 A abertura é deliberadamente híbrida, e não uniforme em todo o espectro. Uma Yagi VHF externa de polarização única e uma Yagi UHF externa de polarização única compartilham o mastro: a antena VHF usa elementos maiores e a antena UHF usa elementos menores. Seus planos mecânicos ortogonais fornecem diversidade de orientação entre faixas diferentes, não duas componentes de polarização de um mesmo sinal. Antenas ou tiles menores de L/S/C, X/Ku e K/Ka ocupam as camadas da face e seus suportes locais. HF utiliza loops, dipolos cruzados e diversidade de modos da plataforma. Cada família de antenas possui filtragem, conversão e amostragem próprias, enquanto a face preserva uma interface comum de sincronismo, calibração e fusão.
+
+O primeiro demonstrador não declara cobertura espectral contínua. Os intervalos de 323--470 MHz e 860--960 MHz permanecem deliberadamente sem atribuição. Uma abertura ou array aeronáutico dedicado de 960--1215 MHz fornece dois caminhos simultâneos e independentes: preselector UAT em 978 MHz, limitador/LNA, ADC coerente e canal FPGA; e preselector 1090ES em 1090 MHz, limitador/LNA, ADC coerente e canal FPGA. Nenhum desses caminhos é atribuído à Yagi UHF de 470--860 MHz, e a abertura aeronáutica não implica monitoramento contínuo em toda a sua faixa de sintonia.
 
 A síntese polarimétrica somente é permitida em um módulo da mesma faixa que forneça duas portas ortogonais, simultâneas e coerentes na mesma frequência (\texttt{POL-001}). Em uma base local $x$--$y$:
 \[

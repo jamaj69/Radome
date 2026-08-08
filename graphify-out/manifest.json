@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "projeto/figures/generate_updated_figures.py": {
-    "mtime": 1786159199.9369125,
-    "ast_hash": "f3d595f8a77ae8b43ff126ee7ce15e5c",
+    "mtime": 1786164171.4098635,
+    "ast_hash": "846b27f7c1d4df20400af45e993c48f0",
     "semantic_hash": ""
   },
   "projeto/figures/render_aircraft_two_radomes_blender.py": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "projeto/projetov1.pdf": {
-    "mtime": 1786162311.4506128,
-    "ast_hash": "18632351cc3b1899a5b9c3951c9eae31",
+    "mtime": 1786164145.1771417,
+    "ast_hash": "16c689f626f16cff9078b83659a29ea7",
     "semantic_hash": ""
   },
   "projeto_tecnico_radome_completo.pdf": {
@@ -215,8 +215,8 @@
     "semantic_hash": ""
   },
   "projeto/figures/fig02_zonamento_radome.png": {
-    "mtime": 1786159205.381061,
-    "ast_hash": "34c38ca22be728ca87bb87aed50c7752",
+    "mtime": 1786164072.5431433,
+    "ast_hash": "54136ea3eb1b8af115f145f485fececf",
     "semantic_hash": ""
   },
   "projeto/figures/fig03_modulo_face.png": {
@@ -225,13 +225,13 @@
     "semantic_hash": ""
   },
   "projeto/figures/fig04_particionamento_espectro.png": {
-    "mtime": 1786159206.0130785,
-    "ast_hash": "05d708c62de58720f28625c7dc9cb2a1",
+    "mtime": 1786164073.3071644,
+    "ast_hash": "c50f9a56317a3056181812be88c87853",
     "semantic_hash": ""
   },
   "projeto/figures/fig05_polarimetria.png": {
-    "mtime": 1786159206.4130893,
-    "ast_hash": "6e73601fbb9a5ab46e386f626e2c7a7a",
+    "mtime": 1786164073.7671769,
+    "ast_hash": "7f85b142e42baca1d6279eac7cf35d21",
     "semantic_hash": ""
   },
   "projeto/figures/fig06_cadeia_rf.png": {
@@ -240,8 +240,8 @@
     "semantic_hash": ""
   },
   "projeto/figures/fig07_sincronizacao.png": {
-    "mtime": 1786159206.8011,
-    "ast_hash": "b9f131ddd4519f93d241e9d35aa498a4",
+    "mtime": 1786164074.1911886,
+    "ast_hash": "bce90f1ddebc1910544a3ce8374cbd8b",
     "semantic_hash": ""
   },
   "projeto/figures/fig08_geometria_bistatica.png": {
@@ -290,13 +290,13 @@
     "semantic_hash": ""
   },
   "projeto/DECISIONS.md": {
-    "mtime": 1786161529.816997,
-    "ast_hash": "b86c2b9209325614dba28bebf9904854",
+    "mtime": 1786163897.0743155,
+    "ast_hash": "58c59dcaa570770ad181e1c1ff488a0e",
     "semantic_hash": ""
   },
   "projeto/PARAMETERS.md": {
-    "mtime": 1786162023.5986526,
-    "ast_hash": "23502849356aed8c61fcd270f5c8e742",
+    "mtime": 1786163897.0743155,
+    "ast_hash": "3ebb42cc6657dd02a758c8d2818c6255",
     "semantic_hash": ""
   },
   "projeto/antenna_designs/lpda_vhf_72_320.md": {

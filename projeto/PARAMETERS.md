@@ -62,8 +62,11 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | RF-004 | Faixa L/S/C agregada | 1–8 | GHz | Proposto | `generate_updated_figures.py` | Engenharia RF | Decompor em cadeias realizáveis C3 |
 | RF-005 | Faixa X/Ku agregada | 8–18 | GHz | Proposto | `generate_updated_figures.py` | Engenharia RF | Decompor em tiles C3 |
 | RF-006 | Faixa K/Ka agregada | 18–40 | GHz | Proposto | `generate_updated_figures.py` | Engenharia RF | Decompor em tiles C3 |
-| RF-007 | Lacuna espectral inferior | 300–470 | MHz | Em conflito | Figura 4 versus escopo multifaixa | Engenharia RF | Declarar exclusão ou nova cadeia C3 |
-| RF-008 | Lacuna espectral superior | 860–1000 | MHz | Em conflito | Figura 4 versus cenário aeronáutico | Engenharia RF | Declarar exclusão ou nova cadeia C3 |
+| RF-007 | Faixa 323–470 MHz no primeiro demonstrador | deliberadamente não coberta | — | Proposto | `DECISIONS.md` ADR-010 | Engenharia RF | Reavaliar somente mediante caso de uso e cadeia próprios |
+| RF-008 | Faixa 860–960 MHz no primeiro demonstrador | deliberadamente não coberta | — | Proposto | `DECISIONS.md` ADR-010 | Engenharia RF | Não inferir cobertura entre a Yagi UHF e a cadeia aeronáutica |
+| RF-009 | Faixa da abertura/array aeronáutico dedicado | 960–1215 | MHz | Proposto | `DECISIONS.md` ADR-010 | Antenas/RF | Selecionar topologia e medir ganho, padrão e acoplamento |
+| RF-010 | Caminho receptor UAT | abertura RF-009 → preselector 978 → limitador/LNA → ADC coerente → canal FPGA UAT | — | Proposto | `DECISIONS.md` ADR-010 | RF/eletrônica | Dimensionar largura, NF, IP3, amostragem e faixa dinâmica C3 |
+| RF-011 | Caminho receptor 1090ES | abertura RF-009 → preselector 1090 → limitador/LNA → ADC coerente → canal FPGA 1090ES | — | Proposto | `DECISIONS.md` ADR-010 | RF/eletrônica | Dimensionar largura, NF, IP3, amostragem e faixa dinâmica C3 |
 | ANT-001 | LPDA VHF candidata: faixa de projeto | 71.5–323 | MHz | Derivado | `antenna_designs/lpda_vhf_72_320.md` | Antenas/RF | Simulação NEC/openEMS e OTA |
 | ANT-002 | LPDA VHF candidata: τ / σ | 0.86 / 0.16 | — | Proposto | `antenna_designs/lpda_vhf_72_320.md` | Antenas/RF | Otimização de ganho e impedância |
 | ANT-003 | LPDA VHF candidata: elementos | 11 | elemento | Derivado | `antenna_designs/lpda_vhf_72_320.md` | Antenas/RF | Confirmar região ativa por frequência |
@@ -83,8 +86,8 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 |---|---|---:|---|---|---|---|---|
 | TIM-001 | Antenas GNSS externas por estação | ≥2 | antena | Proposto | `06_timing_localization.tex` | Metrologia temporal | Justificar redundância e medir atrasos |
 | TIM-002 | Saídas de referência locais | 1 PPS e 10 MHz | — | Proposto | `06_timing_localization.tex` | Metrologia temporal | Orçamento de incerteza |
-| EXP-001 | Frequência ADS-B 1090ES | 1090 | MHz | Proposto | `07_passive_radar.tex` | RF/experimentos | Atribuir cadeia dedicada C3 |
-| EXP-002 | Frequência UAT contextual | 978 | MHz | Proposto | `07_passive_radar.tex` | RF/experimentos | Definir inclusão ou exclusão C3 |
+| EXP-001 | Frequência ADS-B 1090ES | 1090 | MHz | Proposto | `07_passive_radar.tex`; RF-011 | RF/experimentos | Validar o caminho dedicado e a decodificação C3 |
+| EXP-002 | Frequência UAT contextual | 978 | MHz | Proposto | `07_passive_radar.tex`; RF-010 | RF/experimentos | Canal incluído para ensaio contextual; validar disponibilidade regulatória e de tráfego |
 | EXP-003 | Baseline do cenário aeronáutico | 100 | km | Proposto | `07_passive_radar.tex` | Localização/sistemas | Orçamento de enlace e geometria C3 |
 | EXP-004 | Faixa de iluminadores TV UHF | 470–860 | MHz | Proposto | `07_passive_radar.tex` | RF/experimentos | Levantamento regulatório e de sítio |
 | EXP-005 | Nós receptores no cenário aeronáutico ilustrativo | 2 | nó | Proposto | `07_passive_radar.tex` | Localização/sistemas | Não confundir com demonstrador de três nós ARC-002 |
