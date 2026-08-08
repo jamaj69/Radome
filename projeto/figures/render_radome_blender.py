@@ -42,7 +42,7 @@ yagi_mat = material("Yagi aluminium", (0.67, 0.70, 0.72), metallic=0.82, roughne
 yagi_gold = material("Yagi bracket", (0.82, 0.50, 0.06), metallic=0.65, roughness=0.25)
 mast_mat = material("Mast", (0.20, 0.22, 0.24), metallic=0.7, roughness=0.25)
 white_mat = material("White", (0.92, 0.94, 0.95), roughness=0.45)
-base_mat = material("Concrete base", (0.20, 0.23, 0.26), roughness=0.8)
+base_mat = material("Concrete base", (0.42, 0.45, 0.47), roughness=0.88)
 opening_mat = material("Access opening", (0.015, 0.02, 0.025), roughness=0.5)
 warning_mat = material("Access frame", (0.82, 0.42, 0.06), metallic=0.3, roughness=0.35)
 
@@ -85,12 +85,12 @@ def text_obj(body, location, size=0.20, color_mat=white_mat, align="CENTER"):
     # Keep labels approximately facing the camera through a track quaternion later.
     return obj
 
-# Radome shell: equator as the mid-plane and lower cut at latitude 45 S.
+# Radome shell: equator as the mid-plane and lower cut at latitude 35 S.
 shell_center = Vector((-3.7, 0.0, 0.0))
 radius = 2.75
 segments = 24
 rings = 7
-lower_cut_latitude = math.radians(-45.0)
+lower_cut_latitude = math.radians(-35.0)
 cut_polar_angle = math.pi / 2.0 - lower_cut_latitude
 shell_vertices = [shell_center + Vector((0, 0, radius))]
 shell_faces = []
@@ -110,7 +110,7 @@ for ring in range(rings - 1):
         c = next_start + (segment + 1) % segments
         d = next_start + segment
         shell_faces.extend([(a, b, c), (a, c, d)])
-shell_mesh = bpy.data.meshes.new("Upper radome cut at latitude 45 S")
+shell_mesh = bpy.data.meshes.new("Upper radome cut at latitude 35 S")
 shell_mesh.from_pydata(shell_vertices, [], shell_faces)
 shell_mesh.update()
 shell = bpy.data.objects.new("Transparent upper geodesic radome shell", shell_mesh)
@@ -121,24 +121,29 @@ wire.thickness = 0.012
 wire.material_offset = 0
 shell.data.materials.append(frame_mat)
 
-# Supporting cuboid and visible maintenance/access opening.
+# Supporting reinforced-concrete cuboid and visible maintenance/access opening.
 cut_height = radius * math.sin(lower_cut_latitude)
-base_height = 0.84
+base_width = 4.0
+base_depth = 4.0
+base_height = 3.0
 bpy.ops.mesh.primitive_cube_add(size=1, location=shell_center + Vector((0, 0, cut_height - base_height / 2)))
 base = bpy.context.object
-base.name = "Radome base parallelepiped"
-base.dimensions = (5.9, 5.9, 0.84)
+base.name = "Reinforced concrete radome base 4x4x2 m"
+base.dimensions = (base_width, base_depth, base_height)
 bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
 base.data.materials.append(base_mat)
-bpy.ops.mesh.primitive_cube_add(size=1, location=shell_center + Vector((0, -2.98, cut_height - base_height / 2)))
+base_bevel = base.modifiers.new("Concrete edge bevel", "BEVEL")
+base_bevel.width = 0.10
+base_bevel.segments = 3
+bpy.ops.mesh.primitive_cube_add(size=1, location=shell_center + Vector((0, -base_depth / 2 - 0.02, cut_height - base_height + 0.85)))
 opening = bpy.context.object
-opening.name = "Interior access opening"
-opening.dimensions = (1.65, 0.06, 0.58)
+opening.name = "Concrete base interior access opening"
+opening.dimensions = (1.70, 0.08, 2.20)
 bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
 opening.data.materials.append(opening_mat)
 for x in (-0.92, 0.92):
-    cylinder_between("Access opening vertical frame", shell_center + Vector((x, -3.04, cut_height - 0.30)), shell_center + Vector((x, -3.04, cut_height + 0.30)), 0.035, warning_mat)
-cylinder_between("Access opening top frame", shell_center + Vector((-0.92, -3.04, cut_height + 0.30)), shell_center + Vector((0.92, -3.04, cut_height + 0.30)), 0.035, warning_mat)
+    cylinder_between("Access opening vertical frame", shell_center + Vector((x, -base_depth / 2 - 0.08, cut_height - base_height + 0.05)), shell_center + Vector((x, -base_depth / 2 - 0.08, cut_height - base_height + 2.25)), 0.035, warning_mat)
+cylinder_between("Access opening top frame", shell_center + Vector((-0.92, -base_depth / 2 - 0.08, cut_height - base_height + 2.25)), shell_center + Vector((0.92, -base_depth / 2 - 0.08, cut_height - base_height + 2.25)), 0.035, warning_mat)
 
 # Highlighted face on right/front of radome.
 face_center = Vector((-1.22, -1.05, 1.25))
@@ -253,12 +258,14 @@ labels = [
     ("VHF Yagi boom = apex support axis", (3.2, -2.45, 3.55), 0.16, yagi_gold),
     ("shielded ADC + ASIC layers", (3.4, 2.1, 2.1), 0.14, white_mat),
     ("FFASIC / clock / fibre / DC", (3.7, 2.1, 0.4), 0.14, white_mat),
+    ("REINFORCED CONCRETE BASE 4 m x 4 m x 3 m", (-0.2, -3.1, cut_height - 1.35), 0.16, warning_mat),
+    ("ACCESS / ACESSO", (0.0, -3.2, cut_height - 1.05), 0.14, warning_mat),
 ]
 for body, loc, size, mat in labels:
     text_obj(body, loc, size, mat)
 
 # Ground plane and lighting.
-bpy.ops.mesh.primitive_plane_add(size=30, location=(0, 0, -1.1))
+bpy.ops.mesh.primitive_plane_add(size=30, location=(0, 0, cut_height - base_height - 0.22))
 plane = bpy.context.object
 plane.name = "Ground"
 plane.data.materials.append(material("Ground material", (0.025, 0.04, 0.055), metallic=0.0, roughness=0.55))
@@ -287,10 +294,10 @@ rim.rotation_euler = (math.radians(55), 0, math.radians(125))
 def point_camera(obj, target):
     obj.rotation_euler = (Vector(target) - obj.location).to_track_quat("-Z", "Y").to_euler()
 
-bpy.ops.object.camera_add(location=(11.5, -15.0, 8.5))
+bpy.ops.object.camera_add(location=(12.5, -16.5, 7.0))
 camera = bpy.context.object
 camera.name = "Technical camera"
-point_camera(camera, (0.3, 0.0, 1.0))
+point_camera(camera, (0.3, 0.0, -0.65))
 camera.data.lens = 52
 bpy.context.scene.camera = camera
 
