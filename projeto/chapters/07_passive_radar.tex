@@ -3,6 +3,24 @@
 \section*{English}
 The passive-radar chain equalizes reference and surveillance channels, cancels direct signal and clutter, computes the cross-ambiguity function, detects with false-alarm control and associates detections across nodes. The output is a track with uncertainty, not only a coordinate. Direct-emitter detection must remain distinct from bistatic-reflection detection.
 
+\subsection*{Aircraft broadcast consistency experiment / Experimento de consistência de transmissão aeronáutica}
+The reference aircraft signal is ADS-B, primarily 1090ES at 1090 MHz for commercial aviation. The alternative 978 MHz UAT channel is relevant mainly to certain general-aviation deployments in the United States. ADS-B messages are transmitted automatically and repeatedly, with message timing dependent on the information type; they are not one continuous packet carrying every parameter at every instant. Expected fields include GNSS-derived position, altitude, velocity, track and aircraft identification.
+
+Two radome nodes separated by a nominal $100\,\mathrm{km}$ baseline receive the aircraft transmission independently. For each node, the system records received power $P_i$, local angle of arrival $\mathrm{AOA}_i$, hardware timestamp $t_i$ and Doppler estimate $f_{D,i}$. The fusion layer computes:
+\[
+\Delta t=t_A-t_B,\qquad \Delta f_D=f_{D,A}-f_{D,B}.
+\]
+Together with surveyed node coordinates, aircraft ephemeris hypotheses and propagation uncertainty, these observables produce a consistency region for altitude, position and velocity. The result checks whether the broadcast parameters are compatible with the physical observation; it is not a blind guarantee that every transmitted parameter is truthful.
+
+ADS-B supplies a cooperative identity and state report, while the two-node RF geometry supplies an independent consistency check based on received power, AOA, TDOA and Doppler.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig15_aircraft_two_radomes_100km.png}
+\caption{Two radomes separated by 100 km receiving an aircraft transmission and fusing power, AOA, TDOA and Doppler observables.}
+\label{fig:aircraft-validation}
+\end{figure}
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{fig09_fluxo_processamento.png}
@@ -12,3 +30,14 @@ The passive-radar chain equalizes reference and surveillance channels, cancels d
 
 \section*{Português}
 A cadeia de radar passivo equaliza os canais de referência e vigilância, cancela o sinal direto e o clutter, calcula a função de ambiguidade cruzada, detecta com controle de falso alarme e associa as detecções entre os nós. A saída é uma trilha com incerteza, não apenas uma coordenada. A detecção de emissor direto deve permanecer separada da detecção por reflexão biestática.
+
+\subsection*{Experimento de consistência de transmissão aeronáutica}
+O sinal aeronáutico de referência é o ADS-B, principalmente o 1090ES em 1090 MHz na aviação comercial. O canal alternativo UAT em 978 MHz é relevante sobretudo para determinados usos da aviação geral nos Estados Unidos. As mensagens ADS-B são transmitidas automaticamente e repetidamente, com periodicidade dependente do tipo de informação; não constituem um único pacote contínuo contendo todos os parâmetros em todos os instantes. Os campos esperados incluem posição derivada de GNSS, altitude, velocidade, trajetória e identificação da aeronave.
+
+Dois nós radome separados por uma linha de base nominal de $100\,\mathrm{km}$ recebem de forma independente a transmissão da aeronave. Para cada nó, o sistema registra potência recebida $P_i$, ângulo de chegada local $\mathrm{AOA}_i$, timestamp de hardware $t_i$ e estimativa Doppler $f_{D,i}$. A fusão calcula:
+\[
+\Delta t=t_A-t_B,\qquad \Delta f_D=f_{D,A}-f_{D,B}.
+\]
+Com as coordenadas levantadas dos nós, hipóteses de efemérides da aeronave e incerteza de propagação, esses observáveis produzem uma região de consistência para altitude, posição e velocidade. O resultado verifica se os parâmetros transmitidos são compatíveis com a observação física; não é uma garantia cega de que todo parâmetro transmitido seja verdadeiro.
+
+O ADS-B fornece uma identidade e um estado cooperativos, enquanto a geometria RF dos dois nós fornece uma verificação independente baseada em potência recebida, AOA, TDOA e Doppler.
