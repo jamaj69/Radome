@@ -17,21 +17,24 @@
 <polygon points="290,215 145,465 435,465" fill="#d6e8f2" stroke="#41677d" stroke-width="3"/>
 <text x="290" y="335" text-anchor="middle" class="t">dielectric RF aperture</text>
 <text x="290" y="358" text-anchor="middle" class="t">abertura dielétrica RF</text>
-<!-- mast and yagi outside -->
-<line x1="290" y1="520" x2="290" y2="610" stroke="#7b4b2a" stroke-width="9"/>
+<!-- external Yagi: longitudinal support/boom continues from the internal apex; elements are transverse -->
 <circle cx="290" cy="520" r="12" fill="#b74747"/>
-<text x="305" y="584" class="s">base mast / haste na base</text>
-<line x1="290" y1="610" x2="290" y2="705" stroke="#7b4b2a" stroke-width="7"/>
+<line x1="290" y1="520" x2="290" y2="705" stroke="#7b4b2a" stroke-width="8"/>
+<line x1="290" y1="570" x2="290" y2="705" stroke="#d08a2e" stroke-width="4"/>
 <line x1="210" y1="610" x2="370" y2="610" stroke="#7b4b2a" stroke-width="7"/>
-<line x1="232" y1="585" x2="232" y2="635" stroke="#7b4b2a" stroke-width="4"/>
-<line x1="270" y1="580" x2="270" y2="640" stroke="#7b4b2a" stroke-width="4"/>
-<line x1="310" y1="580" x2="310" y2="640" stroke="#7b4b2a" stroke-width="4"/>
-<line x1="348" y1="585" x2="348" y2="635" stroke="#7b4b2a" stroke-width="4"/>
-<text x="290" y="755" text-anchor="middle" class="t">Yagi / “fishbone” external antenna</text>
-<text x="290" y="778" text-anchor="middle" class="s">receives the assigned band; feed passes through sealed interface</text>
+<line x1="235" y1="585" x2="235" y2="635" stroke="#7b4b2a" stroke-width="4"/>
+<line x1="268" y1="582" x2="268" y2="638" stroke="#7b4b2a" stroke-width="4"/>
+<line x1="312" y1="582" x2="312" y2="638" stroke="#7b4b2a" stroke-width="4"/>
+<line x1="345" y1="585" x2="345" y2="635" stroke="#7b4b2a" stroke-width="4"/>
+<text x="390" y="600" class="s">support/boom axis</text>
+<text x="305" y="584" class="s">apex support / suporte no vértice</text>
+<text x="290" y="755" text-anchor="middle" class="t">External VHF Yagi / Yagi VHF externa</text>
+<text x="290" y="778" text-anchor="middle" class="s">largest transverse element = 2.00 m; feed through sealed face interface</text>
 <!-- dimensions -->
 <line x1="80" y1="535" x2="500" y2="535" stroke="#9a4c2b" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-<text x="290" y="560" text-anchor="middle" class="dim">2.00 m side / lado</text>
+<text x="290" y="560" text-anchor="middle" class="dim">2.00 m triangular face side / lado da face</text>
+<line x1="210" y1="625" x2="370" y2="625" stroke="#9a4c2b" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="290" y="650" text-anchor="middle" class="dim">2.00 m largest transverse element / maior elemento transversal</text>
 <line x1="55" y1="155" x2="55" y2="520" stroke="#9a4c2b" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
 <text x="40" y="345" transform="rotate(-90 40 345)" text-anchor="middle" class="dim">preliminary height / altura</text>
 

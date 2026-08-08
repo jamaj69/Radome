@@ -106,7 +106,8 @@ fig.text(0.69, 0.57, "módulos ADC + ASIC blindados", color="#263746", fontsize=
 fig.text(0.69, 0.52, "FFASIC, clock, fibre and DC", color="#352e57", fontsize=9)
 fig.text(0.69, 0.49, "FFASIC, clock, fibra e DC", color="#352e57", fontsize=9)
 
-# Orthographic inset: the Yagi is mounted parallel to the external face plane.
+# Orthographic inset: the support/boom axis continues from the internal apex;
+# the Yagi elements are transverse to that axis.
 inset = fig.add_axes([0.68, 0.08, 0.28, 0.25])
 inset.set_facecolor("#f7fafc")
 inset.set_xlim(-1.8, 1.8)
@@ -123,7 +124,7 @@ for y in np.linspace(-0.15, 1.4, 5):
     half = 0.62 - (y + 0.15) * 0.08
     inset.plot([-half, half], [y, y], color="#6d7074", linewidth=2)
 inset.plot([-0.42, -0.68, 0.68, 0.42], [0.72, 0.88, 0.88, 0.72], color="#b9792e", linewidth=2)
-inset.annotate("mast normal to face", xy=(0, -0.45), xytext=(0.65, -0.8), fontsize=7, color="#754b2b", arrowprops={"arrowstyle": "->", "color": "#754b2b"})
+inset.annotate("apex support / boom axis", xy=(0, -0.45), xytext=(0.65, -0.8), fontsize=7, color="#754b2b", arrowprops={"arrowstyle": "->", "color": "#754b2b"})
 inset.text(0.05, 2.02, "boom", fontsize=7, color="#263746")
 inset.text(0.7, 1.25, "directors", fontsize=7, color="#263746")
 

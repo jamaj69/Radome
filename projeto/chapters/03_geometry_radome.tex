@@ -11,7 +11,7 @@ For the site model, the equatorial plane is the radome mid-plane. The lower cut 
 
 The mechanical skeleton, dielectric panels and internal RF modules have different but coordinated geometries. A face is a mechanical and computational sector, not an electromagnetically isolated region. Angular overlap between neighbouring faces is required for calibration, interpolation and direction estimation.
 
-The nominal triangular face uses a 2 m side dimension. A Yagi (fishbone) antenna is mounted outside the dielectric face and supported by a mast fixed at the triangular base. The mast interface must include a sealed RF feedthrough, mechanical load transfer and lightning/EMC treatment. The external antenna is assigned to a defined band; it is not a universal radiator.
+The nominal triangular face uses a 2 m side dimension. The external VHF Yagi is mounted on the outer face through a support/boom axis that continues from the pyramid apex through the sealed face interface. Its parasitic elements are transverse to that axis; the largest transverse element is specified as 2 m. The support transfers mechanical loads to the internal apex and triangular frame. The external antenna is assigned to VHF and is not a universal radiator.
 
 \begin{figure}[H]
 \centering
@@ -43,7 +43,7 @@ Para o modelo de sítio, o plano equatorial é o plano médio do radome. O corte
 
 O esqueleto mecânico, os painéis dielétricos e os módulos RF internos possuem geometrias diferentes, porém coordenadas. Uma face é um setor mecânico e computacional, não uma região eletromagneticamente isolada. A sobreposição angular entre faces vizinhas é necessária para calibração, interpolação e estimação de direção.
 
-A face triangular nominal possui lado de 2 m. Uma antena Yagi (``espinha de peixe'') é montada externamente à face dielétrica e sustentada por uma haste fixada na base triangular. A interface da haste deve conter passagem RF vedada, transferência mecânica de carga e tratamento de descargas e EMC. A antena externa é atribuída a uma faixa definida; não é um radiador universal.
+A face triangular nominal possui lado de 2 m. A Yagi VHF externa é montada na face externa por um eixo haste/lança que continua do vértice da pirâmide, atravessa a interface vedada e segue para fora. Seus elementos parasitas são transversais a esse eixo; o maior elemento transversal é especificado com 2 m. O suporte transfere as cargas mecânicas para o vértice interno e a moldura triangular. A antena externa é atribuída à faixa VHF e não é um radiador universal.
 
 \begin{figure}[H]
 \centering
@@ -75,7 +75,7 @@ O modelo Blender torna explícita a convenção de montagem: a face RF triangula
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig13_radome_blender.png}
-\caption{Blender Eevee render of the radome and exploded face. The VHF Yagi boom and directors lie parallel to the external face plane, while the mast transfers load normal to the face.}
+\caption{Blender Eevee render of the radome and exploded face. The external VHF Yagi uses a support/boom axis continuing from the internal apex; its parasitic elements are transverse to that axis.}
 \label{fig:radome-blender}
 \end{figure}
 
