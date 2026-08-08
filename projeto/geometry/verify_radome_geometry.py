@@ -102,7 +102,7 @@ def subdivide_frequency_2(vertices, edges, faces):
 def face_edges(faces):
     edges = set()
     for face in faces:
-        for start, end in ((face[0], face[1]), (face[1], face[2]), (face[2], face[0])):
+        for start, end in zip(face, face[1:] + face[:1]):
             edges.add(tuple(sorted((start, end))))
     return edges
 
@@ -113,6 +113,50 @@ def grouped_lengths(vertices, edges):
         edge_length = round(distance(vertices[edge[0]], vertices[edge[1]]), 12)
         groups[edge_length] = groups.get(edge_length, 0) + 1
     return sorted(groups.items())
+
+
+def clip_segment_to_cut(point_a, point_b, cut_z):
+    fraction = (cut_z - point_a[2]) / (point_b[2] - point_a[2])
+    return tuple(point_a[axis] + fraction * (point_b[axis] - point_a[axis]) for axis in range(3))
+
+
+def clip_polygon_to_cut(polygon, cut_z):
+    clipped = []
+    for index, point_a in enumerate(polygon):
+        point_b = polygon[(index + 1) % len(polygon)]
+        a_inside = point_a[2] >= cut_z - 1e-12
+        b_inside = point_b[2] >= cut_z - 1e-12
+        if a_inside and b_inside:
+            clipped.append(point_b)
+        elif a_inside and not b_inside:
+            clipped.append(clip_segment_to_cut(point_a, point_b, cut_z))
+        elif not a_inside and b_inside:
+            clipped.append(clip_segment_to_cut(point_a, point_b, cut_z))
+            clipped.append(point_b)
+    return clipped
+
+
+def clipped_mesh(vertices, faces, cut_z):
+    polygons = []
+    for face in faces:
+        polygon = clip_polygon_to_cut([vertices[index] for index in face], cut_z)
+        if len(polygon) >= 3:
+            polygons.append(polygon)
+
+    vertex_index = {}
+    clipped_vertices = []
+    clipped_faces = []
+    for polygon in polygons:
+        face_indices = []
+        for point in polygon:
+            key = tuple(round(component, 10) for component in point)
+            if key not in vertex_index:
+                vertex_index[key] = len(clipped_vertices)
+                clipped_vertices.append(point)
+            face_indices.append(vertex_index[key])
+        clipped_faces.append(tuple(face_indices))
+
+    return clipped_vertices, clipped_faces
 
 
 def main():
@@ -131,8 +175,21 @@ def main():
     radius_for_reference_edge = REFERENCE_EDGE_M / shortest_unit_edge
     diameter_for_reference_edge = 2.0 * radius_for_reference_edge
     cut_latitude_rad = math.radians(CUT_LATITUDE_DEG)
-    cut_z = radius_for_reference_edge * math.sin(cut_latitude_rad)
+    cut_z_over_r = math.sin(cut_latitude_rad)
+    cut_z = radius_for_reference_edge * cut_z_over_r
     support_radius = radius_for_reference_edge * math.cos(cut_latitude_rad)
+    cut_vertices, cut_faces = clipped_mesh(vertices, faces, cut_z_over_r)
+    cut_edges = face_edges(cut_faces)
+    cut_edge_use = {}
+    for face in cut_faces:
+        for start, end in zip(face, face[1:] + face[:1]):
+            edge = tuple(sorted((start, end)))
+            cut_edge_use[edge] = cut_edge_use.get(edge, 0) + 1
+    boundary_edges = [edge for edge, use_count in cut_edge_use.items() if use_count == 1]
+    boundary_vertices = {index for edge in boundary_edges for index in edge}
+    cut_euler = len(cut_vertices) - len(cut_edges) + len(cut_faces)
+    if cut_euler != 1:
+        raise SystemExit("Cut radome topology check failed.")
 
     print("RADOME C2 geometry verifier")
     print(f"base: V={len(base_vertices)} E={len(base_edges)} F={len(base_faces)}")
@@ -144,10 +201,16 @@ def main():
     print(f"if shortest chord is {REFERENCE_EDGE_M:.3f} m:")
     print(f"  R={radius_for_reference_edge:.4f} m")
     print(f"  D={diameter_for_reference_edge:.4f} m")
-    print(f"  cut z/R={math.sin(cut_latitude_rad):.6f}")
+    print(f"  cut z/R={cut_z_over_r:.6f}")
     print(f"  cut z={cut_z:.4f} m")
     print(f"  support ring radius={support_radius:.4f} m")
     print(f"  support ring diameter={2.0 * support_radius:.4f} m")
+    print(
+        "cut mesh: "
+        f"V={len(cut_vertices)} E={len(cut_edges)} F={len(cut_faces)} "
+        f"Euler={cut_euler} boundary_edges={len(boundary_edges)} "
+        f"boundary_vertices={len(boundary_vertices)}"
+    )
 
 
 if __name__ == "__main__":

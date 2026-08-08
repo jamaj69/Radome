@@ -36,11 +36,13 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | GEO-004 | Lado nominal da face receptora | 2.0 | m | Em conflito | `03_geometry_radome.tex` | Engenharia geométrica | Compatibilizar com raio e subdivisão C2 |
 | GEO-005 | Raio preliminar do envelope fechado | 3.1445 | m | Em conflito | `03_geometry_radome.tex` | Engenharia geométrica | Recalcular a partir da malha C2 |
 | GEO-006 | Diâmetro preliminar do envelope fechado | 6.2890 | m | Derivado | `03_geometry_radome.tex` | Engenharia geométrica | Atualizar após GEO-005 |
-| GEO-007 | Corte inferior conceitual | -35 | grau de latitude geométrica | Proposto | `03_geometry_radome.tex` | Geometria/estruturas | Substituir por ângulo polar ou z/R C2 |
+| GEO-007 | Corte inferior conceitual | z/R = -0.573576, ângulo polar 125° | — | Derivado | `geometry/verify_radome_geometry.py` | Geometria/estruturas | Sincronizar Blender e base C4 |
 | GEO-008 | Subdivisão geodésica candidata | classe I, frequência 2 | — | Proposto | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Reavaliar após integração estrutural |
 | GEO-009 | Vértices do envelope fechado C2 | 42 | vértice | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Verificador C2 |
 | GEO-010 | Arestas do envelope fechado C2 | 120 | aresta | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Verificador C2 |
 | GEO-011 | Diâmetro do anel de apoio se a menor corda for 2 m | 5.9953 | m | Derivado | `geometry/verify_radome_geometry.py` | Engenharia civil | Compatibilizar com base CIV-001 |
+| GEO-012 | Topologia do segmento cortado C2 | V=51, E=124, F=74, Euler=1 | — | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Verificador C2 |
+| GEO-013 | Borda do segmento cortado C2 | 16 vértices / 16 arestas | — | Derivado | `geometry/verify_radome_geometry.py` | Engenharia civil | Dimensionar transição para CIV-001 |
 | CIV-001 | Planta da base de concreto | 4 × 4 | m | Proposto | `08_infrastructure_validation.tex` | Engenharia civil | Compatibilizar com anel de apoio C2 |
 | CIV-002 | Altura estrutural livre da base | 3 | m | Proposto | `08_infrastructure_validation.tex` | Engenharia civil | Estudo estrutural e de acesso |
 | MEC-001 | Elemento transversal máximo da Yagi VHF | 2 | m | Proposto | `03_geometry_radome.tex` | Antenas/estruturas | Modelo EM e cargas de vento |

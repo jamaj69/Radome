@@ -72,5 +72,6 @@
 - **Estado:** proposta para verificação geométrica
 - **Decisão:** substituir a subdivisão provisória de 60 faces por uma malha classe I de frequência 2 derivada de um icosaedro regular.
 - **Resultado topológico:** o envelope fechado passa a ter 42 vértices, 120 arestas e 80 faces triangulares, com consistência de Euler igual a 2.
+- **Corte inferior:** o corte deixa de ser controlado por “latitude” textual e passa a ser registrado como $z/R=-0{,}573576$ ou ângulo polar de 125°; o segmento cortado possui 51 vértices, 124 arestas, 74 faces e Euler igual a 1.
 - **Limite:** a projeção esférica gera duas classes de corda; portanto, o lado nominal de 2 m não pode ser aplicado simultaneamente a todas as faces sem declarar a regra de escala.
 - **Fonte:** `geometry/verify_radome_geometry.py`.
