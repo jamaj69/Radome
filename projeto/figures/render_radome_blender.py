@@ -99,16 +99,18 @@ edge_b = Vector((-1.25, -0.40, 1.48))
 edge_c = Vector((-1.05, -1.00, 2.45))
 triangle_mesh("Highlighted radome face", [edge_a, edge_b, edge_c], face_mat, 0.015)
 
-# Exploded triangular pyramid: face plane is Y-Z, normal points +X.
+# Exploded triangular pyramid: the triangular face is on the outer surface
+# (x=0) and the apex points inward (-X), into the radome volume.
 offset = Vector((1.55, 0.0, 0.4))
 base = [offset + Vector((0.0, -1.20, -0.85)), offset + Vector((0.0, 1.20, -0.85)), offset + Vector((0.0, 0.0, 1.22))]
-apex = offset + Vector((1.35, 0.0, 0.0))
+apex = offset + Vector((-1.35, 0.0, 0.0))
 for i in range(3):
     triangle_mesh("Pyramid structural side", [base[i], base[(i + 1) % 3], apex], dielectric_mat, 0.025)
 triangle_mesh("Outer triangular RF face", base, face_mat, 0.025)
 
-# Exploded layers just behind the external face, separated along +X.
+# Exploded layers just behind the external face, separated toward the interior (-X).
 for index, (x, mat, name) in enumerate([(0.18, dielectric_mat, "Dielectric skin and honeycomb"), (0.42, board_mat, "RF aperture and PCB"), (0.68, shield_mat, "Shielded ADC ASIC band modules")]):
+    x = -x
     scale = 0.72
     layer = [offset + Vector((x, p.y * scale, p.z * scale)) for p in [Vector((0, -1.2, -0.85)), Vector((0, 1.2, -0.85)), Vector((0, 0, 1.22))]]
     triangle_mesh(name, layer, mat, 0.015)
@@ -129,22 +131,22 @@ for point in base:
     bpy.context.object.name = "Internal node plate"
     bpy.context.object.data.materials.append(frame_mat)
 
-# External Yagi: mast and boom share the local tangent direction (+Z).
-# Directors span the second tangent direction (+/-Y); nothing points along
-# the face normal (+X).
-yagi_x = offset.x + 1.35
-mast_base = offset + Vector((1.35, 0.0, -0.85))
-mast_top = Vector((yagi_x, 0.0, 0.65))
-cylinder_between("Yagi mast tangent to face", mast_base, mast_top, 0.065, mast_mat)
-boom_bottom = Vector((yagi_x, -0.02, 0.55))
-boom_top = Vector((yagi_x, -0.02, 2.95))
+# External antenna: a support strut runs from the inward apex through the
+# face to the outer bracket. The Yagi boom is tangent to the face; directors
+# are transverse to the boom, matching the reference antenna.
+yagi_x = offset.x + 0.32
+mast_base = apex
+mast_top = Vector((yagi_x, 0.0, 0.0))
+cylinder_between("Antenna support from inward pyramid apex", mast_base, mast_top, 0.065, mast_mat)
+boom_bottom = Vector((yagi_x, -0.02, 0.25))
+boom_top = Vector((yagi_x, -0.02, 2.65))
 cylinder_between("Yagi longitudinal boom", boom_bottom, boom_top, 0.045, yagi_mat)
 # Reflector at bottom, driven folded loop, and directors.
-cylinder_between("Yagi reflector", Vector((yagi_x, -0.02, 0.52)), Vector((yagi_x, -0.02, 1.28)), 0.035, yagi_mat)
-for z, half in [(0.62, 0.47), (1.03, 0.43), (1.43, 0.39), (1.83, 0.35), (2.23, 0.31), (2.62, 0.27)]:
+cylinder_between("Yagi reflector", Vector((yagi_x, -0.02, 0.25)), Vector((yagi_x, -0.02, 1.0)), 0.035, yagi_mat)
+for z, half in [(0.35, 0.47), (0.77, 0.43), (1.18, 0.39), (1.59, 0.35), (2.0, 0.31), (2.4, 0.27)]:
     cylinder_between("Yagi director", Vector((yagi_x, -half, z)), Vector((yagi_x, half, z)), 0.022, yagi_mat)
 # Folded driven element as a rectangular rounded loop approximated by four cylinders.
-loop_z = 1.62
+loop_z = 1.38
 loop_half_y = 0.58
 loop_half_x = 0.12
 loop_left = Vector((yagi_x - loop_half_x, -loop_half_y, loop_z))
@@ -172,7 +174,7 @@ labels = [
     ("RADOME shell / casca", (-3.7, 0.0, 5.0), 0.22, white_mat),
     ("EXPLODED FACE / FACE EXPLODIDA", (3.0, -2.6, 4.3), 0.22, white_mat),
     ("2 m triangular face", (2.4, -2.35, 3.9), 0.18, yagi_gold),
-    ("VHF Yagi: boom + mast tangent", (3.2, -2.45, 3.55), 0.16, yagi_gold),
+    ("VHF Yagi outside face; apex strut inside", (3.2, -2.45, 3.55), 0.16, yagi_gold),
     ("shielded ADC + ASIC layers", (3.4, 2.1, 2.1), 0.14, white_mat),
     ("FFASIC / clock / fibre / DC", (3.7, 2.1, 0.4), 0.14, white_mat),
 ]

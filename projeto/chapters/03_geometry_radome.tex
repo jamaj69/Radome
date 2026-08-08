@@ -50,22 +50,15 @@ A face triangular nominal possui lado de 2 m. Uma antena Yagi (``espinha de peix
 
 As junções internas formam caminhos contínuos de carga entre os membros da estrutura triangular e as faces vizinhas. Costuras estruturais vedadas, reforços locais e um anel ou placa nodal interna transferem cargas de vento, vibração e manutenção sem depender apenas da pele dielétrica. O conjunto deve ser verificado por análise estrutural e ensaios ambientais.
 
-The Blender model makes the mounting convention explicit: the support mast and the Yagi boom share the same local tangent direction of the triangular face. The directors span the second tangent direction, and no antenna axis is assigned to the face normal. This is the intended mechanical orientation for the VHF aperture.
+The Blender model makes the mounting convention explicit: the triangular RF face lies on the outer radome surface, while the pyramid volume and its apex are directed inward. A support strut starts at the internal apex, passes through the face interface and reaches the external antenna bracket. The Yagi boom is outside the face and tangent to its surface; the parasitic elements are transverse to the boom.
 
-O modelo Blender torna explícita a convenção de montagem: a haste de suporte e a lança da Yagi compartilham a mesma direção tangente local da face triangular. Os elementos transversais ocupam a segunda direção tangente, e nenhum eixo da antena é orientado pela normal da face. Essa é a orientação mecânica pretendida para a abertura VHF.
+O modelo Blender torna explícita a convenção de montagem: a face RF triangular está na superfície externa do radome, enquanto o volume da pirâmide e seu vértice apontam para dentro. Uma haste de suporte parte do vértice interno, atravessa a interface da face e chega ao suporte externo da antena. A lança da Yagi fica fora da face e tangente à sua superfície; os elementos parasitas são transversais à lança.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig13_radome_blender.png}
-\caption{Blender 3D model: the VHF Yagi boom and support mast share the tangent direction of the face / Modelo Blender 3D: a lança e a haste da Yagi VHF compartilham a direção tangente da face.}
+\caption{Blender 3D model: the triangular face is external, the pyramid apex is internal, and the VHF Yagi is mounted outside / Modelo Blender 3D: a face triangular é externa, o vértice da pirâmide é interno e a Yagi VHF é montada externamente.}
 \label{fig:blender-yagi}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.98\textwidth]{fig12_radome_3d_explodida.png}
-\caption{3D exploded view of the radome and triangular face / Vista 3D explodida do radome e da face triangular. The external VHF Yagi, mast, 2 m face, internal layers, FFASIC and service connections are shown.}
-\label{fig:radome-3d}
 \end{figure}
 
 \begin{figure}[H]
