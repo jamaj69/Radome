@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-08)
 
 ## Corpus Check
-- 28 files · ~357,327 words
+- 28 files · ~357,630 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 516 nodes · 509 edges · 50 communities (46 shown, 4 thin omitted)
+- 517 nodes · 510 edges · 50 communities (46 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8e15f3a3`
+- Built from commit: `f4980551`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -120,8 +120,8 @@ Cohesion: 0.12
 Nodes (16): Airborne and curved-platform field datasets, Antenna bandwidth versus receiver observability, Closed-set and dataset-leakage risks, Conceptual and theoretical gaps, Emitter identity versus signal deviation, Environmental and structural aging, Inconsistent metrics, Insufficient adversarial testing (+8 more)
 
 ### Community 9 - "RADOME — Roadmap de correções técnicas e documentais"
-Cohesion: 0.17
-Nodes (11): Definição de concluído, Estado dos gates, Onda 0 — congelar a baseline, Onda 1 — corrigir a polarimetria, Onda 2 — reconstruir a geometria paramétrica, Onda 3 — fechar o plano espectral e os experimentos, Onda 4 — sincronizar Blender, figuras e texto, Onda 5 — fortalecer literatura e alegações (+3 more)
+Cohesion: 0.15
+Nodes (12): Definição de concluído, Estado dos gates, Evidência C3 já produzida, Onda 0 — congelar a baseline, Onda 1 — corrigir a polarimetria, Onda 2 — reconstruir a geometria paramétrica, Onda 3 — fechar o plano espectral e os experimentos, Onda 4 — sincronizar Blender, figuras e texto (+4 more)
 
 ### Community 10 - "RADOME Project Agent Guide"
 Cohesion: 0.15

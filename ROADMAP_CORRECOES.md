@@ -11,8 +11,8 @@
 | C0 — baseline documental | Aprovado com bloqueios | Fonte, versionamento, parâmetros e ADRs aprovados; conflitos seguem bloqueados para C1–C3 |
 | C1 — polarimetria correta | Aprovado no nível arquitetural | Síntese restrita a duas portas coerentes na mesma faixa; Yagis VHF/UHF declaradas single-pol independentes |
 | C2 — geometria consistente | Aprovado no nível paramétrico | Malha, raio, faces, corte e base derivados de um modelo paramétrico único |
-| C3 — cobertura espectral | Em aberto | Faixas sem lacunas acidentais e cadeia explícita para ADS-B 1090 MHz |
-| C4 — modelo 3D sincronizado | Bloqueado por C2 | Blender e figuras gerados a partir dos parâmetros aprovados |
+| C3 — cobertura espectral | Em andamento; arquitetura e triagem aprovadas | Lacunas deliberadas, cadeia aeronáutica e protocolos definidos; faltam orçamento RF, enlace e sítio |
+| C4 — modelo 3D sincronizado | Bloqueado pelo fechamento de C3 | Blender e figuras gerados a partir dos parâmetros aprovados |
 | C5 — consistência científica | Em aberto | Novidade, referências e limites formulados com evidência apropriada |
 | C6 — qualidade editorial | Em aberto | Bilinguismo simétrico e compilação sem avisos relevantes |
 
@@ -64,16 +64,32 @@
 **Prioridade:** alta.
 **Dependências:** C0 e decisão preliminar de C1.
 
-1. Resolver as lacunas 300–470 MHz e 860 MHz–1 GHz como cobertura deliberadamente ausente ou como novas subfaixas.
-2. Atribuir ADS-B 1090ES e UAT 978 MHz a antenas, filtros, ADCs e canais explícitos; não presumir que a Yagi de 470–860 MHz os cubra.
-3. Separar três experimentos:
+1. [x] Resolver as lacunas espectrais: 323–470 MHz e 860–960 MHz permanecem deliberadamente sem cobertura no primeiro demonstrador.
+2. [x] Atribuir ADS-B 1090ES e UAT 978 MHz a uma abertura aeronáutica dedicada de 960–1215 MHz, com preselectors, ADCs e canais FPGA independentes; a Yagi de 470–860 MHz não cobre esses serviços.
+3. [x] Separar três experimentos, com observáveis, verdade-terreno, estimador e métricas próprios:
    - emissor direto cooperativo ADS-B;
    - transmissores conhecidos para calibração;
    - reflexão biestática de alvo com canal de referência e vigilância.
-4. Definir largura instantânea, faixa dinâmica, NF, IP3, taxa de amostragem, clock e volume de dados de cada demonstrador.
-5. Reavaliar a baseline nominal de 100 km por orçamento de enlace, horizonte, geometria e regulamentação do sítio.
+4. [ ] Fechar os parâmetros de aquisição e RF:
+   - [x] baselines de triagem de 8 MS/s para os dois canais aeronáuticos e 25 MS/s para os canais UHF;
+   - [x] I/Q de 16+16 bits, janelas brutas de 10 s e vazões/volumes reproduzidos por `projeto/spectral/verify_c3_acquisition_budget.py`;
+   - [ ] largura ocupada por forma de onda, clock/ENOB de implementação, faixa dinâmica, NF e IP3 após campanha RFI e orçamento em cascata.
+5. [ ] Reavaliar a baseline nominal de 100 km:
+   - [x] triagem de horizonte com Terra efetiva: aproximadamente 542 km para estação a 1000 m e aeronave a 10000 m;
+   - [ ] fechar terreno, diagramas, margem de enlace, visibilidade comum, GDOP, coordenadas e regulamentação dos sítios reais.
+
+### Evidência C3 já produzida
+
+- `ADR-010`: lacunas deliberadas e cadeia aeronáutica dedicada;
+- `ADR-011`: protocolos experimentais independentes;
+- `RF-007`–`RF-015` e `EXP-006`–`EXP-010` em `projeto/PARAMETERS.md`;
+- Figura 4 regenerada com a faixa aeronáutica e as lacunas explícitas;
+- `projeto/spectral/verify_c3_acquisition_budget.py`: 512, 800 e 1600 Mbit/s por nó; 0,64, 1,00 e 2,00 GB por nó em janelas de 10 s;
+- artigo bilíngue recompilado, sem erros fatais ou referências indefinidas na passagem final.
 
 **Gate C3:** cada frequência citada possui caminho de sinal completo e cada experimento possui observáveis, verdade-terreno, estimador e métrica separados.
+
+**Bloqueios restantes do gate:** selecionar formas de onda e componentes, medir o ambiente RFI, fechar NF/IP3/faixa dinâmica e concluir os orçamentos de enlace, geometria e autorização dos sítios. Os valores atuais são baselines de capacidade e triagem, não desempenho aprovado.
 
 ## Onda 4 — sincronizar Blender, figuras e texto
 

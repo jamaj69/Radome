@@ -33,6 +33,10 @@ This is a durable log of the chat content visible to the agent. It is not a verb
    - `af72037 Complete C2 support geometry checks`
 10. User: "Tem como você colocar em um log todas as mensagens do chat? Por que quando troco de uso da conta do git hub para a conta da openia perde todo contexto."
 11. Assistant answered that the durable location should be `graphify-out/wiki/SESSION_CONTEXT.md`, because the repository startup protocol already requires future agents to read it.
+12. User asked the assistant to continue into C3. The assistant recovered the current roadmap and closed three focused increments: aviation receiver paths, independent experiment protocols, and a reproducible acquisition/horizon screening budget.
+13. During the first C3 increment, the assistant detected and prevented a regression to obsolete cross-band polarimetry; the approved C1 same-band restriction and corrected Figure 5 were preserved.
+14. A Graphify command was briefly started from `/home/jamaj/src` instead of the repository root. It was terminated, rerun correctly from `/home/jamaj/src/Radome`, and the orphan `/home/jamaj/src/graphify-out/.rebuild.lock` was removed.
+15. User: "Grave o status da sessão e atualize a documentação, escpecialmente o roadmap".
 
 ## Commits created in this session
 
@@ -42,12 +46,25 @@ All commits below used author `github-copilot[bot] <198982749+github-copilot[bot
 - `602f8e5 Add preliminary C2 geodesic geometry verifier`
 - `417bf0f Verify C2 cut geometry topology`
 - `af72037 Complete C2 support geometry checks`
+- `660ad44 Define C3 aviation receiver paths`
+- `8e15f3a Separate C3 experiment protocols`
+- `f498055 Add C3 acquisition screening budget`
 
 ## Current technical state
 
 - C0 baseline was already approved with explicit blockers.
 - C1 polarimetry is approved at the architectural level.
 - C2 is now marked approved at the parametric level in `ROADMAP_CORRECOES.md`.
+- C3 is in progress. Its spectral architecture, aviation paths, experiment separation and acquisition/horizon screening are complete; RF cascade, link and site budgets remain open.
+- Deliberate first-demonstrator gaps are `323–470 MHz` and `860–960 MHz`.
+- A dedicated `960–1215 MHz` aviation aperture supplies independent UAT 978 MHz and 1090ES paths; neither service is assigned to the `470–860 MHz` UHF Yagi.
+- `EXP-006`, `EXP-007` and `EXP-008` separately control cooperative direct ADS-B, known-transmitter calibration and bistatic reflection.
+- `projeto/spectral/verify_c3_acquisition_budget.py` reproduces:
+  - aviation direct paths: `512 Mbit/s/node`, `0.64 GB/node/10 s`;
+  - known UHF transmitter: `800 Mbit/s/node`, `1.00 GB/node/10 s`;
+  - bistatic reference plus surveillance: `1600 Mbit/s/node`, `2.00 GB/node/10 s`;
+  - screening mutual horizon: `542.3 km` for a 1000 m station and 10000 m aircraft.
+- NF, IP3 and usable dynamic range are intentionally unassigned until measured site RFI and a cascaded component budget exist.
 - The C2 geometry source is `projeto/geometry/verify_radome_geometry.py`.
 - The C2 verifier currently reports:
   - base icosahedron: `V=12`, `E=30`, `F=20`;
@@ -64,9 +81,10 @@ All commits below used author `github-copilot[bot] <198982749+github-copilot[bot
 
 ## Validation already run
 
-For the C2 changes:
+For the C2 and C3 changes:
 
 - `python3 projeto/geometry/verify_radome_geometry.py`
+- `python3 projeto/spectral/verify_c3_acquisition_budget.py`
 - Full LaTeX sequence from `projeto/`:
   - `pdflatex -interaction=nonstopmode -halt-on-error projetov1.tex`
   - `bibtex projetov1`
@@ -81,13 +99,13 @@ Known remaining LaTeX warnings are pre-existing C6 items: duplicate page anchors
 
 ## Next roadmap focus
 
-The next roadmap gate after C2 is C3, spectral plan and experiments:
+Complete the remaining C3 evidence before releasing C4:
 
-1. resolve gaps `300-470 MHz` and `860 MHz-1 GHz`;
-2. assign ADS-B `1090ES` and UAT `978 MHz` to explicit antennas, filters, ADCs and channels;
-3. separate direct cooperative ADS-B, known-transmitter calibration and bistatic-reflection experiments;
-4. define RF/data/timing parameters per demonstrator;
-5. re-evaluate the nominal `100 km` baseline with link, horizon, geometry and regulatory budgets.
+1. select the actual UHF and aviation waveforms and receiver components;
+2. measure site RFI and close cascaded NF, IP3, usable dynamic range and ENOB;
+3. close link margin, terrain, common visibility, GDOP, site coordinates and spectrum authorization for the nominal baseline;
+4. convert the three experiment protocols into a versioned three-node dataset and acceptance plan;
+5. only then synchronize Blender and figures to the approved C2/C3 parameters in C4.
 
 ## Operational notes
 

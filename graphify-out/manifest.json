@@ -60,13 +60,13 @@
     "semantic_hash": ""
   },
   "ROADMAP_CORRECOES.md": {
-    "mtime": 1786162023.8866606,
-    "ast_hash": "15463c76c1ecd75a21528ae8d08db402",
+    "mtime": 1786167959.4586077,
+    "ast_hash": "4b36aab1aa810ff9d323575b41d871f1",
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786158362.27805,
-    "ast_hash": "388bc6be6cfbf45673da261c8922ace1",
+    "mtime": 1786167959.4626076,
+    "ast_hash": "3c3dca235618f1a86329dabd713c068d",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -295,7 +295,7 @@
     "semantic_hash": ""
   },
   "projeto/PARAMETERS.md": {
-    "mtime": 1786166908.277547,
+    "mtime": 1786167508.5301414,
     "ast_hash": "c30a916f65bbadec30dfa6a9ef2870e3",
     "semantic_hash": ""
   },
@@ -315,7 +315,7 @@
     "semantic_hash": ""
   },
   "projeto/spectral/verify_c3_acquisition_budget.py": {
-    "mtime": 1786166908.4335513,
+    "mtime": 1786167508.5301414,
     "ast_hash": "b60589505b985e992affe8261ae23410",
     "semantic_hash": ""
   }

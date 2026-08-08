@@ -1,6 +1,6 @@
 # RADOME — Sumário executivo e roadmap de pesquisa e engenharia
 
-**Data de consolidação:** 7 de agosto de 2026
+**Data de consolidação:** 8 de agosto de 2026
 **Estado:** arquitetura conceitual; desempenho operacional ainda não demonstrado
 **Documento técnico vigente:** `projeto/projetov1.tex` / `projeto/projetov1.pdf`
 
@@ -8,7 +8,7 @@
 
 O RADOME propõe uma rede distribuída de estações passivas em sítios elevados para observar, caracterizar e localizar emissões eletromagnéticas. Cada nó combina uma estrutura geodésica, abertura híbrida multifaixa, recepção vetorial/polarimétrica, cadeias RF independentes, processamento local orientado a eventos, sincronização e calibração ponta a ponta. A fusão de múltiplos nós emprega AOA, TDOA e FDOA e, em cenários de radar passivo, canais separados de referência e vigilância.
 
-A evolução documental corrigiu hipóteses iniciais fisicamente frágeis. A proposta atual não usa uma antena ou um LNB universal de HF a Ka, não equipara precisão de distribuição de tempo à coerência de fase em qualquer frequência e não promete localização operacional sem orçamento de enlace, geometria observável e calibração medida. O espectro é dividido em subsistemas; HF permanece um programa próprio, enquanto VHF/UHF é a primeira faixa recomendada para demonstrar a cadeia completa.
+A evolução documental corrigiu hipóteses iniciais fisicamente frágeis. A proposta atual não usa uma antena ou um LNB universal de HF a Ka, não equipara precisão de distribuição de tempo à coerência de fase em qualquer frequência e não promete localização operacional sem orçamento de enlace, geometria observável e calibração medida. O espectro é dividido em subsistemas; HF permanece um programa próprio, enquanto VHF/UHF é a primeira faixa recomendada para demonstrar a cadeia completa. O primeiro demonstrador não busca cobertura contínua: 323–470 MHz e 860–960 MHz são lacunas deliberadas, e UAT 978 MHz e ADS-B 1090ES usam uma abertura aeronáutica dedicada de 960–1215 MHz com caminhos receptores independentes.
 
 A principal contribuição pretendida é sistêmica: integrar abertura conformal/multifaixa, plataforma e radome calibrados, eletrônica distribuída, metrologia temporal, processamento de eventos e validação ambiental em uma única arquitetura reproduzível. Hoje essa contribuição está resolvida no nível de projeto e visualização 3D, não no nível de protótipo caracterizado.
 
@@ -63,11 +63,11 @@ Limites que devem acompanhar qualquer uso acadêmico da revisão:
 |---|---|---|
 | Missão e arquitetura | Rede passiva, planos de controle/evento e captura, fusão hierárquica | Casos de uso priorizados, requisitos numerados e orçamento de desempenho |
 | Antenas e radome | Particionamento por faixa, portas ortogonais, Yagis VHF/UHF e tiles futuros | Modelos EM, matriz de acoplamento, perda/atraso do casco e mapas OTA calibrados |
-| RF e digital | Cadeias independentes, ADC/ASIC por banda, buffers e triggers | Frequências, largura instantânea, faixa dinâmica, NF, IP3, ENOB, vazão e consumo |
+| RF e digital | Cadeias independentes; UAT/1090ES dedicados; baselines de 8 e 25 MS/s; vazão e captura bruta calculadas | Largura ocupada, clock/ENOB, faixa dinâmica, NF, IP3 e consumo após RFI e seleção de componentes |
 | Tempo e calibração | GNSS, oscilador local, White Rabbit e calibração RF | Orçamento de incerteza, jitter, holdover e estabilidade de fase medidos |
-| Algoritmos | AOA/TDOA/FDOA, cancelamento direto, CAF e fusão | Dados reais, métricas comuns, covariância consistente, CFAR e falso alarme |
+| Algoritmos | AOA/TDOA/FDOA, cancelamento direto, CAF e três protocolos com evidência e métricas separadas | Dados reais, covariância consistente, CFAR e falso alarme medidos |
 | Mecânica e ambiente | Casco, base, abertura de acesso, cargas internas e infraestrutura | FEA, vento/gelo/raio, térmica, vedação, manutenção, EMC e licenciamento |
-| Evidência | Figuras, cenas Blender e cenário nominal de 100 km | Protótipo, ensaios reproduzíveis e campanha de campo com verdade-terreno |
+| Evidência | Figuras, cenas Blender, triagem paramétrica de dados/horizonte e cenário nominal de 100 km | Orçamento de enlace e sítio, protótipo, ensaios reproduzíveis e campanha de campo com verdade-terreno |
 
 ## 6. Roadmap orientado por gates
 
@@ -86,13 +86,13 @@ Os prazos abaixo são faixas de planejamento e só começam após disponibilidad
 
 ## 7. Próximas ações prioritárias
 
-1. Congelar uma especificação VHF/UHF de referência: subfaixas, largura instantânea, polarizações, campo de visão, faixa dinâmica e iluminadores.
+1. Fechar C3 com formas de onda e componentes selecionados, campanha RFI, orçamento em cascata de NF/IP3/faixa dinâmica e orçamento de enlace/sítio; preservar as lacunas deliberadas e a cadeia aeronáutica já aprovadas.
 2. Criar uma matriz requisito–evidência com identificadores estáveis e ligar cada afirmação do artigo a simulação, ensaio ou referência.
-3. Produzir três orçamentos quantitativos: enlace/SNR, sincronização-localização e dados/energia/térmica.
+3. Evoluir a triagem de aquisição já reproduzível para três orçamentos completos: enlace/SNR, sincronização-localização e dados/energia/térmica.
 4. Auditar os 29 registros bibliográficos em fontes primárias, acrescentando DOI e corrigindo registros incompletos, sem apagar os links de proveniência do Consensus.
 5. Simular a montagem Yagi VHF/UHF completa, incluindo boom comum, suporte, base, casco e acoplamento, antes de congelar dimensões.
 6. Construir primeiro a cadeia coerente de bancada e o sistema de calibração; a casca completa só deve avançar após o gate metrológico.
-7. Definir protocolo e dataset do experimento de três nós: verdade-terreno, calibração, clima, RFI, versionamento e métricas.
+7. Transformar os protocolos `EXP-006`–`EXP-008` em um plano de dataset de três nós: formatos, verdade-terreno independente, calibração, clima, RFI, versionamento e critérios de aceitação.
 
 ## 8. Critério de sucesso do programa
 
