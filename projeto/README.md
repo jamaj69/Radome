@@ -15,6 +15,7 @@ O projeto é organizado em torno de [projetov1.tex](projetov1.tex). Ele é o arq
 - `projetov1.pdf`: compiled version / versão compilada.
 - `PARAMETERS.md`: controlled quantitative parameter register / registro controlado de parâmetros quantitativos;
 - `DECISIONS.md`: architecture decision record / registro de decisões de arquitetura.
+- `antenna_designs/`: proposed antenna baselines awaiting simulation and measurement / baselines propostas de antenas aguardando simulação e medição.
 
 ## 3D baseline / Linha de base 3D
 

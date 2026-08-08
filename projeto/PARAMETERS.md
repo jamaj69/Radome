@@ -54,6 +54,11 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | RF-006 | Faixa K/Ka agregada | 18–40 | GHz | Proposto | `generate_updated_figures.py` | Engenharia RF | Decompor em tiles C3 |
 | RF-007 | Lacuna espectral inferior | 300–470 | MHz | Em conflito | Figura 4 versus escopo multifaixa | Engenharia RF | Declarar exclusão ou nova cadeia C3 |
 | RF-008 | Lacuna espectral superior | 860–1000 | MHz | Em conflito | Figura 4 versus cenário aeronáutico | Engenharia RF | Declarar exclusão ou nova cadeia C3 |
+| ANT-001 | LPDA VHF candidata: faixa de projeto | 71.5–323 | MHz | Derivado | `antenna_designs/lpda_vhf_72_320.md` | Antenas/RF | Simulação NEC/openEMS e OTA |
+| ANT-002 | LPDA VHF candidata: τ / σ | 0.86 / 0.16 | — | Proposto | `antenna_designs/lpda_vhf_72_320.md` | Antenas/RF | Otimização de ganho e impedância |
+| ANT-003 | LPDA VHF candidata: elementos | 11 | elemento | Derivado | `antenna_designs/lpda_vhf_72_320.md` | Antenas/RF | Confirmar região ativa por frequência |
+| ANT-004 | LPDA VHF candidata: boom entre elementos | 1.780 | m | Derivado | `antenna_designs/lpda_vhf_72_320.md` | Antenas/estruturas | Adicionar margens e verificar cargas |
+| ANT-005 | LPDA VHF candidata: ganho realizado alvo | 6–8 | dBi | Proposto | `antenna_designs/lpda_vhf_72_320.md` | Antenas/RF | Não citar como desempenho até simulação e ensaio |
 | POL-001 | Polarimetria por faixa | 2 portas simultâneas, ortogonais e coerentes na mesma frequência | Proposto | `04_multiband_polarimetry.tex` | Antenas/RF | Arquitetura corrigida; medir matriz de Jones, isolamento e deriva |
 | POL-002 | Polarimetria das Yagis VHF/UHF do primeiro demonstrador | não implementada; dois canais independentes single-pol | Proposto | `04_multiband_polarimetry.tex` | Antenas/RF | Preservar separação entre faixas; não produzir Stokes/RHCP do par |
 | POL-003 | Critério mínimo de coerência polarimétrica | amplitude e fase calibradas em frequência, ângulo e temperatura | Proposto | `04_multiband_polarimetry.tex` | Metrologia RF | Plano de ensaio OTA e injeção coerente |

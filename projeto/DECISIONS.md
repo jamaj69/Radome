@@ -47,3 +47,12 @@
 - **Aplicação ao demonstrador:** as Yagis VHF e UHF atuais são canais independentes de polarização única; sua montagem a 90° oferece diversidade mecânica/orientacional entre faixas, não polarimetria.
 - **Expansão futura:** uma faixa poderá receber antena dual-polarizada ou par cruzado na mesma faixa, com cadeias coerentes e calibração de amplitude/fase.
 - **Evidência exigida:** matriz de Jones, isolamento, cross-pol, equilíbrio de amplitude, fase relativa e deriva versus frequência, ângulo e temperatura.
+
+## ADR-007 — LPDA VHF como candidata de banda larga
+
+- **Data:** 8 de agosto de 2026
+- **Estado:** proposta para simulação
+- **Decisão:** adotar uma LPDA de 11 elementos, τ = 0,86, σ = 0,16 e elemento máximo de 2 m como baseline de simulação para aproximadamente 72–320 MHz.
+- **Motivo:** uma Yagi convencional com elemento máximo de 2 m seria predominantemente estreita e centrada na parte baixa de VHF.
+- **Limite:** a LPDA não substitui a Yagi no modelo físico atual até que ganho realizado, impedância, padrão, cargas e integração sejam validados.
+- **Fonte dimensional:** `antenna_designs/lpda_vhf_72_320.md`.

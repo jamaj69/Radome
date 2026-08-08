@@ -3070,6 +3070,17 @@
       "norm_label": "adr-006 \u2014 polarimetria restrita a mesma faixa"
     },
     {
+      "label": "ADR-007 \u2014 LPDA VHF como candidata de banda larga",
+      "file_type": "document",
+      "source_file": "projeto/DECISIONS.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "projeto_decisions_adr_007_lpda_vhf_como_candidata_de_banda_larga",
+      "community": 22,
+      "community_name": "RADOME \u2014 Registro de decis\u00f5es de arquitetura",
+      "norm_label": "adr-007 \u2014 lpda vhf como candidata de banda larga"
+    },
+    {
       "label": "PARAMETERS.md",
       "file_type": "document",
       "source_file": "projeto/PARAMETERS.md",
@@ -3139,7 +3150,7 @@
       "label": "Tempo, cen\u00e1rio e valida\u00e7\u00e3o",
       "file_type": "document",
       "source_file": "projeto/PARAMETERS.md",
-      "source_location": "L61",
+      "source_location": "L66",
       "_origin": "ast",
       "id": "projeto_parameters_tempo_cen\u00e1rio_e_valida\u00e7\u00e3o",
       "community": 15,
@@ -3150,7 +3161,7 @@
       "label": "Resultado da revis\u00e3o C0",
       "file_type": "document",
       "source_file": "projeto/PARAMETERS.md",
-      "source_location": "L73",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "projeto_parameters_resultado_da_revis\u00e3o_c0",
       "community": 15,
@@ -3161,7 +3172,7 @@
       "label": "Regras de manuten\u00e7\u00e3o",
       "file_type": "document",
       "source_file": "projeto/PARAMETERS.md",
-      "source_location": "L82",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "projeto_parameters_regras_de_manuten\u00e7\u00e3o",
       "community": 15,
@@ -3216,7 +3227,7 @@
       "label": "3D baseline / Linha de base 3D",
       "file_type": "document",
       "source_file": "projeto/README.md",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "projeto_readme_3d_baseline_linha_de_base_3d",
       "community": 20,
@@ -3227,12 +3238,188 @@
       "label": "Compilation / Compila\u00e7\u00e3o",
       "file_type": "document",
       "source_file": "projeto/README.md",
-      "source_location": "L25",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "projeto_readme_compilation_compila\u00e7\u00e3o",
       "community": 20,
       "community_name": "RADOME Project / Projeto RADOME",
       "norm_label": "compilation / compilacao"
+    },
+    {
+      "label": "lpda_vhf_72_320.md",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "lpda_vhf_72_320.md"
+    },
+    {
+      "label": "Preliminary 72\u2013320 MHz LPDA / LPDA preliminar de 72\u2013320 MHz",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_preliminary_72_320_mhz_lpda_lpda_preliminar_de_72_320_mhz",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "preliminary 72\u2013320 mhz lpda / lpda preliminar de 72\u2013320 mhz"
+    },
+    {
+      "label": "English",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_english",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "english"
+    },
+    {
+      "label": "Design objective",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_design_objective",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "design objective"
+    },
+    {
+      "label": "Selected Carrel parameters",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_selected_carrel_parameters",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "selected carrel parameters"
+    },
+    {
+      "label": "Element schedule",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_element_schedule",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "element schedule"
+    },
+    {
+      "label": "Feed and construction concept",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_feed_and_construction_concept",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "feed and construction concept"
+    },
+    {
+      "label": "Expected\u2014not guaranteed\u2014performance",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_expected_not_guaranteed_performance",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "expected\u2014not guaranteed\u2014performance"
+    },
+    {
+      "label": "Required validation",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_required_validation",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "required validation"
+    },
+    {
+      "label": "Portugu\u00eas",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_portugu\u00eas",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "portugues"
+    },
+    {
+      "label": "Objetivo do projeto",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_objetivo_do_projeto",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "objetivo do projeto"
+    },
+    {
+      "label": "Par\u00e2metros de Carrel selecionados",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_par\u00e2metros_de_carrel_selecionados",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "parametros de carrel selecionados"
+    },
+    {
+      "label": "Tabela de elementos",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_tabela_de_elementos",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "tabela de elementos"
+    },
+    {
+      "label": "Conceito de alimenta\u00e7\u00e3o e constru\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_conceito_de_alimenta\u00e7\u00e3o_e_constru\u00e7\u00e3o",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "conceito de alimentacao e construcao"
+    },
+    {
+      "label": "Desempenho esperado, n\u00e3o garantido",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_desempenho_esperado_n\u00e3o_garantido",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "desempenho esperado, nao garantido"
+    },
+    {
+      "label": "Valida\u00e7\u00e3o obrigat\u00f3ria",
+      "file_type": "document",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L116",
+      "_origin": "ast",
+      "id": "projeto_antenna_designs_lpda_vhf_72_320_valida\u00e7\u00e3o_obrigat\u00f3ria",
+      "community": 21,
+      "community_name": "English",
+      "norm_label": "validacao obrigatoria"
     },
     {
       "label": "baseline_35S_concrete_base/README.md",
@@ -4473,8 +4660,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "review_start_here_priority_reading_order",
-      "community": 21,
-      "community_name": "Start here: priority reading order",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "start here: priority reading order"
     },
     {
@@ -4484,8 +4671,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "review_1_closest_review_to_the_complete_antenna_problem",
-      "community": 21,
-      "community_name": "Start here: priority reading order",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "1. closest review to the complete antenna problem"
     },
     {
@@ -4495,8 +4682,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "review_2_seminal_functional_radome_paper",
-      "community": 21,
-      "community_name": "Start here: priority reading order",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "2. seminal functional-radome paper"
     },
     {
@@ -4506,8 +4693,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "review_3_foundational_integrated_conformal_direction_finder",
-      "community": 21,
-      "community_name": "Start here: priority reading order",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "3. foundational integrated conformal direction finder"
     },
     {
@@ -4517,8 +4704,8 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "review_4_broad_orientation_for_emitter_identity",
-      "community": 21,
-      "community_name": "Start here: priority reading order",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "4. broad orientation for emitter identity"
     },
     {
@@ -4528,8 +4715,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "review_5_current_radome_frontier",
-      "community": 21,
-      "community_name": "Start here: priority reading order",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "5. current radome frontier"
     },
     {
@@ -4539,8 +4726,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "review_6_current_open_set_detection_frontier",
-      "community": 21,
-      "community_name": "Start here: priority reading order",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "6. current open-set detection frontier"
     },
     {
@@ -4550,8 +4737,8 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "review_7_key_controversy_and_vulnerability",
-      "community": 21,
-      "community_name": "Start here: priority reading order",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "7. key controversy and vulnerability"
     },
     {
@@ -4561,8 +4748,8 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "review_cross_search_signals",
-      "community": 29,
-      "community_name": "Cross-search signals",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "cross-search signals"
     },
     {
@@ -4572,8 +4759,8 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "review_repeat_hit_papers",
-      "community": 29,
-      "community_name": "Cross-search signals",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "repeat-hit papers"
     },
     {
@@ -4583,8 +4770,8 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "review_citation_velocity",
-      "community": 29,
-      "community_name": "Cross-search signals",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "citation velocity"
     },
     {
@@ -4616,8 +4803,8 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "review_sub_area_guide_1_broadband_antenna_architectures_and_radome_face_placement",
-      "community": 24,
-      "community_name": "Sub-area guide 1: broadband antenna architectures and radome-face placement",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "sub-area guide 1: broadband antenna architectures and radome-face placement"
     },
     {
@@ -4627,8 +4814,8 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "review_what_the_research_shows",
-      "community": 24,
-      "community_name": "Sub-area guide 1: broadband antenna architectures and radome-face placement",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "what the research shows"
     },
     {
@@ -4638,8 +4825,8 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "review_key_papers",
-      "community": 24,
-      "community_name": "Sub-area guide 1: broadband antenna architectures and radome-face placement",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "key papers"
     },
     {
@@ -4649,8 +4836,8 @@
       "source_location": "L134",
       "_origin": "ast",
       "id": "review_search_terms",
-      "community": 24,
-      "community_name": "Sub-area guide 1: broadband antenna architectures and radome-face placement",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "search terms"
     },
     {
@@ -4660,8 +4847,8 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "review_boolean_searches",
-      "community": 24,
-      "community_name": "Sub-area guide 1: broadband antenna architectures and radome-face placement",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "boolean searches"
     },
     {
@@ -4671,8 +4858,8 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "review_sub_area_guide_2_electromagnetic_effects_and_functional_radome_technologies",
-      "community": 25,
-      "community_name": "Sub-area guide 2: electromagnetic effects and functional radome technologies",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "sub-area guide 2: electromagnetic effects and functional radome technologies"
     },
     {
@@ -4682,8 +4869,8 @@
       "source_location": "L154",
       "_origin": "ast",
       "id": "review_what_the_research_shows_154",
-      "community": 25,
-      "community_name": "Sub-area guide 2: electromagnetic effects and functional radome technologies",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "what the research shows"
     },
     {
@@ -4693,8 +4880,8 @@
       "source_location": "L160",
       "_origin": "ast",
       "id": "review_key_papers_160",
-      "community": 25,
-      "community_name": "Sub-area guide 2: electromagnetic effects and functional radome technologies",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "key papers"
     },
     {
@@ -4704,8 +4891,8 @@
       "source_location": "L168",
       "_origin": "ast",
       "id": "review_search_terms_168",
-      "community": 25,
-      "community_name": "Sub-area guide 2: electromagnetic effects and functional radome technologies",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "search terms"
     },
     {
@@ -4715,8 +4902,8 @@
       "source_location": "L172",
       "_origin": "ast",
       "id": "review_boolean_searches_172",
-      "community": 25,
-      "community_name": "Sub-area guide 2: electromagnetic effects and functional radome technologies",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "boolean searches"
     },
     {
@@ -4726,8 +4913,8 @@
       "source_location": "L188",
       "_origin": "ast",
       "id": "review_sub_area_guide_3_passive_emitter_detection_direction_finding_and_localization",
-      "community": 26,
-      "community_name": "Sub-area guide 3: passive emitter detection, direction finding, and localization",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "sub-area guide 3: passive emitter detection, direction finding, and localization"
     },
     {
@@ -4737,8 +4924,8 @@
       "source_location": "L190",
       "_origin": "ast",
       "id": "review_what_the_research_shows_190",
-      "community": 26,
-      "community_name": "Sub-area guide 3: passive emitter detection, direction finding, and localization",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "what the research shows"
     },
     {
@@ -4748,8 +4935,8 @@
       "source_location": "L196",
       "_origin": "ast",
       "id": "review_key_papers_196",
-      "community": 26,
-      "community_name": "Sub-area guide 3: passive emitter detection, direction finding, and localization",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "key papers"
     },
     {
@@ -4759,8 +4946,8 @@
       "source_location": "L204",
       "_origin": "ast",
       "id": "review_search_terms_204",
-      "community": 26,
-      "community_name": "Sub-area guide 3: passive emitter detection, direction finding, and localization",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "search terms"
     },
     {
@@ -4770,8 +4957,8 @@
       "source_location": "L208",
       "_origin": "ast",
       "id": "review_boolean_searches_208",
-      "community": 26,
-      "community_name": "Sub-area guide 3: passive emitter detection, direction finding, and localization",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "boolean searches"
     },
     {
@@ -4781,8 +4968,8 @@
       "source_location": "L222",
       "_origin": "ast",
       "id": "review_sub_area_guide_4_clandestine_anomalous_and_deviated_signal_identification",
-      "community": 27,
-      "community_name": "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "sub-area guide 4: clandestine, anomalous, and deviated-signal identification"
     },
     {
@@ -4792,8 +4979,8 @@
       "source_location": "L224",
       "_origin": "ast",
       "id": "review_what_the_research_shows_224",
-      "community": 27,
-      "community_name": "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "what the research shows"
     },
     {
@@ -4803,8 +4990,8 @@
       "source_location": "L230",
       "_origin": "ast",
       "id": "review_key_papers_230",
-      "community": 27,
-      "community_name": "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "key papers"
     },
     {
@@ -4814,8 +5001,8 @@
       "source_location": "L238",
       "_origin": "ast",
       "id": "review_search_terms_238",
-      "community": 27,
-      "community_name": "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "search terms"
     },
     {
@@ -4825,8 +5012,8 @@
       "source_location": "L242",
       "_origin": "ast",
       "id": "review_boolean_searches_242",
-      "community": 27,
-      "community_name": "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "boolean searches"
     },
     {
@@ -4836,8 +5023,8 @@
       "source_location": "L261",
       "_origin": "ast",
       "id": "review_sub_area_guide_5_integration_calibration_and_operational_validation",
-      "community": 28,
-      "community_name": "Sub-area guide 5: integration, calibration, and operational validation",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "sub-area guide 5: integration, calibration, and operational validation"
     },
     {
@@ -4847,8 +5034,8 @@
       "source_location": "L263",
       "_origin": "ast",
       "id": "review_what_the_research_shows_263",
-      "community": 28,
-      "community_name": "Sub-area guide 5: integration, calibration, and operational validation",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "what the research shows"
     },
     {
@@ -4858,8 +5045,8 @@
       "source_location": "L269",
       "_origin": "ast",
       "id": "review_key_papers_269",
-      "community": 28,
-      "community_name": "Sub-area guide 5: integration, calibration, and operational validation",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "key papers"
     },
     {
@@ -4869,8 +5056,8 @@
       "source_location": "L277",
       "_origin": "ast",
       "id": "review_search_terms_277",
-      "community": 28,
-      "community_name": "Sub-area guide 5: integration, calibration, and operational validation",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "search terms"
     },
     {
@@ -4880,8 +5067,8 @@
       "source_location": "L281",
       "_origin": "ast",
       "id": "review_boolean_searches_281",
-      "community": 28,
-      "community_name": "Sub-area guide 5: integration, calibration, and operational validation",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "boolean searches"
     },
     {
@@ -8114,6 +8301,17 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "projeto/DECISIONS.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_decisions_radome_registro_de_decis\u00f5es_de_arquitetura",
+      "target": "projeto_decisions_adr_007_lpda_vhf_como_candidata_de_banda_larga",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "projeto/PARAMETERS.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -8170,7 +8368,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "projeto/PARAMETERS.md",
-      "source_location": "L82",
+      "source_location": "L87",
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_parameters_radome_registro_central_de_par\u00e2metros",
@@ -8181,7 +8379,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "projeto/PARAMETERS.md",
-      "source_location": "L73",
+      "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_parameters_radome_registro_central_de_par\u00e2metros",
@@ -8192,7 +8390,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "projeto/PARAMETERS.md",
-      "source_location": "L61",
+      "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_parameters_radome_registro_central_de_par\u00e2metros",
@@ -8214,7 +8412,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "projeto/README.md",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_readme_radome_project_projeto_radome",
@@ -8225,7 +8423,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "projeto/README.md",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_readme_radome_project_projeto_radome",
@@ -8252,6 +8450,171 @@
       "_origin": "ast",
       "source": "projeto_readme_radome_project_projeto_radome",
       "target": "projeto_readme_structure_estrutura",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_preliminary_72_320_mhz_lpda_lpda_preliminar_de_72_320_mhz",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_preliminary_72_320_mhz_lpda_lpda_preliminar_de_72_320_mhz",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_english",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_preliminary_72_320_mhz_lpda_lpda_preliminar_de_72_320_mhz",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_portugu\u00eas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_english",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_design_objective",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_english",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_element_schedule",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_english",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_expected_not_guaranteed_performance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_english",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_feed_and_construction_concept",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_english",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_required_validation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_english",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_selected_carrel_parameters",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_portugu\u00eas",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_conceito_de_alimenta\u00e7\u00e3o_e_constru\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L112",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_portugu\u00eas",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_desempenho_esperado_n\u00e3o_garantido",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_portugu\u00eas",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_objetivo_do_projeto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_portugu\u00eas",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_par\u00e2metros_de_carrel_selecionados",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_portugu\u00eas",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_tabela_de_elementos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/antenna_designs/lpda_vhf_72_320.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_antenna_designs_lpda_vhf_72_320_portugu\u00eas",
+      "target": "projeto_antenna_designs_lpda_vhf_72_320_valida\u00e7\u00e3o_obrigat\u00f3ria",
       "confidence_score": 1.0
     },
     {
@@ -10126,5 +10489,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "eab941d4e0850d011ebf968bc53c52650164f593"
+  "built_at_commit": "af9bc35b41a38f961658865b9f4a8c8518c71d80"
 }
