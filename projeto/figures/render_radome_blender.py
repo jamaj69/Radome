@@ -217,9 +217,11 @@ camera.data.lens = 52
 bpy.context.scene.camera = camera
 
 scene = bpy.context.scene
+
+# Use NVIDIA CUDA explicitly for Cycles rendering.
 scene.render.engine = "BLENDER_EEVEE"
-scene.render.resolution_x = 1600
-scene.render.resolution_y = 1000
+scene.render.resolution_x = 1280
+scene.render.resolution_y = 800
 scene.render.resolution_percentage = 100
 scene.render.image_settings.file_format = "PNG"
 scene.render.filepath = OUTPUT
