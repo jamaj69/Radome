@@ -221,48 +221,8 @@ central = offset + Vector((0.93, 0.0, 0.0))
 cylinder_between("Optical fibre", central, central + Vector((0.45, -1.3, -0.8)), 0.022, material("Fibre", (0.08, 0.55, 0.48), metallic=0.1, roughness=0.3))
 cylinder_between("DC power", central, central + Vector((0.45, 1.3, -0.75)), 0.028, material("DC", (0.8, 0.35, 0.08), metallic=0.1, roughness=0.35))
 
-# Interior view: central timing/fusion core, structural ribs and representative
-# face modules mounted on the inside of the hemispherical radome.
-bpy.ops.mesh.primitive_uv_sphere_add(segments=24, ring_count=12, radius=0.24, location=shell_center)
-core = bpy.context.object
-core.name = "Internal timing and fusion core"
-core.data.materials.append(ffasic_mat)
-for direction in [Vector((1, 0, 1)), Vector((-1, 0, 1)), Vector((0, 1, 1)), Vector((0, -1, 1))]:
-    direction.normalize()
-    inner = shell_center + direction * 2.25
-    cylinder_between("Internal structural radial tie", shell_center, inner, 0.035, frame_mat)
-    cylinder_between("Internal optical and power trunk", shell_center + direction * 0.45, inner, 0.018, yagi_gold)
-    # A compact shielded module at the inner shell boundary.
-    bpy.ops.mesh.primitive_cube_add(size=1, location=inner)
-    module = bpy.context.object
-    module.name = "Mounted internal band module"
-    module.dimensions = (0.50, 0.70, 0.46)
-    bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
-    module.data.materials.append(internal_module_mat)
-
-# Internal service ring and three visible representative face junctions.
-for z in (-0.58, 0.58):
-    bpy.ops.mesh.primitive_torus_add(major_radius=0.92, minor_radius=0.025, location=shell_center + Vector((0, 0, z)), rotation=(0, 0, 0))
-    bpy.context.object.name = "Internal service ring"
-    bpy.context.object.data.materials.append(frame_mat)
-for angle in (0.0, 2.1, 4.2):
-    p1 = shell_center + Vector((2.15 * math.cos(angle), 2.15 * math.sin(angle), 0.55))
-    p2 = shell_center + Vector((2.15 * math.cos(angle + 0.45), 2.15 * math.sin(angle + 0.45), -0.45))
-    cylinder_between("Internal triangular face junction", p1, p2, 0.045, frame_mat)
-
-# Text labels placed in world space.
-labels = [
-    ("RADOME shell / casca", (-3.7, 0.0, 5.0), 0.22, white_mat),
-    ("EXPLODED FACE / FACE EXPLODIDA", (3.0, -2.6, 4.3), 0.22, white_mat),
-    ("2 m triangular face", (2.4, -2.35, 3.9), 0.18, yagi_gold),
-    ("VHF Yagi boom = apex support axis", (3.2, -2.45, 3.55), 0.16, yagi_gold),
-    ("shielded ADC + ASIC layers", (3.4, 2.1, 2.1), 0.14, white_mat),
-    ("FFASIC / clock / fibre / DC", (3.7, 2.1, 0.4), 0.14, white_mat),
-    ("REINFORCED CONCRETE BASE 4 m x 4 m x 3 m", (-0.2, -3.1, cut_height - 1.35), 0.16, warning_mat),
-    ("ACCESS / ACESSO", (0.0, -3.2, cut_height - 1.05), 0.14, warning_mat),
-]
-for body, loc, size, mat in labels:
-    text_obj(body, loc, size, mat)
+# Deliberately omit world-space labels and schematic interior ribs/modules from
+# the perspective render. The technical callouts belong in separate diagrams.
 
 # Ground plane and lighting.
 bpy.ops.mesh.primitive_plane_add(size=30, location=(0, 0, cut_height - base_height - 0.22))
