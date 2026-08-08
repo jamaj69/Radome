@@ -62,6 +62,10 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | POL-001 | Polarimetria por faixa | 2 portas simultâneas, ortogonais e coerentes na mesma frequência | Proposto | `04_multiband_polarimetry.tex` | Antenas/RF | Arquitetura corrigida; medir matriz de Jones, isolamento e deriva |
 | POL-002 | Polarimetria das Yagis VHF/UHF do primeiro demonstrador | não implementada; dois canais independentes single-pol | Proposto | `04_multiband_polarimetry.tex` | Antenas/RF | Preservar separação entre faixas; não produzir Stokes/RHCP do par |
 | POL-003 | Critério mínimo de coerência polarimétrica | amplitude e fase calibradas em frequência, ângulo e temperatura | Proposto | `04_multiband_polarimetry.tex` | Metrologia RF | Plano de ensaio OTA e injeção coerente |
+| POL-004 | Par polarimétrico VHF candidato | 0° / 90° | Proposto | `antenna_designs/dual_band_quad_polarization_mast.md` | Antenas/RF | Simulação multiporta e calibração 2×2 |
+| POL-005 | Par polarimétrico UHF candidato | 45° / 135° | Proposto | `antenna_designs/dual_band_quad_polarization_mast.md` | Antenas/RF | Rotação para base global e simulação multiporta |
+| POL-006 | Canais RF independentes no mastro polarimétrico | 4 | canal | Proposto | `antenna_designs/dual_band_quad_polarization_mast.md` | RF/eletrônica | Quatro portas, clocks coerentes por faixa e isolamento medido |
+| POL-007 | Matriz de calibração por faixa | C_b(f,θ,φ,T), complexa 2×2 | Proposto | `antenna_designs/dual_band_quad_polarization_mast.md` | Metrologia RF | Medir condição, incerteza e pseudoinversa regularizada |
 
 ## Tempo, cenário e validação
 

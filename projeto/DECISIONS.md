@@ -56,3 +56,12 @@
 - **Motivo:** uma Yagi convencional com elemento máximo de 2 m seria predominantemente estreita e centrada na parte baixa de VHF.
 - **Limite:** a LPDA não substitui a Yagi no modelo físico atual até que ganho realizado, impedância, padrão, cargas e integração sejam validados.
 - **Fonte dimensional:** `antenna_designs/lpda_vhf_72_320.md`.
+
+## ADR-008 — Mastro polarimétrico de quatro canais
+
+- **Data:** 8 de agosto de 2026
+- **Estado:** proposta para simulação
+- **Decisão:** avaliar dois canais VHF ortogonais a 0°/90° e dois canais UHF ortogonais a 45°/135° em um mastro estrutural comum, mantendo quatro booms e cadeias RF eletricamente independentes.
+- **Calibração:** estimar o campo por faixa com a inversão regularizada de uma matriz complexa 2×2 dependente de frequência, direção e temperatura.
+- **Limite:** a rotação UHF de 45° não garante isolamento; quatro portas, acoplamento e padrões embarcados devem ser resolvidos como uma única estrutura eletromagnética.
+- **Fonte:** `antenna_designs/dual_band_quad_polarization_mast.md`.

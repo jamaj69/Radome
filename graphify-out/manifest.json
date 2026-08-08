@@ -75,7 +75,7 @@
     "semantic_hash": ""
   },
   "projeto/README.md": {
-    "mtime": 1786160047.7321222,
+    "mtime": 1786160463.5035586,
     "ast_hash": "20a1bd8a0e4ae6543ccd4317337108de",
     "semantic_hash": ""
   },
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "projeto/projetov1.pdf": {
-    "mtime": 1786159425.0430605,
-    "ast_hash": "53396782bdac0918fa58d9cbc2481f29",
+    "mtime": 1786160848.9941688,
+    "ast_hash": "6cac87e1d5219c13c68e958a0297763a",
     "semantic_hash": ""
   },
   "projeto_tecnico_radome_completo.pdf": {
@@ -290,18 +290,23 @@
     "semantic_hash": ""
   },
   "projeto/DECISIONS.md": {
-    "mtime": 1786160042.4999783,
-    "ast_hash": "c07210956d177fa123c6e422dcff2b90",
+    "mtime": 1786160463.3635547,
+    "ast_hash": "930df31fe3c43baf95401e6817c9b03c",
     "semantic_hash": ""
   },
   "projeto/PARAMETERS.md": {
-    "mtime": 1786160042.3679748,
-    "ast_hash": "26ba7fcc6847eb3e6917db415f205455",
+    "mtime": 1786160463.2235508,
+    "ast_hash": "4f9735fc89245a043a0bcf0fbe605612",
     "semantic_hash": ""
   },
   "projeto/antenna_designs/lpda_vhf_72_320.md": {
     "mtime": 1786160047.8761263,
     "ast_hash": "487e6ed1efea3a0e151c04ee5a903ea5",
+    "semantic_hash": ""
+  },
+  "projeto/antenna_designs/dual_band_quad_polarization_mast.md": {
+    "mtime": 1786160480.016013,
+    "ast_hash": "80a4dde31bdedf66e1b28fe7faec2601",
     "semantic_hash": ""
   }
 }

@@ -9,6 +9,14 @@ E_{\mathrm{RHCP}}=\frac{E_x-jE_y}{\sqrt{2}},\qquad E_{\mathrm{LHCP}}=\frac{E_x+j
 \]
 The equations do not combine the VHF and UHF Yagis. The first VHF/UHF demonstrator treats them as independent single-polarization channels (\texttt{POL-002}); full polarimetry requires a later dual-port or same-band crossed module. For a curved surface, valid local bases must be rotated to a common coordinate system before fusion. Polarimetric calibration is a function of frequency, angle, temperature, amplitude balance, phase and mutual coupling.
 
+A proposed four-channel mast implements VHF-X/VHF-Y at 0°/90° and UHF-A/UHF-B at 45°/135°, with four electrically independent booms and RF chains (\texttt{POL-004}--\texttt{POL-006}). For each band $b$, calibration follows:
+\[
+\widehat{\mathbf{E}}_b(f,\theta,\phi,T)=
+\mathbf{C}_b^{-1}(f,\theta,\phi,T)
+\left[\mathbf{v}_b-\widehat{\mathbf{n}}_b\right],
+\]
+where $\mathbf{C}_b$ is the measured complex $2\times2$ Jones matrix containing embedded patterns, gain/phase imbalance, delays, mutual coupling, mast and platform effects. A regularized pseudoinverse replaces the direct inverse where conditioning is poor. The UHF estimate is then rotated by $\psi=45^\circ$ into the common global basis before polarization products are formed.
+
 \subsection*{Engineering solution / Solução de engenharia}
 The crossed-band Yagi assembly is a proposed mechanical integration solution. The larger Yagi covers VHF and the smaller Yagi covers UHF; each remains independently matched, digitized and calibrated. Their outputs may be compared or fused as different-band observations, but no relative phase operation produces RHCP, LHCP, Jones or Stokes quantities from this pair. Novelty and performance are not claimed until prior-art review and measurement.
 
@@ -36,6 +44,14 @@ A síntese polarimétrica somente é permitida em um módulo da mesma faixa que 
 E_{\mathrm{RHCP}}=\frac{E_x-jE_y}{\sqrt{2}},\qquad E_{\mathrm{LHCP}}=\frac{E_x+jE_y}{\sqrt{2}}.
 \]
 As equações não combinam as Yagis VHF e UHF. O primeiro demonstrador VHF/UHF trata essas antenas como canais independentes de polarização única (\texttt{POL-002}); a polarimetria completa exige um módulo posterior dual-porta ou cruzado na mesma faixa. Em uma superfície curva, bases locais válidas devem ser rotacionadas para um sistema comum antes da fusão. A calibração polarimétrica depende de frequência, ângulo, temperatura, equilíbrio de amplitude, fase e acoplamento mútuo.
+
+Um mastro proposto de quatro canais implementa VHF-X/VHF-Y a 0°/90° e UHF-A/UHF-B a 45°/135°, com quatro booms e cadeias RF eletricamente independentes (\texttt{POL-004}--\texttt{POL-006}). Para cada faixa $b$, a calibração segue:
+\[
+\widehat{\mathbf{E}}_b(f,\theta,\phi,T)=
+\mathbf{C}_b^{-1}(f,\theta,\phi,T)
+\left[\mathbf{v}_b-\widehat{\mathbf{n}}_b\right],
+\]
+onde $\mathbf{C}_b$ é a matriz complexa de Jones $2\times2$ medida, contendo diagramas embarcados, desequilíbrio de ganho/fase, atrasos, acoplamento mútuo, mastro e plataforma. Uma pseudoinversa regularizada substitui a inversa direta quando o condicionamento for ruim. A estimativa UHF é então rotacionada por $\psi=45^\circ$ para a base global comum antes da formação dos produtos de polarização.
 
 \subsection*{Solução de engenharia}
 O conjunto de Yagis de faixas cruzadas é uma solução proposta de integração mecânica. A Yagi maior cobre VHF e a menor cobre UHF; cada uma permanece casada, digitalizada e calibrada de forma independente. Suas saídas podem ser comparadas ou fundidas como observações de faixas diferentes, mas nenhuma operação de fase relativa produz RHCP, LHCP, Jones ou Stokes a partir desse par. Não se reivindicam novidade ou desempenho antes da busca de anterioridade e da medição.
