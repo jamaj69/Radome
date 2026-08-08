@@ -15,6 +15,15 @@ For an illuminator $T$, target $x$ and receiver $R_i$, the bistatic excess path 
 \]
 AOA, TDOA and FDOA are fused with covariance, propagation models and geometric dilution of precision.
 
+\subsection*{GNSS timing reference / Referência temporal GNSS}
+Each station includes at least two external, surveyed GNSS antennas with clear sky view, separated from the VHF/UHF Yagis and other high-power RF sources. A multi-constellation receiver produces UTC, 1PPS, frequency reference and ephemeris data. The 1PPS and 10 MHz outputs discipline a local atomic clock or high-stability oscillator; the clock then distributes deterministic timing through White Rabbit to every face and ADC.
+
+The GNSS antenna phase centre, cable delay, receiver delay and distribution delay are measured and versioned. GNSS provides absolute epoch and long-term frequency discipline, while a local atomic holdover preserves continuity during loss of GNSS. End-to-end RF calibration remains mandatory:
+\[
+t_i^\ast=t_i-\tau_{\mathrm{GNSS},i}-\tau_{\mathrm{cable},i}-\tau_{\mathrm{RF},i}-\tau_{\mathrm{ADC},i}.
+\]
+Known station coordinates allow consistency checks between surveyed position, satellite geometry and measured network timing, but do not by themselves eliminate multipath, antenna phase-centre error or analog delay.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{fig07_sincronizacao.png}
@@ -42,3 +51,12 @@ Para iluminador $T$, alvo $x$ e receptor $R_i$, o excesso de caminho biestático
 \Delta\rho_i=\lVert x-T\rVert+\lVert x-R_i\rVert-\lVert T-R_i\rVert=c\Delta\tau_i.
 \]
 AOA, TDOA e FDOA são fundidos com covariância, modelos de propagação e diluição geométrica de precisão.
+
+\subsection*{Referência temporal GNSS}
+Cada estação inclui pelo menos duas antenas GNSS externas, com centros de fase levantados e visão desobstruída do céu, afastadas das Yagis VHF/UHF e de outras fontes RF intensas. Um receptor multiconstelação produz UTC, 1PPS, referência de frequência e efemérides. As saídas 1PPS e 10 MHz disciplinam um relógio atômico ou oscilador de alta estabilidade local; o relógio distribui então o sincronismo determinístico por White Rabbit a todas as faces e ADCs.
+
+O centro de fase da antena GNSS, o atraso do cabo, o atraso do receptor e o atraso da distribuição são medidos e versionados. O GNSS fornece época absoluta e disciplina de frequência de longo prazo, enquanto o holdover atômico local preserva a continuidade durante uma perda de GNSS. A calibração RF ponta a ponta continua obrigatória:
+\[
+t_i^\ast=t_i-\tau_{\mathrm{GNSS},i}-\tau_{\mathrm{cabo},i}-\tau_{\mathrm{RF},i}-\tau_{\mathrm{ADC},i}.
+\]
+As coordenadas conhecidas da estação permitem verificar a consistência entre posição levantada, geometria dos satélites e sincronismo medido da rede, mas não eliminam sozinhas multipercurso, erro do centro de fase ou atraso analógico.

@@ -91,3 +91,27 @@ ax.text(0.45, 0.28, "Orthogonal geometry provides two linear components; the 90�
 ax.text(0.45, 0.05, "A geometria ortogonal fornece duas componentes lineares; a relação de fase de 90° é sintetizada após calibração.", fontsize=9, color="#52606d")
 fig.savefig(f"{OUT}/fig05_polarimetria.png", bbox_inches="tight", facecolor="white")
 plt.close(fig)
+
+# Figure 7: GNSS-referenced temporal calibration.
+fig, ax = plt.subplots(figsize=(14, 7), dpi=180)
+ax.axis("off")
+ax.set_xlim(0, 14)
+ax.set_ylim(0, 7)
+ax.set_title("GNSS-referenced timing and end-to-end calibration\nSincronização referenciada por GNSS e calibração ponta a ponta", fontsize=16, color="#17324d", pad=14)
+def timing_box(x, y, w, h, text, color):
+    patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.06,rounding_size=0.12", facecolor=color, edgecolor="#52606d", linewidth=1.7)
+    ax.add_patch(patch)
+    ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=9.5, color="#263746")
+timing_box(0.35, 4.65, 2.2, 1.1, "GNSS antenna A/B\nexternal, surveyed phase centre", "#d5e6f1")
+timing_box(0.35, 1.25, 2.2, 1.1, "Multi-constellation\nGNSS receiver", "#e8edf0")
+timing_box(3.35, 2.9, 2.2, 1.1, "1PPS + 10 MHz\nUTC / ephemerides", "#fae6c9")
+timing_box(6.35, 2.9, 2.2, 1.1, "Atomic clock\nslow discipline / holdover", "#e5dff3")
+timing_box(9.35, 4.65, 2.2, 1.1, "White Rabbit\ngrandmaster + fibre", "#dcefe9")
+timing_box(9.35, 1.25, 2.2, 1.1, "ADC / ASIC faces\nhardware timestamp", "#cfe3ee")
+timing_box(12.0, 2.9, 1.6, 1.1, "RF delay\ncalibration", "#f4dfc6")
+for x1, y1, x2, y2 in [(2.55, 5.2, 3.35, 3.65), (2.55, 1.8, 3.35, 3.25), (5.55, 3.45, 6.35, 3.45), (8.55, 3.45, 9.35, 5.2), (8.55, 3.25, 9.35, 1.8), (11.55, 5.2, 12.0, 3.75), (11.55, 1.8, 12.0, 3.25)]:
+    ax.annotate("", xy=(x2, y2), xytext=(x1, y1), arrowprops={"arrowstyle": "->", "color": "#52606d", "lw": 1.8})
+ax.text(0.45, 0.35, "GNSS supplies absolute epoch and frequency; it does not replace RF delay, temperature and phase calibration.", fontsize=9, color="#52606d")
+ax.text(0.45, 0.12, "O GNSS fornece época e frequência absolutas; não substitui a calibração de atrasos, temperatura e fase RF.", fontsize=9, color="#52606d")
+fig.savefig(f"{OUT}/fig07_sincronizacao.png", bbox_inches="tight", facecolor="white")
+plt.close(fig)
