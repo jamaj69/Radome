@@ -10,9 +10,9 @@
 |---|---|---|
 | C0 — baseline documental | Aprovado com bloqueios | Fonte, versionamento, parâmetros e ADRs aprovados; conflitos seguem bloqueados para C1–C3 |
 | C1 — polarimetria correta | Aprovado no nível arquitetural | Síntese restrita a duas portas coerentes na mesma faixa; Yagis VHF/UHF declaradas single-pol independentes |
-| C2 — geometria consistente | Reaberto pela ADR-012 | Faces externas de 2 m e encaixes tetraédricos verificados; faltam corte modular, hub, tolerâncias e nova interface civil |
+| C2 — geometria consistente | Reaberto pela ADR-012 | Faces externas de 2 m e células rasas verificadas; faltam corte modular, juntas/corredores, tolerâncias e nova interface civil |
 | C3 — cobertura espectral | Em andamento; arquitetura e triagem aprovadas | Lacunas deliberadas, cadeia aeronáutica e protocolos definidos; faltam orçamento RF, enlace e sítio |
-| C4 — modelo 3D sincronizado | Bloqueado pelo fechamento de C3 | Blender e figuras gerados a partir dos parâmetros aprovados |
+| C4 — modelo 3D sincronizado | Bloqueado pelo fechamento de C2 e C3 | Blender e figuras gerados a partir dos parâmetros aprovados |
 | C5 — consistência científica | Em aberto | Novidade, referências e limites formulados com evidência apropriada |
 | C6 — qualidade editorial | Em aberto | Bilinguismo simétrico e compilação sem avisos relevantes |
 

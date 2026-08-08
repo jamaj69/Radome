@@ -37,6 +37,13 @@ This is a durable log of the chat content visible to the agent. It is not a verb
 13. During the first C3 increment, the assistant detected and prevented a regression to obsolete cross-band polarimetry; the approved C1 same-band restriction and corrected Figure 5 were preserved.
 14. A Graphify command was briefly started from `/home/jamaj/src` instead of the repository root. It was terminated, rerun correctly from `/home/jamaj/src/Radome`, and the orphan `/home/jamaj/src/graphify-out/.rebuild.lock` was removed.
 15. User: "Grave o status da sessão e atualize a documentação, escpecialmente o roadmap".
+16. User asked to reinterpret every external face as a 2 m triangular tetrahedral cell, with Faraday shielding on the three inward faces, independently shielded ADC/ASIC preprocessing modules and a Blender scene showing tangent vectors on contiguous faces.
+17. The first verifier showed that regular tetrahedra with all six edges equal to 2 m produce 120 interpenetrations. A planar frequency-2 icosahedral subdivision preserves 80 equilateral external faces and 120 shared external edges.
+18. Assistant created the reproducible tetrahedral verifier, a Blender scene with seven contiguous faces and tangent/normal vectors, updated the article, parameters, ADRs and roadmaps, recompiled the PDF, updated Graphify and committed `c26bd56 Model tetrahedral radome face assembly`.
+19. User required shorter inward pyramids to reserve internal space for shielding, power cabling and optical fibres.
+20. A depth sweep from 0.20 m to 1.00 m found no collisions for shallow full-face cells. The adopted baseline uses a 0.75 m normal height, 240 independent Faraday walls, 120 inter-cell service corridors and a minimum free-core radius of 2.2730 m.
+21. Assistant regenerated the Blender scene and `.blend`, updated the controlled documents and PDF, updated Graphify and committed `e0889e5 Reserve service core with shallow face cells`.
+22. User asked whether the session, Graphify and roadmap updates had been persisted. Audit confirmed Graphify and roadmap commits, but found this session log stale and one obsolete “hub” word in the C2 summary; both were corrected in the present increment.
 
 ## Commits created in this session
 
@@ -49,12 +56,20 @@ All commits below used author `github-copilot[bot] <198982749+github-copilot[bot
 - `660ad44 Define C3 aviation receiver paths`
 - `8e15f3a Separate C3 experiment protocols`
 - `f498055 Add C3 acquisition screening budget`
+- `e0d1e01 Record C3 session and roadmap status`
+- `c26bd56 Model tetrahedral radome face assembly`
+- `e0889e5 Reserve service core with shallow face cells`
 
 ## Current technical state
 
 - C0 baseline was already approved with explicit blockers.
 - C1 polarimetry is approved at the architectural level.
-- C2 is now marked approved at the parametric level in `ROADMAP_CORRECOES.md`.
+- C2 was approved for the projected frequency-2 candidate, then reopened by ADR-012 when the external faces were required to be uniformly equilateral with 2 m edges.
+- The current C2 candidate has 80 planar-subdivision external faces, 120 shared external edges and no projected midpoint vertices.
+- A regular all-edges-at-2 m tetrahedral interpretation is blocked because it produces 120 volumetric interpenetrations.
+- The adopted shallow cells have a 0.75 m normal height from external-face centre to local inward apex, zero volumetric collisions, 1.3769 m lateral edges, 240 independent Faraday side walls and 120 inter-cell service corridors.
+- Adjacent local apexes are separated by 0.5435–1.1547 m, reserving a minimum internal free-core radius of 2.2730 m for power, optical fibre, bonding, cooling and maintenance distribution.
+- C2 remains open for a lower boundary made of complete modules, real wall/joint thicknesses, corridor accessibility, Faraday continuity and a recalculated civil interface.
 - C3 is in progress. Its spectral architecture, aviation paths, experiment separation and acquisition/horizon screening are complete; RF cascade, link and site budgets remain open.
 - Deliberate first-demonstrator gaps are `323–470 MHz` and `860–960 MHz`.
 - A dedicated `960–1215 MHz` aviation aperture supplies independent UAT 978 MHz and 1090ES paths; neither service is assigned to the `470–860 MHz` UHF Yagi.
@@ -65,26 +80,27 @@ All commits below used author `github-copilot[bot] <198982749+github-copilot[bot
   - bistatic reference plus surveillance: `1600 Mbit/s/node`, `2.00 GB/node/10 s`;
   - screening mutual horizon: `542.3 km` for a 1000 m station and 10000 m aircraft.
 - NF, IP3 and usable dynamic range are intentionally unassigned until measured site RFI and a cascaded component budget exist.
-- The C2 geometry source is `projeto/geometry/verify_radome_geometry.py`.
-- The C2 verifier currently reports:
+- The superseded projected C2 geometry remains reproducible in `projeto/geometry/verify_radome_geometry.py` for historical comparison.
+- The current ADR-012 source is `projeto/geometry/verify_tetrahedral_face_geometry.py`, which reports:
   - base icosahedron: `V=12`, `E=30`, `F=20`;
-  - class-I frequency-2 closed mesh: `V=42`, `E=120`, `F=80`, Euler `2`;
-  - chord classes at reference scale: `2.0000 m` and `2.2617 m`;
-  - macroface chord: `3.8478 m`;
-  - radius: `3.6594 m`;
-  - diameter: `7.3189 m`;
-  - cut coordinate: `z/R=-0.573576`, polar angle `125 deg`;
-  - cut segment: `V=51`, `E=124`, `F=74`, Euler `1`;
-  - support ring diameter: `5.9953 m`;
-  - direct 4 m x 4 m base support: false;
-  - proposed transition square: `6.60 m`, minimum with margin `6.5953 m`, transition ok true.
+  - planar class-I frequency-2 envelope: `V=42`, `E=120`, `F=80`, Euler `2`;
+  - all external receiver-face edges: `2.0000 m`;
+  - macroface edge: `4.0000 m`;
+  - circumradius/inradius: `3.8042 m / 3.0230 m`;
+  - shallow-cell height: `0.7500 m`;
+  - lateral edges: `1.3769 m`;
+  - adjacent-apex separation: `0.5435–1.1547 m`;
+  - minimum free-core radius: `2.2730 m`;
+  - volumetric collisions: `0`.
 
 ## Validation already run
 
 For the C2 and C3 changes:
 
 - `python3 projeto/geometry/verify_radome_geometry.py`
+- `python3 projeto/geometry/verify_tetrahedral_face_geometry.py`
 - `python3 projeto/spectral/verify_c3_acquisition_budget.py`
+- `blender -b --python render_tetrahedral_face_cluster_blender.py` (run from `projeto/figures/`)
 - Full LaTeX sequence from `projeto/`:
   - `pdflatex -interaction=nonstopmode -halt-on-error projetov1.tex`
   - `bibtex projetov1`
@@ -107,8 +123,16 @@ Complete the remaining C3 evidence before releasing C4:
 4. convert the three experiment protocols into a versioned three-node dataset and acceptance plan;
 5. only then synchronize Blender and figures to the approved C2/C3 parameters in C4.
 
+In parallel, close the reopened C2 tetrahedral candidate before treating the current Blender scene as fabrication geometry:
+
+1. select a lower boundary composed of complete face modules;
+2. replace zero-thickness walls with structural and conductive thicknesses plus assembly tolerances;
+3. size power/fibre corridors, bend radii, segregation, thermal paths and maintenance access;
+4. verify Faraday continuity, filtered penetrations, bonding and lightning-current paths;
+5. recalculate the support transition and foundation for the selected modular boundary.
+
 ## Operational notes
 
 - `gh auth status` showed the `jamaj69` token as invalid during this session. Local commits worked; pushing may require re-authentication.
 - The PDF orientation issue was only in the VS Code viewer state. The PDF metadata reported A4 portrait and page rotation 0.
-- Do not assume C2 Blender synchronization is done. C4 still needs Blender and figures to consume the approved C2 parameters.
+- `fig16_tetrahedral_face_cluster.png` and `radome_tetrahedral_face_cluster.blend` represent the current ADR-012 candidate, including tangent vectors, shallow cells and the reserved service core. They are architectural visualization, not fabrication approval.
