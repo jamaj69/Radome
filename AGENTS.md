@@ -147,6 +147,23 @@ The scenario models ADS-B 1090ES at 1090 MHz, with 978 MHz UAT as contextual alt
 - After changing a figure or chapter, compile `projetov1.tex` before claiming completion.
 - Keep the baseline scene untouched; create a new named baseline or branch of the scene for major 3D expansions.
 
+## Mandatory Commit Per Change
+
+Every completed, coherent project change must be committed before work starts on the next change. This rule exists to preserve an auditable engineering history and applies to technical text, parameters, decisions, figures, scripts, Blender assets, generated PDFs and project workflow files.
+
+Required sequence:
+
+1. make one focused change or roadmap gate;
+2. run the focused validation required by the affected files;
+3. regenerate dependent figures or PDFs when applicable;
+4. update Graphify with `/home/python/pyenv/bin/python -m graphify update .`;
+5. inspect `git status`, `git diff --check` and the focused diff;
+6. commit the complete focused change with a descriptive message;
+7. confirm the commit with `git status --short` and `git log -1 --oneline`;
+8. only then begin the next change.
+
+Do not combine unrelated corrections in one commit. Do not leave a completed gate uncommitted while starting another gate. Generated artifacts that are authoritative or required for reproducibility, including `projeto/projetov1.pdf` after a chapter change, belong in the same commit as their source change. Push only when requested by the user or when the active publishing workflow explicitly requires it.
+
 ## GitHub Workflow
 
 Check the workspace before committing:

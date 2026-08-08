@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "projeto/figures/generate_updated_figures.py": {
-    "mtime": 1786155637.1373327,
-    "ast_hash": "50005a3c7ac48ac203659d603af62556",
+    "mtime": 1786159199.9369125,
+    "ast_hash": "f3d595f8a77ae8b43ff126ee7ce15e5c",
     "semantic_hash": ""
   },
   "projeto/figures/render_aircraft_two_radomes_blender.py": {
@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1786158250.7790096,
-    "ast_hash": "f32b78ed83a6d2162eaa2700c66bb256",
+    "mtime": 1786159482.4246278,
+    "ast_hash": "8f42eae40a18129029b0245224ad8a4d",
     "semantic_hash": ""
   },
   "Projeto_Radomes_Multifaixa_Revisado.md": {
@@ -55,13 +55,13 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786158209.097873,
-    "ast_hash": "ce0708ca0fa12f5ed5603c6af84a1272",
+    "mtime": 1786159130.939028,
+    "ast_hash": "0998cc273ef49a2523524a25a6b0035e",
     "semantic_hash": ""
   },
   "ROADMAP_CORRECOES.md": {
-    "mtime": 1786158362.134046,
-    "ast_hash": "b93ee0a3b248c39ef2ba600fc718c845",
+    "mtime": 1786159108.8184237,
+    "ast_hash": "854a9c7f4b9b160d43678b3d7f1c998c",
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
@@ -75,8 +75,8 @@
     "semantic_hash": ""
   },
   "projeto/README.md": {
-    "mtime": 1786151145.126515,
-    "ast_hash": "e57c4454a82cca7e232edbf70bb639b9",
+    "mtime": 1786158680.9667401,
+    "ast_hash": "c09e9fa5c44ff51ede7190bd7e538850",
     "semantic_hash": ""
   },
   "projeto/figures/baseline_35S_concrete_base/README.md": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "projeto/projetov1.pdf": {
-    "mtime": 1786157991.339935,
-    "ast_hash": "d32ccaff0b73195b3bd4ef5fd7f43f34",
+    "mtime": 1786159425.0430605,
+    "ast_hash": "53396782bdac0918fa58d9cbc2481f29",
     "semantic_hash": ""
   },
   "projeto_tecnico_radome_completo.pdf": {
@@ -215,8 +215,8 @@
     "semantic_hash": ""
   },
   "projeto/figures/fig02_zonamento_radome.png": {
-    "mtime": 1786155593.2361658,
-    "ast_hash": "54136ea3eb1b8af115f145f485fececf",
+    "mtime": 1786159205.381061,
+    "ast_hash": "34c38ca22be728ca87bb87aed50c7752",
     "semantic_hash": ""
   },
   "projeto/figures/fig03_modulo_face.png": {
@@ -225,13 +225,13 @@
     "semantic_hash": ""
   },
   "projeto/figures/fig04_particionamento_espectro.png": {
-    "mtime": 1786155594.0761886,
-    "ast_hash": "d8ebf153b60fbb9643172f6b183f0766",
+    "mtime": 1786159206.0130785,
+    "ast_hash": "05d708c62de58720f28625c7dc9cb2a1",
     "semantic_hash": ""
   },
   "projeto/figures/fig05_polarimetria.png": {
-    "mtime": 1786155594.5922024,
-    "ast_hash": "9f5ee56dfff117f48af3e346cdb7dc9d",
+    "mtime": 1786159206.4130893,
+    "ast_hash": "6e73601fbb9a5ab46e386f626e2c7a7a",
     "semantic_hash": ""
   },
   "projeto/figures/fig06_cadeia_rf.png": {
@@ -240,8 +240,8 @@
     "semantic_hash": ""
   },
   "projeto/figures/fig07_sincronizacao.png": {
-    "mtime": 1786155595.0602152,
-    "ast_hash": "bce90f1ddebc1910544a3ce8374cbd8b",
+    "mtime": 1786159206.8011,
+    "ast_hash": "b9f131ddd4519f93d241e9d35aa498a4",
     "semantic_hash": ""
   },
   "projeto/figures/fig08_geometria_bistatica.png": {
@@ -287,6 +287,16 @@
   ".codex/hooks.json": {
     "mtime": 1786158229.5824316,
     "ast_hash": "f7bd60101250f8b7d9a094b502d50ee5",
+    "semantic_hash": ""
+  },
+  "projeto/DECISIONS.md": {
+    "mtime": 1786159108.6784198,
+    "ast_hash": "dc75c11efaaf0692eedb4d021b3e6756",
+    "semantic_hash": ""
+  },
+  "projeto/PARAMETERS.md": {
+    "mtime": 1786159569.9190176,
+    "ast_hash": "b53bb3fc4bd1e48fc68f7b5d42e7197d",
     "semantic_hash": ""
   }
 }

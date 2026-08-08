@@ -1,17 +1,17 @@
 \chapter{Geodesic Geometry and Radome Structure / Geometria Geodésica e Estrutura do Radome}
 
 \section*{English}
-The V3 geometry starts from a regular icosahedron with $V_0=12$, $E_0=30$ and $F_0=20$. Each triangular macroface is subdivided into three receiver faces, producing:
+Architecture revision 3 starts from a proposed regular icosahedron (parameters \texttt{GEO-001} and \texttt{GEO-002}) with $V_0=12$, $E_0=30$ and $F_0=20$. Each triangular macroface is provisionally subdivided into three receiver faces, producing the unvalidated closed-envelope value \texttt{GEO-003}:
 \[
 V=32,\qquad E=90,\qquad F=60,
 \]
-with Euler consistency $V-E+F=2$. For preliminary radius $R=\SI{3.1445}{m}$, the closed envelope has diameter $D=2R=\SI{6.2890}{m}$. The radius must not be confused with the height of a closed structure.
+with Euler consistency $V-E+F=2$. The preliminary radius $R=\SI{3.1445}{m}$ (\texttt{GEO-005}) and derived diameter $D=2R=\SI{6.2890}{m}$ (\texttt{GEO-006}) are blocked pending geometric reconciliation. The radius must not be confused with the height of a closed structure.
 
-For the site model, the equatorial plane is the radome mid-plane. The lower cut is placed at latitude $\varphi_c=-35^\circ$, reducing the lower envelope while retaining a controlled downward observation sector. The resulting upper spherical segment is supported on a horizontal circular boundary carried by a compact rectangular parallelepiped base with increased clear height. This is a geometric reference for the model, not a claim that the physical station is located on that latitude.
+For the site model, the equatorial plane is the radome mid-plane. The proposed lower cut is placed at latitude $\varphi_c=-35^\circ$ (\texttt{GEO-007}), reducing the lower envelope while retaining a controlled downward observation sector. The resulting upper spherical segment is supported on a horizontal circular boundary carried by a compact rectangular parallelepiped base with increased clear height. This is a geometric reference for the model, not a claim that the physical station is located on that latitude.
 
 The mechanical skeleton, dielectric panels and internal RF modules have different but coordinated geometries. A face is a mechanical and computational sector, not an electromagnetically isolated region. Angular overlap between neighbouring faces is required for calibration, interpolation and direction estimation.
 
-The nominal triangular face uses a 2 m side dimension. One external VHF Yagi and one external UHF Yagi share the support/boom axis that continues from the pyramid apex through the sealed face interface. The parasitic elements of both antennas are transverse to the mast, but occupy orthogonal planes and provide distinct linear polarizations at 90 degrees. The VHF Yagi uses the larger scaled set, with a 2 m maximum transverse element; the UHF Yagi uses smaller elements. Each antenna has an independent feed, ADC and ASIC.
+The nominal triangular face uses a proposed 2 m side dimension (\texttt{GEO-004}). One external VHF Yagi and one external UHF Yagi share the support/boom axis that continues from the pyramid apex through the sealed face interface. The parasitic elements of both antennas are transverse to the mast and occupy planes at a proposed mechanical angle of 90 degrees (\texttt{MEC-002}); because the antennas operate in different bands, this angle does not form a coherent polarimetric basis between them. The VHF Yagi uses the larger scaled set, with a proposed 2 m maximum transverse element (\texttt{MEC-001}); the UHF Yagi uses smaller elements. Each antenna has an independent feed, ADC and ASIC.
 
 \begin{figure}[H]
 \centering
@@ -33,17 +33,17 @@ The external Yagi load is transferred through the base mast into the triangular 
 \end{figure}
 
 \section*{Português}
-A geometria V3 parte de um icosaedro regular com $V_0=12$, $E_0=30$ e $F_0=20$. Cada macroface triangular é subdividida em três faces receptoras, produzindo:
+A revisão 3 da arquitetura parte de um icosaedro regular proposto (parâmetros \texttt{GEO-001} e \texttt{GEO-002}), com $V_0=12$, $E_0=30$ e $F_0=20$. Cada macroface triangular é provisoriamente subdividida em três faces receptoras, produzindo o valor ainda não validado \texttt{GEO-003} para o envelope fechado:
 \[
 V=32,\qquad E=90,\qquad F=60,
 \]
-com consistência de Euler $V-E+F=2$. Para raio preliminar $R=\SI{3.1445}{m}$, o envelope fechado possui diâmetro $D=2R=\SI{6.2890}{m}$. O raio não deve ser confundido com a altura de uma estrutura fechada.
+com consistência de Euler $V-E+F=2$. O raio preliminar $R=\SI{3.1445}{m}$ (\texttt{GEO-005}) e o diâmetro derivado $D=2R=\SI{6.2890}{m}$ (\texttt{GEO-006}) estão bloqueados até a reconciliação geométrica. O raio não deve ser confundido com a altura de uma estrutura fechada.
 
-Para o modelo de sítio, o plano equatorial é o plano médio do radome. O corte inferior é colocado na latitude $\varphi_c=-35^\circ$, reduzindo o envelope inferior e mantendo um setor controlado de observação para baixo. O segmento esférico superior resultante apoia-se sobre uma borda circular horizontal sustentada por uma base retangular compacta em forma de paralelepípedo, com pé-direito aumentado. Essa é uma referência geométrica do modelo, não uma afirmação de que a estação física esteja localizada nessa latitude.
+Para o modelo de sítio, o plano equatorial é o plano médio do radome. O corte inferior proposto é colocado na latitude $\varphi_c=-35^\circ$ (\texttt{GEO-007}), reduzindo o envelope inferior e mantendo um setor controlado de observação para baixo. O segmento esférico superior resultante apoia-se sobre uma borda circular horizontal sustentada por uma base retangular compacta em forma de paralelepípedo, com pé-direito aumentado. Essa é uma referência geométrica do modelo, não uma afirmação de que a estação física esteja localizada nessa latitude.
 
 O esqueleto mecânico, os painéis dielétricos e os módulos RF internos possuem geometrias diferentes, porém coordenadas. Uma face é um setor mecânico e computacional, não uma região eletromagneticamente isolada. A sobreposição angular entre faces vizinhas é necessária para calibração, interpolação e estimação de direção.
 
-A face triangular nominal possui lado de 2 m. Uma Yagi VHF externa e uma Yagi UHF externa compartilham o eixo haste/lança que continua do vértice da pirâmide, atravessa a interface vedada e segue para fora. Os elementos parasitas de ambas são transversais ao mastro, mas ocupam planos ortogonais e fornecem polarizações lineares distintas a 90 graus. A Yagi VHF usa o conjunto maior, com elemento transversal máximo de 2 m; a Yagi UHF usa elementos menores. Cada antena possui alimentação, ADC e ASIC independentes.
+A face triangular nominal possui lado proposto de 2 m (\texttt{GEO-004}). Uma Yagi VHF externa e uma Yagi UHF externa compartilham o eixo haste/lança que continua do vértice da pirâmide, atravessa a interface vedada e segue para fora. Os elementos parasitas de ambas são transversais ao mastro e ocupam planos com ângulo mecânico proposto de 90 graus (\texttt{MEC-002}); como as antenas operam em faixas diferentes, esse ângulo não forma uma base polarimétrica coerente entre elas. A Yagi VHF usa o conjunto maior, com elemento transversal máximo proposto de 2 m (\texttt{MEC-001}); a Yagi UHF usa elementos menores. Cada antena possui alimentação, ADC e ASIC independentes.
 
 \begin{figure}[H]
 \centering

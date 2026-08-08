@@ -8,8 +8,8 @@
 
 | Gate | Estado inicial | Resultado esperado |
 |---|---|---|
-| C0 — baseline documental | Em aberto | Uma única fonte autoritativa, nomenclatura e matriz de parâmetros |
-| C1 — polarimetria correta | Bloqueado | Duas componentes coerentes na mesma faixa ou alegação limitada a diversidade |
+| C0 — baseline documental | Aprovado com bloqueios | Fonte, versionamento, parâmetros e ADRs aprovados; conflitos seguem bloqueados para C1–C3 |
+| C1 — polarimetria correta | Aprovado no nível arquitetural | Síntese restrita a duas portas coerentes na mesma faixa; Yagis VHF/UHF declaradas single-pol independentes |
 | C2 — geometria consistente | Bloqueado | Malha, raio, faces, corte e base derivados de um modelo paramétrico único |
 | C3 — cobertura espectral | Em aberto | Faixas sem lacunas acidentais e cadeia explícita para ADS-B 1090 MHz |
 | C4 — modelo 3D sincronizado | Bloqueado por C2 | Blender e figuras gerados a partir dos parâmetros aprovados |
@@ -21,10 +21,11 @@
 **Prioridade:** imediata.
 **Dependências:** nenhuma.
 
-1. Declarar `projeto/projetov1.tex` como documento técnico autoritativo e classificar os PDFs/Markdown anteriores como histórico.
-2. Resolver a nomenclatura “RADOME V1” versus “geometria V3”: adotar versão do documento e revisão da arquitetura como campos distintos.
-3. Criar uma tabela central de parâmetros com valor, unidade, estado (`proposto`, `simulado`, `medido`) e fonte.
-4. Registrar decisões em um log curto de arquitetura, evitando que números retornem por cópia de documentos históricos.
+1. [x] Declarar `projeto/projetov1.tex` como documento técnico autoritativo e classificar os PDFs/Markdown anteriores como histórico.
+2. [x] Resolver a nomenclatura “RADOME V1” versus “geometria V3”: adotar versão do documento e revisão da arquitetura como campos distintos.
+3. [x] Criar uma tabela central de parâmetros com valor, unidade, estado (`proposto`, `derivado`, `simulado`, `medido`, `histórico` ou `em conflito`), fonte, responsabilidade e validação.
+4. [x] Registrar decisões em um log curto de arquitetura, evitando que números retornem por cópia de documentos históricos.
+5. [x] Realizar a revisão formal da baseline e aprovar as entradas iniciais com bloqueios explícitos em `projeto/PARAMETERS.md`.
 
 **Gate C0:** todos os valores quantitativos do artigo apontam para a tabela central ou são marcados explicitamente como exemplo conceitual.
 
@@ -33,14 +34,14 @@
 **Prioridade:** crítica.
 **Dependências:** C0.
 
-1. Remover a síntese RHCP/LHCP e Stokes feita pela combinação da Yagi VHF com a Yagi UHF: elas observam faixas diferentes.
-2. Decidir, por faixa, entre:
+1. [x] Remover a síntese RHCP/LHCP e Stokes feita pela combinação da Yagi VHF com a Yagi UHF: elas observam faixas diferentes.
+2. [x] Decidir, por faixa, entre:
    - antena dual-polarizada com duas portas coerentes na mesma frequência;
    - par de antenas ortogonais da mesma faixa;
    - recepção de polarização única, explicitamente limitada.
-3. Manter as Yagis VHF/UHF cruzadas apenas como integração mecânica, diversidade espectral e, no máximo, diversidade de orientação avaliada separadamente.
-4. Atualizar `04_multiband_polarimetry.tex`, `09_literature_review.tex`, `10_conclusion.tex`, `fig05_polarimetria.png` e seu gerador.
-5. Definir ensaios de amplitude, fase, isolamento, cross-pol e matriz de Jones por faixa.
+3. [x] Manter as Yagis VHF/UHF cruzadas apenas como integração mecânica, diversidade espectral e diversidade de orientação avaliada separadamente.
+4. [x] Atualizar `04_multiband_polarimetry.tex`, `09_literature_review.tex`, `10_conclusion.tex`, `fig05_polarimetria.png` e seu gerador.
+5. [x] Definir como evidência obrigatória amplitude, fase, isolamento, cross-pol, matriz de Jones e deriva por frequência, ângulo e temperatura.
 
 **Gate C1:** toda equação polarimétrica recebe entradas simultâneas, coerentes e na mesma frequência; figura, texto e hardware proposto concordam.
 

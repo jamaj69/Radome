@@ -1,10 +1,10 @@
-# RADOME V1 Project / Projeto RADOME V1
+# RADOME Project / Projeto RADOME
 
 ## Master document / Documento mestre
 
-The project is organized around [projetov1.tex](projetov1.tex). It is the master LaTeX file and contains the preamble, bilingual abstract and resumo, chapter order, figures path, appendix and bibliography.
+The project is organized around [projetov1.tex](projetov1.tex). It is the authoritative master LaTeX file and contains the preamble, bilingual abstract and resumo, chapter order, figures path, appendix and bibliography. The current controlled identifiers are document version 1.1 and architecture revision 3.
 
-O projeto é organizado em torno de [projetov1.tex](projetov1.tex). Ele é o arquivo mestre LaTeX e contém o preâmbulo, abstract e resumo bilíngues, ordem dos capítulos, caminho das figuras, apêndice e bibliografia.
+O projeto é organizado em torno de [projetov1.tex](projetov1.tex). Ele é o arquivo mestre LaTeX autoritativo e contém o preâmbulo, abstract e resumo bilíngues, ordem dos capítulos, caminho das figuras, apêndice e bibliografia. Os identificadores controlados atuais são versão do documento 1.1 e revisão da arquitetura 3.
 
 ## Structure / Estrutura
 
@@ -13,6 +13,8 @@ O projeto é organizado em torno de [projetov1.tex](projetov1.tex). Ele é o arq
 - `figures/`: technical figures / figuras técnicas;
 - `references.bib`: bibliography copied from `radome_antenna_literature_review` / bibliografia copiada de `radome_antenna_literature_review`;
 - `projetov1.pdf`: compiled version / versão compilada.
+- `PARAMETERS.md`: controlled quantitative parameter register / registro controlado de parâmetros quantitativos;
+- `DECISIONS.md`: architecture decision record / registro de decisões de arquitetura.
 
 ## 3D baseline / Linha de base 3D
 

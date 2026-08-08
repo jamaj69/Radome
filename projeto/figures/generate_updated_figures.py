@@ -68,27 +68,30 @@ ax.text(4e6, -0.82, "As Yagis VHF e UHF são antenas distintas, com cadeias RF d
 fig.savefig(f"{OUT}/fig04_particionamento_espectro.png", bbox_inches="tight", facecolor="white")
 plt.close(fig)
 
-# Figure 5: orthogonal antennas and electronic 90-degree phase synthesis.
+# Figure 5: cross-band diversity versus valid same-band polarimetry.
 fig, ax = plt.subplots(figsize=(13, 7), dpi=180)
 ax.axis("off")
 ax.set_xlim(0, 13)
-ax.set_ylim(0, 7)
-ax.set_title("Orthogonal VHF/UHF apertures and calibrated polarization synthesis\nAberturas VHF/UHF ortogonais e síntese polarimétrica calibrada", fontsize=16, color="#17324d", pad=14)
+ax.set_ylim(-0.55, 7)
+ax.set_title("Cross-band diversity is not same-band polarimetry\nDiversidade entre faixas não é polarimetria na mesma faixa", fontsize=16, color="#17324d", pad=14)
 def box(x, y, w, h, text, color):
     patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.06,rounding_size=0.12", facecolor=color, edgecolor="#52606d", linewidth=1.7)
     ax.add_patch(patch)
     ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=10, color="#263746", wrap=True)
-box(0.35, 4.5, 2.5, 1.35, "External VHF Yagi\nlarger elements\nE_Y", "#f4dfc6")
-box(0.35, 1.15, 2.5, 1.35, "External UHF Yagi\nsmaller elements\nE_Z", "#d5e6f1")
-box(4.1, 2.65, 2.65, 1.7, "Independent RF chains\nADC + ASIC + calibration\ncommon mast / face interface", "#e8edf0")
-box(8.15, 4.5, 2.1, 1.35, "Linear basis\nE_Y, E_Z", "#dcefe9")
-box(8.15, 1.15, 2.1, 1.35, "90° phase shift\n±j after calibration", "#fae6c9")
-box(11.05, 4.5, 1.55, 1.35, "RHCP /\nLHCP", "#e5dff3")
-box(11.05, 1.15, 1.55, 1.35, "Stokes\nI,Q,U,V", "#e5f0d9")
-for x1, y1, x2, y2 in [(2.85, 5.18, 4.1, 3.85), (2.85, 1.82, 4.1, 3.15), (6.75, 3.8, 8.15, 5.18), (6.75, 3.05, 8.15, 1.82), (10.25, 5.18, 11.05, 5.18), (10.25, 1.82, 11.05, 1.82)]:
+box(0.35, 5.00, 2.2, 1.05, "VHF Yagi\nsingle-pol channel V", "#f4dfc6")
+box(0.35, 3.55, 2.2, 1.05, "UHF Yagi\nsingle-pol channel U", "#d5e6f1")
+box(4.05, 4.25, 2.55, 1.15, "Independent bands\nindependent RF chains", "#e8edf0")
+box(8.10, 4.25, 4.05, 1.15, "Spectral/orientation diversity\nNO cross-band RHCP or Stokes", "#f3d3d3")
+
+box(0.35, 1.85, 2.2, 1.05, "Same-band port X\nE_X(f,t)", "#dcefe9")
+box(0.35, 0.40, 2.2, 1.05, "Same-band port Y\nE_Y(f,t)", "#dcefe9")
+box(4.05, 1.10, 2.55, 1.15, "Coherent ADCs\namplitude/phase calibration", "#fae6c9")
+box(8.10, 1.10, 4.05, 1.15, "Valid same-frequency output\nJones / Stokes / RHCP / LHCP", "#e5dff3")
+
+for x1, y1, x2, y2 in [(2.55, 5.52, 4.05, 5.00), (2.55, 4.07, 4.05, 4.65), (6.60, 4.82, 8.10, 4.82), (2.55, 2.37, 4.05, 1.85), (2.55, 0.92, 4.05, 1.50), (6.60, 1.67, 8.10, 1.67)]:
     ax.annotate("", xy=(x2, y2), xytext=(x1, y1), arrowprops={"arrowstyle": "->", "color": "#52606d", "lw": 1.8})
-ax.text(0.45, 0.28, "Orthogonal geometry provides two linear components; the 90° phase relation is synthesized electronically after amplitude/phase calibration.", fontsize=9, color="#52606d")
-ax.text(0.45, 0.05, "A geometria ortogonal fornece duas componentes lineares; a relação de fase de 90° é sintetizada após calibração.", fontsize=9, color="#52606d")
+ax.text(0.45, -0.18, "Top: current VHF/UHF assembly. Bottom: required architecture wherever polarimetric synthesis is claimed.", fontsize=9, color="#52606d")
+ax.text(0.45, -0.43, "Acima: conjunto VHF/UHF atual. Abaixo: arquitetura obrigatória onde houver síntese polarimétrica.", fontsize=9, color="#52606d")
 fig.savefig(f"{OUT}/fig05_polarimetria.png", bbox_inches="tight", facecolor="white")
 plt.close(fig)
 

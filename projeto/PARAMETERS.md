@@ -1,0 +1,88 @@
+# RADOME — Registro central de parâmetros
+
+**Documento controlado:** `projetov1.tex`, versão 1.1
+**Arquitetura:** revisão 3, conceitual
+**Atualização inicial:** 8 de agosto de 2026
+**Revisão da baseline C0:** aprovada com bloqueios em 8 de agosto de 2026
+
+Este registro é a fonte central para valores quantitativos do projeto. Uma entrada não se torna requisito somente por aparecer aqui: o campo `Estado` informa o nível de evidência e o campo `Validação` define o próximo gate.
+
+## Estados permitidos
+
+| Estado | Significado |
+|---|---|
+| Proposto | Valor de projeto ainda sem confirmação suficiente por cálculo, simulação ou ensaio |
+| Derivado | Calculado a partir de premissas registradas e reproduzíveis, ainda sujeito à validação do modelo |
+| Simulado | Obtido em modelo identificado, com configuração e versão preservadas |
+| Medido | Obtido em ensaio identificado, com instrumento, incerteza e condições registrados |
+| Histórico | Mantido somente para rastreabilidade; não controla o projeto atual |
+| Em conflito | Duas ou mais fontes vigentes não podem ser satisfeitas simultaneamente |
+
+## Controle documental e arquitetura
+
+| ID | Parâmetro | Valor | Estado | Fonte vigente | Responsável | Validação |
+|---|---|---:|---|---|---|---|
+| DOC-001 | Versão do documento técnico | 1.1 | Proposto | `projetov1.tex` | Engenharia de sistemas | Aprovar baseline C0 |
+| ARC-001 | Revisão da arquitetura | 3 | Proposto | `projetov1.tex`; `01_scope.tex` | Arquitetura de sistemas | Aprovar baseline C0 |
+| ARC-002 | Número-alvo de nós do primeiro demonstrador | 3 | Proposto | `01_scope.tex` | Engenharia de sistemas | SRR do demonstrador |
+
+## Geometria e estrutura
+
+| ID | Parâmetro | Valor | Unidade | Estado | Fonte vigente | Responsável | Validação |
+|---|---|---:|---|---|---|---|---|
+| GEO-001 | Poliedro base fechado | icosaedro regular | — | Proposto | `03_geometry_radome.tex` | Engenharia geométrica | Definir malha paramétrica C2 |
+| GEO-002 | Macrofaces do poliedro base | 20 | face | Derivado | `03_geometry_radome.tex` | Engenharia geométrica | Verificação topológica C2 |
+| GEO-003 | Faces receptoras do envelope fechado | 60 | face | Proposto | `03_geometry_radome.tex` | Engenharia geométrica | Recalcular após definir subdivisão C2 |
+| GEO-004 | Lado nominal da face receptora | 2.0 | m | Em conflito | `03_geometry_radome.tex` | Engenharia geométrica | Compatibilizar com raio e subdivisão C2 |
+| GEO-005 | Raio preliminar do envelope fechado | 3.1445 | m | Em conflito | `03_geometry_radome.tex` | Engenharia geométrica | Recalcular a partir da malha C2 |
+| GEO-006 | Diâmetro preliminar do envelope fechado | 6.2890 | m | Derivado | `03_geometry_radome.tex` | Engenharia geométrica | Atualizar após GEO-005 |
+| GEO-007 | Corte inferior conceitual | -35 | grau de latitude geométrica | Proposto | `03_geometry_radome.tex` | Geometria/estruturas | Substituir por ângulo polar ou z/R C2 |
+| CIV-001 | Planta da base de concreto | 4 × 4 | m | Proposto | `08_infrastructure_validation.tex` | Engenharia civil | Compatibilizar com anel de apoio C2 |
+| CIV-002 | Altura estrutural livre da base | 3 | m | Proposto | `08_infrastructure_validation.tex` | Engenharia civil | Estudo estrutural e de acesso |
+| MEC-001 | Elemento transversal máximo da Yagi VHF | 2 | m | Proposto | `03_geometry_radome.tex` | Antenas/estruturas | Modelo EM e cargas de vento |
+| MEC-002 | Ângulo nominal entre os planos das Yagis VHF e UHF | 90 | grau | Proposto | `03_geometry_radome.tex` | Antenas/estruturas | Verificar montagem; não usar como base polarimétrica entre faixas |
+
+## Plano espectral e antenas
+
+| ID | Parâmetro | Valor | Unidade | Estado | Fonte vigente | Responsável | Validação |
+|---|---|---:|---|---|---|---|---|
+| RF-001 | Faixa HF conceitual | 3–30 | MHz | Proposto | `generate_updated_figures.py` | Engenharia RF | SRR espectral C3 |
+| RF-002 | Faixa VHF conceitual | 30–300 | MHz | Proposto | `generate_updated_figures.py` | Engenharia RF | Seleção de subfaixas C3 |
+| RF-003 | Faixa da Yagi UHF conceitual | 470–860 | MHz | Proposto | `generate_updated_figures.py` | Engenharia RF | Resolver lacunas e medir banda C3 |
+| RF-004 | Faixa L/S/C agregada | 1–8 | GHz | Proposto | `generate_updated_figures.py` | Engenharia RF | Decompor em cadeias realizáveis C3 |
+| RF-005 | Faixa X/Ku agregada | 8–18 | GHz | Proposto | `generate_updated_figures.py` | Engenharia RF | Decompor em tiles C3 |
+| RF-006 | Faixa K/Ka agregada | 18–40 | GHz | Proposto | `generate_updated_figures.py` | Engenharia RF | Decompor em tiles C3 |
+| RF-007 | Lacuna espectral inferior | 300–470 | MHz | Em conflito | Figura 4 versus escopo multifaixa | Engenharia RF | Declarar exclusão ou nova cadeia C3 |
+| RF-008 | Lacuna espectral superior | 860–1000 | MHz | Em conflito | Figura 4 versus cenário aeronáutico | Engenharia RF | Declarar exclusão ou nova cadeia C3 |
+| POL-001 | Polarimetria por faixa | 2 portas simultâneas, ortogonais e coerentes na mesma frequência | Proposto | `04_multiband_polarimetry.tex` | Antenas/RF | Arquitetura corrigida; medir matriz de Jones, isolamento e deriva |
+| POL-002 | Polarimetria das Yagis VHF/UHF do primeiro demonstrador | não implementada; dois canais independentes single-pol | Proposto | `04_multiband_polarimetry.tex` | Antenas/RF | Preservar separação entre faixas; não produzir Stokes/RHCP do par |
+| POL-003 | Critério mínimo de coerência polarimétrica | amplitude e fase calibradas em frequência, ângulo e temperatura | Proposto | `04_multiband_polarimetry.tex` | Metrologia RF | Plano de ensaio OTA e injeção coerente |
+
+## Tempo, cenário e validação
+
+| ID | Parâmetro | Valor | Unidade | Estado | Fonte vigente | Responsável | Validação |
+|---|---|---:|---|---|---|---|---|
+| TIM-001 | Antenas GNSS externas por estação | ≥2 | antena | Proposto | `06_timing_localization.tex` | Metrologia temporal | Justificar redundância e medir atrasos |
+| TIM-002 | Saídas de referência locais | 1 PPS e 10 MHz | — | Proposto | `06_timing_localization.tex` | Metrologia temporal | Orçamento de incerteza |
+| EXP-001 | Frequência ADS-B 1090ES | 1090 | MHz | Proposto | `07_passive_radar.tex` | RF/experimentos | Atribuir cadeia dedicada C3 |
+| EXP-002 | Frequência UAT contextual | 978 | MHz | Proposto | `07_passive_radar.tex` | RF/experimentos | Definir inclusão ou exclusão C3 |
+| EXP-003 | Baseline do cenário aeronáutico | 100 | km | Proposto | `07_passive_radar.tex` | Localização/sistemas | Orçamento de enlace e geometria C3 |
+| EXP-004 | Faixa de iluminadores TV UHF | 470–860 | MHz | Proposto | `07_passive_radar.tex` | RF/experimentos | Levantamento regulatório e de sítio |
+| EXP-005 | Nós receptores no cenário aeronáutico ilustrativo | 2 | nó | Proposto | `07_passive_radar.tex` | Localização/sistemas | Não confundir com demonstrador de três nós ARC-002 |
+
+## Resultado da revisão C0
+
+- Todos os valores quantitativos atualmente usados como parâmetros de arquitetura no artigo possuem entrada neste registro.
+- A baseline documental está aprovada para orientar as correções, não para fabricação.
+- Entradas `Em conflito` permanecem bloqueadas até C1, C2 ou C3.
+- ARC-002 controla o demonstrador de três nós; EXP-005 controla apenas o cenário aeronáutico ilustrativo de dois nós.
+- MEC-002 controla a orientação mecânica entre Yagis de faixas diferentes e não satisfaz POL-001.
+- C1 corrige a arquitetura documental: somente módulos que satisfaçam POL-001 e POL-003 podem declarar Jones, Stokes, RHCP ou LHCP.
+
+## Regras de manutenção
+
+1. Novos números técnicos recebem um ID antes de entrar no artigo.
+2. Mudanças de valor atualizam fonte, estado, responsável e validação.
+3. Resultados simulados ou medidos devem apontar para o artefato reproduzível correspondente.
+4. Entradas `Em conflito` não podem fundamentar fabricação ou alegação de desempenho.
+5. Decisões que alterem premissas ou precedência documental devem ser registradas em `DECISIONS.md`.

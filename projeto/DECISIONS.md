@@ -1,0 +1,49 @@
+# RADOME — Registro de decisões de arquitetura
+
+## ADR-001 — Fonte técnica autoritativa
+
+- **Data:** 8 de agosto de 2026
+- **Estado:** aceita
+- **Decisão:** `projetov1.tex`, seus capítulos incluídos e a bibliografia associada formam o documento técnico autoritativo.
+- **Consequência:** documentos anteriores permanecem como histórico e não prevalecem em caso de conflito.
+- **Histórico principal:** `Radome2.pdf`, `RadomeBrasil.pdf`, `RADOME V3.md`, `RADOME V3 — Arquitetura Eletrônica Distribuída Revisada.md`, `Projeto_Radomes_Multifaixa_Revisado.md`, `projeto_tecnico_radome_consolidado.md` e seus PDFs derivados.
+
+## ADR-002 — Versionamento independente
+
+- **Data:** 8 de agosto de 2026
+- **Estado:** aceita
+- **Decisão:** usar dois identificadores independentes: versão do documento e revisão da arquitetura.
+- **Baseline atual:** documento 1.1; arquitetura 3, conceitual.
+- **Consequência:** “RADOME V1” deixa de ser usado como identificador ambíguo do sistema completo. Uma nova compilação editorial pode alterar a versão documental sem alterar a arquitetura, e vice-versa.
+
+## ADR-003 — Registro central de parâmetros
+
+- **Data:** 8 de agosto de 2026
+- **Estado:** aceita
+- **Decisão:** `PARAMETERS.md` controla valores quantitativos, estado da evidência, fonte, responsabilidade e gate de validação.
+- **Consequência:** números copiados de documentos históricos não retornam ao documento vigente sem revisão explícita.
+
+## ADR-004 — Conflitos não são requisitos
+
+- **Data:** 8 de agosto de 2026
+- **Estado:** aceita
+- **Decisão:** parâmetros incompatíveis permanecem visíveis com estado `Em conflito` até resolução pelo gate apropriado.
+- **Consequência:** raio, lado de face, apoio civil, lacunas espectrais e polarimetria não podem orientar fabricação enquanto seus conflitos estiverem abertos.
+
+## ADR-005 — Aprovação condicionada da baseline C0
+
+- **Data:** 8 de agosto de 2026
+- **Estado:** aceita
+- **Decisão:** aprovar a baseline documental para orientar as ondas de correção, preservando bloqueios explícitos sobre parâmetros `Em conflito`.
+- **Escopo da aprovação:** hierarquia documental, versionamento, IDs, estados de evidência e responsabilidades.
+- **Fora do escopo:** aprovação de fabricação, desempenho ou resolução técnica dos conflitos C1–C3.
+- **Distinções obrigatórias:** o cenário aeronáutico ilustrativo usa dois nós, enquanto o demonstrador-alvo usa três; os 90° entre as Yagis VHF e UHF representam orientação mecânica entre faixas diferentes, não duas componentes polarimétricas coerentes do mesmo sinal.
+
+## ADR-006 — Polarimetria restrita à mesma faixa
+
+- **Data:** 8 de agosto de 2026
+- **Estado:** aceita
+- **Decisão:** Jones, Stokes, RHCP e LHCP somente podem ser calculados a partir de duas portas simultâneas, ortogonais e coerentes na mesma frequência.
+- **Aplicação ao demonstrador:** as Yagis VHF e UHF atuais são canais independentes de polarização única; sua montagem a 90° oferece diversidade mecânica/orientacional entre faixas, não polarimetria.
+- **Expansão futura:** uma faixa poderá receber antena dual-polarizada ou par cruzado na mesma faixa, com cadeias coerentes e calibração de amplitude/fase.
+- **Evidência exigida:** matriz de Jones, isolamento, cross-pol, equilíbrio de amplitude, fase relativa e deriva versus frequência, ângulo e temperatura.

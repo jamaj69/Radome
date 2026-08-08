@@ -6,6 +6,8 @@
 
 This repository consolidates a technical and scientific conception for a distributed network of geodesic radome-based sensing stations intended for passive electromagnetic surveillance, direction finding, and geolocation. The proposed architecture is designed for deployment in elevated mountain sites across Brazil, integrating multiband reception, precise time synchronization, local edge processing, and centralized fusion of observations.
 
+The authoritative technical source is `projeto/projetov1.tex` (document version 1.1, architecture revision 3). Quantitative values and their evidence status are controlled in `projeto/PARAMETERS.md`; architecture decisions are recorded in `projeto/DECISIONS.md`. Earlier documents remain historical inputs.
+
 The system is intended to exploit opportunistic illumination from known external sources such as cellular towers, satellites, broadcast transmitters, and other RF emitters. By combining angle of arrival, time difference of arrival, frequency difference of arrival, Doppler information, and polarization measurements, the network can infer the position and motion of emitters or reflected targets without relying on active radar transmission.
 
 ---
@@ -120,7 +122,7 @@ In this mode, the network does not need to transmit active interrogation signals
 The network is designed to infer target or emitter state from indirect observations rather than direct active illumination.
 
 ### 2. Multiband and polarimetric reception
-A single platform is expected to support multiple spectral bands, with dual-polarized acquisition enabling digital synthesis of circular or linear polarization states.
+The platform supports multiple spectral bands through independent RF chains. Circular, linear-vector or Stokes synthesis is permitted only for a calibrated same-band module with two simultaneous coherent orthogonal ports; the current VHF and UHF Yagis are independent single-polarization channels.
 
 ### 3. Distributed synchronization and calibration
 Time and phase coherence are essential for high-quality TDOA/FDOA and beamforming-based inference. The concept explicitly includes hardware timestamping, optical distribution of timing, and local holdover strategies.
