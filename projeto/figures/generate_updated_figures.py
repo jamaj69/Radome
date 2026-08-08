@@ -1,0 +1,93 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import Wedge, Circle, FancyBboxPatch, Polygon
+
+OUT = "/home/jamaj/src/Radome/projeto/figures"
+plt.rcParams.update({"font.family": "DejaVu Sans", "axes.titleweight": "bold"})
+
+# Figure 2: updated functional zoning.
+fig, ax = plt.subplots(figsize=(12, 8), dpi=180)
+ax.set_aspect("equal")
+ax.axis("off")
+ax.set_xlim(-4.0, 4.0)
+ax.set_ylim(-4.15, 4.05)
+ax.set_title("Radome as a hybrid multiband platform\nRadome como plataforma híbrida multifaixa", fontsize=18, color="#17324d", pad=18)
+outer = Circle((0, 0), 3.0, facecolor="#e7f0f5", edgecolor="#4e7184", linewidth=2.5, alpha=0.8)
+ax.add_patch(outer)
+for start, end, color, label, sub in [
+    (205, 295, "#9ab98f", "HF", "loops + platform modes"),
+    (295, 350, "#d89a58", "VHF Yagi", "large elements"),
+    (350, 25, "#8caed0", "UHF Yagi", "smaller elements"),
+    (25, 105, "#9ec4d6", "L/S/C", "sinuous / Vivaldi / TCDA"),
+    (105, 175, "#aaa0d0", "X/Ku/Ka", "dedicated tiles"),
+]:
+    if end < start:
+        end += 360
+    ax.add_patch(Wedge((0, 0), 2.92, start, end, facecolor=color, edgecolor="#ffffff", linewidth=2, alpha=0.82))
+    angle = np.deg2rad((start + end) / 2)
+    x, y = 1.75 * np.cos(angle), 1.75 * np.sin(angle)
+    ax.text(x, y + 0.12, label, ha="center", va="center", fontsize=13, weight="bold", color="#17324d")
+    ax.text(x, y - 0.16, sub, ha="center", va="center", fontsize=8, color="#263746")
+ax.add_patch(Circle((0, 0), 0.85, facecolor="#ffffff", edgecolor="#273746", linewidth=2.2))
+ax.text(0, 0.12, "FACE CORE", ha="center", weight="bold", fontsize=12, color="#17324d")
+ax.text(0, -0.15, "FFASIC / clock / fibre / DC", ha="center", fontsize=8, color="#52606d")
+ax.text(-3.25, 3.45, "Two crossed external Yagis share one support axis", fontsize=10, color="#9a4c2b", weight="bold")
+ax.text(-3.25, 3.18, "Duas Yagis externas cruzadas compartilham um eixo de suporte", fontsize=9, color="#9a4c2b")
+ax.text(-3.25, -3.45, "The angular sectors are functional families, not rigid electromagnetic boundaries.", fontsize=9, color="#52606d")
+ax.text(-3.25, -3.68, "Os setores são famílias funcionais, não fronteiras eletromagnéticas rígidas.", fontsize=9, color="#52606d")
+fig.savefig(f"{OUT}/fig02_zonamento_radome.png", bbox_inches="tight", facecolor="white")
+plt.close(fig)
+
+# Figure 4: updated frequency partition.
+fig, ax = plt.subplots(figsize=(14, 7), dpi=180)
+ax.set_xscale("log")
+ax.set_xlim(3e6, 40e9)
+ax.set_ylim(-0.95, 6.0)
+ax.grid(True, which="both", axis="x", color="#d9e0e5", linewidth=0.7)
+ax.set_title("Spectral partition and selected external antennas\nParticionamento espectral e antenas externas selecionadas", fontsize=18, color="#17324d", pad=16)
+ax.set_xlabel("Frequency / Frequência (Hz, logarithmic scale)", fontsize=11)
+rows = [
+    ("HF", 3e6, 30e6, "loops / modes", "#85aa7e"),
+    ("VHF", 30e6, 300e6, "external Yagi", "#d08b4d"),
+    ("UHF", 470e6, 860e6, "crossed Yagi", "#5f91b7"),
+    ("L/S/C", 1e9, 8e9, "sinuous / Vivaldi", "#d99a59"),
+    ("X/Ku", 8e9, 18e9, "tiles", "#9588bd"),
+    ("K/Ka", 18e9, 40e9, "dual-pol tiles", "#bd7777"),
+]
+for idx, (name, low, high, detail, color) in enumerate(rows):
+    y = idx
+    ax.barh(y, high - low, left=low, height=0.56, align="center", color=color, alpha=0.9, edgecolor="#52606d", linewidth=0.8)
+    center = np.sqrt(low * high)
+    ax.text(center, y, f"{name}\n{detail}", ha="center", va="center", color="white", fontsize=7.5, weight="bold")
+ax.set_yticks([])
+for value, label in [(3e6, "3 MHz"), (30e6, "30 MHz"), (300e6, "300 MHz"), (470e6, "470 MHz"), (860e6, "860 MHz"), (1e9, "1 GHz"), (8e9, "8 GHz"), (18e9, "18 GHz"), (40e9, "40 GHz")]:
+    ax.axvline(value, color="#52606d", linewidth=0.8, alpha=0.65)
+    ax.text(value, 5.63, label, rotation=90, ha="center", va="top", fontsize=8, color="#263746")
+ax.text(4e6, -0.65, "The VHF and UHF Yagis are distinct antennas with distinct RF chains; their aggregate coverage is intentional.", fontsize=8.5, color="#52606d")
+ax.text(4e6, -0.82, "As Yagis VHF e UHF são antenas distintas, com cadeias RF distintas; a cobertura agregada é intencional.", fontsize=8.5, color="#52606d")
+fig.savefig(f"{OUT}/fig04_particionamento_espectro.png", bbox_inches="tight", facecolor="white")
+plt.close(fig)
+
+# Figure 5: orthogonal antennas and electronic 90-degree phase synthesis.
+fig, ax = plt.subplots(figsize=(13, 7), dpi=180)
+ax.axis("off")
+ax.set_xlim(0, 13)
+ax.set_ylim(0, 7)
+ax.set_title("Orthogonal VHF/UHF apertures and calibrated polarization synthesis\nAberturas VHF/UHF ortogonais e síntese polarimétrica calibrada", fontsize=16, color="#17324d", pad=14)
+def box(x, y, w, h, text, color):
+    patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.06,rounding_size=0.12", facecolor=color, edgecolor="#52606d", linewidth=1.7)
+    ax.add_patch(patch)
+    ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=10, color="#263746", wrap=True)
+box(0.35, 4.5, 2.5, 1.35, "External VHF Yagi\nlarger elements\nE_Y", "#f4dfc6")
+box(0.35, 1.15, 2.5, 1.35, "External UHF Yagi\nsmaller elements\nE_Z", "#d5e6f1")
+box(4.1, 2.65, 2.65, 1.7, "Independent RF chains\nADC + ASIC + calibration\ncommon mast / face interface", "#e8edf0")
+box(8.15, 4.5, 2.1, 1.35, "Linear basis\nE_Y, E_Z", "#dcefe9")
+box(8.15, 1.15, 2.1, 1.35, "90° phase shift\n±j after calibration", "#fae6c9")
+box(11.05, 4.5, 1.55, 1.35, "RHCP /\nLHCP", "#e5dff3")
+box(11.05, 1.15, 1.55, 1.35, "Stokes\nI,Q,U,V", "#e5f0d9")
+for x1, y1, x2, y2 in [(2.85, 5.18, 4.1, 3.85), (2.85, 1.82, 4.1, 3.15), (6.75, 3.8, 8.15, 5.18), (6.75, 3.05, 8.15, 1.82), (10.25, 5.18, 11.05, 5.18), (10.25, 1.82, 11.05, 1.82)]:
+    ax.annotate("", xy=(x2, y2), xytext=(x1, y1), arrowprops={"arrowstyle": "->", "color": "#52606d", "lw": 1.8})
+ax.text(0.45, 0.28, "Orthogonal geometry provides two linear components; the 90° phase relation is synthesized electronically after amplitude/phase calibration.", fontsize=9, color="#52606d")
+ax.text(0.45, 0.05, "A geometria ortogonal fornece duas componentes lineares; a relação de fase de 90° é sintetizada após calibração.", fontsize=9, color="#52606d")
+fig.savefig(f"{OUT}/fig05_polarimetria.png", bbox_inches="tight", facecolor="white")
+plt.close(fig)
