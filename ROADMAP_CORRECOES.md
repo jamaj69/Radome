@@ -50,9 +50,9 @@
 **Prioridade:** crítica.
 **Dependências:** C0; pode ocorrer em paralelo com a Onda 1.
 
-1. Definir formalmente o poliedro base e o método de subdivisão/projeção.
+1. [x] Definir formalmente o poliedro base e o método de subdivisão/projeção.
 2. Separar aresta da macroface, dimensões das subfaces, raio circunscrito, diâmetro e altura do segmento cortado.
-3. Recalcular `V`, `E` e `F` para o envelope fechado e para a estrutura efetivamente cortada.
+3. [ ] Recalcular `V`, `E` e `F` para o envelope fechado e para a estrutura efetivamente cortada. Envelope fechado C2 recalculado; estrutura cortada ainda pendente.
 4. Definir o corte em coordenada geométrica (`ângulo polar` ou `z/R`), evitando a ambiguidade de “latitude 35° S”.
 5. Dimensionar o anel de apoio e compatibilizá-lo com a base de concreto; ampliar a base ou especificar uma transição estrutural.
 6. Produzir verificação automática de Euler, comprimentos, raio do apoio e envelope da base.

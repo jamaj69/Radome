@@ -1,11 +1,11 @@
 \chapter{Geodesic Geometry and Radome Structure / Geometria Geodésica e Estrutura do Radome}
 
 \section*{English}
-Architecture revision 3 starts from a proposed regular icosahedron (parameters \texttt{GEO-001} and \texttt{GEO-002}) with $V_0=12$, $E_0=30$ and $F_0=20$. Each triangular macroface is provisionally subdivided into three receiver faces, producing the unvalidated closed-envelope value \texttt{GEO-003}:
+Architecture revision 3 starts from a proposed regular icosahedron (parameters \texttt{GEO-001} and \texttt{GEO-002}) with $V_0=12$, $E_0=30$ and $F_0=20$. The C2 candidate replaces the former provisional 60-face count with a class-I, frequency-2 geodesic subdivision: each triangular macroface is split at edge midpoints into four triangles and the new vertices are projected to a common sphere. The closed envelope verified by \texttt{geometry/verify\_radome\_geometry.py} is:
 \[
-V=32,\qquad E=90,\qquad F=60,
+V=42,\qquad E=120,\qquad F=80,
 \]
-with Euler consistency $V-E+F=2$. The preliminary radius $R=\SI{3.1445}{m}$ (\texttt{GEO-005}) and derived diameter $D=2R=\SI{6.2890}{m}$ (\texttt{GEO-006}) are blocked pending geometric reconciliation. The radius must not be confused with the height of a closed structure.
+with Euler consistency $V-E+F=2$ (\texttt{GEO-003}, \texttt{GEO-009} and \texttt{GEO-010}). The projection produces two unit-radius chord classes, so the nominal \SI{2}{m} face side (\texttt{GEO-004}) remains a scaling rule to be chosen rather than a uniform edge length. If the shortest chord is scaled to \SI{2}{m}, the verifier gives $R=\SI{3.6594}{m}$, $D=\SI{7.3189}{m}$ and a support-ring diameter of \SI{5.9953}{m} at the current cut, which conflicts with the \SI{4}{m} by \SI{4}{m} base footprint. The earlier radius $R=\SI{3.1445}{m}$ (\texttt{GEO-005}) and derived diameter $D=2R=\SI{6.2890}{m}$ (\texttt{GEO-006}) are therefore retained only as blocked preliminary values pending structural reconciliation. The radius must not be confused with the height of a closed structure.
 
 For the site model, the equatorial plane is the radome mid-plane. The proposed lower cut is placed at latitude $\varphi_c=-35^\circ$ (\texttt{GEO-007}), reducing the lower envelope while retaining a controlled downward observation sector. The resulting upper spherical segment is supported on a horizontal circular boundary carried by a compact rectangular parallelepiped base with increased clear height. This is a geometric reference for the model, not a claim that the physical station is located on that latitude.
 
@@ -33,11 +33,11 @@ The external Yagi load is transferred through the base mast into the triangular 
 \end{figure}
 
 \section*{Português}
-A revisão 3 da arquitetura parte de um icosaedro regular proposto (parâmetros \texttt{GEO-001} e \texttt{GEO-002}), com $V_0=12$, $E_0=30$ e $F_0=20$. Cada macroface triangular é provisoriamente subdividida em três faces receptoras, produzindo o valor ainda não validado \texttt{GEO-003} para o envelope fechado:
+A revisão 3 da arquitetura parte de um icosaedro regular proposto (parâmetros \texttt{GEO-001} e \texttt{GEO-002}), com $V_0=12$, $E_0=30$ e $F_0=20$. A candidata C2 substitui a contagem provisória anterior de 60 faces por uma subdivisão geodésica classe I de frequência 2: cada macroface triangular é dividida pelos pontos médios das arestas em quatro triângulos e os novos vértices são projetados para uma esfera comum. O envelope fechado verificado por \texttt{geometry/verify\_radome\_geometry.py} é:
 \[
-V=32,\qquad E=90,\qquad F=60,
+V=42,\qquad E=120,\qquad F=80,
 \]
-com consistência de Euler $V-E+F=2$. O raio preliminar $R=\SI{3.1445}{m}$ (\texttt{GEO-005}) e o diâmetro derivado $D=2R=\SI{6.2890}{m}$ (\texttt{GEO-006}) estão bloqueados até a reconciliação geométrica. O raio não deve ser confundido com a altura de uma estrutura fechada.
+com consistência de Euler $V-E+F=2$ (\texttt{GEO-003}, \texttt{GEO-009} e \texttt{GEO-010}). A projeção produz duas classes de corda em raio unitário; portanto, o lado nominal de \SI{2}{m} (\texttt{GEO-004}) continua sendo uma regra de escala a escolher, não um comprimento uniforme de todas as arestas. Se a menor corda for escalada para \SI{2}{m}, o verificador fornece $R=\SI{3.6594}{m}$, $D=\SI{7.3189}{m}$ e diâmetro de anel de apoio de \SI{5.9953}{m} no corte atual, em conflito com a base de \SI{4}{m} por \SI{4}{m}. Assim, o raio preliminar anterior $R=\SI{3.1445}{m}$ (\texttt{GEO-005}) e o diâmetro derivado $D=2R=\SI{6.2890}{m}$ (\texttt{GEO-006}) permanecem apenas como valores bloqueados até a reconciliação estrutural. O raio não deve ser confundido com a altura de uma estrutura fechada.
 
 Para o modelo de sítio, o plano equatorial é o plano médio do radome. O corte inferior proposto é colocado na latitude $\varphi_c=-35^\circ$ (\texttt{GEO-007}), reduzindo o envelope inferior e mantendo um setor controlado de observação para baixo. O segmento esférico superior resultante apoia-se sobre uma borda circular horizontal sustentada por uma base retangular compacta em forma de paralelepípedo, com pé-direito aumentado. Essa é uma referência geométrica do modelo, não uma afirmação de que a estação física esteja localizada nessa latitude.
 

@@ -60,8 +60,8 @@
     "semantic_hash": ""
   },
   "ROADMAP_CORRECOES.md": {
-    "mtime": 1786159108.8184237,
-    "ast_hash": "854a9c7f4b9b160d43678b3d7f1c998c",
+    "mtime": 1786160992.622141,
+    "ast_hash": "662c4334e2abcf4e41d3b5bbfd48fe88",
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "projeto/projetov1.pdf": {
-    "mtime": 1786160848.9941688,
-    "ast_hash": "6cac87e1d5219c13c68e958a0297763a",
+    "mtime": 1786161462.9831488,
+    "ast_hash": "f4f98967758388f0fce9e2de861bd9a8",
     "semantic_hash": ""
   },
   "projeto_tecnico_radome_completo.pdf": {
@@ -290,13 +290,13 @@
     "semantic_hash": ""
   },
   "projeto/DECISIONS.md": {
-    "mtime": 1786160463.3635547,
-    "ast_hash": "930df31fe3c43baf95401e6817c9b03c",
+    "mtime": 1786160986.2819655,
+    "ast_hash": "b1424ee4010df95ea81c11fee04f50ab",
     "semantic_hash": ""
   },
   "projeto/PARAMETERS.md": {
-    "mtime": 1786160463.2235508,
-    "ast_hash": "4f9735fc89245a043a0bcf0fbe605612",
+    "mtime": 1786160986.125961,
+    "ast_hash": "938aca3b1596c71ad32bd69c3d6078a8",
     "semantic_hash": ""
   },
   "projeto/antenna_designs/lpda_vhf_72_320.md": {
@@ -307,6 +307,11 @@
   "projeto/antenna_designs/dual_band_quad_polarization_mast.md": {
     "mtime": 1786160480.016013,
     "ast_hash": "80a4dde31bdedf66e1b28fe7faec2601",
+    "semantic_hash": ""
+  },
+  "projeto/geometry/verify_radome_geometry.py": {
+    "mtime": 1786160985.9619565,
+    "ast_hash": "a04351164509ac30c33ae6b753c6c813",
     "semantic_hash": ""
   }
 }
