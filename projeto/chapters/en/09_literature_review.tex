@@ -1,0 +1,15 @@
+\chapter{Literature Review, Innovation and Gaps}
+
+The literature is organized into three relatively mature but weakly integrated streams: conformal broadband antennas and arrays; functional radomes and frequency-selective surfaces; and passive detection, localization and emitter identification. Conformal direction-finding studies show that mutual coupling, supporting structure and radome distortion belong to the calibrated array manifold, not merely to a mechanical enclosure \cite{caratelli2011,liberal2011}.
+
+Functional-radome research demonstrates passband transmission combined with absorption or diffusion outside selected bands \cite{costa2012,lv2021,omar2018,sheng2024}. This creates a design tension for open spectrum monitoring: a radome optimized for stealth or narrow transmission can reject signals that a surveillance receiver should observe.
+
+Passive-localization research uses AOA, TDOA and FDOA, with accuracy governed by geometry, synchronization, propagation and computational load \cite{liu2019,pine2021}. RF fingerprinting and open-set anomaly detection can assist emitter characterization, but closed-set classifiers and limited training conditions cannot be treated as universal solutions \cite{soltanieh2020,jagannath2022,sun2022}.
+
+The project gap is the end-to-end integration of a conformal multiband aperture, distributed passive reception, polarimetric and temporal calibration, hierarchical event processing and realistic mountain-site validation. The innovation is therefore systemic and must be demonstrated with reproducible measurements.
+
+\section{Gap coverage by the present architecture}
+The current design resolves several gaps at the architectural level. The calibrated manifold includes the radome, face geometry, mutual coupling and local antenna orientation; the hybrid aperture assigns one external single-polarization VHF Yagi and one smaller single-polarization UHF Yagi to independent RF modules; same-band dual-port modules are required wherever polarimetric synthesis is claimed; each antenna has a shielded ADC/ASIC chain; the FFASIC performs face-level fusion; and the thermal and structural design defines cold plates, sensors, internal load paths and environmental gates. These are design resolutions, not measured performance claims. The remaining work is to quantify insertion loss, phase and group delay, structural margins, thermal gradients, EMC isolation and localization covariance in representative tests.
+
+\section{Gap coverage by the band-separated aperture}
+The review identified a missing end-to-end treatment of aperture integration, polarization, calibration and realistic platform effects. The present architecture addresses this at the design level by separating cross-band mechanical integration from same-band polarimetry. The VHF and UHF Yagis provide independent spectral observations; only a dual-port module within one band may produce calibrated Jones, Stokes, RHCP or LHCP quantities. The remaining research question is quantitative: measured gain, bandwidth, isolation, cross-polarization for valid dual-port modules, platform effect and stability must confirm the design.

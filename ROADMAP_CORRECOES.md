@@ -14,7 +14,7 @@
 | C3 — cobertura espectral | Em andamento; arquitetura e triagem aprovadas | Lacunas deliberadas, cadeia aeronáutica e protocolos definidos; faltam orçamento RF, enlace e sítio |
 | C4 — modelo 3D sincronizado | Bloqueado pelo fechamento de C2 e C3 | Blender e figuras gerados a partir dos parâmetros aprovados |
 | C5 — consistência científica | Em aberto | Novidade, referências e limites formulados com evidência apropriada |
-| C6 — qualidade editorial | Em aberto | Bilinguismo simétrico e compilação sem avisos relevantes |
+| C6 — qualidade editorial | Em andamento; edições separadas implantadas | Conteúdo equivalente entre as edições independentes e compilação sem avisos relevantes |
 
 ## Onda 0 — congelar a baseline
 
@@ -129,13 +129,15 @@ O C2 é reaberto porque o corte circular, o anel de apoio e a transição civil 
 **Prioridade:** média.
 **Dependências:** C1–C5 para evitar retrabalho.
 
-1. Mover o parágrafo inglês atualmente inserido na seção portuguesa do capítulo 3.
-2. Reestruturar a subseção de torres celulares do capítulo 7 em blocos English/Português equivalentes.
+1. [x] Separar o parágrafo inglês anteriormente inserido no conteúdo português do capítulo 3.
+2. [x] Separar a subseção de torres celulares do capítulo 7 entre as edições inglesa e brasileira.
 3. Comparar automaticamente presença de equações, figuras, ressalvas e números entre os dois idiomas.
 4. Corrigir âncoras PDF duplicadas da página 1, a caixa `Overfull` do apêndice e quebras problemáticas da bibliografia.
 5. Executar a sequência completa LaTeX e inspecionar o PDF final.
 
-**Gate C6:** compilação final sem erros, referências indefinidas, âncoras duplicadas ou divergências técnicas entre idiomas.
+As edições independentes foram implantadas em `projeto/radome-en.tex` e `projeto/radome-pt-br.tex`. A edição brasileira usa `abntex2`, `babel` e `abntex2cite`; a inglesa usa `report`, `babel` e `natbib`. Os capítulos ficam em árvores próprias e os manifestos em `projeto/config/` permitem acrescentar e reordenar capítulos e seções sem alterar os arquivos mestres.
+
+**Gate C6:** compilação final das duas edições sem erros, referências indefinidas, âncoras duplicadas ou divergências técnicas entre idiomas.
 
 ## Ordem operacional
 

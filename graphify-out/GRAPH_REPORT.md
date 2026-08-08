@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-08)
 
 ## Corpus Check
-- 30 files · ~392,867 words
+- 31 files · ~394,051 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 547 nodes · 577 edges · 52 communities (48 shown, 4 thin omitted)
+- 557 nodes · 594 edges · 53 communities (49 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c26bd563`
+- Built from commit: `f3a67728`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -64,6 +64,7 @@
 - Cross-search signals
 - verify_tetrahedral_face_geometry.py
 - render_tetrahedral_face_cluster_blender.py
+- split_chapter
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -74,8 +75,8 @@
 6. `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network` - 12 edges
 7. `RADOME — Roadmap de correções técnicas e documentais` - 11 edges
 8. `tetrahedral_modules()` - 10 edges
-9. `RADOME — Sumário executivo e roadmap de pesquisa e engenharia` - 9 edges
-10. `27. Exemplo operacional` - 8 edges
+9. `split_chapter()` - 9 edges
+10. `RADOME — Sumário executivo e roadmap de pesquisa e engenharia` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `select_contiguous_cluster()` --calls--> `face_edge_key()`  [INFERRED]
@@ -84,7 +85,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (52 total, 4 thin omitted)
+## Communities (53 total, 4 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -156,7 +157,7 @@ Nodes (10): clip_polygon_to_cut(), clip_segment_to_cut(), clipped_mesh(), distan
 
 ### Community 20 - "RADOME Project / Projeto RADOME"
 Cohesion: 0.33
-Nodes (5): 3D baseline / Linha de base 3D, Compilation / Compilação, Master document / Documento mestre, RADOME Project / Projeto RADOME, Structure / Estrutura
+Nodes (5): 3D baseline / Linha de base 3D, Compilation / Compilação, Independent editions / Edições independentes, RADOME Project / Projeto RADOME, Structure / Estrutura
 
 ### Community 21 - "English"
 Cohesion: 0.12
@@ -266,6 +267,10 @@ Nodes (17): add(), centroid(), cross(), dot(), face_edge_key(), length(), main()
 Cohesion: 0.24
 Nodes (5): arrow(), cylinder_between(), dot(), Render a contiguous cluster of 2 m tetrahedral radome face modules., select_contiguous_cluster()
 
+### Community 52 - "split_chapter"
+Cohesion: 0.38
+Nodes (9): Path, clean_special_cases(), figure_blocks(), localize_headings(), main(), split_chapter(), strip_figures(), title_for() (+1 more)
+
 ## Knowledge Gaps
 - **386 isolated node(s):** `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout`, `LaTeX Article Commands` (+381 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -275,9 +280,9 @@ Nodes (5): arrow(), cylinder_between(), dot(), Render a contiguous cluster of 2 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **What connects `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` to the rest of the system?**
   _386 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**

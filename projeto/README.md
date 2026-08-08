@@ -1,18 +1,23 @@
 # RADOME Project / Projeto RADOME
 
-## Master document / Documento mestre
+## Independent editions / Edições independentes
 
-The project is organized around [projetov1.tex](projetov1.tex). It is the authoritative master LaTeX file and contains the preamble, bilingual abstract and resumo, chapter order, figures path, appendix and bibliography. The current controlled identifiers are document version 1.1 and architecture revision 3.
+The project has two authoritative and independently compiled editions: [radome-en.tex](radome-en.tex) in English and [radome-pt-br.tex](radome-pt-br.tex) in Brazilian Portuguese. Shared packages live in `config/radome-common.tex`; each master selects its own document class, language and citation conventions. The current controlled identifiers are document version 1.1 and architecture revision 3.
 
-O projeto é organizado em torno de [projetov1.tex](projetov1.tex). Ele é o arquivo mestre LaTeX autoritativo e contém o preâmbulo, abstract e resumo bilíngues, ordem dos capítulos, caminho das figuras, apêndice e bibliografia. Os identificadores controlados atuais são versão do documento 1.1 e revisão da arquitetura 3.
+O projeto possui duas edições autoritativas compiladas de forma independente: [radome-pt-br.tex](radome-pt-br.tex), em português brasileiro, e [radome-en.tex](radome-en.tex), em inglês. Os pacotes compartilhados ficam em `config/radome-common.tex`; cada arquivo mestre seleciona sua própria classe, idioma e convenções de citação. Os identificadores controlados atuais são versão do documento 1.1 e revisão da arquitetura 3.
 
 ## Structure / Estrutura
 
-- `projetov1.tex`: master file / arquivo mestre;
-- `chapters/`: independent bilingual chapters / capítulos bilíngues independentes;
+- `radome-en.tex`: English master using `report`, English `babel` and `natbib`;
+- `radome-pt-br.tex`: mestre brasileiro usando `abntex2`, `babel` e `abntex2cite`;
+- `projetov1.tex`: compatibility entry point for the Brazilian edition / entrada de compatibilidade para a edição brasileira;
+- `chapters/en/`: English chapters and sections / capítulos e seções em inglês;
+- `chapters/pt-BR/`: capítulos e seções em português brasileiro / Brazilian Portuguese chapters and sections;
+- `chapters/legacy-bilingual/`: frozen pre-refactoring sources retained for traceability / fontes bilíngues anteriores congeladas para rastreabilidade;
+- `config/`: shared preamble and edition-specific chapter manifests / preâmbulo comum e manifestos de capítulos;
 - `figures/`: technical figures / figuras técnicas;
 - `references.bib`: bibliography copied from `radome_antenna_literature_review` / bibliografia copiada de `radome_antenna_literature_review`;
-- `projetov1.pdf`: compiled version / versão compilada.
+- `radome-en.pdf` and `radome-pt-br.pdf`: authoritative compiled editions / edições compiladas autoritativas;
 - `PARAMETERS.md`: controlled quantitative parameter register / registro controlado de parâmetros quantitativos;
 - `DECISIONS.md`: architecture decision record / registro de decisões de arquitetura.
 - `antenna_designs/`: proposed antenna baselines awaiting simulation and measurement / baselines propostas de antenas aguardando simulação e medição.
@@ -43,12 +48,21 @@ Outputs / Saídas:
 From this directory / A partir deste diretório:
 
 ```bash
-pdflatex -interaction=nonstopmode projetov1.tex
-bibtex projetov1
-pdflatex -interaction=nonstopmode projetov1.tex
-pdflatex -interaction=nonstopmode projetov1.tex
+pdflatex -interaction=nonstopmode -halt-on-error radome-en.tex
+bibtex radome-en
+pdflatex -interaction=nonstopmode -halt-on-error radome-en.tex
+pdflatex -interaction=nonstopmode -halt-on-error radome-en.tex
+
+pdflatex -interaction=nonstopmode -halt-on-error radome-pt-br.tex
+bibtex radome-pt-br
+pdflatex -interaction=nonstopmode -halt-on-error radome-pt-br.tex
+pdflatex -interaction=nonstopmode -halt-on-error radome-pt-br.tex
 ```
 
-Each chapter presents the English version followed by the Portuguese version. The literature-review chapter uses the bibliography already developed for the project and identifies the technical gap addressed by the proposed architecture.
+Add or reorder chapters in the matching manifest under `config/`. Write language-specific content directly in `chapters/en/` or `chapters/pt-BR/`; ordinary `\\chapter`, `\\section` and `\\subsection` commands are supported.
 
-Cada capítulo apresenta primeiro a versão em inglês e depois a versão em português. O capítulo de revisão de literatura usa a bibliografia já desenvolvida para o projeto e identifica a lacuna técnica abordada pela arquitetura proposta.
+Adicione ou reordene capítulos no manifesto correspondente em `config/`. Edite o conteúdo diretamente em `chapters/en/` ou `chapters/pt-BR/`; os comandos usuais `\\chapter`, `\\section` e `\\subsection` são suportados.
+
+`scripts/split_bilingual_chapters.py` documents the one-time migration and can recreate the initial split from `chapters/legacy-bilingual/`. Running it overwrites the language trees, so it is not part of the normal editing workflow.
+
+O script `scripts/split_bilingual_chapters.py` documenta a migração única e pode recriar a separação inicial a partir de `chapters/legacy-bilingual/`. Sua execução sobrescreve as árvores de idiomas; portanto, ele não faz parte do fluxo normal de edição.

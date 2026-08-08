@@ -1,0 +1,20 @@
+\chapter{Infraestrutura de Montanha, Validação e Riscos}
+
+A estação requer energia resiliente, UPS, baterias, gerador, enlaces ópticos, gestão térmica, proteção contra descargas, controle de EMC, segurança perimetral e logística. A seleção do sítio deve considerar relevo, horizonte, RFI local, clima, acesso, energia e disponibilidade de fibra. A qualificação ambiental deve abranger vento, vibração, chuva, umidade, salinidade, UV e gradientes térmicos.
+
+A infraestrutura temporal inclui pelo menos duas antenas GNSS externas, com coordenadas e centros de fase levantados. Elas são montadas acima ou próximas ao radome, com visão desobstruída do céu, separação física das Yagis VHF/UHF e cabos filtrados e blindados até a sala temporal. Receptores GNSS multiconstelação redundantes permitem verificação cruzada, detecção de falhas e disciplina do relógio atômico.
+
+A interface civil proposta é uma base de concreto armado em forma de paralelepípedo, com aproximadamente $4\,\mathrm{m}\times4\,\mathrm{m}$ em planta (\texttt{CIV-001}) e $3\,\mathrm{m}$ de pé-direito estrutural (\texttt{CIV-002}). Sua laje superior deve interagir com o corte inferior proposto do radome (\texttt{GEO-007}); a geometria de apoio permanece bloqueada até C2 verificar a transição necessária ou o tamanho da base. Há uma abertura de serviço na parede frontal para permitir a entrada de pessoal e equipamentos sem remover os painéis RF.
+
+A solução térmica é setorizada. O calor produzido por LNAs, ADCs, ASICs, FPGAs, transceptores ópticos e conversores DC/DC é conduzido para placas frias locais e rejeitado por caminhos de ar ou líquido monitorados. O núcleo central de sincronismo e fusão possui zona térmica independente. Sensores de condensação, temperatura de entrada e saída e telemetria de potência permitem controle em malha fechada. A deriva térmica de fase é medida, associada ao timestamp e incluída no modelo de calibração.
+
+A solução estrutural utiliza uma moldura interna portante com junções vedadas, placas nodais e reforços. Cada eixo haste/lança da Yagi externa continua do vértice da pirâmide interna através da face triangular, enquanto os painéis dielétricos fornecem proteção ambiental e transmissão RF controlada. A aceitação inclui resistência estática e estabilidade dinâmica: vento, vibração, resposta modal, expansão térmica, chuva, manutenção e ciclos térmicos repetidos.
+
+O caminho de desenvolvimento é P0 simulação de sistema, P1 demonstrador de três nós VHF/UHF, P2 tile L/S/C, P3 tile X/Ku/Ka e P4 campanha externa integrada. Os ensaios incluem S-parâmetros, padrões 3D OTA, perda e fase do radome, coerência, sincronismo, AOA calibrado, Pd/Pfa de radar passivo e resiliência após perda de enlace ou energia.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig10_roteiro.png}
+\caption{Roteiro de desenvolvimento e validação.}
+\label{fig:fig10_roteiro}
+\end{figure}

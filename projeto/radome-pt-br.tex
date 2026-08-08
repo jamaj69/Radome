@@ -1,0 +1,34 @@
+\documentclass[12pt,openright,twoside,a4paper,chapter=TITLE,brazil]{abntex2}
+\usepackage[brazil]{babel}
+\input{config/radome-common}
+\usepackage[alf]{abntex2cite}
+\sisetup{output-decimal-marker={,}}
+
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black,pdftitle={Projeto Técnico RADOME -- Versão do Documento 1.1 -- Revisão da Arquitetura 3}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{RADOME -- Documento v1.1 / Arquitetura r3}
+\rhead{Projeto Técnico}
+\cfoot{\thepage}
+
+\titulo{RADOME: Rede Distribuída de Radomes Conformais Multifaixa}
+\autor{Projeto Técnico e Científico}
+\local{Brasil}
+\data{Agosto de 2026}
+
+\begin{document}
+\imprimircapa
+\begin{resumo}[Resumo]
+Este projeto define uma rede distribuída de sensoriamento eletromagnético passivo baseada em radomes geodésicos e conformais. Integra recepção vetorial multifaixa, iluminação de oportunidade, processamento local de eventos, sincronização precisa, calibração ponta a ponta, localização passiva multiestática e infraestrutura resiliente de montanha. O documento é conceitual e destina-se a pesquisa, simulação, prototipagem e validação experimental.
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: sensoriamento passivo; radome; geolocalização; recepção multifaixa; radar passivo.
+\end{resumo}
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\listoffigures*
+\textual
+\input{config/radome-chapters-pt-br}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,20 @@
+\chapter{Registro Mínimo de Detecção}
+
+\small
+\begin{longtable}{p{0.27\textwidth}p{0.58\textwidth}}
+\toprule
+\textbf{Campo} & \textbf{Descrição}\\
+\midrule
+\texttt{station\_id} & Identificador do nó e versão da calibração\\
+\texttt{tile\_id/channel\_id} & Tile, porta de polarização e cadeia RF\\
+\texttt{timestamp\_utc} & Tempo com incerteza estimada\\
+\texttt{frequency\_hz/bandwidth\_hz} & Frequência central e largura de banda observadas\\
+\texttt{polarization} & Porta e orientação medidas para canais de polarização única; Jones ou Stokes somente para par coerente calibrado na mesma faixa\\
+\texttt{aoa\_az\_el} & Direção local e covariância\\
+\texttt{delay\_doppler} & Medidas biestáticas e qualidade\\
+\texttt{illuminator\_id} & Identidade ou hipótese do iluminador\\
+\texttt{sync\_state} & travado, em holdover ou degradado\\
+\texttt{environment} & Temperatura, umidade e estado do radome\\
+\bottomrule
+\end{longtable}
+\normalsize

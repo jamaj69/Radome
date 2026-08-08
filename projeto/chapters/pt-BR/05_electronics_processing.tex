@@ -1,0 +1,29 @@
+\chapter{Eletrônica Distribuída e Processamento de Eventos}
+
+Cada banda possui antena específica, pré-seletor, limitador, LNA, conversor quando necessário, ADC coerente, FPGA/ASIC e memória circular. A cadeia local é:
+\[
+\text{antena}\rightarrow\text{front-end RF}\rightarrow\text{ADC}\rightarrow\text{DDC/PFB/FFT}\rightarrow\text{detector}\rightarrow\text{evento}.
+\]
+O sistema executa três reduções: detecção na banda, fusão na face e fusão global do radome. As amostras brutas permanecem locais e são preservadas ao redor de gatilhos. O tráfego normal contém descritores, telemetria, resumos e capturas I/Q selecionadas, não o streaming permanente de todos os ADCs.
+
+Para a triagem de armazenamento do C3, os caminhos aeronáuticos usam uma captura complexa proposta de 8 MS/s, com 16 bits em I e 16 bits em Q para cada canal simultâneo UAT e 1090ES (\texttt{RF-012}). Uma forma de onda UHF direta selecionada usa um canal complexo proposto de 25 MS/s (\texttt{RF-013}), enquanto o protocolo biestático usa dois canais coerentes de 25 MS/s para referência e vigilância (\texttt{RF-014}). Essas taxas produzem respectivamente 512 Mbit/s, 800 Mbit/s e 1,6 Gbit/s por nó antes de enquadramento ou compressão. Janelas brutas de evento com dez segundos exigem, portanto, 0,64 GB, 1,00 GB e 2,00 GB por nó. São baselines de capacidade, não afirmações de que cada forma de onda ocupe toda a largura amostrada.
+
+Figura de ruído, IP3 e faixa dinâmica utilizável permanecem deliberadamente sem atribuição (\texttt{RF-015}) até existirem distribuição de RFI medida no sítio, diagrama de ganho da antena, rejeição do preselector e orçamento em cascata dos componentes. A seleção deve fechar simultaneamente sensibilidade e sobrevivência a bloqueadores; uma figura de ruído baixa isolada não é suficiente.
+
+Cada porta de antena atribuída a uma faixa possui seu próprio módulo de aquisição blindado, contendo pelo menos um ADC e um ASIC da faixa. Uma abertura dual-pol usa, portanto, dois invólucros independentes, um para cada canal ortogonal coerente (\texttt{MEC-004}); compartilhar a referência de amostragem não significa compartilhar uma cavidade RF/digital sem controle. Os módulos são separados por partições condutivas, juntas RF e passagens controladas para cabos e fibras. Um módulo central da face, o FFASIC, recebe eventos de todos os módulos de faixa, executa a correlação interna e se conecta ao sincronismo, monitoramento térmico, energia e enlace óptico.
+
+Termicamente, cada módulo blindado é montado sobre uma placa fria condutiva ligada a um caminho térmico controlado. A cavidade RF, a eletrônica digital e a conversão de energia são fisicamente particionadas para que fontes de calor e EMI digital não compartilhem um volume não controlado com a abertura RF sensível. Sensores de temperatura são instalados no LNA, ADC, ASIC, clock e placa fria; a deriva térmica é registrada nos metadados e aciona recalibração quando a faixa validada é excedida.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig03_modulo_face.png}
+\caption{Módulo triangular de face RF.}
+\label{fig:fig03_modulo_face}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig06_cadeia_rf.png}
+\caption{Cadeia RF e processamento de borda.}
+\label{fig:fig06_cadeia_rf}
+\end{figure}

@@ -6,7 +6,7 @@
 
 This repository consolidates a technical and scientific conception for a distributed network of geodesic radome-based sensing stations intended for passive electromagnetic surveillance, direction finding, and geolocation. The proposed architecture is designed for deployment in elevated mountain sites across Brazil, integrating multiband reception, precise time synchronization, local edge processing, and centralized fusion of observations.
 
-The authoritative technical source is `projeto/projetov1.tex` (document version 1.1, architecture revision 3). Quantitative values and their evidence status are controlled in `projeto/PARAMETERS.md`; architecture decisions are recorded in `projeto/DECISIONS.md`. Earlier documents remain historical inputs.
+The authoritative technical publications are `projeto/radome-pt-br.tex` and `projeto/radome-en.tex` (document version 1.1, architecture revision 3), compiled independently for Brazilian Portuguese and English. Quantitative values and their evidence status are controlled in `projeto/PARAMETERS.md`; architecture decisions are recorded in `projeto/DECISIONS.md`. Earlier documents remain historical inputs.
 
 The system is intended to exploit opportunistic illumination from known external sources such as cellular towers, satellites, broadcast transmitters, and other RF emitters. By combining angle of arrival, time difference of arrival, frequency difference of arrival, Doppler information, and polarization measurements, the network can infer the position and motion of emitters or reflected targets without relying on active radar transmission.
 

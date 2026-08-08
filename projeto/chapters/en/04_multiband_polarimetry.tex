@@ -1,0 +1,38 @@
+\chapter{Multiband Aperture and Polarimetry}
+
+The aperture is intentionally hybrid rather than uniform across the spectrum. One external single-polarization VHF Yagi and one external single-polarization UHF Yagi share a mast: the VHF antenna uses larger elements and the UHF antenna uses smaller elements. Their orthogonal mechanical planes provide orientation diversity across different bands, not two polarization components of one signal. Smaller L/S/C, X/Ku and K/Ka antennas or tiles occupy the face layers and local mounts. HF uses loops, crossed dipoles and platform-mode diversity. Each antenna family has its own filtering, conversion and sampling strategy, while the face preserves a common timing, calibration and fusion interface.
+
+The first demonstrator does not claim continuous spectral coverage. The 323--470 MHz and 860--960 MHz intervals are deliberately unassigned. A dedicated 960--1215 MHz aviation aperture or array supplies two simultaneous independent paths: a 978 MHz UAT preselector, limiter/LNA, coherent ADC and FPGA channel; and a 1090 MHz 1090ES preselector, limiter/LNA, coherent ADC and FPGA channel. Neither path is assigned to the 470--860 MHz UHF Yagi, and the aviation aperture does not imply continuous monitoring across its full tuning range.
+
+Polarimetric synthesis is permitted only in a same-band module that provides two simultaneous, coherent orthogonal ports at the same frequency (\texttt{POL-001}). In a local $x$--$y$ basis:
+\[
+E_{\mathrm{RHCP}}=\frac{E_x-jE_y}{\sqrt{2}},\qquad E_{\mathrm{LHCP}}=\frac{E_x+jE_y}{\sqrt{2}}.
+\]
+The equations do not combine the VHF and UHF Yagis. The first VHF/UHF demonstrator treats them as independent single-polarization channels (\texttt{POL-002}); full polarimetry requires a later dual-port or same-band crossed module. For a curved surface, valid local bases must be rotated to a common coordinate system before fusion. Polarimetric calibration is a function of frequency, angle, temperature, amplitude balance, phase and mutual coupling.
+
+A proposed four-channel mast implements VHF-X/VHF-Y at 0°/90° and UHF-A/UHF-B at 45°/135°, with four electrically independent booms and RF chains (\texttt{POL-004}--\texttt{POL-006}). For each band $b$, calibration follows:
+\[
+\widehat{\mathbf{E}}_b(f,\theta,\phi,T)=
+\mathbf{C}_b^{-1}(f,\theta,\phi,T)
+\left[\mathbf{v}_b-\widehat{\mathbf{n}}_b\right],
+\]
+where $\mathbf{C}_b$ is the measured complex $2\times2$ Jones matrix containing embedded patterns, gain/phase imbalance, delays, mutual coupling, mast and platform effects. A regularized pseudoinverse replaces the direct inverse where conditioning is poor. The UHF estimate is then rotated by $\psi=45^\circ$ into the common global basis before polarization products are formed.
+
+\section{Engineering solution}
+The crossed-band Yagi assembly is a proposed mechanical integration solution. The larger Yagi covers VHF and the smaller Yagi covers UHF; each remains independently matched, digitized and calibrated. Their outputs may be compared or fused as different-band observations, but no relative phase operation produces RHCP, LHCP, Jones or Stokes quantities from this pair. Novelty and performance are not claimed until prior-art review and measurement.
+
+For wider VHF discovery coverage, an 11-element 72--320 MHz LPDA with a 2 m maximum element is retained as a simulation candidate (\texttt{ANT-001}--\texttt{ANT-005}). It is not yet a replacement for the illustrated VHF Yagi: the approximately 2 m boom, face-edge clearance, wind load, feed transition, gain and interaction with the UHF antenna require validation.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig04_particionamento_espectro.png}
+\caption{Recommended spectral partition.}
+\label{fig:fig04_particionamento_espectro}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig05_polarimetria.png}
+\caption{Cross-band diversity versus valid same-band polarimetric acquisition.}
+\label{fig:fig05_polarimetria}
+\end{figure}

@@ -1,0 +1,28 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage[english]{babel}
+\input{config/radome-common}
+\usepackage[numbers,sort&compress]{natbib}
+\sisetup{output-decimal-marker={.}}
+
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black,pdftitle={RADOME Technical Project -- Document Version 1.1 -- Architecture Revision 3}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{RADOME -- Document v1.1 / Architecture r3}
+\rhead{Technical Project}
+\cfoot{\thepage}
+
+\title{\textbf{RADOME}\\[0.35em]\large Document Version 1.1 / Architecture Revision 3\\[0.5em]Distributed Multiband Conformal Radome Network}
+\author{Technical and Scientific Project}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+This project defines a distributed passive electromagnetic sensing network based on geodesic and conformal radomes. It integrates multiband vector reception, opportunistic illumination, local event processing, precise timing, end-to-end calibration, passive multistatic localization and resilient mountain infrastructure. The document is conceptual and intended for research, simulation, prototyping and experimental validation.
+\end{abstract}
+\tableofcontents
+\listoffigures
+\input{config/radome-chapters-en}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

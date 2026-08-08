@@ -2,7 +2,7 @@
 
 **Data de consolidação:** 8 de agosto de 2026
 **Estado:** arquitetura conceitual; desempenho operacional ainda não demonstrado
-**Documento técnico vigente:** `projeto/projetov1.tex` / `projeto/projetov1.pdf`
+**Documentos técnicos vigentes:** `projeto/radome-pt-br.tex` / `projeto/radome-pt-br.pdf` e `projeto/radome-en.tex` / `projeto/radome-en.pdf`
 
 ## 1. Síntese executiva
 

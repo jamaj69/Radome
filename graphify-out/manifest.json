@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1786159482.4246278,
-    "ast_hash": "8f42eae40a18129029b0245224ad8a4d",
+    "mtime": 1786227212.0289998,
+    "ast_hash": "fee66424da33de855eba210576528f02",
     "semantic_hash": ""
   },
   "Projeto_Radomes_Multifaixa_Revisado.md": {
@@ -55,18 +55,18 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786159130.939028,
-    "ast_hash": "0998cc273ef49a2523524a25a6b0035e",
+    "mtime": 1786227048.2365735,
+    "ast_hash": "084fe66eedae5d39791250cebe12fddb",
     "semantic_hash": ""
   },
   "ROADMAP_CORRECOES.md": {
-    "mtime": 1786219865.2629747,
-    "ast_hash": "fc1bca2948c8c066187e20b77c9e66ff",
+    "mtime": 1786227211.8649952,
+    "ast_hash": "9a78508086f72c3d1969a32e4f60ffea",
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786219818.909877,
-    "ast_hash": "a92144104488bae82008c77d1c061d43",
+    "mtime": 1786227048.372577,
+    "ast_hash": "cab69beae0bda13fd53cc4c3a0975edf",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -75,8 +75,8 @@
     "semantic_hash": ""
   },
   "projeto/README.md": {
-    "mtime": 1786219818.909877,
-    "ast_hash": "a057796449699e3cd2181b289b7ab803",
+    "mtime": 1786227244.9618897,
+    "ast_hash": "f5cc72a4c79d7363a0442f74f58c0f85",
     "semantic_hash": ""
   },
   "projeto/figures/baseline_35S_concrete_base/README.md": {
@@ -332,6 +332,21 @@
   "projeto/figures/fig16_tetrahedral_face_cluster.png": {
     "mtime": 1786217148.4485865,
     "ast_hash": "6703e7f2afd3750c5ccaf4539a7fea68",
+    "semantic_hash": ""
+  },
+  "projeto/scripts/split_bilingual_chapters.py": {
+    "mtime": 1786227244.8018854,
+    "ast_hash": "4f2a2de87e96aebfb1a0ec36978b8cc3",
+    "semantic_hash": ""
+  },
+  "projeto/radome-en.pdf": {
+    "mtime": 1786227096.3978748,
+    "ast_hash": "9c74ec7221a7b1a652cd18ba0b8354c7",
+    "semantic_hash": ""
+  },
+  "projeto/radome-pt-br.pdf": {
+    "mtime": 1786227189.9244025,
+    "ast_hash": "f3dc64828409e9d6a3615c23c3efbaa4",
     "semantic_hash": ""
   }
 }

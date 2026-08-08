@@ -17,6 +17,7 @@ __pycache__/
 *.fdb_latexmk
 *.fls
 *.log
+*.lof
 *.out
 *.toc
 *.synctex.gz

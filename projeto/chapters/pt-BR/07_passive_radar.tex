@@ -1,0 +1,48 @@
+\chapter{Processamento de Radar Passivo}
+
+A cadeia de radar passivo equaliza os canais de referência e vigilância, cancela o sinal direto e o clutter, calcula a função de ambiguidade cruzada, detecta com controle de falso alarme e associa as detecções entre os nós. A saída é uma trilha com incerteza, não apenas uma coordenada. A detecção de emissor direto deve permanecer separada da detecção por reflexão biestática.
+
+\section{Experimento de consistência de transmissão aeronáutica}
+O sinal aeronáutico de referência é o ADS-B, principalmente o 1090ES em 1090 MHz (\texttt{EXP-001}) na aviação comercial. O canal alternativo UAT em 978 MHz (\texttt{EXP-002}) é contextual e relevante sobretudo para determinados usos da aviação geral nos Estados Unidos. Ambos são atribuídos à abertura ou array aeronáutico dedicado de 960--1215 MHz, e não à Yagi UHF de 470--860 MHz. Um receptor diplexado fornece caminhos simultâneos e independentes por serviço, cada qual com preselector, limitador/LNA, ADC coerente e canal FPGA próprios. As mensagens ADS-B são transmitidas automaticamente e repetidamente, com periodicidade dependente do tipo de informação; não constituem um único pacote contínuo contendo todos os parâmetros em todos os instantes. Os campos esperados incluem posição derivada de GNSS, altitude, velocidade, trajetória e identificação da aeronave.
+
+Dois nós radome (\texttt{EXP-005}), separados por uma linha de base proposta de $100\,\mathrm{km}$ (\texttt{EXP-003}), recebem de forma independente a transmissão da aeronave. Essa geometria ilustrativa é distinta do demonstrador-alvo de três nós (\texttt{ARC-002}). Para cada nó, o sistema registra potência recebida $P_i$, ângulo de chegada local $\mathrm{AOA}_i$, timestamp de hardware $t_i$ e estimativa Doppler $f_{D,i}$. A fusão calcula:
+\[
+\Delta t=t_A-t_B,\qquad \Delta f_D=f_{D,A}-f_{D,B}.
+\]
+Com as coordenadas levantadas dos nós, hipóteses de efemérides da aeronave e incerteza de propagação, esses observáveis produzem uma região de consistência para altitude, posição e velocidade. O resultado verifica se os parâmetros transmitidos são compatíveis com a observação física; não é uma garantia cega de que todo parâmetro transmitido seja verdadeiro.
+
+O ADS-B fornece uma identidade e um estado cooperativos, enquanto a geometria RF dos dois nós fornece uma verificação independente baseada em potência recebida, AOA, TDOA e Doppler.
+
+A linha de base nominal de 100 km permanece uma geometria de triagem, não uma distância de implantação aprovada. Com as alturas propostas para triagem de 1000 m para a estação e 10000 m para a aeronave (\texttt{EXP-010}), um cálculo padrão de horizonte radioelétrico com Terra efetiva fornece aproximadamente 542 km de horizonte geométrico mútuo. Isso demonstra apenas que a curvatura não exclui 100 km nesse exemplo. Mascaramento pelo terreno, diagramas das antenas, margem de enlace, visibilidade comum, GDOP, autorização de espectro e coordenadas reais dos sítios ainda precisam ser fechados antes do ensaio de campo.
+
+\section{Iluminadores UHF independentes}
+Transmissores conhecidos de televisão UHF ou de outros serviços de radiodifusão podem fornecer um teste independente de triangulação junto com o ADS-B. Seus sinais diretos podem ser usados para calibrar AOA, sincronismo, mapeamento de potência recebida e geometria do sítio quando as coordenadas do transmissor e as características da forma de onda forem conhecidas. Seus sinais refletidos também podem apoiar um experimento biestático separado, mas a verificação de emissor direto e a localização por reflexão do alvo não devem ser misturadas no mesmo estimador sem um modelo explícito de propagação.
+
+O experimento deve comparar: (i) ADS-B em 1090 MHz como emissor direto cooperativo; (ii) sinais UHF conhecidos de radiodifusão, provisoriamente na região de 470--860 MHz (\texttt{EXP-004}), como iluminadores diretos de referência; e (iii) ecos biestáticos de um alvo controlado ou rastreado independentemente. A concordância entre esses canais testa a triangulação, a calibração e o relatório de covariância da rede de radomes, em vez de apenas repetir a mensagem da aeronave.
+
+\section{Protocolos experimentais independentes}
+O protocolo de emissor direto cooperativo (\texttt{EXP-006}) registra identidade e estado decodificados, potência recebida, AOA, tempo de hardware e Doppler. Sua verdade-terreno é o estado derivado de GNSS e decodificado, com coordenadas dos receptores levantadas independentemente; seu estimador verifica a consistência RF versus mensagem, e suas métricas são taxa de associação e resíduos de posição, velocidade, AOA, tempo e Doppler com incerteza declarada.
+
+O protocolo de calibração por transmissor conhecido (\texttt{EXP-007}) registra a forma de onda UHF direta, potência recebida, AOA e atraso calibrado do canal. Sua verdade-terreno é a posição do transmissor, o setor da antena e os metadados da forma de onda levantados independentemente; seu estimador resolve o caminho direto esperado, e suas métricas são resíduos de AOA, atraso e mapa de potência, além da repetibilidade versus tempo e temperatura.
+
+O protocolo de reflexão biestática (\texttt{EXP-008}) usa canais simultâneos de referência e vigilância, cancelamento do caminho direto e estimador por função de ambiguidade cruzada. Sua verdade-terreno é a trajetória de um alvo controlado ou rastreado independentemente, junto com coordenadas levantadas do transmissor e dos receptores; suas métricas são probabilidade de detecção, probabilidade de falso alarme e erros de atraso, Doppler e localização com consistência de covariância. Nenhum resultado dos dois protocolos de sinal direto substitui essa evidência biestática.
+
+
+\section{Torres celulares como iluminadores calibrados}
+As torres celulares acrescentam um conjunto particularmente valioso de iluminadores conhecidos. Suas coordenadas levantadas, orientações setoriais e alocações nominais de portadoras permitem usar múltiplas frequências e formas de onda celulares como referências diretas. O sinal direto pode calibrar cobertura, AOA, sincronismo e consistência de potência recebida; as reflexões em aeronaves, terreno ou alvos controlados podem então testar a detecção biestática em várias portadoras e larguras de banda. Cada portadora deve ser tratada como um caso separado de forma de onda e propagação, registrando potência do transmissor, setor da antena, agendamento, sincronismo e RFI local nos metadados.
+
+Isso transforma a infraestrutura celular em um campo de testes distribuído para o conceito de radar de múltiplos radomes de banda larga. O sistema não se torna um radar ativo: os radomes continuam sendo receptores passivos, e os observáveis úteis vêm das transmissões conhecidas, da geometria e de seus componentes refletidos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig15_aircraft_two_radomes_100km.png}
+\caption{Dois radomes separados por 100 km recebem uma transmissão aeronáutica e fundem observáveis de potência, AOA, TDOA e Doppler.}
+\label{fig:fig15_aircraft_two_radomes_100km}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig09_fluxo_processamento.png}
+\caption{Processamento passivo multiestático.}
+\label{fig:fig09_fluxo_processamento}
+\end{figure}

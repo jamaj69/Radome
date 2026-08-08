@@ -1,0 +1,59 @@
+\chapter{Geodesic Geometry and Radome Structure}
+
+Architecture revision 3 starts from a proposed regular icosahedron (parameters \texttt{GEO-001} and \texttt{GEO-002}) with $V_0=12$, $E_0=30$ and $F_0=20$. The tetrahedral candidate in ADR-012 uses a class-I, frequency-2 planar subdivision: each equilateral macroface is split at its edge midpoints into four coplanar equilateral receiver faces, without projecting the new points to a sphere. The closed envelope verified by \texttt{geometry/verify\_tetrahedral\_face\_geometry.py} remains
+\[
+V=42,\qquad E=120,\qquad F=80,
+\]
+with Euler consistency $V-E+F=2$ (\texttt{GEO-003}, \texttt{GEO-009} and \texttt{GEO-010}). Every external receiver face now has three \SI{2.0000}{m} edges (\texttt{GEO-004} and \texttt{GEO-015}); each macroface edge is \SI{4.0000}{m}. The resulting faceted envelope has circumradius \SI{3.8042}{m} and inradius \SI{3.0230}{m} (\texttt{GEO-017}). These values replace the projected-sphere dimensions for this candidate.
+
+A literal regular tetrahedron with all six edges equal to \SI{2}{m} cannot be repeated over this closed inward assembly: the verifier detects 120 volumetric interpenetrations (\texttt{GEO-019}). The adopted interpretation keeps only the three external edges at \SI{2}{m} and uses an independent inward apex \SI{0.75}{m} behind each face centre (\texttt{GEO-021}). The 80 shallow tetrahedral cells have no volumetric collision (\texttt{GEO-020}), and their lateral edges are \SI{1.3769}{m}. Adjacent apexes are separated by \SI{0.5435}{m} to \SI{1.1547}{m}; the two independent Faraday walls leaving each shared external edge therefore bound an inter-cell corridor for separated power, optical fibre, bonding and maintenance routes (\texttt{MEC-003} and \texttt{MEC-005}). The construction reserves an internal free-core radius of at least \SI{2.2730}{m} (\texttt{GEO-022}). The former circular cut and support ring belong to the projected candidate and are historical; C2 remains open until a boundary made of complete modules and a new civil transition are verified.
+
+The mechanical skeleton, dielectric panels and internal RF modules have different but coordinated geometries. A face is a mechanical and computational sector, not an electromagnetically isolated region. Angular overlap between neighbouring faces is required for calibration, interpolation and direction estimation.
+
+The external RF aperture occupies the unshielded triangular face. For any band declared dual-polarized, two simultaneous orthogonal antenna components follow the local tangent basis $\mathbf{t}_u,\mathbf{t}_v$ and use independent feeds and shielded ADC/ASIC enclosures; coherence and polarization products remain subject to the same-band calibration requirements of C1. The other three tetrahedral faces are conductive Faraday walls. Penetrations use filtered feedthroughs, and the enclosures bond to a conductive cold plate without making the dielectric aperture the primary structural load path.
+
+
+
+The internal joints form continuous load paths between the triangular frame members and the neighbouring faces. Sealed structural seams, local gussets and an internal ring or node plate transfer wind, vibration and maintenance loads without relying on the dielectric skin alone. The joint design must be verified by structural analysis and environmental tests.
+
+\section{Structural resolution}
+The external Yagi load is transferred through the base mast into the triangular frame and then into the internal node and neighbouring face joints. The dielectric skin is an RF and environmental enclosure, not the sole primary load path. The structural model must include wind pressure on the Yagi and radome, mast bending, equipment mass, thermal expansion, vibration, maintenance loads and lightning-current paths. This closes the architectural gap between an antenna concept and a supportable face module, while finite-element analysis, modal testing and climatic qualification remain required.
+
+
+
+The Blender model makes the mounting convention explicit: the triangular RF face lies on the outer radome surface, while the pyramid volume and its apex are directed inward. A support strut starts at the internal apex, passes through the face interface and continues as the common boom axis of the external VHF and UHF Yagis. The elements of both antennas are transverse to this axis and occupy orthogonal planes.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig16_tetrahedral_face_cluster.png}
+\caption{Seven contiguous shallow tetrahedral cells with local tangent bases and a reserved internal service core.}
+\label{fig:fig16_tetrahedral_face_cluster}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig11_face_yagi_camadas.pdf}
+\caption{Two-metre triangular face with crossed external VHF and UHF Yagis: orthogonal transverse elements, independent feeds and distinct scales.}
+\label{fig:fig11_face_yagi_camadas}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig02_zonamento_radome.png}
+\caption{Functional zoning.}
+\label{fig:fig02_zonamento_radome}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig13_radome_blender.png}
+\caption{Blender model of the radome and exploded face with crossed VHF/UHF Yagis.}
+\label{fig:fig13_radome_blender}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig14_radome_interior_blender.png}
+\caption{Internal Blender inspection view with transparent shell, structural ties, service trunks and shielded modules.}
+\label{fig:fig14_radome_interior_blender}
+\end{figure}

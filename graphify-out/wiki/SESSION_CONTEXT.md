@@ -44,6 +44,7 @@ This is a durable log of the chat content visible to the agent. It is not a verb
 20. A depth sweep from 0.20 m to 1.00 m found no collisions for shallow full-face cells. The adopted baseline uses a 0.75 m normal height, 240 independent Faraday walls, 120 inter-cell service corridors and a minimum free-core radius of 2.2730 m.
 21. Assistant regenerated the Blender scene and `.blend`, updated the controlled documents and PDF, updated Graphify and committed `e0889e5 Reserve service core with shallow face cells`.
 22. User asked whether the session, Graphify and roadmap updates had been persisted. Audit confirmed Graphify and roadmap commits, but found this session log stale and one obsolete “hub” word in the C2 summary; both were corrected in the present increment.
+23. User requested replacing the single bilingual article with independent Brazilian Portuguese and English editions. The refactoring introduced `radome-pt-br.tex` with ABNTEX2/ABNT citations, `radome-en.tex` with English language settings, separate chapter trees, shared configuration, language-specific chapter manifests and independently compiled PDFs.
 
 ## Commits created in this session
 
@@ -71,6 +72,7 @@ All commits below used author `github-copilot[bot] <198982749+github-copilot[bot
 - Adjacent local apexes are separated by 0.5435–1.1547 m, reserving a minimum internal free-core radius of 2.2730 m for power, optical fibre, bonding, cooling and maintenance distribution.
 - C2 remains open for a lower boundary made of complete modules, real wall/joint thicknesses, corridor accessibility, Faraday continuity and a recalculated civil interface.
 - C3 is in progress. Its spectral architecture, aviation paths, experiment separation and acquisition/horizon screening are complete; RF cascade, link and site budgets remain open.
+- The technical publication now has two authoritative editions: `projeto/radome-pt-br.tex`/`.pdf` and `projeto/radome-en.tex`/`.pdf`. The former bilingual chapters are preserved under `projeto/chapters/legacy-bilingual/` only for traceability.
 - Deliberate first-demonstrator gaps are `323–470 MHz` and `860–960 MHz`.
 - A dedicated `960–1215 MHz` aviation aperture supplies independent UAT 978 MHz and 1090ES paths; neither service is assigned to the `470–860 MHz` UHF Yagi.
 - `EXP-006`, `EXP-007` and `EXP-008` separately control cooperative direct ADS-B, known-transmitter calibration and bistatic reflection.

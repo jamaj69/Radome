@@ -39,11 +39,13 @@ If Graphify is unavailable, continue with `rg` and the stable context files, sta
 
 ## Project Layout
 
-- `projeto/projetov1.tex`: master LaTeX document;
-- `projeto/chapters/`: bilingual chapter files included by the master;
+- `projeto/radome-pt-br.tex`: authoritative Brazilian Portuguese LaTeX master using ABNTEX2;
+- `projeto/radome-en.tex`: authoritative English LaTeX master;
+- `projeto/projetov1.tex`: compatibility entry point for the Brazilian Portuguese edition;
+- `projeto/chapters/pt-BR/` and `projeto/chapters/en/`: language-specific chapter files;
 - `projeto/figures/`: technical figures, Blender scenes and render scripts;
 - `projeto/references.bib`: bibliography used by the master document;
-- `projeto/projetov1.pdf`: compiled technical article;
+- `projeto/radome-pt-br.pdf` and `projeto/radome-en.pdf`: compiled technical editions;
 - `projeto/figures/radome_v1_3d.blend`: current Blender scene;
 - `projeto/figures/baseline_35S_concrete_base/`: preserved 3D baseline before later scene expansions.
 
@@ -53,10 +55,14 @@ Run these commands from `projeto/`:
 
 ```bash
 cd /home/jamaj/src/Radome/projeto
-pdflatex -interaction=nonstopmode -halt-on-error projetov1.tex
-bibtex projetov1
-pdflatex -interaction=nonstopmode -halt-on-error projetov1.tex
-pdflatex -interaction=nonstopmode -halt-on-error projetov1.tex
+pdflatex -interaction=nonstopmode -halt-on-error radome-en.tex
+bibtex radome-en
+pdflatex -interaction=nonstopmode -halt-on-error radome-en.tex
+pdflatex -interaction=nonstopmode -halt-on-error radome-en.tex
+pdflatex -interaction=nonstopmode -halt-on-error radome-pt-br.tex
+bibtex radome-pt-br
+pdflatex -interaction=nonstopmode -halt-on-error radome-pt-br.tex
+pdflatex -interaction=nonstopmode -halt-on-error radome-pt-br.tex
 ```
 
 The final LaTeX pass is the authoritative pass for undefined references and citations. Intermediate citation warnings are expected before BibTeX and subsequent LaTeX passes.
@@ -64,7 +70,7 @@ The final LaTeX pass is the authoritative pass for undefined references and cita
 Useful validation command:
 
 ```bash
-grep -E '^!|Fatal error|undefined|multiply defined' /tmp/projetov1_*log /tmp/projetov1_*.log 2>/dev/null || true
+grep -E '^!|Fatal error|undefined|multiply defined' radome-en.log radome-pt-br.log 2>/dev/null || true
 ```
 
 The master document uses the bibliography copied from `radome_antenna_literature_review/references.bib`. Do not replace it with an unrelated bibliography without updating the literature-review chapter.
@@ -139,12 +145,12 @@ The scenario models ADS-B 1090ES at 1090 MHz, with 978 MHz UAT as contextual alt
 
 ## Reproducibility and Editing Rules
 
-- Preserve the bilingual structure: English content followed by Portuguese content in each chapter.
+- Preserve the two independent language trees: English under `chapters/en/` and Brazilian Portuguese under `chapters/pt-BR/`.
 - Keep figures and scripts in `projeto/figures/`.
 - Use the existing measured/calibrated terminology; do not claim operational performance from a conceptual diagram.
 - Distinguish architectural solutions from parameters still requiring simulation or measurement.
 - Do not commit Blender backup files such as `*.blend1`.
-- After changing a figure or chapter, compile `projetov1.tex` before claiming completion.
+- After changing a shared figure or either language chapter, compile both authoritative masters before claiming completion.
 - Keep the baseline scene untouched; create a new named baseline or branch of the scene for major 3D expansions.
 
 ## Mandatory Commit Per Change

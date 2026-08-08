@@ -1,0 +1,60 @@
+\chapter{Geometria Geodésica e Estrutura do Radome}
+
+A revisão 3 da arquitetura parte de um icosaedro regular proposto (parâmetros \texttt{GEO-001} e \texttt{GEO-002}), com $V_0=12$, $E_0=30$ e $F_0=20$. A candidata tetraédrica da ADR-012 usa uma subdivisão planar classe I de frequência 2: cada macroface equilátera é dividida pelos pontos médios das arestas em quatro faces receptoras equiláteras e coplanares, sem projetar os novos pontos para uma esfera. O envelope fechado verificado por \texttt{geometry/verify\_tetrahedral\_face\_geometry.py} permanece
+\[
+V=42,\qquad E=120,\qquad F=80,
+\]
+com consistência de Euler $V-E+F=2$ (\texttt{GEO-003}, \texttt{GEO-009} e \texttt{GEO-010}). Todas as faces receptoras externas passam a ter três arestas de \SI{2.0000}{m} (\texttt{GEO-004} e \texttt{GEO-015}), enquanto cada macroaresta mede \SI{4.0000}{m}. O envelope facetado possui raio circunscrito de \SI{3.8042}{m} e inraio de \SI{3.0230}{m} (\texttt{GEO-017}). Esses valores substituem as dimensões da esfera projetada para esta candidata.
+
+Um tetraedro regular literal, com as seis arestas de \SI{2}{m}, não pode ser repetido nesse conjunto fechado voltado para dentro: o verificador detecta 120 interpenetrações volumétricas (\texttt{GEO-019}). A interpretação adotada mantém apenas as três arestas externas com \SI{2}{m} e usa um ápice interno independente a \SI{0.75}{m} do centro de cada face (\texttt{GEO-021}). As 80 células tetraédricas rasas não apresentam colisão volumétrica (\texttt{GEO-020}) e suas arestas laterais medem \SI{1.3769}{m}. Os ápices vizinhos ficam separados por \SI{0.5435}{m} a \SI{1.1547}{m}; as duas paredes Faraday independentes que partem de cada aresta externa compartilhada delimitam, portanto, um corredor intercelular para rotas separadas de energia, fibra óptica, equipotencialização e manutenção (\texttt{MEC-003} e \texttt{MEC-005}). A construção reserva um núcleo interno livre com raio mínimo de \SI{2.2730}{m} (\texttt{GEO-022}). O corte circular e o anel de apoio anteriores pertencem à candidata projetada e são históricos; o C2 permanece aberto até verificar uma borda formada por módulos completos e uma nova transição civil.
+
+O esqueleto mecânico, os painéis dielétricos e os módulos RF internos possuem geometrias diferentes, porém coordenadas. Uma face é um setor mecânico e computacional, não uma região eletromagneticamente isolada. A sobreposição angular entre faces vizinhas é necessária para calibração, interpolação e estimação de direção.
+
+A abertura RF externa ocupa a face triangular não blindada. Para qualquer faixa declarada como dual-pol, dois componentes ortogonais e simultâneos seguem a base tangente local $\mathbf{t}_u,\mathbf{t}_v$ e usam alimentações e invólucros ADC/ASIC blindados independentes; a coerência e os produtos polarimétricos continuam sujeitos à calibração na mesma faixa exigida pelo C1. As outras três faces tetraédricas são paredes condutivas da gaiola de Faraday. As passagens usam feedthroughs filtrados e os invólucros se ligam a uma placa fria condutiva sem tornar a abertura dielétrica o caminho estrutural primário.
+
+
+As junções internas formam caminhos contínuos de carga entre os membros da estrutura triangular e as faces vizinhas. Costuras estruturais vedadas, reforços locais e um anel ou placa nodal interna transferem cargas de vento, vibração e manutenção sem depender apenas da pele dielétrica. O conjunto deve ser verificado por análise estrutural e ensaios ambientais.
+
+
+O modelo Blender torna explícita a convenção de montagem: a face RF triangular está na superfície externa do radome, enquanto o volume da pirâmide e seu vértice apontam para dentro. Uma haste de suporte parte do vértice interno, atravessa a interface da face e continua como o eixo comum das lanças das Yagis VHF e UHF externas. Os elementos de ambas as antenas são transversais a esse eixo e ocupam planos ortogonais.
+
+
+
+
+\section{Solução estrutural}
+A carga da Yagi externa é transferida pela haste de base para a moldura triangular e, em seguida, para o nó interno e as junções das faces vizinhas. A pele dielétrica é um fechamento RF e ambiental, não o único caminho estrutural primário. O modelo estrutural deve incluir pressão de vento na Yagi e no radome, flexão da haste, massa dos equipamentos, expansão térmica, vibração, cargas de manutenção e caminhos de corrente de descargas. Isso fecha a lacuna arquitetural entre um conceito de antena e um módulo de face sustentado, embora ainda sejam necessários análise por elementos finitos, ensaio modal e qualificação climática.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig16_tetrahedral_face_cluster.png}
+\caption{Sete células tetraédricas rasas contíguas com bases tangentes locais e núcleo interno de serviço reservado.}
+\label{fig:fig16_tetrahedral_face_cluster}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig11_face_yagi_camadas.pdf}
+\caption{Face triangular de 2 m com Yagis VHF e UHF externas cruzadas: elementos transversais ortogonais, alimentações independentes e escalas distintas.}
+\label{fig:fig11_face_yagi_camadas}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{fig02_zonamento_radome.png}
+\caption{Zoneamento funcional.}
+\label{fig:fig02_zonamento_radome}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig13_radome_blender.png}
+\caption{Modelo Blender do radome e da face explodida com Yagis VHF/UHF cruzadas.}
+\label{fig:fig13_radome_blender}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig14_radome_interior_blender.png}
+\caption{Vista interna de inspeção no Blender com casca transparente, tirantes estruturais, troncos de serviço e módulos blindados.}
+\label{fig:fig14_radome_interior_blender}
+\end{figure}
