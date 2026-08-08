@@ -131,32 +131,30 @@ for point in base:
     bpy.context.object.name = "Internal node plate"
     bpy.context.object.data.materials.append(frame_mat)
 
-# External antenna: a support strut runs from the inward apex through the
-# face to the outer bracket. The Yagi boom is tangent to the face; directors
-# are transverse to the boom, matching the reference antenna.
+# External antenna: the support strut from the inward apex continues as the
+# Yagi boom. The boom and support are collinear; the parasitic elements are
+# transverse to that common axis.
 yagi_x = offset.x + 0.32
 mast_base = apex
 mast_top = Vector((yagi_x, 0.0, 0.0))
 cylinder_between("Antenna support from inward pyramid apex", mast_base, mast_top, 0.065, mast_mat)
-boom_bottom = Vector((yagi_x, -0.02, 0.25))
-boom_top = Vector((yagi_x, -0.02, 2.65))
-cylinder_between("Yagi longitudinal boom", boom_bottom, boom_top, 0.045, yagi_mat)
+boom_end = Vector((offset.x + 2.75, 0.0, 0.0))
+cylinder_between("Yagi boom extension of apex support", mast_top, boom_end, 0.045, yagi_mat)
 # Reflector at bottom, driven folded loop, and directors.
-cylinder_between("Yagi reflector", Vector((yagi_x, -0.02, 0.25)), Vector((yagi_x, -0.02, 1.0)), 0.035, yagi_mat)
-for z, half in [(0.35, 0.47), (0.77, 0.43), (1.18, 0.39), (1.59, 0.35), (2.0, 0.31), (2.4, 0.27)]:
-    cylinder_between("Yagi director", Vector((yagi_x, -half, z)), Vector((yagi_x, half, z)), 0.022, yagi_mat)
+cylinder_between("Yagi reflector", Vector((yagi_x, 0.0, 0.0)), Vector((yagi_x, 0.0, 0.78)), 0.035, yagi_mat)
+for x, half in [(0.62, 0.47), (1.03, 0.43), (1.43, 0.39), (1.83, 0.35), (2.23, 0.31), (2.62, 0.27)]:
+    x_position = offset.x + x
+    cylinder_between("Yagi transverse element", Vector((x_position, -half, 0.0)), Vector((x_position, half, 0.0)), 0.022, yagi_mat)
 # Folded driven element as a rectangular rounded loop approximated by four cylinders.
-loop_z = 1.38
+loop_x = offset.x + 1.35
 loop_half_y = 0.58
-loop_half_x = 0.12
-loop_left = Vector((yagi_x - loop_half_x, -loop_half_y, loop_z))
-loop_right = Vector((yagi_x + loop_half_x, loop_half_y, loop_z))
-cylinder_between("Yagi folded driven element", Vector((yagi_x - loop_half_x, -loop_half_y, loop_z),), Vector((yagi_x + loop_half_x, -loop_half_y, loop_z)), 0.032, yagi_gold)
-cylinder_between("Yagi folded driven element", Vector((yagi_x + loop_half_x, -loop_half_y, loop_z),), Vector((yagi_x + loop_half_x, loop_half_y, loop_z)), 0.032, yagi_gold)
-cylinder_between("Yagi folded driven element", Vector((yagi_x + loop_half_x, loop_half_y, loop_z),), Vector((yagi_x - loop_half_x, loop_half_y, loop_z)), 0.032, yagi_gold)
-cylinder_between("Yagi folded driven element", Vector((yagi_x - loop_half_x, loop_half_y, loop_z),), Vector((yagi_x - loop_half_x, -loop_half_y, loop_z)), 0.032, yagi_gold)
+loop_half_z = 0.12
+cylinder_between("Yagi folded driven element", Vector((loop_x, -loop_half_y, -loop_half_z)), Vector((loop_x, loop_half_y, -loop_half_z)), 0.032, yagi_gold)
+cylinder_between("Yagi folded driven element", Vector((loop_x, loop_half_y, -loop_half_z)), Vector((loop_x, loop_half_y, loop_half_z)), 0.032, yagi_gold)
+cylinder_between("Yagi folded driven element", Vector((loop_x, loop_half_y, loop_half_z)), Vector((loop_x, -loop_half_y, loop_half_z)), 0.032, yagi_gold)
+cylinder_between("Yagi folded driven element", Vector((loop_x, -loop_half_y, loop_half_z)), Vector((loop_x, -loop_half_y, -loop_half_z)), 0.032, yagi_gold)
 # Feed stalk and bracket.
-cylinder_between("Yagi feed stalk", Vector((yagi_x - 0.03, 0, loop_z)), Vector((offset.x + 1.38, 0, loop_z)), 0.035, yagi_gold)
+cylinder_between("Yagi feed stalk", Vector((yagi_x, 0, 0)), Vector((offset.x + 1.38, 0, 0)), 0.035, yagi_gold)
 bpy.ops.mesh.primitive_cube_add(size=1, location=offset + Vector((1.37, 0, -0.85)))
 bracket = bpy.context.object
 bracket.name = "Yagi base bracket"
@@ -174,7 +172,7 @@ labels = [
     ("RADOME shell / casca", (-3.7, 0.0, 5.0), 0.22, white_mat),
     ("EXPLODED FACE / FACE EXPLODIDA", (3.0, -2.6, 4.3), 0.22, white_mat),
     ("2 m triangular face", (2.4, -2.35, 3.9), 0.18, yagi_gold),
-    ("VHF Yagi outside face; apex strut inside", (3.2, -2.45, 3.55), 0.16, yagi_gold),
+    ("VHF Yagi boom = apex support axis", (3.2, -2.45, 3.55), 0.16, yagi_gold),
     ("shielded ADC + ASIC layers", (3.4, 2.1, 2.1), 0.14, white_mat),
     ("FFASIC / clock / fibre / DC", (3.7, 2.1, 0.4), 0.14, white_mat),
 ]
