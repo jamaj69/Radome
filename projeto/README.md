@@ -14,6 +14,12 @@ O projeto é organizado em torno de [projetov1.tex](projetov1.tex). Ele é o arq
 - `references.bib`: bibliography copied from `radome_antenna_literature_review` / bibliografia copiada de `radome_antenna_literature_review`;
 - `projetov1.pdf`: compiled version / versão compilada.
 
+## 3D baseline / Linha de base 3D
+
+The current Blender scene is preserved in `figures/baseline_35S_concrete_base/`. This baseline contains the 35-degree-south radome cut, the 4 m x 4 m x 3 m reinforced-concrete base, the access opening, the internal pyramid and the external VHF Yagi. It is the reference scene for the next stage, in which identical face modules will be instantiated across the radome.
+
+A cena Blender atual está preservada em `figures/baseline_35S_concrete_base/`. Essa linha de base contém o corte do radome em 35 graus sul, a base de concreto armado de 4 m x 4 m x 3 m, a abertura de acesso, a pirâmide interna e a Yagi VHF externa. Ela é a cena de referência para a próxima etapa, na qual módulos de face idênticos serão instanciados em todo o radome.
+
 ## Compilation / Compilação
 
 From this directory / A partir deste diretório:
