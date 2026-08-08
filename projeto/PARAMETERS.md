@@ -43,8 +43,12 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | GEO-011 | Diâmetro do anel de apoio se a menor corda for 2 m | 5.9953 | m | Derivado | `geometry/verify_radome_geometry.py` | Engenharia civil | Compatibilizar com base CIV-001 |
 | GEO-012 | Topologia do segmento cortado C2 | V=51, E=124, F=74, Euler=1 | — | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Verificador C2 |
 | GEO-013 | Borda do segmento cortado C2 | 16 vértices / 16 arestas | — | Derivado | `geometry/verify_radome_geometry.py` | Engenharia civil | Dimensionar transição para CIV-001 |
-| CIV-001 | Planta da base de concreto | 4 × 4 | m | Proposto | `08_infrastructure_validation.tex` | Engenharia civil | Compatibilizar com anel de apoio C2 |
+| GEO-014 | Corda da macroface icosaédrica na escala C2 | 3.8478 | m | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Verificador C2 |
+| GEO-015 | Classes de corda das subfaces C2 | 2.0000 / 2.2617 | m | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Considerar tolerâncias estruturais |
+| GEO-016 | Altura do segmento cortado C2 | 5.7584 | m | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Sincronizar Blender C4 |
+| CIV-001 | Planta da base de concreto | 4 × 4 | m | Proposto | `08_infrastructure_validation.tex` | Engenharia civil | Não suporta diretamente o anel C2 sem transição |
 | CIV-002 | Altura estrutural livre da base | 3 | m | Proposto | `08_infrastructure_validation.tex` | Engenharia civil | Estudo estrutural e de acesso |
+| CIV-003 | Envelope quadrado mínimo da transição de apoio C2 | 6.6 × 6.6 | m | Proposto | `geometry/verify_radome_geometry.py`; `03_geometry_radome.tex` | Engenharia civil | Grade beam ou moldura estrutural a detalhar |
 | MEC-001 | Elemento transversal máximo da Yagi VHF | 2 | m | Proposto | `03_geometry_radome.tex` | Antenas/estruturas | Modelo EM e cargas de vento |
 | MEC-002 | Ângulo nominal entre os planos das Yagis VHF e UHF | 90 | grau | Proposto | `03_geometry_radome.tex` | Antenas/estruturas | Verificar montagem; não usar como base polarimétrica entre faixas |
 

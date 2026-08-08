@@ -10,7 +10,7 @@
 |---|---|---|
 | C0 — baseline documental | Aprovado com bloqueios | Fonte, versionamento, parâmetros e ADRs aprovados; conflitos seguem bloqueados para C1–C3 |
 | C1 — polarimetria correta | Aprovado no nível arquitetural | Síntese restrita a duas portas coerentes na mesma faixa; Yagis VHF/UHF declaradas single-pol independentes |
-| C2 — geometria consistente | Bloqueado | Malha, raio, faces, corte e base derivados de um modelo paramétrico único |
+| C2 — geometria consistente | Aprovado no nível paramétrico | Malha, raio, faces, corte e base derivados de um modelo paramétrico único |
 | C3 — cobertura espectral | Em aberto | Faixas sem lacunas acidentais e cadeia explícita para ADS-B 1090 MHz |
 | C4 — modelo 3D sincronizado | Bloqueado por C2 | Blender e figuras gerados a partir dos parâmetros aprovados |
 | C5 — consistência científica | Em aberto | Novidade, referências e limites formulados com evidência apropriada |
@@ -51,11 +51,11 @@
 **Dependências:** C0; pode ocorrer em paralelo com a Onda 1.
 
 1. [x] Definir formalmente o poliedro base e o método de subdivisão/projeção.
-2. Separar aresta da macroface, dimensões das subfaces, raio circunscrito, diâmetro e altura do segmento cortado.
+2. [x] Separar aresta da macroface, dimensões das subfaces, raio circunscrito, diâmetro e altura do segmento cortado.
 3. [x] Recalcular `V`, `E` e `F` para o envelope fechado e para a estrutura efetivamente cortada.
 4. [x] Definir o corte em coordenada geométrica (`ângulo polar` ou `z/R`), evitando a ambiguidade de “latitude 35° S”.
-5. Dimensionar o anel de apoio e compatibilizá-lo com a base de concreto; ampliar a base ou especificar uma transição estrutural.
-6. Produzir verificação automática de Euler, comprimentos, raio do apoio e envelope da base.
+5. [x] Dimensionar o anel de apoio e compatibilizá-lo com a base de concreto; ampliar a base ou especificar uma transição estrutural.
+6. [x] Produzir verificação automática de Euler, comprimentos, raio do apoio e envelope da base.
 
 **Gate C2:** um arquivo de parâmetros reproduz todas as dimensões publicadas e passa verificações geométricas e de apoio sem valores manuais conflitantes.
 

@@ -14,6 +14,10 @@ import math
 FREQUENCY = 2
 CUT_LATITUDE_DEG = -35.0
 REFERENCE_EDGE_M = 2.0
+BASE_WIDTH_M = 4.0
+BASE_DEPTH_M = 4.0
+SUPPORT_TRANSITION_PLAN_M = 6.6
+SUPPORT_RADIAL_MARGIN_M = 0.30
 
 
 def normalize(point):
@@ -171,6 +175,7 @@ def main():
         raise SystemExit("Frequency-2 geodesic topology check failed.")
 
     edge_classes = grouped_lengths(vertices, edges)
+    base_edge_unit = grouped_lengths(base_vertices, base_edges)[0][0]
     shortest_unit_edge = edge_classes[0][0]
     radius_for_reference_edge = REFERENCE_EDGE_M / shortest_unit_edge
     diameter_for_reference_edge = 2.0 * radius_for_reference_edge
@@ -178,6 +183,11 @@ def main():
     cut_z_over_r = math.sin(cut_latitude_rad)
     cut_z = radius_for_reference_edge * cut_z_over_r
     support_radius = radius_for_reference_edge * math.cos(cut_latitude_rad)
+    support_diameter = 2.0 * support_radius
+    segment_height = radius_for_reference_edge - cut_z
+    minimum_direct_square = support_diameter + 2.0 * SUPPORT_RADIAL_MARGIN_M
+    direct_base_support_ok = BASE_WIDTH_M >= minimum_direct_square and BASE_DEPTH_M >= minimum_direct_square
+    transition_support_ok = SUPPORT_TRANSITION_PLAN_M >= minimum_direct_square
     cut_vertices, cut_faces = clipped_mesh(vertices, faces, cut_z_over_r)
     cut_edges = face_edges(cut_faces)
     cut_edge_use = {}
@@ -190,6 +200,8 @@ def main():
     cut_euler = len(cut_vertices) - len(cut_edges) + len(cut_faces)
     if cut_euler != 1:
         raise SystemExit("Cut radome topology check failed.")
+    if not transition_support_ok:
+        raise SystemExit("Support transition envelope check failed.")
 
     print("RADOME C2 geometry verifier")
     print(f"base: V={len(base_vertices)} E={len(base_edges)} F={len(base_faces)}")
@@ -197,14 +209,25 @@ def main():
     print(f"closed mesh: V={len(vertices)} E={len(edges)} F={len(faces)} Euler={euler}")
     print("unit-radius chord classes:")
     for edge_length, count in edge_classes:
-        print(f"  {edge_length:.12f}: {count} edges")
+        print(
+            f"  {edge_length:.12f}: {count} edges "
+            f"({edge_length * radius_for_reference_edge:.4f} m at reference scale)"
+        )
     print(f"if shortest chord is {REFERENCE_EDGE_M:.3f} m:")
     print(f"  R={radius_for_reference_edge:.4f} m")
     print(f"  D={diameter_for_reference_edge:.4f} m")
+    print(f"  macroface chord={base_edge_unit * radius_for_reference_edge:.4f} m")
     print(f"  cut z/R={cut_z_over_r:.6f}")
     print(f"  cut z={cut_z:.4f} m")
+    print(f"  spherical segment height={segment_height:.4f} m")
     print(f"  support ring radius={support_radius:.4f} m")
-    print(f"  support ring diameter={2.0 * support_radius:.4f} m")
+    print(f"  support ring diameter={support_diameter:.4f} m")
+    print(f"  4.0 m x 4.0 m base direct support ok={direct_base_support_ok}")
+    print(
+        f"  transition square={SUPPORT_TRANSITION_PLAN_M:.2f} m, "
+        f"minimum with margin={minimum_direct_square:.4f} m, "
+        f"transition ok={transition_support_ok}"
+    )
     print(
         "cut mesh: "
         f"V={len(cut_vertices)} E={len(cut_edges)} F={len(cut_faces)} "
