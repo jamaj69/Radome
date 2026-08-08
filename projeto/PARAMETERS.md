@@ -91,6 +91,9 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | EXP-003 | Baseline do cenário aeronáutico | 100 | km | Proposto | `07_passive_radar.tex` | Localização/sistemas | Orçamento de enlace e geometria C3 |
 | EXP-004 | Faixa de iluminadores TV UHF | 470–860 | MHz | Proposto | `07_passive_radar.tex` | RF/experimentos | Levantamento regulatório e de sítio |
 | EXP-005 | Nós receptores no cenário aeronáutico ilustrativo | 2 | nó | Proposto | `07_passive_radar.tex` | Localização/sistemas | Não confundir com demonstrador de três nós ARC-002 |
+| EXP-006 | Protocolo de emissor direto cooperativo | ADS-B 1090ES; UAT contextual | — | Proposto | `07_passive_radar.tex`; `DECISIONS.md` ADR-011 | RF/experimentos | Decodificação, associação e resíduos contra estado GNSS transmitido |
+| EXP-007 | Protocolo de calibração por transmissor conhecido | sinal direto UHF com posição e forma de onda conhecidas | — | Proposto | `07_passive_radar.tex`; `DECISIONS.md` ADR-011 | Metrologia/experimentos | Resíduos de AOA, atraso e potência contra levantamento independente |
+| EXP-008 | Protocolo de reflexão biestática | canais simultâneos de referência e vigilância | — | Proposto | `07_passive_radar.tex`; `DECISIONS.md` ADR-011 | Radar passivo | Pd/Pfa e erros atraso–Doppler contra alvo controlado ou rastreado |
 
 ## Resultado da revisão C0
 

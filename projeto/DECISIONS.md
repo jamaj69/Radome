@@ -84,3 +84,12 @@
 - **Cadeia aeronáutica:** uma abertura ou array dedicado de 960–1215 MHz alimentará dois caminhos simultâneos e independentes: preselector de serviço em 978 MHz, limitador/LNA, ADC coerente e canal FPGA UAT; e preselector de serviço em 1090 MHz, limitador/LNA, ADC coerente e canal FPGA 1090ES.
 - **Separação:** a Yagi UHF de 470–860 MHz não fundamenta recepção em 978 ou 1090 MHz. A cadeia aeronáutica também não implica cobertura contínua de toda a faixa de 960–1215 MHz.
 - **Limite:** topologia da abertura, larguras de filtro, NF, IP3, faixa dinâmica, taxa de amostragem e volume de dados permanecem propostos até o dimensionamento quantitativo do C3.
+
+## ADR-011 — Protocolos experimentais independentes
+
+- **Data:** 8 de agosto de 2026
+- **Estado:** aceita no nível arquitetural
+- **Decisão:** tratar como protocolos distintos o emissor direto cooperativo ADS-B, o transmissor direto conhecido usado para calibração e a reflexão biestática de alvo.
+- **Regra de evidência:** cada protocolo possui observáveis, verdade-terreno, estimador e métricas próprios. Resultados de um protocolo não validam automaticamente os demais.
+- **Reflexão biestática:** exige canais simultâneos de referência e vigilância, cancelamento do caminho direto e avaliação em atraso–Doppler; a mensagem ADS-B não substitui o canal de referência do iluminador.
+- **Rastreabilidade:** os protocolos são controlados por `EXP-006`, `EXP-007` e `EXP-008` em `PARAMETERS.md`.

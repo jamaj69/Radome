@@ -19,6 +19,13 @@ Known UHF television or other broadcast transmitters can provide an independent 
 
 The experiment should compare: (i) ADS-B at 1090 MHz as a cooperative direct emitter; (ii) known UHF broadcast signals, provisionally in the 470--860 MHz region (\texttt{EXP-004}), as direct reference illuminators; and (iii) bistatic echoes from a controlled or independently tracked target. Agreement across these channels tests the radome network's triangulation, calibration and covariance reporting rather than merely repeating the aircraft message.
 
+\subsection*{Independent experiment protocols / Protocolos experimentais independentes}
+The cooperative direct-emitter protocol (\texttt{EXP-006}) records decoded identity and state, received power, AOA, hardware time and Doppler. Its truth source is the decoded GNSS-derived state with independently surveyed receiver coordinates; its estimator tests RF-versus-message consistency, and its metrics are association rate and position, velocity, AOA, time and Doppler residuals with declared uncertainty.
+
+The known-transmitter calibration protocol (\texttt{EXP-007}) records the direct UHF waveform, received power, AOA and calibrated channel delay. Its truth source is an independently surveyed transmitter position, antenna sector and waveform metadata; its estimator solves the expected direct path, and its metrics are AOA, delay and power-map residuals plus repeatability over time and temperature.
+
+The bistatic-reflection protocol (\texttt{EXP-008}) uses simultaneous reference and surveillance channels, direct-path cancellation and a cross-ambiguity estimator. Its truth source is a controlled or independently tracked target trajectory plus surveyed transmitter and receiver coordinates; its metrics are probability of detection, false-alarm probability and delay, Doppler and localization errors with covariance consistency. No result from the two direct-signal protocols substitutes for this bistatic evidence.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig15_aircraft_two_radomes_100km.png}
@@ -51,6 +58,13 @@ O ADS-B fornece uma identidade e um estado cooperativos, enquanto a geometria RF
 Transmissores conhecidos de televisão UHF ou de outros serviços de radiodifusão podem fornecer um teste independente de triangulação junto com o ADS-B. Seus sinais diretos podem ser usados para calibrar AOA, sincronismo, mapeamento de potência recebida e geometria do sítio quando as coordenadas do transmissor e as características da forma de onda forem conhecidas. Seus sinais refletidos também podem apoiar um experimento biestático separado, mas a verificação de emissor direto e a localização por reflexão do alvo não devem ser misturadas no mesmo estimador sem um modelo explícito de propagação.
 
 O experimento deve comparar: (i) ADS-B em 1090 MHz como emissor direto cooperativo; (ii) sinais UHF conhecidos de radiodifusão, provisoriamente na região de 470--860 MHz (\texttt{EXP-004}), como iluminadores diretos de referência; e (iii) ecos biestáticos de um alvo controlado ou rastreado independentemente. A concordância entre esses canais testa a triangulação, a calibração e o relatório de covariância da rede de radomes, em vez de apenas repetir a mensagem da aeronave.
+
+\subsection*{Protocolos experimentais independentes}
+O protocolo de emissor direto cooperativo (\texttt{EXP-006}) registra identidade e estado decodificados, potência recebida, AOA, tempo de hardware e Doppler. Sua verdade-terreno é o estado derivado de GNSS e decodificado, com coordenadas dos receptores levantadas independentemente; seu estimador verifica a consistência RF versus mensagem, e suas métricas são taxa de associação e resíduos de posição, velocidade, AOA, tempo e Doppler com incerteza declarada.
+
+O protocolo de calibração por transmissor conhecido (\texttt{EXP-007}) registra a forma de onda UHF direta, potência recebida, AOA e atraso calibrado do canal. Sua verdade-terreno é a posição do transmissor, o setor da antena e os metadados da forma de onda levantados independentemente; seu estimador resolve o caminho direto esperado, e suas métricas são resíduos de AOA, atraso e mapa de potência, além da repetibilidade versus tempo e temperatura.
+
+O protocolo de reflexão biestática (\texttt{EXP-008}) usa canais simultâneos de referência e vigilância, cancelamento do caminho direto e estimador por função de ambiguidade cruzada. Sua verdade-terreno é a trajetória de um alvo controlado ou rastreado independentemente, junto com coordenadas levantadas do transmissor e dos receptores; suas métricas são probabilidade de detecção, probabilidade de falso alarme e erros de atraso, Doppler e localização com consistência de covariância. Nenhum resultado dos dois protocolos de sinal direto substitui essa evidência biestática.
 
 \subsection*{Cellular towers as calibrated illuminators / Torres celulares como iluminadores calibrados}
 Cellular base stations add a particularly valuable set of known illuminators. Their surveyed coordinates, sector orientations and nominal carrier allocations allow the network to use multiple cellular frequencies and waveforms as direct references. The direct signal can calibrate coverage, AOA, timing and received-power consistency; reflections from aircraft, terrain or controlled targets can then test bistatic detection across several carriers and bandwidths. Each carrier must be treated as a separate waveform and propagation case, with transmitter power, antenna sector, scheduling, synchronization and local RFI recorded as metadata.
