@@ -14,6 +14,11 @@ Together with surveyed node coordinates, aircraft ephemeris hypotheses and propa
 
 ADS-B supplies a cooperative identity and state report, while the two-node RF geometry supplies an independent consistency check based on received power, AOA, TDOA and Doppler.
 
+\subsection*{Independent UHF illuminators / Iluminadores UHF independentes}
+Known UHF television or other broadcast transmitters can provide an independent triangulation test alongside ADS-B. Their direct signals can be used to calibrate AOA, timing, received-power mapping and site geometry when transmitter coordinates and waveform characteristics are known. Their reflected signals can also support a separate bistatic experiment, but direct-emitter verification and target-reflection localization must not be mixed in the same estimator without an explicit propagation model.
+
+The experiment should compare: (i) ADS-B at 1090 MHz as a cooperative direct emitter; (ii) known UHF broadcast signals, typically in the 470--860 MHz region, as direct reference illuminators; and (iii) bistatic echoes from a controlled or independently tracked target. Agreement across these channels tests the radome network's triangulation, calibration and covariance reporting rather than merely repeating the aircraft message.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig15_aircraft_two_radomes_100km.png}
@@ -41,3 +46,8 @@ Dois nós radome separados por uma linha de base nominal de $100\,\mathrm{km}$ r
 Com as coordenadas levantadas dos nós, hipóteses de efemérides da aeronave e incerteza de propagação, esses observáveis produzem uma região de consistência para altitude, posição e velocidade. O resultado verifica se os parâmetros transmitidos são compatíveis com a observação física; não é uma garantia cega de que todo parâmetro transmitido seja verdadeiro.
 
 O ADS-B fornece uma identidade e um estado cooperativos, enquanto a geometria RF dos dois nós fornece uma verificação independente baseada em potência recebida, AOA, TDOA e Doppler.
+
+\subsection*{Iluminadores UHF independentes}
+Transmissores conhecidos de televisão UHF ou de outros serviços de radiodifusão podem fornecer um teste independente de triangulação junto com o ADS-B. Seus sinais diretos podem ser usados para calibrar AOA, sincronismo, mapeamento de potência recebida e geometria do sítio quando as coordenadas do transmissor e as características da forma de onda forem conhecidas. Seus sinais refletidos também podem apoiar um experimento biestático separado, mas a verificação de emissor direto e a localização por reflexão do alvo não devem ser misturadas no mesmo estimador sem um modelo explícito de propagação.
+
+O experimento deve comparar: (i) ADS-B em 1090 MHz como emissor direto cooperativo; (ii) sinais UHF conhecidos de radiodifusão, tipicamente na região de 470--860 MHz, como iluminadores diretos de referência; e (iii) ecos biestáticos de um alvo controlado ou rastreado independentemente. A concordância entre esses canais testa a triangulação, a calibração e o relatório de covariância da rede de radomes, em vez de apenas repetir a mensagem da aeronave.
