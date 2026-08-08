@@ -3,6 +3,7 @@ import math
 from mathutils import Vector
 
 OUTPUT = "/home/jamaj/src/Radome/projeto/figures/fig13_radome_blender.png"
+INTERNAL_OUTPUT = "/home/jamaj/src/Radome/projeto/figures/fig14_radome_interior_blender.png"
 
 # Reset scene.
 bpy.ops.object.select_all(action="SELECT")
@@ -34,12 +35,16 @@ face_mat = material("Highlighted RF face", (0.92, 0.42, 0.12), metallic=0.05, ro
 dielectric_mat = material("Dielectric layer", (0.72, 0.83, 0.88), roughness=0.38, alpha=0.82)
 core_mat = material("Honeycomb core", (0.95, 0.73, 0.36), roughness=0.55)
 shield_mat = material("Shielded RF module", (0.18, 0.34, 0.42), metallic=0.65, roughness=0.28)
+internal_module_mat = material("Internal band module highlight", (0.72, 0.28, 0.08), metallic=0.35, roughness=0.3)
 board_mat = material("RF PCB", (0.08, 0.33, 0.20), roughness=0.4)
 ffasic_mat = material("FFASIC central module", (0.38, 0.25, 0.62), metallic=0.3, roughness=0.28)
 yagi_mat = material("Yagi aluminium", (0.67, 0.70, 0.72), metallic=0.82, roughness=0.2)
 yagi_gold = material("Yagi bracket", (0.82, 0.50, 0.06), metallic=0.65, roughness=0.25)
 mast_mat = material("Mast", (0.20, 0.22, 0.24), metallic=0.7, roughness=0.25)
 white_mat = material("White", (0.92, 0.94, 0.95), roughness=0.45)
+base_mat = material("Concrete base", (0.20, 0.23, 0.26), roughness=0.8)
+opening_mat = material("Access opening", (0.015, 0.02, 0.025), roughness=0.5)
+warning_mat = material("Access frame", (0.82, 0.42, 0.06), metallic=0.3, roughness=0.35)
 
 # Geometry helpers.
 def cylinder_between(name, a, b, radius, mat, vertices=20):
@@ -80,20 +85,64 @@ def text_obj(body, location, size=0.20, color_mat=white_mat, align="CENTER"):
     # Keep labels approximately facing the camera through a track quaternion later.
     return obj
 
-# Radome shell: UV sphere with transparent material and visible triangular frame lines.
-bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=3, radius=2.75, location=(-3.7, 0.0, 1.9))
-shell = bpy.context.object
-shell.name = "Transparent geodesic radome shell"
+# Radome shell: equator as the mid-plane and lower cut at latitude 45 S.
+shell_center = Vector((-3.7, 0.0, 0.0))
+radius = 2.75
+segments = 24
+rings = 7
+lower_cut_latitude = math.radians(-45.0)
+cut_polar_angle = math.pi / 2.0 - lower_cut_latitude
+shell_vertices = [shell_center + Vector((0, 0, radius))]
+shell_faces = []
+for ring in range(1, rings + 1):
+    theta = cut_polar_angle * ring / rings
+    for segment in range(segments):
+        phi = 2.0 * math.pi * segment / segments
+        shell_vertices.append(shell_center + Vector((radius * math.sin(theta) * math.cos(phi), radius * math.sin(theta) * math.sin(phi), radius * math.cos(theta))))
+for segment in range(segments):
+    shell_faces.append((0, 1 + segment, 1 + (segment + 1) % segments))
+for ring in range(rings - 1):
+    start = 1 + ring * segments
+    next_start = start + segments
+    for segment in range(segments):
+        a = start + segment
+        b = start + (segment + 1) % segments
+        c = next_start + (segment + 1) % segments
+        d = next_start + segment
+        shell_faces.extend([(a, b, c), (a, c, d)])
+shell_mesh = bpy.data.meshes.new("Upper radome cut at latitude 45 S")
+shell_mesh.from_pydata(shell_vertices, [], shell_faces)
+shell_mesh.update()
+shell = bpy.data.objects.new("Transparent upper geodesic radome shell", shell_mesh)
+bpy.context.collection.objects.link(shell)
 shell.data.materials.append(shell_mat)
 wire = shell.modifiers.new("Geodesic frame", "WIREFRAME")
 wire.thickness = 0.012
 wire.material_offset = 0
 shell.data.materials.append(frame_mat)
-# A second wire object gives a darker structural outline.
+
+# Supporting cuboid and visible maintenance/access opening.
+cut_height = radius * math.sin(lower_cut_latitude)
+base_height = 0.84
+bpy.ops.mesh.primitive_cube_add(size=1, location=shell_center + Vector((0, 0, cut_height - base_height / 2)))
+base = bpy.context.object
+base.name = "Radome base parallelepiped"
+base.dimensions = (5.9, 5.9, 0.84)
+bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
+base.data.materials.append(base_mat)
+bpy.ops.mesh.primitive_cube_add(size=1, location=shell_center + Vector((0, -2.98, cut_height - base_height / 2)))
+opening = bpy.context.object
+opening.name = "Interior access opening"
+opening.dimensions = (1.65, 0.06, 0.58)
+bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
+opening.data.materials.append(opening_mat)
+for x in (-0.92, 0.92):
+    cylinder_between("Access opening vertical frame", shell_center + Vector((x, -3.04, cut_height - 0.30)), shell_center + Vector((x, -3.04, cut_height + 0.30)), 0.035, warning_mat)
+cylinder_between("Access opening top frame", shell_center + Vector((-0.92, -3.04, cut_height + 0.30)), shell_center + Vector((0.92, -3.04, cut_height + 0.30)), 0.035, warning_mat)
 
 # Highlighted face on right/front of radome.
-face_center = Vector((-1.22, -1.05, 2.25))
-face_normal = (face_center - Vector((-3.7, 0, 1.9))).normalized()
+face_center = Vector((-1.22, -1.05, 1.25))
+face_normal = (face_center - shell_center).normalized()
 edge_a = Vector((-1.32, -1.55, 1.45))
 edge_b = Vector((-1.25, -0.40, 1.48))
 edge_c = Vector((-1.05, -1.00, 2.45))
@@ -167,6 +216,35 @@ central = offset + Vector((0.93, 0.0, 0.0))
 cylinder_between("Optical fibre", central, central + Vector((0.45, -1.3, -0.8)), 0.022, material("Fibre", (0.08, 0.55, 0.48), metallic=0.1, roughness=0.3))
 cylinder_between("DC power", central, central + Vector((0.45, 1.3, -0.75)), 0.028, material("DC", (0.8, 0.35, 0.08), metallic=0.1, roughness=0.35))
 
+# Interior view: central timing/fusion core, structural ribs and representative
+# face modules mounted on the inside of the hemispherical radome.
+bpy.ops.mesh.primitive_uv_sphere_add(segments=24, ring_count=12, radius=0.24, location=shell_center)
+core = bpy.context.object
+core.name = "Internal timing and fusion core"
+core.data.materials.append(ffasic_mat)
+for direction in [Vector((1, 0, 1)), Vector((-1, 0, 1)), Vector((0, 1, 1)), Vector((0, -1, 1))]:
+    direction.normalize()
+    inner = shell_center + direction * 2.25
+    cylinder_between("Internal structural radial tie", shell_center, inner, 0.035, frame_mat)
+    cylinder_between("Internal optical and power trunk", shell_center + direction * 0.45, inner, 0.018, yagi_gold)
+    # A compact shielded module at the inner shell boundary.
+    bpy.ops.mesh.primitive_cube_add(size=1, location=inner)
+    module = bpy.context.object
+    module.name = "Mounted internal band module"
+    module.dimensions = (0.50, 0.70, 0.46)
+    bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
+    module.data.materials.append(internal_module_mat)
+
+# Internal service ring and three visible representative face junctions.
+for z in (-0.58, 0.58):
+    bpy.ops.mesh.primitive_torus_add(major_radius=0.92, minor_radius=0.025, location=shell_center + Vector((0, 0, z)), rotation=(0, 0, 0))
+    bpy.context.object.name = "Internal service ring"
+    bpy.context.object.data.materials.append(frame_mat)
+for angle in (0.0, 2.1, 4.2):
+    p1 = shell_center + Vector((2.15 * math.cos(angle), 2.15 * math.sin(angle), 0.55))
+    p2 = shell_center + Vector((2.15 * math.cos(angle + 0.45), 2.15 * math.sin(angle + 0.45), -0.45))
+    cylinder_between("Internal triangular face junction", p1, p2, 0.045, frame_mat)
+
 # Text labels placed in world space.
 labels = [
     ("RADOME shell / casca", (-3.7, 0.0, 5.0), 0.22, white_mat),
@@ -231,4 +309,23 @@ scene.view_settings.view_transform = "Filmic"
 scene.view_settings.look = "Medium High Contrast"
 scene.render.resolution_percentage = 100
 bpy.ops.wm.save_as_mainfile(filepath="/home/jamaj/src/Radome/projeto/figures/radome_v1_3d.blend")
+bpy.ops.render.render(write_still=True)
+
+# Second render: camera physically inside the transparent shell, looking toward
+# the internal core and the mounted face modules.
+bpy.ops.object.camera_add(location=(-4.85, -0.65, 2.75))
+internal_camera = bpy.context.object
+internal_camera.name = "Internal inspection camera"
+point_camera(internal_camera, (-2.55, 2.15, 2.5))
+internal_camera.data.lens = 26
+scene.camera = internal_camera
+scene.render.resolution_x = 1400
+scene.render.resolution_y = 900
+scene.render.filepath = INTERNAL_OUTPUT
+# Keep the shell context visible without allowing it to occlude the interior.
+shell_mat.diffuse_color = (0.22, 0.52, 0.68, 0.045)
+shell_mat.node_tree.nodes.get("Principled BSDF").inputs["Alpha"].default_value = 0.045
+for obj in bpy.data.objects:
+    if obj.name.startswith("Internal service ring"):
+        obj.hide_render = True
 bpy.ops.render.render(write_still=True)

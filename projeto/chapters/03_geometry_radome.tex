@@ -7,6 +7,8 @@ V=32,\qquad E=90,\qquad F=60,
 \]
 with Euler consistency $V-E+F=2$. For preliminary radius $R=\SI{3.1445}{m}$, the closed envelope has diameter $D=2R=\SI{6.2890}{m}$. The radius must not be confused with the height of a closed structure.
 
+For the site model, the equatorial plane is the radome mid-plane. The lower cut is placed at latitude $\varphi_c=-45^\circ$. The resulting upper spherical segment is supported on a horizontal circular boundary carried by a rectangular parallelepiped base. This is a geometric reference for the model, not a claim that the physical station is located on that latitude.
+
 The mechanical skeleton, dielectric panels and internal RF modules have different but coordinated geometries. A face is a mechanical and computational sector, not an electromagnetically isolated region. Angular overlap between neighbouring faces is required for calibration, interpolation and direction estimation.
 
 The nominal triangular face uses a 2 m side dimension. A Yagi (fishbone) antenna is mounted outside the dielectric face and supported by a mast fixed at the triangular base. The mast interface must include a sealed RF feedthrough, mechanical load transfer and lightning/EMC treatment. The external antenna is assigned to a defined band; it is not a universal radiator.
@@ -37,6 +39,8 @@ V=32,\qquad E=90,\qquad F=60,
 \]
 com consistência de Euler $V-E+F=2$. Para raio preliminar $R=\SI{3.1445}{m}$, o envelope fechado possui diâmetro $D=2R=\SI{6.2890}{m}$. O raio não deve ser confundido com a altura de uma estrutura fechada.
 
+Para o modelo de sítio, o plano equatorial é o plano médio do radome. O corte inferior é colocado na latitude $\varphi_c=-45^\circ$. O segmento esférico superior resultante apoia-se sobre uma borda circular horizontal sustentada por uma base retangular em forma de paralelepípedo. Essa é uma referência geométrica do modelo, não uma afirmação de que a estação física esteja localizada nessa latitude.
+
 O esqueleto mecânico, os painéis dielétricos e os módulos RF internos possuem geometrias diferentes, porém coordenadas. Uma face é um setor mecânico e computacional, não uma região eletromagneticamente isolada. A sobreposição angular entre faces vizinhas é necessária para calibração, interpolação e estimação de direção.
 
 A face triangular nominal possui lado de 2 m. Uma antena Yagi (``espinha de peixe'') é montada externamente à face dielétrica e sustentada por uma haste fixada na base triangular. A interface da haste deve conter passagem RF vedada, transferência mecânica de carga e tratamento de descargas e EMC. A antena externa é atribuída a uma faixa definida; não é um radiador universal.
@@ -59,6 +63,13 @@ O modelo Blender torna explícita a convenção de montagem: a face RF triangula
 \includegraphics[width=0.98\textwidth]{fig13_radome_blender.png}
 \caption{Blender 3D model: the triangular face is external, the pyramid apex is internal, and the VHF Yagi is mounted outside / Modelo Blender 3D: a face triangular é externa, o vértice da pirâmide é interno e a Yagi VHF é montada externamente.}
 \label{fig:blender-yagi}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.98\textwidth]{fig14_radome_interior_blender.png}
+\caption{Internal Blender inspection view with the transparent shell, radial structural ties, service trunks, central timing/fusion core and representative shielded band modules / Vista interna de inspeção no Blender com casca transparente, tirantes radiais, troncos de serviço, núcleo central de sincronismo/fusão e módulos blindados de faixa.}
+\label{fig:blender-interior}
 \end{figure}
 
 \begin{figure}[H]
