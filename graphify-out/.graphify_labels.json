@@ -48,5 +48,7 @@
   "46": "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification",
   "47": "Cross-search signals",
   "48": "Sub-area guide 5: integration, calibration, and operational validation",
-  "49": "Cross-search signals"
+  "49": "Cross-search signals",
+  "50": "verify_tetrahedral_face_geometry.py",
+  "51": "render_tetrahedral_face_cluster_blender.py"
 }

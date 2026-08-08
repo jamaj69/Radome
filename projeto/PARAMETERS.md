@@ -33,24 +33,30 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | GEO-001 | Poliedro base fechado | icosaedro regular | — | Proposto | `03_geometry_radome.tex`; `geometry/verify_radome_geometry.py` | Engenharia geométrica | Malha paramétrica C2 preliminar |
 | GEO-002 | Macrofaces do poliedro base | 20 | face | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Verificação topológica C2 |
 | GEO-003 | Faces receptoras do envelope fechado | 80 | face | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Verificador C2; sincronizar figuras e Blender em C4 |
-| GEO-004 | Lado nominal da face receptora | 2.0 | m | Em conflito | `03_geometry_radome.tex` | Engenharia geométrica | Compatibilizar com raio e subdivisão C2 |
-| GEO-005 | Raio preliminar do envelope fechado | 3.1445 | m | Em conflito | `03_geometry_radome.tex` | Engenharia geométrica | Recalcular a partir da malha C2 |
-| GEO-006 | Diâmetro preliminar do envelope fechado | 6.2890 | m | Derivado | `03_geometry_radome.tex` | Engenharia geométrica | Atualizar após GEO-005 |
-| GEO-007 | Corte inferior conceitual | z/R = -0.573576, ângulo polar 125° | — | Derivado | `geometry/verify_radome_geometry.py` | Geometria/estruturas | Sincronizar Blender e base C4 |
-| GEO-008 | Subdivisão geodésica candidata | classe I, frequência 2 | — | Proposto | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Reavaliar após integração estrutural |
+| GEO-004 | Lado da face receptora externa | 2.0 | m | Derivado | `geometry/verify_tetrahedral_face_geometry.py`; ADR-012 | Engenharia geométrica | Confirmar tolerâncias e junta estrutural |
+| GEO-005 | Raio da candidata anterior com projeção esférica | 3.6594 | m | Histórico | `geometry/verify_radome_geometry.py`; ADR-009 | Engenharia geométrica | Não controla ADR-012 |
+| GEO-006 | Diâmetro da candidata anterior com projeção esférica | 7.3189 | m | Histórico | `geometry/verify_radome_geometry.py`; ADR-009 | Engenharia geométrica | Não controla ADR-012 |
+| GEO-007 | Corte inferior da candidata anterior | z/R = -0.573576, ângulo polar 125° | — | Histórico | `geometry/verify_radome_geometry.py`; ADR-009 | Geometria/estruturas | Redefinir por módulos inteiros na ADR-012 |
+| GEO-008 | Subdivisão tetraédrica candidata | classe I, frequência 2, sem projeção dos pontos médios | — | Proposto | `geometry/verify_tetrahedral_face_geometry.py`; ADR-012 | Engenharia geométrica | Fechar C2 reaberto e interface civil |
 | GEO-009 | Vértices do envelope fechado C2 | 42 | vértice | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Verificador C2 |
 | GEO-010 | Arestas do envelope fechado C2 | 120 | aresta | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Verificador C2 |
-| GEO-011 | Diâmetro do anel de apoio se a menor corda for 2 m | 5.9953 | m | Derivado | `geometry/verify_radome_geometry.py` | Engenharia civil | Compatibilizar com base CIV-001 |
-| GEO-012 | Topologia do segmento cortado C2 | V=51, E=124, F=74, Euler=1 | — | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Verificador C2 |
-| GEO-013 | Borda do segmento cortado C2 | 16 vértices / 16 arestas | — | Derivado | `geometry/verify_radome_geometry.py` | Engenharia civil | Dimensionar transição para CIV-001 |
-| GEO-014 | Corda da macroface icosaédrica na escala C2 | 3.8478 | m | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Verificador C2 |
-| GEO-015 | Classes de corda das subfaces C2 | 2.0000 / 2.2617 | m | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Considerar tolerâncias estruturais |
-| GEO-016 | Altura do segmento cortado C2 | 5.7584 | m | Derivado | `geometry/verify_radome_geometry.py` | Engenharia geométrica | Sincronizar Blender C4 |
+| GEO-011 | Diâmetro do anel de apoio da candidata anterior | 5.9953 | m | Histórico | `geometry/verify_radome_geometry.py`; ADR-009 | Engenharia civil | Não reutilizar na ADR-012 |
+| GEO-012 | Topologia do segmento cortado da candidata anterior | V=51, E=124, F=74, Euler=1 | — | Histórico | `geometry/verify_radome_geometry.py`; ADR-009 | Engenharia geométrica | Redefinir por módulos inteiros |
+| GEO-013 | Borda do segmento cortado da candidata anterior | 16 vértices / 16 arestas | — | Histórico | `geometry/verify_radome_geometry.py`; ADR-009 | Engenharia civil | Redefinir por módulos inteiros |
+| GEO-014 | Aresta da macroface icosaédrica tetraédrica | 4.0000 | m | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Engenharia geométrica | Verificador ADR-012 |
+| GEO-015 | Classe de aresta das faces externas | 2.0000 | m | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Engenharia geométrica | Verificador ADR-012 |
+| GEO-016 | Altura do segmento cortado da candidata anterior | 5.7584 | m | Histórico | `geometry/verify_radome_geometry.py`; ADR-009 | Engenharia geométrica | Não controla ADR-012 |
+| GEO-017 | Raio circunscrito / inraio do envelope ADR-012 | 3.8042 / 3.0230 | m | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Engenharia geométrica | Recalcular borda e apoio |
+| GEO-018 | Arestas laterais das células até o hub comum | 3.2361–3.8042 | m | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Estruturas | Dimensionar painéis, hub e montagem |
+| GEO-019 | Colisões de tetraedros regulares de aresta 2 m | 120 | colisão | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Engenharia geométrica | Configuração regular bloqueada |
+| GEO-020 | Colisões da partição tetraédrica de hub comum | 0 | colisão | Derivado | `geometry/verify_tetrahedral_face_geometry.py` | Engenharia geométrica | Validar tolerâncias e espessuras reais |
 | CIV-001 | Planta da base de concreto | 4 × 4 | m | Proposto | `08_infrastructure_validation.tex` | Engenharia civil | Não suporta diretamente o anel C2 sem transição |
 | CIV-002 | Altura estrutural livre da base | 3 | m | Proposto | `08_infrastructure_validation.tex` | Engenharia civil | Estudo estrutural e de acesso |
 | CIV-003 | Envelope quadrado mínimo da transição de apoio C2 | 6.6 × 6.6 | m | Proposto | `geometry/verify_radome_geometry.py`; `03_geometry_radome.tex` | Engenharia civil | Grade beam ou moldura estrutural a detalhar |
 | MEC-001 | Elemento transversal máximo da Yagi VHF | 2 | m | Proposto | `03_geometry_radome.tex` | Antenas/estruturas | Modelo EM e cargas de vento |
 | MEC-002 | Ângulo nominal entre os planos das Yagis VHF e UHF | 90 | grau | Proposto | `03_geometry_radome.tex` | Antenas/estruturas | Verificar montagem; não usar como base polarimétrica entre faixas |
+| MEC-003 | Interfaces laterais Faraday compartilhadas | 120 | parede | Derivado | `geometry/verify_tetrahedral_face_geometry.py`; ADR-012 | EMC/estruturas | Detalhar junta RF, bonding e manutenção |
+| MEC-004 | Invólucros ADC/ASIC por face dual-pol | 2 | invólucro | Proposto | `render_tetrahedral_face_cluster_blender.py`; `05_electronics_processing.tex` | EMC/eletrônica | Ensaiar SE, emissões, térmica e acoplamento |
 
 ## Plano espectral e antenas
 

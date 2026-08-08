@@ -19,9 +19,24 @@ O projeto é organizado em torno de [projetov1.tex](projetov1.tex). Ele é o arq
 
 ## 3D baseline / Linha de base 3D
 
-The current Blender scene is preserved in `figures/baseline_35S_concrete_base/`. This baseline contains the 35-degree-south radome cut, the 4 m x 4 m x 3 m reinforced-concrete base, the access opening, the internal pyramid and the external VHF Yagi. It is the reference scene for the next stage, in which identical face modules will be instantiated across the radome.
+The previous Blender scene is preserved in `figures/baseline_35S_concrete_base/`. This historical baseline contains the 35-degree-south radome cut, the 4 m x 4 m x 3 m reinforced-concrete base, the access opening, the internal pyramid and the external VHF Yagi. ADR-012 supersedes its projected face geometry but does not overwrite the preserved scene.
 
-A cena Blender atual está preservada em `figures/baseline_35S_concrete_base/`. Essa linha de base contém o corte do radome em 35 graus sul, a base de concreto armado de 4 m x 4 m x 3 m, a abertura de acesso, a pirâmide interna e a Yagi VHF externa. Ela é a cena de referência para a próxima etapa, na qual módulos de face idênticos serão instanciados em todo o radome.
+A cena Blender anterior está preservada em `figures/baseline_35S_concrete_base/`. Essa baseline histórica contém o corte do radome em 35 graus sul, a base de concreto armado de 4 m x 4 m x 3 m, a abertura de acesso, a pirâmide interna e a Yagi VHF externa. A ADR-012 substitui sua geometria projetada de faces, mas não sobrescreve a cena preservada.
+
+The tetrahedral candidate is generated separately. It shows seven contiguous 2 m faces, common Faraday side walls, conductive seams, two shielded ADC/ASIC enclosures per dual-polarized aperture and the local tangent/normal bases.
+
+A candidata tetraédrica é gerada separadamente. Ela mostra sete faces contíguas de 2 m, paredes Faraday laterais comuns, juntas condutivas, dois invólucros ADC/ASIC blindados por abertura dual-pol e as bases tangentes/normais locais.
+
+```bash
+python3 geometry/verify_tetrahedral_face_geometry.py
+cd figures
+blender -b --python render_tetrahedral_face_cluster_blender.py
+```
+
+Outputs / Saídas:
+
+- `figures/fig16_tetrahedral_face_cluster.png`;
+- `figures/radome_tetrahedral_face_cluster.blend`.
 
 ## Compilation / Compilação
 

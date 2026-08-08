@@ -10,7 +10,7 @@
 |---|---|---|
 | C0 — baseline documental | Aprovado com bloqueios | Fonte, versionamento, parâmetros e ADRs aprovados; conflitos seguem bloqueados para C1–C3 |
 | C1 — polarimetria correta | Aprovado no nível arquitetural | Síntese restrita a duas portas coerentes na mesma faixa; Yagis VHF/UHF declaradas single-pol independentes |
-| C2 — geometria consistente | Aprovado no nível paramétrico | Malha, raio, faces, corte e base derivados de um modelo paramétrico único |
+| C2 — geometria consistente | Reaberto pela ADR-012 | Faces externas de 2 m e encaixes tetraédricos verificados; faltam corte modular, hub, tolerâncias e nova interface civil |
 | C3 — cobertura espectral | Em andamento; arquitetura e triagem aprovadas | Lacunas deliberadas, cadeia aeronáutica e protocolos definidos; faltam orçamento RF, enlace e sítio |
 | C4 — modelo 3D sincronizado | Bloqueado pelo fechamento de C3 | Blender e figuras gerados a partir dos parâmetros aprovados |
 | C5 — consistência científica | Em aberto | Novidade, referências e limites formulados com evidência apropriada |
@@ -58,6 +58,12 @@
 6. [x] Produzir verificação automática de Euler, comprimentos, raio do apoio e envelope da base.
 
 **Gate C2:** um arquivo de parâmetros reproduz todas as dimensões publicadas e passa verificações geométricas e de apoio sem valores manuais conflitantes.
+
+### Revisão tetraédrica ADR-012
+
+A exigência posterior de faces externas equiláteras de 2 m tornou incompatível a projeção esférica que produzia duas classes de corda. O novo verificador preserva 80 faces por subdivisão planar das macrofaces e testa dois casos: tetraedros regulares com seis arestas de 2 m, que geram 120 interpenetrações, e células tetraédricas com face externa de 2 m e hub comum, que formam uma partição sem colisões e 120 paredes laterais compartilhadas. O render `fig16_tetrahedral_face_cluster.png` mostra sete faces contíguas, bases tangentes locais, antenas ortogonais, caixas ADC/ASIC blindadas e encaixes condutivos.
+
+O C2 é reaberto porque o corte circular, o anel de apoio e a transição civil anteriores pertencem à candidata projetada. O novo gate exige selecionar módulos inteiros para a borda inferior, resolver o congestionamento no hub comum, introduzir espessuras e folgas sem perder continuidade Faraday e recalcular a fundação.
 
 ## Onda 3 — fechar o plano espectral e os experimentos
 

@@ -60,13 +60,13 @@
     "semantic_hash": ""
   },
   "ROADMAP_CORRECOES.md": {
-    "mtime": 1786167959.4586077,
-    "ast_hash": "4b36aab1aa810ff9d323575b41d871f1",
+    "mtime": 1786216490.0155075,
+    "ast_hash": "57afc65a4eef04478a0810e0316711e6",
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786167959.4626076,
-    "ast_hash": "3c3dca235618f1a86329dabd713c068d",
+    "mtime": 1786216680.404446,
+    "ast_hash": "a27d6ca84e8b05ed557a15f27720d297",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -75,8 +75,8 @@
     "semantic_hash": ""
   },
   "projeto/README.md": {
-    "mtime": 1786160463.5035586,
-    "ast_hash": "20a1bd8a0e4ae6543ccd4317337108de",
+    "mtime": 1786216680.4244463,
+    "ast_hash": "1e2b7b0ad14dfa9f8e971f7a0e6dfa1e",
     "semantic_hash": ""
   },
   "projeto/figures/baseline_35S_concrete_base/README.md": {
@@ -130,8 +130,8 @@
     "semantic_hash": ""
   },
   "projeto/projetov1.pdf": {
-    "mtime": 1786167052.3335292,
-    "ast_hash": "1d70ce13e8110cd4174a8441607837a5",
+    "mtime": 1786216603.1424417,
+    "ast_hash": "e1c6b6f3f3264e9c2d03aaac52073c06",
     "semantic_hash": ""
   },
   "projeto_tecnico_radome_completo.pdf": {
@@ -290,13 +290,13 @@
     "semantic_hash": ""
   },
   "projeto/DECISIONS.md": {
-    "mtime": 1786166820.7631278,
-    "ast_hash": "bf58b605393fc09ae1054d47b6d19ee3",
+    "mtime": 1786216489.9915068,
+    "ast_hash": "df6e138ac3b58d9a1767f8e17c12601e",
     "semantic_hash": ""
   },
   "projeto/PARAMETERS.md": {
-    "mtime": 1786167508.5301414,
-    "ast_hash": "c30a916f65bbadec30dfa6a9ef2870e3",
+    "mtime": 1786216490.0155075,
+    "ast_hash": "e884c41e105f3d81ec9f49ae3573c19e",
     "semantic_hash": ""
   },
   "projeto/antenna_designs/lpda_vhf_72_320.md": {
@@ -317,6 +317,21 @@
   "projeto/spectral/verify_c3_acquisition_budget.py": {
     "mtime": 1786167508.5301414,
     "ast_hash": "b60589505b985e992affe8261ae23410",
+    "semantic_hash": ""
+  },
+  "projeto/figures/render_tetrahedral_face_cluster_blender.py": {
+    "mtime": 1786216389.6928458,
+    "ast_hash": "8154a5354ece7219a3fc2aea41ab5295",
+    "semantic_hash": ""
+  },
+  "projeto/geometry/verify_tetrahedral_face_geometry.py": {
+    "mtime": 1786216281.465897,
+    "ast_hash": "133d86a756e366da94c8d37a147bc5ea",
+    "semantic_hash": ""
+  },
+  "projeto/figures/fig16_tetrahedral_face_cluster.png": {
+    "mtime": 1786216410.6294162,
+    "ast_hash": "ec9c79039f1c2ee292cdbdc4c3e049af",
     "semantic_hash": ""
   }
 }

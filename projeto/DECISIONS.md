@@ -93,3 +93,15 @@
 - **Regra de evidência:** cada protocolo possui observáveis, verdade-terreno, estimador e métricas próprios. Resultados de um protocolo não validam automaticamente os demais.
 - **Reflexão biestática:** exige canais simultâneos de referência e vigilância, cancelamento do caminho direto e avaliação em atraso–Doppler; a mensagem ADS-B não substitui o canal de referência do iluminador.
 - **Rastreabilidade:** os protocolos são controlados por `EXP-006`, `EXP-007` e `EXP-008` em `PARAMETERS.md`.
+
+## ADR-012 — Células tetraédricas com face externa de 2 m
+
+- **Data:** 8 de agosto de 2026
+- **Estado:** proposta geométrica; reabre C2
+- **Decisão:** substituir a projeção esférica da subdivisão de frequência 2 por quatro subfaces coplanares em cada macroface icosaédrica. As 80 faces externas tornam-se triângulos equiláteros de 2 m e cada uma forma uma célula tetraédrica com o centro estrutural comum.
+- **Encaixe:** duas células vizinhas compartilham exatamente a parede triangular definida pela aresta externa comum e pelo centro. Essa parede recebe blindagem condutiva contínua, junta RF na aresta externa e ligação equipotencial ao hub; não são sobrepostas duas chapas sem controle de contato.
+- **Blindagem local:** a abertura externa permanece eletromagneticamente funcional. As outras três paredes da célula formam a gaiola de Faraday, e cada canal ortogonal possui invólucro ADC/ASIC próprio, passagens filtradas e caminho térmico condutivo.
+- **Resultado geométrico:** o envelope fechado mantém 80 faces e 120 arestas, com macroaresta de 4 m, raio circunscrito de 3,8042 m e inraio de 3,0230 m. As arestas internas até o hub variam de 3,2361 m a 3,8042 m.
+- **Incompatibilidade registrada:** tetraedros regulares com as seis arestas de 2 m produzem 120 interpenetrações. A dimensão de 2 m controla somente as três arestas da face externa; exigir seis arestas iguais é bloqueado.
+- **Limite:** o corte inferior circular e o anel de apoio da ADR-009 deixam de controlar esta candidata. C2 permanece reaberto até definir uma borda formada por módulos inteiros, um hub montável, caminhos térmicos e a interface civil.
+- **Evidência:** `geometry/verify_tetrahedral_face_geometry.py`, `figures/render_tetrahedral_face_cluster_blender.py`, `fig16_tetrahedral_face_cluster.png` e `radome_tetrahedral_face_cluster.blend`.
