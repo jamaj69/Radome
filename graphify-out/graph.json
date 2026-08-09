@@ -213,6 +213,17 @@
       "norm_label": "wrap()"
     },
     {
+      "label": "draw_label()",
+      "file_type": "code",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "projeto_figures_localize_figures_draw_label",
+      "community": 52,
+      "community_name": "localize_figures.py",
+      "norm_label": "draw_label()"
+    },
+    {
       "label": "Build language-specific publication figures from the common geometry masters.",
       "file_type": "rationale",
       "source_file": "projeto/figures/localize_figures.py",
@@ -222,6 +233,17 @@
       "community": 52,
       "community_name": "localize_figures.py",
       "norm_label": "build language-specific publication figures from the common geometry masters."
+    },
+    {
+      "label": "Draw a padded box whose centre follows the centre of the rendered glyphs.",
+      "file_type": "rationale",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "projeto_figures_localize_figures_rationale_112",
+      "community": 52,
+      "community_name": "localize_figures.py",
+      "norm_label": "draw a padded box whose centre follows the centre of the rendered glyphs."
     },
     {
       "label": "render_aircraft_two_radomes_blender.py",
@@ -6265,6 +6287,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L111",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_figures_localize_figures",
+      "target": "projeto_figures_localize_figures_draw_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/figures/localize_figures.py",
       "source_location": "L68",
       "weight": 1.0,
       "_origin": "ast",
@@ -6314,6 +6347,29 @@
       "_origin": "ast",
       "source": "projeto_figures_localize_figures_rationale_1",
       "target": "projeto_figures_localize_figures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_figures_localize_figures_draw_label",
+      "target": "projeto_figures_localize_figures_wrap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_figures_localize_figures_rationale_112",
+      "target": "projeto_figures_localize_figures_draw_label",
       "confidence_score": 1.0
     },
     {
@@ -12631,5 +12687,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "54578efcae6025cc015f5b2fee71b53653da6178"
+  "built_at_commit": "92c6b1ac64d8181e586f0fb7e0ea9180f71559ab"
 }

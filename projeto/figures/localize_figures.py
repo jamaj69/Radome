@@ -52,7 +52,7 @@ KEYS = {
 ANNOTATIONS = {
     "fig01": [(.50,.07,"source / target","fonte / alvo"),(.17,.38,"node A","nó A"),(.50,.43,"node B","nó B"),(.83,.38,"node C","nó C"),(.50,.88,"distributed fusion","fusão distribuída")],
     "fig02": [(.29,.65,"HF","HF"),(.42,.78,"VHF","VHF"),(.64,.69,"UHF","UHF"),(.70,.37,"L/S/C","L/S/C"),(.40,.28,"X/Ku/Ka","X/Ku/Ka"),(.50,.52,"face core","núcleo da face")],
-    "fig03": [(.24,.43,"RF aperture","abertura RF"),(.73,.15,"outer skin","pele externa"),(.73,.265,"low-loss core","núcleo de baixa perda"),(.73,.38,"inner skin","pele interna"),(.73,.49,"RF aperture / PCB","abertura RF / PCB"),(.73,.605,"shielded band modules","módulos blindados por faixa"),(.61,.73,"ADC A","ADC A"),(.82,.73,"ADC B","ADC B"),(.61,.85,"ASIC A","ASIC A"),(.82,.85,"ASIC B","ASIC B")],
+    "fig03": [(.24,.43,"RF aperture","abertura RF"),(.73,.15,"outer skin","pele externa"),(.73,.265,"low-loss core","núcleo de baixa perda"),(.73,.38,"inner skin","pele interna"),(.73,.49,"RF aperture / PCB","abertura RF / PCB"),(.73,.605,"shielded band modules","módulos blindados por faixa"),(.61,.73,"ADC A","ADC A"),(.82,.73,"ADC B","ADC B"),(.61,.83,"ASIC A","ASIC A"),(.82,.83,"ASIC B","ASIC B")],
     "fig04": [(.18,.78,"HF","HF"),(.27,.66,"VHF","VHF"),(.51,.54,"UHF","UHF"),(.57,.42,"aviation","aeronáutica"),(.68,.30,"L/S/C","L/S/C"),(.82,.18,"X/Ku","X/Ku"),(.89,.07,"K/Ka","K/Ka")],
     "fig05": [(.12,.24,"VHF channel","canal VHF"),(.12,.41,"UHF channel","canal UHF"),(.42,.33,"independent bands","faixas independentes"),(.79,.33,"invalid synthesis","síntese inválida"),(.12,.68,"port X","porta X"),(.12,.86,"port Y","porta Y"),(.42,.77,"coherent ADCs","ADCs coerentes"),(.79,.77,"Jones / Stokes / circular","Jones / Stokes / circular")],
     "fig06": [(.08,.33,"antenna","antena"),(.22,.33,"filter","filtro"),(.35,.33,"LNA","LNA"),(.49,.33,"converter","conversor"),(.63,.33,"ADC","ADC"),(.77,.33,"FPGA","FPGA"),(.91,.33,"events","eventos"),(.25,.75,"calibration","calibração"),(.52,.75,"clock","relógio"),(.80,.75,"control","controle")],
@@ -108,6 +108,55 @@ def wrap(draw, text, text_font, width):
     return lines
 
 
+def draw_label(draw, centre, text, text_font, canvas_size):
+    """Draw a padded box whose centre follows the centre of the rendered glyphs."""
+    canvas_width, canvas_height = canvas_size
+    max_text_width = max(160, int(canvas_width * .30))
+    lines = wrap(draw, text, text_font, max_text_width)
+    label = "\n".join(lines)
+    spacing = max(3, text_font.size // 5)
+
+    # Pillow's text bbox can start below or to the left of the drawing origin.
+    # Compensating for those bearings is what centres the visible glyphs rather
+    # than merely centring the font's nominal origin.
+    bbox = draw.multiline_textbbox(
+        (0, 0), label, font=text_font, spacing=spacing, align="center"
+    )
+    text_width = bbox[2] - bbox[0]
+    text_height = bbox[3] - bbox[1]
+    padding_x = max(10, round(text_font.size * .55))
+    padding_y = max(7, round(text_font.size * .38))
+    box_width = text_width + 2 * padding_x
+    box_height = text_height + 2 * padding_y
+
+    cx, cy = centre
+    margin = max(8, text_font.size // 3)
+    cx = min(max(cx, margin + box_width / 2), canvas_width - margin - box_width / 2)
+    cy = min(max(cy, margin + box_height / 2), canvas_height - margin - box_height / 2)
+    left = round(cx - box_width / 2)
+    top = round(cy - box_height / 2)
+    right = round(left + box_width)
+    bottom = round(top + box_height)
+
+    draw.rounded_rectangle(
+        (left, top, right, bottom),
+        radius=max(5, text_font.size // 4),
+        fill="#ffffff",
+        outline="#8a9aa3",
+        width=max(1, text_font.size // 16),
+    )
+    text_x = left + padding_x - bbox[0]
+    text_y = top + padding_y - bbox[1]
+    draw.multiline_text(
+        (text_x, text_y),
+        label,
+        font=text_font,
+        fill="#263746",
+        spacing=spacing,
+        align="center",
+    )
+
+
 for lang, index in (("en", 0), ("pt-BR", 1)):
     destination = ROOT / lang
     destination.mkdir(exist_ok=True)
@@ -121,9 +170,13 @@ for lang, index in (("en", 0), ("pt-BR", 1)):
         annotation_font = font(max(18, width // 62), True)
         for x, y, english, portuguese in ANNOTATIONS.get(prefix, []):
             label = english if index == 0 else portuguese
-            bbox = scratch.textbbox((width*x, height*y), label, font=annotation_font, anchor="mm", stroke_width=2)
-            scratch.rounded_rectangle((bbox[0]-7, bbox[1]-4, bbox[2]+7, bbox[3]+4), radius=5, fill=(255,255,255,225), outline="#8a9aa3", width=1)
-            scratch.text((width*x, height*y), label, font=annotation_font, fill="#263746", anchor="mm")
+            draw_label(
+                scratch,
+                (width * x, height * y),
+                label,
+                annotation_font,
+                image.size,
+            )
         key_lines = wrap(scratch, KEYS[prefix][index], key_font, width - 100)
         panel_height = max(150, 65 + len(key_lines) * (key_font.size + 8))
         output = Image.new("RGB", (width, height + panel_height), "white")

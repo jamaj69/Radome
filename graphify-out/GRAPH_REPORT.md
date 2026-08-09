@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-09)
 
 ## Corpus Check
-- 31 files · ~543,025 words
+- 31 files · ~542,266 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 557 nodes · 585 edges · 53 communities (47 shown, 6 thin omitted)
+- 559 nodes · 588 edges · 53 communities (48 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `54578efc`
+- Built from commit: `92c6b1ac`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -86,7 +86,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (53 total, 6 thin omitted)
+## Communities (53 total, 5 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -268,10 +268,14 @@ Nodes (17): add(), centroid(), cross(), dot(), face_edge_key(), length(), main()
 Cohesion: 0.24
 Nodes (5): arrow(), cylinder_between(), dot(), Render a contiguous cluster of 2 m tetrahedral radome face modules., select_contiguous_cluster()
 
+### Community 52 - "localize_figures.py"
+Cohesion: 0.29
+Nodes (4): draw_label(), Build language-specific publication figures from the common geometry masters., Draw a padded box whose centre follows the centre of the rendered glyphs., wrap()
+
 ## Knowledge Gaps
 - **388 isolated node(s):** `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout`, `LaTeX Article Commands` (+383 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
