@@ -77,6 +77,8 @@ The master document uses the bibliography copied from `radome_antenna_literature
 
 ## Regenerating Project Figures
 
+Permanent publication rule: both authoritative language editions must include the same figure files. Generated figures, SVGs and Blender renders must not contain titles, labels, callouts, legends, axis text or any other natural-language text. Put every verbal explanation in the language-specific LaTeX caption. Geometry, colour, line style and text-free symbols may be shared across editions.
+
 The current generated figures are produced by:
 
 ```bash
@@ -122,7 +124,8 @@ The Yagi arrangement is:
 - larger VHF antenna;
 - smaller UHF antenna;
 - common support/boom axis;
-- transverse elements in orthogonal planes;
+- support/boom axis collinear with the outward normal of the external triangular face;
+- transverse elements in mutually orthogonal planes, with the complete crossed assembly rotated 45 degrees around the normal relative to the local face basis;
 - independent RF chains, ADCs and ASICs.
 
 Blender may print `libGL` or Nouveau messages in headless mode. If the Eevee render completes and writes the PNG, those messages did not prevent the render.

@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-08)
 
 ## Corpus Check
-- 31 files · ~394,051 words
+- 30 files · ~341,199 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 557 nodes · 594 edges · 53 communities (49 shown, 4 thin omitted)
+- 550 nodes · 579 edges · 52 communities (47 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f3a67728`
+- Built from commit: `22fe50c2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -32,7 +32,6 @@
 - Start here: priority reading order
 - RADOME — Registro central de parâmetros
 - verify_radome_geometry.py
-- render_aircraft_two_radomes_blender.py
 - render_radome_blender.py
 - RADOME Project / Projeto RADOME
 - English
@@ -49,6 +48,7 @@
 - Sub-area guide 5: integration, calibration, and operational validation
 - Key research groups
 - Blender Baseline: 35S Radome and Concrete Base
+- generate_updated_figures.py
 - Sub-area guide 1: broadband antenna architectures and radome-face placement
 - 17. Recalibração constante do relógio
 - RADOME V3
@@ -57,6 +57,7 @@
 - Sub-area guide 2: electromagnetic effects and functional radome technologies
 - build.sh
 - 2. Geometria fundamental
+- generate_fig12_3d.py
 - Sub-area guide 3: passive emitter detection, direction finding, and localization
 - Sub-area guide 4: clandestine, anomalous, and deviated-signal identification
 - Cross-search signals
@@ -64,19 +65,18 @@
 - Cross-search signals
 - verify_tetrahedral_face_geometry.py
 - render_tetrahedral_face_cluster_blender.py
-- split_chapter
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
 2. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
-3. `Plano Diretor de Infraestrutura Tática` - 13 edges
-4. `RADOME — Registro de decisões de arquitetura` - 13 edges
+3. `RADOME — Registro de decisões de arquitetura` - 14 edges
+4. `Plano Diretor de Infraestrutura Tática` - 13 edges
 5. `RADOME Project Agent Guide` - 12 edges
 6. `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network` - 12 edges
 7. `RADOME — Roadmap de correções técnicas e documentais` - 11 edges
 8. `tetrahedral_modules()` - 10 edges
-9. `split_chapter()` - 9 edges
-10. `RADOME — Sumário executivo e roadmap de pesquisa e engenharia` - 9 edges
+9. `RADOME — Sumário executivo e roadmap de pesquisa e engenharia` - 9 edges
+10. `27. Exemplo operacional` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `select_contiguous_cluster()` --calls--> `face_edge_key()`  [INFERRED]
@@ -85,7 +85,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (53 total, 4 thin omitted)
+## Communities (52 total, 5 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -164,8 +164,8 @@ Cohesion: 0.12
 Nodes (15): Conceito de alimentação e construção, Desempenho esperado, não garantido, Design objective, Element schedule, English, Expected—not guaranteed—performance, Feed and construction concept, Objetivo do projeto (+7 more)
 
 ### Community 22 - "RADOME — Registro de decisões de arquitetura"
-Cohesion: 0.14
-Nodes (13): ADR-001 — Fonte técnica autoritativa, ADR-002 — Versionamento independente, ADR-003 — Registro central de parâmetros, ADR-004 — Conflitos não são requisitos, ADR-005 — Aprovação condicionada da baseline C0, ADR-006 — Polarimetria restrita à mesma faixa, ADR-007 — LPDA VHF como candidata de banda larga, ADR-008 — Mastro polarimétrico de quatro canais (+5 more)
+Cohesion: 0.13
+Nodes (14): ADR-001 — Fonte técnica autoritativa, ADR-002 — Versionamento independente, ADR-003 — Registro central de parâmetros, ADR-004 — Conflitos não são requisitos, ADR-005 — Aprovação condicionada da baseline C0, ADR-006 — Polarimetria restrita à mesma faixa, ADR-007 — LPDA VHF como candidata de banda larga, ADR-008 — Mastro polarimétrico de quatro canais (+6 more)
 
 ### Community 23 - "Build instructions"
 Cohesion: 0.40
@@ -267,24 +267,20 @@ Nodes (17): add(), centroid(), cross(), dot(), face_edge_key(), length(), main()
 Cohesion: 0.24
 Nodes (5): arrow(), cylinder_between(), dot(), Render a contiguous cluster of 2 m tetrahedral radome face modules., select_contiguous_cluster()
 
-### Community 52 - "split_chapter"
-Cohesion: 0.38
-Nodes (9): Path, clean_special_cases(), figure_blocks(), localize_headings(), main(), split_chapter(), strip_figures(), title_for() (+1 more)
-
 ## Knowledge Gaps
-- **386 isolated node(s):** `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout`, `LaTeX Article Commands` (+381 more)
+- **387 isolated node(s):** `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout`, `LaTeX Article Commands` (+382 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.035) - this node is a cross-community bridge._
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
 - **What connects `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` to the rest of the system?**
-  _386 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _387 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**

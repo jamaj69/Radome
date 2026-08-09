@@ -16,7 +16,7 @@ A abertura RF externa ocupa a face triangular não blindada. Para qualquer faixa
 As junções internas formam caminhos contínuos de carga entre os membros da estrutura triangular e as faces vizinhas. Costuras estruturais vedadas, reforços locais e um anel ou placa nodal interna transferem cargas de vento, vibração e manutenção sem depender apenas da pele dielétrica. O conjunto deve ser verificado por análise estrutural e ensaios ambientais.
 
 
-O modelo Blender torna explícita a convenção de montagem: a face RF triangular está na superfície externa do radome, enquanto o volume da pirâmide e seu vértice apontam para dentro. Uma haste de suporte parte do vértice interno, atravessa a interface da face e continua como o eixo comum das lanças das Yagis VHF e UHF externas. Os elementos de ambas as antenas são transversais a esse eixo e ocupam planos ortogonais.
+O modelo Blender torna explícita a convenção de montagem (\texttt{MEC-006} e \texttt{MEC-007}): a face RF triangular está na superfície externa do radome, enquanto o volume da pirâmide e seu vértice apontam para dentro. Uma haste parte do ápice interno, atravessa o centro da face e prossegue para fora como eixo comum dos booms, colinear com a normal externa dessa face. Os elementos VHF e UHF são transversais à normal, mutuamente ortogonais, e a montagem cruzada completa é girada em 45 graus ao redor da normal em relação à base tangente local. Essa rotação mecânica não transforma os canais de faixas diferentes em um par polarimétrico coerente.
 
 
 
@@ -27,34 +27,34 @@ A carga da Yagi externa é transferida pela haste de base para a moldura triangu
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig16_tetrahedral_face_cluster.png}
-\caption{Sete células tetraédricas rasas contíguas com bases tangentes locais e núcleo interno de serviço reservado.}
+\caption{Sete células tetraédricas rasas contíguas. Os membros laranja e ciano mostram as direções VHF/UHF mutuamente ortogonais a 45° e 135° em cada base tangente local; as setas verdes mostram as normais externas das faces, que definem as direções dos booms. O envelope verde aramado é o núcleo interno de serviço reservado.}
 \label{fig:fig16_tetrahedral_face_cluster}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig11_face_yagi_camadas.pdf}
-\caption{Face triangular de 2 m com Yagis VHF e UHF externas cruzadas: elementos transversais ortogonais, alimentações independentes e escalas distintas.}
+\caption{Montagem de face independente de idioma. O boom escuro segue a normal externa desde o ápice interno e atravessa o centro da abertura triangular de dois metros; os elementos laranja e azul são mutuamente ortogonais e girados conjuntamente em 45° ao redor dessa normal. As placas coloridas à direita representam a pilha de materiais e eletrônica.}
 \label{fig:fig11_face_yagi_camadas}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{fig02_zonamento_radome.png}
-\caption{Zoneamento funcional.}
+\caption{Zoneamento funcional independente de idioma: os setores coloridos representam as famílias híbridas de faixas e o centro branco representa sincronismo, calibração, processamento e serviços compartilhados na face. Os limites dos setores são alocações arquiteturais, não fronteiras eletromagnéticas rígidas.}
 \label{fig:fig02_zonamento_radome}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig13_radome_blender.png}
-\caption{Modelo Blender do radome e da face explodida com Yagis VHF/UHF cruzadas.}
+\caption{Vista externa no Blender do radome e da face explodida. O boom combinado VHF/UHF é colinear com a normal da face; os elementos transversais são ortogonais e girados em 45° ao redor dessa normal.}
 \label{fig:fig13_radome_blender}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig14_radome_interior_blender.png}
-\caption{Vista interna de inspeção no Blender com casca transparente, tirantes estruturais, troncos de serviço e módulos blindados.}
+\caption{Vista interna de inspeção no Blender com casca transparente, caminhos estruturais de carga, troncos de serviço e módulos blindados representativos, sem chamadas específicas de idioma.}
 \label{fig:fig14_radome_interior_blender}
 \end{figure}

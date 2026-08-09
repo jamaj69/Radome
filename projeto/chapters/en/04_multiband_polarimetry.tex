@@ -1,6 +1,6 @@
 \chapter{Multiband Aperture and Polarimetry}
 
-The aperture is intentionally hybrid rather than uniform across the spectrum. One external single-polarization VHF Yagi and one external single-polarization UHF Yagi share a mast: the VHF antenna uses larger elements and the UHF antenna uses smaller elements. Their orthogonal mechanical planes provide orientation diversity across different bands, not two polarization components of one signal. Smaller L/S/C, X/Ku and K/Ka antennas or tiles occupy the face layers and local mounts. HF uses loops, crossed dipoles and platform-mode diversity. Each antenna family has its own filtering, conversion and sampling strategy, while the face preserves a common timing, calibration and fusion interface.
+The aperture is intentionally hybrid rather than uniform across the spectrum. One external single-polarization VHF Yagi and one external single-polarization UHF Yagi share a boom aligned with the outward face normal: the VHF antenna uses larger elements and the UHF antenna uses smaller elements. Their transverse directions are mutually orthogonal at 45° and 135° in the local tangent basis. These mechanical orientations provide diversity across different bands, not two polarization components of one signal. Smaller L/S/C, X/Ku and K/Ka antennas or tiles occupy the face layers and local mounts. HF uses loops, crossed dipoles and platform-mode diversity. Each antenna family has its own filtering, conversion and sampling strategy, while the face preserves a common timing, calibration and fusion interface.
 
 The first demonstrator does not claim continuous spectral coverage. The 323--470 MHz and 860--960 MHz intervals are deliberately unassigned. A dedicated 960--1215 MHz aviation aperture or array supplies two simultaneous independent paths: a 978 MHz UAT preselector, limiter/LNA, coherent ADC and FPGA channel; and a 1090 MHz 1090ES preselector, limiter/LNA, coherent ADC and FPGA channel. Neither path is assigned to the 470--860 MHz UHF Yagi, and the aviation aperture does not imply continuous monitoring across its full tuning range.
 
@@ -10,7 +10,7 @@ E_{\mathrm{RHCP}}=\frac{E_x-jE_y}{\sqrt{2}},\qquad E_{\mathrm{LHCP}}=\frac{E_x+j
 \]
 The equations do not combine the VHF and UHF Yagis. The first VHF/UHF demonstrator treats them as independent single-polarization channels (\texttt{POL-002}); full polarimetry requires a later dual-port or same-band crossed module. For a curved surface, valid local bases must be rotated to a common coordinate system before fusion. Polarimetric calibration is a function of frequency, angle, temperature, amplitude balance, phase and mutual coupling.
 
-A proposed four-channel mast implements VHF-X/VHF-Y at 0°/90° and UHF-A/UHF-B at 45°/135°, with four electrically independent booms and RF chains (\texttt{POL-004}--\texttt{POL-006}). For each band $b$, calibration follows:
+A separate future four-channel mast, distinct from the illustrated combined VHF/UHF pair, implements VHF-X/VHF-Y at 0°/90° and UHF-A/UHF-B at 45°/135°, with four electrically independent booms and RF chains (\texttt{POL-004}--\texttt{POL-006}). For each band $b$, calibration follows:
 \[
 \widehat{\mathbf{E}}_b(f,\theta,\phi,T)=
 \mathbf{C}_b^{-1}(f,\theta,\phi,T)
@@ -26,13 +26,13 @@ For wider VHF discovery coverage, an 11-element 72--320 MHz LPDA with a 2 m maxi
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{fig04_particionamento_espectro.png}
-\caption{Recommended spectral partition.}
+\caption{Language-neutral spectral partition on a logarithmic horizontal scale. Each coloured bar is one proposed band family; the blank intervals between the VHF, UHF and dedicated aviation paths are deliberate first-demonstrator gaps.}
 \label{fig:fig04_particionamento_espectro}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{fig05_polarimetria.png}
-\caption{Cross-band diversity versus valid same-band polarimetric acquisition.}
+\caption{Top flow: independently digitized VHF and UHF channels terminate in a crossed-out cross-band polarimetric result. Bottom flow: two coherent orthogonal ports in the same band feed calibrated Jones, Stokes or circular-polarization products.}
 \label{fig:fig05_polarimetria}
 \end{figure}

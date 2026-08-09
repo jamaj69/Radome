@@ -15,6 +15,8 @@ Both antennas in a same-band pair must observe the same signal bandwidth simulta
 
 The preferred mechanical interpretation is a common structural mast with four electrically isolated booms or balanced feed structures. VHF and UHF elements may be axially staggered, but must not share conductive paths unless the complete coupled structure is intentionally optimized. The largest UHF elements and smallest VHF-LPDA elements are close enough in electrical scale that mutual coupling must be included explicitly.
 
+For installation on a tetrahedral external face, the structural mast/boom axis is collinear with the outward face normal. The local transverse reference is rotated by 45° around that normal: the nominal crossed directions are 45° and 135° relative to the face tangent basis. This mounting convention is mechanical and does not relax the same-band coherence requirement.
+
 ### Calibration model
 
 For each band `b ∈ {VHF,UHF}`, the measured complex port vector is
@@ -77,6 +79,8 @@ O conjunto proposto utiliza um mastro estrutural com quatro aberturas eletricame
 As duas antenas do mesmo par devem observar simultaneamente a mesma largura de banda. Uma única antena UHF a 45° não recupera toda a polarização UHF. A rotação de 45° altera a base de medição e pode facilitar a organização mecânica, mas não garante isolamento.
 
 A interpretação mecânica preferencial é um mastro estrutural comum com quatro booms ou estruturas balanceadas eletricamente isoladas. Elementos VHF e UHF podem ser deslocados axialmente, mas não devem compartilhar caminhos condutivos, salvo se toda a estrutura acoplada for deliberadamente otimizada. Os maiores elementos UHF e os menores elementos da LPDA VHF possuem escalas elétricas próximas, exigindo modelagem explícita do acoplamento mútuo.
+
+Na instalação sobre uma face tetraédrica externa, o eixo estrutural do mastro/boom é colinear com a normal externa da face. A referência transversal local é girada em 45° ao redor dessa normal: as direções cruzadas nominais ficam em 45° e 135° em relação à base tangente da face. Essa convenção de montagem é mecânica e não dispensa o requisito de coerência dentro da mesma faixa.
 
 O modelo de calibração é o mesmo apresentado na seção em inglês. A matriz complexa 2×2 `C_b` inclui diagramas embarcados, desequilíbrio de ganho e fase, atrasos, acoplamento, mastro e plataforma. Quando estiver mal condicionada, deve-se usar pseudoinversa regularizada e aumentar a incerteza da observação.
 

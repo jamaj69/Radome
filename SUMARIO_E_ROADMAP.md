@@ -12,6 +12,8 @@ A evolução documental corrigiu hipóteses iniciais fisicamente frágeis. A pro
 
 A principal contribuição pretendida é sistêmica: integrar abertura conformal/multifaixa, plataforma e radome calibrados, eletrônica distribuída, metrologia temporal, processamento de eventos e validação ambiental em uma única arquitetura reproduzível. Hoje essa contribuição está resolvida no nível de projeto e visualização 3D, não no nível de protótipo caracterizado.
 
+Na montagem combinada VHF/UHF, o eixo estrutural e os booms são colineares com a normal externa de cada face triangular. Os elementos transversais das duas Yagis ocupam planos mutuamente ortogonais e o conjunto é girado 45° ao redor da normal em relação à base tangente local. As duas edições do artigo compartilham os mesmos arquivos gráficos sem texto interno; as explicações ficam exclusivamente nas legendas localizadas.
+
 ## 2. Mapa compacto do sistema
 
 ```mermaid
@@ -38,7 +40,7 @@ flowchart LR
 | `RADOME V3.md` e arquitetura eletrônica revisada | Geometria, hierarquia de aquisição, buffers, triggers e núcleo temporal | Estabelecem processamento distribuído e separam tempo do evento de tempo de transporte; vários números continuam parâmetros de projeto a dimensionar. |
 | `Projeto_Radomes_Multifaixa_Revisado.md` | Primeira correção técnica integrada | Introduz particionamento espectral, aquisição vetorial, calibração e demonstrador de três nós. |
 | `projeto_tecnico_radome_consolidado.md` e PDF completo | Consolidação intermediária | Integra arquitetura, infraestrutura, literatura, riscos e plano de prototipagem. |
-| `projeto/projetov1.tex` e capítulos | Documento autoritativo atual, bilíngue | Incorpora Yagis cruzadas VHF/UHF, base de concreto, cenas 3D, cenário aeronáutico e separação entre emissor direto e reflexão bistática. |
+| `projeto/radome-pt-br.tex`, `projeto/radome-en.tex` e capítulos por idioma | Duas edições autoritativas atuais | Incorporam a mesma arquitetura e as mesmas figuras sem texto interno, com legendas localizadas; incluem Yagis cruzadas VHF/UHF, base de concreto, cenas 3D, cenário aeronáutico e separação entre emissor direto e reflexão bistática. |
 | `plano_diretor_complexo_vigilancia_alta_montanha.md` | Infraestrutura de implantação | Define energia, comunicações, térmica, EMC, logística e segurança; deve ser tratado como envelope conceitual até estudos civis e ambientais. |
 
 ## 4. Verificação da revisão de literatura via Consensus

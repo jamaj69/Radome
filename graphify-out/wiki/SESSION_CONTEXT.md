@@ -73,6 +73,8 @@ All commits below used author `github-copilot[bot] <198982749+github-copilot[bot
 - C2 remains open for a lower boundary made of complete modules, real wall/joint thicknesses, corridor accessibility, Faraday continuity and a recalculated civil interface.
 - C3 is in progress. Its spectral architecture, aviation paths, experiment separation and acquisition/horizon screening are complete; RF cascade, link and site budgets remain open.
 - The technical publication now has two authoritative editions: `projeto/radome-pt-br.tex`/`.pdf` and `projeto/radome-en.tex`/`.pdf`. The former bilingual chapters are preserved under `projeto/chapters/legacy-bilingual/` only for traceability.
+- ADR-013 fixes the combined VHF/UHF Yagi boom on the outward normal of each external triangular face. The mutually orthogonal transverse directions are 45° and 135° in the local tangent basis.
+- Both language editions use the same language-neutral figure files. Published figures contain no natural-language text; localized captions carry all verbal explanation.
 - Deliberate first-demonstrator gaps are `323–470 MHz` and `860–960 MHz`.
 - A dedicated `960–1215 MHz` aviation aperture supplies independent UAT 978 MHz and 1090ES paths; neither service is assigned to the `470–860 MHz` UHF Yagi.
 - `EXP-006`, `EXP-007` and `EXP-008` separately control cooperative direct ADS-B, known-transmitter calibration and bistatic reflection.

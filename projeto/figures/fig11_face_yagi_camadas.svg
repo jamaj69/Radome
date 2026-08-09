@@ -1,74 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
-<defs>
-  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#52606d"/></marker>
-  <marker id="redarrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#b74747"/></marker>
-  <style>
-    .title{font:700 30px sans-serif;fill:#17324d}.h{font:700 20px sans-serif;fill:#17324d}.t{font:16px sans-serif;fill:#263746}.s{font:14px sans-serif;fill:#52606d}.dim{font:700 17px sans-serif;fill:#9a4c2b}.box{stroke:#52606d;stroke-width:2}.thin{stroke:#52606d;stroke-width:2;fill:none}.joint{stroke:#b74747;stroke-width:8;stroke-linecap:round}.shield{stroke:#273746;stroke-width:3;fill:#d9e1e8}.module{stroke:#41677d;stroke-width:2;fill:#cfe3ee}.power{stroke:#c77c2b;stroke-width:2;fill:#fae7cf}.thermal{stroke:#4f887c;stroke-width:2;fill:#dcefe9}
-  </style>
-</defs>
-<rect width="1400" height="900" fill="#ffffff"/>
-<text x="700" y="42" text-anchor="middle" class="title">Triangular face, external Yagi and shielded RF layers</text>
-<text x="700" y="70" text-anchor="middle" class="s">Face triangular de 2 m, antena Yagi externa, módulos por faixa e junções estruturais internas</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="white"/>
+  <!-- External equilateral face and inward shallow tetrahedral cell. -->
+  <polygon points="110,650 510,650 310,95" fill="#e8f1f5" stroke="#263746" stroke-width="8"/>
+  <polygon points="110,650 510,650 310,455" fill="#dcefe9" stroke="#52606d" stroke-width="5" opacity="0.75"/>
+  <line x1="310" y1="455" x2="310" y2="95" stroke="#52606d" stroke-width="5"/>
+  <line x1="310" y1="455" x2="110" y2="650" stroke="#52606d" stroke-width="5"/>
+  <line x1="310" y1="455" x2="510" y2="650" stroke="#52606d" stroke-width="5"/>
 
-<!-- front face -->
-<text x="290" y="112" text-anchor="middle" class="h">External face / Face externa</text>
-<polygon points="290,155 80,520 500,520" fill="#edf3f7" stroke="#17324d" stroke-width="5"/>
-<!-- RF aperture -->
-<polygon points="290,215 145,465 435,465" fill="#d6e8f2" stroke="#41677d" stroke-width="3"/>
-<text x="290" y="335" text-anchor="middle" class="t">dielectric RF aperture</text>
-<text x="290" y="358" text-anchor="middle" class="t">abertura dielétrica RF</text>
-<!-- external Yagi: longitudinal support/boom continues from the internal apex; elements are transverse -->
-<circle cx="290" cy="520" r="12" fill="#b74747"/>
-<line x1="290" y1="520" x2="290" y2="820" stroke="#7b4b2a" stroke-width="8"/>
-<line x1="290" y1="570" x2="290" y2="820" stroke="#d08a2e" stroke-width="4"/>
-<!-- reflector and six transverse directors, scaled from 2.00 m down to 1.05 m -->
-<line x1="210" y1="610" x2="370" y2="610" stroke="#7b4b2a" stroke-width="7"/>
-<line x1="218" y1="645" x2="362" y2="645" stroke="#6d7074" stroke-width="5"/>
-<line x1="225" y1="680" x2="355" y2="680" stroke="#6d7074" stroke-width="5"/>
-<line x1="232" y1="715" x2="348" y2="715" stroke="#6d7074" stroke-width="5"/>
-<line x1="240" y1="750" x2="340" y2="750" stroke="#6d7074" stroke-width="4"/>
-<line x1="247" y1="785" x2="333" y2="785" stroke="#6d7074" stroke-width="4"/>
-<line x1="254" y1="820" x2="326" y2="820" stroke="#6d7074" stroke-width="4"/>
-<!-- crossed Yagi B: smaller elements in the orthogonal polarization plane -->
-<line x1="238" y1="620" x2="342" y2="650" stroke="#416f9d" stroke-width="4"/>
-<line x1="245" y1="655" x2="335" y2="681" stroke="#416f9d" stroke-width="4"/>
-<line x1="252" y1="690" x2="328" y2="712" stroke="#416f9d" stroke-width="4"/>
-<line x1="259" y1="725" x2="321" y2="743" stroke="#416f9d" stroke-width="3"/>
-<line x1="266" y1="760" x2="314" y2="774" stroke="#416f9d" stroke-width="3"/>
-<line x1="273" y1="795" x2="307" y2="805" stroke="#416f9d" stroke-width="3"/>
-<!-- folded driven element around the support axis -->
-<path d="M230,690 C215,680 215,665 230,655 L350,655 C365,665 365,680 350,690" fill="none" stroke="#b9792e" stroke-width="5"/>
-<text x="390" y="575" class="s">common boom / eixo comum</text>
-<text x="390" y="595" class="s">apex support / vértice interno</text>
-<text x="290" y="850" text-anchor="middle" class="t">External crossed VHF + UHF Yagis / Yagis VHF + UHF cruzadas</text>
-<text x="290" y="872" text-anchor="middle" class="s">A VHF larger / maior, pol. Y: 2.00, 1.80, 1.62, 1.45, 1.25, 1.08 m</text>
-<text x="290" y="890" text-anchor="middle" class="s">B UHF smaller / menor, pol. Z: scaled elements, orthogonal 90 deg</text>
-<!-- dimensions -->
-<line x1="80" y1="535" x2="500" y2="535" stroke="#9a4c2b" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-<text x="290" y="560" text-anchor="middle" class="dim">2.00 m triangular face side / lado da face</text>
-<text x="380" y="615" class="dim">VHF max. 2.00 m</text>
-<line x1="55" y1="155" x2="55" y2="520" stroke="#9a4c2b" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-<text x="40" y="345" transform="rotate(-90 40 345)" text-anchor="middle" class="dim">preliminary height / altura</text>
+  <!-- Boom collinear with the outward face normal. -->
+  <line x1="310" y1="455" x2="730" y2="455" stroke="#263746" stroke-width="18"/>
+  <polygon points="760,455 710,425 710,485" fill="#4f887c"/>
 
-<!-- layer stack -->
-<text x="930" y="112" text-anchor="middle" class="h">Exploded layer stack / Camadas em corte</text>
-<rect x="650" y="145" width="560" height="52" class="box" fill="#e7eef3"/><text x="930" y="178" text-anchor="middle" class="t">1. Outer dielectric skin: quartz/GFRP / Pele dielétrica externa</text>
-<rect x="650" y="212" width="560" height="52" class="box" fill="#faedcf"/><text x="930" y="245" text-anchor="middle" class="t">2. Honeycomb or low-loss foam core / Núcleo colmeia ou espuma</text>
-<rect x="650" y="279" width="560" height="52" class="box" fill="#e7eef3"/><text x="930" y="312" text-anchor="middle" class="t">3. Inner dielectric skin / Pele dielétrica interna</text>
-<rect x="650" y="346" width="560" height="52" class="box" fill="#cfe3ee"/><text x="930" y="379" text-anchor="middle" class="t">4. RF aperture and PCB / Abertura RF e PCB</text>
-<rect x="650" y="413" width="560" height="52" class="box shield"/><text x="930" y="446" text-anchor="middle" class="t">5. Shielded band modules / Módulos blindados por faixa</text>
-<rect x="650" y="480" width="560" height="52" class="box module"/><text x="930" y="513" text-anchor="middle" class="t">Band A: ADC + ASIC / Faixa A: ADC + ASIC</text>
-<rect x="650" y="547" width="560" height="52" class="box module"/><text x="930" y="580" text-anchor="middle" class="t">Band B: ADC + ASIC / Faixa B: ADC + ASIC</text>
-<rect x="650" y="614" width="560" height="52" class="box module"/><text x="930" y="647" text-anchor="middle" class="t">Band N: ADC + ASIC / Faixa N: ADC + ASIC</text>
-<rect x="650" y="681" width="560" height="52" class="box thermal"/><text x="930" y="714" text-anchor="middle" class="t">6. Central face module: FFASIC, clock, fibre / Módulo central da face</text>
-<rect x="650" y="748" width="560" height="52" class="box power"/><text x="930" y="781" text-anchor="middle" class="t">7. DC, thermal plate and monitoring / DC, placa fria e monitoramento</text>
+  <!-- Crossed VHF/UHF elements, mutually orthogonal and rotated 45 degrees. -->
+  <g stroke="#d08b4d" stroke-width="12" stroke-linecap="round">
+    <line x1="420" y1="565" x2="560" y2="425"/>
+    <line x1="500" y1="540" x2="610" y2="430"/>
+    <line x1="575" y1="515" x2="660" y2="430"/>
+    <line x1="640" y1="495" x2="705" y2="430"/>
+  </g>
+  <g stroke="#5f91b7" stroke-width="10" stroke-linecap="round">
+    <line x1="440" y1="375" x2="570" y2="505"/>
+    <line x1="525" y1="390" x2="625" y2="490"/>
+    <line x1="590" y1="400" x2="670" y2="480"/>
+    <line x1="650" y1="410" x2="710" y2="470"/>
+  </g>
 
-<!-- joints and isolation callouts -->
-<line x1="505" y1="470" x2="635" y2="470" stroke="#b74747" stroke-width="3" marker-end="url(#redarrow)"/>
-<text x="515" y="450" class="s">internal joint line / linha de junção interna</text>
-<line x1="505" y1="505" x2="635" y2="540" stroke="#b74747" stroke-width="3" marker-end="url(#redarrow)"/>
-<text x="515" y="570" class="s">mechanical ring + sealed seam</text>
-<text x="515" y="590" class="s">anel estrutural + vedação</text>
-<text x="650" y="850" class="s">Design intent: conductive shields, RF gaskets and mechanically continuous internal joints isolate adjacent faces while preserving a dielectric external aperture.</text>
-<text x="650" y="872" class="s">Objetivo: blindagens, juntas RF e junções internas contínuas isolam faces vizinhas sem bloquear a abertura dielétrica externa.</text>
+  <!-- Language-neutral exploded material/electronics stack. -->
+  <g stroke="#52606d" stroke-width="4">
+    <rect x="820" y="100" width="270" height="45" fill="#dcebf2"/>
+    <rect x="800" y="180" width="310" height="45" fill="#f2d7a9"/>
+    <rect x="780" y="260" width="350" height="45" fill="#d4dde3"/>
+    <rect x="760" y="340" width="390" height="45" fill="#cce5d0"/>
+    <rect x="780" y="420" width="350" height="45" fill="#ead2d2"/>
+    <rect x="800" y="500" width="310" height="45" fill="#dcd4ee"/>
+  </g>
+  <g stroke="#52606d" stroke-width="4" fill="none">
+    <line x1="955" y1="145" x2="955" y2="180"/>
+    <line x1="955" y1="225" x2="955" y2="260"/>
+    <line x1="955" y1="305" x2="955" y2="340"/>
+    <line x1="955" y1="385" x2="955" y2="420"/>
+    <line x1="955" y1="465" x2="955" y2="500"/>
+  </g>
+  <circle cx="890" cy="630" r="55" fill="#d08b4d" stroke="#52606d" stroke-width="5"/>
+  <circle cx="1040" cy="630" r="55" fill="#5f91b7" stroke="#52606d" stroke-width="5"/>
 </svg>

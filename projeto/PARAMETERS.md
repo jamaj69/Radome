@@ -61,6 +61,8 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | MEC-003 | Paredes laterais Faraday independentes | 240 | parede | Derivado | `geometry/verify_tetrahedral_face_geometry.py`; ADR-012 | EMC/estruturas | Detalhar espessura, juntas RF e bonding |
 | MEC-004 | Invólucros ADC/ASIC por face dual-pol | 2 | invólucro | Proposto | `render_tetrahedral_face_cluster_blender.py`; `05_electronics_processing.tex` | EMC/eletrônica | Ensaiar SE, emissões, térmica e acoplamento |
 | MEC-005 | Corredores intercelulares de cabos e fibras | 120 | corredor | Derivado | `geometry/verify_tetrahedral_face_geometry.py`; ADR-012 | Integração/EMC | Separar energia de fibra/RF e validar acesso |
+| MEC-006 | Ângulo entre o eixo comum dos booms e a normal externa da face | 0 | grau | Proposto | ADR-013; `render_radome_blender.py` | Antenas/estruturas | Verificar tolerância de alinhamento e carga no suporte |
+| MEC-007 | Rotação da montagem Yagi cruzada em torno da normal | 45 | grau | Proposto | ADR-013; `render_radome_blender.py` | Antenas/estruturas | Verificar referência da base tangente e tolerância angular |
 
 ## Plano espectral e antenas
 

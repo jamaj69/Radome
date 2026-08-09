@@ -73,19 +73,6 @@ def triangle_mesh(name, points, mat, bevel=0.0):
         mod.segments = 2
     return obj
 
-def text_obj(body, location, size=0.20, color_mat=white_mat, align="CENTER"):
-    curve = bpy.data.curves.new(body, "FONT")
-    curve.body = body
-    curve.align_x = align
-    curve.size = size
-    curve.extrude = 0.004
-    obj = bpy.data.objects.new(body, curve)
-    bpy.context.collection.objects.link(obj)
-    obj.location = location
-    obj.data.materials.append(color_mat)
-    # Keep labels approximately facing the camera through a track quaternion later.
-    return obj
-
 # Radome shell: equator as the mid-plane and lower cut at latitude 35 S.
 shell_center = Vector((-3.7, 0.0, 0.0))
 radius = 2.75
@@ -186,39 +173,35 @@ for point in base:
     bpy.context.object.name = "Internal node plate"
     bpy.context.object.data.materials.append(frame_mat)
 
-# External crossed Yagis: both booms continue from the same apex-support axis.
-# Their transverse elements occupy orthogonal planes, producing two distinct
-# linear polarizations while preserving independent band dimensions.
+# External crossed Yagis: the shared boom is collinear with the outward face
+# normal. The transverse element directions are mutually orthogonal and the
+# complete assembly is rotated 45 degrees around that normal.
 yagi_x = offset.x + 0.32
 mast_base = apex
 mast_top = Vector((yagi_x, 0.0, 0.0))
 cylinder_between("Antenna support from inward pyramid apex", mast_base, mast_top, 0.065, mast_mat)
 boom_end = Vector((offset.x + 2.75, 0.0, 0.0))
-def crossed_yagi(prefix, color_mat, element_axis, offset_y=0.0, offset_z=0.0, scale=1.0):
-    boom_start = Vector((yagi_x, offset_y, offset_z))
-    cylinder_between(prefix + " boom", boom_start, boom_end + Vector((0, offset_y, offset_z)), 0.04, color_mat)
+def crossed_yagi(prefix, color_mat, angle_degrees, scale=1.0):
+    angle = math.radians(angle_degrees)
+    element_direction = Vector((0.0, math.cos(angle), math.sin(angle)))
+    boom_start = Vector((yagi_x, 0.0, 0.0))
+    cylinder_between(prefix + " boom normal to face", boom_start, boom_end, 0.04, color_mat)
     lengths = [(0.62, 1.00), (1.03, 0.86), (1.43, 0.74), (1.83, 0.62), (2.23, 0.52), (2.62, 0.45)]
     for x, half in lengths:
-        x_position = offset.x + x
         half *= scale
-        if element_axis == "y":
-            a = Vector((x_position, offset_y - half, offset_z))
-            b = Vector((x_position, offset_y + half, offset_z))
-        else:
-            a = Vector((x_position, offset_y, offset_z - half))
-            b = Vector((x_position, offset_y, offset_z + half))
+        centre = Vector((offset.x + x, 0.0, 0.0))
+        a = centre - element_direction * half
+        b = centre + element_direction * half
         cylinder_between(prefix + " transverse element", a, b, 0.022, color_mat)
     loop_x = offset.x + 1.35
     half = 0.58 * scale
-    if element_axis == "y":
-        loop_points = [Vector((loop_x, offset_y - half, offset_z - 0.12)), Vector((loop_x, offset_y + half, offset_z - 0.12)), Vector((loop_x, offset_y + half, offset_z + 0.12)), Vector((loop_x, offset_y - half, offset_z + 0.12))]
-    else:
-        loop_points = [Vector((loop_x, offset_y - 0.12, offset_z - half)), Vector((loop_x, offset_y - 0.12, offset_z + half)), Vector((loop_x, offset_y + 0.12, offset_z + half)), Vector((loop_x, offset_y + 0.12, offset_z - half))]
+    centre = Vector((loop_x, 0.0, 0.0))
+    loop_points = [centre - element_direction * half + Vector((-0.12, 0, 0)), centre + element_direction * half + Vector((-0.12, 0, 0)), centre + element_direction * half + Vector((0.12, 0, 0)), centre - element_direction * half + Vector((0.12, 0, 0))]
     for start, end in zip(loop_points, loop_points[1:] + loop_points[:1]):
         cylinder_between(prefix + " folded driven element", start, end, 0.032, yagi_gold)
 
-crossed_yagi("Yagi A VHF polarization-Y", yagi_mat, "y", offset_z=0.10, scale=1.0)
-crossed_yagi("Yagi B UHF polarization-Z", yagi_cross_mat, "z", offset_y=0.10, scale=0.62)
+crossed_yagi("Yagi A VHF at 45 degrees", yagi_mat, 45.0, scale=1.0)
+crossed_yagi("Yagi B UHF at 135 degrees", yagi_cross_mat, 135.0, scale=0.62)
 # Shared feed bracket at the external face interface.
 cylinder_between("Crossed Yagi feed bracket", Vector((yagi_x, 0, 0)), Vector((offset.x + 1.38, 0, 0)), 0.035, yagi_gold)
 bpy.ops.mesh.primitive_cube_add(size=1, location=offset + Vector((1.37, 0, -0.85)))

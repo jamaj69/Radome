@@ -105,3 +105,12 @@
 - **Incompatibilidade registrada:** tetraedros regulares com as seis arestas de 2 m produzem 120 interpenetrações. A dimensão de 2 m controla somente as três arestas da face externa; exigir seis arestas iguais é bloqueado.
 - **Limite:** o corte inferior circular e o anel de apoio da ADR-009 deixam de controlar esta candidata. C2 permanece reaberto até definir uma borda formada por módulos inteiros, dimensionar juntas, corredores, caminhos térmicos e blindagem real e recalcular a interface civil.
 - **Evidência:** `geometry/verify_tetrahedral_face_geometry.py`, `figures/render_tetrahedral_face_cluster_blender.py`, `fig16_tetrahedral_face_cluster.png` e `radome_tetrahedral_face_cluster.blend`.
+
+## ADR-013 — Eixo normal das Yagis e figuras independentes de idioma
+
+- **Data:** 8 de agosto de 2026
+- **Estado:** aceita como premissa arquitetural e editorial
+- **Orientação mecânica:** o eixo estrutural e os booms da montagem combinada VHF/UHF são colineares com o vetor normal externo ao plano da face triangular. O suporte parte do ápice interno, atravessa o centro da abertura e prossegue para fora ao longo dessa normal.
+- **Orientação transversal:** os elementos VHF e UHF permanecem mutuamente ortogonais e a montagem cruzada completa é girada em 45° ao redor da normal em relação à base tangente local da face. Assim, as direções transversais nominais são 45° e 135° na base local, sem transformar os canais de faixas diferentes em um par polarimétrico coerente.
+- **Regra editorial permanente:** as edições `pt-BR` e `en` usam exatamente os mesmos arquivos de figura. Nenhuma figura gerada contém texto natural, título, rótulo, chamada, legenda interna ou texto de eixo; toda explicação verbal pertence à legenda LaTeX de cada idioma.
+- **Evidência:** `figures/render_radome_blender.py`, `figures/render_tetrahedral_face_cluster_blender.py`, `figures/generate_updated_figures.py`, `fig13_radome_blender.png` e `fig16_tetrahedral_face_cluster.png`.

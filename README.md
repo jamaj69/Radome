@@ -124,6 +124,8 @@ The network is designed to infer target or emitter state from indirect observati
 ### 2. Multiband and polarimetric reception
 The platform supports multiple spectral bands through independent RF chains. Circular, linear-vector or Stokes synthesis is permitted only for a calibrated same-band module with two simultaneous coherent orthogonal ports; the current VHF and UHF Yagis are independent single-polarization channels.
 
+The combined VHF/UHF Yagi boom is collinear with the outward normal of its external triangular face. The transverse elements are mutually orthogonal and the complete crossed assembly is rotated by 45 degrees around that normal relative to the local tangent basis.
+
 ### 3. Distributed synchronization and calibration
 Time and phase coherence are essential for high-quality TDOA/FDOA and beamforming-based inference. The concept explicitly includes hardware timestamping, optical distribution of timing, and local holdover strategies.
 

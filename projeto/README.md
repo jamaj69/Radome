@@ -63,6 +63,6 @@ Add or reorder chapters in the matching manifest under `config/`. Write language
 
 Adicione ou reordene capítulos no manifesto correspondente em `config/`. Edite o conteúdo diretamente em `chapters/en/` ou `chapters/pt-BR/`; os comandos usuais `\\chapter`, `\\section` e `\\subsection` são suportados.
 
-`scripts/split_bilingual_chapters.py` documents the one-time migration and can recreate the initial split from `chapters/legacy-bilingual/`. Running it overwrites the language trees, so it is not part of the normal editing workflow.
+Both editions must reference the same figure files. Figures are language-neutral and contain no embedded text; all verbal explanation belongs in the localized LaTeX captions.
 
-O script `scripts/split_bilingual_chapters.py` documenta a migração única e pode recriar a separação inicial a partir de `chapters/legacy-bilingual/`. Sua execução sobrescreve as árvores de idiomas; portanto, ele não faz parte do fluxo normal de edição.
+As duas edições devem referenciar os mesmos arquivos de figura. As figuras são independentes de idioma e não contêm texto incorporado; toda explicação verbal pertence às legendas LaTeX localizadas.

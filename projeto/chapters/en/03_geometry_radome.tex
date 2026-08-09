@@ -21,39 +21,39 @@ The external Yagi load is transferred through the base mast into the triangular 
 
 
 
-The Blender model makes the mounting convention explicit: the triangular RF face lies on the outer radome surface, while the pyramid volume and its apex are directed inward. A support strut starts at the internal apex, passes through the face interface and continues as the common boom axis of the external VHF and UHF Yagis. The elements of both antennas are transverse to this axis and occupy orthogonal planes.
+The Blender model makes the mounting convention explicit (\texttt{MEC-006} and \texttt{MEC-007}): the triangular RF face lies on the outer radome surface, while the pyramid volume and its apex are directed inward. A support strut starts at the internal apex, crosses the centre of the face and continues outward as the common boom axis, collinear with the external normal of that face. The VHF and UHF elements are transverse to the normal, mutually orthogonal, and the complete crossed assembly is rotated by 45 degrees around the normal relative to the local tangent basis. This mechanical rotation does not make the different-band channels a coherent polarimetric pair.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig16_tetrahedral_face_cluster.png}
-\caption{Seven contiguous shallow tetrahedral cells with local tangent bases and a reserved internal service core.}
+\caption{Seven contiguous shallow tetrahedral cells. Orange and cyan members show the mutually orthogonal VHF/UHF directions at 45° and 135° in each local tangent basis; green arrows show the outward face normals, which define the boom directions. The green wire envelope is the reserved internal service core.}
 \label{fig:fig16_tetrahedral_face_cluster}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig11_face_yagi_camadas.pdf}
-\caption{Two-metre triangular face with crossed external VHF and UHF Yagis: orthogonal transverse elements, independent feeds and distinct scales.}
+\caption{Language-neutral face assembly. The dark boom follows the outward normal from the inward apex through the centre of the two-metre triangular aperture; orange and blue elements are mutually orthogonal and jointly rotated 45° around that normal. The coloured plates at right represent the material and electronics stack.}
 \label{fig:fig11_face_yagi_camadas}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{fig02_zonamento_radome.png}
-\caption{Functional zoning.}
+\caption{Language-neutral functional zoning: coloured sectors denote the hybrid band families and the white centre denotes shared face-level timing, calibration, processing and services. Sector boundaries are architectural allocations, not rigid electromagnetic boundaries.}
 \label{fig:fig02_zonamento_radome}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig13_radome_blender.png}
-\caption{Blender model of the radome and exploded face with crossed VHF/UHF Yagis.}
+\caption{External Blender view of the radome and exploded face. The combined VHF/UHF boom is collinear with the face normal; the transverse elements are orthogonal and rotated 45° around that normal.}
 \label{fig:fig13_radome_blender}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.98\textwidth]{fig14_radome_interior_blender.png}
-\caption{Internal Blender inspection view with transparent shell, structural ties, service trunks and shielded modules.}
+\caption{Internal Blender inspection view showing the transparent shell, structural load paths, service trunks and representative shielded modules; the view contains no language-specific callouts.}
 \label{fig:fig14_radome_interior_blender}
 \end{figure}

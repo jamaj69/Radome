@@ -50,6 +50,5 @@
   "48": "Sub-area guide 5: integration, calibration, and operational validation",
   "49": "Cross-search signals",
   "50": "verify_tetrahedral_face_geometry.py",
-  "51": "render_tetrahedral_face_cluster_blender.py",
-  "52": "split_chapter"
+  "51": "render_tetrahedral_face_cluster_blender.py"
 }

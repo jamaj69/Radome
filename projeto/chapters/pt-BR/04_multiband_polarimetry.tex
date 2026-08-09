@@ -1,6 +1,6 @@
 \chapter{Abertura Multifaixa e Polarimetria}
 
-A abertura é deliberadamente híbrida, e não uniforme em todo o espectro. Uma Yagi VHF externa de polarização única e uma Yagi UHF externa de polarização única compartilham o mastro: a antena VHF usa elementos maiores e a antena UHF usa elementos menores. Seus planos mecânicos ortogonais fornecem diversidade de orientação entre faixas diferentes, não duas componentes de polarização de um mesmo sinal. Antenas ou tiles menores de L/S/C, X/Ku e K/Ka ocupam as camadas da face e seus suportes locais. HF utiliza loops, dipolos cruzados e diversidade de modos da plataforma. Cada família de antenas possui filtragem, conversão e amostragem próprias, enquanto a face preserva uma interface comum de sincronismo, calibração e fusão.
+A abertura é deliberadamente híbrida, e não uniforme em todo o espectro. Uma Yagi VHF externa de polarização única e uma Yagi UHF externa de polarização única compartilham um boom alinhado à normal externa da face: a antena VHF usa elementos maiores e a antena UHF usa elementos menores. Suas direções transversais são mutuamente ortogonais a 45° e 135° na base tangente local. Essas orientações mecânicas fornecem diversidade entre faixas diferentes, não duas componentes de polarização de um mesmo sinal. Antenas ou tiles menores de L/S/C, X/Ku e K/Ka ocupam as camadas da face e seus suportes locais. HF utiliza loops, dipolos cruzados e diversidade de modos da plataforma. Cada família de antenas possui filtragem, conversão e amostragem próprias, enquanto a face preserva uma interface comum de sincronismo, calibração e fusão.
 
 O primeiro demonstrador não declara cobertura espectral contínua. Os intervalos de 323--470 MHz e 860--960 MHz permanecem deliberadamente sem atribuição. Uma abertura ou array aeronáutico dedicado de 960--1215 MHz fornece dois caminhos simultâneos e independentes: preselector UAT em 978 MHz, limitador/LNA, ADC coerente e canal FPGA; e preselector 1090ES em 1090 MHz, limitador/LNA, ADC coerente e canal FPGA. Nenhum desses caminhos é atribuído à Yagi UHF de 470--860 MHz, e a abertura aeronáutica não implica monitoramento contínuo em toda a sua faixa de sintonia.
 
@@ -10,7 +10,7 @@ E_{\mathrm{RHCP}}=\frac{E_x-jE_y}{\sqrt{2}},\qquad E_{\mathrm{LHCP}}=\frac{E_x+j
 \]
 As equações não combinam as Yagis VHF e UHF. O primeiro demonstrador VHF/UHF trata essas antenas como canais independentes de polarização única (\texttt{POL-002}); a polarimetria completa exige um módulo posterior dual-porta ou cruzado na mesma faixa. Em uma superfície curva, bases locais válidas devem ser rotacionadas para um sistema comum antes da fusão. A calibração polarimétrica depende de frequência, ângulo, temperatura, equilíbrio de amplitude, fase e acoplamento mútuo.
 
-Um mastro proposto de quatro canais implementa VHF-X/VHF-Y a 0°/90° e UHF-A/UHF-B a 45°/135°, com quatro booms e cadeias RF eletricamente independentes (\texttt{POL-004}--\texttt{POL-006}). Para cada faixa $b$, a calibração segue:
+Um mastro futuro separado de quatro canais, distinto do par VHF/UHF combinado ilustrado, implementa VHF-X/VHF-Y a 0°/90° e UHF-A/UHF-B a 45°/135°, com quatro booms e cadeias RF eletricamente independentes (\texttt{POL-004}--\texttt{POL-006}). Para cada faixa $b$, a calibração segue:
 \[
 \widehat{\mathbf{E}}_b(f,\theta,\phi,T)=
 \mathbf{C}_b^{-1}(f,\theta,\phi,T)
@@ -26,13 +26,13 @@ Para ampliar a cobertura de descoberta em VHF, uma LPDA de 11 elementos para 72-
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{fig04_particionamento_espectro.png}
-\caption{Particionamento espectral recomendado.}
+\caption{Particionamento espectral independente de idioma em escala horizontal logarítmica. Cada barra colorida representa uma família de faixa proposta; os intervalos em branco entre os caminhos VHF, UHF e aeronáutico dedicado são lacunas deliberadas do primeiro demonstrador.}
 \label{fig:fig04_particionamento_espectro}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.95\textwidth]{fig05_polarimetria.png}
-\caption{Diversidade entre faixas versus aquisição polarimétrica válida na mesma faixa.}
+\caption{Fluxo superior: canais VHF e UHF digitalizados independentemente terminam em um resultado polarimétrico entre faixas invalidado pela cruz vermelha. Fluxo inferior: duas portas ortogonais coerentes na mesma faixa alimentam produtos calibrados de Jones, Stokes ou polarização circular.}
 \label{fig:fig05_polarimetria}
 \end{figure}

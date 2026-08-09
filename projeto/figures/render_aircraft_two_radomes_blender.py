@@ -29,11 +29,6 @@ aircraft_mat = mat("Aircraft", (0.72, 0.76, 0.8), metallic=0.45, roughness=0.28)
 signal_mat = mat("RF signal", (0.95, 0.55, 0.08), roughness=0.25)
 line_a_mat = mat("Node A line", (0.2, 0.75, 0.95), roughness=0.3)
 line_b_mat = mat("Node B line", (0.95, 0.35, 0.3), roughness=0.3)
-panel_mat = mat("Panel", (0.12, 0.22, 0.30), metallic=0.2, roughness=0.45)
-white_mat = mat("Text", (0.9, 0.95, 1.0), roughness=0.4)
-white_shader = white_mat.node_tree.nodes.get("Principled BSDF")
-white_shader.inputs["Emission"].default_value = (0.9, 0.95, 1.0, 1.0)
-white_shader.inputs["Emission Strength"].default_value = 2.5
 
 def cylinder(name, a, b, radius, material, vertices=16):
     a, b = Vector(a), Vector(b)
@@ -44,18 +39,6 @@ def cylinder(name, a, b, radius, material, vertices=16):
     obj.data.materials.append(material)
     obj.rotation_mode = "QUATERNION"
     obj.rotation_quaternion = direction.to_track_quat("Z", "Y")
-    return obj
-
-def text(body, location, size=0.25, material=white_mat, align="CENTER"):
-    curve = bpy.data.curves.new(body, "FONT")
-    curve.body = body
-    curve.align_x = align
-    curve.size = size
-    curve.extrude = 0.005
-    obj = bpy.data.objects.new(body, curve)
-    bpy.context.collection.objects.link(obj)
-    obj.location = location
-    obj.data.materials.append(material)
     return obj
 
 def radome(name, location, color):
@@ -73,13 +56,11 @@ def radome(name, location, color):
     base.dimensions = (8.0, 8.0, 2.0)
     bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
     base.data.materials.append(concrete_mat)
-    text(name, (location[0], location[1] - 6.2, location[2] + 6.0), 0.42, white_mat)
     return Vector(location)
 
 # Conceptual scene scale: one Blender unit represents one kilometre.
 node_a = radome("NODE A", (-50, 0, 2.2), radome_mat)
 node_b = radome("NODE B", (50, 0, 2.2), radome_mat)
-text("100 km baseline / linha de base", (0, 1.1, -1.3), 0.28, line_a_mat)
 cylinder("100 km baseline", (-50, 0, -0.72), (50, 0, -0.72), 0.035, line_a_mat)
 
 # Aircraft at altitude and offset from the baseline.
@@ -91,13 +72,10 @@ bpy.context.object.data.materials.append(aircraft_mat)
 # wings and tail.
 cylinder("Aircraft wing", aircraft + Vector((-2.0, 0, 0)), aircraft + Vector((2.0, 0, 0)), 0.11, aircraft_mat)
 cylinder("Aircraft longitudinal body", aircraft + Vector((0, -1.8, 0)), aircraft + Vector((0, 1.8, 0)), 0.14, aircraft_mat)
-text("ADS-B aircraft / aeronave ADS-B", aircraft + Vector((0, 0, 1.4)), 0.28, white_mat)
 
 # Signal paths and angular observation cones.
 cylinder("Signal path A", aircraft, node_a + Vector((0, 0, 1.2)), 0.045, line_a_mat)
 cylinder("Signal path B", aircraft, node_b + Vector((0, 0, 1.2)), 0.045, line_b_mat)
-text("1090 MHz ADS-B / 1090ES\nP_A, AOA_A, t_A, f_DA", (-31, 10, 12), 0.22, line_a_mat)
-text("1090 MHz ADS-B / 1090ES\nP_B, AOA_B, t_B, f_DB", (31, 10, 12), 0.22, line_b_mat)
 
 # Observation cones as transparent triangular surfaces.
 def cone_surface(name, node, target, width, material):
@@ -116,24 +94,6 @@ def cone_surface(name, node, target, width, material):
     obj.data.materials.append(material)
 cone_surface("AOA cone Node A", node_a, aircraft, 3.0, line_a_mat)
 cone_surface("AOA cone Node B", node_b, aircraft, 3.0, line_b_mat)
-
-# Measurement panel.
-bpy.ops.mesh.primitive_cube_add(size=1, location=(0, -7.0, 7.5))
-panel = bpy.context.object
-panel.name = "Observable fusion panel"
-panel.dimensions = (38, 0.25, 11.5)
-bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
-panel.data.materials.append(panel_mat)
-text("ADS-B 1090ES PASSIVE MULTISTATIC CONSISTENCY CHECK", (0, -7.25, 10.8), 0.42, white_mat)
-text("Received power: P_A / P_B", (-15.5, -7.3, 8.9), 0.38, line_a_mat, "LEFT")
-text("Angles: AOA_A / AOA_B", (-15.5, -7.3, 8.1), 0.38, line_b_mat, "LEFT")
-text("Time: TDOA = t_A - t_B", (-15.5, -7.3, 7.3), 0.38, white_mat, "LEFT")
-text("Doppler: FDOA = f_DA - f_DB", (2.0, -7.3, 8.1), 0.38, white_mat, "LEFT")
-text("Altitude/state: hypothesis + covariance", (2.0, -7.3, 7.3), 0.38, white_mat, "LEFT")
-text("Result: consistency track, not blind truth validation", (0, -7.3, 6.25), 0.32, white_mat)
-text("978 MHz UAT: contextual alternative, mainly US general aviation", (0, -7.3, 5.65), 0.25, white_mat)
-text("Independent UHF TV / UHF TV independente: direct reference or bistatic illuminator", (0, -7.3, 5.05), 0.22, white_mat)
-text("Cell towers: multiple known carriers / Torres celulares: múltiplas portadoras conhecidas", (0, -7.3, 4.5), 0.22, white_mat)
 
 # Ground plane.
 bpy.ops.mesh.primitive_plane_add(size=180, location=(0, 0, -1.5))

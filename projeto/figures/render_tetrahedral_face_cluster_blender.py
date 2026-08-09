@@ -169,8 +169,10 @@ for module in selected_modules:
         side_walls.append((module_id, start, end, apex))
 
     antenna_plane = center + normal * 0.16
-    cylinder_between(f"{module_id} dual-pol U element", antenna_plane - tangent_u * 0.46, antenna_plane + tangent_u * 0.46, 0.022, antenna_u_material)
-    cylinder_between(f"{module_id} dual-pol V element", antenna_plane - tangent_v * 0.46, antenna_plane + tangent_v * 0.46, 0.022, antenna_v_material)
+    element_45 = (tangent_u + tangent_v).normalized()
+    element_135 = (-tangent_u + tangent_v).normalized()
+    cylinder_between(f"{module_id} VHF element at 45 degrees", antenna_plane - element_45 * 0.46, antenna_plane + element_45 * 0.46, 0.022, antenna_u_material)
+    cylinder_between(f"{module_id} UHF element at 135 degrees", antenna_plane - element_135 * 0.46, antenna_plane + element_135 * 0.46, 0.022, antenna_v_material)
     cylinder_between(f"{module_id} sealed feedthrough", center - normal * 0.12, antenna_plane, 0.035, seam_material)
 
     electronics_center = center - normal * 0.28
