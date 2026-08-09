@@ -153,3 +153,11 @@
 - **Vantagem passiva:** maior potência, largura de banda ou ciclo de trabalho empregados contra radares ativos fornecem maior energia direta ao receptor passivo, aumentando a observabilidade eletromagnética da fonte dentro das faixas e da faixa dinâmica cobertas.
 - **Limite:** não equiparar automaticamente fonte de jamming e aeronave. Emissores direcionais, coerentes, rebocados, descartáveis, distribuídos ou stand-off podem saturar canais, criar falsos ângulos e deslocar o centro aparente de emissão.
 - **Validação:** `EXP-011` deve medir probabilidade de interceptação, classificação, saturação/bloqueio, erros AOA/TDOA/FDOA e consistência de trajetória, preservando captura bruta anterior à supressão de interferência.
+
+## ADR-018 — Paginação aproximada entre as edições
+
+- **Data:** 9 de agosto de 2026
+- **Estado:** decisão editorial aceita
+- **Decisão:** configurar a edição brasileira ABNTEX2 em 11 pt, `openany` e `oneside`, preservando a árvore independente por idioma e o conteúdo técnico equivalente.
+- **Resultado:** a edição brasileira passou de 53 para 36 páginas e a inglesa permaneceu com 35 páginas. Foram eliminadas as páginas vazias de alinhamento de capítulos e as folhas pré-textuais em branco mantidas por `twoside`.
+- **Limite:** não forçar a última página de diferença por redução de figuras, margens ou espaçamento. A diferença residual decorre do volume linguístico e da composição ABNT da bibliografia e é preferível à distorção editorial.

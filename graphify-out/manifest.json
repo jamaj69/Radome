@@ -290,8 +290,8 @@
     "semantic_hash": ""
   },
   "projeto/DECISIONS.md": {
-    "mtime": 1786258365.6060398,
-    "ast_hash": "dda18278be57488eceb1bbfe32ebfaa8",
+    "mtime": 1786258670.1538472,
+    "ast_hash": "ca28af2f4dad15b697bceeb767e81425",
     "semantic_hash": ""
   },
   "projeto/PARAMETERS.md": {
@@ -335,13 +335,13 @@
     "semantic_hash": ""
   },
   "projeto/radome-en.pdf": {
-    "mtime": 1786258395.13879,
-    "ast_hash": "6a089f250e5dcaeaf190facf7d52402f",
+    "mtime": 1786258653.605416,
+    "ast_hash": "426f416d915402074f6f20199dd0c3fe",
     "semantic_hash": ""
   },
   "projeto/radome-pt-br.pdf": {
-    "mtime": 1786258396.6428282,
-    "ast_hash": "3045a11de40933062fe6f9f3e6071de0",
+    "mtime": 1786258657.8935277,
+    "ast_hash": "4694604f17b9230f9160e0c21629d77a",
     "semantic_hash": ""
   },
   "projeto/figures/localize_figures.py": {
