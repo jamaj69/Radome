@@ -114,3 +114,12 @@
 - **Orientação transversal:** os elementos VHF e UHF permanecem mutuamente ortogonais e a montagem cruzada completa é girada em 45° ao redor da normal em relação à base tangente local da face. Assim, as direções transversais nominais são 45° e 135° na base local, sem transformar os canais de faixas diferentes em um par polarimétrico coerente.
 - **Regra editorial substituída em 8 de agosto de 2026:** as edições `pt-BR` e `en` usam conjuntos localizados distintos em `figures/pt-BR/` e `figures/en/`. Ambos derivam dos mesmos mestres geométricos, mas títulos, rótulos e chaves visuais aparecem no idioma da edição. Esta regra substitui a tentativa anterior de publicar imagens sem texto, cuja leitura se mostrou insuficiente.
 - **Evidência:** `figures/localize_figures.py`, `figures/render_radome_blender.py`, `figures/render_tetrahedral_face_cluster_blender.py`, `figures/generate_updated_figures.py`, `figures/en/` e `figures/pt-BR/`.
+
+## ADR-014 — Célula receptora absorvedora como hipótese de baixa observabilidade
+
+- **Data:** 9 de agosto de 2026
+- **Estado:** inovação arquitetural proposta; desempenho não demonstrado
+- **Hipótese:** combinar Yagis VHF/UHF expostas, que não sofrem a perda de transmissão do casco, com uma célula piramidal interna individualmente blindada e revestida por material absorvedor. A abertura conduz a energia útil ao receptor, enquanto a terminação absorvedora proposta busca reduzir reflexões internas, acoplamento entre células e reradiação pela abertura.
+- **Ressalva física:** paredes Faraday condutivas, isoladamente, refletem energia e não tornam a estação invisível. Baixa observabilidade somente pode ser alegada se a geometria, o revestimento dissipativo, as juntas, os feedthroughs, o boom e a antena externa reduzirem a seção reta radar e a reflexão da abertura nas frequências, polarizações e ângulos de interesse.
+- **Evidência exigida:** modelo EM do conjunto aberto e revestido; balanço de potência incidente–refletida–absorvida–recebida; $S_{11}$ da abertura; eficácia de blindagem; acoplamento entre células; RCS monoestática e biestática angular com e sem absorvedor; ganho, ruído e padrão embarcado; ensaios OTA em câmara e campanha externa.
+- **Limite operacional:** o conceito pode aumentar discrição eletromagnética por não transmitir e pode reduzir a assinatura passiva da estrutura, mas não fundamenta a palavra ``invisível'' nem capacidade de defesa aérea antes dos ensaios.

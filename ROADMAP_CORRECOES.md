@@ -124,6 +124,8 @@ O C2 é reaberto porque o corte circular, o anel de apoio e a transição civil 
 3. Verificar especialmente registros de 2025–2026 e os que possuem venue ou resumo incompletos.
 4. Separar claramente revisão narrativa via Consensus de uma eventual revisão sistemática.
 5. Criar matriz alegação–referência–evidência e marcar como hipótese tudo que ainda depende de simulação ou ensaio.
+   - [x] Registrar pela ADR-014 a célula receptora absorvedora como inovação arquitetural candidata, sem alegação de invisibilidade.
+   - [ ] Selecionar o absorvedor e comparar a célula com/sem revestimento por $S_{11}$, balanço de potência, eficácia de blindagem, acoplamento, padrões OTA e RCS angular.
 
 **Gate C5:** nenhuma alegação de novidade ou desempenho depende apenas do resultado do Consensus ou de um diagrama conceitual.
 

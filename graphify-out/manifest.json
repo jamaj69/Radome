@@ -60,13 +60,13 @@
     "semantic_hash": ""
   },
   "ROADMAP_CORRECOES.md": {
-    "mtime": 1786251266.7824767,
-    "ast_hash": "937acd9c8fee1a6783cc9ff07eba4d42",
+    "mtime": 1786251914.2884724,
+    "ast_hash": "a7b825b13db6b49b2918507715666d55",
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786251266.6384726,
-    "ast_hash": "a94b1c8ebe348ddb93ee84f817447dd7",
+    "mtime": 1786251914.4324763,
+    "ast_hash": "dcb0d077f6dee1769644004ab1581af7",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -290,13 +290,13 @@
     "semantic_hash": ""
   },
   "projeto/DECISIONS.md": {
-    "mtime": 1786236718.5647686,
-    "ast_hash": "4fdb8aa6b74f26a5cc5622b02c1657c0",
+    "mtime": 1786251913.372447,
+    "ast_hash": "e2c550318f44e80cdec33a9eeea24c61",
     "semantic_hash": ""
   },
   "projeto/PARAMETERS.md": {
-    "mtime": 1786227971.2374396,
-    "ast_hash": "59662aed4c96135d25f3b242042d0c8b",
+    "mtime": 1786251913.5244513,
+    "ast_hash": "7af8ee6bd772d9d8085d622fc42309d7",
     "semantic_hash": ""
   },
   "projeto/antenna_designs/lpda_vhf_72_320.md": {
@@ -335,13 +335,13 @@
     "semantic_hash": ""
   },
   "projeto/radome-en.pdf": {
-    "mtime": 1786251280.6948767,
-    "ast_hash": "e08d5bbb31f60cc4badaf524f1bd04cd",
+    "mtime": 1786251926.1007988,
+    "ast_hash": "a9ee4b895276279d17bea6a5cb59e0f3",
     "semantic_hash": ""
   },
   "projeto/radome-pt-br.pdf": {
-    "mtime": 1786251282.0749161,
-    "ast_hash": "7c6fcbaf7ea6920c2476b3667cfe6e77",
+    "mtime": 1786251927.4328358,
+    "ast_hash": "6da92c28a551d1733bcc999c3649a75f",
     "semantic_hash": ""
   },
   "projeto/figures/localize_figures.py": {

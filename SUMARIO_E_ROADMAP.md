@@ -14,6 +14,8 @@ A principal contribuição pretendida é sistêmica: integrar abertura conformal
 
 Na montagem combinada VHF/UHF, o eixo estrutural e os booms são colineares com a normal externa de cada face triangular. Os elementos transversais das duas Yagis ocupam planos mutuamente ortogonais e o conjunto é girado 45° ao redor da normal em relação à base tangente local. As duas edições usam conjuntos gráficos localizados distintos, derivados dos mesmos mestres geométricos, com títulos, rótulos e chaves visuais em cada idioma.
 
+A ADR-014 registra como inovação arquitetural candidata a combinação das Yagis externas com células piramidais receptoras individualmente blindadas e revestidas por absorvedor. A hipótese é evitar a perda do casco no caminho útil e reduzir auto-interferência, acoplamento e reradiação pela abertura. Blindagem condutiva não equivale a absorção, e a estação não é declarada invisível: material, espessura, reflexão, absorção, padrões e RCS ainda exigem simulação e ensaio comparativo.
+
 ## 2. Mapa compacto do sistema
 
 ```mermaid

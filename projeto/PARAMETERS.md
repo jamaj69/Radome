@@ -63,6 +63,8 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | MEC-005 | Corredores intercelulares de cabos e fibras | 120 | corredor | Derivado | `geometry/verify_tetrahedral_face_geometry.py`; ADR-012 | Integração/EMC | Separar energia de fibra/RF e validar acesso |
 | MEC-006 | Ângulo entre o eixo comum dos booms e a normal externa da face | 0 | grau | Proposto | ADR-013; `render_radome_blender.py` | Antenas/estruturas | Verificar tolerância de alinhamento e carga no suporte |
 | MEC-007 | Rotação da montagem Yagi cruzada em torno da normal | 45 | grau | Proposto | ADR-013; `render_radome_blender.py` | Antenas/estruturas | Verificar referência da base tangente e tolerância angular |
+| MEC-008 | Revestimento absorvedor interno da célula piramidal | material e espessura não selecionados | — | Proposto | ADR-014; `09_literature_review.tex` | EM/estruturas | Otimizar por faixa e medir absorção, reflexão, térmica, inflamabilidade e durabilidade |
+| MEC-009 | Baixa observabilidade da célula receptora | não demonstrada | — | Proposto | ADR-014 | EM/ensaios | Medir RCS monoestática/biestática, $S_{11}$ da abertura e reradiação com/sem absorvedor |
 
 ## Plano espectral e antenas
 
