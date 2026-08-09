@@ -60,13 +60,13 @@
     "semantic_hash": ""
   },
   "ROADMAP_CORRECOES.md": {
-    "mtime": 1786251914.2884724,
-    "ast_hash": "a7b825b13db6b49b2918507715666d55",
+    "mtime": 1786253926.2169275,
+    "ast_hash": "4c0b5e565ec772e5ed8ee54e139710d7",
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786251914.4324763,
-    "ast_hash": "dcb0d077f6dee1769644004ab1581af7",
+    "mtime": 1786253968.5138865,
+    "ast_hash": "e50a0d73d378ca2fb67b7c57fd440e44",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -290,8 +290,8 @@
     "semantic_hash": ""
   },
   "projeto/DECISIONS.md": {
-    "mtime": 1786251913.372447,
-    "ast_hash": "e2c550318f44e80cdec33a9eeea24c61",
+    "mtime": 1786253926.0729244,
+    "ast_hash": "57010f38d7bd7f547ef094938391cb4d",
     "semantic_hash": ""
   },
   "projeto/PARAMETERS.md": {
@@ -335,13 +335,13 @@
     "semantic_hash": ""
   },
   "projeto/radome-en.pdf": {
-    "mtime": 1786253251.1088905,
-    "ast_hash": "3c67b82589cb8795603c3066021d22e5",
+    "mtime": 1786253938.4412048,
+    "ast_hash": "4c20f29b2e5245acf87cd673bdd2d66a",
     "semantic_hash": ""
   },
   "projeto/radome-pt-br.pdf": {
-    "mtime": 1786252937.0764039,
-    "ast_hash": "fa47a1a02b925418c52bd147de20ada2",
+    "mtime": 1786253939.821236,
+    "ast_hash": "bd476b99012b317e42012a0f380fd1ba",
     "semantic_hash": ""
   },
   "projeto/figures/localize_figures.py": {
@@ -512,6 +512,26 @@
   "bibliography/An_Ultra-Wide_Band_Radome_for_High-Performance_and_Dual-Polarized_Radar_and_Communication_Systems.pdf": {
     "mtime": 1786250429.6944122,
     "ast_hash": "a76937b4ba0d6d2a5a18883954fd1be8",
+    "semantic_hash": ""
+  },
+  "bibliography/DESIGN_AND_DEVELOPMENT_OF_AN_EXTREMELY_WIDEBAND.pdf": {
+    "mtime": 1786253634.174307,
+    "ast_hash": "d4896afaf9de768ea3ced95bc218efe4",
+    "semantic_hash": ""
+  },
+  "bibliography/DESIGN_OF_HIGH_PRESSURE_RADOME_WITH_UWB.pdf": {
+    "mtime": 1786253533.4320233,
+    "ast_hash": "8bdfde6a89ad15903f10e3532f52770e",
+    "semantic_hash": ""
+  },
+  "bibliography/Ultra-wideband_UHF_VHF_Electrically_Small Antennas\nand Ultra-wideband S-Band and C-Band Compact Form_Factor Antennas.pdf": {
+    "mtime": 1786253696.9757307,
+    "ast_hash": "299e9b2de0ee7fc6d0c9037dbc34578c",
+    "semantic_hash": ""
+  },
+  "bibliography/aerospace-13-00227.pdf": {
+    "mtime": 1786253476.8507404,
+    "ast_hash": "a7ca2ceb4f82328b4331b77067f02a5c",
     "semantic_hash": ""
   }
 }
