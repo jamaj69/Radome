@@ -124,14 +124,9 @@
     "ast_hash": "9c6bc8f91c12c1d1c5d4c4d86e074e42",
     "semantic_hash": ""
   },
-  "projeto/figures/fig11_face_yagi_camadas.pdf": {
-    "mtime": 1786235299.4583204,
-    "ast_hash": "0827c2d0e1c63b7201ae48f829200a9c",
-    "semantic_hash": ""
-  },
   "projeto/projetov1.pdf": {
-    "mtime": 1786217196.469832,
-    "ast_hash": "fc2890a1dac0d74f43e67950a27baac8",
+    "mtime": 1786305163.3486643,
+    "ast_hash": "cc2f84b2fa7d7d5890d3f4f20addc09f",
     "semantic_hash": ""
   },
   "projeto_tecnico_radome_completo.pdf": {
@@ -209,56 +204,6 @@
     "ast_hash": "a75ba15f190e218ff3e6ab0a49833f2a",
     "semantic_hash": ""
   },
-  "projeto/figures/fig01_arquitetura_rede.png": {
-    "mtime": 1786228143.4180005,
-    "ast_hash": "231858e711a0653cccbd2941789d3f5f",
-    "semantic_hash": ""
-  },
-  "projeto/figures/fig02_zonamento_radome.png": {
-    "mtime": 1786228143.6980078,
-    "ast_hash": "be53b3ccc927662ad7708a3b3b53ad3c",
-    "semantic_hash": ""
-  },
-  "projeto/figures/fig03_modulo_face.png": {
-    "mtime": 1786228143.9420142,
-    "ast_hash": "33ca04b42703b718f17cee83f8efc37a",
-    "semantic_hash": ""
-  },
-  "projeto/figures/fig04_particionamento_espectro.png": {
-    "mtime": 1786228144.050017,
-    "ast_hash": "f3822a3389b89a8a5ccc0d1e1710c0ee",
-    "semantic_hash": ""
-  },
-  "projeto/figures/fig05_polarimetria.png": {
-    "mtime": 1786228144.2780232,
-    "ast_hash": "f883f4dfaeaaf1a814603c390f6f4e7d",
-    "semantic_hash": ""
-  },
-  "projeto/figures/fig06_cadeia_rf.png": {
-    "mtime": 1786228144.5220296,
-    "ast_hash": "a8497fdf7b5ca80106459f0a65156bc2",
-    "semantic_hash": ""
-  },
-  "projeto/figures/fig07_sincronizacao.png": {
-    "mtime": 1786228144.7540357,
-    "ast_hash": "8f9fca8288548283affc12271ef36f7d",
-    "semantic_hash": ""
-  },
-  "projeto/figures/fig08_geometria_bistatica.png": {
-    "mtime": 1786228144.9780416,
-    "ast_hash": "8140b4263e2acac89809fc4f0b2063ab",
-    "semantic_hash": ""
-  },
-  "projeto/figures/fig09_fluxo_processamento.png": {
-    "mtime": 1786228145.2260482,
-    "ast_hash": "4f76146a96fbbbf9b2cf0308f6f38b67",
-    "semantic_hash": ""
-  },
-  "projeto/figures/fig10_roteiro.png": {
-    "mtime": 1786228145.398053,
-    "ast_hash": "9ccc9fa42813a5f1cabbea32ec80068a",
-    "semantic_hash": ""
-  },
   "projeto/figures/fig11_face_yagi_camadas.svg": {
     "mtime": 1786227799.692881,
     "ast_hash": "8896c7b4bf11b918fd94d78449c8216c",
@@ -279,19 +224,14 @@
     "ast_hash": "48d696a6244c18cb3679ce804c2600a5",
     "semantic_hash": ""
   },
-  "projeto/figures/fig15_aircraft_two_radomes_100km.png": {
-    "mtime": 1786238260.8500988,
-    "ast_hash": "d7d9c860c7b18fca9497d58878f70643",
-    "semantic_hash": ""
-  },
   ".codex/hooks.json": {
     "mtime": 1786158229.5824316,
     "ast_hash": "f7bd60101250f8b7d9a094b502d50ee5",
     "semantic_hash": ""
   },
   "projeto/DECISIONS.md": {
-    "mtime": 1786258670.1538472,
-    "ast_hash": "ca28af2f4dad15b697bceeb767e81425",
+    "mtime": 1786305112.0473344,
+    "ast_hash": "97d553b4c902c03d94ff897c3294cf78",
     "semantic_hash": ""
   },
   "projeto/PARAMETERS.md": {
@@ -329,19 +269,14 @@
     "ast_hash": "d8e9b5021d352b2a36dbb38f351adb38",
     "semantic_hash": ""
   },
-  "projeto/figures/fig16_tetrahedral_face_cluster.png": {
-    "mtime": 1786235171.2628481,
-    "ast_hash": "d4e932054bab3625654249fa4563e12f",
-    "semantic_hash": ""
-  },
   "projeto/radome-en.pdf": {
-    "mtime": 1786258653.605416,
-    "ast_hash": "426f416d915402074f6f20199dd0c3fe",
+    "mtime": 1786305160.676595,
+    "ast_hash": "54adbc6ec99d9fd547a64711346e1a4b",
     "semantic_hash": ""
   },
   "projeto/radome-pt-br.pdf": {
-    "mtime": 1786258657.8935277,
-    "ast_hash": "4694604f17b9230f9160e0c21629d77a",
+    "mtime": 1786305162.0046294,
+    "ast_hash": "bd3798b061073dab488c264c00db9a7d",
     "semantic_hash": ""
   },
   "projeto/figures/localize_figures.py": {
@@ -532,6 +467,11 @@
   "bibliography/aerospace-13-00227.pdf": {
     "mtime": 1786253476.8507404,
     "ast_hash": "a7ca2ceb4f82328b4331b77067f02a5c",
+    "semantic_hash": ""
+  },
+  "bibliography/A_Multiband_Passive_Radar_Demonstrator.pdf": {
+    "mtime": 1786304832.3360848,
+    "ast_hash": "c30ee55b6ad14e5cd3e7b06367b2c2ec",
     "semantic_hash": ""
   }
 }

@@ -161,3 +161,10 @@
 - **Decisão:** configurar a edição brasileira ABNTEX2 em 11 pt, `openany` e `oneside`, preservando a árvore independente por idioma e o conteúdo técnico equivalente.
 - **Resultado:** a edição brasileira passou de 53 para 36 páginas e a inglesa permaneceu com 35 páginas. Foram eliminadas as páginas vazias de alinhamento de capítulos e as folhas pré-textuais em branco mantidas por `twoside`.
 - **Limite:** não forçar a última página de diferença por redução de figuras, margens ou espaçamento. A diferença residual decorre do volume linguístico e da composição ABNT da bibliografia e é preferível à distorção editorial.
+
+## ADR-019 — Autoria única e controle editorial
+
+- **Data:** 9 de agosto de 2026
+- **Estado:** decisão editorial permanente
+- **Decisão:** José Augusto M de Andrade Jr. é o único autor das duas edições autoritativas do artigo RADOME. A seleção e formulação das ideias, a estrutura, a redação aprovada e as determinações de compilação pertencem exclusivamente ao autor. Referências bibliográficas, software e ferramentas de assistência à pesquisa, redação, tradução, ilustração ou compilação são meios de apoio, não coautores, e seu conteúdo somente integra o artigo mediante determinação e aprovação final do autor.
+- **Consequência:** as capas devem identificar nominalmente apenas José Augusto M de Andrade Jr. como autor. Metadados, novas edições, traduções e materiais derivados não podem atribuir coautoria a projetos, organizações, ferramentas ou assistentes sem decisão expressa posterior do autor.
