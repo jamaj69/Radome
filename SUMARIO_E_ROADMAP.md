@@ -18,6 +18,8 @@ A ADR-014 registra como inovação arquitetural candidata a combinação das Yag
 
 A ADR-015 acrescenta duas hipóteses controladas. No eixo custo--desempenho, antenas externas, ausência de transmissor próprio e manutenção modular podem evitar parte da complexidade de um casco UWB e de uma cadeia ativa, mas suportes expostos, ambiente e multiplicação de canais podem compensar a economia; somente um modelo de ciclo de vida decidirá. No eixo de localização, atraso eco--referência define um elipsoide biestático, enquanto AOA, potência calibrada, Doppler/FDOA e polarização válida restringem probabilisticamente a solução. A recepção associada do mesmo eco por múltiplas antenas/faces e por outros radomes sincronizados acrescenta informação e reduz a incerteza nas direções observáveis não redundantes. O timestamping usa uma base temporal comum, centralmente referenciada e continuamente calibrada por técnicas simultâneas; a campanha experimental deve quantificar a redução, não estabelecer se o princípio existe.
 
+A ADR-016 estabelece como premissa permanente que todos os sítios serão eventualmente localizados e cartografados por sensoriamento remoto óptico ou SAR. O projeto não depende de segredo geográfico nem de invisibilidade visual: sua sobrevivência sistêmica decorre de distribuição, redundância, segurança, isolamento e recuperação, enquanto a passividade limita a informação adversária sobre atividade e modo de operação mesmo quando o sítio é conhecido.
+
 ## 2. Mapa compacto do sistema
 
 ```mermaid

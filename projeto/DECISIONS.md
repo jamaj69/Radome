@@ -134,3 +134,12 @@
 - **Decisão geométrica:** atraso excedente eco--referência define elipsoide biestático; AOA, potência calibrada, Doppler/FDOA e polarização coerente na mesma faixa fornecem restrições adicionais. A recepção associada do mesmo eco por múltiplas antenas/faces e por radomes sincronizados acrescenta informação ao estimador; em mínimos quadrados ponderados, a covariância não aumenta e diminui estritamente nas direções observáveis em que a nova medição não é redundante. Essa propriedade é tratada como consequência matemática da fusão e da propagação multivariada de incertezas conforme JCGM 102:2011, não com o verbo modal ``pode''.
 - **Decisão temporal:** as faces de cada radome compartilham uma base temporal central, e os nós são referenciados à época comum da rede. GNSS, referência de frequência, White Rabbit, holdover local e calibração de atraso operam simultaneamente e são verificados continuamente para sustentar timestamping e associação do eco entre canais e nós.
 - **Proibição:** não afirmar baixo custo, valor numérico de incerteza ou localização exata antes de orçamento rastreável e campanha com verdade-terreno. A redução de incerteza por informação válida adicional deve ser preservada como propriedade do modelo; o ensaio quantifica sua magnitude.
+
+## ADR-016 — Sítios presumidamente conhecidos por sensoriamento remoto
+
+- **Data:** 9 de agosto de 2026
+- **Estado:** premissa permanente do modelo de ameaça
+- **Decisão:** presumir que qualquer implantação será eventualmente localizada, fotografada e cartografada por rivais com sensoriamento remoto óptico ou SAR. Coordenadas, silhueta e presença física do radome não são tratadas como segredos duráveis.
+- **Consequência arquitetural:** proteção e continuidade não dependem de invisibilidade visual ou ausência de eco. Dependem de operação sem transmissão própria, distribuição e redundância entre nós, segurança física/cibernética, manutenção modular, isolamento de dados e recuperação após perda de uma estação.
+- **Valor da passividade:** mesmo com o sítio catalogado, a ausência de iluminação RF própria reduz a informação disponível sobre atividade, modo de operação, cobertura instantânea e dados coletados.
+- **Validação:** exercícios de perda/degradação de nó, análise de continuidade da cobertura, inventário de assinaturas ópticas/térmicas/RF e revisão periódica do modelo de ameaça.

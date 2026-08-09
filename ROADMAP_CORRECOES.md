@@ -130,6 +130,7 @@ O C2 é reaberto porque o corte circular, o anel de apoio e a transição civil 
    - [ ] Comparar as Yagis externas com pelo menos uma alternativa compacta de banda larga (monocone/bicone ou módulo planar) usando o mesmo volume, plano de terra, plataforma, faixa, ganho realizado, eficiência, padrão e estabilidade ambiental.
    - [ ] Fechar um modelo de custo de ciclo de vida comparando casco UWB/ativo e arquitetura passiva modular: materiais, transmissor, energia, refrigeração, calibração, instalação, inspeção de antenas expostas, sobressalentes, MTTR e disponibilidade, todos normalizados pelo desempenho medido.
    - [x] Preservar como propriedade do estimador a redução de incerteza obtida pela fusão de observações válidas do mesmo eco em múltiplas antenas/faces e radomes sincronizados; reservar à campanha a quantificação do ganho e sua consistência com a covariância prevista.
+   - [x] Adotar pela ADR-016 que os sítios serão mapeados por sensoriamento remoto adversário; retirar do modelo de proteção qualquer dependência de segredo de coordenadas ou invisibilidade visual e validar continuidade após perda de nós.
 
 **Gate C5:** nenhuma alegação de novidade ou desempenho depende apenas do resultado do Consensus ou de um diagrama conceitual.
 
