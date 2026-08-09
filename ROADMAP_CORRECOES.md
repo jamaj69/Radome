@@ -125,7 +125,7 @@ O C2 é reaberto porque o corte circular, o anel de apoio e a transição civil 
 3. Verificar especialmente registros de 2025–2026 e os que possuem venue ou resumo incompletos.
 4. Separar claramente revisão narrativa via Consensus de uma eventual revisão sistemática.
 5. Criar matriz alegação–referência–evidência e marcar como hipótese tudo que ainda depende de simulação ou ensaio.
-   - [x] Registrar pela ADR-014 a célula receptora absorvedora como inovação arquitetural candidata, sem alegação de invisibilidade.
+   - [x] Registrar pela ADR-014 a discrição de emissão como consequência da operação somente receptora e a redução adicional da assinatura de espalhamento pela célula absorvedora como inovação arquitetural candidata a medir, sem alegação de invisibilidade absoluta.
    - [ ] Selecionar o absorvedor e comparar a célula com/sem revestimento por $S_{11}$, balanço de potência, eficácia de blindagem, acoplamento, padrões OTA e RCS angular.
    - [ ] Comparar as Yagis externas com pelo menos uma alternativa compacta de banda larga (monocone/bicone ou módulo planar) usando o mesmo volume, plano de terra, plataforma, faixa, ganho realizado, eficiência, padrão e estabilidade ambiental.
    - [ ] Fechar um modelo de custo de ciclo de vida comparando casco UWB/ativo e arquitetura passiva modular: materiais, transmissor, energia, refrigeração, calibração, instalação, inspeção de antenas expostas, sobressalentes, MTTR e disponibilidade, todos normalizados pelo desempenho medido.
