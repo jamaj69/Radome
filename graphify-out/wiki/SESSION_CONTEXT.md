@@ -143,4 +143,5 @@ In parallel, close the reopened C2 tetrahedral candidate before treating the cur
 
 - `gh auth status` showed the `jamaj69` token as invalid during this session. Local commits worked; pushing may require re-authentication.
 - The PDF orientation issue was only in the VS Code viewer state. The PDF metadata reported A4 portrait and page rotation 0.
+- On 2026-08-09, `projeto/radome-en.pdf` was found with trailing corrupted data after an interrupted or concurrent write: `pdfinfo` could not read its cross-reference table even though an earlier valid PDF body remained embedded in the file. The English edition was rebuilt under an isolated job name, visually audited across all 31 pages, validated as A4/PDF 1.5 and only then moved over the authoritative artifact. Future diagnosis must distinguish a successful LaTeX log from the integrity of the PDF file currently on disk.
 - `fig16_tetrahedral_face_cluster.png` and `radome_tetrahedral_face_cluster.blend` represent the current ADR-012 candidate, including tangent vectors, shallow cells and the reserved service core. They are architectural visualization, not fabrication approval.
