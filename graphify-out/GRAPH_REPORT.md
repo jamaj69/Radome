@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-08)
 
 ## Corpus Check
-- 30 files · ~341,199 words
+- 31 files · ~585,893 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 550 nodes · 579 edges · 52 communities (47 shown, 5 thin omitted)
+- 556 nodes · 584 edges · 53 communities (47 shown, 6 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `22fe50c2`
+- Built from commit: `0b18f0f3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -65,6 +65,7 @@
 - Cross-search signals
 - verify_tetrahedral_face_geometry.py
 - render_tetrahedral_face_cluster_blender.py
+- localize_figures.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -85,7 +86,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (52 total, 5 thin omitted)
+## Communities (53 total, 6 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -270,7 +271,7 @@ Nodes (5): arrow(), cylinder_between(), dot(), Render a contiguous cluster of 2 
 ## Knowledge Gaps
 - **387 isolated node(s):** `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout`, `LaTeX Article Commands` (+382 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -278,7 +279,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
   _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **What connects `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` to the rest of the system?**
   _387 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**

@@ -158,6 +158,72 @@
       "norm_label": "generate the shared, language-neutral technical figures 01--10. permanent..."
     },
     {
+      "label": "localize_figures.py",
+      "file_type": "code",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "projeto_figures_localize_figures",
+      "community": 52,
+      "community_name": "localize_figures.py",
+      "norm_label": "localize_figures.py"
+    },
+    {
+      "label": "font()",
+      "file_type": "code",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "projeto_figures_localize_figures_font",
+      "community": 52,
+      "community_name": "localize_figures.py",
+      "norm_label": "font()"
+    },
+    {
+      "label": "source_for()",
+      "file_type": "code",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "projeto_figures_localize_figures_source_for",
+      "community": 52,
+      "community_name": "localize_figures.py",
+      "norm_label": "source_for()"
+    },
+    {
+      "label": "load_image()",
+      "file_type": "code",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "projeto_figures_localize_figures_load_image",
+      "community": 52,
+      "community_name": "localize_figures.py",
+      "norm_label": "load_image()"
+    },
+    {
+      "label": "wrap()",
+      "file_type": "code",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "projeto_figures_localize_figures_wrap",
+      "community": 52,
+      "community_name": "localize_figures.py",
+      "norm_label": "wrap()"
+    },
+    {
+      "label": "Build language-specific publication figures from the common geometry masters.",
+      "file_type": "rationale",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "projeto_figures_localize_figures_rationale_1",
+      "community": 52,
+      "community_name": "localize_figures.py",
+      "norm_label": "build language-specific publication figures from the common geometry masters."
+    },
+    {
       "label": "render_aircraft_two_radomes_blender.py",
       "file_type": "code",
       "source_file": "projeto/figures/render_aircraft_two_radomes_blender.py",
@@ -6182,6 +6248,61 @@
       "_origin": "ast",
       "source": "projeto_figures_generate_updated_figures_rationale_1",
       "target": "projeto_figures_generate_updated_figures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_figures_localize_figures",
+      "target": "projeto_figures_localize_figures_font",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_figures_localize_figures",
+      "target": "projeto_figures_localize_figures_load_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_figures_localize_figures",
+      "target": "projeto_figures_localize_figures_source_for",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_figures_localize_figures",
+      "target": "projeto_figures_localize_figures_wrap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_figures_localize_figures_rationale_1",
+      "target": "projeto_figures_localize_figures",
       "confidence_score": 1.0
     },
     {
@@ -12488,5 +12609,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "22fe50c22ad83970ea57515d3730a63f207c9a86"
+  "built_at_commit": "0b18f0f3909ce51081eaeb996f3cc2b4f945ea30"
 }

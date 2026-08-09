@@ -77,7 +77,7 @@ The master document uses the bibliography copied from `radome_antenna_literature
 
 ## Regenerating Project Figures
 
-Permanent publication rule: both authoritative language editions must include the same figure files. Generated figures, SVGs and Blender renders must not contain titles, labels, callouts, legends, axis text or any other natural-language text. Put every verbal explanation in the language-specific LaTeX caption. Geometry, colour, line style and text-free symbols may be shared across editions.
+Permanent publication rule: each authoritative language edition uses its own localized figure set under `projeto/figures/en/` or `projeto/figures/pt-BR/`. The two sets must derive from the same geometry masters and must remain geometrically equivalent, while titles, labels and visual keys are written in the edition language. Regenerate both sets with `python3 localize_figures.py` after changing any common figure master.
 
 The current generated figures are produced by:
 

@@ -107,7 +107,7 @@ O C2 é reaberto porque o corte circular, o anel de apoio e a transição civil 
 3. Substituir a malha ilustrativa de anéis pela malha geodésica real, ou rotular inequivocamente o render como esquemático.
 4. Gerar faces, suportes e antenas sem coordenadas independentes desenhadas manualmente.
    - [x] Fixar pela ADR-013 o boom na normal externa da face e a rotação transversal de 45°/135° na base tangente local.
-   - [x] Adotar figuras compartilhadas sem texto interno, com explicação localizada somente nas legendas LaTeX.
+   - [x] Gerar conjuntos de figuras específicos para `en` e `pt-BR`, geometricamente equivalentes e com títulos, rótulos e chaves visuais localizados.
 5. Preservar a baseline `baseline_35S_concrete_base/` e criar uma nova baseline nomeada após aprovação.
 6. Remover a repetição de `fig13_radome_blender.png` no artigo.
 

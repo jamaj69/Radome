@@ -63,6 +63,6 @@ Add or reorder chapters in the matching manifest under `config/`. Write language
 
 Adicione ou reordene capítulos no manifesto correspondente em `config/`. Edite o conteúdo diretamente em `chapters/en/` ou `chapters/pt-BR/`; os comandos usuais `\\chapter`, `\\section` e `\\subsection` são suportados.
 
-Both editions must reference the same figure files. Figures are language-neutral and contain no embedded text; all verbal explanation belongs in the localized LaTeX captions.
+Each edition references its localized figure set in `figures/en/` or `figures/pt-BR/`. Both sets derive from the same geometry masters, while titles, labels and visual keys are localized by `figures/localize_figures.py`.
 
-As duas edições devem referenciar os mesmos arquivos de figura. As figuras são independentes de idioma e não contêm texto incorporado; toda explicação verbal pertence às legendas LaTeX localizadas.
+Cada edição referencia seu conjunto localizado em `figures/en/` ou `figures/pt-BR/`. Ambos derivam dos mesmos mestres geométricos, enquanto títulos, rótulos e chaves visuais são localizados por `figures/localize_figures.py`.
