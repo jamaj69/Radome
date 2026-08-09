@@ -14,6 +14,8 @@ For an illuminator $T$, target $x$ and receiver $R_i$, the bistatic excess path 
 \]
 AOA, TDOA and FDOA are fused with covariance, propagation models and geometric dilution of precision.
 
+All faces and receiver chains within a radome share the node's central time base. Across radomes, that base is referenced to the network common epoch: GNSS and a frequency reference discipline the local clock, White Rabbit distributes time and frequency, atomic holdover preserves continuity, and calibration injection measures RF and digital delays. These techniques operate simultaneously and are checked continuously; each observation timestamp carries its calibration version and uncertainty. Echoes associated across several antennas of one radome and across other radomes can therefore be reconciled on the same time axis.
+
 \section{GNSS timing reference}
 Each station provisionally includes at least two external, surveyed GNSS antennas (\texttt{TIM-001}) with clear sky view, separated from the VHF/UHF Yagis and other high-power RF sources. A multi-constellation receiver produces UTC, 1PPS, frequency reference and ephemeris data. The proposed 1PPS and 10 MHz outputs (\texttt{TIM-002}) discipline a local atomic clock or high-stability oscillator; the clock then distributes deterministic timing through White Rabbit to every face and ADC.
 

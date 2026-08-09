@@ -14,6 +14,8 @@ Para iluminador $T$, alvo $x$ e receptor $R_i$, o excesso de caminho biestático
 \]
 AOA, TDOA e FDOA são fundidos com covariância, modelos de propagação e diluição geométrica de precisão.
 
+Todas as faces e cadeias receptoras de um radome compartilham a mesma base temporal central do nó. Entre radomes, essa base é referenciada à época comum da rede: GNSS e referência de frequência disciplinam o relógio local, White Rabbit distribui tempo e frequência, o holdover atômico preserva continuidade e a injeção de calibração mede os atrasos RF e digitais. Essas técnicas operam simultaneamente e são verificadas continuamente; o timestamp de cada observação inclui a versão da calibração e sua incerteza. Assim, ecos associados recebidos por várias antenas do mesmo radome e por outros radomes podem ser reconciliados no mesmo eixo temporal.
+
 \section{Referência temporal GNSS}
 Cada estação inclui provisoriamente pelo menos duas antenas GNSS externas (\texttt{TIM-001}), com centros de fase levantados e visão desobstruída do céu, afastadas das Yagis VHF/UHF e de outras fontes RF intensas. Um receptor multiconstelação produz UTC, 1PPS, referência de frequência e efemérides. As saídas propostas de 1PPS e 10 MHz (\texttt{TIM-002}) disciplinam um relógio atômico ou oscilador de alta estabilidade local; o relógio distribui então o sincronismo determinístico por White Rabbit a todas as faces e ADCs.
 

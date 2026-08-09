@@ -129,6 +129,7 @@ O C2 é reaberto porque o corte circular, o anel de apoio e a transição civil 
    - [ ] Selecionar o absorvedor e comparar a célula com/sem revestimento por $S_{11}$, balanço de potência, eficácia de blindagem, acoplamento, padrões OTA e RCS angular.
    - [ ] Comparar as Yagis externas com pelo menos uma alternativa compacta de banda larga (monocone/bicone ou módulo planar) usando o mesmo volume, plano de terra, plataforma, faixa, ganho realizado, eficiência, padrão e estabilidade ambiental.
    - [ ] Fechar um modelo de custo de ciclo de vida comparando casco UWB/ativo e arquitetura passiva modular: materiais, transmissor, energia, refrigeração, calibração, instalação, inspeção de antenas expostas, sobressalentes, MTTR e disponibilidade, todos normalizados pelo desempenho medido.
+   - [x] Preservar como propriedade do estimador a redução de incerteza obtida pela fusão de observações válidas do mesmo eco em múltiplas antenas/faces e radomes sincronizados; reservar à campanha a quantificação do ganho e sua consistência com a covariância prevista.
 
 **Gate C5:** nenhuma alegação de novidade ou desempenho depende apenas do resultado do Consensus ou de um diagrama conceitual.
 

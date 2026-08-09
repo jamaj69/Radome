@@ -60,13 +60,13 @@
     "semantic_hash": ""
   },
   "ROADMAP_CORRECOES.md": {
-    "mtime": 1786255977.8456216,
-    "ast_hash": "c05742c3bd5549ebf94941cf884f8e65",
+    "mtime": 1786257013.279828,
+    "ast_hash": "cef76a9f148197a79d5bc3f9623f360e",
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786255977.9896252,
-    "ast_hash": "ecbf69dcaf66d692f5c65ff3e70e051f",
+    "mtime": 1786257013.1438246,
+    "ast_hash": "75a2c6b9c680708c4dbd5f7ecafdf9b2",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -290,8 +290,8 @@
     "semantic_hash": ""
   },
   "projeto/DECISIONS.md": {
-    "mtime": 1786255977.7056181,
-    "ast_hash": "f4c04c1fe3c0b6b6317ca61781acc522",
+    "mtime": 1786257013.007821,
+    "ast_hash": "b664aeca459584fcbaa3bf694db037e8",
     "semantic_hash": ""
   },
   "projeto/PARAMETERS.md": {
@@ -335,13 +335,13 @@
     "semantic_hash": ""
   },
   "projeto/radome-en.pdf": {
-    "mtime": 1786255993.5700223,
-    "ast_hash": "34d2b5eb99ccca4b2591a7c285e419b4",
+    "mtime": 1786257025.1521263,
+    "ast_hash": "320446d5c22a378eaeaed4ff2fc91f34",
     "semantic_hash": ""
   },
   "projeto/radome-pt-br.pdf": {
-    "mtime": 1786255995.0300596,
-    "ast_hash": "b9774c8dc6bd18db32c2d5d9515dd084",
+    "mtime": 1786257029.5602372,
+    "ast_hash": "1d4955bb0427129ab017a168ea27d79f",
     "semantic_hash": ""
   },
   "projeto/figures/localize_figures.py": {
