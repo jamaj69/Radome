@@ -45,7 +45,7 @@ flowchart LR
 
 ## 4. Verificação da revisão de literatura via Consensus
 
-O pacote `radome_antenna_literature_review/` contém revisão em Markdown e LaTeX, PDF compilado, 29 registros BibTeX, script de build e relatório de validação. As cópias de `review.md`, `main.tex` e `references.bib` na raiz são byte a byte idênticas às do pacote; a bibliografia em `projeto/references.bib` também é idêntica. `main.pdf` e `review.pdf` são o mesmo artefato. O relatório registra build completo, 29 entradas processadas, nenhuma citação indefinida e nenhuma advertência BibTeX.
+O pacote `radome_antenna_literature_review/` contém revisão em Markdown e LaTeX, PDF compilado, 29 registros BibTeX provenientes da revisão via Consensus, script de build e relatório de validação. As cópias de `review.md`, `main.tex` e `references.bib` na raiz são byte a byte idênticas às do pacote. A bibliografia autoritativa do artigo em `projeto/references.bib` acrescenta a essas fontes o artigo primário de Qamar, Salazar-Cerreno e Aboserwal (2020), fornecido em `bibliography/`, sobre definição, requisitos e validação eletromagnética de radomes. `main.pdf` e `review.pdf` são o mesmo artefato. O relatório do pacote registra build completo, 29 entradas processadas, nenhuma citação indefinida e nenhuma advertência BibTeX.
 
 A revisão cobre cinco eixos: antenas de banda larga e integração em faces; radomes/FSS; detecção, DF e localização passiva; identificação e anomalia de emissores; integração, calibração e validação. A lacuna central identificada — co-projeto e validação experimental ponta a ponta do conjunto antena–radome–receptor, incluindo distorções da plataforma — está alinhada com a arquitetura do projeto.
 

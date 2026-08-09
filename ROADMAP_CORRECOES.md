@@ -120,6 +120,7 @@ O C2 é reaberto porque o corte circular, o anel de apoio e a transição civil 
 
 1. Trocar “inovação central” por “solução arquitetural proposta” até concluir busca de anterioridade específica para a montagem.
 2. Auditar os 29 registros do Consensus em fontes primárias, acrescentando DOI, volume, páginas e estado editorial.
+   - [x] Incorporar como fonte primária adicional o artigo de Qamar, Salazar-Cerreno e Aboserwal (2020), fornecido em `bibliography/`, para definir o radome e documentar o compromisso entre proteção estrutural e transparência eletromagnética.
 3. Verificar especialmente registros de 2025–2026 e os que possuem venue ou resumo incompletos.
 4. Separar claramente revisão narrativa via Consensus de uma eventual revisão sistemática.
 5. Criar matriz alegação–referência–evidência e marcar como hipótese tudo que ainda depende de simulação ou ensaio.

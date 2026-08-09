@@ -60,13 +60,13 @@
     "semantic_hash": ""
   },
   "ROADMAP_CORRECOES.md": {
-    "mtime": 1786236718.7087724,
-    "ast_hash": "4dd0aa03af035010752a38e439463149",
+    "mtime": 1786251266.7824767,
+    "ast_hash": "937acd9c8fee1a6783cc9ff07eba4d42",
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786236718.840776,
-    "ast_hash": "e171b23e129a1deceb5a5cebcd70373e",
+    "mtime": 1786251266.6384726,
+    "ast_hash": "a94b1c8ebe348ddb93ee84f817447dd7",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -335,13 +335,13 @@
     "semantic_hash": ""
   },
   "projeto/radome-en.pdf": {
-    "mtime": 1786238389.1735125,
-    "ast_hash": "e2c072df36e6ee1c03d9cef218bc284f",
+    "mtime": 1786251280.6948767,
+    "ast_hash": "e08d5bbb31f60cc4badaf524f1bd04cd",
     "semantic_hash": ""
   },
   "projeto/radome-pt-br.pdf": {
-    "mtime": 1786238390.4655468,
-    "ast_hash": "f646c7a62308487c1c59beae031bcd5b",
+    "mtime": 1786251282.0749161,
+    "ast_hash": "7c6fcbaf7ea6920c2476b3667cfe6e77",
     "semantic_hash": ""
   },
   "projeto/figures/localize_figures.py": {
@@ -507,6 +507,11 @@
   "projeto/figures/pt-BR/fig16_tetrahedral_face_cluster.png": {
     "mtime": 1786238367.7009413,
     "ast_hash": "b505e9f2057b6c9512f67aecb5c3d28f",
+    "semantic_hash": ""
+  },
+  "bibliography/An_Ultra-Wide_Band_Radome_for_High-Performance_and_Dual-Polarized_Radar_and_Communication_Systems.pdf": {
+    "mtime": 1786250429.6944122,
+    "ast_hash": "a76937b4ba0d6d2a5a18883954fd1be8",
     "semantic_hash": ""
   }
 }
