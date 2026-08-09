@@ -27,6 +27,18 @@ The known-transmitter calibration protocol (\texttt{EXP-007}) records the direct
 
 The bistatic-reflection protocol (\texttt{EXP-008}) uses simultaneous reference and surveillance channels, direct-path cancellation and a cross-ambiguity estimator. Its truth source is a controlled or independently tracked target trajectory plus surveyed transmitter and receiver coordinates; its metrics are probability of detection, false-alarm probability and delay, Doppler and localization errors with covariance consistency. No result from the two direct-signal protocols substitutes for this bistatic evidence.
 
+\section{Bistatic ellipsoid and uncertainty-region reduction}
+Let the illuminator position be $\mathbf{s}$, the surveyed position of receiver $i$ be $\mathbf{r}_i$, and a hypothesized target position be $\mathbf{x}$. The excess delay between the echo and the direct reference path satisfies
+\[
+c\,\Delta\tau_i=
+\lVert\mathbf{s}-\mathbf{x}\rVert+
+\lVert\mathbf{x}-\mathbf{r}_i\rVert-
+\lVert\mathbf{s}-\mathbf{r}_i\rVert.
+\]
+For fixed $\Delta\tau_i$, compatible points form a bistatic iso-range ellipsoid whose foci are the transmitter and receiver. Per-face received power, corrected for the embedded pattern, losses and the illuminator's effective radiated power, supplies an angular/link likelihood; AOA restricts the solution to a direction or cone. Polarization observables add discrimination only at the same frequency and through calibrated coherent ports. The present VHF and UHF Yagis operate in different bands and therefore cannot be crossed to form a polarimetric measurement of the same echo.
+
+The probabilistic intersection of delay ellipsoids, AOA, Doppler/FDOA, power and valid polarization yields a state region with covariance rather than an exact point. A second synchronized radome adds another ellipsoid and further angular constraints; a third node generally improves observability and ambiguity rejection. Uncertainty decreases in practice only with favourable geometry, common visibility, correct association of the same reflection, calibrated clocks/channel delays and an adequate propagation model. The demonstrator must report predicted covariance against observed error and GDOP rather than promise small uncertainty in advance.
+
 
 
 

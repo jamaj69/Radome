@@ -124,3 +124,11 @@
 - **Evidência exigida:** modelo EM do conjunto aberto e revestido; balanço de potência incidente–refletida–absorvida–recebida; $S_{11}$ da abertura; eficácia de blindagem; acoplamento entre células; RCS monoestática e biestática angular com e sem absorvedor; ganho, ruído e padrão embarcado; ensaios OTA em câmara e campanha externa.
 - **Limite operacional:** o conceito pode aumentar discrição eletromagnética por não transmitir e pode reduzir a assinatura passiva da estrutura, mas não fundamenta a palavra ``invisível'' nem capacidade de defesa aérea antes dos ensaios.
 - **Anterioridade incorporada:** Oh et al. (2026) já demonstram integração em pacote de antena UHF, parede metálica de isolamento e radome GFRP de baixa perda. Portanto, parede isolante mais radome não é reivindicada como novidade; a hipótese candidata fica limitada à combinação específica de Yagis VHF/UHF externas ortogonais, boom normal à face, célula piramidal interna blindada/absorvedora e operação distribuída exclusivamente receptora.
+
+## ADR-015 — Custo--desempenho e geometria probabilística multiestática
+
+- **Data:** 9 de agosto de 2026
+- **Estado:** hipótese arquitetural; custo e precisão não demonstrados
+- **Decisão econômica:** tratar antenas externas, casco potencialmente menos exigente em transparência multifaixa, ausência de transmissor próprio e manutenção modular como fontes candidatas de redução de custo. Comparar por custo de ciclo de vida e desempenho normalizado, incluindo as penalidades de exposição ambiental e multiplicação de canais.
+- **Decisão geométrica:** atraso excedente eco--referência define elipsoide biestático; AOA, potência calibrada, Doppler/FDOA e polarização coerente na mesma faixa fornecem restrições adicionais. Nós adicionais podem reduzir a covariância, mas somente sob geometria, associação, sincronismo e propagação validados.
+- **Proibição:** não afirmar baixo custo, pequena incerteza ou localização exata antes de orçamento rastreável e campanha com verdade-terreno.

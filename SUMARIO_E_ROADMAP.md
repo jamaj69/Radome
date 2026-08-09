@@ -16,6 +16,8 @@ Na montagem combinada VHF/UHF, o eixo estrutural e os booms são colineares com 
 
 A ADR-014 registra como inovação arquitetural candidata a combinação das Yagis externas com células piramidais receptoras individualmente blindadas e revestidas por absorvedor. A hipótese é evitar a perda do casco no caminho útil e reduzir auto-interferência, acoplamento e reradiação pela abertura. Blindagem condutiva não equivale a absorção, e a estação não é declarada invisível: material, espessura, reflexão, absorção, padrões e RCS ainda exigem simulação e ensaio comparativo.
 
+A ADR-015 acrescenta duas hipóteses controladas. No eixo custo--desempenho, antenas externas, ausência de transmissor próprio e manutenção modular podem evitar parte da complexidade de um casco UWB e de uma cadeia ativa, mas suportes expostos, ambiente e multiplicação de canais podem compensar a economia; somente um modelo de ciclo de vida decidirá. No eixo de localização, atraso eco--referência define um elipsoide biestático, enquanto AOA, potência calibrada, Doppler/FDOA e polarização válida restringem probabilisticamente a solução; radomes adicionais podem reduzir covariância, sem garantia prévia de incerteza pequena.
+
 ## 2. Mapa compacto do sistema
 
 ```mermaid
