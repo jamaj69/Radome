@@ -75,6 +75,7 @@ All commits below used author `github-copilot[bot] <198982749+github-copilot[bot
 - The technical publication now has two authoritative editions: `projeto/radome-pt-br.tex`/`.pdf` and `projeto/radome-en.tex`/`.pdf`. The former bilingual chapters are preserved under `projeto/chapters/legacy-bilingual/` only for traceability.
 - ADR-013 fixes the combined VHF/UHF Yagi boom on the outward normal of each external triangular face. The mutually orthogonal transverse directions are 45° and 135° in the local tangent basis.
 - Each language edition now uses a localized figure set under `projeto/figures/en/` or `projeto/figures/pt-BR/`. Both sets derive from common geometry masters but carry titles, labels and visual keys in the edition language; this supersedes the short-lived text-free publication rule.
+- The localized figure generator uses figure-specific label coordinates. In particular, the face/Yagi assembly and the face-module stack have complete Portuguese and English labels centred inside their corresponding geometric elements; generic overlay placement is not acceptable for publication.
 - Deliberate first-demonstrator gaps are `323–470 MHz` and `860–960 MHz`.
 - A dedicated `960–1215 MHz` aviation aperture supplies independent UAT 978 MHz and 1090ES paths; neither service is assigned to the `470–860 MHz` UHF Yagi.
 - `EXP-006`, `EXP-007` and `EXP-008` separately control cooperative direct ADS-B, known-transmitter calibration and bistatic reflection.

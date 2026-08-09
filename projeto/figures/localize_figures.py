@@ -3,7 +3,7 @@
 from pathlib import Path
 import subprocess
 import tempfile
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFont
 
 
 ROOT = Path(__file__).resolve().parent
@@ -52,14 +52,15 @@ KEYS = {
 ANNOTATIONS = {
     "fig01": [(.50,.07,"source / target","fonte / alvo"),(.17,.38,"node A","nó A"),(.50,.43,"node B","nó B"),(.83,.38,"node C","nó C"),(.50,.88,"distributed fusion","fusão distribuída")],
     "fig02": [(.29,.65,"HF","HF"),(.42,.78,"VHF","VHF"),(.64,.69,"UHF","UHF"),(.70,.37,"L/S/C","L/S/C"),(.40,.28,"X/Ku/Ka","X/Ku/Ka"),(.50,.52,"face core","núcleo da face")],
-    "fig03": [(.24,.43,"RF aperture","abertura RF"),(.73,.12,"outer skin","pele externa"),(.73,.25,"low-loss core","núcleo de baixa perda"),(.73,.39,"inner skin","pele interna"),(.73,.52,"RF aperture / PCB","abertura RF / PCB"),(.73,.65,"shielded modules","módulos blindados"),(.46,.88,"ADC / ASIC A","ADC / ASIC A"),(.76,.88,"ADC / ASIC B","ADC / ASIC B")],
+    "fig03": [(.24,.43,"RF aperture","abertura RF"),(.73,.15,"outer skin","pele externa"),(.73,.265,"low-loss core","núcleo de baixa perda"),(.73,.38,"inner skin","pele interna"),(.73,.49,"RF aperture / PCB","abertura RF / PCB"),(.73,.605,"shielded band modules","módulos blindados por faixa"),(.61,.77,"ADC A","ADC A"),(.82,.77,"ADC B","ADC B"),(.61,.91,"ASIC A","ASIC A"),(.82,.91,"ASIC B","ASIC B")],
     "fig04": [(.18,.78,"HF","HF"),(.27,.66,"VHF","VHF"),(.51,.54,"UHF","UHF"),(.57,.42,"aviation","aeronáutica"),(.68,.30,"L/S/C","L/S/C"),(.82,.18,"X/Ku","X/Ku"),(.89,.07,"K/Ka","K/Ka")],
     "fig05": [(.12,.24,"VHF channel","canal VHF"),(.12,.41,"UHF channel","canal UHF"),(.42,.33,"independent bands","faixas independentes"),(.79,.33,"invalid synthesis","síntese inválida"),(.12,.68,"port X","porta X"),(.12,.86,"port Y","porta Y"),(.42,.77,"coherent ADCs","ADCs coerentes"),(.79,.77,"Jones / Stokes / circular","Jones / Stokes / circular")],
-    "fig06": [(.08,.42,"antenna","antena"),(.22,.42,"filter","filtro"),(.35,.42,"LNA","LNA"),(.49,.42,"converter","conversor"),(.63,.42,"ADC","ADC"),(.77,.42,"FPGA","FPGA"),(.91,.42,"events","eventos"),(.25,.80,"calibration","calibração"),(.52,.80,"clock","relógio"),(.80,.80,"control","controle")],
-    "fig07": [(.13,.22,"GNSS antenna","antena GNSS"),(.13,.75,"GNSS receiver","receptor GNSS"),(.40,.50,"1 PPS + 10 MHz","1 PPS + 10 MHz"),(.68,.24,"distribution","distribuição"),(.68,.72,"hardware timestamp","timestamp em hardware"),(.89,.50,"RF-delay calibration","calibração de atraso RF")],
+    "fig06": [(.08,.34,"antenna","antena"),(.22,.34,"filter","filtro"),(.35,.34,"LNA","LNA"),(.49,.34,"converter","conversor"),(.63,.34,"ADC","ADC"),(.77,.34,"FPGA","FPGA"),(.91,.34,"events","eventos"),(.25,.74,"calibration","calibração"),(.52,.74,"clock","relógio"),(.80,.74,"control","controle")],
+    "fig07": [(.13,.20,"GNSS antenna","antena GNSS"),(.13,.70,"GNSS receiver","receptor GNSS"),(.40,.43,"1 PPS + 10 MHz","1 PPS + 10 MHz"),(.68,.20,"distribution","distribuição"),(.68,.70,"hardware timestamp","timestamp em hardware"),(.89,.43,"RF-delay calibration","calibração de atraso RF")],
     "fig08": [(.13,.78,"illuminator","iluminador"),(.50,.12,"target","alvo"),(.80,.82,"receiver","receptor"),(.72,.38,"receiver","receptor"),(.50,.88,"receiver","receptor")],
     "fig09": [(.09,.25,"reference","referência"),(.09,.74,"surveillance","vigilância"),(.28,.50,"alignment","alinhamento"),(.43,.50,"detection","detecção"),(.58,.50,"association","associação"),(.73,.50,"estimation","estimação"),(.88,.50,"tracking","rastreamento"),(.48,.83,"calibration","calibração"),(.78,.83,"quality control","controle de qualidade")],
-    "fig10": [(.14,.18,"concept","conceito"),(.29,.36,"simulation","simulação"),(.47,.54,"bench prototype","protótipo de bancada"),(.68,.71,"field demonstrator","demonstrador de campo"),(.87,.87,"qualification","qualificação")],
+    "fig10": [(.14,.14,"concept","conceito"),(.29,.32,"simulation","simulação"),(.47,.50,"bench prototype","protótipo de bancada"),(.68,.67,"field demonstrator","demonstrador de campo"),(.87,.83,"qualification","qualificação")],
+    "fig11": [(.23,.39,"dielectric RF face","face RF dielétrica"),(.49,.52,"normal boom","boom normal"),(.60,.43,"UHF Yagi — 135°","Yagi UHF — 135°"),(.56,.61,"VHF Yagi — 45°","Yagi VHF — 45°"),(.82,.10,"outer skin","pele externa"),(.82,.22,"low-loss core","núcleo de baixa perda"),(.82,.34,"inner skin","pele interna"),(.82,.465,"RF aperture / PCB","abertura RF / PCB"),(.82,.59,"shielding","blindagem"),(.82,.71,"face electronics","eletrônica da face"),(.75,.87,"VHF channel","canal VHF"),(.89,.87,"UHF channel","canal UHF")],
 }
 
 
@@ -82,7 +83,14 @@ def load_image(path):
     with tempfile.TemporaryDirectory() as directory:
         target = Path(directory) / "page"
         subprocess.run(["pdftoppm", "-singlefile", "-png", "-r", "180", str(path), str(target)], check=True)
-        return Image.open(target.with_suffix(".png")).convert("RGB")
+        image = Image.open(target.with_suffix(".png")).convert("RGB")
+        difference = ImageChops.difference(image, Image.new("RGB", image.size, "white"))
+        bbox = difference.getbbox()
+        if bbox:
+            left, top, right, bottom = bbox
+            padding = 30
+            return image.crop((max(0, left-padding), max(0, top-padding), min(image.width, right+padding), min(image.height, bottom+padding)))
+        return image
 
 
 def wrap(draw, text, text_font, width):
