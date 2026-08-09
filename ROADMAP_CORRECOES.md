@@ -76,6 +76,7 @@ O C2 é reaberto porque o corte circular, o anel de apoio e a transição civil 
    - emissor direto cooperativo ADS-B;
    - transmissores conhecidos para calibração;
    - reflexão biestática de alvo com canal de referência e vigilância.
+   - [x] Acrescentar `EXP-011` para jamming como emissão direta não cooperativa: preservar captura bruta, medir interceptação/classificação e estimar fonte e trajetória sem equipará-la automaticamente à plataforma portadora.
 4. [ ] Fechar os parâmetros de aquisição e RF:
    - [x] baselines de triagem de 8 MS/s para os dois canais aeronáuticos e 25 MS/s para os canais UHF;
    - [x] I/Q de 16+16 bits, janelas brutas de 10 s e vazões/volumes reproduzidos por `projeto/spectral/verify_c3_acquisition_budget.py`;

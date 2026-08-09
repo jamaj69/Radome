@@ -114,6 +114,7 @@ Este registro é a fonte central para valores quantitativos do projeto. Uma entr
 | EXP-008 | Protocolo de reflexão biestática | canais simultâneos de referência e vigilância | — | Proposto | `07_passive_radar.tex`; `DECISIONS.md` ADR-011 | Radar passivo | Pd/Pfa e erros atraso–Doppler contra alvo controlado ou rastreado |
 | EXP-009 | Janela de captura bruta de triagem | 10 | s | Proposto | `spectral/verify_c3_acquisition_budget.py` | Dados/experimentos | Ajustar por protocolo após medir ocupação e taxa de eventos |
 | EXP-010 | Alturas de triagem para horizonte | estação 1000; aeronave 10000 | m | Proposto | `spectral/verify_c3_acquisition_budget.py` | Sistemas/sítio | Substituir por terreno, sítios e trajetória reais |
+| EXP-011 | Protocolo de emissão não cooperativa/jamming | potência, ocupação espectral, AOA, timestamp e FDOA/Doppler por face/nó | — | Proposto | `07_passive_radar.tex`; `DECISIONS.md` ADR-017 | RF/experimentos | Localizar a fonte de radiação e estimar trajetória; não equiparar automaticamente jammer e aeronave |
 
 ## Resultado da revisão C0
 

@@ -143,3 +143,13 @@
 - **Consequência arquitetural:** proteção e continuidade não dependem de invisibilidade visual ou ausência de eco. Dependem de operação sem transmissão própria, distribuição e redundância entre nós, segurança física/cibernética, manutenção modular, isolamento de dados e recuperação após perda de uma estação.
 - **Valor da passividade:** mesmo com o sítio catalogado, a ausência de iluminação RF própria reduz a informação disponível sobre atividade, modo de operação, cobertura instantânea e dados coletados.
 - **Validação:** exercícios de perda/degradação de nó, análise de continuidade da cobertura, inventário de assinaturas ópticas/térmicas/RF e revisão periódica do modelo de ameaça.
+
+## ADR-017 — Jamming como fonte não cooperativa observável
+
+- **Data:** 9 de agosto de 2026
+- **Estado:** premissa arquitetural; desempenho a validar por classe de sinal
+- **Decisão:** tratar energia de jamming recebida não apenas como interferência a suprimir, mas também como emissão direta não cooperativa a detectar, classificar, associar e geolocalizar por múltiplas faces e nós.
+- **Observáveis:** potência e ocupação espectral, AOA, timestamp, TDOA quando a forma de onda permitir e FDOA/Doppler. Estados sucessivos alimentam a estimativa de posição e vetor de movimento do centro de emissão.
+- **Vantagem passiva:** maior potência, largura de banda ou ciclo de trabalho empregados contra radares ativos fornecem maior energia direta ao receptor passivo, aumentando a observabilidade eletromagnética da fonte dentro das faixas e da faixa dinâmica cobertas.
+- **Limite:** não equiparar automaticamente fonte de jamming e aeronave. Emissores direcionais, coerentes, rebocados, descartáveis, distribuídos ou stand-off podem saturar canais, criar falsos ângulos e deslocar o centro aparente de emissão.
+- **Validação:** `EXP-011` deve medir probabilidade de interceptação, classificação, saturação/bloqueio, erros AOA/TDOA/FDOA e consistência de trajetória, preservando captura bruta anterior à supressão de interferência.

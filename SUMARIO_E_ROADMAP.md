@@ -20,6 +20,8 @@ A ADR-015 acrescenta duas hipóteses controladas. No eixo custo--desempenho, ant
 
 A ADR-016 estabelece como premissa permanente que todos os sítios serão eventualmente localizados e cartografados por sensoriamento remoto óptico ou SAR. O projeto não depende de segredo geográfico nem de invisibilidade visual: sua sobrevivência sistêmica decorre de distribuição, redundância, segurança, isolamento e recuperação, enquanto a passividade limita a informação adversária sobre atividade e modo de operação mesmo quando o sítio é conhecido.
 
+A ADR-017 transforma jamming em observável de interesse: energia radiada para degradar radares ativos também é uma emissão direta que as múltiplas faces e os radomes passivos podem interceptar, classificar e fundir por potência, espectro, AOA, timestamp e FDOA/Doppler. Maior energia radiada aumenta a observabilidade da fonte dentro da cobertura e faixa dinâmica do receptor; estados associados ao longo do tempo fornecem posição e vetor do centro de emissão. Jammers off-board, direcionais ou coerentes impedem identificar automaticamente essa fonte como a própria aeronave e constituem casos explícitos do protocolo `EXP-011`.
+
 ## 2. Mapa compacto do sistema
 
 ```mermaid
