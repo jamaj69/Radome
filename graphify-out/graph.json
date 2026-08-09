@@ -172,7 +172,7 @@
       "label": "font()",
       "file_type": "code",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L68",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_font",
       "community": 52,
@@ -183,7 +183,7 @@
       "label": "source_for()",
       "file_type": "code",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L73",
+      "source_location": "L85",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_source_for",
       "community": 52,
@@ -194,7 +194,7 @@
       "label": "load_image()",
       "file_type": "code",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L81",
+      "source_location": "L93",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_load_image",
       "community": 52,
@@ -205,7 +205,7 @@
       "label": "wrap()",
       "file_type": "code",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L97",
+      "source_location": "L109",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_wrap",
       "community": 52,
@@ -216,12 +216,23 @@
       "label": "draw_label()",
       "file_type": "code",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L111",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_draw_label",
       "community": 52,
       "community_name": "localize_figures.py",
       "norm_label": "draw_label()"
+    },
+    {
+      "label": "draw_text_in_block()",
+      "file_type": "code",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L172",
+      "_origin": "ast",
+      "id": "projeto_figures_localize_figures_draw_text_in_block",
+      "community": 52,
+      "community_name": "localize_figures.py",
+      "norm_label": "draw_text_in_block()"
     },
     {
       "label": "Build language-specific publication figures from the common geometry masters.",
@@ -238,12 +249,23 @@
       "label": "Draw a padded box whose centre follows the centre of the rendered glyphs.",
       "file_type": "rationale",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L112",
+      "source_location": "L124",
       "_origin": "ast",
-      "id": "projeto_figures_localize_figures_rationale_112",
+      "id": "projeto_figures_localize_figures_rationale_124",
       "community": 52,
       "community_name": "localize_figures.py",
       "norm_label": "draw a padded box whose centre follows the centre of the rendered glyphs."
+    },
+    {
+      "label": "Fit and centre text directly inside an existing coloured diagram block.",
+      "file_type": "rationale",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L173",
+      "_origin": "ast",
+      "id": "projeto_figures_localize_figures_rationale_173",
+      "community": 52,
+      "community_name": "localize_figures.py",
+      "norm_label": "fit and centre text directly inside an existing coloured diagram block."
     },
     {
       "label": "render_aircraft_two_radomes_blender.py",
@@ -5562,8 +5584,8 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "review_cross_search_signals",
-      "community": 49,
-      "community_name": "Cross-search signals",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "cross-search signals"
     },
     {
@@ -5573,8 +5595,8 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "review_repeat_hit_papers",
-      "community": 49,
-      "community_name": "Cross-search signals",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "repeat-hit papers"
     },
     {
@@ -5584,8 +5606,8 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "review_citation_velocity",
-      "community": 49,
-      "community_name": "Cross-search signals",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "citation velocity"
     },
     {
@@ -5617,8 +5639,8 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "review_sub_area_guide_1_broadband_antenna_architectures_and_radome_face_placement",
-      "community": 36,
-      "community_name": "Sub-area guide 1: broadband antenna architectures and radome-face placement",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "sub-area guide 1: broadband antenna architectures and radome-face placement"
     },
     {
@@ -5628,8 +5650,8 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "review_what_the_research_shows",
-      "community": 36,
-      "community_name": "Sub-area guide 1: broadband antenna architectures and radome-face placement",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "what the research shows"
     },
     {
@@ -5639,8 +5661,8 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "review_key_papers",
-      "community": 36,
-      "community_name": "Sub-area guide 1: broadband antenna architectures and radome-face placement",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "key papers"
     },
     {
@@ -5650,8 +5672,8 @@
       "source_location": "L134",
       "_origin": "ast",
       "id": "review_search_terms",
-      "community": 36,
-      "community_name": "Sub-area guide 1: broadband antenna architectures and radome-face placement",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "search terms"
     },
     {
@@ -5661,8 +5683,8 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "review_boolean_searches",
-      "community": 36,
-      "community_name": "Sub-area guide 1: broadband antenna architectures and radome-face placement",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "boolean searches"
     },
     {
@@ -5672,8 +5694,8 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "review_sub_area_guide_2_electromagnetic_effects_and_functional_radome_technologies",
-      "community": 41,
-      "community_name": "Sub-area guide 2: electromagnetic effects and functional radome technologies",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "sub-area guide 2: electromagnetic effects and functional radome technologies"
     },
     {
@@ -5683,8 +5705,8 @@
       "source_location": "L154",
       "_origin": "ast",
       "id": "review_what_the_research_shows_154",
-      "community": 41,
-      "community_name": "Sub-area guide 2: electromagnetic effects and functional radome technologies",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "what the research shows"
     },
     {
@@ -5694,8 +5716,8 @@
       "source_location": "L160",
       "_origin": "ast",
       "id": "review_key_papers_160",
-      "community": 41,
-      "community_name": "Sub-area guide 2: electromagnetic effects and functional radome technologies",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "key papers"
     },
     {
@@ -5705,8 +5727,8 @@
       "source_location": "L168",
       "_origin": "ast",
       "id": "review_search_terms_168",
-      "community": 41,
-      "community_name": "Sub-area guide 2: electromagnetic effects and functional radome technologies",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "search terms"
     },
     {
@@ -5716,8 +5738,8 @@
       "source_location": "L172",
       "_origin": "ast",
       "id": "review_boolean_searches_172",
-      "community": 41,
-      "community_name": "Sub-area guide 2: electromagnetic effects and functional radome technologies",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "boolean searches"
     },
     {
@@ -5727,8 +5749,8 @@
       "source_location": "L188",
       "_origin": "ast",
       "id": "review_sub_area_guide_3_passive_emitter_detection_direction_finding_and_localization",
-      "community": 45,
-      "community_name": "Sub-area guide 3: passive emitter detection, direction finding, and localization",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "sub-area guide 3: passive emitter detection, direction finding, and localization"
     },
     {
@@ -5738,8 +5760,8 @@
       "source_location": "L190",
       "_origin": "ast",
       "id": "review_what_the_research_shows_190",
-      "community": 45,
-      "community_name": "Sub-area guide 3: passive emitter detection, direction finding, and localization",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "what the research shows"
     },
     {
@@ -5749,8 +5771,8 @@
       "source_location": "L196",
       "_origin": "ast",
       "id": "review_key_papers_196",
-      "community": 45,
-      "community_name": "Sub-area guide 3: passive emitter detection, direction finding, and localization",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "key papers"
     },
     {
@@ -5760,8 +5782,8 @@
       "source_location": "L204",
       "_origin": "ast",
       "id": "review_search_terms_204",
-      "community": 45,
-      "community_name": "Sub-area guide 3: passive emitter detection, direction finding, and localization",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "search terms"
     },
     {
@@ -5771,8 +5793,8 @@
       "source_location": "L208",
       "_origin": "ast",
       "id": "review_boolean_searches_208",
-      "community": 45,
-      "community_name": "Sub-area guide 3: passive emitter detection, direction finding, and localization",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "boolean searches"
     },
     {
@@ -5782,8 +5804,8 @@
       "source_location": "L222",
       "_origin": "ast",
       "id": "review_sub_area_guide_4_clandestine_anomalous_and_deviated_signal_identification",
-      "community": 46,
-      "community_name": "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "sub-area guide 4: clandestine, anomalous, and deviated-signal identification"
     },
     {
@@ -5793,8 +5815,8 @@
       "source_location": "L224",
       "_origin": "ast",
       "id": "review_what_the_research_shows_224",
-      "community": 46,
-      "community_name": "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "what the research shows"
     },
     {
@@ -5804,8 +5826,8 @@
       "source_location": "L230",
       "_origin": "ast",
       "id": "review_key_papers_230",
-      "community": 46,
-      "community_name": "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "key papers"
     },
     {
@@ -5815,8 +5837,8 @@
       "source_location": "L238",
       "_origin": "ast",
       "id": "review_search_terms_238",
-      "community": 46,
-      "community_name": "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "search terms"
     },
     {
@@ -5826,8 +5848,8 @@
       "source_location": "L242",
       "_origin": "ast",
       "id": "review_boolean_searches_242",
-      "community": 46,
-      "community_name": "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "boolean searches"
     },
     {
@@ -5837,8 +5859,8 @@
       "source_location": "L261",
       "_origin": "ast",
       "id": "review_sub_area_guide_5_integration_calibration_and_operational_validation",
-      "community": 48,
-      "community_name": "Sub-area guide 5: integration, calibration, and operational validation",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "sub-area guide 5: integration, calibration, and operational validation"
     },
     {
@@ -5848,8 +5870,8 @@
       "source_location": "L263",
       "_origin": "ast",
       "id": "review_what_the_research_shows_263",
-      "community": 48,
-      "community_name": "Sub-area guide 5: integration, calibration, and operational validation",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "what the research shows"
     },
     {
@@ -5859,8 +5881,8 @@
       "source_location": "L269",
       "_origin": "ast",
       "id": "review_key_papers_269",
-      "community": 48,
-      "community_name": "Sub-area guide 5: integration, calibration, and operational validation",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "key papers"
     },
     {
@@ -5870,8 +5892,8 @@
       "source_location": "L277",
       "_origin": "ast",
       "id": "review_search_terms_277",
-      "community": 48,
-      "community_name": "Sub-area guide 5: integration, calibration, and operational validation",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "search terms"
     },
     {
@@ -5881,8 +5903,8 @@
       "source_location": "L281",
       "_origin": "ast",
       "id": "review_boolean_searches_281",
-      "community": 48,
-      "community_name": "Sub-area guide 5: integration, calibration, and operational validation",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "boolean searches"
     },
     {
@@ -5892,8 +5914,8 @@
       "source_location": "L295",
       "_origin": "ast",
       "id": "review_key_research_groups",
-      "community": 33,
-      "community_name": "Key research groups",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "key research groups"
     },
     {
@@ -5903,8 +5925,8 @@
       "source_location": "L299",
       "_origin": "ast",
       "id": "review_i_liberal_d_caratelli_and_a_yarovoy",
-      "community": 33,
-      "community_name": "Key research groups",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "i. liberal, d. caratelli, and a. yarovoy"
     },
     {
@@ -5914,8 +5936,8 @@
       "source_location": "L303",
       "_origin": "ast",
       "id": "review_f_costa_a_monorchio_and_g_manara",
-      "community": 33,
-      "community_name": "Key research groups",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "f. costa, a. monorchio, and g. manara"
     },
     {
@@ -5925,8 +5947,8 @@
       "source_location": "L307",
       "_origin": "ast",
       "id": "review_zhongxiang_shen_and_collaborators",
-      "community": 33,
-      "community_name": "Key research groups",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "zhongxiang shen and collaborators"
     },
     {
@@ -5936,8 +5958,8 @@
       "source_location": "L311",
       "_origin": "ast",
       "id": "review_x_sheng_ning_liu_and_collaborators",
-      "community": 33,
-      "community_name": "Key research groups",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "x. sheng, ning liu, and collaborators"
     },
     {
@@ -5947,8 +5969,8 @@
       "source_location": "L315",
       "_origin": "ast",
       "id": "review_m_sorecau_e_sorecau_p_bechet_and_collaborators",
-      "community": 33,
-      "community_name": "Key research groups",
+      "community": 13,
+      "community_name": "review.md",
       "norm_label": "m. sorecau, e. sorecau, p. bechet, and collaborators"
     },
     {
@@ -6287,7 +6309,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L111",
+      "source_location": "L123",
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_figures_localize_figures",
@@ -6298,7 +6320,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L68",
+      "source_location": "L172",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_figures_localize_figures",
+      "target": "projeto_figures_localize_figures_draw_text_in_block",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L80",
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_figures_localize_figures",
@@ -6309,7 +6342,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L81",
+      "source_location": "L93",
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_figures_localize_figures",
@@ -6320,7 +6353,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L73",
+      "source_location": "L85",
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_figures_localize_figures",
@@ -6331,7 +6364,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L97",
+      "source_location": "L109",
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_figures_localize_figures",
@@ -6354,7 +6387,19 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L115",
+      "source_location": "L182",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_figures_localize_figures_draw_text_in_block",
+      "target": "projeto_figures_localize_figures_font",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L127",
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_figures_localize_figures_draw_label",
@@ -6365,11 +6410,22 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L112",
+      "source_location": "L124",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "projeto_figures_localize_figures_rationale_112",
+      "source": "projeto_figures_localize_figures_rationale_124",
       "target": "projeto_figures_localize_figures_draw_label",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/figures/localize_figures.py",
+      "source_location": "L173",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_figures_localize_figures_rationale_173",
+      "target": "projeto_figures_localize_figures_draw_text_in_block",
       "confidence_score": 1.0
     },
     {
@@ -12687,5 +12743,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "92c6b1ac64d8181e586f0fb7e0ea9180f71559ab"
+  "built_at_commit": "59911ddedf783524d046583906002f246a359eb2"
 }

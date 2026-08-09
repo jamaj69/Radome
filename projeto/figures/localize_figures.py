@@ -52,16 +52,28 @@ KEYS = {
 ANNOTATIONS = {
     "fig01": [(.50,.07,"source / target","fonte / alvo"),(.17,.38,"node A","nó A"),(.50,.43,"node B","nó B"),(.83,.38,"node C","nó C"),(.50,.88,"distributed fusion","fusão distribuída")],
     "fig02": [(.29,.65,"HF","HF"),(.42,.78,"VHF","VHF"),(.64,.69,"UHF","UHF"),(.70,.37,"L/S/C","L/S/C"),(.40,.28,"X/Ku/Ka","X/Ku/Ka"),(.50,.52,"face core","núcleo da face")],
-    "fig03": [(.24,.43,"RF aperture","abertura RF"),(.73,.15,"outer skin","pele externa"),(.73,.265,"low-loss core","núcleo de baixa perda"),(.73,.38,"inner skin","pele interna"),(.73,.49,"RF aperture / PCB","abertura RF / PCB"),(.73,.605,"shielded band modules","módulos blindados por faixa"),(.61,.73,"ADC A","ADC A"),(.82,.73,"ADC B","ADC B"),(.61,.83,"ASIC A","ASIC A"),(.82,.83,"ASIC B","ASIC B")],
+    "fig03": [(.252,.530,"RF aperture","abertura RF"),(.700,.152,"outer skin","pele externa"),(.700,.265,"low-loss core","núcleo de baixa perda"),(.700,.378,"inner skin","pele interna"),(.700,.491,"RF aperture / PCB","abertura RF / PCB"),(.700,.604,"shielded band modules","módulos blindados por faixa"),(.593,.739,"ADC A","ADC A"),(.806,.739,"ADC B","ADC B"),(.593,.829,"ASIC A","ASIC A"),(.806,.829,"ASIC B","ASIC B")],
     "fig04": [(.18,.78,"HF","HF"),(.27,.66,"VHF","VHF"),(.51,.54,"UHF","UHF"),(.57,.42,"aviation","aeronáutica"),(.68,.30,"L/S/C","L/S/C"),(.82,.18,"X/Ku","X/Ku"),(.89,.07,"K/Ka","K/Ka")],
-    "fig05": [(.12,.24,"VHF channel","canal VHF"),(.12,.41,"UHF channel","canal UHF"),(.42,.33,"independent bands","faixas independentes"),(.79,.33,"invalid synthesis","síntese inválida"),(.12,.68,"port X","porta X"),(.12,.86,"port Y","porta Y"),(.42,.77,"coherent ADCs","ADCs coerentes"),(.79,.77,"Jones / Stokes / circular","Jones / Stokes / circular")],
-    "fig06": [(.08,.33,"antenna","antena"),(.22,.33,"filter","filtro"),(.35,.33,"LNA","LNA"),(.49,.33,"converter","conversor"),(.63,.33,"ADC","ADC"),(.77,.33,"FPGA","FPGA"),(.91,.33,"events","eventos"),(.25,.75,"calibration","calibração"),(.52,.75,"clock","relógio"),(.80,.75,"control","controle")],
-    "fig07": [(.13,.23,"GNSS antenna","antena GNSS"),(.13,.75,"GNSS receiver","receptor GNSS"),(.40,.54,"1 PPS + 10 MHz","1 PPS + 10 MHz"),(.68,.28,"distribution","distribuição"),(.68,.72,"HW timestamp","timestamp HW"),(.89,.49,"RF-delay cal.","calibração atraso RF")],
+    "fig05": [(.123,.196,"VHF channel","canal VHF"),(.123,.376,"UHF channel","canal UHF"),(.421,.279,"independent bands","faixas independentes"),(.779,.279,"invalid synthesis","síntese inválida"),(.123,.651,"port X","porta X"),(.123,.830,"port Y","porta Y"),(.421,.734,"coherent ADCs","ADCs coerentes"),(.779,.734,"Jones / Stokes / circular","Jones / Stokes / circular")],
+    "fig06": [(.084,.331,"antenna","antena"),(.218,.331,"filter","filtro"),(.351,.331,"LNA","LNA"),(.484,.331,"converter","conversor"),(.618,.331,"ADC","ADC"),(.751,.331,"FPGA","FPGA"),(.884,.331,"events","eventos"),(.221,.750,"calibration","calibração"),(.488,.750,"clock","relógio"),(.755,.750,"control","controle")],
+    "fig07": [(.130,.224,"GNSS antenna","antena GNSS"),(.130,.748,"GNSS receiver","receptor GNSS"),(.402,.486,"1 PPS + 10 MHz","1 PPS + 10 MHz"),(.673,.252,"distribution","distribuição"),(.673,.720,"HW timestamp","timestamp HW"),(.885,.486,"RF-delay cal.","calibração atraso RF")],
     "fig08": [(.13,.78,"illuminator","iluminador"),(.50,.12,"target","alvo"),(.80,.82,"receiver","receptor"),(.72,.38,"receiver","receptor"),(.50,.88,"receiver","receptor")],
-    "fig09": [(.09,.25,"reference","referência"),(.09,.74,"surveillance","vigilância"),(.28,.50,"alignment","alinhamento"),(.43,.50,"detection","detecção"),(.58,.50,"association","associação"),(.73,.50,"estimation","estimação"),(.88,.50,"tracking","rastreamento"),(.48,.83,"calibration","calibração"),(.78,.83,"quality control","controle de qualidade")],
-    "fig10": [(.14,.14,"concept","conceito"),(.29,.32,"simulation","simulação"),(.47,.50,"bench prototype","protótipo de bancada"),(.68,.67,"field demonstrator","demonstrador de campo"),(.87,.83,"qualification","qualificação")],
+    "fig09": [(.097,.260,"reference","referência"),(.097,.739,"surveillance","vigilância"),(.281,.491,"alignment","alinhamento"),(.425,.491,"detection","detecção"),(.568,.491,"association","associação"),(.712,.491,"estimation","estimação"),(.856,.491,"tracking","rastreamento"),(.440,.831,"calibration","calibração"),(.728,.831,"quality control","controle de qualidade")],
+    "fig10": [(.123,.171,"concept","conceito"),(.274,.330,"simulation","simulação"),(.447,.490,"bench prototype","protótipo de bancada"),(.640,.650,"field demonstrator","demonstrador de campo"),(.825,.810,"qualification","qualificação")],
     "fig11": [(.23,.39,"dielectric RF face","face RF dielétrica"),(.49,.52,"normal boom","boom normal"),(.60,.43,"UHF Yagi — 135°","Yagi UHF — 135°"),(.56,.61,"VHF Yagi — 45°","Yagi VHF — 45°"),(.82,.10,"outer skin","pele externa"),(.82,.22,"low-loss core","núcleo de baixa perda"),(.82,.34,"inner skin","pele interna"),(.82,.465,"RF aperture / PCB","abertura RF / PCB"),(.82,.59,"shielding","blindagem"),(.82,.71,"face electronics","eletrônica da face"),(.75,.87,"VHF channel","canal VHF"),(.89,.87,"UHF channel","canal UHF")],
     "fig15": [(.08,.57,"node A","nó A"),(.92,.57,"node B","nó B"),(.50,.18,"aircraft","aeronave"),(.50,.62,"nominal 100 km baseline","linha de base nominal de 100 km"),(.29,.38,"path A / AOA cone","caminho A / cone AOA"),(.71,.38,"path B / AOA cone","caminho B / cone AOA")],
+}
+
+# Text widths available inside the coloured functional blocks, expressed as a
+# fraction of the geometry-master width.  These diagrams must use the coloured
+# block itself as the label box; adding a second white box can overflow it.
+INSIDE_BLOCK_WIDTHS = {
+    "fig03": [.14, .36, .36, .36, .36, .36, .12, .12, .12, .12],
+    "fig05": [.13, .13, .16, .23, .13, .13, .16, .23],
+    "fig06": [.075, .075, .075, .075, .075, .075, .075, .085, .085, .085],
+    "fig07": [.12, .12, .12, .12, .12, .095],
+    "fig09": [.095, .095, .085, .085, .085, .085, .085, .12, .12],
+    "fig10": [.12, .20, .25, .24, .20],
 }
 
 
@@ -157,6 +169,28 @@ def draw_label(draw, centre, text, text_font, canvas_size):
     )
 
 
+def draw_text_in_block(draw, centre, text, text_font, canvas_size, width_fraction):
+    """Fit and centre text directly inside an existing coloured diagram block."""
+    canvas_width, _ = canvas_size
+    available_width = canvas_width * width_fraction
+    candidate = text_font
+    minimum_size = max(12, round(text_font.size * .62))
+    while candidate.size > minimum_size:
+        bbox = draw.textbbox((0, 0), text, font=candidate)
+        if bbox[2] - bbox[0] <= available_width:
+            break
+        candidate = font(candidate.size - 1, True)
+
+    bbox = draw.textbbox((0, 0), text, font=candidate)
+    text_width = bbox[2] - bbox[0]
+    text_height = bbox[3] - bbox[1]
+    cx, cy = centre
+    # Centre the visible ink, compensating for the font's left/top bearings.
+    origin_x = cx - text_width / 2 - bbox[0]
+    origin_y = cy - text_height / 2 - bbox[1]
+    draw.text((origin_x, origin_y), text, font=candidate, fill="#263746")
+
+
 for lang, index in (("en", 0), ("pt-BR", 1)):
     destination = ROOT / lang
     destination.mkdir(exist_ok=True)
@@ -168,15 +202,26 @@ for lang, index in (("en", 0), ("pt-BR", 1)):
         key_font = font(max(18, width // 58))
         scratch = ImageDraw.Draw(image)
         annotation_font = font(max(18, width // 62), True)
-        for x, y, english, portuguese in ANNOTATIONS.get(prefix, []):
+        for annotation_index, (x, y, english, portuguese) in enumerate(ANNOTATIONS.get(prefix, [])):
             label = english if index == 0 else portuguese
-            draw_label(
-                scratch,
-                (width * x, height * y),
-                label,
-                annotation_font,
-                image.size,
-            )
+            block_widths = INSIDE_BLOCK_WIDTHS.get(prefix)
+            if block_widths:
+                draw_text_in_block(
+                    scratch,
+                    (width * x, height * y),
+                    label,
+                    annotation_font,
+                    image.size,
+                    block_widths[annotation_index],
+                )
+            else:
+                draw_label(
+                    scratch,
+                    (width * x, height * y),
+                    label,
+                    annotation_font,
+                    image.size,
+                )
         key_lines = wrap(scratch, KEYS[prefix][index], key_font, width - 100)
         panel_height = max(150, 65 + len(key_lines) * (key_font.size + 8))
         output = Image.new("RGB", (width, height + panel_height), "white")

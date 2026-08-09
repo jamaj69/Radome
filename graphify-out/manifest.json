@@ -335,177 +335,177 @@
     "semantic_hash": ""
   },
   "projeto/radome-en.pdf": {
-    "mtime": 1786252299.9511337,
-    "ast_hash": "b2910d5acf7f9fa2af27a0b95591ce78",
+    "mtime": 1786252935.5883636,
+    "ast_hash": "e753a804e66338ef85c6073371e77edd",
     "semantic_hash": ""
   },
   "projeto/radome-pt-br.pdf": {
-    "mtime": 1786252301.2871706,
-    "ast_hash": "ea0d216bfd9a337d54e002c651120dbd",
+    "mtime": 1786252937.0764039,
+    "ast_hash": "fa47a1a02b925418c52bd147de20ada2",
     "semantic_hash": ""
   },
   "projeto/figures/localize_figures.py": {
-    "mtime": 1786252256.7219386,
-    "ast_hash": "e402651feef4fdf7b767d3644e430289",
+    "mtime": 1786252865.89048,
+    "ast_hash": "62d8a2b573fe5319b3a686a9bafeef49",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig01_arquitetura_rede.png": {
-    "mtime": 1786252260.3020377,
+    "mtime": 1786252870.3306,
     "ast_hash": "0b69e3a4bdd1665392bc09a9337a24ae",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig02_zonamento_radome.png": {
-    "mtime": 1786252260.498043,
+    "mtime": 1786252870.5386055,
     "ast_hash": "41f6acb86fda92623c262e0b0d5d9e09",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig03_modulo_face.png": {
-    "mtime": 1786252260.7340496,
-    "ast_hash": "86d7aa39bb6fb75cd0e268b8bf578697",
+    "mtime": 1786252870.774612,
+    "ast_hash": "769278bf3f153e2ad552ae19e1bef2dd",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig04_particionamento_espectro.png": {
-    "mtime": 1786252260.8900537,
+    "mtime": 1786252870.9386163,
     "ast_hash": "63f42a3ca4ac556a995f14eb1ee94ecd",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig05_polarimetria.png": {
-    "mtime": 1786252261.1140602,
-    "ast_hash": "863fa0c62cb41ab1287d015f6031011e",
+    "mtime": 1786252871.1666226,
+    "ast_hash": "6901626fd4d97242121621c359ffea87",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig06_cadeia_rf.png": {
-    "mtime": 1786252261.2900648,
-    "ast_hash": "68bcff20c9a3dfbbffb7f7faf3f08108",
+    "mtime": 1786252871.3426273,
+    "ast_hash": "35cfd0698b2f902d8e07cbdc202f4caa",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig07_sincronizacao.png": {
-    "mtime": 1786252261.5220714,
-    "ast_hash": "6b4bd9ee966b642f083869719878b939",
+    "mtime": 1786252871.586634,
+    "ast_hash": "2f94509bf2432ccd71fe64a033387bcd",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig08_geometria_bistatica.png": {
-    "mtime": 1786252261.7820785,
+    "mtime": 1786252871.8546412,
     "ast_hash": "527b2226c5315ca9a382109fa93bdd21",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig09_fluxo_processamento.png": {
-    "mtime": 1786252261.9940844,
-    "ast_hash": "f1c9c6856d6985e922edae329bccaae2",
+    "mtime": 1786252872.070647,
+    "ast_hash": "c6453763cefaa93b5a29792138e43fc6",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig10_roteiro.png": {
-    "mtime": 1786252262.1700892,
-    "ast_hash": "e2c0ee7429ab49bd1ab44d97a155f1e7",
+    "mtime": 1786252872.254652,
+    "ast_hash": "10d3d868097aecf189f7d80e3b362e79",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig11_face_yagi_camadas.png": {
-    "mtime": 1786252262.662103,
+    "mtime": 1786252872.7826662,
     "ast_hash": "23482aac509c38824564b97c62a82a59",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig12_radome_3d_explodida.png": {
-    "mtime": 1786252262.8221073,
+    "mtime": 1786252872.954671,
     "ast_hash": "f7c8b74ca81da8b4cbbeeea76f914f2e",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig13_radome_blender.png": {
-    "mtime": 1786252265.7941895,
+    "mtime": 1786252876.0947556,
     "ast_hash": "2060178fb21174388b32f685f555d40d",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig14_radome_interior_blender.png": {
-    "mtime": 1786252268.3782609,
+    "mtime": 1786252878.8548303,
     "ast_hash": "339bf19514f7dc511e5b7479f989c505",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig15_aircraft_two_radomes_100km.png": {
-    "mtime": 1786252272.394372,
+    "mtime": 1786252883.1909475,
     "ast_hash": "1e992025eb8e4dc991ce569c9ceff2fa",
     "semantic_hash": ""
   },
   "projeto/figures/en/fig16_tetrahedral_face_cluster.png": {
-    "mtime": 1786252274.4944298,
+    "mtime": 1786252885.4550087,
     "ast_hash": "f115fd5ba7efa39b6527ba1c7d9aa2e5",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig01_arquitetura_rede.png": {
-    "mtime": 1786252274.6984355,
+    "mtime": 1786252885.6710145,
     "ast_hash": "d684c98ea41c93a9e6242d8d457f4904",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig02_zonamento_radome.png": {
-    "mtime": 1786252274.894441,
+    "mtime": 1786252885.8830202,
     "ast_hash": "cfd92ed3a6de1ddb9cba3d38cd877527",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig03_modulo_face.png": {
-    "mtime": 1786252275.1384478,
-    "ast_hash": "9b728031cd0d864b0e6f2eb4b968833f",
+    "mtime": 1786252886.135027,
+    "ast_hash": "2d1a82de041f1f1b6554e4ba04610252",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig04_particionamento_espectro.png": {
-    "mtime": 1786252275.3024523,
+    "mtime": 1786252886.3070316,
     "ast_hash": "b6e7f299258e7646f5bd427d5c2224d5",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig05_polarimetria.png": {
-    "mtime": 1786252275.5304587,
-    "ast_hash": "0d6cde2acf13af4ac539fbc33532a9db",
+    "mtime": 1786252886.539038,
+    "ast_hash": "72eae9aa8306dadb424b72c6b9f95705",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig06_cadeia_rf.png": {
-    "mtime": 1786252275.718464,
-    "ast_hash": "399b73197635c4b81d6162db7e929544",
+    "mtime": 1786252886.731043,
+    "ast_hash": "830592b49d7137a6abe2826404dfd69b",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig07_sincronizacao.png": {
-    "mtime": 1786252275.9664707,
-    "ast_hash": "cc5e25ef2ea9ae3f38d3bb9b9aa0f798",
+    "mtime": 1786252886.9910502,
+    "ast_hash": "1357ffd982bdc82dbe2ca707f2d9925b",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig08_geometria_bistatica.png": {
-    "mtime": 1786252276.2384782,
+    "mtime": 1786252887.2750578,
     "ast_hash": "512a28f81e35d8031bf2b7d62f5a4163",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig09_fluxo_processamento.png": {
-    "mtime": 1786252276.4624844,
-    "ast_hash": "c1c39fa78805892a24af42ccb1907438",
+    "mtime": 1786252887.5110643,
+    "ast_hash": "938663d427af6489b2ff7d43a6dd54d4",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig10_roteiro.png": {
-    "mtime": 1786252276.6504896,
-    "ast_hash": "cd8da0b6ae6d812ca3c83fe2af7c0c6e",
+    "mtime": 1786252887.6990693,
+    "ast_hash": "2deed639f6f6209685bdafacea7d75c2",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig11_face_yagi_camadas.png": {
-    "mtime": 1786252277.1785042,
+    "mtime": 1786252888.2310836,
     "ast_hash": "e6a6b30de2e0caf4b715b36576314121",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig12_radome_3d_explodida.png": {
-    "mtime": 1786252277.3425088,
+    "mtime": 1786252888.3990881,
     "ast_hash": "7a27027a67c588f0cc637fc3e3699ea1",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig13_radome_blender.png": {
-    "mtime": 1786252280.394593,
+    "mtime": 1786252891.5431733,
     "ast_hash": "83ab7fe7fb812e46b3fd1f7a7215cc9a",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig14_radome_interior_blender.png": {
-    "mtime": 1786252283.0506666,
+    "mtime": 1786252894.3272483,
     "ast_hash": "562bbdeafbf9440f76c9ac133f4c1a7c",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig15_aircraft_two_radomes_100km.png": {
-    "mtime": 1786252287.050777,
+    "mtime": 1786252898.603364,
     "ast_hash": "5ea0d4e99026666a86480b61a3deb956",
     "semantic_hash": ""
   },
   "projeto/figures/pt-BR/fig16_tetrahedral_face_cluster.png": {
-    "mtime": 1786252289.1748357,
+    "mtime": 1786252900.863425,
     "ast_hash": "b505e9f2057b6c9512f67aecb5c3d28f",
     "semantic_hash": ""
   },
