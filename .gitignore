@@ -29,3 +29,6 @@ projeto/figures/**/build/
 # Graphify transient cache and dated rebuild backups
 graphify-out/cache/
 graphify-out/20??-??-??/
+
+# Local scratch and cache area
+tmp/

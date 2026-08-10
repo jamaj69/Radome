@@ -1,16 +1,16 @@
-# Graph Report - Radome  (2026-08-09)
+# Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 31 files · ~479,186 words
+- 33 files · ~472,375 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 566 nodes · 596 edges · 53 communities (48 shown, 5 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
+- 571 nodes · 610 edges · 48 communities (46 shown, 2 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3bfda643`
+- Built from commit: `09b444d4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -32,7 +32,6 @@
 - Start here: priority reading order
 - RADOME — Registro central de parâmetros
 - verify_radome_geometry.py
-- render_radome_blender.py
 - RADOME Project / Projeto RADOME
 - English
 - RADOME — Registro de decisões de arquitetura
@@ -48,7 +47,6 @@
 - Sub-area guide 5: integration, calibration, and operational validation
 - Key research groups
 - Blender Baseline: 35S Radome and Concrete Base
-- generate_updated_figures.py
 - Sub-area guide 1: broadband antenna architectures and radome-face placement
 - 17. Recalibração constante do relógio
 - RADOME V3
@@ -57,14 +55,12 @@
 - Sub-area guide 2: electromagnetic effects and functional radome technologies
 - build.sh
 - 2. Geometria fundamental
-- generate_fig12_3d.py
 - Sub-area guide 3: passive emitter detection, direction finding, and localization
 - Sub-area guide 4: clandestine, anomalous, and deviated-signal identification
 - Cross-search signals
 - Sub-area guide 5: integration, calibration, and operational validation
 - Cross-search signals
 - verify_tetrahedral_face_geometry.py
-- render_tetrahedral_face_cluster_blender.py
 - localize_figures.py
 
 ## God Nodes (most connected - your core abstractions)
@@ -80,13 +76,15 @@
 10. `27. Exemplo operacional` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `save()` --calls--> `build_output()`  [INFERRED]
+  projeto/figures/generate_updated_figures.py → projeto/figures/build_paths.py
 - `select_contiguous_cluster()` --calls--> `face_edge_key()`  [INFERRED]
   projeto/figures/render_tetrahedral_face_cluster_blender.py → projeto/geometry/verify_tetrahedral_face_geometry.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (53 total, 5 thin omitted)
+## Communities (48 total, 2 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -261,21 +259,17 @@ Cohesion: 0.67
 Nodes (3): Citation velocity, Cross-search signals, Repeat-hit papers
 
 ### Community 50 - "verify_tetrahedral_face_geometry.py"
-Cohesion: 0.34
-Nodes (17): add(), centroid(), cross(), dot(), face_edge_key(), length(), main(), midpoint() (+9 more)
-
-### Community 51 - "render_tetrahedral_face_cluster_blender.py"
-Cohesion: 0.24
-Nodes (5): arrow(), cylinder_between(), dot(), Render a contiguous cluster of 2 m tetrahedral radome face modules., select_contiguous_cluster()
+Cohesion: 0.17
+Nodes (22): arrow(), cylinder_between(), dot(), Render a contiguous cluster of 2 m tetrahedral radome face modules., select_contiguous_cluster(), add(), centroid(), cross() (+14 more)
 
 ### Community 52 - "localize_figures.py"
-Cohesion: 0.24
-Nodes (7): draw_label(), draw_text_in_block(), font(), Build language-specific publication figures from the common geometry masters., Draw a padded box whose centre follows the centre of the rendered glyphs., Fit and centre text directly inside an existing coloured diagram block., wrap()
+Cohesion: 0.07
+Nodes (17): Path, build_output(), ensure_build_dir(), Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--10.  Permanent publi, save(), draw_label() (+9 more)
 
 ## Knowledge Gaps
 - **393 isolated node(s):** `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout`, `LaTeX Article Commands` (+388 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -283,7 +277,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
   _High betweenness centrality (0.034) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+  _High betweenness centrality (0.029) - this node is a cross-community bridge._
 - **What connects `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` to the rest of the system?**
   _393 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
