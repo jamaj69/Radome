@@ -1,6 +1,6 @@
 # RADOME session context log
 
-**Updated:** 2026-08-09, America/Belem
+**Updated:** 2026-08-10, America/Sao_Paulo
 **Purpose:** preserve the user-visible chat context across account/session switches. The repository startup protocol in `AGENTS.md` requires reading this file when present.
 
 ## Recovery protocol completed in this session
@@ -11,7 +11,7 @@ The following required files were read before project work:
 2. `README.md`
 3. `SUMARIO_E_ROADMAP.md`
 4. `ROADMAP_CORRECOES.md`
-5. `graphify-out/wiki/SESSION_CONTEXT.md` was absent at startup.
+5. `graphify-out/wiki/SESSION_CONTEXT.md`
 
 Graphify was available through `/home/python/pyenv/bin/python -m graphify` and was used for focused retrieval and updates.
 
@@ -51,6 +51,14 @@ This is a durable log of the chat content visible to the agent. It is not a verb
 27. User required a permanent assumption that potential rivals with remote-sensing capability will map every deployed radome. ADR-016 now treats site coordinates, silhouette and physical presence as eventually known through optical/SAR observation. Security no longer depends on geographic secrecy or visual invisibility; it relies on receive-only operation, distribution, redundancy, physical/cyber protection, modular recovery and continuity after node loss. Passivity remains valuable because a mapped station still does not reveal activity or operating mode through dedicated radar emissions.
 28. User required incorporation of advanced-aircraft jamming: emissions intended to obscure active air-defence radars make their source more observable to passive radomes and can support position/vector estimation. ADR-017 and `EXP-011` now treat jamming as a non-cooperative direct emitter observed through power, spectrum, AOA, timestamps and FDOA/Doppler. The controlled claim preserves the advantage while distinguishing the radiation source from the aircraft when jammers are directional, coherent, towed, expendable, distributed or stand-off.
 29. User requested similar pagination for the two editions. The Brazilian ABNTEX2 master changed from 12 pt/openright/twoside to 11 pt/openany/oneside, removing blank recto-alignment and pre-textual verso pages without altering technical content, margins or figures. The Portuguese edition decreased from 53 to 36 pages, while English remains at 35; ADR-018 accepts the single residual page rather than distort the layout.
+30. User asked for a full render pass including Blender on a machine with a better GPU and requested verification that Blender works well there. Assistant recovered repository context, used Graphify for focused retrieval, ran the figure generators, Chromium SVG-to-PDF export, Blender scene renders and both authoritative LaTeX builds, and confirmed that the real headless Blender render workloads completed successfully despite non-blocking EGL fallback, PulseAudio and thumbnail-cache warnings.
+31. During the render pass, `generate_fig12_3d.py` exposed that the default `python3` resolved to `/usr/bin/python3` with a mismatched Matplotlib installation from `~/.local`, where `mpl_toolkits.mplot3d` failed. The shared interpreter `/home/python/pyenv/bin/python` already had working Matplotlib and `mplot3d`.
+32. User clarified that the default Python environment is `/home/python/pyenv` and requested that `PYTHONENV` point there and that Matplotlib be corrected. Assistant updated workspace defaults and project references to prefer `/home/python/pyenv/bin/python`, added a writable `MPLCONFIGDIR`, and changed the executable shebangs for the geometry and spectral verification scripts.
+33. Assistant updated the tracked workspace file `Radome.code-workspace` to set `python.defaultInterpreterPath` to `/home/python/pyenv/bin/python` and to export `PYTHONENV`, `VIRTUAL_ENV`, `MPLCONFIGDIR` and a `PATH` preferring `/home/python/pyenv/bin`. It also updated the ignored `.vscode/settings.json` locally with matching values for the current machine.
+34. User showed `env | grep PYTHONPATH` returning `PYTHONPATH=/home/python/pyenv/bin`. Assistant identified that as wrong because `PYTHONPATH` should not point to a `bin` directory, then added `PYTHONPATH=""` to the tracked workspace terminal environment and committed that focused follow-up separately.
+35. User requested rerunning all programs. Assistant reran the three Python verification scripts under `/home/python/pyenv/bin/python`, regenerated the common and localized figures, reran Chromium headless SVG export, reran all Blender scripts and rebuilt `radome-en.pdf` and `radome-pt-br.pdf`. The final log scan again found no fatal errors, undefined references or multiply defined labels.
+36. User corrected shell startup files and asked for a final sanity check in a fresh login shell with `env | grep PYTHONPATH` and a Matplotlib `mplot3d` import. Assistant found that the login shell still reported `PYTHONPATH=/home/python/pyenv/bin` and did not have `python` on `PATH`, suggesting another login-shell startup file was still overriding the environment. User then reported an interactive shell prompt showing `(pyenv)` and `PYTHONPATH=/home/python/pyenv`, and stated an intention to restart.
+37. User requested that this session be logged before restarting. Assistant updated this durable context file so the next agent can recover the Python-environment fixes, the full rerun results and the remaining shell-environment caveat.
 
 ## Commits created in this session
 
@@ -66,6 +74,11 @@ All commits below used author `github-copilot[bot] <198982749+github-copilot[bot
 - `e0d1e01 Record C3 session and roadmap status`
 - `c26bd56 Model tetrahedral radome face assembly`
 - `e0889e5 Reserve service core with shallow face cells`
+
+Later environment-fix commits in this session used the local Git identity:
+
+- `962239c Use pyenv Python for project scripts and docs`
+- `5eaf1d4 Clear PYTHONPATH in workspace terminal env`
 
 ## Current technical state
 
@@ -96,6 +109,8 @@ All commits below used author `github-copilot[bot] <198982749+github-copilot[bot
   - bistatic reference plus surveillance: `1600 Mbit/s/node`, `2.00 GB/node/10 s`;
   - screening mutual horizon: `542.3 km` for a 1000 m station and 10000 m aircraft.
 - NF, IP3 and usable dynamic range are intentionally unassigned until measured site RFI and a cascaded component budget exist.
+- The intended shared Python environment for this repository is `/home/python/pyenv`. Project documentation, the tracked workspace file and the executable verification scripts were updated to prefer that interpreter explicitly rather than relying on the system `python3`.
+- The workspace terminal defaults now set `PYTHONENV=/home/python/pyenv`, `VIRTUAL_ENV=/home/python/pyenv`, `MPLCONFIGDIR=/tmp/matplotlib-radome` and a `PATH` preferring `/home/python/pyenv/bin`. `PYTHONPATH` is explicitly cleared in the tracked workspace configuration because the previous values `/home/python/pyenv/bin` and `/home/python/pyenv` were both inappropriate import paths.
 - The superseded projected C2 geometry remains reproducible in `projeto/geometry/verify_radome_geometry.py` for historical comparison.
 - The current ADR-012 source is `projeto/geometry/verify_tetrahedral_face_geometry.py`, which reports:
   - base icosahedron: `V=12`, `E=30`, `F=20`;
@@ -113,9 +128,9 @@ All commits below used author `github-copilot[bot] <198982749+github-copilot[bot
 
 For the C2 and C3 changes:
 
-- `python3 projeto/geometry/verify_radome_geometry.py`
-- `python3 projeto/geometry/verify_tetrahedral_face_geometry.py`
-- `python3 projeto/spectral/verify_c3_acquisition_budget.py`
+- `/home/python/pyenv/bin/python projeto/geometry/verify_radome_geometry.py`
+- `/home/python/pyenv/bin/python projeto/geometry/verify_tetrahedral_face_geometry.py`
+- `/home/python/pyenv/bin/python projeto/spectral/verify_c3_acquisition_budget.py`
 - `blender -b --python render_tetrahedral_face_cluster_blender.py` (run from `projeto/figures/`)
 - Full LaTeX sequence from `projeto/`:
   - `pdflatex -interaction=nonstopmode -halt-on-error projetov1.tex`
@@ -124,6 +139,36 @@ For the C2 and C3 changes:
   - `pdflatex -interaction=nonstopmode -halt-on-error projetov1.tex`
 - Log scan:
   - `grep -E '^!|Fatal error|undefined|multiply defined' projetov1.log || true`
+- Graphify update:
+  - `/home/python/pyenv/bin/python -m graphify update .`
+
+For the environment-correction and render-verification follow-up:
+
+- `MPLCONFIGDIR=/tmp/matplotlib-radome /home/python/pyenv/bin/python projeto/geometry/verify_radome_geometry.py`
+- `MPLCONFIGDIR=/tmp/matplotlib-radome /home/python/pyenv/bin/python projeto/geometry/verify_tetrahedral_face_geometry.py`
+- `MPLCONFIGDIR=/tmp/matplotlib-radome /home/python/pyenv/bin/python projeto/spectral/verify_c3_acquisition_budget.py`
+- `MPLCONFIGDIR=/tmp/matplotlib-radome /home/python/pyenv/bin/python generate_updated_figures.py` (from `projeto/figures/`)
+- `MPLCONFIGDIR=/tmp/matplotlib-radome /home/python/pyenv/bin/python generate_fig12_3d.py` (from `projeto/figures/`)
+- `chromium --headless --no-sandbox --user-data-dir=/tmp/chromium-radome --print-to-pdf=fig11_face_yagi_camadas.pdf file:///home/jamaj/src/Radome/projeto/figures/fig11_face_yagi_camadas.svg`
+- `MPLCONFIGDIR=/tmp/matplotlib-radome /home/python/pyenv/bin/python localize_figures.py` (from `projeto/figures/`)
+- `blender -b --python render_radome_blender.py`
+- `blender -b --python render_aircraft_two_radomes_blender.py`
+- `blender -b --python render_tetrahedral_face_cluster_blender.py`
+- `blender -b --python render_radome_blender_35S.py` (from `projeto/figures/baseline_35S_concrete_base/`)
+- Full authoritative LaTeX sequences from `projeto/`:
+  - `pdflatex -interaction=nonstopmode -halt-on-error radome-en.tex`
+  - `bibtex radome-en`
+  - `pdflatex -interaction=nonstopmode -halt-on-error radome-en.tex`
+  - `pdflatex -interaction=nonstopmode -halt-on-error radome-en.tex`
+  - `pdflatex -interaction=nonstopmode -halt-on-error radome-pt-br.tex`
+  - `bibtex radome-pt-br`
+  - `pdflatex -interaction=nonstopmode -halt-on-error radome-pt-br.tex`
+  - `pdflatex -interaction=nonstopmode -halt-on-error radome-pt-br.tex`
+- Final log scan:
+  - `grep -E '^!|Fatal error|undefined|multiply defined' radome-en.log radome-pt-br.log`
+- PDF metadata checks:
+  - `pdfinfo radome-en.pdf`
+  - `pdfinfo radome-pt-br.pdf`
 - Graphify update:
   - `/home/python/pyenv/bin/python -m graphify update .`
 
@@ -153,3 +198,7 @@ In parallel, close the reopened C2 tetrahedral candidate before treating the cur
 - The PDF orientation issue was only in the VS Code viewer state. The PDF metadata reported A4 portrait and page rotation 0.
 - On 2026-08-09, `projeto/radome-en.pdf` was found with trailing corrupted data after an interrupted or concurrent write: `pdfinfo` could not read its cross-reference table even though an earlier valid PDF body remained embedded in the file. The English edition was rebuilt under an isolated job name, visually audited across all 31 pages, validated as A4/PDF 1.5 and only then moved over the authoritative artifact. Future diagnosis must distinguish a successful LaTeX log from the integrity of the PDF file currently on disk.
 - `fig16_tetrahedral_face_cluster.png` and `radome_tetrahedral_face_cluster.blend` represent the current ADR-012 candidate, including tangent vectors, shallow cells and the reserved service core. They are architectural visualization, not fabrication approval.
+- Blender headless renders on this machine consistently reported EGL initialization errors before falling back successfully to surfaceless EGL. The render jobs themselves completed and wrote the expected PNG and `.blend` artifacts; the warnings were non-blocking in this session.
+- The preserved baseline Blender script `projeto/figures/baseline_35S_concrete_base/render_radome_blender_35S.py` still writes its outputs to the shared `projeto/figures/fig13_radome_blender.png` and `projeto/figures/fig14_radome_interior_blender.png` paths rather than to the preserved baseline directory, so rerunning it overwrites the main radome outputs.
+- A direct headless Blender Python probe of `gpu.platform` crashed and wrote `/tmp/blender.crash.txt`, but the actual project Blender render scripts completed successfully; render success is the more trustworthy health signal for this environment.
+- When diagnosing the Python environment, remember that the shell-level state may differ between interactive shells and fresh login shells. A fresh login shell late in this session still showed stale values from startup files (`PYTHONPATH=/home/python/pyenv/bin` and no `python` on `PATH`), while a later user-reported interactive shell showed `(pyenv)` and `PYTHONPATH=/home/python/pyenv`. The preferred final state is to leave `PYTHONPATH` unset and rely on `PATH` plus `VIRTUAL_ENV`.
