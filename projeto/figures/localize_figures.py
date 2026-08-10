@@ -28,7 +28,7 @@ TITLES = {
 }
 
 KEYS = {
-    "fig01": (("orange: external source; blue: receiving nodes; purple: fusion; green: calibrated observations"), ("laranja: fonte externa; azul: nós receptores; roxo: fusão; verde: observações calibradas")),
+    "fig01": (("orange: external source; blue: radomes; purple: command center; green: calibrated observations"), ("laranja: fonte externa; azul: radomes; roxo: central de comando; verde: observações calibradas")),
     "fig02": (("colours: band families; white centre: shared services"), ("cores: famílias de faixas; centro branco: serviços compartilhados")),
     "fig03": (("triangle: RF aperture; bars: material/electronic layers; lower blocks: independent channels"), ("triângulo: abertura RF; barras: camadas materiais/eletrônicas; blocos inferiores: canais independentes")),
     "fig04": (("bars: proposed band families; blank intervals: deliberate coverage gaps"), ("barras: famílias de faixas propostas; intervalos brancos: lacunas deliberadas de cobertura")),
@@ -52,10 +52,10 @@ KEYS = {
 ANNOTATIONS = {
     "fig01": [
         (.50,.135,"external illuminator / emitter","iluminador / emissor externo"),
-        (.185,.475,"receiving node A","nó receptor A"),
-        (.520,.475,"receiving node B","nó receptor B"),
-        (.855,.475,"receiving node C","nó receptor C"),
-        (.50,.865,"central association and fusion","associação e fusão central"),
+        (.185,.475,"Radome A","Radome A"),
+        (.520,.475,"Radome B","Radome B"),
+        (.855,.475,"Radome C","Radome C"),
+        (.50,.865,"Command center","Central de comando"),
     ],
     "fig02": [(.29,.65,"HF","HF"),(.42,.78,"VHF","VHF"),(.64,.69,"UHF","UHF"),(.70,.37,"L/S/C","L/S/C"),(.40,.28,"X/Ku/Ka","X/Ku/Ka"),(.50,.52,"face core","núcleo da face")],
     "fig03": [(.252,.530,"RF aperture","abertura RF"),(.700,.152,"outer skin","pele externa"),(.700,.265,"low-loss core","núcleo de baixa perda"),(.700,.378,"inner skin","pele interna"),(.700,.491,"RF aperture / PCB","abertura RF / PCB"),(.700,.604,"shielded band modules","módulos blindados por faixa"),(.593,.739,"ADC A","ADC A"),(.806,.739,"ADC B","ADC B"),(.593,.829,"ASIC A","ASIC A"),(.806,.829,"ASIC B","ASIC B")],

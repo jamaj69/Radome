@@ -63,6 +63,7 @@ This is a durable log of the chat content visible to the agent. It is not a verb
 39. User clarified that `SESSION_CONTEXT.md` should indeed be committed, and strengthened the durability rule: everything needed to recover context and reproduce the build must be present in local Git and intended to exist in the remote repository as well.
 40. User observed that Portuguese and English figure text differs substantially in width and requested language-specific generation. The figure localizer retained common geometry masters but gained independent English and Portuguese composition profiles, multiline fitting constrained by block width and height, language-specific title/key widths and annotation offsets. Both localized sets and authoritative PDFs were regenerated and visually audited.
 41. User rejected the resulting Figure 1 as visually poor. Its common geometry master was redesigned as a compact hierarchy with a wide external-source card, three aligned receiving-node cards carrying radome glyphs, separated illumination and calibrated-observation paths, and a central association/fusion card. Localized labels now sit directly inside the functional blocks in both editions.
+42. User required the three Figure 1 cards to identify actual stations as `Radome A`, `Radome B` and `Radome C`, and the lower block as `Central de comando` / `Command center`. The localized key and both LaTeX captions were updated consistently; the caption preserves that the command center performs association and fusion.
 
 ## Commits created in this session
 
