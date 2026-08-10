@@ -60,6 +60,7 @@ This is a durable log of the chat content visible to the agent. It is not a verb
 36. User corrected shell startup files and asked for a final sanity check in a fresh login shell with `env | grep PYTHONPATH` and a Matplotlib `mplot3d` import. Assistant found that the login shell still reported `PYTHONPATH=/home/python/pyenv/bin` and did not have `python` on `PATH`, suggesting another login-shell startup file was still overriding the environment. User then reported an interactive shell prompt showing `(pyenv)` and `PYTHONPATH=/home/python/pyenv`, and stated an intention to restart.
 37. User requested that this session be logged before restarting. Assistant updated this durable context file so the next agent can recover the Python-environment fixes, the full rerun results and the remaining shell-environment caveat.
 38. User required a stricter repository-hygiene rule: if the Git tree is not clean after a completed change, remaining files must either be committed in a coherent focused change or explicitly ignored. Future agents should not leave a dirty tree as “expected”.
+39. User clarified that `SESSION_CONTEXT.md` should indeed be committed, and strengthened the durability rule: everything needed to recover context and reproduce the build must be present in local Git and intended to exist in the remote repository as well.
 
 ## Commits created in this session
 

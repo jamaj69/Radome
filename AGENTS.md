@@ -18,6 +18,8 @@ After those reads, use Graphify for focused retrieval when `graphify-out/graph.j
 
 If one of the four required Markdown files is missing or unreadable, report the missing file and do not claim full readiness. Work needed to restore the missing context file is still allowed.
 
+`graphify-out/wiki/SESSION_CONTEXT.md` is a tracked operational artifact. Whenever it is updated, commit it in the same focused change so future agents can recover the latest durable chat context from the local Git checkout and from the remote repository after push.
+
 ## Graphify
 
 Graphify is installed in the shared Python environment, not necessarily in the shell `PATH`. Invoke it only as:
@@ -172,6 +174,8 @@ Required sequence:
 8. only then begin the next change.
 
 Do not combine unrelated corrections in one commit. Do not leave a completed gate uncommitted while starting another gate. Generated artifacts that are authoritative or required for reproducibility, including `projeto/projetov1.pdf` after a chapter change, belong in the same commit as their source change. Push only when requested by the user or when the active publishing workflow explicitly requires it.
+
+Repository durability rule: everything required to recover project context and to run the documented build and validation flow must exist in local Git history and be suitable for publication to the configured remote. Do not rely on untracked local-only notes, scratch copies or ignored build-critical assets to preserve operational continuity.
 
 ## GitHub Workflow
 
