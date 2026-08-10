@@ -1,9 +1,13 @@
 import bpy
 import math
+from pathlib import Path
 from mathutils import Vector
 
-OUTPUT = "/home/jamaj/src/Radome/projeto/figures/fig13_radome_blender.png"
-INTERNAL_OUTPUT = "/home/jamaj/src/Radome/projeto/figures/fig14_radome_interior_blender.png"
+BUILD = Path(__file__).resolve().parent / "build"
+BUILD.mkdir(exist_ok=True)
+OUTPUT = str(BUILD / "fig13_radome_blender.png")
+INTERNAL_OUTPUT = str(BUILD / "fig14_radome_interior_blender.png")
+BLEND_OUTPUT = str(BUILD / "radome_v1_3d.blend")
 
 # Reset scene.
 bpy.ops.object.select_all(action="SELECT")
@@ -315,7 +319,7 @@ scene.world.color = (0.008, 0.015, 0.025)
 scene.view_settings.view_transform = "Filmic"
 scene.view_settings.look = "Medium High Contrast"
 scene.render.resolution_percentage = 100
-bpy.ops.wm.save_as_mainfile(filepath="/home/jamaj/src/Radome/projeto/figures/radome_v1_3d.blend")
+bpy.ops.wm.save_as_mainfile(filepath=BLEND_OUTPUT)
 bpy.ops.render.render(write_still=True)
 
 # Second render: camera physically inside the transparent shell, looking toward

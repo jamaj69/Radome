@@ -5,7 +5,7 @@ import subprocess
 import tempfile
 from PIL import Image, ImageChops, ImageDraw, ImageFont
 
-
+from build_paths import BUILD
 ROOT = Path(__file__).resolve().parent
 FIGURES = [f"fig{i:02d}" for i in range(1, 17)]
 TITLES = {
@@ -83,10 +83,10 @@ def font(size, bold=False):
 
 
 def source_for(prefix):
-    matches = sorted(ROOT.glob(f"{prefix}_*"))
-    matches = [p for p in matches if p.suffix.lower() in {".png", ".pdf"} and p.parent == ROOT]
+    matches = sorted(BUILD.glob(f"{prefix}_*"))
+    matches = [p for p in matches if p.suffix.lower() in {".png", ".pdf"} and p.parent == BUILD]
     if not matches:
-        raise FileNotFoundError(prefix)
+        raise FileNotFoundError(f"{prefix} in {BUILD}")
     return matches[0]
 
 

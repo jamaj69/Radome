@@ -3,9 +3,14 @@
 import math
 import os
 import sys
+from pathlib import Path
 
 import bpy
 from mathutils import Matrix, Vector
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from build_paths import build_output
 
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -15,8 +20,8 @@ sys.path.insert(0, os.path.join(ROOT, "geometry"))
 from verify_tetrahedral_face_geometry import PYRAMID_HEIGHT_M, face_edge_key, tetrahedral_modules
 
 
-OUTPUT = os.path.join(HERE, "fig16_tetrahedral_face_cluster.png")
-BLEND_OUTPUT = os.path.join(HERE, "radome_tetrahedral_face_cluster.blend")
+OUTPUT = str(build_output("fig16_tetrahedral_face_cluster.png"))
+BLEND_OUTPUT = str(build_output("radome_tetrahedral_face_cluster.blend"))
 CLUSTER_SIZE = 7
 
 

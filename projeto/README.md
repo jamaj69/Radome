@@ -40,8 +40,8 @@ blender -b --python render_tetrahedral_face_cluster_blender.py
 
 Outputs / Saídas:
 
-- `figures/fig16_tetrahedral_face_cluster.png`;
-- `figures/radome_tetrahedral_face_cluster.blend`.
+- `figures/build/fig16_tetrahedral_face_cluster.png`;
+- `figures/build/radome_tetrahedral_face_cluster.blend`.
 
 ## Compilation / Compilação
 
@@ -63,6 +63,6 @@ Add or reorder chapters in the matching manifest under `config/`. Write language
 
 Adicione ou reordene capítulos no manifesto correspondente em `config/`. Edite o conteúdo diretamente em `chapters/en/` ou `chapters/pt-BR/`; os comandos usuais `\\chapter`, `\\section` e `\\subsection` são suportados.
 
-Each edition references its localized figure set in `figures/en/` or `figures/pt-BR/`. Both sets derive from the same geometry masters, while titles, labels and visual keys are localized by `figures/localize_figures.py`.
+Each edition references its localized figure set in `figures/en/` or `figures/pt-BR/`. Both sets derive from the same geometry masters staged under `figures/build/`, while titles, labels and visual keys are localized by `figures/localize_figures.py`.
 
-Cada edição referencia seu conjunto localizado em `figures/en/` ou `figures/pt-BR/`. Ambos derivam dos mesmos mestres geométricos, enquanto títulos, rótulos e chaves visuais são localizados por `figures/localize_figures.py`.
+Cada edição referencia seu conjunto localizado em `figures/en/` ou `figures/pt-BR/`. Ambos derivam dos mesmos mestres geométricos preparados em `figures/build/`, enquanto títulos, rótulos e chaves visuais são localizados por `figures/localize_figures.py`.

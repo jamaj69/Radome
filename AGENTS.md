@@ -46,7 +46,7 @@ If Graphify is unavailable, continue with `rg` and the stable context files, sta
 - `projeto/figures/`: technical figures, Blender scenes and render scripts;
 - `projeto/references.bib`: bibliography used by the master document;
 - `projeto/radome-pt-br.pdf` and `projeto/radome-en.pdf`: compiled technical editions;
-- `projeto/figures/radome_v1_3d.blend`: current Blender scene;
+- `projeto/figures/build/radome_v1_3d.blend`: current generated Blender scene;
 - `projeto/figures/baseline_35S_concrete_base/`: preserved 3D baseline before later scene expansions.
 
 ## LaTeX Article Commands
@@ -77,7 +77,7 @@ The master document uses the bibliography copied from `radome_antenna_literature
 
 ## Regenerating Project Figures
 
-Permanent publication rule: each authoritative language edition uses its own localized figure set under `projeto/figures/en/` or `projeto/figures/pt-BR/`. The two sets must derive from the same geometry masters and must remain geometrically equivalent, while titles, labels and visual keys are written in the edition language. Regenerate both sets with `/home/python/pyenv/bin/python localize_figures.py` after changing any common figure master.
+Permanent publication rule: each authoritative language edition uses its own localized figure set under `projeto/figures/en/` or `projeto/figures/pt-BR/`. The two sets must derive from the same geometry masters and must remain geometrically equivalent, while titles, labels and visual keys are written in the edition language. Neutral master outputs belong in `projeto/figures/build/`, not in the root of `projeto/figures/`. Regenerate both sets with `/home/python/pyenv/bin/python localize_figures.py` after changing any common figure master.
 
 The current generated figures are produced by:
 
@@ -86,7 +86,7 @@ cd /home/jamaj/src/Radome/projeto/figures
 /home/python/pyenv/bin/python generate_updated_figures.py
 ```
 
-This regenerates the current zoning, spectral partition and polarimetry figures:
+This regenerates the current zoning, spectral partition and polarimetry figures into `projeto/figures/build/`:
 
 - `fig02_zonamento_radome.png`;
 - `fig04_particionamento_espectro.png`;
@@ -98,7 +98,7 @@ The SVG face diagram is converted to PDF with Chromium because ImageMagick may b
 ```bash
 cd /home/jamaj/src/Radome/projeto/figures
 chromium --headless --no-sandbox --disable-gpu \
-  --print-to-pdf=fig11_face_yagi_camadas.pdf \
+  --print-to-pdf=build/fig11_face_yagi_camadas.pdf \
   file:///home/jamaj/src/Radome/projeto/figures/fig11_face_yagi_camadas.svg
 ```
 
@@ -113,9 +113,9 @@ blender -b --python render_radome_blender.py
 
 Outputs:
 
-- `fig13_radome_blender.png`: external perspective;
-- `fig14_radome_interior_blender.png`: internal inspection perspective;
-- `radome_v1_3d.blend`: saved Blender scene.
+- `build/fig13_radome_blender.png`: external perspective;
+- `build/fig14_radome_interior_blender.png`: internal inspection perspective;
+- `build/radome_v1_3d.blend`: saved Blender scene.
 
 The current geometry includes an upper radome cut at 35 degrees south, a reinforced-concrete base of approximately 4 m x 4 m x 3 m, an access opening, an inward triangular pyramid and crossed external VHF/UHF Yagis sharing the apex support axis.
 
@@ -141,8 +141,8 @@ blender -b --python render_aircraft_two_radomes_blender.py
 
 Outputs:
 
-- `fig15_aircraft_two_radomes_100km.png`;
-- `radome_two_nodes_aircraft_100km.blend`.
+- `build/fig15_aircraft_two_radomes_100km.png`;
+- `build/radome_two_nodes_aircraft_100km.blend`.
 
 The scenario models ADS-B 1090ES at 1090 MHz, with 978 MHz UAT as contextual alternative, and independent UHF television and cellular illuminators. Observables include received power, AOA, hardware timestamps, TDOA and Doppler/FDOA. Direct-emitter checks and bistatic-reflection checks must remain separate models.
 

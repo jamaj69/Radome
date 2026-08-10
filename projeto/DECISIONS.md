@@ -104,7 +104,7 @@
 - **Resultado geométrico:** o envelope fechado mantém 80 faces e 120 arestas, com macroaresta de 4 m, raio circunscrito de 3,8042 m e inraio de 3,0230 m. As 240 arestas laterais medem 1,3769 m, os ápices vizinhos ficam separados por 0,5435–1,1547 m e permanece um núcleo interno livre com raio mínimo de 2,2730 m.
 - **Incompatibilidade registrada:** tetraedros regulares com as seis arestas de 2 m produzem 120 interpenetrações. A dimensão de 2 m controla somente as três arestas da face externa; exigir seis arestas iguais é bloqueado.
 - **Limite:** o corte inferior circular e o anel de apoio da ADR-009 deixam de controlar esta candidata. C2 permanece reaberto até definir uma borda formada por módulos inteiros, dimensionar juntas, corredores, caminhos térmicos e blindagem real e recalcular a interface civil.
-- **Evidência:** `geometry/verify_tetrahedral_face_geometry.py`, `figures/render_tetrahedral_face_cluster_blender.py`, `fig16_tetrahedral_face_cluster.png` e `radome_tetrahedral_face_cluster.blend`.
+- **Evidência:** `geometry/verify_tetrahedral_face_geometry.py`, `figures/render_tetrahedral_face_cluster_blender.py`, `figures/build/fig16_tetrahedral_face_cluster.png` e `figures/build/radome_tetrahedral_face_cluster.blend`.
 
 ## ADR-013 — Eixo normal das Yagis e figuras independentes de idioma
 

@@ -4,13 +4,12 @@ Permanent publication rule: figures contain geometry, colour and line style
 only. All verbal explanation belongs in the language-specific LaTeX caption.
 """
 
-from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, FancyBboxPatch, Polygon, Rectangle, Wedge
 
+from build_paths import build_output, ensure_build_dir
 
-OUT = Path(__file__).resolve().parent
 INK = "#263746"
 BLUE = "#5f91b7"
 CYAN = "#7eb6c9"
@@ -30,7 +29,7 @@ def canvas(figsize=(12, 7), equal=False):
 
 
 def save(fig, name):
-    fig.savefig(OUT / name, bbox_inches="tight", facecolor="white")
+    fig.savefig(build_output(name), bbox_inches="tight", facecolor="white")
     plt.close(fig)
 
 

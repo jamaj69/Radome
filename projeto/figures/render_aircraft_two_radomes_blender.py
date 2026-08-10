@@ -1,9 +1,15 @@
 import bpy
 import math
+import sys
+from pathlib import Path
 from mathutils import Vector
 
-OUTPUT = "/home/jamaj/src/Radome/projeto/figures/fig15_aircraft_two_radomes_100km.png"
-BLEND = "/home/jamaj/src/Radome/projeto/figures/radome_two_nodes_aircraft_100km.blend"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from build_paths import build_output
+
+OUTPUT = str(build_output("fig15_aircraft_two_radomes_100km.png"))
+BLEND = str(build_output("radome_two_nodes_aircraft_100km.blend"))
 
 bpy.ops.object.select_all(action="SELECT")
 bpy.ops.object.delete(use_global=False)

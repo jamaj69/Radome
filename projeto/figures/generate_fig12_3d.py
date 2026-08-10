@@ -1,12 +1,12 @@
 """Generate a language-neutral exploded 3D face illustration."""
 
-from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
+from build_paths import build_output
 
-OUTPUT = Path(__file__).resolve().parent / "fig12_radome_3d_explodida.png"
+OUTPUT = build_output("fig12_radome_3d_explodida.png")
 fig = plt.figure(figsize=(12, 8), dpi=180)
 ax = fig.add_subplot(111, projection="3d")
 
