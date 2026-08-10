@@ -77,13 +77,13 @@ The master document uses the bibliography copied from `radome_antenna_literature
 
 ## Regenerating Project Figures
 
-Permanent publication rule: each authoritative language edition uses its own localized figure set under `projeto/figures/en/` or `projeto/figures/pt-BR/`. The two sets must derive from the same geometry masters and must remain geometrically equivalent, while titles, labels and visual keys are written in the edition language. Regenerate both sets with `python3 localize_figures.py` after changing any common figure master.
+Permanent publication rule: each authoritative language edition uses its own localized figure set under `projeto/figures/en/` or `projeto/figures/pt-BR/`. The two sets must derive from the same geometry masters and must remain geometrically equivalent, while titles, labels and visual keys are written in the edition language. Regenerate both sets with `/home/python/pyenv/bin/python localize_figures.py` after changing any common figure master.
 
 The current generated figures are produced by:
 
 ```bash
 cd /home/jamaj/src/Radome/projeto/figures
-python3 generate_updated_figures.py
+/home/python/pyenv/bin/python generate_updated_figures.py
 ```
 
 This regenerates the current zoning, spectral partition and polarimetry figures:

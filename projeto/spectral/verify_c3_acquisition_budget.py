@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/python/pyenv/bin/python
 """Calculate screening data rates and radio-horizon checks for C3."""
 
 from dataclasses import dataclass

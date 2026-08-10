@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/python/pyenv/bin/python
 """Verify an 80-face radome assembled from shallow tetrahedral cells.
 
 Each regular icosahedron macroface is subdivided in its own plane into four

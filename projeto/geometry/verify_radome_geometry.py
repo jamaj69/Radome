@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/python/pyenv/bin/python
 """Verify the C2 candidate geodesic radome geometry.
 
 The model is a class-I, frequency-2 subdivision of a regular icosahedron:

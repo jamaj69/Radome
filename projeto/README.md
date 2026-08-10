@@ -33,7 +33,7 @@ The tetrahedral candidate is generated separately. It shows seven contiguous 2 m
 A candidata tetraédrica é gerada separadamente. Ela mostra sete faces contíguas de 2 m com profundidade interna de 0,75 m, paredes Faraday independentes, corredores intercelulares de energia/fibra, núcleo interno reservado, dois invólucros ADC/ASIC blindados por abertura dual-pol e as bases tangentes/normais locais.
 
 ```bash
-python3 geometry/verify_tetrahedral_face_geometry.py
+/home/python/pyenv/bin/python geometry/verify_tetrahedral_face_geometry.py
 cd figures
 blender -b --python render_tetrahedral_face_cluster_blender.py
 ```
