@@ -1,4 +1,4 @@
-"""Generate the shared, language-neutral technical figures 01--10.
+"""Generate the shared, language-neutral technical figures 01--11.
 
 Permanent publication rule: figures contain geometry, colour and line style
 only. All verbal explanation belongs in the language-specific LaTeX caption.
@@ -194,3 +194,45 @@ for i in range(len(stages)-1):
     x,y,w,_ = stages[i]; nx,ny,_,_ = stages[i+1]
     arrow(ax,(x+w,y+0.36),(nx,ny+0.36),INK,1.2)
 save(fig, "fig10_roteiro.png")
+
+
+# 11 — face-normal crossed Yagis and independent shielded receive chains.
+# This master is generated directly by Matplotlib; no browser/PDF conversion is
+# involved.  Text is added later by localize_figures.py.
+fig, ax = canvas((14, 7))
+ax.set_xlim(0, 14); ax.set_ylim(0, 7)
+
+face = np.array([[.55, .62], [5.25, .62], [2.90, 6.25]])
+apex = np.array([2.90, 2.95])
+ax.add_patch(Polygon(face, closed=True, facecolor="#e8f1f5", edgecolor=INK, linewidth=3.0))
+ax.add_patch(Polygon([face[0], face[1], apex], closed=True,
+                     facecolor="#dcefe9", edgecolor="#52606d", linewidth=2.0))
+for point in face:
+    ax.plot([apex[0], point[0]], [apex[1], point[1]], color="#52606d", linewidth=2.0)
+
+# Boom follows the face normal; the two element families are orthogonal in the
+# local tangent plane and shown in projection.
+ax.plot([apex[0], 7.55], [apex[1], apex[1]], color=INK, linewidth=7, solid_capstyle="round")
+ax.add_patch(Polygon([[7.80, apex[1]], [7.42, apex[1] + .22], [7.42, apex[1] - .22]],
+                     closed=True, facecolor="#4f887c", edgecolor="none"))
+for x, half_length in [(4.55, 1.28), (5.35, 1.05), (6.05, .82), (6.65, .62)]:
+    ax.plot([x-half_length/2, x+half_length/2],
+            [apex[1]-half_length/2, apex[1]+half_length/2],
+            color=ORANGE, linewidth=5, solid_capstyle="round")
+for x, half_length in [(4.75, 1.22), (5.55, .98), (6.25, .76), (6.85, .56)]:
+    ax.plot([x-half_length/2, x+half_length/2],
+            [apex[1]+half_length/2, apex[1]-half_length/2],
+            color=BLUE, linewidth=4.5, solid_capstyle="round")
+
+# A compact functional stack replaces the previous six thin material strips.
+box(ax, (9.05, 5.35), (4.15, .78), "#dcebf2", .10)
+box(ax, (9.05, 4.15), (4.15, .78), "#cce5d0", .10)
+box(ax, (9.05, 2.75), (1.85, .86), ORANGE, .10)
+box(ax, (11.35, 2.75), (1.85, .86), BLUE, .10)
+box(ax, (9.05, 1.25), (4.15, .78), PURPLE, .10)
+arrow(ax, (11.12, 5.35), (11.12, 4.96), INK, 1.5)
+arrow(ax, (11.12, 4.15), (9.98, 3.64), ORANGE, 1.5)
+arrow(ax, (11.12, 4.15), (12.28, 3.64), BLUE, 1.5)
+arrow(ax, (9.98, 2.75), (10.55, 2.06), ORANGE, 1.5)
+arrow(ax, (12.28, 2.75), (11.70, 2.06), BLUE, 1.5)
+save(fig, "fig11_face_yagi_camadas.png")

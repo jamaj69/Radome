@@ -19,7 +19,7 @@ TITLES = {
     "fig08": ("Bistatic and multistatic geometry", "Geometria biestática e multiestática"),
     "fig09": ("Passive multistatic processing flow", "Fluxo de processamento multiestático passivo"),
     "fig10": ("Staged development roadmap", "Roteiro de desenvolvimento por etapas"),
-    "fig11": ("Triangular face, normal boom and RF layers", "Face triangular, boom normal e camadas RF"),
+    "fig11": ("Triangular face, normal boom and RF chains", "Face triangular, boom normal e cadeias RF"),
     "fig12": ("Exploded three-dimensional face assembly", "Montagem tridimensional explodida da face"),
     "fig13": ("External radome and antenna assembly", "Conjunto externo do radome e antenas"),
     "fig14": ("Internal radome inspection view", "Vista interna de inspeção do radome"),
@@ -38,7 +38,7 @@ KEYS = {
     "fig08": (("orange: illuminator; grey: target; blue: receivers; red: reflected paths"), ("laranja: iluminador; cinza: alvo; azul: receptores; vermelho: caminhos refletidos")),
     "fig09": (("reference and surveillance channels feed detection, association, estimation and tracking"), ("canais de referência e vigilância alimentam detecção, associação, estimação e rastreamento")),
     "fig10": (("successive bars: concept, simulation, bench prototype, field demonstrator and qualification"), ("barras sucessivas: conceito, simulação, protótipo de bancada, demonstrador de campo e qualificação")),
-    "fig11": (("dark axis: outward face normal; orange/blue: orthogonal Yagis at 45°/135°; right: layer stack"), ("eixo escuro: normal externa da face; laranja/azul: Yagis ortogonais a 45°/135°; direita: pilha de camadas")),
+    "fig11": (("left: face-normal crossed Yagis; right: independent shielded receive chains"), ("esquerda: Yagis cruzadas na normal da face; direita: cadeias receptoras blindadas independentes")),
     "fig12": (("boom follows the outward normal; orange/blue elements are orthogonal in the tangent plane"), ("o boom segue a normal externa; elementos laranja/azul são ortogonais no plano tangente")),
     "fig13": (("radome overview with exploded triangular face and normal combined-Yagi boom"), ("vista geral do radome com face triangular explodida e boom normal das Yagis combinadas")),
     "fig14": (("transparent shell exposes structural paths, service trunks and shielded modules"), ("a casca transparente expõe caminhos estruturais, troncos de serviço e módulos blindados")),
@@ -66,7 +66,17 @@ ANNOTATIONS = {
     "fig08": [(.13,.78,"illuminator","iluminador"),(.50,.12,"target","alvo"),(.80,.82,"receiver","receptor"),(.72,.38,"receiver","receptor"),(.50,.88,"receiver","receptor")],
     "fig09": [(.097,.260,"reference","referência"),(.097,.739,"surveillance","vigilância"),(.281,.491,"alignment","alinhamento"),(.425,.491,"detection","detecção"),(.568,.491,"association","associação"),(.712,.491,"estimation","estimação"),(.856,.491,"tracking","rastreamento"),(.440,.831,"calibration","calibração"),(.728,.831,"quality control","controle de qualidade")],
     "fig10": [(.123,.171,"concept","conceito"),(.274,.330,"simulation","simulação"),(.447,.490,"bench prototype","protótipo de bancada"),(.640,.650,"field demonstrator","demonstrador de campo"),(.825,.810,"qualification","qualificação")],
-    "fig11": [(.23,.39,"dielectric RF face","face RF dielétrica"),(.49,.52,"normal boom","boom normal"),(.60,.43,"UHF Yagi — 135°","Yagi UHF — 135°"),(.56,.61,"VHF Yagi — 45°","Yagi VHF — 45°"),(.82,.10,"outer skin","pele externa"),(.82,.22,"low-loss core","núcleo de baixa perda"),(.82,.34,"inner skin","pele interna"),(.82,.465,"RF aperture / PCB","abertura RF / PCB"),(.82,.59,"shielding","blindagem"),(.82,.71,"face electronics","eletrônica da face"),(.75,.87,"VHF channel","canal VHF"),(.89,.87,"UHF channel","canal UHF")],
+    "fig11": [
+        (.185,.49,"2 m dielectric face","face dielétrica de 2 m"),
+        (.395,.55,"face-normal boom","boom normal à face"),
+        (.485,.40,"UHF Yagi — 135°","Yagi UHF — 135°"),
+        (.485,.63,"VHF Yagi — 45°","Yagi VHF — 45°"),
+        (.795,.17,"dielectric face stack","pilha dielétrica da face"),
+        (.795,.34,"RF aperture / PCB","abertura RF / PCB"),
+        (.710,.54,"shielded VHF chain","cadeia VHF blindada"),
+        (.880,.54,"shielded UHF chain","cadeia UHF blindada"),
+        (.795,.76,"timing + fibre service","sincronismo + serviço óptico"),
+    ],
     "fig15": [(.08,.57,"node A","nó A"),(.92,.57,"node B","nó B"),(.50,.18,"aircraft","aeronave"),(.50,.62,"nominal 100 km baseline","linha de base nominal de 100 km"),(.29,.38,"path A / AOA cone","caminho A / cone AOA"),(.71,.38,"path B / AOA cone","caminho B / cone AOA")],
 }
 
@@ -83,8 +93,8 @@ INSIDE_BLOCKS = {
     "fig09": [(.095,.130,2),(.095,.130,2),(.085,.130,2),(.085,.130,2),(.085,.130,2),(.085,.130,2),(.085,.130,2),(.12,.130,2),(.12,.130,2)],
     "fig10": [(.12,.100,2),(.20,.100,2),(.25,.100,2),(.24,.100,2),(.20,.100,2)],
     # The first four labels are callouts anchored to free-form geometry.  The
-    # remaining labels belong directly to the material and channel blocks.
-    "fig11": [None,None,None,None,(.20,.050,1),(.23,.050,1),(.20,.050,1),(.24,.050,1),(.20,.050,1),(.23,.050,1),(.11,.095,2),(.11,.095,2)],
+    # remaining labels belong directly to the functional stack.
+    "fig11": [None,None,None,None,(.25,.085,2),(.25,.085,2),(.12,.095,2),(.12,.095,2),(.25,.085,2)],
 }
 
 # Independent typographic profiles are intentional.  English and Portuguese
@@ -126,7 +136,7 @@ def source_for(prefix):
     matches = [p for p in matches if p.suffix.lower() in {".png", ".pdf"} and p.parent == BUILD]
     if not matches:
         raise FileNotFoundError(f"{prefix} in {BUILD}")
-    return matches[0]
+    return min(matches, key=lambda path: (path.suffix.lower() != ".png", path.name))
 
 
 def load_image(path):

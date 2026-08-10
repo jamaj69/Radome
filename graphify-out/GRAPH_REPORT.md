@@ -1,7 +1,7 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 32 files · ~414,807 words
+- 32 files · ~417,595 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `246e82f7`
+- Built from commit: `87cf88e3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -234,7 +234,7 @@ Nodes (17): add(), centroid(), cross(), dot(), face_edge_key(), length(), main()
 
 ### Community 52 - "localize_figures.py"
 Cohesion: 0.07
-Nodes (19): Path, build_output(), ensure_build_dir(), Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--10.  Permanent publi, save(), draw_label() (+11 more)
+Nodes (19): Path, build_output(), ensure_build_dir(), Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--11.  Permanent publi, save(), draw_label() (+11 more)
 
 ## Knowledge Gaps
 - **393 isolated node(s):** `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout`, `LaTeX Article Commands` (+388 more)

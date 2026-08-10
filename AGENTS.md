@@ -88,22 +88,13 @@ cd /home/jamaj/src/Radome/projeto/figures
 /home/python/pyenv/bin/python generate_updated_figures.py
 ```
 
-This regenerates the current zoning, spectral partition and polarimetry figures into `projeto/figures/build/`:
+This regenerates the current language-neutral technical masters into `projeto/figures/build/`, including:
 
 - `fig02_zonamento_radome.png`;
 - `fig04_particionamento_espectro.png`;
 - `fig05_polarimetria.png`;
 - `fig07_sincronizacao.png`, including GNSS timing reference, atomic clock, White Rabbit and RF-delay calibration.
-
-The SVG face diagram is converted to PDF with Chromium because ImageMagick may block SVG through its security policy:
-
-```bash
-cd /home/jamaj/src/Radome/projeto/figures
-chromium --headless --no-sandbox --disable-gpu \
-  --no-pdf-header-footer \
-  --print-to-pdf=build/fig11_face_yagi_camadas.pdf \
-  file:///home/jamaj/src/Radome/projeto/figures/fig11_face_yagi_camadas.svg
-```
+- `fig11_face_yagi_camadas.png`, generated directly by Matplotlib without a browser or PDF intermediate.
 
 ## Blender Rendering
 
