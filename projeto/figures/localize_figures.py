@@ -28,7 +28,7 @@ TITLES = {
 }
 
 KEYS = {
-    "fig01": (("orange: source/target; blue: stations; purple: fusion; green: data links"), ("laranja: fonte/alvo; azul: estações; roxo: fusão; verde: enlaces de dados")),
+    "fig01": (("orange: external source; blue: receiving nodes; purple: fusion; green: calibrated observations"), ("laranja: fonte externa; azul: nós receptores; roxo: fusão; verde: observações calibradas")),
     "fig02": (("colours: band families; white centre: shared services"), ("cores: famílias de faixas; centro branco: serviços compartilhados")),
     "fig03": (("triangle: RF aperture; bars: material/electronic layers; lower blocks: independent channels"), ("triângulo: abertura RF; barras: camadas materiais/eletrônicas; blocos inferiores: canais independentes")),
     "fig04": (("bars: proposed band families; blank intervals: deliberate coverage gaps"), ("barras: famílias de faixas propostas; intervalos brancos: lacunas deliberadas de cobertura")),
@@ -50,7 +50,13 @@ KEYS = {
 # the diagram itself readable; the longer engineering qualification stays in
 # the LaTeX caption.
 ANNOTATIONS = {
-    "fig01": [(.50,.07,"source / target","fonte / alvo"),(.17,.38,"node A","nó A"),(.50,.43,"node B","nó B"),(.83,.38,"node C","nó C"),(.50,.88,"distributed fusion","fusão distribuída")],
+    "fig01": [
+        (.50,.135,"external illuminator / emitter","iluminador / emissor externo"),
+        (.185,.475,"receiving node A","nó receptor A"),
+        (.520,.475,"receiving node B","nó receptor B"),
+        (.855,.475,"receiving node C","nó receptor C"),
+        (.50,.865,"central association and fusion","associação e fusão central"),
+    ],
     "fig02": [(.29,.65,"HF","HF"),(.42,.78,"VHF","VHF"),(.64,.69,"UHF","UHF"),(.70,.37,"L/S/C","L/S/C"),(.40,.28,"X/Ku/Ka","X/Ku/Ka"),(.50,.52,"face core","núcleo da face")],
     "fig03": [(.252,.530,"RF aperture","abertura RF"),(.700,.152,"outer skin","pele externa"),(.700,.265,"low-loss core","núcleo de baixa perda"),(.700,.378,"inner skin","pele interna"),(.700,.491,"RF aperture / PCB","abertura RF / PCB"),(.700,.604,"shielded band modules","módulos blindados por faixa"),(.593,.739,"ADC A","ADC A"),(.806,.739,"ADC B","ADC B"),(.593,.829,"ASIC A","ASIC A"),(.806,.829,"ASIC B","ASIC B")],
     "fig04": [(.18,.78,"HF","HF"),(.27,.66,"VHF","VHF"),(.51,.54,"UHF","UHF"),(.57,.42,"aviation","aeronáutica"),(.68,.30,"L/S/C","L/S/C"),(.82,.18,"X/Ku","X/Ku"),(.89,.07,"K/Ka","K/Ka")],
@@ -69,6 +75,7 @@ ANNOTATIONS = {
 # separate from the translated strings lets each language compose its text
 # without changing the common diagram master.
 INSIDE_BLOCKS = {
+    "fig01": [(.27,.095,2),(.17,.120,2),(.17,.120,2),(.17,.120,2),(.30,.100,2)],
     "fig03": [(.14,.18,2),(.36,.050,1),(.36,.050,1),(.36,.050,1),(.36,.050,1),(.36,.050,1),(.12,.068,1),(.12,.068,1),(.12,.068,1),(.12,.068,1)],
     "fig05": [(.13,.105,2),(.13,.105,2),(.16,.105,2),(.23,.105,2),(.13,.105,2),(.13,.105,2),(.16,.105,2),(.23,.105,2)],
     "fig06": [(.075,.115,2),(.075,.115,2),(.075,.115,1),(.075,.115,2),(.075,.115,1),(.075,.115,1),(.075,.115,2),(.085,.115,2),(.085,.115,2),(.085,.115,2)],

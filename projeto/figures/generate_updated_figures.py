@@ -43,18 +43,33 @@ def arrow(ax, a, b, color=INK, width=1.8, style="->"):
     ax.annotate("", xy=b, xytext=a, arrowprops={"arrowstyle": style, "color": color, "lw": width})
 
 
-# 01 — distributed hierarchy.
-fig, ax = canvas(equal=True)
-ax.set_xlim(-6, 6); ax.set_ylim(-4, 4)
-source = Polygon([(-0.8, 3.1), (0.8, 3.1), (0.45, 3.65), (-0.45, 3.65)], closed=True, facecolor=ORANGE, edgecolor=INK, linewidth=1.6)
-ax.add_patch(source)
-stations = [(-4.3, 0.8), (0, 0.35), (4.3, 0.8)]
-for x, y in stations:
-    ax.add_patch(Wedge((x, y), 1.05, 0, 180, facecolor="#dcebf2", edgecolor=BLUE, linewidth=2))
-    arrow(ax, (0, 3.05), (x, y + 1.0), ORANGE)
-fusion = box(ax, (-1.15, -3.0), (2.3, 0.9), PURPLE)
-for x, y in stations:
-    arrow(ax, (x, y - 0.05), (0, -2.05), GREEN)
+# 01 — distributed hierarchy.  Wide cards and short, separated paths make the
+# architecture legible at publication scale; language-specific text is added
+# later by localize_figures.py.
+fig, ax = canvas((13, 7))
+ax.set_xlim(0, 13); ax.set_ylim(0, 7)
+
+source = box(ax, (4.55, 5.72), (3.9, 0.86), ORANGE, .14)
+node_positions = [(0.55, 3.05), (4.90, 3.05), (9.25, 3.05)]
+for x, y in node_positions:
+    box(ax, (x, y), (3.2, 1.35), "#dcebf2", .16)
+    # A small radome glyph differentiates the sensing layer from generic boxes.
+    ax.add_patch(Wedge((x + .58, y + .48), .34, 0, 180,
+                       facecolor="#ffffff", edgecolor=BLUE, linewidth=1.7))
+    ax.plot([x + .24, x + .92], [y + .48, y + .48], color=BLUE, linewidth=1.7)
+
+fusion = box(ax, (4.35, .48), (4.3, 1.02), PURPLE, .16)
+
+# Source-to-node paths stop at the cards; observation paths start below them,
+# preventing the former centre convergence that visually implied a single bus.
+source_outputs = [(5.15, 5.72), (6.50, 5.72), (7.85, 5.72)]
+node_inputs = [(2.15, 4.40), (6.50, 4.40), (10.85, 4.40)]
+node_outputs = [(2.15, 3.05), (6.50, 3.05), (10.85, 3.05)]
+fusion_inputs = [(5.15, 1.50), (6.50, 1.50), (7.85, 1.50)]
+for start, end in zip(source_outputs, node_inputs):
+    arrow(ax, start, end, ORANGE, 2.2)
+for start, end in zip(node_outputs, fusion_inputs):
+    arrow(ax, start, end, GREEN, 2.2)
 save(fig, "fig01_arquitetura_rede.png")
 
 
