@@ -100,6 +100,7 @@ The SVG face diagram is converted to PDF with Chromium because ImageMagick may b
 ```bash
 cd /home/jamaj/src/Radome/projeto/figures
 chromium --headless --no-sandbox --disable-gpu \
+  --no-pdf-header-footer \
   --print-to-pdf=build/fig11_face_yagi_camadas.pdf \
   file:///home/jamaj/src/Radome/projeto/figures/fig11_face_yagi_camadas.svg
 ```

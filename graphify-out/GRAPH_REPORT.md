@@ -1,7 +1,7 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 32 files · ~416,458 words
+- 32 files · ~414,807 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `24d2be7c`
+- Built from commit: `246e82f7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

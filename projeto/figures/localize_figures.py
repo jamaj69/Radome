@@ -82,6 +82,9 @@ INSIDE_BLOCKS = {
     "fig07": [(.12,.130,2),(.12,.130,2),(.12,.130,2),(.12,.130,2),(.12,.130,2),(.095,.130,3)],
     "fig09": [(.095,.130,2),(.095,.130,2),(.085,.130,2),(.085,.130,2),(.085,.130,2),(.085,.130,2),(.085,.130,2),(.12,.130,2),(.12,.130,2)],
     "fig10": [(.12,.100,2),(.20,.100,2),(.25,.100,2),(.24,.100,2),(.20,.100,2)],
+    # The first four labels are callouts anchored to free-form geometry.  The
+    # remaining labels belong directly to the material and channel blocks.
+    "fig11": [None,None,None,None,(.20,.050,1),(.23,.050,1),(.20,.050,1),(.24,.050,1),(.20,.050,1),(.23,.050,1),(.11,.095,2),(.11,.095,2)],
 }
 
 # Independent typographic profiles are intentional.  English and Portuguese
@@ -268,7 +271,7 @@ for lang, index in (("en", 0), ("pt-BR", 1)):
             label = english if index == 0 else portuguese
             dx, dy = layout["offsets"].get(prefix, {}).get(annotation_index, (0, 0))
             blocks = INSIDE_BLOCKS.get(prefix)
-            if blocks:
+            if blocks and blocks[annotation_index] is not None:
                 draw_text_in_block(
                     scratch,
                     (width * (x + dx), height * (y + dy)),
