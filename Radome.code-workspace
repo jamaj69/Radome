@@ -8,6 +8,7 @@
 		"python.defaultInterpreterPath": "/home/python/pyenv/bin/python",
 		"terminal.integrated.env.linux": {
 			"PYTHONENV": "/home/python/pyenv",
+			"PYTHONPATH": "",
 			"VIRTUAL_ENV": "/home/python/pyenv",
 			"MPLCONFIGDIR": "/tmp/matplotlib-radome",
 			"PATH": "/home/python/pyenv/bin:${env:PATH}"
