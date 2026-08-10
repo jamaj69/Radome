@@ -1,20 +1,20 @@
 \chapter{Minimum Detection Record}
 
 \small
-\begin{longtable}{p{0.27\textwidth}p{0.58\textwidth}}
+\begin{longtable}{p{0.30\textwidth}p{0.55\textwidth}}
 \toprule
 \textbf{Field} & \textbf{Description}\\
 \midrule
-\texttt{station\_id} & Node identifier and calibration version\\
-\texttt{tile\_id/channel\_id} & Tile, polarization port and RF chain\\
-\texttt{timestamp\_utc} & Time with estimated uncertainty\\
-\texttt{frequency\_hz/bandwidth\_hz} & Observed centre frequency and bandwidth\\
-\texttt{polarization} & Measured port/orientation for single-polarization channels; Jones or Stokes only for a calibrated coherent same-band pair\\
-\texttt{aoa\_az\_el} & Local direction and covariance\\
-\texttt{delay\_doppler} & Bistatic measurements and quality\\
-\texttt{illuminator\_id} & Illuminator identity or hypothesis\\
-\texttt{sync\_state} & locked, holdover or degraded\\
-\texttt{environment} & Temperature, humidity and radome state\\
+\path|station_id| & Node identifier and calibration version\\
+\path|tile_id/channel_id| & Tile, polarization port and RF chain\\
+\path|timestamp_utc| & Time with estimated uncertainty\\
+\path|frequency_hz/bandwidth_hz| & Observed centre frequency and bandwidth\\
+\path|polarization| & Measured port/orientation for single-polarization channels; Jones or Stokes only for a calibrated coherent same-band pair\\
+\path|aoa_az_el| & Local direction and covariance\\
+\path|delay_doppler| & Bistatic measurements and quality\\
+\path|illuminator_id| & Illuminator identity or hypothesis\\
+\path|sync_state| & locked, holdover or degraded\\
+\path|environment| & Temperature, humidity and radome state\\
 \bottomrule
 \end{longtable}
 \normalsize
