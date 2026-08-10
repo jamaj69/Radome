@@ -64,16 +64,45 @@ ANNOTATIONS = {
     "fig15": [(.08,.57,"node A","nó A"),(.92,.57,"node B","nó B"),(.50,.18,"aircraft","aeronave"),(.50,.62,"nominal 100 km baseline","linha de base nominal de 100 km"),(.29,.38,"path A / AOA cone","caminho A / cone AOA"),(.71,.38,"path B / AOA cone","caminho B / cone AOA")],
 }
 
-# Text widths available inside the coloured functional blocks, expressed as a
-# fraction of the geometry-master width.  These diagrams must use the coloured
-# block itself as the label box; adding a second white box can overflow it.
-INSIDE_BLOCK_WIDTHS = {
-    "fig03": [.14, .36, .36, .36, .36, .36, .12, .12, .12, .12],
-    "fig05": [.13, .13, .16, .23, .13, .13, .16, .23],
-    "fig06": [.075, .075, .075, .075, .075, .075, .075, .085, .085, .085],
-    "fig07": [.12, .12, .12, .12, .12, .095],
-    "fig09": [.095, .095, .085, .085, .085, .085, .085, .12, .12],
-    "fig10": [.12, .20, .25, .24, .20],
+# Space available inside each coloured functional block.  Every tuple is
+# (width fraction, height fraction, maximum lines).  Keeping this geometry
+# separate from the translated strings lets each language compose its text
+# without changing the common diagram master.
+INSIDE_BLOCKS = {
+    "fig03": [(.14,.18,2),(.36,.050,1),(.36,.050,1),(.36,.050,1),(.36,.050,1),(.36,.050,1),(.12,.068,1),(.12,.068,1),(.12,.068,1),(.12,.068,1)],
+    "fig05": [(.13,.105,2),(.13,.105,2),(.16,.105,2),(.23,.105,2),(.13,.105,2),(.13,.105,2),(.16,.105,2),(.23,.105,2)],
+    "fig06": [(.075,.115,2),(.075,.115,2),(.075,.115,1),(.075,.115,2),(.075,.115,1),(.075,.115,1),(.075,.115,2),(.085,.115,2),(.085,.115,2),(.085,.115,2)],
+    "fig07": [(.12,.130,2),(.12,.130,2),(.12,.130,2),(.12,.130,2),(.12,.130,2),(.095,.130,3)],
+    "fig09": [(.095,.130,2),(.095,.130,2),(.085,.130,2),(.085,.130,2),(.085,.130,2),(.085,.130,2),(.085,.130,2),(.12,.130,2),(.12,.130,2)],
+    "fig10": [(.12,.100,2),(.20,.100,2),(.25,.100,2),(.24,.100,2),(.20,.100,2)],
+}
+
+# Independent typographic profiles are intentional.  English and Portuguese
+# continue to share geometry, colours and engineering content, but they do not
+# have to share line lengths or annotation offsets.
+LANGUAGE_LAYOUTS = {
+    "en": {
+        "title_width": .90,
+        "key_width": .92,
+        "floating_width": .30,
+        "title_scale": 1.00,
+        "key_scale": 1.00,
+        "annotation_scale": 1.00,
+        "offsets": {},
+    },
+    "pt-BR": {
+        "title_width": .86,
+        "key_width": .88,
+        "floating_width": .27,
+        "title_scale": .96,
+        "key_scale": .96,
+        "annotation_scale": .98,
+        "offsets": {
+            # Longer Portuguese callouts need a little more separation from
+            # the central aircraft paths and the neighbouring receiver label.
+            "fig15": {3: (0, .025), 4: (-.015, 0), 5: (.015, 0)},
+        },
+    },
 }
 
 
@@ -113,17 +142,36 @@ def wrap(draw, text, text_font, width):
         if draw.textbbox((0, 0), trial, font=text_font)[2] <= width:
             current = trial
         else:
-            lines.append(current)
+            if current:
+                lines.append(current)
             current = word
     if current:
         lines.append(current)
     return lines
 
 
-def draw_label(draw, centre, text, text_font, canvas_size):
+def fit_text(draw, text, preferred_font, available_width, available_height, max_lines):
+    """Return the largest readable multiline setting that fits a region."""
+    minimum_size = max(12, round(preferred_font.size * .62))
+    for size in range(preferred_font.size, minimum_size - 1, -1):
+        candidate = font(size, True)
+        lines = wrap(draw, text, candidate, available_width)
+        if not lines or len(lines) > max_lines:
+            continue
+        label = "\n".join(lines)
+        spacing = max(2, candidate.size // 6)
+        bbox = draw.multiline_textbbox(
+            (0, 0), label, font=candidate, spacing=spacing, align="center"
+        )
+        if bbox[2] - bbox[0] <= available_width and bbox[3] - bbox[1] <= available_height:
+            return candidate, label, spacing, bbox
+    raise ValueError(f"label does not fit its layout region: {text!r}")
+
+
+def draw_label(draw, centre, text, text_font, canvas_size, width_fraction):
     """Draw a padded box whose centre follows the centre of the rendered glyphs."""
     canvas_width, canvas_height = canvas_size
-    max_text_width = max(160, int(canvas_width * .30))
+    max_text_width = max(160, int(canvas_width * width_fraction))
     lines = wrap(draw, text, text_font, max_text_width)
     label = "\n".join(lines)
     spacing = max(3, text_font.size // 5)
@@ -169,66 +217,86 @@ def draw_label(draw, centre, text, text_font, canvas_size):
     )
 
 
-def draw_text_in_block(draw, centre, text, text_font, canvas_size, width_fraction):
+def draw_text_in_block(draw, centre, text, text_font, canvas_size, block):
     """Fit and centre text directly inside an existing coloured diagram block."""
-    canvas_width, _ = canvas_size
-    available_width = canvas_width * width_fraction
-    candidate = text_font
-    minimum_size = max(12, round(text_font.size * .62))
-    while candidate.size > minimum_size:
-        bbox = draw.textbbox((0, 0), text, font=candidate)
-        if bbox[2] - bbox[0] <= available_width:
-            break
-        candidate = font(candidate.size - 1, True)
-
-    bbox = draw.textbbox((0, 0), text, font=candidate)
+    canvas_width, canvas_height = canvas_size
+    width_fraction, height_fraction, max_lines = block
+    candidate, label, spacing, bbox = fit_text(
+        draw,
+        text,
+        text_font,
+        canvas_width * width_fraction,
+        canvas_height * height_fraction,
+        max_lines,
+    )
     text_width = bbox[2] - bbox[0]
     text_height = bbox[3] - bbox[1]
     cx, cy = centre
     # Centre the visible ink, compensating for the font's left/top bearings.
     origin_x = cx - text_width / 2 - bbox[0]
     origin_y = cy - text_height / 2 - bbox[1]
-    draw.text((origin_x, origin_y), text, font=candidate, fill="#263746")
+    draw.multiline_text(
+        (origin_x, origin_y),
+        label,
+        font=candidate,
+        fill="#263746",
+        spacing=spacing,
+        align="center",
+    )
 
 
 for lang, index in (("en", 0), ("pt-BR", 1)):
+    layout = LANGUAGE_LAYOUTS[lang]
     destination = ROOT / lang
     destination.mkdir(exist_ok=True)
     for prefix in FIGURES:
         source = source_for(prefix)
         image = load_image(source)
         width, height = image.size
-        title_font = font(max(24, width // 42), True)
-        key_font = font(max(18, width // 58))
+        title_font = font(round(max(24, width // 42) * layout["title_scale"]), True)
+        key_font = font(round(max(18, width // 58) * layout["key_scale"]))
         scratch = ImageDraw.Draw(image)
-        annotation_font = font(max(18, width // 62), True)
+        annotation_font = font(round(max(18, width // 62) * layout["annotation_scale"]), True)
         for annotation_index, (x, y, english, portuguese) in enumerate(ANNOTATIONS.get(prefix, [])):
             label = english if index == 0 else portuguese
-            block_widths = INSIDE_BLOCK_WIDTHS.get(prefix)
-            if block_widths:
+            dx, dy = layout["offsets"].get(prefix, {}).get(annotation_index, (0, 0))
+            blocks = INSIDE_BLOCKS.get(prefix)
+            if blocks:
                 draw_text_in_block(
                     scratch,
-                    (width * x, height * y),
+                    (width * (x + dx), height * (y + dy)),
                     label,
                     annotation_font,
                     image.size,
-                    block_widths[annotation_index],
+                    blocks[annotation_index],
                 )
             else:
                 draw_label(
                     scratch,
-                    (width * x, height * y),
+                    (width * (x + dx), height * (y + dy)),
                     label,
                     annotation_font,
                     image.size,
+                    layout["floating_width"],
                 )
-        key_lines = wrap(scratch, KEYS[prefix][index], key_font, width - 100)
-        panel_height = max(150, 65 + len(key_lines) * (key_font.size + 8))
+        title_lines = wrap(scratch, TITLES[prefix][index], title_font, width * layout["title_width"])
+        key_lines = wrap(scratch, KEYS[prefix][index], key_font, width * layout["key_width"])
+        title_spacing = max(3, title_font.size // 6)
+        title_bbox = scratch.multiline_textbbox(
+            (0, 0), "\n".join(title_lines), font=title_font,
+            spacing=title_spacing, align="center"
+        )
+        title_height = title_bbox[3] - title_bbox[1]
+        key_height = len(key_lines) * (key_font.size + 8)
+        panel_height = max(150, 38 + title_height + key_height + 24)
         output = Image.new("RGB", (width, height + panel_height), "white")
         output.paste(image, (0, panel_height))
         draw = ImageDraw.Draw(output)
-        draw.text((width / 2, 18), TITLES[prefix][index], font=title_font, fill="#17324d", anchor="ma")
-        y = 28 + title_font.size
+        draw.multiline_text(
+            (width / 2, 18), "\n".join(title_lines), font=title_font,
+            fill="#17324d", spacing=title_spacing, align="center", anchor="ma"
+        )
+        y = 28 + title_height
         for line in key_lines:
             draw.text((width / 2, y), line, font=key_font, fill="#52606d", anchor="ma")
             y += key_font.size + 8
