@@ -140,6 +140,11 @@ O TOPODATA resultou, em `k=1`, em 247 rotas com 60% de Fresnel livre, 59 apenas
 com visada, 21 obstruídas e uma sem terreno; em `k=4/3`, 257/50/20/1. Os produtos
 reproduziram byte a byte e 49 testes passam. Nenhuma aresta foi criada: o próximo
 gate audita as alturas físicas, pois o máximo cadastral é otimista.
+A auditoria por direção e frequência separou 993 caminhos recíprocos: 971 têm
+uma altura cadastral em cada ponta, 12 são ambíguos e 10 incompletos. Dos 328
+candidatos, 325 têm ao menos um caminho cadastral utilizável; três permanecem
+bloqueados. Cinquenta e dois testes passam. O próximo gate recalcula TOPODATA
+por caminho, ainda sujeito à posterior confirmação física.
 
 ## 6. Roadmap orientado por gates
 

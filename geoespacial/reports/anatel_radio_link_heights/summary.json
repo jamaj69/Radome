@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "geometry_file": "outputs/anatel_radio_link_geometry/groups.csv.gz",
+  "geometry_sha256": "88c904fb340bfbf12bc4a65764567f85e608512290f6acf0f790010526263d83",
+  "keys_file": "outputs/anatel_radio_link_keys/records.csv.gz",
+  "keys_sha256": "19557fde4a4aa5e52d128707d53dd9d85e921ec015f854516f702b868b916843",
+  "emissions_file": "outputs/anatel_radio_links/emissions.csv.gz",
+  "emissions_sha256": "0d4fdc04bdc6944a68b45086884ee386084e3be484149db9cc2ff392e10bf96f",
+  "terrain_file": "outputs/anatel_radio_link_topodata/groups.csv.gz",
+  "terrain_sha256": "1d437ab8c04e82c2c53abfc7afd203a56416dbee4770ef9cdda1b93944520aa5",
+  "candidate_count": 328,
+  "reciprocal_path_observation_count": 993,
+  "path_height_status": {
+    "ambiguous_cadastral_height": 12,
+    "missing_height": 10,
+    "unambiguous_cadastral_height": 971
+  },
+  "candidate_height_status": {
+    "ambiguous_height_only": 1,
+    "missing_height_only": 2,
+    "usable_cadastral_path_present": 325
+  },
+  "height_semantics": "Anatel cadastral antenna height; one unique value per directed reciprocal-frequency endpoint is internally unambiguous but not physically verified",
+  "pairing_status": "not_performed",
+  "paths_output": "outputs/anatel_radio_link_heights/paths.csv.gz",
+  "candidates_output": "outputs/anatel_radio_link_heights/candidates.csv.gz"
+}
