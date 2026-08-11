@@ -44,7 +44,7 @@ Toda transição de estado deve ser produzida por script Python conforme
 | Estados e país | IBGE BC250 2025 | downloaded_verified | polígonos | usar em máscaras e relatórios |
 | Relevo pontual | IBGE BC250 2025 | integrated/preliminary | picos e pontos cotados | reconciliar com MDE |
 | Elevação preliminar | Mapzen Terrarium | integrated/preliminary | cache z8 | substituir por TOPODATA |
-| MDE nacional | TOPODATA/INPE | route_subset_acquired | 154 ZIPs/9.743.140.443 bytes validados e hasheados; uma folha requerida ausente do índice | extrair GeoTIFFs e repetir perfis |
+| MDE nacional | TOPODATA/INPE | route_subset_extracted | 154 GeoTIFFs/12.013.983.756 bytes validados, hasheados e indexados; uma folha requerida ausente do índice | repetir perfis e comparar com z8 |
 | MDE local detalhado | IBGE/SGB/estaduais | pending | cobertura variável | adquirir somente para finalistas |
 | Torres celulares SMP | Anatel | canonical_integrated | 3.284.526 emissões, 105.726 sítios e 282.623 proxies cadastrais de antena; perda zero; 23 conflitos municipais preservados | usar junção espacial para revisar conflitos e buscar parâmetros radiométricos físicos |
 | Radiodifusão TV/RTV/FM/OM/RTR | Anatel | integrated/spectrum_partial | 35.126 registros; 18.285 licenciados; centro/canal disponíveis, largura ausente | integrar canalização regulatória; revisar 117 conflitos e ERP |
@@ -266,8 +266,8 @@ depois da validação de cada estudo insular.
 6. **concluído:** extrair enlaces explícitos STFC/SCM/SMP sem pareá-los;
 7. **concluído:** recuperar chaves, testar reciprocidade, azimute e terreno z8
    sem criar arestas;
-8. **parcial:** 154 folhas TOPODATA selecionadas, baixadas e validadas; extrair
-   os GeoTIFFs e recalcular as rotas, mantendo a folha ausente explícita;
+8. **parcial:** 154 folhas TOPODATA selecionadas, baixadas, extraídas e indexadas;
+   recalcular as rotas, mantendo a folha ausente explícita;
 9. normalizar radiodifusão e integrar VOR/NDB/DME por município;
 10. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
    BC250 e DECEA;

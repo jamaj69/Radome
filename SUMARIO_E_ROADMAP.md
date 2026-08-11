@@ -133,6 +133,9 @@ passam. As 154 folhas foram então baixadas e validadas integralmente, totalizan
 9.743.140.443 bytes reais, sem falhas e com SHA-256 individual; 46 testes passam.
 O próximo gate extrai os GeoTIFFs e recalcula os perfis, preservando a folha
 ausente como lacuna em vez de inventar dados.
+Os 154 GeoTIFFs foram extraídos e indexados sem falhas, totalizando
+12.013.983.756 bytes, com extensão, resolução e SHA-256 registrados; 48 testes
+passam. O próximo gate recalcula e compara os perfis TOPODATA e Terrarium.
 
 ## 6. Roadmap orientado por gates
 
