@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "prequalification_file": "outputs/anatel_radio_link_prequalification/paths.csv.gz",
+  "prequalification_sha256": "3ce9ec53519aceb9e6762a6dd2ed0fac8135a4f032d58bd6bdc56fdb076dab8b",
+  "terrain_file": "outputs/anatel_radio_link_path_terrain/paths.csv.gz",
+  "terrain_sha256": "8fd9341548c6b482c7155cba98e884a98a6008421a4deb4a0157c7c052b3596d",
+  "vertical_file": "outputs/anatel_radio_link_vertical/paths.csv.gz",
+  "vertical_sha256": "1742c7c287e2f040530be083f1366996d9eda34344e5f6349376f22c6f75a068",
+  "graphml_file": "outputs/anatel_radio_link_hypothesis_graph/graph.graphml",
+  "graphml_sha256": "d984ee5119369fbbfb00af663d41ff4743adb02ea8fb2e0523b6482c718278f7",
+  "graph_type": "directed multigraph of cadastral hypotheses",
+  "node_count": 497,
+  "edge_hypothesis_count": 796,
+  "candidate_count": 250,
+  "frequency_count": 135,
+  "k1": {
+    "node_count": 477,
+    "edge_hypothesis_count": 764,
+    "component_count": 237,
+    "largest_component_node_count": 3,
+    "isolated_node_count": 0
+  },
+  "k4_3": {
+    "node_count": 497,
+    "edge_hypothesis_count": 796,
+    "component_count": 247,
+    "largest_component_node_count": 3,
+    "isolated_node_count": 0
+  },
+  "physical_verification": false,
+  "operational_edge_count": 0,
+  "pairing_status": "not_performed"
+}

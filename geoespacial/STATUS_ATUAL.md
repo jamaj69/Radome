@@ -77,6 +77,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - pré-qualificação consolidada: em `k=1`, 764 caminhos de 240 candidatos passam
   simultaneamente reciprocidade, azimute, altura, Fresnel e geometria vertical;
   em `k=4/3`, são 796 caminhos de 250 candidatos; continuam sem pareamento;
+- GraphML de hipóteses: multigrafo dirigido com 497 nós, 796 arestas cadastrais,
+  250 candidatos e 135 frequências; zero arestas operacionais, com 237 componentes
+  em `k=1` e 247 em `k=4/3`, maior componente com três nós;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -84,7 +87,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 62 testes automatizados aprovados;
+- 64 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
@@ -112,10 +115,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Construir um GraphML exclusivamente de hipóteses cadastrais, com nós nas pontas
-e arestas explicitamente rotuladas `cadastral_prequalified`, nunca operacionais.
-Manter em tabela separada os 88/78 candidatos bloqueados em `k=1`/`k=4/3` e
-preservar a verificação física como gate anterior a qualquer enlace confirmado.
+Enriquecer os 497 nós de ponta com código IBGE, estação, entidade e vínculo ao
+grafo municipal já existente, preservando conflitos e multiplicidade. Manter
+em tabela separada os 88/78 candidatos bloqueados em `k=1`/`k=4/3` e preservar
+a verificação física como gate anterior a qualquer enlace confirmado.
 
 ## Comando de retomada
 

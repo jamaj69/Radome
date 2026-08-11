@@ -157,6 +157,10 @@ A consolidação retém, em `k=1`, 764 caminhos de 240 candidatos e, em `k=4/3`,
 796 caminhos de 250 candidatos. Sessenta e dois testes passam; todos continuam
 com pareamento não realizado. O próximo gate cria somente um grafo de hipóteses
 cadastrais, separado de qualquer enlace fisicamente confirmado.
+O GraphML de hipóteses contém 497 nós, 796 arestas cadastrais, 250 candidatos e
+135 frequências; possui zero arestas operacionais. Em `k=1`/`k=4/3` há 237/247
+componentes, com no máximo três nós. Sessenta e quatro testes passam. O próximo
+gate vincula as pontas aos municípios e entidades antes da validação física.
 
 ## 6. Roadmap orientado por gates
 
