@@ -273,6 +273,17 @@ python consolidate_anatel_radio_link_prequalification.py \
   --report reports/anatel_radio_link_prequalification/summary.json
 ```
 
+O grafo resultante contém somente hipóteses cadastrais, nunca enlaces operacionais:
+
+```bash
+python build_anatel_radio_link_hypothesis_graph.py \
+  --prequalification outputs/anatel_radio_link_prequalification/paths.csv.gz \
+  --terrain outputs/anatel_radio_link_path_terrain/paths.csv.gz \
+  --vertical outputs/anatel_radio_link_vertical/paths.csv.gz \
+  --output outputs/anatel_radio_link_hypothesis_graph/graph.graphml \
+  --report reports/anatel_radio_link_hypothesis_graph/summary.json
+```
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;
