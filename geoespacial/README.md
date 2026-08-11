@@ -199,6 +199,21 @@ O extrator compara cada ZIP com o SHA-256 do recibo, exige exatamente um
 GeoTIFF georreferenciado, publica-o atomicamente e registra resolução, extensão,
 tamanho e hash. O índice GeoJSON pode ser aberto diretamente no QGIS.
 
+O recálculo TOPODATA preserva as mesmas equações e amostragem da triagem z8 e
+publica as transições de classe por candidato:
+
+```bash
+python evaluate_anatel_radio_link_topodata.py \
+  --geometry outputs/anatel_radio_link_geometry/groups.csv.gz \
+  --keys outputs/anatel_radio_link_keys/records.csv.gz \
+  --emissions outputs/anatel_radio_links/emissions.csv.gz \
+  --terrain-root data/processed/topodata/radio_link_routes \
+  --terrain-index reports/topodata_radio_link_tiles/index.geojson \
+  --preliminary outputs/anatel_radio_link_terrain/groups.csv.gz \
+  --output outputs/anatel_radio_link_topodata/groups.csv.gz \
+  --report reports/anatel_radio_link_topodata/summary.json
+```
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;
