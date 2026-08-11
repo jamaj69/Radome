@@ -96,6 +96,12 @@ VOR, NDB, DME e `navaids` já foram adquiridas, e reconcilia DECEA, ANAC e IBGE
 BC250 com proveniência oficial. A matriz de lacunas está em
 `geoespacial/CAMADAS_EMISSOES_OFICIAIS.md`.
 
+O checkpoint operacional está em `geoespacial/STATUS_ATUAL.md`. O pipeline
+Python foi executado duas vezes sobre entradas idênticas: 26 testes passaram e
+sete produtos tiveram SHA-256 idênticos. A próxima entrega é o esquema
+`sitio_fisico`--`antena`--`emissao`, começando pela migração sem perdas das
+portadoras SMP já auditadas.
+
 ## 6. Roadmap orientado por gates
 
 Os prazos abaixo são faixas de planejamento e só começam após disponibilidade de equipe, laboratório e orçamento. Fases podem se sobrepor quando não houver dependência física.

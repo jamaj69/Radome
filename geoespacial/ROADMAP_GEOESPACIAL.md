@@ -7,6 +7,10 @@ e M3 — infraestrutura aeronáutica e estratégica. A governança e o gate de
 incorporação científica estão em `SUBPROJETO.md`; a matriz de completude RF
 está em `CAMADAS_EMISSOES_OFICIAIS.md`.
 
+**Checkpoint de retomada:** `STATUS_ATUAL.md`. A próxima mudança implementa o
+esquema canônico `sitio_fisico`--`antena`--`emissao` e migra as emissões SMP com
+testes de cardinalidade, proveniência e reprodução.
+
 ## Objetivo e regra de inventário
 
 O fluxo deve produzir uma seleção continental auditável do menor conjunto de

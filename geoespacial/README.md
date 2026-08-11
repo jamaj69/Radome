@@ -30,6 +30,7 @@ O plano completo de aquisição, integração, validação e otimização está 
 `ROADMAP_GEOESPACIAL.md`. As instruções normativas fornecidas pelo usuário estão
 preservadas em `REQUISITOS_GEOLOCALIZACAO.md`; esses requisitos devem ser
 consultados antes de alterar critérios ou preparar o texto metodológico.
+O checkpoint compacto para retomar o trabalho está em `STATUS_ATUAL.md`.
 
 O inventário dos cadastros já obtidos é reproduzido com:
 

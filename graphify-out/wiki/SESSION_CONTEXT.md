@@ -86,6 +86,7 @@ This is a durable log of the chat content visible to the agent. It is not a verb
 62. User ordered durable registration of the DECEA findings, a new geospatial-roadmap analysis and a review of missing official emission layers. `geoespacial/CAMADAS_EMISSOES_OFICIAIS.md` now defines completeness across location, altitude/antenna height, spectrum, power/diagram, municipality and provenance, and establishes gate M2E. The key reprioritization is that the already downloaded 10.45 GB general Anatel package exposes frequency, emission designation, power and antenna fields for SLP/SLE/SARC/STEL and fixed services; it must be classified before assuming that a separate SMP-radio-link file is required. VSAT earth stations and an official interinstitutional weather-radar inventory were added as identified acquisition targets. M2E and M3 are now coupled active tracks before quantitative `illuminates` edges.
 63. User required every manipulation of geospatial databases to be performed by Python scripts for repeatability. `geoespacial/POLITICA_REPRODUTIBILIDADE.md` now makes raw inputs immutable and requires versioned Python for acquisition, extraction, cleaning, joins, aggregation and export. `run_pipeline.py` replaces shell orchestration as the authoritative entry point; the shell file is only a compatibility wrapper. `build_candidate_graph.py` now reads GeoPackage layers through Python GDAL bindings instead of invoking `ogr2ogr`, and `acquire_decea_wfs.py` provides atomic WFS downloads with per-layer hashes and manifests. The rule was added to `AGENTS.md` and the normative geolocation requirements.
 64. User asked whether reproduction had actually been tested. `verify_reproducibility.py` now executes the authoritative Python pipeline twice over unchanged inputs and compares SHA-256 for seven CSV, GeoJSON, GraphML, JSON and PNG products, writing a versioned machine-readable report and failing if any byte differs.
+65. User requested a documentation checkpoint so work can continue without context loss. `geoespacial/STATUS_ATUAL.md` now consolidates parent-project linkage, M2E/M3 status, acquired and integrated layers, 26-test and seven-product byte-reproducibility evidence, controlled gaps and the exact next implementation: a canonical `sitio_fisico`--`antena`--`emissao` model populated first from the audited SMP records with zero-loss/cardinality tests.
 
 ## Commits created in this session
 
@@ -106,6 +107,17 @@ Later environment-fix commits in this session used the local Git identity:
 
 - `962239c Use pyenv Python for project scripts and docs`
 - `5eaf1d4 Clear PYTHONPATH in workspace terminal env`
+
+Recent geospatial commits used the local Git identity:
+
+- `d7b0ee5 Documenta roadmap geoespacial e requisitos`
+- `a7093e6 Integra estacoes licenciadas de radiodifusao`
+- `4241a00 Formaliza subprojeto geoespacial do artigo`
+- `52272c7 Audita espectro das estacoes Anatel`
+- `b1b10ca Adquire auxilios de navegacao do DECEA`
+- `6f292e3 Reavalia camadas oficiais de emissoes`
+- `457ddd5 Padroniza manipulacao geoespacial em Python`
+- `3b83061 Verifica reproducao byte a byte do pipeline`
 
 ## Current technical state
 
@@ -204,7 +216,16 @@ Known remaining LaTeX warnings are pre-existing C6 items: duplicate page anchors
 
 ## Next roadmap focus
 
-Complete the remaining C3 evidence before releasing C4:
+For the geospatial subproject, execute M2E before quantitative RF edges:
+
+1. implement the canonical `sitio_fisico`--`antena`--`emissao` schema in Python;
+2. migrate all audited SMP emissions with zero-loss/cardinality tests;
+3. audit the smaller general-Anatel files (SARC, fixed broadband and fixed telephony);
+4. then classify SLE/SLP/STEL, pair radio links and continue M3 reconciliation.
+
+The compact restart checkpoint is `geoespacial/STATUS_ATUAL.md`.
+
+For the article hardware track, complete the remaining C3 evidence before releasing C4:
 
 1. select the actual UHF and aviation waveforms and receiver components;
 2. measure site RFI and close cascaded NF, IP3, usable dynamic range and ENOB;
