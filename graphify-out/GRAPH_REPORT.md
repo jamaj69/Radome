@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 215 files · ~535,040 words
+- 219 files · ~535,860 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1297 nodes · 1734 edges · 128 communities (97 shown, 31 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 134 edges (avg confidence: 0.79)
+- 1309 nodes · 1755 edges · 129 communities (97 shown, 32 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 137 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `25a99722`
+- Built from commit: `e419e3cb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -142,14 +142,15 @@
 - augmented_mesh_edge_priority/README.md
 - augmented_mesh_topodata_tiles/README.md
 - validate_anatel_radio_link_geometry.py
+- augmented_mesh_topodata_profiles/README.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
 2. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
 3. `RADOME — Registro de decisões de arquitetura` - 20 edges
-4. `number()` - 13 edges
-5. `build()` - 13 edges
-6. `Topodata` - 13 edges
+4. `Topodata` - 14 edges
+5. `number()` - 13 edges
+6. `build()` - 13 edges
 7. `Point` - 13 edges
 8. `Plano Diretor de Infraestrutura Tática` - 13 edges
 9. `RADOME Project Agent Guide` - 12 edges
@@ -170,7 +171,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (128 total, 31 thin omitted)
+## Communities (129 total, 32 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -453,8 +454,8 @@ Cohesion: 0.50
 Nodes (3): Famílias explícitas de radioenlaces Anatel, Reprodução, Resultado
 
 ### Community 83 - "evaluate_anatel_radio_link_terrain.py"
-Cohesion: 0.06
-Nodes (30): consolidate(), destination(), main(), normalize(), Path, ring_clearance(), screen(), evaluate() (+22 more)
+Cohesion: 0.09
+Nodes (21): evaluate(), main(), prior_statuses(), Path, Amostrador de GeoTIFFs com cache LRU limitado., Topodata, build(), los_profile() (+13 more)
 
 ### Community 84 - "extract_topodata_route_tiles.py"
 Cohesion: 0.24
@@ -489,8 +490,8 @@ Cohesion: 0.21
 Nodes (11): clean(), extract(), main(), Path, file_sha256(), inventory(), main(), Path (+3 more)
 
 ### Community 93 - "consolidate_anatel_radio_link_prequalification.py"
-Cohesion: 0.31
-Nodes (5): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest
+Cohesion: 0.16
+Nodes (11): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest, GeometryTest, angular_error(), bearing() (+3 more)
 
 ### Community 96 - "ZipFile"
 Cohesion: 0.30
@@ -553,28 +554,28 @@ Cohesion: 0.50
 Nodes (3): Aquisição, Extração e índice, Folhas TOPODATA das arestas priorizadas
 
 ### Community 127 - "validate_anatel_radio_link_geometry.py"
-Cohesion: 0.31
-Nodes (6): GeometryTest, angular_error(), bearing(), main(), Path, validate()
+Cohesion: 0.13
+Nodes (15): consolidate(), destination(), main(), normalize(), Path, ring_clearance(), screen(), main() (+7 more)
 
 ## Knowledge Gaps
-- **516 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+511 more)
+- **517 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+512 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **31 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **32 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `Topodata` connect `evaluate_anatel_radio_link_terrain.py` to `Cross-search signals`?**
+- **Why does `Topodata` connect `evaluate_anatel_radio_link_terrain.py` to `Cross-search signals`, `validate_anatel_radio_link_geometry.py`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 10 inferred relationships involving `number()` (e.g. with `analyze()` and `audit_member()`) actually correct?**
-  _`number()` has 10 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 5 inferred relationships involving `Topodata` (e.g. with `evaluate()` and `build()`) actually correct?**
+  _`Topodata` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _516 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _517 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
   _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
+- **Should `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` be split into smaller, more focused modules?**
+  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._

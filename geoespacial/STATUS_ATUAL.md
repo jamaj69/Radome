@@ -155,6 +155,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - extração TOPODATA das arestas concluída: 214 GeoTIFFs em EPSG:4326,
   totalizando 16.660.168.596 bytes, sem falhas e com índice GeoJSON próprio;
   uma segunda passagem revalidou todos como reutilizados;
+- perfis TOPODATA da malha: em `k=1`, 3.653 das 4.262 arestas têm visada
+  topográfica, 607 são obstruídas e 2 não têm terreno completo; em `k=4/3`,
+  são 3.849/411/2; não há teste de Fresnel sem frequência selecionada e nenhuma
+  aresta foi promovida a operacional;
 - seleção das folhas de borda concluída: os 188.788 centros e pontos dos anéis
   requerem 175 folhas TOPODATA disponíveis, das quais 143 já são locais e 32
   novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
@@ -173,7 +177,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 97 testes automatizados aprovados na descoberta completa com
+- 99 testes automatizados aprovados na descoberta completa com
   `PYTHONPATH=geoespacial`;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
@@ -202,9 +206,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Calcular os perfis TOPODATA das arestas em lotes, mantendo as duas arestas
-afetadas por `03N66_ZN.zip` em falha conservadora e os iluminadores separados
-do modelo RF futuro.
+Reclassificar as 3.209 faces com as arestas de visada TOPODATA em `k=1` e
+`k=4/3`, comparar a conectividade da malha com os discos geométricos e manter
+os iluminadores separados do futuro modelo RF/Fresnel.
 
 ## Comando de retomada
 

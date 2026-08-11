@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "graph": "geoespacial/outputs/augmented_candidate_graph/graph.graphml",
+  "graph_sha256": "c5d8e43a019d57532578d1d2467395aa28e8e513cddb55ad196c1a0d0d6e166f",
+  "edges": "geoespacial/outputs/augmented_mesh_edge_priority/edges.csv.gz",
+  "edges_sha256": "1588d86b6772ead24f2aa576cdb6878cb0da67b1afbcfed8471366c3c5ee533c",
+  "terrain_index": "geoespacial/reports/augmented_mesh_topodata_tiles/index.geojson",
+  "terrain_index_sha256": "5e501a6fe41933c44412ee35aef819cda59bb72cf41883a1a437e80b8c5249e0",
+  "start_rank": 1,
+  "limit": null,
+  "profiled_edge_count": 4262,
+  "endpoint_height_agl_m": 15.0,
+  "sample_spacing_km": 1.0,
+  "status_k1": {
+    "los_clear": 3653,
+    "terrain_missing": 2,
+    "terrain_or_curvature_obstructed": 607
+  },
+  "status_k4_3": {
+    "los_clear": 3849,
+    "terrain_missing": 2,
+    "terrain_or_curvature_obstructed": 411
+  },
+  "output": "geoespacial/outputs/augmented_mesh_topodata_profiles/profiles.csv.gz",
+  "output_sha256": "7e6e4a4d4a1815e2ba2736ddb9de69fba259055091d2201b266864fd54b3f2b5",
+  "semantics": "terrain line-of-sight profile only; no Fresnel frequency, RF illumination, coverage, or operational edge"
+}
