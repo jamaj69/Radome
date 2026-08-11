@@ -184,6 +184,21 @@ Em 2026-08-11, o lote das rotas foi concluído com 154 arquivos, zero falhas e
 9.743.140.443 bytes reais; os hashes individuais estão em
 `reports/topodata_radio_link_tiles/acquisition.json`.
 
+Os GeoTIFFs são extraídos sem GDAL externo e indexados espacialmente por Python:
+
+```bash
+python extract_topodata_route_tiles.py \
+  --receipt reports/topodata_radio_link_tiles/acquisition.json \
+  --archive-dir data/raw/topodata/radio_link_routes \
+  --target-dir data/processed/topodata/radio_link_routes \
+  --report reports/topodata_radio_link_tiles/extraction.json \
+  --index reports/topodata_radio_link_tiles/index.geojson
+```
+
+O extrator compara cada ZIP com o SHA-256 do recibo, exige exatamente um
+GeoTIFF georreferenciado, publica-o atomicamente e registra resolução, extensão,
+tamanho e hash. O índice GeoJSON pode ser aberto diretamente no QGIS.
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;

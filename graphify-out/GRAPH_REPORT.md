@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 126 files · ~476,188 words
+- 128 files · ~476,982 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 994 nodes · 1271 edges · 86 communities (73 shown, 13 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 88 edges (avg confidence: 0.79)
+- 1011 nodes · 1305 edges · 88 communities (75 shown, 13 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 90 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4b237077`
+- Built from commit: `6e8ce1a0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -98,6 +98,8 @@
 - anatel_radio_link_keys/README.md
 - anatel_radio_link_candidates/README.md
 - evaluate_anatel_radio_link_terrain.py
+- extract_topodata_route_tiles.py
+- test_build_canonical_fixed_emitters.py
 - anatel_radio_link_terrain/README.md
 - topodata_radio_link_tiles/README.md
 
@@ -128,7 +130,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (86 total, 13 thin omitted)
+## Communities (88 total, 13 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -344,7 +346,7 @@ Nodes (30): audit(), audit_member(), main(), Counter, Path, rf_role(), sorted_co
 
 ### Community 59 - "inventory"
 Cohesion: 0.06
-Nodes (51): analyze(), distance(), main(), Path, audit_broadcast(), audit_smp(), emission_bandwidth_hz(), main() (+43 more)
+Nodes (46): analyze(), distance(), main(), Path, audit_broadcast(), audit_smp(), emission_bandwidth_hz(), main() (+38 more)
 
 ### Community 61 - "build"
 Cohesion: 0.35
@@ -418,6 +420,14 @@ Nodes (3): Famílias explícitas de radioenlaces Anatel, Reprodução, Resultado
 Cohesion: 0.15
 Nodes (13): classify(), evaluate(), interpolate(), main(), profile(), Path, Terrarium, main() (+5 more)
 
+### Community 84 - "extract_topodata_route_tiles.py"
+Cohesion: 0.24
+Nodes (10): atomic_json(), extract_archive(), extract_receipt(), feature(), inspect_geotiff(), main(), Path, sha256_file() (+2 more)
+
+### Community 85 - "test_build_canonical_fixed_emitters.py"
+Cohesion: 0.47
+Nodes (5): CanonicalFixedEmittersTest, Path, read_rows(), record(), write_input()
+
 ## Knowledge Gaps
 - **486 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+481 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -426,10 +436,12 @@ Nodes (13): classify(), evaluate(), interpolate(), main(), profile(), Path, Terr
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `deterministic_gzip_csv()` connect `inventory` to `inventory_infrastructure.py`, `evaluate_anatel_radio_link_terrain.py`, `test_build_canonical_fixed_emitters.py`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 12 inferred relationships involving `deterministic_gzip_csv()` (e.g. with `analyze()` and `audit_member()`) actually correct?**
@@ -438,5 +450,3 @@ _Questions this graph is uniquely positioned to answer:_
   _486 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
-- **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
-  _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._

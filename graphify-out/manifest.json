@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "geoespacial/README.md": {
-    "mtime": 1786429194.2898421,
-    "ast_hash": "29c6ec767dfb33d62e75188f2e2aea5b",
+    "mtime": 1786429399.8249104,
+    "ast_hash": "7e5cd2426107cf5bdb600437d6236293",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/topodata_altitude_tiles.json": {
@@ -932,6 +932,16 @@
   "geoespacial/reports/topodata_radio_link_tiles/acquisition.json": {
     "mtime": 1786429120.7101758,
     "ast_hash": "861c75bdfbdab6ff149b4a74abdcca89",
+    "semantic_hash": ""
+  },
+  "geoespacial/extract_topodata_route_tiles.py": {
+    "mtime": 1786429399.4729118,
+    "ast_hash": "a3ddc38493e5ddcda3b780e84e4a82c5",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_extract_topodata_route_tiles.py": {
+    "mtime": 1786429399.6569111,
+    "ast_hash": "d963bba68b60da66d763e01a9ae69eab",
     "semantic_hash": ""
   }
 }

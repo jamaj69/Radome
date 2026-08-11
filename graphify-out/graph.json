@@ -1214,6 +1214,105 @@
       "norm_label": "main()"
     },
     {
+      "label": "extract_topodata_route_tiles.py",
+      "file_type": "code",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_extract_topodata_route_tiles",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": "extract_topodata_route_tiles.py"
+    },
+    {
+      "label": "sha256_file()",
+      "file_type": "code",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "geoespacial_extract_topodata_route_tiles_sha256_file",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": "sha256_file()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "geoespacial_extract_topodata_route_tiles_py_path",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": "path"
+    },
+    {
+      "label": "atomic_json()",
+      "file_type": "code",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "geoespacial_extract_topodata_route_tiles_atomic_json",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": "atomic_json()"
+    },
+    {
+      "label": "inspect_geotiff()",
+      "file_type": "code",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "geoespacial_extract_topodata_route_tiles_inspect_geotiff",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": "inspect_geotiff()"
+    },
+    {
+      "label": "extract_archive()",
+      "file_type": "code",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "geoespacial_extract_topodata_route_tiles_extract_archive",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": "extract_archive()"
+    },
+    {
+      "label": "feature()",
+      "file_type": "code",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "geoespacial_extract_topodata_route_tiles_feature",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": "feature()"
+    },
+    {
+      "label": "extract_receipt()",
+      "file_type": "code",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "geoespacial_extract_topodata_route_tiles_extract_receipt",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": "extract_receipt()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "geoespacial_extract_topodata_route_tiles_main",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": "main()"
+    },
+    {
       "label": "extract_zip.py",
       "file_type": "code",
       "source_file": "geoespacial/extract_zip.py",
@@ -2306,8 +2405,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_canonical_fixed_emitters",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 85,
+      "community_name": "test_build_canonical_fixed_emitters.py",
       "norm_label": "test_build_canonical_fixed_emitters.py"
     },
     {
@@ -2317,8 +2416,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_canonical_fixed_emitters_record",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 85,
+      "community_name": "test_build_canonical_fixed_emitters.py",
       "norm_label": "record()"
     },
     {
@@ -2328,8 +2427,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_canonical_fixed_emitters_write_input",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 85,
+      "community_name": "test_build_canonical_fixed_emitters.py",
       "norm_label": "write_input()"
     },
     {
@@ -2339,8 +2438,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_canonical_fixed_emitters_py_path",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 85,
+      "community_name": "test_build_canonical_fixed_emitters.py",
       "norm_label": "path"
     },
     {
@@ -2350,8 +2449,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_canonical_fixed_emitters_read_rows",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 85,
+      "community_name": "test_build_canonical_fixed_emitters.py",
       "norm_label": "read_rows()"
     },
     {
@@ -2361,8 +2460,8 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_canonical_fixed_emitters_canonicalfixedemitterstest",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 85,
+      "community_name": "test_build_canonical_fixed_emitters.py",
       "norm_label": "canonicalfixedemitterstest"
     },
     {
@@ -2372,8 +2471,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_canonical_fixed_emitters_canonicalfixedemitterstest_test_partition_priority_and_roles",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 85,
+      "community_name": "test_build_canonical_fixed_emitters.py",
       "norm_label": ".test_partition_priority_and_roles()"
     },
     {
@@ -2383,8 +2482,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_canonical_fixed_emitters_canonicalfixedemitterstest_test_build_preserves_partition_and_relations",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 85,
+      "community_name": "test_build_canonical_fixed_emitters.py",
       "norm_label": ".test_build_preserves_partition_and_relations()"
     },
     {
@@ -2394,8 +2493,8 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_canonical_fixed_emitters_canonicalfixedemitterstest_test_outputs_are_byte_reproducible",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 85,
+      "community_name": "test_build_canonical_fixed_emitters.py",
       "norm_label": ".test_outputs_are_byte_reproducible()"
     },
     {
@@ -2650,6 +2749,94 @@
       "community": 59,
       "community_name": "inventory",
       "norm_label": ".test_extracts_only_explicit_families_without_pairing()"
+    },
+    {
+      "label": "test_extract_topodata_route_tiles.py",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_extract_topodata_route_tiles",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": "test_extract_topodata_route_tiles.py"
+    },
+    {
+      "label": "ExtractTopodataRouteTilesTest",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": "extracttopodataroutetilestest"
+    },
+    {
+      "label": ".setUp()",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_setup",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": ".setup()"
+    },
+    {
+      "label": ".tearDown()",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_teardown",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": ".teardown()"
+    },
+    {
+      "label": ".make_archive()",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_make_archive",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": ".make_archive()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_extract_topodata_route_tiles_py_path",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": "path"
+    },
+    {
+      "label": ".test_extracts_and_indexes_geotiff_then_reuses_it()",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_test_extracts_and_indexes_geotiff_then_reuses_it",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": ".test_extracts_and_indexes_geotiff_then_reuses_it()"
+    },
+    {
+      "label": ".test_rejects_archive_hash_mismatch()",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_test_rejects_archive_hash_mismatch",
+      "community": 84,
+      "community_name": "extract_topodata_route_tiles.py",
+      "norm_label": ".test_rejects_archive_hash_mismatch()"
     },
     {
       "label": "test_inventory_decea_navaids.py",
@@ -6920,7 +7107,7 @@
       "label": "Etapas",
       "file_type": "document",
       "source_file": "geoespacial/README.md",
-      "source_location": "L187",
+      "source_location": "L202",
       "_origin": "ast",
       "id": "geoespacial_readme_etapas",
       "community": 49,
@@ -6931,7 +7118,7 @@
       "label": "Pr\u00e9-sele\u00e7\u00e3o BC250",
       "file_type": "document",
       "source_file": "geoespacial/README.md",
-      "source_location": "L210",
+      "source_location": "L225",
       "_origin": "ast",
       "id": "geoespacial_readme_pr\u00e9_sele\u00e7\u00e3o_bc250",
       "community": 49,
@@ -6942,7 +7129,7 @@
       "label": "Grafo de capitais e aeroportos",
       "file_type": "document",
       "source_file": "geoespacial/README.md",
-      "source_location": "L227",
+      "source_location": "L242",
       "_origin": "ast",
       "id": "geoespacial_readme_grafo_de_capitais_e_aeroportos",
       "community": 49,
@@ -6953,7 +7140,7 @@
       "label": "Crit\u00e9rio de parada",
       "file_type": "document",
       "source_file": "geoespacial/README.md",
-      "source_location": "L241",
+      "source_location": "L256",
       "_origin": "ast",
       "id": "geoespacial_readme_crit\u00e9rio_de_parada",
       "community": 49,
@@ -12012,6 +12199,18 @@
       "target": "zipfile"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles",
+      "target": "zipfile",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -12166,6 +12365,18 @@
       "_origin": "ast",
       "source": "geoespacial_tests_test_extract_anatel_radio_link_keys_rawlinkkeystest_test_recovers_keys_and_confirms_row_equivalence",
       "target": "zipfile"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles",
+      "target": "zipfile",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -14452,6 +14663,263 @@
       "source": "geoespacial_extract_anatel_radio_links_main",
       "target": "geoespacial_extract_anatel_radio_links_extract",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles",
+      "target": "geoespacial_extract_topodata_route_tiles_atomic_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles",
+      "target": "geoespacial_extract_topodata_route_tiles_extract_archive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles",
+      "target": "geoespacial_extract_topodata_route_tiles_extract_receipt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles",
+      "target": "geoespacial_extract_topodata_route_tiles_feature",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles",
+      "target": "geoespacial_extract_topodata_route_tiles_inspect_geotiff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles",
+      "target": "geoespacial_extract_topodata_route_tiles_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles",
+      "target": "geoespacial_extract_topodata_route_tiles_sha256_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles",
+      "target": "geoespacial_extract_topodata_route_tiles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles_extract_archive",
+      "target": "geoespacial_extract_topodata_route_tiles_sha256_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles_extract_receipt",
+      "target": "geoespacial_extract_topodata_route_tiles_sha256_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles_sha256_file",
+      "target": "geoespacial_extract_topodata_route_tiles_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles_atomic_json",
+      "target": "geoespacial_extract_topodata_route_tiles_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles_extract_archive",
+      "target": "geoespacial_extract_topodata_route_tiles_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L99",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles_extract_receipt",
+      "target": "geoespacial_extract_topodata_route_tiles_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles_inspect_geotiff",
+      "target": "geoespacial_extract_topodata_route_tiles_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L130",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles_extract_receipt",
+      "target": "geoespacial_extract_topodata_route_tiles_atomic_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles_extract_archive",
+      "target": "geoespacial_extract_topodata_route_tiles_inspect_geotiff",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles_extract_receipt",
+      "target": "geoespacial_extract_topodata_route_tiles_extract_archive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles_extract_receipt",
+      "target": "geoespacial_extract_topodata_route_tiles_feature",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/extract_topodata_route_tiles.py",
+      "source_location": "L144",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_extract_topodata_route_tiles_main",
+      "target": "geoespacial_extract_topodata_route_tiles_extract_receipt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_test_extracts_and_indexes_geotiff_then_reuses_it",
+      "target": "geoespacial_extract_topodata_route_tiles_extract_receipt"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_test_rejects_archive_hash_mismatch",
+      "target": "geoespacial_extract_topodata_route_tiles_extract_receipt"
     },
     {
       "relation": "contains",
@@ -16768,6 +17236,120 @@
       "_origin": "ast",
       "source": "geoespacial_tests_test_extract_anatel_radio_links_radiolinkextractiontest",
       "target": "geoespacial_tests_test_extract_anatel_radio_links_radiolinkextractiontest_test_extracts_only_explicit_families_without_pairing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles",
+      "target": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest",
+      "target": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_make_archive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest",
+      "target": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest",
+      "target": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_teardown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest",
+      "target": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_test_extracts_and_indexes_geotiff_then_reuses_it",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest",
+      "target": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_test_rejects_archive_hash_mismatch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_setup",
+      "target": "geoespacial_tests_test_extract_topodata_route_tiles_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_make_archive",
+      "target": "geoespacial_tests_test_extract_topodata_route_tiles_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_test_extracts_and_indexes_geotiff_then_reuses_it",
+      "target": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_make_archive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_extract_topodata_route_tiles.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_test_rejects_archive_hash_mismatch",
+      "target": "geoespacial_tests_test_extract_topodata_route_tiles_extracttopodataroutetilestest_make_archive",
       "confidence_score": 1.0
     },
     {
@@ -21620,7 +22202,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/README.md",
-      "source_location": "L241",
+      "source_location": "L256",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_readme_sele\u00e7\u00e3o_geoespacial_de_s\u00edtios_radome",
@@ -21631,7 +22213,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/README.md",
-      "source_location": "L187",
+      "source_location": "L202",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_readme_sele\u00e7\u00e3o_geoespacial_de_s\u00edtios_radome",
@@ -21653,7 +22235,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/README.md",
-      "source_location": "L227",
+      "source_location": "L242",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_readme_sele\u00e7\u00e3o_geoespacial_de_s\u00edtios_radome",
@@ -21675,7 +22257,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/README.md",
-      "source_location": "L210",
+      "source_location": "L225",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_readme_sele\u00e7\u00e3o_geoespacial_de_s\u00edtios_radome",
@@ -25347,5 +25929,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4b237077d6602d6714ee23c0d05fd23413600fb4"
+  "built_at_commit": "6e8ce1a030d241367ad2230ae7e772dbd6649008"
 }

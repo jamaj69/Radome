@@ -83,6 +83,8 @@
   "81": "anatel_radio_link_keys/README.md",
   "82": "anatel_radio_link_candidates/README.md",
   "83": "evaluate_anatel_radio_link_terrain.py",
+  "84": "extract_topodata_route_tiles.py",
+  "85": "test_build_canonical_fixed_emitters.py",
   "92": "anatel_radio_link_terrain/README.md",
   "94": "topodata_radio_link_tiles/README.md"
 }
