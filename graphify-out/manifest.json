@@ -460,8 +460,8 @@
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/sources.json": {
-    "mtime": 1786409002.6413455,
-    "ast_hash": "6c76c0a623ee5eb159f36ad39aa1f7ec",
+    "mtime": 1786409889.3890934,
+    "ast_hash": "b1cf33dff06ab52d2e5d5530cdc8776c",
     "semantic_hash": ""
   },
   "geoespacial/optimize_sites.py": {
@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "geoespacial/README.md": {
-    "mtime": 1786409363.9796329,
-    "ast_hash": "32779b266cece0dacd9d6eae15993019",
+    "mtime": 1786409889.2370942,
+    "ast_hash": "8db64d7b6117419933fb8c173a1e1c89",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/topodata_altitude_tiles.json": {
@@ -512,6 +512,31 @@
   "geoespacial/reports/preselection_bc250/README.md": {
     "mtime": 1786409364.131632,
     "ast_hash": "3ed850415ed9933f4ce66ec92925102a",
+    "semantic_hash": ""
+  },
+  "geoespacial/build_candidate_graph.py": {
+    "mtime": 1786409806.4334943,
+    "ast_hash": "cf44846350065b240ab62ae2456d3ec6",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/candidate_graph/summary.json": {
+    "mtime": 1786409814.993453,
+    "ast_hash": "3c8abd875e5a21be218d0584672b000e",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_build_candidate_graph.py": {
+    "mtime": 1786409806.5854936,
+    "ast_hash": "ca44a5c2a9df73df859b6dd4fb219e49",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/candidate_graph/README.md": {
+    "mtime": 1786409889.081095,
+    "ast_hash": "782b79261b9fca75fef4659b55bfcc26",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/candidate_graph/candidate_graph.png": {
+    "mtime": 1786409814.989453,
+    "ast_hash": "32b6b0998158c3415ee5231226bea23e",
     "semantic_hash": ""
   }
 }

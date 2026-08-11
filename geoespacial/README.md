@@ -88,6 +88,20 @@ e calcula uma pontuação com 60% de altitude, 25% de quantidade de cidades em
 um indicador logístico: somente o MDE permitirá substituir esse indicador por
 cidades efetivamente visíveis.
 
+## Grafo de capitais e aeroportos
+
+```bash
+/home/python/pyenv/bin/python build_candidate_graph.py \
+  data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
+  --terrain-cache data/raw/mapzen/terrarium \
+  --output-dir reports/candidate_graph
+```
+
+O grafo usa as 27 capitais brasileiras e os 104 complexos aeroportuários da
+BC250. O raio inicial alcança uma superfície aérea de 3.000 m e considera
+curvatura com raio terrestre efetivo 4/3. Até o *viewshed* no TOPODATA, raios e
+arestas são limites superiores geométricos, não visada confirmada.
+
 ## Critério de parada
 
 Não se declarará “cobertura nacional” sem informar, para cada altitude de

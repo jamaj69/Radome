@@ -35,6 +35,17 @@
       "sha256": null,
       "target": "data/raw/inpe/topodata/",
       "status": "inventory_complete_download_pending"
+    },
+    {
+      "id": "mapzen_terrain_tiles",
+      "authority": "Mapzen / AWS Open Data",
+      "description": "Global bare-earth terrain tiles used only to sample preliminary node elevations",
+      "url": "https://registry.opendata.aws/terrain-tiles/",
+      "tile_template": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png",
+      "zoom": 8,
+      "target": "data/raw/mapzen/terrarium/",
+      "status": "preliminary_node_samples_downloaded",
+      "superseded_by": "TOPODATA viewshed refinement"
     }
   ]
 }

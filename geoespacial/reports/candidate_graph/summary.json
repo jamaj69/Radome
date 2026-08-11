@@ -1,0 +1,10 @@
+{
+  "capital_nodes": 27,
+  "airport_nodes": 104,
+  "nodes": 131,
+  "curvature_candidate_edges": 109,
+  "connected_components": 68,
+  "isolated_nodes": 39,
+  "target_altitude_m": 3000.0,
+  "radius_status": "geometric upper bound; intermediate terrain viewshed pending"
+}

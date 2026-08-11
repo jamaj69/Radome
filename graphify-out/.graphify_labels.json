@@ -52,5 +52,6 @@
   "50": "verify_tetrahedral_face_geometry.py",
   "51": "inventory_topodata.py",
   "52": "localize_figures.py",
-  "53": "Pré-seleção continental baseada na BC250"
+  "53": "Pré-seleção continental baseada na BC250",
+  "54": "Grafo preliminar de capitais e aeroportos"
 }

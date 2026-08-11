@@ -1,0 +1,2162 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d16" for="edge" attr.name="status" attr.type="string"/>
+<key id="d15" for="edge" attr.name="distance_km" attr.type="double"/>
+<key id="d14" for="node" attr.name="radius_status" attr.type="string"/>
+<key id="d13" for="node" attr.name="nearby_city_count" attr.type="long"/>
+<key id="d12" for="node" attr.name="coverage_radius_km" attr.type="double"/>
+<key id="d11" for="node" attr.name="target_altitude_m" attr.type="double"/>
+<key id="d10" for="node" attr.name="radome_height_agl_m" attr.type="double"/>
+<key id="d9" for="node" attr.name="terrain_source" attr.type="string"/>
+<key id="d8" for="node" attr.name="terrain_elevation_m" attr.type="double"/>
+<key id="d7" for="node" attr.name="latitude" attr.type="double"/>
+<key id="d6" for="node" attr.name="longitude" attr.type="double"/>
+<key id="d5" for="node" attr.name="kind" attr.type="string"/>
+<key id="d4" for="node" attr.name="name" attr.type="string"/>
+<key id="d3" for="graph" attr.name="effective_earth_radius_factor" attr.type="double"/>
+<key id="d2" for="graph" attr.name="target_altitude_m" attr.type="double"/>
+<key id="d1" for="graph" attr.name="radius_model" attr.type="string"/>
+<key id="d0" for="graph" attr.name="scope" attr.type="string"/>
+<graph edgedefault="undirected"><data key="d0">continental_brazil</data>
+<data key="d1">geometric_upper_bound_without_intermediate_terrain_occlusion</data>
+<data key="d2">3000.0</data>
+<data key="d3">1.3333333333333333</data>
+<node id="capital:1400100">
+  <data key="d4">Boa Vista</data>
+  <data key="d5">capital</data>
+  <data key="d6">-60.673511017</data>
+  <data key="d7">2.81967043300006</data>
+  <data key="d8">84.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">266.793</data>
+  <data key="d13">15</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:3106200">
+  <data key="d4">Belo Horizonte</data>
+  <data key="d5">capital</data>
+  <data key="d6">-43.9514005979999</data>
+  <data key="d7">-19.8910530989999</data>
+  <data key="d8">855.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">347.36</data>
+  <data key="d13">773</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:1200401">
+  <data key="d4">Rio Branco</data>
+  <data key="d5">capital</data>
+  <data key="d6">-67.7903522567552</data>
+  <data key="d7">-10.0097268232308</data>
+  <data key="d8">140.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">277.097</data>
+  <data key="d13">16</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:1721000">
+  <data key="d4">Palmas</data>
+  <data key="d5">capital</data>
+  <data key="d6">-48.324708728</data>
+  <data key="d7">-10.1939013589999</data>
+  <data key="d8">265.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">294.753</data>
+  <data key="d13">97</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:3304557">
+  <data key="d4">Rio de Janeiro</data>
+  <data key="d5">capital</data>
+  <data key="d6">-43.1947250599999</data>
+  <data key="d7">-22.9124689469999</data>
+  <data key="d8">11.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">246.798</data>
+  <data key="d13">277</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:2507507">
+  <data key="d4">João Pessoa</data>
+  <data key="d5">capital</data>
+  <data key="d6">-34.861604562</data>
+  <data key="d7">-7.12860940599995</data>
+  <data key="d8">44.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">257.441</data>
+  <data key="d13">361</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:2408102">
+  <data key="d4">Natal</data>
+  <data key="d5">capital</data>
+  <data key="d6">-35.2227804579999</data>
+  <data key="d7">-5.83396545499994</data>
+  <data key="d8">40.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">256.349</data>
+  <data key="d13">308</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:5002704">
+  <data key="d4">Campo Grande</data>
+  <data key="d5">capital</data>
+  <data key="d6">-54.61854011</data>
+  <data key="d7">-20.4685544869999</data>
+  <data key="d8">525.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">321.565</data>
+  <data key="d13">82</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:3550308">
+  <data key="d4">São Paulo</data>
+  <data key="d5">capital</data>
+  <data key="d6">-46.648144513999895</data>
+  <data key="d7">-23.5646324149999</data>
+  <data key="d8">835.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">345.955</data>
+  <data key="d13">614</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:4106902">
+  <data key="d4">Curitiba</data>
+  <data key="d5">capital</data>
+  <data key="d6">-49.2647573579999</data>
+  <data key="d7">-25.4595973749999</data>
+  <data key="d8">919.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">351.753</data>
+  <data key="d13">604</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:1501402">
+  <data key="d4">Belém</data>
+  <data key="d5">capital</data>
+  <data key="d6">-48.5044302009999</data>
+  <data key="d7">-1.45635618399996</data>
+  <data key="d8">7.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">245.114</data>
+  <data key="d13">72</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:2111300">
+  <data key="d4">São Luís</data>
+  <data key="d5">capital</data>
+  <data key="d6">-44.21098739</data>
+  <data key="d7">-2.54210241399994</data>
+  <data key="d8">38.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">255.788</data>
+  <data key="d13">143</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:2927408">
+  <data key="d4">Salvador</data>
+  <data key="d5">capital</data>
+  <data key="d6">-38.501083216</data>
+  <data key="d7">-12.971772034</data>
+  <data key="d8">35.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">254.927</data>
+  <data key="d13">197</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:2211001">
+  <data key="d4">Teresina</data>
+  <data key="d5">capital</data>
+  <data key="d6">-42.796507434</data>
+  <data key="d7">-5.09649988199993</data>
+  <data key="d8">91.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">268.218</data>
+  <data key="d13">230</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:4314902">
+  <data key="d4">Porto Alegre</data>
+  <data key="d5">capital</data>
+  <data key="d6">-51.2270350100187</data>
+  <data key="d7">-30.037857612131</data>
+  <data key="d8">11.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">246.798</data>
+  <data key="d13">310</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:4205407">
+  <data key="d4">Florianópolis</data>
+  <data key="d5">capital</data>
+  <data key="d6">-48.54047245434407</data>
+  <data key="d7">-27.59953708566037</data>
+  <data key="d8">129.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">275.243</data>
+  <data key="d13">234</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:1100205">
+  <data key="d4">Porto Velho</data>
+  <data key="d5">capital</data>
+  <data key="d6">-63.8314456543611</data>
+  <data key="d7">-8.76889179</data>
+  <data key="d8">88.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">267.613</data>
+  <data key="d13">21</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:1302603">
+  <data key="d4">Manaus</data>
+  <data key="d5">capital</data>
+  <data key="d6">-60.0255074129999</data>
+  <data key="d7">-3.10236266499993</data>
+  <data key="d8">30.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">253.431</data>
+  <data key="d13">23</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:1600303">
+  <data key="d4">Macapá</data>
+  <data key="d5">capital</data>
+  <data key="d6">-51.066448717999904</data>
+  <data key="d7">0.03865462300007</data>
+  <data key="d8">10.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">246.39</data>
+  <data key="d13">25</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:5103403">
+  <data key="d4">Cuiabá</data>
+  <data key="d5">capital</data>
+  <data key="d6">-56.0978564219999</data>
+  <data key="d7">-15.6006662149999</data>
+  <data key="d8">177.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">282.895</data>
+  <data key="d13">57</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:2611606">
+  <data key="d4">Recife</data>
+  <data key="d5">capital</data>
+  <data key="d6">-34.879125316999904</data>
+  <data key="d7">-8.04263950999996</data>
+  <data key="d8">5.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">244.214</data>
+  <data key="d13">343</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:2800308">
+  <data key="d4">Aracaju</data>
+  <data key="d5">capital</data>
+  <data key="d6">-37.063495106999895</data>
+  <data key="d7">-10.924874906999898</data>
+  <data key="d8">12.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">247.199</data>
+  <data key="d13">249</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:2704302">
+  <data key="d4">Maceió</data>
+  <data key="d5">capital</data>
+  <data key="d6">-35.7150518679999</data>
+  <data key="d7">-9.640481850999949</data>
+  <data key="d8">52.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">259.52</data>
+  <data key="d13">327</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:5208707">
+  <data key="d4">Goiânia</data>
+  <data key="d5">capital</data>
+  <data key="d6">-49.263088282999895</data>
+  <data key="d7">-16.697998324</data>
+  <data key="d8">815.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">344.532</data>
+  <data key="d13">261</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:5300108">
+  <data key="d4">Brasília</data>
+  <data key="d5">capital</data>
+  <data key="d6">-47.880611965</data>
+  <data key="d7">-15.783689652</data>
+  <data key="d8">1077.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">361.993</data>
+  <data key="d13">277</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:2304400">
+  <data key="d4">Fortaleza</data>
+  <data key="d5">capital</data>
+  <data key="d6">-38.52522151593698</data>
+  <data key="d7">-3.722856534745978</data>
+  <data key="d8">26.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">252.174</data>
+  <data key="d13">128</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="capital:3205309">
+  <data key="d4">Vitória</data>
+  <data key="d5">capital</data>
+  <data key="d6">-40.3110957679999</data>
+  <data key="d7">-20.315487077999897</data>
+  <data key="d8">1.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">242.268</data>
+  <data key="d13">192</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-43.28002149:-21.78088244">
+  <data key="d4">Aeroporto Doutor Saulo Vilela</data>
+  <data key="d5">airport</data>
+  <data key="d6">-43.280021489198745</data>
+  <data key="d7">-21.780882439734036</data>
+  <data key="d8">664.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">333.188</data>
+  <data key="d13">651</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-46.49236898:-18.67073444">
+  <data key="d4">Aeroporto Pedro Pereira dos Santos</data>
+  <data key="d5">airport</data>
+  <data key="d6">-46.49236897645827</data>
+  <data key="d7">-18.6707344363763</data>
+  <data key="d8">855.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">347.36</data>
+  <data key="d13">440</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-47.90107399:-18.21988768">
+  <data key="d4">Aeroporto de Catalão João Netto de Campos</data>
+  <data key="d5">airport</data>
+  <data key="d6">-47.901073985625466</data>
+  <data key="d7">-18.2198876750821</data>
+  <data key="d8">807.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">343.959</data>
+  <data key="d13">375</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-53.50350243:-25.00198143">
+  <data key="d4">Aeroporto Adalberto Mendes da Silva </data>
+  <data key="d5">airport</data>
+  <data key="d6">-53.50350243126815</data>
+  <data key="d7">-25.001981426314174</data>
+  <data key="d8">734.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">338.589</data>
+  <data key="d13">573</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-61.85015884:-10.87646860">
+  <data key="d4">Aeroporto Ji-Paraná </data>
+  <data key="d5">airport</data>
+  <data key="d6">-61.85015884202568</data>
+  <data key="d7">-10.876468596048147</data>
+  <data key="d8">175.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">282.597</data>
+  <data key="d13">46</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-51.06725027:0.04996988">
+  <data key="d4">Aeroporto Alberto Alcolumbre</data>
+  <data key="d5">airport</data>
+  <data key="d6">-51.06725027107295</data>
+  <data key="d7">0.049969877441988</data>
+  <data key="d8">17.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">249.098</data>
+  <data key="d13">25</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-48.92682574:-16.35968949">
+  <data key="d4">Aeroporto Anápolis</data>
+  <data key="d5">airport</data>
+  <data key="d6">-48.92682574407971</data>
+  <data key="d7">-16.35968948953338</data>
+  <data key="d8">1112.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">364.158</data>
+  <data key="d13">282</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-51.49054053:-23.35615536">
+  <data key="d4">Aeroporto Arapongas</data>
+  <data key="d5">airport</data>
+  <data key="d6">-51.49054052596232</data>
+  <data key="d7">-23.35615535752047</data>
+  <data key="d8">795.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">343.093</data>
+  <data key="d13">660</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-68.48579952:-10.66575766">
+  <data key="d4">Aeroporto Xapuri </data>
+  <data key="d5">airport</data>
+  <data key="d6">-68.4857995248337</data>
+  <data key="d7">-10.665757659894608</data>
+  <data key="d8">183.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">283.78</data>
+  <data key="d13">15</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-66.90013085:-4.87643764">
+  <data key="d4">Aeroporto Carauari</data>
+  <data key="d5">airport</data>
+  <data key="d6">-66.90013084818375</data>
+  <data key="d7">-4.876437637648781</data>
+  <data key="d8">83.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">266.585</data>
+  <data key="d13">7</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-60.69215437:2.84116684">
+  <data key="d4">Aeroporto Atlas Brasil Catanhede</data>
+  <data key="d5">airport</data>
+  <data key="d6">-60.69215437389652</data>
+  <data key="d7">2.841166841733541</data>
+  <data key="d8">82.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">266.376</data>
+  <data key="d13">15</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-35.24470807:-5.90500083">
+  <data key="d4">Aeroporto Internacional Augusto Severo</data>
+  <data key="d5">airport</data>
+  <data key="d6">-35.24470807426003</data>
+  <data key="d7">-5.905000834765656</data>
+  <data key="d8">49.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">258.756</data>
+  <data key="d13">323</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-45.00002297:-12.07907000">
+  <data key="d4">Aeroporto Barreiras</data>
+  <data key="d5">airport</data>
+  <data key="d6">-45.000022968787576</data>
+  <data key="d7">-12.079069999280026</data>
+  <data key="d8">747.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">339.564</data>
+  <data key="d13">124</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-70.77986450:-8.15781393">
+  <data key="d4">Aeroporto Tarauacá </data>
+  <data key="d5">airport</data>
+  <data key="d6">-70.77986449642061</data>
+  <data key="d7">-8.157813928616205</data>
+  <data key="d8">182.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">283.634</data>
+  <data key="d13">15</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-56.45021228:-21.24359165">
+  <data key="d4">Aeroporto Bonito</data>
+  <data key="d5">airport</data>
+  <data key="d6">-56.45021227611688</data>
+  <data key="d7">-21.243591646053638</data>
+  <data key="d8">329.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">302.23</data>
+  <data key="d13">45</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-48.35803836:-10.29547480">
+  <data key="d4">Aeroporto Brigadeiro Lysias Rodrigues</data>
+  <data key="d5">airport</data>
+  <data key="d6">-48.35803836328246</data>
+  <data key="d7">-10.2954747989671</data>
+  <data key="d8">229.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">290.166</data>
+  <data key="d13">92</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-41.18884925:-20.83619535">
+  <data key="d4">Aeroporto Cachoeiro de Itapemirim</data>
+  <data key="d5">airport</data>
+  <data key="d6">-41.18884925493469</data>
+  <data key="d7">-20.836195347000675</data>
+  <data key="d8">67.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">263.106</data>
+  <data key="d13">352</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-61.11720717:1.85076911">
+  <data key="d4">Aeroporto Caracaraí</data>
+  <data key="d5">airport</data>
+  <data key="d6">-61.117207167666244</data>
+  <data key="d7">1.850769113473502</data>
+  <data key="d8">53.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">259.77</data>
+  <data key="d13">12</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-54.48857718:-25.59779817">
+  <data key="d4">Aeroporto Internacional Cataratas</data>
+  <data key="d5">airport</data>
+  <data key="d6">-54.48857717676876</data>
+  <data key="d7">-25.597798173483206</data>
+  <data key="d8">229.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">290.166</data>
+  <data key="d13">344</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-48.59714745:-20.58249530">
+  <data key="d4">Aeroporto Chafei Amsei</data>
+  <data key="d5">airport</data>
+  <data key="d6">-48.59714745235475</data>
+  <data key="d7">-20.58249530266522</data>
+  <data key="d8">578.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">326.156</data>
+  <data key="d13">639</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-54.11265076:-31.38803140">
+  <data key="d4">Aeroporto Comandante Gustavo Kraemer</data>
+  <data key="d5">airport</data>
+  <data key="d6">-54.11265076386022</data>
+  <data key="d7">-31.388031401923264</data>
+  <data key="d8">184.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">283.927</data>
+  <data key="d13">114</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-41.98677122:-18.89705729">
+  <data key="d4">Aeroporto Coronel Altino Machado</data>
+  <data key="d5">airport</data>
+  <data key="d6">-41.9867712196507</data>
+  <data key="d7">-18.89705729121592</data>
+  <data key="d8">170.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">281.844</data>
+  <data key="d13">448</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-57.66346952:-19.01404431">
+  <data key="d4">Aeroporto Corumbá</data>
+  <data key="d5">airport</data>
+  <data key="d6">-57.663469517877694</data>
+  <data key="d7">-19.014044314353423</data>
+  <data key="d8">145.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">277.919</data>
+  <data key="d13">7</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-72.77350692:-7.59615358">
+  <data key="d4">Aeroporto Internacional de Cruzeiro do Sul</data>
+  <data key="d5">airport</data>
+  <data key="d6">-72.77350692299245</data>
+  <data key="d7">-7.596153582510508</data>
+  <data key="d8">200.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">286.219</data>
+  <data key="d13">10</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-61.27921594:-5.80949661">
+  <data key="d4">Aeroporto Manicoré </data>
+  <data key="d5">airport</data>
+  <data key="d6">-61.27921593502397</data>
+  <data key="d7">-5.809496613660382</data>
+  <data key="d8">40.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">256.349</data>
+  <data key="d13">10</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-48.24350686:-7.23069115">
+  <data key="d4">Aeroporto de Araguaína</data>
+  <data key="d5">airport</data>
+  <data key="d6">-48.24350685735499</data>
+  <data key="d7">-7.230691145432528</data>
+  <data key="d8">235.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">290.953</data>
+  <data key="d13">130</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-38.61847754:-6.88084982">
+  <data key="d4">Aeroporto de Cajazeiras</data>
+  <data key="d5">airport</data>
+  <data key="d6">-38.61847754343169</data>
+  <data key="d7">-6.880849816443079</data>
+  <data key="d8">335.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">302.894</data>
+  <data key="d13">456</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-63.89843237:-8.71439573">
+  <data key="d4">Aeroporto Internacional Governador Jorge Texeira de Oliveira</data>
+  <data key="d5">airport</data>
+  <data key="d6">-63.89843237495105</data>
+  <data key="d7">-8.714395734548706</data>
+  <data key="d8">88.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">267.613</data>
+  <data key="d13">20</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-54.66937366:-20.45758420">
+  <data key="d4">Aeroporto Internacional de Campo Grande</data>
+  <data key="d5">airport</data>
+  <data key="d6">-54.669373660925615</data>
+  <data key="d7">-20.457584203585792</data>
+  <data key="d8">555.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">324.19</data>
+  <data key="d13">81</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-46.65946677:-23.62616514">
+  <data key="d4">Aeroporto de Congonhas</data>
+  <data key="d5">airport</data>
+  <data key="d6">-46.65946676941492</data>
+  <data key="d7">-23.626165137091487</data>
+  <data key="d8">787.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">342.512</data>
+  <data key="d13">596</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-40.34824143:-2.90465283">
+  <data key="d4">Aeroporto de Jericoacoara</data>
+  <data key="d5">airport</data>
+  <data key="d6">-40.348241434664395</data>
+  <data key="d7">-2.90465283229252</data>
+  <data key="d8">26.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">252.174</data>
+  <data key="d13">129</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-37.36185316:-5.19268170">
+  <data key="d4">Aeroporto Dix-Sept Rosado</data>
+  <data key="d5">airport</data>
+  <data key="d6">-37.361853161612125</data>
+  <data key="d7">-5.192681696359212</data>
+  <data key="d8">26.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">252.174</data>
+  <data key="d13">330</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-52.33056762:-31.71593137">
+  <data key="d4">Aeroporto de Pelotas</data>
+  <data key="d5">airport</data>
+  <data key="d6">-52.33056761946964</data>
+  <data key="d7">-31.715931370282135</data>
+  <data key="d8">18.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">249.459</data>
+  <data key="d13">96</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-53.69353462:-29.70926196">
+  <data key="d4">Aeroporto de Santa Maria</data>
+  <data key="d5">airport</data>
+  <data key="d6">-53.69353461994754</data>
+  <data key="d7">-29.709261960694743</data>
+  <data key="d8">89.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">267.816</data>
+  <data key="d13">405</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-47.14423312:-23.00694470">
+  <data key="d4">Aeroporto Internacional de Viracopos</data>
+  <data key="d5">airport</data>
+  <data key="d6">-47.144233118657596</data>
+  <data key="d7">-23.00694470462168</data>
+  <data key="d8">662.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">333.03</data>
+  <data key="d13">682</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-38.33481328:-12.91435422">
+  <data key="d4">Aeroporto Internacional Deputado Luís Eduardo Magalhães</data>
+  <data key="d5">airport</data>
+  <data key="d6">-38.334813283809474</data>
+  <data key="d7">-12.914354217035115</data>
+  <data key="d8">12.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">247.199</data>
+  <data key="d13">185</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-60.04493225:-3.03171866">
+  <data key="d4">Aeroporto internacional Eduardo Gomes</data>
+  <data key="d5">airport</data>
+  <data key="d6">-60.04493225216448</data>
+  <data key="d7">-3.031718663826841</data>
+  <data key="d8">69.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">263.558</data>
+  <data key="d13">25</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-42.18289619:-20.26392624">
+  <data key="d4">Aeroporto Elias Breder</data>
+  <data key="d5">airport</data>
+  <data key="d6">-42.182896190329096</data>
+  <data key="d7">-20.263926237380137</data>
+  <data key="d8">812.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">344.317</data>
+  <data key="d13">649</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-46.56461878:-21.83849708">
+  <data key="d4">Aeroporto Embaixador Walther Moreira Salles</data>
+  <data key="d5">airport</data>
+  <data key="d6">-46.56461878307286</data>
+  <data key="d7">-21.838497081484235</data>
+  <data key="d8">1254.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">372.618</data>
+  <data key="d13">907</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-50.42585922:-21.13775257">
+  <data key="d4">Aeroporto Estadual Dario Guarita</data>
+  <data key="d5">airport</data>
+  <data key="d6">-50.42585921914252</data>
+  <data key="d7">-21.137752570693785</data>
+  <data key="d8">410.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">310.755</data>
+  <data key="d13">546</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-47.10763729:-22.86125055">
+  <data key="d4">Aeroporto Estadual de Campinas - Amarais</data>
+  <data key="d5">airport</data>
+  <data key="d6">-47.10763728730773</data>
+  <data key="d7">-22.861250549915823</data>
+  <data key="d8">612.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">328.993</data>
+  <data key="d13">679</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-46.94203887:-23.18029217">
+  <data key="d4">Aeroporto Estadual de Jundiaí</data>
+  <data key="d5">airport</data>
+  <data key="d6">-46.94203887434518</data>
+  <data key="d7">-23.180292170076402</data>
+  <data key="d8">725.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">337.909</data>
+  <data key="d13">662</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-47.83989795:-24.53024922">
+  <data key="d4">Aeroporto Estadual de Registro</data>
+  <data key="d5">airport</data>
+  <data key="d6">-47.839897951966286</data>
+  <data key="d7">-24.530249215735896</data>
+  <data key="d8">29.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">253.122</data>
+  <data key="d13">294</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-40.28219371:-20.26557422">
+  <data key="d4">Aeroporto Eurico de Aguiar Salles</data>
+  <data key="d5">airport</data>
+  <data key="d6">-40.282193714775005</data>
+  <data key="d7">-20.26557422257857</data>
+  <data key="d8">1.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">242.268</data>
+  <data key="d13">189</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-69.88247389:-6.63907667">
+  <data key="d4">Aeroporto Eirunepé</data>
+  <data key="d5">airport</data>
+  <data key="d6">-69.8824738888889</data>
+  <data key="d7">-6.639076666666649</data>
+  <data key="d8">122.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">274.026</data>
+  <data key="d13">10</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-50.27936150:-27.78183582">
+  <data key="d4">Aeroporto Federal Antônio Correia Pinto de Macedo</data>
+  <data key="d5">airport</data>
+  <data key="d6">-50.27936149586206</data>
+  <data key="d7">-27.78183582354362</data>
+  <data key="d8">930.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">352.493</data>
+  <data key="d13">742</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-50.95841378:-17.83680487">
+  <data key="d4">Aeroporto General Leite de Castro</data>
+  <data key="d5">airport</data>
+  <data key="d6">-50.95841377568476</data>
+  <data key="d7">-17.836804865238165</data>
+  <data key="d8">757.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">340.308</data>
+  <data key="d13">288</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-35.37259406:-5.76335589">
+  <data key="d4">Aeroporto Governador Aluizio Alves</data>
+  <data key="d5">airport</data>
+  <data key="d6">-35.37259405904507</data>
+  <data key="d7">-5.7633558929649</data>
+  <data key="d8">84.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">266.793</data>
+  <data key="d13">332</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-51.13785446:-23.32858557">
+  <data key="d4">Aeroporto Governador José Richa</data>
+  <data key="d5">airport</data>
+  <data key="d6">-51.13785445571516</data>
+  <data key="d7">-23.32858557155968</data>
+  <data key="d8">571.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">325.561</data>
+  <data key="d13">625</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-42.74905491:-14.20894205">
+  <data key="d4">Aeroporto Guanambi</data>
+  <data key="d5">airport</data>
+  <data key="d6">-42.74905490579728</data>
+  <data key="d7">-14.208942052714082</data>
+  <data key="d8">551.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">323.844</data>
+  <data key="d13">235</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-34.91821701:-8.13141810">
+  <data key="d4">Aeroporto Internacional  Guararapes Gilberto Freyre</data>
+  <data key="d5">airport</data>
+  <data key="d6">-34.918217013510876</data>
+  <data key="d7">-8.131418097100651</data>
+  <data key="d8">14.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">247.978</data>
+  <data key="d13">351</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-48.80186049:-26.22413927">
+  <data key="d4">Aeroporto Lauro Carneiro de Loyola</data>
+  <data key="d5">airport</data>
+  <data key="d6">-48.801860488186804</data>
+  <data key="d7">-26.22413926742278</data>
+  <data key="d8">5.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">244.214</data>
+  <data key="d13">223</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-48.54550369:-27.67399285">
+  <data key="d4">Aeroporto Internacional Hercílio Luz</data>
+  <data key="d5">airport</data>
+  <data key="d6">-48.545503691399055</data>
+  <data key="d7">-27.67399284599952</data>
+  <data key="d8">6.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">244.67</data>
+  <data key="d13">191</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-46.92746601:-16.35208001">
+  <data key="d4">Aeroporto Municipal de Unaí</data>
+  <data key="d5">airport</data>
+  <data key="d6">-46.927466011228745</data>
+  <data key="d7">-16.35208001055938</data>
+  <data key="d8">612.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">328.993</data>
+  <data key="d13">221</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-47.92067784:-15.86963786">
+  <data key="d4">Aeroporto Internacional Presidente Juscelino Kubitscheck</data>
+  <data key="d5">airport</data>
+  <data key="d6">-47.92067784288845</data>
+  <data key="d7">-15.869637856170106</data>
+  <data key="d8">1061.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">360.991</data>
+  <data key="d13">278</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-41.27414512:-12.48636421">
+  <data key="d4">Aeroporto Horácio de Mattos</data>
+  <data key="d5">airport</data>
+  <data key="d6">-41.2741451189505</data>
+  <data key="d7">-12.486364214743256</data>
+  <data key="d8">487.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">318.133</data>
+  <data key="d13">295</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-38.54049413:-3.77838595">
+  <data key="d4">Aeroporto Internacional Pinto Martins</data>
+  <data key="d5">airport</data>
+  <data key="d6">-38.540494126450064</data>
+  <data key="d7">-3.77838595046257</data>
+  <data key="d8">23.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">251.19</data>
+  <data key="d13">133</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-46.48162768:-23.42600608">
+  <data key="d4">Aeroporto Internacional  Governador André Franco Montoro</data>
+  <data key="d5">airport</data>
+  <data key="d6">-46.4816276762653</data>
+  <data key="d7">-23.426006084935736</data>
+  <data key="d8">748.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">339.638</data>
+  <data key="d13">594</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-35.79249635:-9.51426110">
+  <data key="d4">Aeroporto Internacional  Zumbi dos Palmares</data>
+  <data key="d5">airport</data>
+  <data key="d6">-35.79249635056293</data>
+  <data key="d7">-9.514261099010977</data>
+  <data key="d8">117.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">273.137</data>
+  <data key="d13">376</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-41.72978929:-2.89485620">
+  <data key="d4">Aeroporto Internacional de Parnáiba  Prefeito Doutor João Silva Filho</data>
+  <data key="d5">airport</data>
+  <data key="d6">-41.72978929219793</data>
+  <data key="d7">-2.89485620328918</data>
+  <data key="d8">4.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">243.748</data>
+  <data key="d13">119</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-39.03184713:-14.81409574">
+  <data key="d4">Aeroporto Jorge Amado</data>
+  <data key="d5">airport</data>
+  <data key="d6">-39.03184712652405</data>
+  <data key="d7">-14.814095735725314</data>
+  <data key="d8">7.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">245.114</data>
+  <data key="d13">143</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-53.69626541:-24.68503489">
+  <data key="d4">Aeroporto Luís Dal Canalle Filho</data>
+  <data key="d5">airport</data>
+  <data key="d6">-53.6962654117052</data>
+  <data key="d7">-24.68503489374331</data>
+  <data key="d8">556.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">324.276</data>
+  <data key="d13">459</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-41.76319373:-22.34129020">
+  <data key="d4">Aeroporto Macaé</data>
+  <data key="d5">airport</data>
+  <data key="d6">-41.763193734941225</data>
+  <data key="d7">-22.34129020376968</data>
+  <data key="d8">6.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">244.67</data>
+  <data key="d13">244</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-44.23628957:-2.58350807">
+  <data key="d4">Aeroporto Internacional Marechal Cunha Machado</data>
+  <data key="d5">airport</data>
+  <data key="d6">-44.236289570937664</data>
+  <data key="d7">-2.583508071462564</data>
+  <data key="d8">40.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">256.349</data>
+  <data key="d13">145</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-56.12028565:-15.65102436">
+  <data key="d4">Aeroporto Internacional Marechal Rondon</data>
+  <data key="d5">airport</data>
+  <data key="d6">-56.12028565108113</data>
+  <data key="d7">-15.651024358921442</data>
+  <data key="d8">186.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">284.218</data>
+  <data key="d13">56</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-40.06960130:-19.35760641">
+  <data key="d4">Aeroporto Municipal de Linhares</data>
+  <data key="d5">airport</data>
+  <data key="d6">-40.06960130105029</data>
+  <data key="d7">-19.357606411746996</data>
+  <data key="d8">37.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">255.504</data>
+  <data key="d13">190</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-48.61473627:-17.72539851">
+  <data key="d4">Aeroporto Nelson Rodrigues Guimarães</data>
+  <data key="d5">airport</data>
+  <data key="d6">-48.61473627190176</data>
+  <data key="d7">-17.725398507529952</data>
+  <data key="d8">709.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">336.69</data>
+  <data key="d13">311</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-39.27224470:-7.21517467">
+  <data key="d4">Aeroporto Orlando Bezerra de Menezes</data>
+  <data key="d5">airport</data>
+  <data key="d6">-39.27224470033127</data>
+  <data key="d7">-7.215174674412705</data>
+  <data key="d8">405.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">310.254</data>
+  <data key="d13">413</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-53.06680597:-26.05916133">
+  <data key="d4">Aeroporto Paulo Abdala- Francisco Beltrão</data>
+  <data key="d5">airport</data>
+  <data key="d6">-53.0668059730785</data>
+  <data key="d7">-26.0591613304212</data>
+  <data key="d8">645.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">331.674</data>
+  <data key="d13">642</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-56.10515258:-9.87233596">
+  <data key="d4">Aeroporto Piloto Osvaldo Marques Dias</data>
+  <data key="d5">airport</data>
+  <data key="d6">-56.105152577490266</data>
+  <data key="d7">-9.87233595606331</data>
+  <data key="d8">286.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">297.292</data>
+  <data key="d13">30</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-67.89715245:-9.86656688">
+  <data key="d4">Aeroporto Plácido de Castro</data>
+  <data key="d5">airport</data>
+  <data key="d6">-67.8971524494631</data>
+  <data key="d7">-9.866566882022735</data>
+  <data key="d8">186.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">284.218</data>
+  <data key="d13">15</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-39.08195234:-16.44071947">
+  <data key="d4">Aeroporto Porto Seguro</data>
+  <data key="d5">airport</data>
+  <data key="d6">-39.081952337082</data>
+  <data key="d7">-16.44071947338993</data>
+  <data key="d8">50.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">259.012</data>
+  <data key="d13">110</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-47.45614366:-5.53182103">
+  <data key="d4">Aeroporto Prefeito Renato Moreira</data>
+  <data key="d5">airport</data>
+  <data key="d6">-47.45614366276173</data>
+  <data key="d7">-5.531821027147499</data>
+  <data key="d8">131.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">275.585</data>
+  <data key="d13">104</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-52.01211592:-23.47971250">
+  <data key="d4">Aeroporto Regional de Maringá - Silvio Name Júnior</data>
+  <data key="d5">airport</data>
+  <data key="d6">-52.01211592226381</data>
+  <data key="d7">-23.47971250112527</data>
+  <data key="d8">547.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">323.497</data>
+  <data key="d13">550</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-51.18689425:-29.19487929">
+  <data key="d4">Aeroporto Regional Hugo Cantergiani</data>
+  <data key="d5">airport</data>
+  <data key="d6">-51.18689424881523</data>
+  <data key="d7">-29.194879289812224</data>
+  <data key="d8">748.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">339.638</data>
+  <data key="d13">678</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-57.03565402:-29.78394923">
+  <data key="d4">Aeroporto Rubem Berta</data>
+  <data key="d5">airport</data>
+  <data key="d6">-57.03565401869715</data>
+  <data key="d7">-29.78394922614632</data>
+  <data key="d8">75.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">264.884</data>
+  <data key="d13">28</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-37.07228063:-10.98698235">
+  <data key="d4">Aeroporto Santa Maria</data>
+  <data key="d5">airport</data>
+  <data key="d6">-37.07228063300868</data>
+  <data key="d7">-10.986982353128305</data>
+  <data key="d8">9.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">245.974</data>
+  <data key="d13">241</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-43.16667257:-22.91225115">
+  <data key="d4">Aeroporto Santos Dumont</data>
+  <data key="d5">airport</data>
+  <data key="d6">-43.166672568592276</data>
+  <data key="d7">-22.91225115301383</data>
+  <data key="d8">10.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">246.39</data>
+  <data key="d13">267</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-40.56604409:-9.36651397">
+  <data key="d4">Aeroporto de Petrolina Senador Nilo Coelho</data>
+  <data key="d5">airport</data>
+  <data key="d6">-40.56604408836831</data>
+  <data key="d7">-9.366513969707185</data>
+  <data key="d8">387.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">308.424</data>
+  <data key="d13">247</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-42.82068411:-5.06407094">
+  <data key="d4">Aeroporto de Teresina Senador Petrônio Portela</data>
+  <data key="d5">airport</data>
+  <data key="d6">-42.82068411118768</data>
+  <data key="d7">-5.064070944685461</data>
+  <data key="d8">66.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">262.877</data>
+  <data key="d13">219</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-69.93923227:-4.25040680">
+  <data key="d4">Aeroporto Tabatinga</data>
+  <data key="d5">airport</data>
+  <data key="d6">-69.93923226646449</data>
+  <data key="d7">-4.25040680165655</data>
+  <data key="d8">80.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">265.956</data>
+  <data key="d13">6</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-39.66911061:-17.52297940">
+  <data key="d4">Aeroporto Teixeira Freitas</data>
+  <data key="d5">airport</data>
+  <data key="d6">-39.66911061241935</data>
+  <data key="d7">-17.522979395459714</data>
+  <data key="d8">85.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">266.999</data>
+  <data key="d13">143</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-48.47960034:-1.38975786">
+  <data key="d4">Aeroporto Internacional  Val de Cans</data>
+  <data key="d5">airport</data>
+  <data key="d6">-48.479600343723504</data>
+  <data key="d7">-1.38975785929759</data>
+  <data key="d8">6.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">244.67</data>
+  <data key="d13">72</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-38.99141142:-13.30280900">
+  <data key="d4">Aeroporto Valença</data>
+  <data key="d5">airport</data>
+  <data key="d6">-38.99141141679912</data>
+  <data key="d7">-13.302808998531418</data>
+  <data key="d8">5.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">244.214</data>
+  <data key="d13">202</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-40.86231929:-14.86659965">
+  <data key="d4">Aeroporto Vitória da Conquista</data>
+  <data key="d5">airport</data>
+  <data key="d6">-40.862319289616686</data>
+  <data key="d7">-14.866599653550905</data>
+  <data key="d8">912.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">351.28</data>
+  <data key="d13">339</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-43.24567932:-22.81383537">
+  <data key="d4">Aeroporto Internacional  Antonio Carlos Jobim - Galeão</data>
+  <data key="d5">airport</data>
+  <data key="d6">-43.24567932093077</data>
+  <data key="d7">-22.813835369728046</data>
+  <data key="d8">15.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">248.357</data>
+  <data key="d13">302</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-42.07750394:-22.92523880">
+  <data key="d4">Aeroporto  Cabo Frio</data>
+  <data key="d5">airport</data>
+  <data key="d6">-42.07750393822237</data>
+  <data key="d7">-22.92523879678355</data>
+  <data key="d8">6.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">244.67</data>
+  <data key="d13">181</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-54.78636188:-2.42477604">
+  <data key="d4">Aeroporto Internacional Maestro Wilson Fonseca</data>
+  <data key="d5">airport</data>
+  <data key="d6">-54.78636187746423</data>
+  <data key="d7">-2.424776038313524</data>
+  <data key="d8">59.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">261.238</data>
+  <data key="d13">21</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-43.81973882:-16.70500239">
+  <data key="d4">Aeroporto Mário Ribeiro</data>
+  <data key="d5">airport</data>
+  <data key="d6">-43.81973882334952</data>
+  <data key="d7">-16.705002390924342</data>
+  <data key="d8">665.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">333.267</data>
+  <data key="d13">297</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-48.64876141:-26.88036634">
+  <data key="d4">Aeroporto Internacional Navegantes Ministro Victor Konder</data>
+  <data key="d5">airport</data>
+  <data key="d6">-48.64876141280077</data>
+  <data key="d7">-26.88036633953073</data>
+  <data key="d8">5.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">244.214</data>
+  <data key="d13">208</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-47.77658183:-21.13915194">
+  <data key="d4">Aeroporto Leite Lopes</data>
+  <data key="d5">airport</data>
+  <data key="d6">-47.77658183173642</data>
+  <data key="d7">-21.13915193505769</data>
+  <data key="d8">554.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">324.103</data>
+  <data key="d13">753</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-49.17317396:-25.53622755">
+  <data key="d4">Aeroporto Internacional Afonso Pena</data>
+  <data key="d5">airport</data>
+  <data key="d6">-49.17317396034981</data>
+  <data key="d7">-25.53622754579818</data>
+  <data key="d8">913.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">351.348</data>
+  <data key="d13">584</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-43.95541274:-19.85154096">
+  <data key="d4">Aeroporto Pampulha Carlos Drummond de Andrade</data>
+  <data key="d5">airport</data>
+  <data key="d6">-43.955412743176986</data>
+  <data key="d7">-19.851540962803416</data>
+  <data key="d8">788.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">342.585</data>
+  <data key="d13">749</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-43.96448131:-19.63081660">
+  <data key="d4">Aeroporto Internacional Tancredo Neves</data>
+  <data key="d5">airport</data>
+  <data key="d6">-43.96448131353005</data>
+  <data key="d7">-19.630816597746694</data>
+  <data key="d8">830.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">345.601</data>
+  <data key="d13">733</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-34.94885449:-7.14610637">
+  <data key="d4">Aeroporto Internacional Presidente Castro Pinto</data>
+  <data key="d5">airport</data>
+  <data key="d6">-34.94885448597934</data>
+  <data key="d7">-7.146106374970416</data>
+  <data key="d8">65.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">262.648</data>
+  <data key="d13">387</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-49.21437663:-16.62939681">
+  <data key="d4">Aeroporto Santa Genoveva</data>
+  <data key="d5">airport</data>
+  <data key="d6">-49.214376633506134</data>
+  <data key="d7">-16.629396810110368</data>
+  <data key="d8">753.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">340.011</data>
+  <data key="d13">257</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-42.80570775:-2.76008382">
+  <data key="d4">Aeródromo de Barreirinhas</data>
+  <data key="d5">airport</data>
+  <data key="d6">-42.80570775298327</data>
+  <data key="d7">-2.760083815558231</data>
+  <data key="d8">10.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">246.39</data>
+  <data key="d13">120</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-36.63013335:-9.77604832">
+  <data key="d4">Aerpoporto de Arapiraca</data>
+  <data key="d5">airport</data>
+  <data key="d6">-36.63013334557967</data>
+  <data key="d7">-9.776048323958713</data>
+  <data key="d8">256.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">293.635</data>
+  <data key="d13">416</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-66.99467365:-0.15465992">
+  <data key="d4">Aeroporto São Gabriel da Cachoeira / São Joaquim</data>
+  <data key="d5">airport</data>
+  <data key="d6">-66.99467365059952</data>
+  <data key="d7">-0.154659923819629</data>
+  <data key="d8">86.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">267.205</data>
+  <data key="d13">4</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-65.34832361:-4.88553322">
+  <data key="d4">Aeroporto Urucu-Coari</data>
+  <data key="d5">airport</data>
+  <data key="d6">-65.3483236127109</data>
+  <data key="d7">-4.885533220147624</data>
+  <data key="d8">73.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">264.447</data>
+  <data key="d13">8</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-60.10295473:-12.69312009">
+  <data key="d4">Aeroporto Vilhena</data>
+  <data key="d5">airport</data>
+  <data key="d6">-60.1029547333863</data>
+  <data key="d7">-12.693120093064506</data>
+  <data key="d8">612.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">328.993</data>
+  <data key="d13">48</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-63.13527643:-4.13153062">
+  <data key="d4">Aeroporto Coari</data>
+  <data key="d5">airport</data>
+  <data key="d6">-63.13527643234195</data>
+  <data key="d7">-4.131530616337211</data>
+  <data key="d8">44.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">257.441</data>
+  <data key="d13">9</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-61.18048610:-11.64425103">
+  <data key="d4">Aeroporto Pimenta Bueno </data>
+  <data key="d5">airport</data>
+  <data key="d6">-61.18048610360694</data>
+  <data key="d7">-11.64425103099459</data>
+  <data key="d8">202.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">286.5</data>
+  <data key="d13">47</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<node id="airport:-38.53339162:-3.77634502">
+  <data key="d4">Aeroporto Internacional Pinto Martins</data>
+  <data key="d5">airport</data>
+  <data key="d6">-38.53339162251987</data>
+  <data key="d7">-3.776345016458535</data>
+  <data key="d8">19.0</data>
+  <data key="d9">Mapzen Terrain Tiles terrarium z8</data>
+  <data key="d10">15.0</data>
+  <data key="d11">3000.0</data>
+  <data key="d12">249.815</data>
+  <data key="d13">130</data>
+  <data key="d14">geometric_upper_bound_topographic_occlusion_pending</data>
+</node>
+<edge source="capital:1400100" target="airport:-60.69215437:2.84116684">
+  <data key="d15">3.162</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3106200" target="airport:-43.28002149:-21.78088244">
+  <data key="d15">221.419</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3106200" target="airport:-42.18289619:-20.26392624">
+  <data key="d15">189.294</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3106200" target="airport:-43.95541274:-19.85154096">
+  <data key="d15">4.414</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3106200" target="airport:-43.96448131:-19.63081660">
+  <data key="d15">28.969</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:1200401" target="airport:-68.48579952:-10.66575766">
+  <data key="d15">105.398</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:1200401" target="airport:-67.89715245:-9.86656688">
+  <data key="d15">19.754</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:1721000" target="airport:-48.35803836:-10.29547480">
+  <data key="d15">11.869</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3304557" target="airport:-43.28002149:-21.78088244">
+  <data key="d15">126.132</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3304557" target="airport:-43.16667257:-22.91225115">
+  <data key="d15">2.873</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3304557" target="airport:-43.24567932:-22.81383537">
+  <data key="d15">12.147</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:2507507" target="airport:-34.94885449:-7.14610637">
+  <data key="d15">9.821</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:2408102" target="airport:-35.24470807:-5.90500083">
+  <data key="d15">8.263</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:2408102" target="airport:-35.37259406:-5.76335589">
+  <data key="d15">18.339</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5002704" target="airport:-54.66937366:-20.45758420">
+  <data key="d15">5.434</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3550308" target="airport:-46.65946677:-23.62616514">
+  <data key="d15">6.939</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3550308" target="airport:-47.14423312:-23.00694470">
+  <data key="d15">80.08</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3550308" target="airport:-46.56461878:-21.83849708">
+  <data key="d15">192.129</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3550308" target="airport:-47.10763729:-22.86125055">
+  <data key="d15">91.226</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3550308" target="airport:-46.94203887:-23.18029217">
+  <data key="d15">52.214</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3550308" target="airport:-46.48162768:-23.42600608">
+  <data key="d15">22.934</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:4106902" target="airport:-48.80186049:-26.22413927">
+  <data key="d15">96.815</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:4106902" target="airport:-49.17317396:-25.53622755">
+  <data key="d15">12.534</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:1501402" target="airport:-48.47960034:-1.38975786">
+  <data key="d15">7.903</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:2111300" target="airport:-44.23628957:-2.58350807">
+  <data key="d15">5.394</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:2927408" target="airport:-38.33481328:-12.91435422">
+  <data key="d15">19.116</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:2211001" target="airport:-42.82068411:-5.06407094">
+  <data key="d15">4.491</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:4314902" target="airport:-51.18689425:-29.19487929">
+  <data key="d15">93.815</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:4205407" target="airport:-50.27936150:-27.78183582">
+  <data key="d15">172.405</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:4205407" target="airport:-48.54550369:-27.67399285">
+  <data key="d15">8.294</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:1100205" target="airport:-63.89843237:-8.71439573">
+  <data key="d15">9.535</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:1302603" target="airport:-60.04493225:-3.03171866">
+  <data key="d15">8.146</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:1600303" target="airport:-51.06725027:0.04996988">
+  <data key="d15">1.261</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5103403" target="airport:-56.12028565:-15.65102436">
+  <data key="d15">6.093</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:2611606" target="airport:-34.91821701:-8.13141810">
+  <data key="d15">10.769</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:2800308" target="airport:-37.07228063:-10.98698235">
+  <data key="d15">6.972</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:2704302" target="airport:-35.79249635:-9.51426110">
+  <data key="d15">16.404</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:2704302" target="airport:-36.63013335:-9.77604832">
+  <data key="d15">101.422</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5208707" target="capital:5300108">
+  <data key="d15">179.216</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5208707" target="airport:-47.90107399:-18.21988768">
+  <data key="d15">222.504</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5208707" target="airport:-48.92682574:-16.35968949">
+  <data key="d15">51.962</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5208707" target="airport:-50.95841378:-17.83680487">
+  <data key="d15">220.089</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5208707" target="airport:-47.92067784:-15.86963786">
+  <data key="d15">170.333</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5208707" target="airport:-48.61473627:-17.72539851">
+  <data key="d15">133.392</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5208707" target="airport:-49.21437663:-16.62939681">
+  <data key="d15">9.226</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5300108" target="airport:-48.92682574:-16.35968949">
+  <data key="d15">128.835</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5300108" target="airport:-46.92746601:-16.35208001">
+  <data key="d15">119.861</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5300108" target="airport:-47.92067784:-15.86963786">
+  <data key="d15">10.474</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5300108" target="airport:-48.61473627:-17.72539851">
+  <data key="d15">229.621</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:5300108" target="airport:-49.21437663:-16.62939681">
+  <data key="d15">170.659</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:2304400" target="airport:-38.54049413:-3.77838595">
+  <data key="d15">6.403</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:2304400" target="airport:-38.53339162:-3.77634502">
+  <data key="d15">6.016</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="capital:3205309" target="airport:-40.28219371:-20.26557422">
+  <data key="d15">6.316</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-43.28002149:-21.78088244" target="airport:-42.18289619:-20.26392624">
+  <data key="d15">203.516</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-43.28002149:-21.78088244" target="airport:-43.16667257:-22.91225115">
+  <data key="d15">126.342</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-43.28002149:-21.78088244" target="airport:-43.24567932:-22.81383537">
+  <data key="d15">114.914</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-46.49236898:-18.67073444" target="airport:-47.90107399:-18.21988768">
+  <data key="d15">156.822</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-47.90107399:-18.21988768" target="airport:-48.92682574:-16.35968949">
+  <data key="d15">233.76</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-47.90107399:-18.21988768" target="airport:-48.61473627:-17.72539851">
+  <data key="d15">93.386</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-47.90107399:-18.21988768" target="airport:-49.21437663:-16.62939681">
+  <data key="d15">225.143</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-53.50350243:-25.00198143" target="airport:-54.48857718:-25.59779817">
+  <data key="d15">119.147</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-53.50350243:-25.00198143" target="airport:-53.69626541:-24.68503489">
+  <data key="d15">40.254</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-53.50350243:-25.00198143" target="airport:-53.06680597:-26.05916133">
+  <data key="d15">125.454</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-61.85015884:-10.87646860" target="airport:-61.18048610:-11.64425103">
+  <data key="d15">112.348</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-48.92682574:-16.35968949" target="airport:-46.92746601:-16.35208001">
+  <data key="d15">213.323</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-48.92682574:-16.35968949" target="airport:-47.92067784:-15.86963786">
+  <data key="d15">120.506</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-48.92682574:-16.35968949" target="airport:-48.61473627:-17.72539851">
+  <data key="d15">155.442</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-48.92682574:-16.35968949" target="airport:-49.21437663:-16.62939681">
+  <data key="d15">42.888</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-51.49054053:-23.35615536" target="airport:-51.13785446:-23.32858557">
+  <data key="d15">36.137</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-51.49054053:-23.35615536" target="airport:-52.01211592:-23.47971250">
+  <data key="d15">54.964</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-68.48579952:-10.66575766" target="airport:-67.89715245:-9.86656688">
+  <data key="d15">109.751</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-35.24470807:-5.90500083" target="airport:-35.37259406:-5.76335589">
+  <data key="d15">21.171</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-41.18884925:-20.83619535" target="airport:-42.18289619:-20.26392624">
+  <data key="d15">121.496</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-54.48857718:-25.59779817" target="airport:-53.69626541:-24.68503489">
+  <data key="d15">129.08</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-54.48857718:-25.59779817" target="airport:-53.06680597:-26.05916133">
+  <data key="d15">151.264</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-48.59714745:-20.58249530" target="airport:-47.77658183:-21.13915194">
+  <data key="d15">105.36</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-41.98677122:-18.89705729" target="airport:-42.18289619:-20.26392624">
+  <data key="d15">153.372</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-38.61847754:-6.88084982" target="airport:-39.27224470:-7.21517467">
+  <data key="d15">81.161</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-46.65946677:-23.62616514" target="airport:-47.14423312:-23.00694470">
+  <data key="d15">84.801</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-46.65946677:-23.62616514" target="airport:-46.56461878:-21.83849708">
+  <data key="d15">199.018</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-46.65946677:-23.62616514" target="airport:-47.10763729:-22.86125055">
+  <data key="d15">96.597</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-46.65946677:-23.62616514" target="airport:-46.94203887:-23.18029217">
+  <data key="d15">57.355</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-46.65946677:-23.62616514" target="airport:-46.48162768:-23.42600608">
+  <data key="d15">28.707</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-47.14423312:-23.00694470" target="airport:-46.56461878:-21.83849708">
+  <data key="d15">142.933</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-47.14423312:-23.00694470" target="airport:-47.10763729:-22.86125055">
+  <data key="d15">16.628</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-47.14423312:-23.00694470" target="airport:-46.94203887:-23.18029217">
+  <data key="d15">28.271</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-47.14423312:-23.00694470" target="airport:-46.48162768:-23.42600608">
+  <data key="d15">82.196</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-42.18289619:-20.26392624" target="airport:-43.95541274:-19.85154096">
+  <data key="d15">190.734</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-42.18289619:-20.26392624" target="airport:-43.96448131:-19.63081660">
+  <data key="d15">199.079</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-46.56461878:-21.83849708" target="airport:-47.10763729:-22.86125055">
+  <data key="d15">126.696</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-46.56461878:-21.83849708" target="airport:-46.94203887:-23.18029217">
+  <data key="d15">154.156</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-46.56461878:-21.83849708" target="airport:-46.48162768:-23.42600608">
+  <data key="d15">176.729</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-46.56461878:-21.83849708" target="airport:-47.77658183:-21.13915194">
+  <data key="d15">147.551</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-47.10763729:-22.86125055" target="airport:-46.94203887:-23.18029217">
+  <data key="d15">39.316</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-47.10763729:-22.86125055" target="airport:-46.48162768:-23.42600608">
+  <data key="d15">89.669</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-46.94203887:-23.18029217" target="airport:-46.48162768:-23.42600608">
+  <data key="d15">54.381</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-50.27936150:-27.78183582" target="airport:-51.18689425:-29.19487929">
+  <data key="d15">180.426</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-51.13785446:-23.32858557" target="airport:-52.01211592:-23.47971250">
+  <data key="d15">90.784</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-42.74905491:-14.20894205" target="airport:-40.86231929:-14.86659965">
+  <data key="d15">215.842</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-48.80186049:-26.22413927" target="airport:-49.17317396:-25.53622755">
+  <data key="d15">85.035</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-46.92746601:-16.35208001" target="airport:-47.92067784:-15.86963786">
+  <data key="d15">118.893</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-47.92067784:-15.86963786" target="airport:-48.61473627:-17.72539851">
+  <data key="d15">219.178</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-47.92067784:-15.86963786" target="airport:-49.21437663:-16.62939681">
+  <data key="d15">161.895</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-38.54049413:-3.77838595" target="airport:-38.53339162:-3.77634502">
+  <data key="d15">0.82</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-35.79249635:-9.51426110" target="airport:-36.63013335:-9.77604832">
+  <data key="d15">96.328</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-53.69626541:-24.68503489" target="airport:-53.06680597:-26.05916133">
+  <data key="d15">165.366</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-48.61473627:-17.72539851" target="airport:-49.21437663:-16.62939681">
+  <data key="d15">137.514</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-43.16667257:-22.91225115" target="airport:-43.24567932:-22.81383537">
+  <data key="d15">13.612</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+<edge source="airport:-43.95541274:-19.85154096" target="airport:-43.96448131:-19.63081660">
+  <data key="d15">24.562</data>
+  <data key="d16">curvature_only_terrain_pending</data>
+</edge>
+</graph></graphml>
