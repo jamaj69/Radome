@@ -315,6 +315,18 @@ visibilidade geométrica de candidato é armazenada como dois arcos com
 `bidirectional_semantics=true`; isso não altera a contagem lógica nem remove o
 marcador de terreno pendente.
 
+O contexto municipal e a densidade geométrica de infraestrutura por candidato
+são calculados sem criar arestas RF ou alegar visibilidade:
+
+```bash
+/usr/bin/python3 enrich_candidate_geospatial_context.py \
+  --graphml outputs/unified_geospatial_graph/graph.graphml \
+  --bc250 data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
+  --output outputs/unified_candidate_context/graph.graphml \
+  --table outputs/unified_candidate_context/candidates.csv.gz \
+  --report reports/unified_candidate_context/summary.json
+```
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;

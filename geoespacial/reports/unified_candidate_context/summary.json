@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "input_graph": "geoespacial/outputs/unified_geospatial_graph/graph.graphml",
+  "input_graph_sha256": "ee3d62afade09010dd011ffab01f86288ab44d8d2f7665c67dacacd4ba39d80f",
+  "bc250": "geoespacial/data/raw/ibge/bc250/bc250_2026-03-03.gpkg",
+  "bc250_sha256": "87ceffdfb894d9f034812a3ad25126a831f8f6016f01e412ca487edccb208a7d",
+  "output_graph": "geoespacial/outputs/unified_candidate_context/graph.graphml",
+  "output_graph_sha256": "27558153fe7d9aede1a1ce2ba7f3811850be199194399c6ea2e5dbaf8533596c",
+  "candidate_table": "geoespacial/outputs/unified_candidate_context/candidates.csv.gz",
+  "candidate_table_sha256": "fc251cabf12d6abfd68862fb7a7681b5919430f4a843ee9763035c02036c60c5",
+  "candidate_count": 131,
+  "candidate_type_counts": {
+    "airport": 104,
+    "capital": 27
+  },
+  "candidate_municipality_match_count": 131,
+  "candidate_municipality_missing_count": 0,
+  "infrastructure_node_counts": {
+    "anatel_cadastral_endpoint": 497,
+    "radiodifusao": 11921,
+    "torre_smp": 105726
+  },
+  "proximity_count_totals": {
+    "nearby_smp_site_count": 790026,
+    "nearby_broadcast_site_count": 80682,
+    "nearby_radio_link_endpoint_count": 3623
+  },
+  "edge_relation_counts": {
+    "cadastral_prequalified_hypothesis": 796,
+    "candidate_visibility_upper_bound": 218,
+    "located_in": 117778,
+    "located_in_cadastral": 497
+  },
+  "operational_edge_count": 0,
+  "proximity_semantics": "great-circle distance within candidate preliminary curvature-only radius; terrain visibility and RF illumination not evaluated"
+}

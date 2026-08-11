@@ -171,6 +171,12 @@ municípios, 105.726 sítios SMP, 11.921 radiodifusores, 497 endpoints e 131
 candidatos, sem colisões de atributo nem arestas operacionais. Sessenta e oito
 testes passam. O próximo gate associa candidatos a municípios e contabiliza a
 infraestrutura RF dentro de seus raios geométricos preliminares.
+Esse gate associou por contenção BC250 todos os 131 candidatos aos municípios
+canônicos e acrescentou 131 vínculos administrativos. Nos raios geométricos há
+790.026 incidências SMP, 80.682 de radiodifusão e 3.623 de endpoints; elas podem
+se sobrepor entre candidatos e não comprovam visada ou iluminação. O GraphML e a
+tabela gzip reproduziram byte a byte. O próximo gate ordena os candidatos com
+componentes normalizados e análise de sensibilidade, antes de qualquer *viewshed*.
 
 ## 6. Roadmap orientado por gates
 

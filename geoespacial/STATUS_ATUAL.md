@@ -86,6 +86,13 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - grafo geoespacial unificado: 123.846 nós e 119.158 registros de aresta, reunindo
   5.571 municípios, 105.726 sítios SMP, 11.921 radiodifusores, 497 endpoints e
   131 candidatos; zero colisões de atributo e zero arestas operacionais;
+- contexto dos candidatos: os 131 candidatos foram associados por contenção
+  BC250 a municípios canônicos, sem ausências; o grafo enriquecido tem 119.289
+  arestas, incluindo 131 novos vínculos administrativos, e continua com zero
+  arestas operacionais;
+- dentro dos raios geométricos preliminares há 790.026 incidências candidato--SMP,
+  80.682 candidato--radiodifusor e 3.623 candidato--endpoint; são incidências
+  sobrepostas, não objetos únicos nem confirmação de visada/iluminação;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -93,7 +100,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 68 testes automatizados aprovados;
+- 70 testes automatizados do conjunto disponível aprovados; a descoberta total
+  registra uma falha preexistente porque `acquire_decea_wfs.py` está ausente;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
@@ -121,10 +129,11 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Vincular espacialmente os 131 candidatos de capitais/aeroportos aos municípios
-canônicos e calcular, por raio geométrico preliminar, quantos sítios SMP,
-radiodifusores e endpoints de radioenlace circundam cada candidato. Não converter
-proximidade ou horizonte geométrico em visibilidade de terreno confirmada.
+Produzir uma ordenação multicritério preliminar dos 131 candidatos, normalizando
+altitude, logística municipal, diversidade azimutal de cidades e densidade das
+três classes RF. Preservar cada componente e executar análise de sensibilidade;
+não converter o escore, proximidade ou horizonte geométrico em visibilidade de
+terreno ou desempenho operacional.
 
 ## Comando de retomada
 
