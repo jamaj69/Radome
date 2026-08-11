@@ -180,6 +180,9 @@ python acquire_topodata_route_tiles.py \
 O arquivo somente recebe o nome definitivo depois da validação de CRC e da
 confirmação de que contém um GeoTIFF. Uma nova execução reutiliza arquivos já
 válidos; falhas e folhas ainda pendentes permanecem explícitas no recibo.
+Em 2026-08-11, o lote das rotas foi concluído com 154 arquivos, zero falhas e
+9.743.140.443 bytes reais; os hashes individuais estão em
+`reports/topodata_radio_link_tiles/acquisition.json`.
 
 ## Etapas
 

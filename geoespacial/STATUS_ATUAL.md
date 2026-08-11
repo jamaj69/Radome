@@ -57,6 +57,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   69 apenas visada, 40 obstruídos e 1 sem terreno; em `k=4/3`, 228/66/33/1;
 - seleção TOPODATA das 328 rotas: 154 arquivos, cerca de 9,07 GiB listados;
   `26S48_ZN.zip` ausente do índice oficial e preservado como lacuna;
+- aquisição TOPODATA concluída: 154 ZIPs validados, 9.743.140.443 bytes reais,
+  zero falhas e SHA-256 individual registrado no recibo incremental;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -64,7 +66,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 44 testes automatizados aprovados;
+- 46 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
@@ -85,15 +87,16 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   tabela canal--frequência;
 - potência, altura radiante e diagramas permanecem incompletos em várias fontes;
 - dez das 14 camadas DECEA selecionadas ainda não foram congeladas;
-- TOPODATA continental ainda não foi selecionado e baixado por região;
+- o subconjunto TOPODATA das rotas foi baixado, mas os GeoTIFFs ainda precisam
+  ser extraídos e a lacuna `26S48_ZN.zip` requer tratamento explícito;
 - radares aeronáuticos/militares não possuem camada pública estruturada
   confirmada; VSAT e radares meteorológicos estão apenas identificados.
 
 ## Próxima ação executável
 
-Baixar atomicamente os 154 arquivos TOPODATA selecionados, registrar SHA-256 e
-validar os ZIPs. Não inventar substituto para `26S48_ZN.zip`; depois extrair os
-GeoTIFFs e repetir os perfis. Alturas físicas continuam pendentes.
+Extrair atomicamente os 154 GeoTIFFs TOPODATA, montar o índice espacial e repetir
+os 328 perfis de terreno. Não inventar substituto para `26S48_ZN.zip`; as rotas
+afetadas devem permanecer com terreno ausente. Alturas físicas continuam pendentes.
 
 ## Comando de retomada
 

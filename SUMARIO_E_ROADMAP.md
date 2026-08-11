@@ -129,7 +129,10 @@ publicado. Quarenta e três testes passam. O próximo gate substitui o MDE por
 TOPODATA e verifica alturas físicas antes de qualquer aresta.
 Para as 328 rotas foram selecionadas 154 folhas TOPODATA, cerca de 9,07 GiB;
 uma folha requerida está ausente do índice oficial. Quarenta e quatro testes
-passam. O próximo gate baixa e valida atomicamente esse subconjunto.
+passam. As 154 folhas foram então baixadas e validadas integralmente, totalizando
+9.743.140.443 bytes reais, sem falhas e com SHA-256 individual; 46 testes passam.
+O próximo gate extrai os GeoTIFFs e recalcula os perfis, preservando a folha
+ausente como lacuna em vez de inventar dados.
 
 ## 6. Roadmap orientado por gates
 
