@@ -230,9 +230,14 @@ Passos:
 3. desempatar por relevo, visibilidade, iluminadores e logística;
 4. variar MDE, refração, pesos e resolução;
 5. publicar alternativas de mesma cardinalidade e causas das lacunas.
+6. testar em paralelo a heurística de malha triangular cooperativa definida em
+   `HEURISTICA_MALHA_TRIANGULAR.md`;
+7. comparar discos e tesselação por cardinalidade, lacunas, redundância 2/3,
+   faces `K3`, robustez e diversidade de iluminadores.
 
 Gate: solução reproduzível, cobertura quantificada e nenhum sítio continental
-isolado.
+isolado; a heurística triangular permanece experimental até superar ou esclarecer
+os compromissos da linha de base por discos.
 
 ### Fase 9 — refinamento, QGIS, Blender e artigo — pendente
 

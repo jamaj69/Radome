@@ -104,6 +104,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - lacunas dominantes: PA 817 células, AM 337, MT 330, AP/PI 73 cada e RR 44;
   a instância do otimizador preserva essas impossibilidades e não pode produzir
   uma falsa solução de cobertura nacional;
+- heurística alternativa registrada: tesselação triangular com vértices em
+  candidatos, preferência por faces de visada completa `K3`, caso degradado de
+  duas arestas e pontuação de iluminadores internos; implementação pendente e
+  comparação obrigatória com a cobertura por discos;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC

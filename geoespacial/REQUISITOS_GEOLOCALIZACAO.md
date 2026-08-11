@@ -65,6 +65,24 @@ qualquer mudança deve ser registrada explicitamente, com justificativa e data.
 6. Bases e comandos militares só podem ser classificados quando uma fonte
    pública oficial sustentar a classificação.
 
+## Heurística alternativa de malha triangular
+
+1. Testar uma tesselação triangular do território continental em que os
+   vértices sejam possíveis localizações de radomes.
+2. Favorecer triângulos cujos três pares de vértices tenham visada confirmada,
+   formando subgrafos completos `K3`; registrar separadamente casos degradados
+   com apenas duas arestas confirmadas.
+3. Favorecer concentração e diversidade de iluminadores dentro de cada
+   triângulo para aumentar a oportunidade de observação por três ou, no mínimo,
+   dois radomes.
+4. Não inferir eco detectável apenas porque um emissor ou alvo está dentro do
+   triângulo; exigir posteriormente geometria biestática/multiestática, terreno,
+   parâmetros RF, orçamento de enlace e atividade da fonte.
+5. Comparar essa heurística com a cobertura mínima por discos sob as mesmas
+   fontes, resolução, candidatos e hipóteses.
+6. A especificação experimental completa está em
+   `HEURISTICA_MALHA_TRIANGULAR.md`.
+
 ## Reprodutibilidade e publicação
 
 1. Manter scripts, configurações, documentação, hashes e relatórios suficientes

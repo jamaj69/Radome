@@ -98,6 +98,21 @@ O artigo deve publicar, para cada altitude-alvo:
 - resolução e versão do MDE;
 - hipóteses de propagação e data da execução.
 
+### Linha experimental: malha triangular cooperativa
+
+Será testada em paralelo uma heurística em que candidatos são vértices de uma
+tesselação triangular continental. Faces preferenciais exigem as três arestas
+de visada confirmadas (`K3`); faces com apenas duas arestas permanecem como caso
+degradado. Cada face recebe métricas de área, redundância de dois/três receptores,
+qualidade geométrica, cidades e diversidade de iluminadores internos.
+
+A hipótese é que triângulos com iluminadores adequadamente distribuídos podem
+favorecer oportunidades multiestáticas percebidas pelos três, ou ao menos dois,
+radomes. Essa hipótese será testada, não assumida: pertença ao triângulo não
+garante propagação, eco ou detectabilidade. A formulação e os experimentos estão
+registrados em `HEURISTICA_MALHA_TRIANGULAR.md` e serão comparados ao modelo de
+cobertura por discos com entradas equivalentes.
+
 ## Sequência reproduzível atual
 
 ```bash

@@ -112,5 +112,6 @@
   "110": "validate_anatel_radio_link_vertical_geometry.py",
   "111": "candidate_ranking/README.md",
   "112": "inventory",
-  "113": "continental_coverage_grid/README.md"
+  "113": "continental_coverage_grid/README.md",
+  "114": "extract_anatel_radio_links.py"
 }

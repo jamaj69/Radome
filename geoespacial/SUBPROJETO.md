@@ -33,6 +33,7 @@ de implantação e não transforma cobertura geométrica em alegação de detec�
 - `REQUISITOS_GEOLOCALIZACAO.md`: contrato normativo e instruções do usuário;
 - `ROADMAP_GEOESPACIAL.md`: inventário, fases, estados e gates;
 - `METODOLOGIA_ARTIGO.md`: texto intermediário para futura redação científica;
+- `HEURISTICA_MALHA_TRIANGULAR.md`: linha experimental de tesselação cooperativa;
 - `data/manifests/`: proveniência, datas, URLs, licenças e hashes;
 - `reports/`: auditorias e resultados pequenos;
 - `outputs/`: produtos derivados volumosos e regeneráveis;

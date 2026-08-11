@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786434262.4346004,
-    "ast_hash": "b6283a4fa497d6d9d83e312aecc8d453",
+    "mtime": 1786434969.2993925,
+    "ast_hash": "93dd10d15a0543bd6852beb97ff29787",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "geoespacial/METODOLOGIA_ARTIGO.md": {
-    "mtime": 1786427463.277877,
-    "ast_hash": "fa749024fb1153d50a132c372d094d5c",
+    "mtime": 1786434968.6473954,
+    "ast_hash": "f91f6c82650b1f4412cf44af28cc7b0d",
     "semantic_hash": ""
   },
   "geoespacial/FONTES_INFRAESTRUTURA.md": {
@@ -625,18 +625,18 @@
     "semantic_hash": ""
   },
   "geoespacial/REQUISITOS_GEOLOCALIZACAO.md": {
-    "mtime": 1786416073.907614,
-    "ast_hash": "7f3e0988a1b6d5a7f0dfb6f20c2de269",
+    "mtime": 1786434968.479396,
+    "ast_hash": "a3d8f3ddda7d4aee37cf531c44bce29e",
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786434262.2786012,
-    "ast_hash": "05c4e8db0fb92ce322abd268e7aa30f3",
+    "mtime": 1786434968.8113947,
+    "ast_hash": "52da79cc27541e73bf317c6dead1a114",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
-    "mtime": 1786416074.5356107,
-    "ast_hash": "958f2f4815a098accad0d19b45e3af80",
+    "mtime": 1786434969.1433933,
+    "ast_hash": "7ef7987fe183f2eff4e5a52b02e2006d",
     "semantic_hash": ""
   },
   "geoespacial/audit_anatel_spectrum.py": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786434262.126602,
-    "ast_hash": "4e56ba9ef12b53135fb4103a9b3e9931",
+    "mtime": 1786434968.979394,
+    "ast_hash": "730520714cb0d755b357604e8f5385cc",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -1162,6 +1162,11 @@
   "geoespacial/reports/continental_coverage_grid/README.md": {
     "mtime": 1786434261.7746034,
     "ast_hash": "80d5aca4ca9dbfcb898d642baafce6ec",
+    "semantic_hash": ""
+  },
+  "geoespacial/HEURISTICA_MALHA_TRIANGULAR.md": {
+    "mtime": 1786434968.303397,
+    "ast_hash": "363f4ebe351b60fa0d2ffa2491fc077a",
     "semantic_hash": ""
   }
 }

@@ -188,6 +188,11 @@ raio e a cobertura ponderada por área é apenas 84,46%. PA, AM e MT concentram
 que o solver rejeite uma falsa cobertura nacional. O próximo gate cria candidatos
 adicionais nas lacunas, priorizando terreno alto sem promover a cota BC250 a
 *viewshed* validado.
+Foi registrada também uma heurística alternativa de malha triangular: candidatos
+formam vértices e cada face favorece três enlaces de visada (`K3`) e iluminadores
+distribuídos em seu interior, admitindo como caso degradado a observação por dois
+vértices. A formulação será comparada à cobertura por discos e não presume que
+pertença geométrica ao triângulo implique eco detectável.
 
 ## 6. Roadmap orientado por gates
 
