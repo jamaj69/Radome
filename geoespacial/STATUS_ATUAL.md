@@ -146,6 +146,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - prioridade de perfis: as 3.209 faces contêm 4.823 arestas únicas; 4.262 têm
   limite de curvatura disponível, 4.228 incidem em ao menos uma face `K3`
   pendente e 289 combinam geometricamente as três classes de infraestrutura;
+- seleção TOPODATA das arestas: 4.262 rotas e 166.474 amostras requerem 214
+  folhas oficiais; 199 já estão locais e 15 novas somam 945.815.552 bytes
+  listados; `03N66_ZN.zip` está ausente do inventário e afeta duas arestas;
 - seleção das folhas de borda concluída: os 188.788 centros e pontos dos anéis
   requerem 175 folhas TOPODATA disponíveis, das quais 143 já são locais e 32
   novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
@@ -164,7 +167,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 95 testes automatizados aprovados na descoberta completa com
+- 97 testes automatizados aprovados na descoberta completa com
   `PYTHONPATH=geoespacial`;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
@@ -193,9 +196,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Selecionar as folhas TOPODATA atravessadas pelas arestas priorizadas e calcular
-os perfis de terreno em lotes, comparando a conectividade confirmável com a
-cobertura por discos e mantendo iluminadores separados do modelo RF futuro.
+Adquirir e extrair as 15 folhas TOPODATA adicionais e calcular os perfis de
+terreno em lotes, mantendo as duas arestas afetadas por `03N66_ZN.zip` em falha
+conservadora e os iluminadores separados do modelo RF futuro.
 
 ## Comando de retomada
 

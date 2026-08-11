@@ -1,0 +1,1118 @@
+{
+  "schema_version": 1,
+  "graph": "geoespacial/outputs/augmented_candidate_graph/graph.graphml",
+  "graph_sha256": "c5d8e43a019d57532578d1d2467395aa28e8e513cddb55ad196c1a0d0d6e166f",
+  "edges": "geoespacial/outputs/augmented_mesh_edge_priority/edges.csv.gz",
+  "edges_sha256": "1588d86b6772ead24f2aa576cdb6878cb0da67b1afbcfed8471366c3c5ee533c",
+  "manifest": "geoespacial/data/manifests/topodata_altitude_tiles.json",
+  "manifest_sha256": "76b6ca629354196fda217b8726f72d0384def2bc89703b05083572935cfb2be7",
+  "sample_spacing_km": 1.0,
+  "selected_edge_count": 4262,
+  "excluded_without_curvature_upper_bound_count": 561,
+  "route_sample_count": 166474,
+  "selected_archive_count": 214,
+  "selected_listed_size_bytes": 13311672320,
+  "already_local_archive_count": 199,
+  "new_archive_count": 15,
+  "new_listed_size_bytes": 945815552,
+  "new_archive_names": [
+    "01N525ZN.zip",
+    "02S45_ZN.zip",
+    "03N615ZN.zip",
+    "07S39_ZN.zip",
+    "07S405ZN.zip",
+    "08S36_ZN.zip",
+    "08S645ZN.zip",
+    "09S69_ZN.zip",
+    "10S63_ZN.zip",
+    "10S69_ZN.zip",
+    "11S63_ZN.zip",
+    "14S435ZN.zip",
+    "16S48_ZN.zip",
+    "18S465ZN.zip",
+    "27S51_ZN.zip"
+  ],
+  "missing_archive_names": [
+    "03N66_ZN.zip"
+  ],
+  "missing_archive_details": [
+    {
+      "name": "03N66_ZN.zip",
+      "route_sample_count": 159,
+      "affected_edge_count": 2
+    }
+  ],
+  "archives": [
+    {
+      "name": "00S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/00S54_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "00S555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/00S555ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "00S57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/00S57_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "00S585ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/00S585ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "00S60_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/00S60_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "00S615ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/00S615ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "00S63_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/00S63_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "00S645ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/00S645ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "00S66_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/00S66_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "00S705ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/00S705ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "01N525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01N525ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "01N54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01N54_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "01N555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01N555ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "01N57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01N57_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "01N585ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01N585ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "01N60_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01N60_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "01N63_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01N63_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "01N645ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01N645ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "01N66_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01N66_ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "01N705ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01N705ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "01S495ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01S495ZN.zip",
+      "listed_size_bytes": 68157440
+    },
+    {
+      "name": "01S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01S525ZN.zip",
+      "listed_size_bytes": 68157440
+    },
+    {
+      "name": "01S57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01S57_ZN.zip",
+      "listed_size_bytes": 67108864
+    },
+    {
+      "name": "01S585ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01S585ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "01S60_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01S60_ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "01S63_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01S63_ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "01S645ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01S645ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "01S66_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01S66_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "01S69_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01S69_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "01S705ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/01S705ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "02N54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02N54_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "02N555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02N555ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "02N57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02N57_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "02N585ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02N585ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "02N60_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02N60_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "02N645ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02N645ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "02N66_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02N66_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "02N69_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02N69_ZN.zip",
+      "listed_size_bytes": 58720256
+    },
+    {
+      "name": "02N705ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02N705ZN.zip",
+      "listed_size_bytes": 58720256
+    },
+    {
+      "name": "02S45_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02S45_ZN.zip",
+      "listed_size_bytes": 69206016
+    },
+    {
+      "name": "02S48_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02S48_ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "02S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02S51_ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "02S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02S525ZN.zip",
+      "listed_size_bytes": 67108864
+    },
+    {
+      "name": "02S585ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02S585ZN.zip",
+      "listed_size_bytes": 67108864
+    },
+    {
+      "name": "02S645ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02S645ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "02S66_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02S66_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "02S69_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02S69_ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "02S705ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/02S705ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "03N51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03N51_ZN.zip",
+      "listed_size_bytes": 47185920
+    },
+    {
+      "name": "03N525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03N525ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "03N54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03N54_ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "03N555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03N555ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "03N57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03N57_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "03N615ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03N615ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "03N645ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03N645ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "03S39_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03S39_ZN.zip",
+      "listed_size_bytes": 47185920
+    },
+    {
+      "name": "03S48_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03S48_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "03S495ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03S495ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "03S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03S51_ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "03S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03S525ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "03S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03S54_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "03S57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03S57_ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "03S585ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03S585ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "03S615ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/03S615ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "04N525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/04N525ZN.zip",
+      "listed_size_bytes": 68157440
+    },
+    {
+      "name": "04N645ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/04N645ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "04S495ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/04S495ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "04S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/04S51_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "04S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/04S525ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "04S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/04S54_ZN.zip",
+      "listed_size_bytes": 58720256
+    },
+    {
+      "name": "04S555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/04S555ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "04S57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/04S57_ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "04S585ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/04S585ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "04S60_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/04S60_ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "05N525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/05N525ZN.zip",
+      "listed_size_bytes": 70254592
+    },
+    {
+      "name": "05N645ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/05N645ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "05S36_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/05S36_ZN.zip",
+      "listed_size_bytes": 46137344
+    },
+    {
+      "name": "05S435ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/05S435ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "05S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/05S51_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "05S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/05S525ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "05S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/05S54_ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "05S555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/05S555ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "05S57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/05S57_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "05S585ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/05S585ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "05S60_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/05S60_ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "06S39_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/06S39_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "06S45_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/06S45_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "06S465ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/06S465ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "06S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/06S51_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "06S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/06S525ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "06S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/06S54_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "06S555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/06S555ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "06S57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/06S57_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "06S585ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/06S585ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "06S60_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/06S60_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "07S36_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S36_ZN.zip",
+      "listed_size_bytes": 68157440
+    },
+    {
+      "name": "07S39_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S39_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "07S405ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S405ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "07S435ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S435ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "07S45_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S45_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "07S465ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S465ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "07S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S51_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "07S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S525ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "07S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S54_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "07S555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S555ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "07S57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S57_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "07S585ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S585ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "07S60_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S60_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "07S615ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S615ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "07S675ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/07S675ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "08S36_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/08S36_ZN.zip",
+      "listed_size_bytes": 69206016
+    },
+    {
+      "name": "08S435ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/08S435ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "08S45_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/08S45_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "08S465ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/08S465ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "08S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/08S51_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "08S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/08S525ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "08S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/08S54_ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "08S555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/08S555ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "08S585ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/08S585ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "08S60_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/08S60_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "08S615ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/08S615ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "08S645ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/08S645ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "09S36_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/09S36_ZN.zip",
+      "listed_size_bytes": 46137344
+    },
+    {
+      "name": "09S375ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/09S375ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "09S435ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/09S435ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "09S45_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/09S45_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "09S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/09S51_ZN.zip",
+      "listed_size_bytes": 57671680
+    },
+    {
+      "name": "09S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/09S525ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "09S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/09S54_ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "09S60_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/09S60_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "09S615ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/09S615ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "09S69_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/09S69_ZN.zip",
+      "listed_size_bytes": 58720256
+    },
+    {
+      "name": "10S375ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/10S375ZN.zip",
+      "listed_size_bytes": 69206016
+    },
+    {
+      "name": "10S495ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/10S495ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "10S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/10S51_ZN.zip",
+      "listed_size_bytes": 53477376
+    },
+    {
+      "name": "10S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/10S525ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "10S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/10S54_ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "10S63_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/10S63_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "10S66_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/10S66_ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "10S69_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/10S69_ZN.zip",
+      "listed_size_bytes": 58720256
+    },
+    {
+      "name": "11S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/11S51_ZN.zip",
+      "listed_size_bytes": 50331648
+    },
+    {
+      "name": "11S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/11S525ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "11S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/11S54_ZN.zip",
+      "listed_size_bytes": 57671680
+    },
+    {
+      "name": "11S555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/11S555ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "11S615ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/11S615ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "11S63_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/11S63_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "11S645ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/11S645ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "11S66_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/11S66_ZN.zip",
+      "listed_size_bytes": 56623104
+    },
+    {
+      "name": "12S39_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/12S39_ZN.zip",
+      "listed_size_bytes": 69206016
+    },
+    {
+      "name": "12S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/12S51_ZN.zip",
+      "listed_size_bytes": 54525952
+    },
+    {
+      "name": "12S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/12S525ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "12S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/12S54_ZN.zip",
+      "listed_size_bytes": 57671680
+    },
+    {
+      "name": "12S555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/12S555ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "12S57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/12S57_ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "12S645ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/12S645ZN.zip",
+      "listed_size_bytes": 55574528
+    },
+    {
+      "name": "12S66_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/12S66_ZN.zip",
+      "listed_size_bytes": 55574528
+    },
+    {
+      "name": "13S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/13S51_ZN.zip",
+      "listed_size_bytes": 58720256
+    },
+    {
+      "name": "13S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/13S525ZN.zip",
+      "listed_size_bytes": 58720256
+    },
+    {
+      "name": "13S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/13S54_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "13S555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/13S555ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "13S57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/13S57_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "14S42_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/14S42_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "14S435ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/14S435ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "14S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/14S525ZN.zip",
+      "listed_size_bytes": 56623104
+    },
+    {
+      "name": "14S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/14S54_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "14S555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/14S555ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "15S48_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/15S48_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "15S495ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/15S495ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "15S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/15S525ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "15S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/15S54_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "15S57_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/15S57_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "15S60_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/15S60_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "15S615ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/15S615ZN.zip",
+      "listed_size_bytes": 59768832
+    },
+    {
+      "name": "16S48_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/16S48_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "16S495ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/16S495ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "16S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/16S51_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "16S60_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/16S60_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "16S615ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/16S615ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "17S495ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/17S495ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "17S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/17S51_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "18S42_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/18S42_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "18S435ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/18S435ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "18S465ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/18S465ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "18S48_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/18S48_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "18S495ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/18S495ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "19S435ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/19S435ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "19S45_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/19S45_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "20S405ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/20S405ZN.zip",
+      "listed_size_bytes": 23068672
+    },
+    {
+      "name": "20S42_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/20S42_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "20S435ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/20S435ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "20S45_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/20S45_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "20S48_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/20S48_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "20S495ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/20S495ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "20S555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/20S555ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "21S435ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/21S435ZN.zip",
+      "listed_size_bytes": 66060288
+    },
+    {
+      "name": "21S45_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/21S45_ZN.zip",
+      "listed_size_bytes": 58720256
+    },
+    {
+      "name": "21S48_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/21S48_ZN.zip",
+      "listed_size_bytes": 61865984
+    },
+    {
+      "name": "22S435ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/22S435ZN.zip",
+      "listed_size_bytes": 67108864
+    },
+    {
+      "name": "22S48_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/22S48_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "23S465ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/23S465ZN.zip",
+      "listed_size_bytes": 83886080
+    },
+    {
+      "name": "23S48_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/23S48_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "23S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/23S525ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "24S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/24S54_ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "25S495ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/25S495ZN.zip",
+      "listed_size_bytes": 68157440
+    },
+    {
+      "name": "25S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/25S54_ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "25S555ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/25S555ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "26S495ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/26S495ZN.zip",
+      "listed_size_bytes": 70254592
+    },
+    {
+      "name": "26S54_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/26S54_ZN.zip",
+      "listed_size_bytes": 65011712
+    },
+    {
+      "name": "27S495ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/27S495ZN.zip",
+      "listed_size_bytes": 70254592
+    },
+    {
+      "name": "27S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/27S51_ZN.zip",
+      "listed_size_bytes": 62914560
+    },
+    {
+      "name": "28S51_ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/28S51_ZN.zip",
+      "listed_size_bytes": 60817408
+    },
+    {
+      "name": "28S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/28S525ZN.zip",
+      "listed_size_bytes": 63963136
+    },
+    {
+      "name": "29S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/29S525ZN.zip",
+      "listed_size_bytes": 67108864
+    },
+    {
+      "name": "30S525ZN.zip",
+      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/30S525ZN.zip",
+      "listed_size_bytes": 69206016
+    }
+  ],
+  "selection_semantics": "great-circle samples at <=1 km along curvature-upper-bound mesh edges; terrain profile input only, not visibility or RF evidence"
+}
