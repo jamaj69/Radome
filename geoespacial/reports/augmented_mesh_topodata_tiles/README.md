@@ -37,3 +37,21 @@ cd /home/jamaj/src/Radome
   --output-dir geoespacial/data/raw/topodata/radio_link_routes \
   --report geoespacial/reports/augmented_mesh_topodata_tiles/acquisition.json
 ```
+
+## Extração e índice
+
+`extraction.json` registra 214 GeoTIFFs em EPSG:4326, totalizando
+16.660.168.596 bytes, sem falhas. `index.geojson` contém 214 feições com
+extensão, resolução e hashes sob o nome `augmented_mesh_topodata_tiles`. Uma
+segunda execução marcou e revalidou todos os GeoTIFFs como `reused`.
+
+```bash
+cd /home/jamaj/src/Radome
+/home/python/pyenv/bin/python geoespacial/extract_topodata_route_tiles.py \
+  --receipt geoespacial/reports/augmented_mesh_topodata_tiles/acquisition.json \
+  --archive-dir geoespacial/data/raw/topodata/radio_link_routes \
+  --target-dir geoespacial/data/processed/topodata/radio_link_routes \
+  --report geoespacial/reports/augmented_mesh_topodata_tiles/extraction.json \
+  --index geoespacial/reports/augmented_mesh_topodata_tiles/index.geojson \
+  --index-name augmented_mesh_topodata_tiles
+```

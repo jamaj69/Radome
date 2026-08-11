@@ -152,6 +152,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - aquisição TOPODATA das arestas concluída: 214 ZIPs validados por CRC e
   SHA-256, totalizando 13.317.509.748 bytes reais, sem falhas; uma segunda
   passagem revalidou todos como reutilizados;
+- extração TOPODATA das arestas concluída: 214 GeoTIFFs em EPSG:4326,
+  totalizando 16.660.168.596 bytes, sem falhas e com índice GeoJSON próprio;
+  uma segunda passagem revalidou todos como reutilizados;
 - seleção das folhas de borda concluída: os 188.788 centros e pontos dos anéis
   requerem 175 folhas TOPODATA disponíveis, das quais 143 já são locais e 32
   novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
@@ -199,9 +202,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Extrair e indexar as 214 folhas TOPODATA selecionadas e calcular os perfis de
-terreno em lotes, mantendo as duas arestas afetadas por `03N66_ZN.zip` em falha
-conservadora e os iluminadores separados do modelo RF futuro.
+Calcular os perfis TOPODATA das arestas em lotes, mantendo as duas arestas
+afetadas por `03N66_ZN.zip` em falha conservadora e os iluminadores separados
+do modelo RF futuro.
 
 ## Comando de retomada
 

@@ -125,5 +125,6 @@
   "123": "augmented_continental_coverage_grid/README.md",
   "124": "augmented_triangular_mesh/README.md",
   "125": "augmented_mesh_edge_priority/README.md",
-  "126": "augmented_mesh_topodata_tiles/README.md"
+  "126": "augmented_mesh_topodata_tiles/README.md",
+  "127": "validate_anatel_radio_link_geometry.py"
 }
