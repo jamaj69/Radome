@@ -136,6 +136,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
   inventário oficial e afeta somente três pontos de uma semente, mantidos como
   incompletos de forma conservadora;
+- aquisição das folhas de borda concluída: 175 ZIPs validados por CRC e
+  SHA-256, totalizando 10.819.492.567 bytes reais, sem falhas; uma segunda
+  passagem marcou e revalidou todos como reutilizados, sem nova transferência;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -172,10 +175,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Adquirir e extrair as 32 folhas TOPODATA adicionais selecionadas para os anéis,
-repetir a triagem e quantificar a incompletude residual causada exclusivamente
-por `05N51_ZN.zip`. Somente então congelar a consolidação e recalcular a
-cobertura e a malha triangular.
+Extrair e indexar as 175 folhas TOPODATA dos anéis, repetir a triagem e
+quantificar a incompletude residual causada exclusivamente por `05N51_ZN.zip`.
+Somente então congelar a consolidação e recalcular a cobertura e a malha
+triangular.
 
 ## Comando de retomada
 

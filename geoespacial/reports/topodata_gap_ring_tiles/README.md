@@ -26,3 +26,22 @@ cd /home/jamaj/src/Radome
 
 Esta seleção apenas fecha a disponibilidade de amostragem do terreno. Ela não
 confirma sítio, proeminência topográfica, visada, cobertura ou iluminação RF.
+
+## Aquisição
+
+`acquisition.json` registra 175 ZIPs validados por CRC e SHA-256, totalizando
+10.819.492.567 bytes reais, sem falhas ou pendências. Depois do download das 32
+folhas novas, uma segunda execução revalidou e marcou todos os 175 arquivos
+como `reused`, demonstrando a retomabilidade sem nova transferência.
+
+```bash
+cd /home/jamaj/src/Radome
+/home/python/pyenv/bin/python geoespacial/acquire_topodata_route_tiles.py \
+  --selection geoespacial/reports/topodata_gap_ring_tiles/selection.json \
+  --output-dir geoespacial/data/raw/topodata/radio_link_routes \
+  --report geoespacial/reports/topodata_gap_ring_tiles/acquisition.json
+```
+
+A ausência externa `05N51_ZN.zip` continua registrada em
+`missing_archive_names_from_selection`; ela não é contada entre os 175 arquivos
+disponíveis solicitados pelo recibo.

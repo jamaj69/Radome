@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 195 files · ~511,184 words
+- 196 files · ~514,116 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1253 nodes · 1673 edges · 122 communities (94 shown, 28 thin omitted)
+- 1254 nodes · 1674 edges · 123 communities (95 shown, 28 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 124 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `44dd9270`
+- Built from commit: `dbefa8d5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -136,6 +136,7 @@
 - topodata_gap_seeds/README.md
 - validate_anatel_radio_link_vertical_geometry.py
 - topodata_gap_candidates/README.md
+- validate_anatel_radio_link_geometry.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -164,7 +165,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (122 total, 28 thin omitted)
+## Communities (123 total, 28 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -239,8 +240,8 @@ Cohesion: 0.27
 Nodes (9): Any, Candidate, load_instance(), main(), Path, Minimize site count, using candidate score only as a tie-breaker., solve(), candidate() (+1 more)
 
 ### Community 18 - "Seleção geoespacial de sítios RADOME"
-Cohesion: 0.12
-Nodes (18): horizon_km(), main(), node_id(), Path, Lê uma camada com os bindings GDAL, sem conversão externa por shell., read_layer(), terrain_elevation(), tile_pixel() (+10 more)
+Cohesion: 0.06
+Nodes (32): horizon_km(), main(), node_id(), Path, Lê uma camada com os bindings GDAL, sem conversão externa por shell., read_layer(), terrain_elevation(), tile_pixel() (+24 more)
 
 ### Community 20 - "RADOME Project / Projeto RADOME"
 Cohesion: 0.33
@@ -447,8 +448,8 @@ Cohesion: 0.50
 Nodes (3): Famílias explícitas de radioenlaces Anatel, Reprodução, Resultado
 
 ### Community 83 - "evaluate_anatel_radio_link_terrain.py"
-Cohesion: 0.05
-Nodes (37): consolidate(), destination(), main(), normalize(), Path, ring_clearance(), screen(), candidate_status() (+29 more)
+Cohesion: 0.08
+Nodes (23): consolidate(), destination(), main(), normalize(), Path, ring_clearance(), screen(), evaluate() (+15 more)
 
 ### Community 84 - "extract_topodata_route_tiles.py"
 Cohesion: 0.24
@@ -483,8 +484,8 @@ Cohesion: 0.21
 Nodes (11): clean(), extract(), main(), Path, file_sha256(), inventory(), main(), Path (+3 more)
 
 ### Community 93 - "consolidate_anatel_radio_link_prequalification.py"
-Cohesion: 0.16
-Nodes (11): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest, GeometryTest, angular_error(), bearing() (+3 more)
+Cohesion: 0.31
+Nodes (5): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest
 
 ### Community 96 - "ZipFile"
 Cohesion: 0.30
@@ -537,6 +538,10 @@ Nodes (5): Closed-set and dataset-leakage risks, Inconsistent metrics, Insuffici
 ### Community 118 - "build_continental_coverage_grid.py"
 Cohesion: 0.29
 Nodes (8): approximate_cell_area_km2(), build(), containing_unit(), covering_candidates(), federation_units(), main(), Path, ContinentalCoverageGridTests
+
+### Community 122 - "validate_anatel_radio_link_geometry.py"
+Cohesion: 0.31
+Nodes (6): GeometryTest, angular_error(), bearing(), main(), Path, validate()
 
 ## Knowledge Gaps
 - **509 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+504 more)
