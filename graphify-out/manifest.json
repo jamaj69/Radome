@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786481843.279467,
-    "ast_hash": "e5c0e22e03c98acd1979e51bbc96ec0b",
+    "mtime": 1786482298.2773218,
+    "ast_hash": "417ab74a3d6c9b2ca22bc9608a8a4853",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786481851.3874288,
-    "ast_hash": "f4bfaa137844632269762599c9f72ab6",
+    "mtime": 1786482298.1253226,
+    "ast_hash": "d1d41615db9bed57b3d080deb7a0c04d",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -1365,8 +1365,13 @@
     "semantic_hash": ""
   },
   "geoespacial/reports/augmented_mesh_topodata_tiles/README.md": {
-    "mtime": 1786481842.9754684,
-    "ast_hash": "e79885160698133c6630026312445338",
+    "mtime": 1786482297.9333234,
+    "ast_hash": "89d15ab193af4914c5650fe60b0a643d",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/augmented_mesh_topodata_tiles/acquisition.json": {
+    "mtime": 1786482270.025455,
+    "ast_hash": "26177f17a93adb6835db74cf764ba2ef",
     "semantic_hash": ""
   }
 }

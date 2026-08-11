@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 213 files · ~524,752 words
+- 214 files · ~528,297 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1295 nodes · 1732 edges · 127 communities (95 shown, 32 thin omitted)
+- 1296 nodes · 1733 edges · 127 communities (95 shown, 32 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 134 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c39e4659`
+- Built from commit: `0ef935c2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -344,8 +344,8 @@ Cohesion: 0.40
 Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 5: integration, calibration, and operational validation, What the research shows
 
 ### Community 46 - "Cross-search signals"
-Cohesion: 0.08
-Nodes (23): edge_tile_names(), main(), Path, select(), main(), Counter, Path, required_names() (+15 more)
+Cohesion: 0.06
+Nodes (30): candidate_status(), evaluate(), main(), Counter, Path, classify(), evaluate(), interpolate() (+22 more)
 
 ### Community 47 - "Cross-search signals"
 Cohesion: 0.40
@@ -452,8 +452,8 @@ Cohesion: 0.50
 Nodes (3): Famílias explícitas de radioenlaces Anatel, Reprodução, Resultado
 
 ### Community 83 - "evaluate_anatel_radio_link_terrain.py"
-Cohesion: 0.05
-Nodes (37): consolidate(), destination(), main(), normalize(), Path, ring_clearance(), screen(), candidate_status() (+29 more)
+Cohesion: 0.06
+Nodes (30): consolidate(), destination(), main(), normalize(), Path, ring_clearance(), screen(), evaluate() (+22 more)
 
 ### Community 84 - "extract_topodata_route_tiles.py"
 Cohesion: 0.24
@@ -516,8 +516,8 @@ Cohesion: 0.36
 Nodes (5): analyze(), distance(), main(), Path, CandidateTest
 
 ### Community 105 - "build_canonical_fixed_emitters.py"
-Cohesion: 0.09
-Nodes (23): build(), face_status(), lambert_azimuthal_equal_area(), main(), Path, read_grid(), triangle_quality(), build() (+15 more)
+Cohesion: 0.08
+Nodes (28): build(), face_status(), lambert_azimuthal_equal_area(), main(), Path, read_grid(), triangle_quality(), approximate_cell_area_km2() (+20 more)
 
 ### Community 107 - "build_canonical_fixed_emitters.py"
 Cohesion: 0.48
@@ -544,8 +544,8 @@ Cohesion: 0.50
 Nodes (3): Aquisição, Extração e índice, Folhas TOPODATA dos anéis das lacunas
 
 ### Community 122 - "build_continental_coverage_grid.py"
-Cohesion: 0.23
-Nodes (10): approximate_cell_area_km2(), build(), containing_unit(), covering_candidates(), federation_units(), main(), optimization_score(), Path (+2 more)
+Cohesion: 0.33
+Nodes (5): build(), face_edges(), main(), Path, PrioritizeAugmentedMeshEdgesTests
 
 ## Knowledge Gaps
 - **515 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+510 more)
@@ -556,7 +556,9 @@ Nodes (10): approximate_cell_area_km2(), build(), containing_unit(), covering_ca
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `Topodata` connect `evaluate_anatel_radio_link_terrain.py` to `Cross-search signals`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 10 inferred relationships involving `number()` (e.g. with `analyze()` and `audit_member()`) actually correct?**
@@ -567,5 +569,3 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
   _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
-- **Should `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` be split into smaller, more focused modules?**
-  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._

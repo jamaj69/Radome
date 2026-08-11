@@ -149,6 +149,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - seleção TOPODATA das arestas: 4.262 rotas e 166.474 amostras requerem 214
   folhas oficiais; 199 já estão locais e 15 novas somam 945.815.552 bytes
   listados; `03N66_ZN.zip` está ausente do inventário e afeta duas arestas;
+- aquisição TOPODATA das arestas concluída: 214 ZIPs validados por CRC e
+  SHA-256, totalizando 13.317.509.748 bytes reais, sem falhas; uma segunda
+  passagem revalidou todos como reutilizados;
 - seleção das folhas de borda concluída: os 188.788 centros e pontos dos anéis
   requerem 175 folhas TOPODATA disponíveis, das quais 143 já são locais e 32
   novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
@@ -196,7 +199,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Adquirir e extrair as 15 folhas TOPODATA adicionais e calcular os perfis de
+Extrair e indexar as 214 folhas TOPODATA selecionadas e calcular os perfis de
 terreno em lotes, mantendo as duas arestas afetadas por `03N66_ZN.zip` em falha
 conservadora e os iluminadores separados do modelo RF futuro.
 

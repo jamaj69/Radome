@@ -21,3 +21,19 @@ cd /home/jamaj/src/Radome
 ```
 
 A seleção reproduziu byte a byte e não constitui evidência de visada ou RF.
+
+## Aquisição
+
+`acquisition.json` registra 214 ZIPs validados por CRC e SHA-256, totalizando
+13.317.509.748 bytes reais, sem falhas. Depois do download das 15 folhas novas,
+uma segunda execução revalidou todos os 214 arquivos como `reused`, sem nova
+transferência. `03N66_ZN.zip` continua explicitamente ausente da seleção
+oficial e não é contada entre os 214 arquivos disponíveis.
+
+```bash
+cd /home/jamaj/src/Radome
+/home/python/pyenv/bin/python geoespacial/acquire_topodata_route_tiles.py \
+  --selection geoespacial/reports/augmented_mesh_topodata_tiles/selection.json \
+  --output-dir geoespacial/data/raw/topodata/radio_link_routes \
+  --report geoespacial/reports/augmented_mesh_topodata_tiles/acquisition.json
+```
