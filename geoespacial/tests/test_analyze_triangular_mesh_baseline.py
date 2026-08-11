@@ -2,10 +2,13 @@ import unittest
 
 import numpy as np
 
-from analyze_triangular_mesh_baseline import face_status, lambert_azimuthal_equal_area, triangle_quality
+from analyze_triangular_mesh_baseline import CANDIDATE_TYPES, face_status, lambert_azimuthal_equal_area, triangle_quality
 
 
 class TriangularMeshBaselineTests(unittest.TestCase):
+    def test_gap_candidate_is_an_explicit_mesh_vertex_type(self):
+        self.assertIn("candidate_radome_gap", CANDIDATE_TYPES)
+
     def test_projection_centre_maps_to_origin(self):
         x, y = lambert_azimuthal_equal_area(-54, -15)
         self.assertAlmostEqual(x, 0.0)

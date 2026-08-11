@@ -139,6 +139,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - cobertura geométrica aumentada: os 1.615 candidatos incidem sobre todos os
   11.363 centros da grade continental; 64 células têm cobertura única e 11.299
   redundante, mas o resultado por discos não comprova terreno, visada ou RF;
+- malha triangular aumentada: 1.615 vértices geram 3.209 faces Delaunay, sendo
+  2.724 `K3` somente por curvatura pendente; a envoltória contém 98,41% da área
+  da grade e associa geometricamente 101.500 SMP, 11.703 radiodifusores e 481
+  endpoints, sem criar `illuminates` ou visada confirmada;
 - seleção das folhas de borda concluída: os 188.788 centros e pontos dos anéis
   requerem 175 folhas TOPODATA disponíveis, das quais 143 já são locais e 32
   novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
@@ -157,7 +161,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 92 testes automatizados aprovados na descoberta completa com
+- 93 testes automatizados aprovados na descoberta completa com
   `PYTHONPATH=geoespacial`;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
@@ -186,9 +190,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Recalcular a malha triangular com os 1.615 candidatos e associar as camadas
-canônicas de iluminadores apenas como incidências geométricas, sem antecipar
-visada ou `illuminates` RF.
+Priorizar as arestas da malha aumentada para perfis TOPODATA de terreno e
+comparar a conectividade confirmável com a cobertura por discos, mantendo as
+incidências de iluminadores separadas do futuro modelo RF quantitativo.
 
 ## Comando de retomada
 

@@ -27,6 +27,7 @@ SEMANTICS = (
     "curvature-only candidate upper bounds pending terrain; illuminator membership "
     "is geometric and does not assert RF illumination or echo detectability"
 )
+CANDIDATE_TYPES = {"capital", "airport", "candidate_radome_gap"}
 
 
 def lambert_azimuthal_equal_area(longitude: float, latitude: float) -> tuple[float, float]:
@@ -74,7 +75,7 @@ def build(graphml: Path, grid: Path, output_dir: Path, report: Path) -> dict:
     infrastructure = []
     for identifier, attributes in sorted(graph.nodes(data=True)):
         node_type = str(attributes.get("node_type", ""))
-        if node_type in {"capital", "airport"}:
+        if node_type in CANDIDATE_TYPES:
             latitude, longitude = coordinates(attributes)
             candidates.append({"node_id": identifier, "name": attributes.get("name", ""), "longitude": longitude, "latitude": latitude})
         elif node_type in {"torre_smp", "radiodifusao", "anatel_cadastral_endpoint"}:
@@ -142,7 +143,7 @@ def build(graphml: Path, grid: Path, output_dir: Path, report: Path) -> dict:
     deterministic_gzip_csv(table, public_faces, list(public_faces[0]))
     geojson = output_dir / "triangular_mesh.geojson"
     geojson.write_text(json.dumps({
-        "type": "FeatureCollection", "name": "candidate_triangular_mesh_baseline",
+        "type": "FeatureCollection", "name": "candidate_triangular_mesh",
         "crs": {"type": "name", "properties": {"name": "urn:ogc:def:crs:EPSG::4674"}},
         "features": [{
             "type": "Feature",
