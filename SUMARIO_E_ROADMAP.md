@@ -88,11 +88,13 @@ de integração científica estão em `geoespacial/SUBPROJETO.md`; requisitos e
 fases permanecem controlados, respectivamente, por
 `REQUISITOS_GEOLOCALIZACAO.md` e `ROADMAP_GEOESPACIAL.md` naquele diretório.
 
-O marco ativo é M3 — infraestrutura aeronáutica e estratégica: congelar as 13
-camadas DECEA por ciclo AIRAC, reconciliá-las com ANAC e IBGE BC250, ligar os
-objetos aos municípios e separar aeródromos, auxílios RF, radares e instalações
-militares por proveniência oficial. Radioenlaces, conflitos e co-localizações
-remanescentes da Fase 2 continuam como trilha de fechamento obrigatória.
+Os marcos ativos são M2E — fechamento das camadas oficiais de emissões — e M3
+— infraestrutura aeronáutica e estratégica. M2E prioriza o esquema
+sítio--antena--emissão e a classificação do pacote geral Anatel, já baixado mas
+ainda não integrado. M3 congela as 14 camadas DECEA selecionadas, das quais
+VOR, NDB, DME e `navaids` já foram adquiridas, e reconcilia DECEA, ANAC e IBGE
+BC250 com proveniência oficial. A matriz de lacunas está em
+`geoespacial/CAMADAS_EMISSOES_OFICIAIS.md`.
 
 ## 6. Roadmap orientado por gates
 
@@ -111,7 +113,7 @@ Os prazos abaixo são faixas de planejamento e só começam após disponibilidad
 
 ## 7. Próximas ações prioritárias
 
-1. Executar o marco M3 do subprojeto geoespacial: congelar as camadas DECEA, reconciliar ANAC–BC250–DECEA e gerar o grafo municipal de infraestrutura aeronáutica com proveniência por objeto.
+1. Executar M2E/M3 no subprojeto geoespacial: definir sítio–antena–emissão, classificar SLP/SLE/SARC/STEL, normalizar SMP/radiodifusão/VOR/NDB/DME e concluir a reconciliação ANAC–BC250–DECEA.
 2. Fechar C3 com formas de onda e componentes selecionados, campanha RFI, orçamento em cascata de NF/IP3/faixa dinâmica e orçamento de enlace/sítio; preservar as lacunas deliberadas e a cadeia aeronáutica já aprovadas.
 3. Criar uma matriz requisito–evidência com identificadores estáveis e ligar cada afirmação do artigo a simulação, ensaio ou referência.
 4. Evoluir a triagem de aquisição já reproduzível para três orçamentos completos: enlace/SNR, sincronização-localização e dados/energia/térmica.

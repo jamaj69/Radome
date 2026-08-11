@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 75 files · ~457,399 words
+- 76 files · ~458,795 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 784 nodes · 912 edges · 69 communities (62 shown, 7 thin omitted)
+- 792 nodes · 919 edges · 70 communities (63 shown, 7 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 40 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `52272c7b`
+- Built from commit: `b1b10cae`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -83,6 +83,7 @@
 - inventory
 - Auditoria de tecnologia e espectro das estações Anatel
 - Auxílios de navegação DECEA/ICA
+- Inventário de camadas oficiais de emissões
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -111,7 +112,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (69 total, 7 thin omitted)
+## Communities (70 total, 7 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -343,7 +344,7 @@ Nodes (6): inventory_layer(), main(), present(), Path, sha256(), DeceaNavaidInve
 
 ### Community 65 - "Subprojeto de seleção geoespacial"
 Cohesion: 0.29
-Nodes (6): Documentos de controle, Gate de integração com o artigo, Marco ativo: M3 — infraestrutura aeronáutica e estratégica, Missão e limites, Subprojeto de seleção geoespacial, Vinculação ao projeto principal
+Nodes (6): Documentos de controle, Gate de integração com o artigo, Marcos ativos: M2E e M3, Missão e limites, Subprojeto de seleção geoespacial, Vinculação ao projeto principal
 
 ### Community 66 - "inventory"
 Cohesion: 0.39
@@ -357,8 +358,12 @@ Nodes (6): Auditoria de tecnologia e espectro das estações Anatel, Conclusão,
 Cohesion: 0.40
 Nodes (4): Auxílios de navegação DECEA/ICA, Interpretação dos campos, Limites e próxima integração, Resultado da aquisição
 
+### Community 69 - "Inventário de camadas oficiais de emissões"
+Cohesion: 0.25
+Nodes (7): Critério de prontidão, Fontes oficiais adicionais identificadas, Inventário de camadas oficiais de emissões, Matriz reavaliada, Novo gate de emissões oficiais — M2E, Principal descoberta da reanálise, Sequência revisada
+
 ## Knowledge Gaps
-- **457 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+452 more)
+- **463 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+458 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -366,11 +371,11 @@ Nodes (4): Auxílios de navegação DECEA/ICA, Interpretação dos campos, Limit
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _457 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _463 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**

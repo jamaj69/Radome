@@ -110,13 +110,17 @@ Fontes:
 
 ## Ordem de integração
 
-1. obter o URL direto e baixar o recurso dedicado Estações SMP da Anatel;
-2. agregar registros que representem a mesma instalação física;
-3. adicionar ERBs ao GeoPackage como camada de iluminadores;
-4. obter aeródromos atualizados da ANAC/DECEA;
-5. reconciliar por código ICAO, nome e proximidade com a BC250;
-6. classificar bases aéreas somente quando a fonte oficial permitir;
-7. reconstruir o grafo mantendo origem, data e confiança de cada atributo.
+1. definir o esquema canônico sítio--antena--emissão;
+2. incorporar ao grafo as portadoras SMP já auditadas;
+3. classificar o pacote geral Anatel por serviço, classe, direção e situação,
+   começando pelos arquivos menores antes de SLP/STEL;
+4. parear radioenlaces e reconciliar co-localizações sem perder antenas e
+   emissões múltiplas;
+5. normalizar radiodifusão e VOR/NDB/DME e associá-los aos municípios;
+6. concluir a aquisição DECEA e reconciliar por ICAO, CIAD, nome e proximidade
+   com ANAC e BC250;
+7. classificar bases e radares somente quando fonte oficial permitir;
+8. reconstruir o grafo mantendo origem, data e confiança de cada atributo.
 
 O inventário reproduzível está em
 `data/manifests/infrastructure_inventory.json` e é regenerado por

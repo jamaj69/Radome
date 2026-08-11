@@ -55,6 +55,11 @@ de emissão está em `reports/ANATEL_SPECTRUM_AUDIT.md`. Ela também documenta a
 limitação da base de radiodifusão, que fornece canal e frequência central, mas
 não largura/designação de emissão.
 
+A matriz consolidada do que existe e do que ainda falta em todas as camadas
+oficiais de emissões está em `CAMADAS_EMISSOES_OFICIAIS.md`. Ela define o gate
+M2E e impede que uma camada apenas georreferenciada seja considerada pronta
+para modelagem RF quantitativa.
+
 A rede município--emissor é construída com o código IBGE como chave:
 
 ```bash

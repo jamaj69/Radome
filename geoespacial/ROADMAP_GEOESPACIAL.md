@@ -2,8 +2,10 @@
 
 **Projeto pai:** artigo técnico bilíngue RADOME, em `projeto/`.
 
-**Marco ativo:** M3 — infraestrutura aeronáutica e estratégica. A governança e
-o gate de incorporação científica estão em `SUBPROJETO.md`.
+**Marcos ativos acoplados:** M2E — fechamento das camadas oficiais de emissões;
+e M3 — infraestrutura aeronáutica e estratégica. A governança e o gate de
+incorporação científica estão em `SUBPROJETO.md`; a matriz de completude RF
+está em `CAMADAS_EMISSOES_OFICIAIS.md`.
 
 ## Objetivo e regra de inventário
 
@@ -39,7 +41,9 @@ em `reports/`; dados brutos em `data/raw/`; produtos volumosos em `outputs/`.
 | MDE local detalhado | IBGE/SGB/estaduais | pending | cobertura variável | adquirir somente para finalistas |
 | Torres celulares SMP | Anatel | integrated/spectrum_audited | 3.284.526 registros; 105.726 sítios; 2G/3G/4G/5G, Tx/Rx e designação disponíveis | incorporar emissões individualizadas aos nós; consolidar sítios e revisar 23 conflitos |
 | Radiodifusão TV/RTV/FM/OM/RTR | Anatel | integrated/spectrum_partial | 35.126 registros; 18.285 licenciados; centro/canal disponíveis, largura ausente | integrar canalização regulatória; revisar 117 conflitos e ERP |
-| Radioenlaces SMP | Anatel | identified/pending | recurso/campos no ecossistema de licenciamento | obter camada dedicada e reconciliar pontas |
+| Radioenlaces associados a SMP/SCM | Anatel | downloaded/unclassified | prováveis registros SLP/STEL no pacote geral; vínculo ainda não demonstrado | classificar serviços e direção antes de buscar recurso adicional |
+| SLP/SLE/SARC/STEL e serviços fixos | Anatel, pacote geral | downloaded_verified/unclassified | 10,45 GB descompactados; esquema contém frequência, potência, altura, polarização e diagrama | inventariar por streaming e identificar emissores fixos/radioenlaces |
+| Estações terrenas/VSAT | Anatel | identified/pending | nova base oficial de estações terrenas em bloco | baixar, inventariar e reconciliar com SLP/SCM/STFC |
 | Aeródromos públicos | ANAC | downloaded_verified | 496 | conciliar com BC250 e DECEA |
 | Aeródromos privados | ANAC | downloaded_verified | 3.856 | conciliar e classificar uso logístico |
 | Helipontos | ANAC | downloaded_verified | 1.595 | integrar por município |
@@ -50,6 +54,7 @@ em `reports/`; dados brutos em `data/raw/`; produtos volumosos em `outputs/`.
 | VOR/NDB/DME/navaids | DECEA/ICA | downloaded_verified | 77 VOR, 24 NDB, 173 DME e 124 relações agregadas; coordenadas completas, elevação parcial | recortar Brasil, etiquetar município e derivar portadora DME por fonte oficial |
 | CTR/TMA/ZIDA | DECEA/ICA | identified | espaço aéreo, não emissores | usar como contexto e restrição |
 | Radares aeronáuticos | DECEA/FAB, quando públicos | pending | não inferir de aeródromos | localizar fonte oficial e parâmetros publicáveis |
+| Radares meteorológicos | Cemaden/SIPAM/INMET e parceiros | identified/pending | inventário oficial com coordenadas e bandas localizado | extrair tabela, verificar versão e integrar como emissores ativos separados |
 | Bases aéreas | FAB/DECEA | blocked_public_source | nomes parciais não bastam | classificar somente com fonte oficial |
 | Comandos aéreos | FAB | blocked_public_source | ausentes na BC250 | localizar cadastro público oficial |
 | Energia elétrica | IBGE BC250 | downloaded_verified | linhas, usinas e subestações | integrar como logística e viabilidade |
@@ -123,12 +128,18 @@ Concluído:
 
 Pendente:
 
-- radioenlaces SMP;
+- identificar e parear radioenlaces no pacote geral Anatel;
 - incorporar ao grafo SMP geração, tecnologia, centro Tx e largura necessária;
 - radiodifusão: integrar largura canalizada por ato técnico, revisar conflitos e
   interpretar unidades de ERP/HCI;
 - cruzar co-localizações SMP–radiodifusão;
 - adquirir outros serviços RF relevantes sem confundi-los com fontes ativas.
+
+Reanálise: o pacote geral Anatel já disponível deve ser auditado antes de se
+procurar um arquivo isolado de radioenlaces. SLP/STEL provavelmente contém
+pontas licenciadas de enlace e oferece potência/antena, mas a seleção deve ser
+demonstrada por serviço, classe e direção. O gate detalhado M2E está em
+`CAMADAS_EMISSOES_OFICIAIS.md`.
 
 Gate: cada sítio com código IBGE, status operacional explícito, registros de
 origem preservados e conflitos quantificados.
@@ -230,14 +241,18 @@ depois da validação de cada estudo insular.
 
 ## Próxima sequência recomendada
 
-1. baixar e congelar as dez camadas DECEA ainda pendentes das 14 selecionadas;
-2. reconciliar ANAC, BC250 e DECEA;
-3. fechar em trilha paralela os radioenlaces SMP, conflitos e co-localizações da
-   Fase 2;
-4. selecionar e baixar TOPODATA continental por região;
-5. integrar restrições ambientais e territoriais;
-6. reconstruir o grafo unificado município–emissor–aeródromo–candidato;
-7. iniciar *viewshed* regional antes do processamento nacional completo.
+1. definir o esquema canônico sítio--antena--emissão e incorporar as portadoras
+   SMP já auditadas;
+2. auditar o pacote geral Anatel por serviço, começando pelos arquivos menores
+   SARC, banda larga fixa e telefonia fixa antes de SLE/SLP/STEL;
+3. normalizar radiodifusão e integrar VOR/NDB/DME por município;
+4. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
+   BC250 e DECEA;
+5. adquirir VSAT e o inventário oficial de radares meteorológicos;
+6. selecionar e baixar TOPODATA continental por região;
+7. reconstruir o grafo unificado município--sítio--antena--emissão--aeródromo--
+   candidato;
+8. integrar restrições territoriais e iniciar *viewshed* regional.
 
 ## Artefatos obrigatórios por execução
 

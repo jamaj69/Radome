@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786413823.866577,
-    "ast_hash": "9414db4b96f3bbc81a373c7b52902a4d",
+    "mtime": 1786415471.66671,
+    "ast_hash": "242432cad1c14a16a76dc9dae75f963e",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -460,8 +460,8 @@
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/sources.json": {
-    "mtime": 1786414993.3650851,
-    "ast_hash": "cfe24688d0b03747a016a589ad6a3b04",
+    "mtime": 1786415441.9228628,
+    "ast_hash": "cbb01d4b6dedcc5047a917b72b64f206",
     "semantic_hash": ""
   },
   "geoespacial/optimize_sites.py": {
@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "geoespacial/README.md": {
-    "mtime": 1786414491.695441,
-    "ast_hash": "6632fc8d1bce32beeda1e6022434166f",
+    "mtime": 1786415441.5948646,
+    "ast_hash": "93faffc2ff4566ff435527a59fab7305",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/topodata_altitude_tiles.json": {
@@ -550,8 +550,8 @@
     "semantic_hash": ""
   },
   "geoespacial/FONTES_INFRAESTRUTURA.md": {
-    "mtime": 1786415059.3287754,
-    "ast_hash": "4055cb1ea31d4e5e7957eaedac5934ab",
+    "mtime": 1786415487.6946275,
+    "ast_hash": "cb2db6fab4089f52a0026d113c43615f",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/infrastructure_inventory.json": {
@@ -630,13 +630,13 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786415059.4767747,
-    "ast_hash": "4fd0f42e213d98fb886be00d3622edb2",
+    "mtime": 1786415471.5187106,
+    "ast_hash": "eec7a52dacb02d66a61c131cbb94682d",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
-    "mtime": 1786415059.6247742,
-    "ast_hash": "eb43d0c5d8b62ab7dea3f0af558dbdf4",
+    "mtime": 1786415471.8107092,
+    "ast_hash": "1cf753736a261b1a8c5951c942d09434",
     "semantic_hash": ""
   },
   "geoespacial/audit_anatel_spectrum.py": {
@@ -677,6 +677,11 @@
   "geoespacial/reports/decea_navaids/README.md": {
     "mtime": 1786415059.1727762,
     "ast_hash": "8547692b86c6d011be37042ab3a8e254",
+    "semantic_hash": ""
+  },
+  "geoespacial/CAMADAS_EMISSOES_OFICIAIS.md": {
+    "mtime": 1786415441.2468662,
+    "ast_hash": "128cfdac947759576feb8aa083feb607",
     "semantic_hash": ""
   }
 }

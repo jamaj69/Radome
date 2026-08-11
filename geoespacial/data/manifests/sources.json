@@ -147,6 +147,22 @@
       "navaid_inventory": "data/manifests/decea_navaids_inventory.json",
       "downloaded_navaid_layers": ["ICA:vor", "ICA:ndb", "ICA:dme", "ICA:navaids"],
       "status": "navaid_layers_downloaded_verified"
+    },
+    {
+      "id": "anatel_vsat_block_earth_stations",
+      "authority": "Anatel",
+      "description": "Estações terrenas VSAT licenciadas em bloco pelo Mosaico",
+      "url": "https://www.gov.br/anatel/pt-br/dados/dados-abertos",
+      "target": "data/raw/anatel/vsat/",
+      "status": "identified_download_pending"
+    },
+    {
+      "id": "cemaden_interinstitutional_weather_radars",
+      "authority": "Cemaden / SIPAM / INMET e parceiros",
+      "description": "Inventário interinstitucional de radares meteorológicos com coordenadas e bandas",
+      "url": "https://www.gov.br/cemaden/pt-br/acesso-a-informacao/institucional-1/planodiretor_2024_2027_revisado_bs08.pdf",
+      "target": "data/raw/cemaden/radares_meteorologicos/",
+      "status": "identified_download_pending"
     }
   ]
 }

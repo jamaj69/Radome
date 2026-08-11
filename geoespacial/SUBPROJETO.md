@@ -52,9 +52,11 @@ do artigo quando possuir:
 7. redação equivalente em português e inglês, seguida da compilação dos dois
    documentos autoritativos.
 
-## Marco ativo: M3 — infraestrutura aeronáutica e estratégica
+## Marcos ativos: M2E e M3
 
-A próxima fase do subprojeto é a Fase 3. Seu primeiro pacote de trabalho é:
+O fechamento das emissões oficiais (M2E) e a infraestrutura aeronáutica (M3)
+são trilhas acopladas. M2E é detalhado em `CAMADAS_EMISSOES_OFICIAIS.md`; M3
+mantém o seguinte pacote:
 
 1. baixar e congelar por ciclo AIRAC as 14 camadas selecionadas no WFS do
    DECEA, das quais VOR, NDB, DME e `navaids` já foram adquiridas;
@@ -66,7 +68,7 @@ A próxima fase do subprojeto é a Fase 3. Seu primeiro pacote de trabalho é:
    sem inferir uso militar apenas pelo nome.
 
 O gate M3 exige proveniência oficial por objeto, conflitos quantificados e um
-grafo reconciliado município--infraestrutura aeronáutica. Os itens ainda abertos
-da Fase 2 — radioenlaces SMP, auditoria de conflitos e co-localização de
-emissores — formam uma trilha de fechamento paralela e continuam obrigatórios,
-mas não bloqueiam a aquisição versionada das camadas DECEA.
+grafo reconciliado município--infraestrutura aeronáutica. M2E fecha em paralelo
+a classificação de radioenlaces no pacote geral Anatel, a auditoria de conflitos
+e a co-localização de emissores; ele não bloqueia a aquisição versionada das
+camadas DECEA, mas antecede qualquer aresta RF quantitativa `illuminates`.
