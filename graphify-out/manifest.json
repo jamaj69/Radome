@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786431881.7175264,
-    "ast_hash": "949971f7ccfc1b9c3ee747074a2291b6",
+    "mtime": 1786432211.3160136,
+    "ast_hash": "cc953866c4d634defc2bdc50021e570b",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786431881.5455272,
-    "ast_hash": "2a1f081fbd486648bd62a4bac323643e",
+    "mtime": 1786432211.1600144,
+    "ast_hash": "b988d3365101dd7eade179a1344bb9ec",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786431881.373528,
-    "ast_hash": "99783525cc4ab2686df2b7b22a722e06",
+    "mtime": 1786432211.008015,
+    "ast_hash": "b55a6029f33f86690f23e4deef2ffff9",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -1092,6 +1092,16 @@
   "geoespacial/tests/test_build_unified_geospatial_graph.py": {
     "mtime": 1786432073.1486464,
     "ast_hash": "82aa31e542dc6c8fca10c32916131ad9",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/unified_geospatial_graph/summary.json": {
+    "mtime": 1786432175.2681787,
+    "ast_hash": "7137392cc24aca60ef2da64bfa95e4ab",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/unified_geospatial_graph/README.md": {
+    "mtime": 1786432210.7840161,
+    "ast_hash": "2ac18baa5f79d511ec26650c8d5598c3",
     "semantic_hash": ""
   }
 }

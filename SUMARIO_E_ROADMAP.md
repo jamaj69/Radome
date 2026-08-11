@@ -166,6 +166,11 @@ ausentes ou conflitos. O grafo resultante possui 862 nós e 1.293 arestas — 79
 hipóteses RF e 497 vínculos administrativos —, ainda com zero arestas operacionais.
 Sessenta e seis testes passam. O próximo gate integra essas pontas ao grafo
 unificado de municípios, emissores e candidatos a sítio.
+O grafo unificado contém 123.846 nós e 119.158 registros de aresta: 5.571
+municípios, 105.726 sítios SMP, 11.921 radiodifusores, 497 endpoints e 131
+candidatos, sem colisões de atributo nem arestas operacionais. Sessenta e oito
+testes passam. O próximo gate associa candidatos a municípios e contabiliza a
+infraestrutura RF dentro de seus raios geométricos preliminares.
 
 ## 6. Roadmap orientado por gates
 

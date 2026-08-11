@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "inputs": [
+    {
+      "layer": "smp_municipal",
+      "file": "outputs/municipal_emitter_network/municipal_emitter_network.graphml",
+      "sha256": "289c82a20477281cadbf36176ea5bdb47f77628e6332fa3bba7505df79986739"
+    },
+    {
+      "layer": "broadcast_municipal",
+      "file": "outputs/broadcast_network/broadcast_municipal_network.graphml",
+      "sha256": "906494c5122cdb08b853e429a73ffecc1ab1dff113a5cadd1560d044b2be360f"
+    },
+    {
+      "layer": "site_candidates",
+      "file": "reports/candidate_graph/candidate_graph.graphml",
+      "sha256": "44a4c67244ce07b5c456428ff3f6ba3c8923afb03053fa64993a77a15fd96892"
+    },
+    {
+      "layer": "radio_link_hypotheses",
+      "file": "outputs/anatel_radio_link_hypothesis_graph/enriched.graphml",
+      "sha256": "82d68f59ef015ee4d3cfc97ebca2b736463e7fd0e019a1ff3c3eca67b6621319"
+    }
+  ],
+  "output": "outputs/unified_geospatial_graph/graph.graphml",
+  "output_sha256": "ee3d62afade09010dd011ffab01f86288ab44d8d2f7665c67dacacd4ba39d80f",
+  "node_count": 123846,
+  "edge_record_count": 119158,
+  "node_type_counts": {
+    "airport": 104,
+    "anatel_cadastral_endpoint": 497,
+    "capital": 27,
+    "municipio": 5571,
+    "radiodifusao": 11921,
+    "torre_smp": 105726
+  },
+  "edge_relation_counts": {
+    "cadastral_prequalified_hypothesis": 796,
+    "candidate_visibility_upper_bound": 218,
+    "located_in": 117647,
+    "located_in_cadastral": 497
+  },
+  "candidate_visibility_logical_edge_count": 109,
+  "candidate_visibility_stored_arc_count": 218,
+  "node_attribute_conflict_count": 0,
+  "node_attribute_conflicts": [],
+  "operational_edge_count": 0,
+  "safety_semantics": "candidate visibility is duplicated into two arcs but remains terrain-unconfirmed; RF hypotheses remain unverified; no operational edges"
+}

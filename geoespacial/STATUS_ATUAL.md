@@ -83,6 +83,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - enriquecimento do GraphML: 497 pontas vinculadas a 365 municípios por 497
   arestas administrativas, sem código ausente ou conflito municipal; grafo total
   com 862 nós e 1.293 arestas, das quais nenhuma é operacional;
+- grafo geoespacial unificado: 123.846 nós e 119.158 registros de aresta, reunindo
+  5.571 municípios, 105.726 sítios SMP, 11.921 radiodifusores, 497 endpoints e
+  131 candidatos; zero colisões de atributo e zero arestas operacionais;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -90,7 +93,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 66 testes automatizados aprovados;
+- 68 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
@@ -118,10 +121,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Integrar as 497 pontas como infraestrutura RF no grafo unificado de municípios,
-emissores e candidatos a sítio, sem promover as 796 hipóteses a enlaces. Manter
-em tabela separada os 88/78 candidatos bloqueados em `k=1`/`k=4/3` e preservar
-a verificação física como gate anterior a qualquer enlace confirmado.
+Vincular espacialmente os 131 candidatos de capitais/aeroportos aos municípios
+canônicos e calcular, por raio geométrico preliminar, quantos sítios SMP,
+radiodifusores e endpoints de radioenlace circundam cada candidato. Não converter
+proximidade ou horizonte geométrico em visibilidade de terreno confirmada.
 
 ## Comando de retomada
 
