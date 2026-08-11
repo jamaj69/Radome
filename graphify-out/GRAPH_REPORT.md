@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 53 files · ~446,820 words
+- 56 files · ~447,637 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 671 nodes · 760 edges · 59 communities (54 shown, 5 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 23 edges (avg confidence: 0.77)
+- 679 nodes · 771 edges · 60 communities (55 shown, 5 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 24 edges (avg confidence: 0.78)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `dfa2a2ed`
+- Built from commit: `51583fc6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -73,6 +73,7 @@
 - localize_figures.py
 - Fontes de infraestrutura para o grafo de candidatos
 - inventory_infrastructure.py
+- inventory
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -101,7 +102,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (59 total, 5 thin omitted)
+## Communities (60 total, 5 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -314,6 +315,10 @@ Nodes (7): ANAC e DECEA, Anatel, Comunicação nas bases históricas do IBGE, Fo
 ### Community 58 - "inventory_infrastructure.py"
 Cohesion: 0.27
 Nodes (9): main(), parse_args(), Path, read_anac_csv(), read_anatel_zip(), read_decea_capabilities(), sha256(), InfrastructureInventoryTest (+1 more)
+
+### Community 59 - "inventory"
+Cohesion: 0.39
+Nodes (5): file_sha256(), inventory(), main(), Path, SmpInventoryTest
 
 ## Knowledge Gaps
 - **416 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+411 more)

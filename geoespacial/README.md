@@ -28,6 +28,18 @@ O inventário dos cadastros já obtidos é reproduzido com:
 O WFS do DECEA é um catálogo vivo; o `GetCapabilities` usado em cada execução
 deve ser preservado em `data/raw/` para que a seleção de camadas seja auditável.
 
+O cadastro SMP dedicado da Anatel é resumido sem extrair o CSV de quase 1 GB:
+
+```bash
+/home/python/pyenv/bin/python inventory_smp.py \
+  data/raw/anatel/estacoes_smp.zip \
+  --output data/manifests/smp_inventory.json
+```
+
+O total de coordenadas distintas é apenas uma aproximação inicial de sítios
+físicos. A camada de torres deve consolidar co-localizações por distância,
+número de estação e operadora, preservando tecnologias e frequências associadas.
+
 ## Hipóteses controladas
 
 - a cobertura é avaliada a 150 m, 3 000 m e 10 000 m acima do terreno;

@@ -63,7 +63,13 @@
       "catalog_url": "https://dados.gov.br/dados/conjuntos-dados/outorga-e-licenciamento---estaes-licenciadas",
       "catalog_resource_name": "Estações do Serviço Móvel Pessoal - SMP",
       "catalog_resource_last_modified": "2026-07-21",
-      "status": "dedicated_resource_url_pending"
+      "url": "https://www.anatel.gov.br/dadosabertos/paineis_de_dados/outorga_e_licenciamento/estacoes_smp.zip",
+      "expected_size_bytes": 90710169,
+      "uncompressed_size_bytes": 981622204,
+      "sha256": "6a032a50d842c32f1f2a7d7e052cf82cd383bbeccc7a55d651dd02b5bee3eab8",
+      "target": "data/raw/anatel/estacoes_smp.zip",
+      "inventory": "data/manifests/smp_inventory.json",
+      "status": "downloaded_verified"
     },
     {
       "id": "anatel_all_licensed_stations_2026-08-10",

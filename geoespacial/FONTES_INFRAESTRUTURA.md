@@ -65,9 +65,12 @@ Em 10 de agosto de 2026 foi também baixado o pacote geral
 radioamador, SLE e outros serviços, mas **não** incluem um arquivo SMP dedicado.
 O pacote geral não deve ser confundido com o recurso separado “Estações do
 Serviço Móvel Pessoal - SMP”, que o catálogo informa ter sido atualizado em
-21/07/2026. O URL direto desse recurso ainda precisa ser estabilizado; o portal
-o entrega por uma aplicação JavaScript e rejeita a consulta direta à API com
-HTTP 401.
+21/07/2026. O URL foi recuperado do recurso carregado pelo próprio catálogo e o
+ZIP dedicado foi baixado e verificado. Ele contém 3.284.526 registros
+licenciados, 112.934 números de estação e 105.726 coordenadas distintas após
+arredondamento a cinco casas decimais. A última contagem é uma aproximação de
+sítios físicos, não ainda uma contagem definitiva de torres: setores,
+frequências, tecnologias e operadoras co-localizadas precisam ser consolidados.
 
 Fontes:
 
