@@ -21,6 +21,7 @@ SEMANTICS = (
     "not terrain viewshed, RF coverage, or operational service area"
 )
 EARTH_RADIUS_KM = 6371.0088
+CANDIDATE_TYPES = {"capital", "airport", "candidate_radome_gap"}
 
 
 def approximate_cell_area_km2(latitude: float, resolution_deg: float) -> float:
@@ -36,6 +37,14 @@ def covering_candidates(latitude: float, longitude: float, candidates: list[dict
         if distance_km(latitude, longitude, float(candidate["latitude"]), float(candidate["longitude"]))
         <= float(candidate["coverage_radius_km"])
     ]
+
+
+def optimization_score(attributes: dict, original_candidate_count: int) -> float:
+    """Preserva ranking original ou a pontuação de terreno sem misturar escalas."""
+    if attributes.get("node_type") == "candidate_radome_gap":
+        return max(0.0, min(1.0, float(attributes.get("terrain_score", 0.0))))
+    rank = int(attributes["robust_rank"])
+    return 1.0 - (rank - 1) / max(1, original_candidate_count - 1)
 
 
 def federation_units(gpkg: Path):
@@ -78,14 +87,19 @@ def build(graphml: Path, bc250: Path, output_dir: Path, report: Path, resolution
     if resolution_deg <= 0 or resolution_deg > 2:
         raise ValueError("resolution_deg deve estar em (0, 2]")
     graph = nx.read_graphml(graphml, force_multigraph=True)
+    original_candidate_count = sum(
+        attributes.get("node_type") in {"capital", "airport"}
+        for _, attributes in graph.nodes(data=True)
+    )
     candidates = []
     for identifier, attributes in sorted(graph.nodes(data=True)):
-        if attributes.get("node_type") in {"capital", "airport"}:
+        if attributes.get("node_type") in CANDIDATE_TYPES:
             candidates.append({
                 "node_id": identifier, "latitude": float(attributes["latitude"]),
                 "longitude": float(attributes["longitude"]),
                 "coverage_radius_km": float(attributes["coverage_radius_km"]),
-                "robust_rank": int(attributes["robust_rank"]),
+                "node_type": str(attributes["node_type"]),
+                "score": optimization_score(attributes, original_candidate_count),
             })
     units = federation_units(bc250)
     west = math.floor(min(unit["envelope"][0] for unit in units) / resolution_deg) * resolution_deg
@@ -126,7 +140,7 @@ def build(graphml: Path, bc250: Path, output_dir: Path, report: Path, resolution
         "candidates": [{
             "id": identifier, "covers": covers_by_candidate.get(identifier, []),
             "peer_los": sorted(peer_los.get(identifier, set())), "peer_los_exempt": False,
-            "score": round(1.0 - (ranked[identifier]["robust_rank"] - 1) / max(1, len(candidates) - 1), 9),
+            "score": round(float(ranked[identifier]["score"]), 9),
         } for identifier in sorted(ranked)],
     }
 

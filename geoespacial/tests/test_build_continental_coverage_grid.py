@@ -1,9 +1,13 @@
 import unittest
 
-from build_continental_coverage_grid import approximate_cell_area_km2, covering_candidates
+from build_continental_coverage_grid import approximate_cell_area_km2, covering_candidates, optimization_score
 
 
 class ContinentalCoverageGridTests(unittest.TestCase):
+    def test_gap_score_is_preserved_and_bounded(self):
+        self.assertEqual(optimization_score({"node_type": "candidate_radome_gap", "terrain_score": 1.5}, 131), 1.0)
+        self.assertEqual(optimization_score({"node_type": "candidate_radome_gap", "terrain_score": -1}, 131), 0.0)
+
     def test_cell_area_decreases_away_from_equator(self):
         self.assertGreater(approximate_cell_area_km2(0, 0.25), approximate_cell_area_km2(-30, 0.25))
 

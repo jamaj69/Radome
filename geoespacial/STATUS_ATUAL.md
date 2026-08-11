@@ -136,6 +136,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   131 originais, totalizando 1.615 candidatos; 45.137 pares satisfazem somente
   o limite geométrico de curvatura e geram 90.274 arcos dirigidos, todos não
   operacionais e pendentes de terreno intermediário, visada e Fresnel;
+- cobertura geométrica aumentada: os 1.615 candidatos incidem sobre todos os
+  11.363 centros da grade continental; 64 células têm cobertura única e 11.299
+  redundante, mas o resultado por discos não comprova terreno, visada ou RF;
 - seleção das folhas de borda concluída: os 188.788 centros e pontos dos anéis
   requerem 175 folhas TOPODATA disponíveis, das quais 143 já são locais e 32
   novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
@@ -154,7 +157,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 91 testes automatizados aprovados na descoberta completa com
+- 92 testes automatizados aprovados na descoberta completa com
   `PYTHONPATH=geoespacial`;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
@@ -183,9 +186,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Recalcular a cobertura por discos e a malha triangular com os 1.615 candidatos
-e associar as camadas canônicas de iluminadores apenas como incidências
-geométricas, sem antecipar visada ou `illuminates` RF.
+Recalcular a malha triangular com os 1.615 candidatos e associar as camadas
+canônicas de iluminadores apenas como incidências geométricas, sem antecipar
+visada ou `illuminates` RF.
 
 ## Comando de retomada
 

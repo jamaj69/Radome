@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786478267.5282993,
-    "ast_hash": "e7ffced32e07da6ada7b1b5eca183d9f",
+    "mtime": 1786480993.4034703,
+    "ast_hash": "6f792a7fd41b167d2b06d7efbbd8b941",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786478267.3803,
-    "ast_hash": "07e99a2d96091766594bdb677ef72aa9",
+    "mtime": 1786481001.323433,
+    "ast_hash": "d2e2c36303a132f0cfd40788f5216238",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -1145,8 +1145,8 @@
     "semantic_hash": ""
   },
   "geoespacial/build_continental_coverage_grid.py": {
-    "mtime": 1786433842.6725178,
-    "ast_hash": "cbb9ace0f9ae2d4dca6ced8d020e5dad",
+    "mtime": 1786480569.5774655,
+    "ast_hash": "5ab2407ed2c75ea38b53114c7ca43666",
     "semantic_hash": ""
   },
   "geoespacial/reports/continental_coverage_grid/summary.json": {
@@ -1155,8 +1155,8 @@
     "semantic_hash": ""
   },
   "geoespacial/tests/test_build_continental_coverage_grid.py": {
-    "mtime": 1786433842.9205167,
-    "ast_hash": "bbb273581a301b8aac0a416e7b3e6764",
+    "mtime": 1786480562.8574972,
+    "ast_hash": "882bcc1bbe6d6f306bdd39b4be77ee3e",
     "semantic_hash": ""
   },
   "geoespacial/reports/continental_coverage_grid/README.md": {
@@ -1307,6 +1307,16 @@
   "geoespacial/reports/augmented_candidate_graph/README.md": {
     "mtime": 1786478267.2123008,
     "ast_hash": "52752bb735e3041f64d06547d7566fdf",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/augmented_continental_coverage_grid/summary.json": {
+    "mtime": 1786480969.247584,
+    "ast_hash": "e0655a67d47f05820ffabb5d9696046a",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/augmented_continental_coverage_grid/README.md": {
+    "mtime": 1786480993.0834718,
+    "ast_hash": "5902eb6fe69c6f69cfa09b226dccfcb4",
     "semantic_hash": ""
   }
 }
