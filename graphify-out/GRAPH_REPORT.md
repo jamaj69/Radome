@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 168 files · ~493,533 words
+- 172 files · ~495,150 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1154 nodes · 1522 edges · 112 communities (90 shown, 22 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 105 edges (avg confidence: 0.79)
+- 1168 nodes · 1544 edges · 114 communities (91 shown, 23 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 107 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b90b40bc`
+- Built from commit: `3be5a3ff`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -126,6 +126,8 @@
 - unified_geospatial_graph/README.md
 - validate_anatel_radio_link_vertical_geometry.py
 - candidate_ranking/README.md
+- inventory
+- continental_coverage_grid/README.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -154,7 +156,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (112 total, 22 thin omitted)
+## Communities (114 total, 23 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -469,8 +471,8 @@ Cohesion: 0.13
 Nodes (15): build(), build_graph(), component_summary(), main(), node_id(), MultiDiGraph, Path, apply_context() (+7 more)
 
 ### Community 91 - "extract_anatel_radio_link_keys.py"
-Cohesion: 0.21
-Nodes (11): clean(), extract(), main(), Path, file_sha256(), inventory(), main(), Path (+3 more)
+Cohesion: 0.18
+Nodes (10): clean(), extract(), main(), Path, extract(), main(), Path, RawLinkKeysTest (+2 more)
 
 ### Community 93 - "consolidate_anatel_radio_link_prequalification.py"
 Cohesion: 0.16
@@ -493,16 +495,16 @@ Cohesion: 0.33
 Nodes (6): 1. Passive multistatic sensing, 2. Multiband and polarimetric reception, 3. Distributed synchronization and calibration, 4. Edge processing and event-oriented operation, 5. Resilience and deployment realism, Key Technical Themes
 
 ### Community 102 - "validate_anatel_radio_link_vertical_geometry.py"
-Cohesion: 0.09
-Nodes (28): build(), containing_municipality(), coordinates(), deterministic_gzip_csv(), distance_km(), main(), municipality_polygons(), Path (+20 more)
+Cohesion: 0.14
+Nodes (19): analyse(), azimuth_sector(), deduplicate(), distance_km(), main(), normalize(), open_layer(), Point (+11 more)
 
 ### Community 104 - "analyze"
 Cohesion: 0.36
 Nodes (5): analyze(), distance(), main(), Path, CandidateTest
 
 ### Community 105 - "build_canonical_fixed_emitters.py"
-Cohesion: 0.33
-Nodes (4): extract(), main(), Path, RadioLinkExtractionTest
+Cohesion: 0.14
+Nodes (17): approximate_cell_area_km2(), build(), containing_unit(), covering_candidates(), federation_units(), main(), Path, build() (+9 more)
 
 ### Community 107 - "build_canonical_fixed_emitters.py"
 Cohesion: 0.48
@@ -512,25 +514,29 @@ Nodes (6): antenna_signature(), build(), canonical_number(), exclusion_reason(),
 Cohesion: 0.24
 Nodes (7): VerticalGeometryTest, angular_error(), elevation_angle(), main(), Path, status(), validate()
 
+### Community 112 - "inventory"
+Cohesion: 0.39
+Nodes (5): file_sha256(), inventory(), main(), Path, SmpInventoryTest
+
 ## Knowledge Gaps
-- **495 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+490 more)
+- **496 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+491 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **22 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **Why does `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network` connect `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network` to `Projeto_Radomes_Multifaixa_Revisado.md`, `Key Technical Themes`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `emission_bandwidth_hz()` connect `audit_anatel_spectrum.py` to `inventory_infrastructure.py`, `build_canonical_smp.py`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 10 inferred relationships involving `number()` (e.g. with `analyze()` and `audit_member()`) actually correct?**
   _`number()` has 10 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _495 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _496 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
-- **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
-  _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._

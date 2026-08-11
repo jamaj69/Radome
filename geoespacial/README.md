@@ -340,6 +340,20 @@ A análise de sensibilidade da ordenação preliminar é gerada por:
 Os pesos e componentes permanecem no relatório; o escore não representa
 visibilidade, cobertura RF ou aptidão operacional.
 
+O diagnóstico continental de lacunas é reproduzido por:
+
+```bash
+/usr/bin/python3 build_continental_coverage_grid.py \
+  --graphml outputs/candidate_ranking/graph.graphml \
+  --bc250 data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
+  --output-dir outputs/continental_coverage_grid \
+  --report reports/continental_coverage_grid/summary.json \
+  --resolution-deg 0.25
+```
+
+A grade preserva células impossíveis de cobrir para que o otimizador falhe de
+forma explícita enquanto o conjunto de candidatos for territorialmente incompleto.
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;

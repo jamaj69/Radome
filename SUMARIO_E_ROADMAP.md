@@ -182,6 +182,12 @@ Embaixador Walther Moreira Salles lidera todos; Anápolis, São Paulo, Belo Hori
 e Brasília completam os cinco primeiros robustos. Essa concentração evidencia o
 viés urbano do conjunto e não resolve cobertura nacional. O próximo gate constrói
 uma grade continental e quantifica lacunas geométricas antes da cobertura mínima.
+A grade de 0,25° reteve 11.363 centros continentais: 1.732 não estão em nenhum
+raio e a cobertura ponderada por área é apenas 84,46%. PA, AM e MT concentram
+1.484 dessas células. A instância discreta conserva as células impossíveis para
+que o solver rejeite uma falsa cobertura nacional. O próximo gate cria candidatos
+adicionais nas lacunas, priorizando terreno alto sem promover a cota BC250 a
+*viewshed* validado.
 
 ## 6. Roadmap orientado por gates
 

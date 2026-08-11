@@ -272,15 +272,17 @@ depois da validação de cada estudo insular.
    radiodifusão e endpoints dentro do raio geométrico, sem alegar visibilidade;
 10. **concluído:** ordenar candidatos em três cenários normalizados e registrar
     a amplitude de posições como análise de sensibilidade;
-11. construir a grade continental, matriz candidato--célula e mapa de lacunas;
-12. normalizar radiodifusão e integrar VOR/NDB/DME por município;
-13. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
+11. **concluído:** construir grade continental de 0,25°, matriz candidato--célula
+    e diagnóstico de 1.732 células descobertas;
+12. gerar candidatos adicionais orientados pelas lacunas e por terreno alto;
+13. normalizar radiodifusão e integrar VOR/NDB/DME por município;
+14. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
    BC250 e DECEA;
-14. adquirir VSAT e o inventário oficial de radares meteorológicos;
-15. selecionar e baixar TOPODATA continental por região;
-16. reconstruir o grafo unificado município--sítio--antena--emissão--aeródromo--
+15. adquirir VSAT e o inventário oficial de radares meteorológicos;
+16. selecionar e baixar TOPODATA continental por região;
+17. reconstruir o grafo unificado município--sítio--antena--emissão--aeródromo--
    candidato;
-17. integrar restrições territoriais e iniciar *viewshed* regional.
+18. integrar restrições territoriais e iniciar *viewshed* regional.
 
 ## Artefatos obrigatórios por execução
 

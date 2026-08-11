@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "input_graph": "geoespacial/outputs/candidate_ranking/graph.graphml",
+  "input_graph_sha256": "d1cc11effa105d3a54daea9da94eee8d055c33bed259393a73cf98b8f241a09f",
+  "bc250": "geoespacial/data/raw/ibge/bc250/bc250_2026-03-03.gpkg",
+  "bc250_sha256": "87ceffdfb894d9f034812a3ad25126a831f8f6016f01e412ca487edccb208a7d",
+  "resolution_deg": 0.25,
+  "candidate_count": 131,
+  "cell_count": 11363,
+  "covered_cell_count": 9631,
+  "uncovered_cell_count": 1732,
+  "single_coverage_cell_count": 1863,
+  "redundant_coverage_cell_count": 7768,
+  "area_weighted_coverage_fraction": 0.8445767403367594,
+  "coverage_count_histogram": {
+    "0": 1732,
+    "1": 1863,
+    "2": 2385,
+    "3": 1766,
+    "4": 786,
+    "5": 586,
+    "6": 524,
+    "7": 414,
+    "8": 324,
+    "9": 270,
+    "10": 284,
+    "11": 147,
+    "12": 112,
+    "13": 59,
+    "14": 57,
+    "15": 37,
+    "16": 14,
+    "17": 3
+  },
+  "by_uf": {
+    "AC": {
+      "cell_count": 215,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "AL": {
+      "cell_count": 38,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "AM": {
+      "cell_count": 2030,
+      "uncovered_cell_count": 337,
+      "area_weighted_coverage_fraction": 0.8338050342302487
+    },
+    "AP": {
+      "cell_count": 185,
+      "uncovered_cell_count": 73,
+      "area_weighted_coverage_fraction": 0.6056129551730046
+    },
+    "BA": {
+      "cell_count": 753,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "CE": {
+      "cell_count": 197,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "DF": {
+      "cell_count": 8,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "ES": {
+      "cell_count": 64,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "GO": {
+      "cell_count": 463,
+      "uncovered_cell_count": 7,
+      "area_weighted_coverage_fraction": 0.9846697865630628
+    },
+    "MA": {
+      "cell_count": 435,
+      "uncovered_cell_count": 19,
+      "area_weighted_coverage_fraction": 0.956445330167771
+    },
+    "MG": {
+      "cell_count": 803,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "MS": {
+      "cell_count": 496,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "MT": {
+      "cell_count": 1205,
+      "uncovered_cell_count": 330,
+      "area_weighted_coverage_fraction": 0.7254397175359297
+    },
+    "PA": {
+      "cell_count": 1622,
+      "uncovered_cell_count": 817,
+      "area_weighted_coverage_fraction": 0.4965022768816523
+    },
+    "PB": {
+      "cell_count": 74,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "PE": {
+      "cell_count": 127,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "PI": {
+      "cell_count": 328,
+      "uncovered_cell_count": 73,
+      "area_weighted_coverage_fraction": 0.7777602277501379
+    },
+    "PR": {
+      "cell_count": 282,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "RJ": {
+      "cell_count": 63,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "RN": {
+      "cell_count": 71,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "RO": {
+      "cell_count": 317,
+      "uncovered_cell_count": 19,
+      "area_weighted_coverage_fraction": 0.9402048718353958
+    },
+    "RR": {
+      "cell_count": 291,
+      "uncovered_cell_count": 44,
+      "area_weighted_coverage_fraction": 0.8488089064348405
+    },
+    "RS": {
+      "cell_count": 419,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "SC": {
+      "cell_count": 141,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "SE": {
+      "cell_count": 27,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "SP": {
+      "cell_count": 343,
+      "uncovered_cell_count": 0,
+      "area_weighted_coverage_fraction": 1.0
+    },
+    "TO": {
+      "cell_count": 366,
+      "uncovered_cell_count": 13,
+      "area_weighted_coverage_fraction": 0.9647492205687866
+    }
+  },
+  "outputs": {
+    "table": {
+      "path": "geoespacial/outputs/continental_coverage_grid/continental_grid.csv.gz",
+      "sha256": "77de0d9b255052ee8875d34e6c66ffc47b9c6e76e774a0450a39a496dddbc402"
+    },
+    "geojson": {
+      "path": "geoespacial/outputs/continental_coverage_grid/continental_grid.geojson",
+      "sha256": "f8dfc1e36ac0e4d2ef2e9c44ef32fd992890d9ed4e6ffe7c17ce3005a68e05e3"
+    },
+    "optimization_instance": {
+      "path": "geoespacial/outputs/continental_coverage_grid/coverage_instance.json",
+      "sha256": "174b79b8ff277127850b423ed559e44136962893254589f56817945c8851e503"
+    }
+  },
+  "coverage_semantics": "cell-centre incidence within preliminary curvature-only candidate radius; not terrain viewshed, RF coverage, or operational service area"
+}

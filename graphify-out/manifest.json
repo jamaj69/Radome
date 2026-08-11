@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786433251.0592444,
-    "ast_hash": "812f18e804e8363707ffa890bbee4cd7",
+    "mtime": 1786434262.4346004,
+    "ast_hash": "b6283a4fa497d6d9d83e312aecc8d453",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "geoespacial/README.md": {
-    "mtime": 1786433250.551247,
-    "ast_hash": "bb795e02525b60e0aeca815ac0c5c1f0",
+    "mtime": 1786434261.9546027,
+    "ast_hash": "7b8dca559ff1fda1723f259dfb68519c",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/topodata_altitude_tiles.json": {
@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786433250.8912454,
-    "ast_hash": "77c1b7ce879fe1cc3b9932f5f7ca93f2",
+    "mtime": 1786434262.2786012,
+    "ast_hash": "05c4e8db0fb92ce322abd268e7aa30f3",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786433250.727246,
-    "ast_hash": "4f1ffaae72b10cfa05384d9107e366c5",
+    "mtime": 1786434262.126602,
+    "ast_hash": "4e56ba9ef12b53135fb4103a9b3e9931",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -1142,6 +1142,26 @@
   "geoespacial/reports/candidate_ranking/README.md": {
     "mtime": 1786433250.3792477,
     "ast_hash": "8a82acc8fa3b4f687d4c6078d7f5fdc1",
+    "semantic_hash": ""
+  },
+  "geoespacial/build_continental_coverage_grid.py": {
+    "mtime": 1786433842.6725178,
+    "ast_hash": "cbb9ace0f9ae2d4dca6ced8d020e5dad",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/continental_coverage_grid/summary.json": {
+    "mtime": 1786434217.9548023,
+    "ast_hash": "60cbfe42384c05676669cc46d12f5339",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_build_continental_coverage_grid.py": {
+    "mtime": 1786433842.9205167,
+    "ast_hash": "bbb273581a301b8aac0a416e7b3e6764",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/continental_coverage_grid/README.md": {
+    "mtime": 1786434261.7746034,
+    "ast_hash": "80d5aca4ca9dbfcb898d642baafce6ec",
     "semantic_hash": ""
   }
 }

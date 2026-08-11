@@ -97,6 +97,13 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   oito setores azimutais, SMP, radiodifusão, endpoints e conectividade; Aeroporto
   Embaixador Walther Moreira Salles lidera os três, seguido na ordenação robusta
   por Anápolis, São Paulo, Belo Horizonte e Brasília;
+- grade continental de 0,25°: 11.363 centros dentro das UFs, dos quais 9.631
+  estão em ao menos um raio geométrico e 1.732 permanecem descobertos; a fração
+  ponderada por área é 84,46%, com 1.863 células em cobertura única e 7.768 em
+  cobertura redundante;
+- lacunas dominantes: PA 817 células, AM 337, MT 330, AP/PI 73 cada e RR 44;
+  a instância do otimizador preserva essas impossibilidades e não pode produzir
+  uma falsa solução de cobertura nacional;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -104,7 +111,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 73 testes automatizados do conjunto disponível aprovados; a descoberta total
+- 75 testes automatizados do conjunto disponível aprovados; a descoberta total
   registra uma falha preexistente porque `acquire_decea_wfs.py` está ausente;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
@@ -133,10 +140,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Construir uma grade continental de análise, calcular a incidência geométrica dos
-131 candidatos sobre suas células e diagnosticar regiões não cobertas antes de
-resolver cobertura mínima. Não interpretar célula dentro do raio como *viewshed*
-ou cobertura RF; o resultado apenas mede a insuficiência do conjunto inicial.
+Gerar candidatos adicionais nas 1.732 células descobertas, começando por pontos
+altos/cumeadas nas regiões de lacuna e mantendo proximidade urbana e distribuição
+azimutal como critérios logísticos. Não executar cobertura mínima antes de cada
+célula possuir ao menos um candidato; não promover cota BC250 a relevo validado.
 
 ## Comando de retomada
 

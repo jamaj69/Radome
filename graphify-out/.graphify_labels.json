@@ -110,5 +110,7 @@
   "108": "validate_anatel_radio_link_geometry.py",
   "109": "unified_geospatial_graph/README.md",
   "110": "validate_anatel_radio_link_vertical_geometry.py",
-  "111": "candidate_ranking/README.md"
+  "111": "candidate_ranking/README.md",
+  "112": "inventory",
+  "113": "continental_coverage_grid/README.md"
 }
