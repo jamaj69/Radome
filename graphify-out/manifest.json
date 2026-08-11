@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786483688.5787451,
-    "ast_hash": "79c42216935de42e331869428b8ca583",
+    "mtime": 1786488021.250238,
+    "ast_hash": "d5d3f7d7c6b73484b64e9d49267e85e8",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786483699.9146914,
-    "ast_hash": "d586c51676b4ad347f3fd91abee85bf0",
+    "mtime": 1786488021.058239,
+    "ast_hash": "b45b52ca7e8f2b3b148578478684ca27",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -1417,6 +1417,26 @@
   "geoespacial/reports/augmented_mesh_topodata_faces/README.md": {
     "mtime": 1786483688.2667465,
     "ast_hash": "1fdbefc34e981579859f1ec080aed873",
+    "semantic_hash": ""
+  },
+  "geoespacial/analyze_augmented_mesh_resilience.py": {
+    "mtime": 1786487999.3143418,
+    "ast_hash": "98a484dfd0b813f74073c928c6a9f8cc",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/augmented_mesh_resilience/summary.json": {
+    "mtime": 1786488010.0982907,
+    "ast_hash": "3cfdfb16005b5c3200b83d9054be8ed6",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_analyze_augmented_mesh_resilience.py": {
+    "mtime": 1786487999.486341,
+    "ast_hash": "704903631d505374b1caaa26a04c2880",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/augmented_mesh_resilience/README.md": {
+    "mtime": 1786487999.65434,
+    "ast_hash": "4d4f17686c71574c2e8fb4d061bed8b2",
     "semantic_hash": ""
   }
 }

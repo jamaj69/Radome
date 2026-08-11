@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "faces": "geoespacial/outputs/augmented_mesh_topodata_faces/triangular_faces_topodata.csv.gz",
+  "faces_sha256": "4172e465e1703c5b9d7262a85f0f578162ce04a2bdac08f1075b27de07171b5f",
+  "profiles": "geoespacial/outputs/augmented_mesh_topodata_profiles/profiles.csv.gz",
+  "profiles_sha256": "7e6e4a4d4a1815e2ba2736ddb9de69fba259055091d2201b266864fd54b3f2b5",
+  "disk_report": "geoespacial/reports/augmented_continental_coverage_grid/summary.json",
+  "disk_report_sha256": "be00e183539b8ef7d85ee11a2fbd7760a0a271e64529d1fdc201d7c6a7e94d29",
+  "disk_geometric_covered_cell_count": 11363,
+  "continental_grid_cell_count": 11363,
+  "models": {
+    "k1": {
+      "node_count": 1615,
+      "edge_count": 3653,
+      "component_count": 129,
+      "largest_component_node_count": 1174,
+      "isolated_node_count": 97,
+      "articulation_vertex_count": 47,
+      "face_count": 2033,
+      "assigned_grid_cell_count": 1149,
+      "assigned_grid_area_km2": 881412.7044719957,
+      "assigned_grid_cell_fraction": 0.10111766258910498
+    },
+    "k4_3": {
+      "node_count": 1615,
+      "edge_count": 3849,
+      "component_count": 122,
+      "largest_component_node_count": 1325,
+      "isolated_node_count": 96,
+      "articulation_vertex_count": 23,
+      "face_count": 2248,
+      "assigned_grid_cell_count": 1299,
+      "assigned_grid_area_km2": 996015.7909629975,
+      "assigned_grid_cell_fraction": 0.11431840183050251
+    }
+  },
+  "vertex_sensitivity_output": "geoespacial/outputs/augmented_mesh_resilience/vertex_sensitivity.csv.gz",
+  "vertex_sensitivity_sha256": "3a1563687453b4dccdbc6cfab9c21fbe6619463c1ec4d263bc5f2314d5eed92b",
+  "semantics": "terrain-LOS mesh topology and assigned-cell sensitivity; no Fresnel, RF coverage, illumination, or operational availability"
+}

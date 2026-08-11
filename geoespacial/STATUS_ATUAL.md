@@ -162,6 +162,12 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - faces TOPODATA: em `k=1`, 2.033 das 3.209 faces têm três arestas LOS, 410
   têm duas e 766 são esparsas; em `k=4/3`, são 2.248/320/641; três faces tocam
   arestas sem terreno e nenhuma classificação inclui Fresnel ou RF;
+- comparação malha--discos: embora os discos incidam nos 11.363 centros, faces
+  `K3` LOS contêm só 1.149 centros em `k=1` (10,11%) e 1.299 em `k=4/3`
+  (11,43%); os grafos têm 129/122 componentes, maiores componentes com
+  1.174/1.325 vértices e 47/23 vértices de articulação; o gate confere a
+  paridade candidato--vértice, que cada perfil pertence à malha e que as
+  células `K3` não excedem a grade antes de publicar o resultado;
 - seleção das folhas de borda concluída: os 188.788 centros e pontos dos anéis
   requerem 175 folhas TOPODATA disponíveis, das quais 143 já são locais e 32
   novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
@@ -180,7 +186,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 100 testes automatizados aprovados na descoberta completa com
+- 102 testes automatizados aprovados na descoberta completa com
   `PYTHONPATH=geoespacial`;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
@@ -209,8 +215,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Comparar a cobertura e redundância das faces `K3` TOPODATA com os discos
-geométricos, quantificar componentes e falhas de vértice e manter iluminadores
+Diagnosticar as células fora de faces `K3`, identificar os gargalos responsáveis
+e formular a próxima expansão/seleção de candidatos, mantendo iluminadores
 separados do futuro modelo RF/Fresnel.
 
 ## Comando de retomada
