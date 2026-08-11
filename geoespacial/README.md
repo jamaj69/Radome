@@ -1,8 +1,13 @@
 # Seleção geoespacial de sítios RADOME
 
-Este diretório contém o fluxo reproduzível para selecionar o menor conjunto de
+Este diretório é o subprojeto geoespacial do artigo técnico bilíngue RADOME e
+contém o fluxo reproduzível para selecionar o menor conjunto de
 sítios que satisfaça uma meta explícita de cobertura do espaço aéreo brasileiro.
 O resultado é uma triagem de engenharia, não uma autorização de implantação.
+
+A vinculação, os entregáveis e o gate para incorporar resultados às edições em
+português e inglês estão definidos em `SUBPROJETO.md`. O marco ativo é a Fase 3:
+infraestrutura aeronáutica e estratégica.
 
 O escopo ativo é somente o território continental. Arquipélagos e ilhas
 oceânicas ficam fora da otimização nacional: cada grupo próximo será estudado

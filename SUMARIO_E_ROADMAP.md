@@ -79,6 +79,21 @@ Limites que devem acompanhar qualquer uso acadêmico da revisão:
 | Mecânica e ambiente | Casco, base, abertura de acesso, cargas internas e infraestrutura | FEA, vento/gelo/raio, térmica, vedação, manutenção, EMC e licenciamento |
 | Evidência | Verificador tetraédrico, cena Blender de faces contíguas, triagem paramétrica de dados/horizonte e cenário nominal de 100 km | Tolerâncias/espessuras, orçamento de enlace e sítio, protótipo, ensaios reproduzíveis e campanha de campo com verdade-terreno |
 
+### Subprojeto geoespacial vinculado ao artigo
+
+`geoespacial/` é o subprojeto responsável por produzir a evidência reproduzível
+para a seleção de sítios que será incorporada ao capítulo de infraestrutura e
+validação das duas edições do artigo. Sua governança, seus entregáveis e o gate
+de integração científica estão em `geoespacial/SUBPROJETO.md`; requisitos e
+fases permanecem controlados, respectivamente, por
+`REQUISITOS_GEOLOCALIZACAO.md` e `ROADMAP_GEOESPACIAL.md` naquele diretório.
+
+O marco ativo é M3 — infraestrutura aeronáutica e estratégica: congelar as 13
+camadas DECEA por ciclo AIRAC, reconciliá-las com ANAC e IBGE BC250, ligar os
+objetos aos municípios e separar aeródromos, auxílios RF, radares e instalações
+militares por proveniência oficial. Radioenlaces, conflitos e co-localizações
+remanescentes da Fase 2 continuam como trilha de fechamento obrigatória.
+
 ## 6. Roadmap orientado por gates
 
 Os prazos abaixo são faixas de planejamento e só começam após disponibilidade de equipe, laboratório e orçamento. Fases podem se sobrepor quando não houver dependência física.
@@ -96,14 +111,15 @@ Os prazos abaixo são faixas de planejamento e só começam após disponibilidad
 
 ## 7. Próximas ações prioritárias
 
-1. Fechar C3 com formas de onda e componentes selecionados, campanha RFI, orçamento em cascata de NF/IP3/faixa dinâmica e orçamento de enlace/sítio; preservar as lacunas deliberadas e a cadeia aeronáutica já aprovadas.
-2. Criar uma matriz requisito–evidência com identificadores estáveis e ligar cada afirmação do artigo a simulação, ensaio ou referência.
-3. Evoluir a triagem de aquisição já reproduzível para três orçamentos completos: enlace/SNR, sincronização-localização e dados/energia/térmica.
-4. Auditar os 29 registros bibliográficos em fontes primárias, acrescentando DOI e corrigindo registros incompletos, sem apagar os links de proveniência do Consensus.
-5. Simular a montagem Yagi VHF/UHF completa, incluindo boom comum, suporte, base, casco e acoplamento, antes de congelar dimensões.
-6. Construir primeiro a cadeia coerente de bancada e o sistema de calibração; a casca completa só deve avançar após o gate metrológico.
-7. Transformar os protocolos `EXP-006`–`EXP-008` em um plano de dataset de três nós: formatos, verdade-terreno independente, calibração, clima, RFI, versionamento e critérios de aceitação.
-8. Fechar o C2 reaberto pela ADR-012: selecionar a borda inferior por módulos completos, dimensionar paredes, juntas e corredores com espessuras/folgas reais e recalcular a interface civil sem perder a continuidade da gaiola de Faraday.
+1. Executar o marco M3 do subprojeto geoespacial: congelar as camadas DECEA, reconciliar ANAC–BC250–DECEA e gerar o grafo municipal de infraestrutura aeronáutica com proveniência por objeto.
+2. Fechar C3 com formas de onda e componentes selecionados, campanha RFI, orçamento em cascata de NF/IP3/faixa dinâmica e orçamento de enlace/sítio; preservar as lacunas deliberadas e a cadeia aeronáutica já aprovadas.
+3. Criar uma matriz requisito–evidência com identificadores estáveis e ligar cada afirmação do artigo a simulação, ensaio ou referência.
+4. Evoluir a triagem de aquisição já reproduzível para três orçamentos completos: enlace/SNR, sincronização-localização e dados/energia/térmica.
+5. Auditar os 29 registros bibliográficos em fontes primárias, acrescentando DOI e corrigindo registros incompletos, sem apagar os links de proveniência do Consensus.
+6. Simular a montagem Yagi VHF/UHF completa, incluindo boom comum, suporte, base, casco e acoplamento, antes de congelar dimensões.
+7. Construir primeiro a cadeia coerente de bancada e o sistema de calibração; a casca completa só deve avançar após o gate metrológico.
+8. Transformar os protocolos `EXP-006`–`EXP-008` em um plano de dataset de três nós: formatos, verdade-terreno independente, calibração, clima, RFI, versionamento e critérios de aceitação.
+9. Fechar o C2 reaberto pela ADR-012: selecionar a borda inferior por módulos completos, dimensionar paredes, juntas e corredores com espessuras/folgas reais e recalcular a interface civil sem perder a continuidade da gaiola de Faraday.
 
 ## 8. Critério de sucesso do programa
 

@@ -1,5 +1,10 @@
 # Roadmap geoespacial da rede RADOME
 
+**Projeto pai:** artigo técnico bilíngue RADOME, em `projeto/`.
+
+**Marco ativo:** M3 — infraestrutura aeronáutica e estratégica. A governança e
+o gate de incorporação científica estão em `SUBPROJETO.md`.
+
 ## Objetivo e regra de inventário
 
 O fluxo deve produzir uma seleção continental auditável do menor conjunto de
@@ -126,7 +131,7 @@ Pendente:
 Gate: cada sítio com código IBGE, status operacional explícito, registros de
 origem preservados e conflitos quantificados.
 
-### Fase 3 — infraestrutura aeronáutica e estratégica — pendente
+### Fase 3 — infraestrutura aeronáutica e estratégica — ativa
 
 Passos:
 
@@ -225,7 +230,8 @@ depois da validação de cada estudo insular.
 
 1. baixar e congelar as 13 camadas selecionadas do DECEA;
 2. reconciliar ANAC, BC250 e DECEA;
-3. adquirir radioenlaces SMP;
+3. fechar em trilha paralela os radioenlaces SMP, conflitos e co-localizações da
+   Fase 2;
 4. selecionar e baixar TOPODATA continental por região;
 5. integrar restrições ambientais e territoriais;
 6. reconstruir o grafo unificado município–emissor–aeródromo–candidato;

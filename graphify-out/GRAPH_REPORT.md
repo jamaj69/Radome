@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 66 files · ~452,601 words
+- 67 files · ~453,300 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 739 nodes · 851 edges · 64 communities (57 shown, 7 thin omitted)
+- 747 nodes · 858 edges · 66 communities (59 shown, 7 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 32 edges (avg confidence: 0.78)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a7093e67`
+- Built from commit: `d7b0ee5d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -78,6 +78,8 @@
 - build
 - broadcast_network/README.md
 - Requisitos preservados para geolocalização dos radomes
+- localize_figures.py
+- Subprojeto de seleção geoespacial
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -106,7 +108,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (64 total, 7 thin omitted)
+## Communities (66 total, 7 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -153,8 +155,8 @@ Cohesion: 0.15
 Nodes (12): Aircraft and Illuminator Scenario, Blender Rendering, GitHub Workflow, Graphify, graphify, LaTeX Article Commands, Mandatory Commit Per Change, Mandatory Startup Context Recovery (+4 more)
 
 ### Community 11 - "RADOME — Sumário executivo e roadmap de pesquisa e engenharia"
-Cohesion: 0.20
-Nodes (9): 1. Síntese executiva, 2. Mapa compacto do sistema, 3. Linha de evolução documental, 4. Verificação da revisão de literatura via Consensus, 5. Estado técnico e lacunas decisivas, 6. Roadmap orientado por gates, 7. Próximas ações prioritárias, 8. Critério de sucesso do programa (+1 more)
+Cohesion: 0.18
+Nodes (10): 1. Síntese executiva, 2. Mapa compacto do sistema, 3. Linha de evolução documental, 4. Verificação da revisão de literatura via Consensus, 5. Estado técnico e lacunas decisivas, 6. Roadmap orientado por gates, 7. Próximas ações prioritárias, 8. Critério de sucesso do programa (+2 more)
 
 ### Community 12 - "radome_antenna_literature_review/review.md"
 Cohesion: 0.22
@@ -305,12 +307,12 @@ Cohesion: 0.47
 Nodes (3): main(), parse_index(), InventoryTopodataTest
 
 ### Community 52 - "localize_figures.py"
-Cohesion: 0.07
-Nodes (18): build_output(), ensure_build_dir(), Path, Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--11.  Permanent publi, save(), draw_label() (+10 more)
+Cohesion: 0.09
+Nodes (9): build_output(), ensure_build_dir(), Path, Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--11.  Permanent publi, save(), crossed_yagi() (+1 more)
 
 ### Community 56 - "localize_figures.py"
 Cohesion: 0.10
-Nodes (20): Artefatos obrigatórios por execução, Fase 0 — requisitos e proveniência — concluída, Fase 10 — arquipélagos e ilhas oceânicas — adiada, Fase 1 — base territorial municipal — concluída preliminarmente, Fase 2 — inventário de iluminadores — em andamento, Fase 3 — infraestrutura aeronáutica e estratégica — pendente, Fase 4 — relevo nacional e candidatos — pendente, Fase 5 — visada e cobertura 3D — pendente (+12 more)
+Nodes (20): Artefatos obrigatórios por execução, Fase 0 — requisitos e proveniência — concluída, Fase 10 — arquipélagos e ilhas oceânicas — adiada, Fase 1 — base territorial municipal — concluída preliminarmente, Fase 2 — inventário de iluminadores — em andamento, Fase 3 — infraestrutura aeronáutica e estratégica — ativa, Fase 4 — relevo nacional e candidatos — pendente, Fase 5 — visada e cobertura 3D — pendente (+12 more)
 
 ### Community 57 - "Fontes de infraestrutura para o grafo de candidatos"
 Cohesion: 0.22
@@ -332,8 +334,16 @@ Nodes (8): build(), main(), municipality_index(), normalize_name(), Path, sha256
 Cohesion: 0.22
 Nodes (8): Cidades, municípios e logística, Decisões operacionais derivadas, Escopo territorial, Grafo de infraestrutura e iluminadores, Objetivo primário, Relevo, visada e conectividade, Reprodutibilidade e publicação, Requisitos preservados para geolocalização dos radomes
 
+### Community 64 - "localize_figures.py"
+Cohesion: 0.23
+Nodes (9): draw_label(), draw_text_in_block(), fit_text(), font(), Build language-specific publication figures from the common geometry masters., Return the largest readable multiline setting that fits a region., Draw a padded box whose centre follows the centre of the rendered glyphs., Fit and centre text directly inside an existing coloured diagram block. (+1 more)
+
+### Community 65 - "Subprojeto de seleção geoespacial"
+Cohesion: 0.29
+Nodes (6): Documentos de controle, Gate de integração com o artigo, Marco ativo: M3 — infraestrutura aeronáutica e estratégica, Missão e limites, Subprojeto de seleção geoespacial, Vinculação ao projeto principal
+
 ## Knowledge Gaps
-- **444 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+439 more)
+- **449 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+444 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -345,7 +355,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
   _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _444 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _449 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
