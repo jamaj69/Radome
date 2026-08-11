@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786426168.9439497,
-    "ast_hash": "44a7fee754fcef1a758273cca45eb624",
+    "mtime": 1786426533.7302349,
+    "ast_hash": "a8a6b68cffdc94f2c7ab09de9b282175",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -700,8 +700,8 @@
     "semantic_hash": ""
   },
   "geoespacial/run_pipeline.py": {
-    "mtime": 1786426168.259953,
-    "ast_hash": "2255e802b3dfe74fd27fb443b55845a4",
+    "mtime": 1786426533.242237,
+    "ast_hash": "64ee6c7cde583529cda60b55c67394b1",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_acquire_decea_wfs.py": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786426168.6079514,
-    "ast_hash": "c476911294c81067b3f1b2dc7a4a8455",
+    "mtime": 1786426533.5662355,
+    "ast_hash": "b8c2cd2b0a3f6688d564e4a1263a8166",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -837,6 +837,26 @@
   "geoespacial/reports/anatel_radio_link_keys/README.md": {
     "mtime": 1786426168.4359522,
     "ast_hash": "5d58ef39f562484721b2055ad7598f96",
+    "semantic_hash": ""
+  },
+  "geoespacial/analyze_anatel_radio_link_candidates.py": {
+    "mtime": 1786426500.8623893,
+    "ast_hash": "249a72660bc6e347779cef5e92c0d3d7",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/anatel_radio_link_candidates/summary.json": {
+    "mtime": 1786426509.686348,
+    "ast_hash": "aa960c5035079ce2c8a40abe35064fd5",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_analyze_anatel_radio_link_candidates.py": {
+    "mtime": 1786426501.0383885,
+    "ast_hash": "68e408649ebb634275166616e9382e57",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/anatel_radio_link_candidates/README.md": {
+    "mtime": 1786426533.4102364,
+    "ast_hash": "fc25f6c46167aaaeb3c1c0cb35131c8d",
     "semantic_hash": ""
   }
 }

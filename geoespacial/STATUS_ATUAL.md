@@ -49,6 +49,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   38 SMP, totalizando 100.410 registros e 17.214 números de estação por família;
 - chaves brutas recuperadas para as 100.410 linhas: Fistel, ato de RF e códigos
   homologados de antena/transmissor completos; equivalência linha a linha confirmada;
+- 928 grupos família--Fistel--ato particionados: 340 candidatos recíprocos de
+  duas coordenadas, 40 não recíprocos, 175 locais e 373 ambíguos;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -56,7 +58,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 39 testes automatizados aprovados;
+- 40 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
@@ -83,9 +85,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Medir cardinalidade e poder discriminante de Fistel, ato de RF, equipamento,
-frequência e estação. Gerar candidatos de contraponta somente quando houver
-reciprocidade Tx/Rx e compatibilidade geométrica, mantendo ambiguidades sem aresta.
+Validar os 340 candidatos recíprocos com azimutes opostos, distância plausível,
+relevo e visada. Somente resultados não ambíguos poderão gerar arestas.
 
 ## Comando de retomada
 

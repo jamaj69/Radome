@@ -125,6 +125,61 @@
       "norm_label": "main()"
     },
     {
+      "label": "analyze_anatel_radio_link_candidates.py",
+      "file_type": "code",
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_analyze_anatel_radio_link_candidates",
+      "community": 59,
+      "community_name": "inventory",
+      "norm_label": "analyze_anatel_radio_link_candidates.py"
+    },
+    {
+      "label": "distance()",
+      "file_type": "code",
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "geoespacial_analyze_anatel_radio_link_candidates_distance",
+      "community": 59,
+      "community_name": "inventory",
+      "norm_label": "distance()"
+    },
+    {
+      "label": "analyze()",
+      "file_type": "code",
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "geoespacial_analyze_anatel_radio_link_candidates_analyze",
+      "community": 59,
+      "community_name": "inventory",
+      "norm_label": "analyze()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "geoespacial_analyze_anatel_radio_link_candidates_py_path",
+      "community": 59,
+      "community_name": "inventory",
+      "norm_label": "path"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "geoespacial_analyze_anatel_radio_link_candidates_main",
+      "community": 59,
+      "community_name": "inventory",
+      "norm_label": "main()"
+    },
+    {
       "label": "audit_anatel_general.py",
       "file_type": "code",
       "source_file": "geoespacial/audit_anatel_general.py",
@@ -736,8 +791,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_build_municipal_emitter_network",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": "build_municipal_emitter_network.py"
     },
     {
@@ -747,8 +802,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "geoespacial_build_municipal_emitter_network_read_population",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": "read_population()"
     },
     {
@@ -758,8 +813,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_build_municipal_emitter_network_py_path",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": "path"
     },
     {
@@ -769,8 +824,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "geoespacial_build_municipal_emitter_network_municipal_features",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": "municipal_features()"
     },
     {
@@ -780,8 +835,8 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "geoespacial_build_municipal_emitter_network_read_smp_sites",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": "read_smp_sites()"
     },
     {
@@ -791,8 +846,8 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "geoespacial_build_municipal_emitter_network_dominant_code",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": "dominant_code()"
     },
     {
@@ -802,8 +857,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_build_municipal_emitter_network_py_counter",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": "counter"
     },
     {
@@ -813,8 +868,8 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "geoespacial_build_municipal_emitter_network_write_network",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": "write_network()"
     },
     {
@@ -824,8 +879,8 @@
       "source_location": "L189",
       "_origin": "ast",
       "id": "geoespacial_build_municipal_emitter_network_main",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": "main()"
     },
     {
@@ -1154,8 +1209,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_inventory_smp",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 76,
+      "community_name": "build_municipal_emitter_network.py",
       "norm_label": "inventory_smp.py"
     },
     {
@@ -1165,8 +1220,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "geoespacial_inventory_smp_file_sha256",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 76,
+      "community_name": "build_municipal_emitter_network.py",
       "norm_label": "file_sha256()"
     },
     {
@@ -1176,8 +1231,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_inventory_smp_py_path",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 76,
+      "community_name": "build_municipal_emitter_network.py",
       "norm_label": "path"
     },
     {
@@ -1187,8 +1242,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "geoespacial_inventory_smp_inventory",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 76,
+      "community_name": "build_municipal_emitter_network.py",
       "norm_label": "inventory()"
     },
     {
@@ -1198,8 +1253,8 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "geoespacial_inventory_smp_main",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 76,
+      "community_name": "build_municipal_emitter_network.py",
       "norm_label": "main()"
     },
     {
@@ -1605,6 +1660,39 @@
       "community": 70,
       "community_name": "acquire",
       "norm_label": ".test_zip_member_cannot_escape_destination()"
+    },
+    {
+      "label": "test_analyze_anatel_radio_link_candidates.py",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_analyze_anatel_radio_link_candidates.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_analyze_anatel_radio_link_candidates",
+      "community": 59,
+      "community_name": "inventory",
+      "norm_label": "test_analyze_anatel_radio_link_candidates.py"
+    },
+    {
+      "label": "CandidateTest",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_analyze_anatel_radio_link_candidates.py",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_analyze_anatel_radio_link_candidates_candidatetest",
+      "community": 59,
+      "community_name": "inventory",
+      "norm_label": "candidatetest"
+    },
+    {
+      "label": ".test_reciprocal_two_coordinate_group()",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_analyze_anatel_radio_link_candidates.py",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_analyze_anatel_radio_link_candidates_candidatetest_test_reciprocal_two_coordinate_group",
+      "community": 59,
+      "community_name": "inventory",
+      "norm_label": ".test_reciprocal_two_coordinate_group()"
     },
     {
       "label": "test_audit_anatel_general.py",
@@ -2042,8 +2130,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_municipal_emitter_network",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": "test_build_municipal_emitter_network.py"
     },
     {
@@ -2053,8 +2141,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_municipal_emitter_network_municipalemitternetworktest",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": "municipalemitternetworktest"
     },
     {
@@ -2064,8 +2152,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_municipal_emitter_network_municipalemitternetworktest_test_dominant_code_marks_conflict",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": ".test_dominant_code_marks_conflict()"
     },
     {
@@ -2075,8 +2163,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "geoespacial_tests_test_build_municipal_emitter_network_municipalemitternetworktest_test_empty_code_is_reported",
-      "community": 76,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": ".test_empty_code_is_reported()"
     },
     {
@@ -2251,8 +2339,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_tests_test_inventory_smp",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 76,
+      "community_name": "build_municipal_emitter_network.py",
       "norm_label": "test_inventory_smp.py"
     },
     {
@@ -2262,8 +2350,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "geoespacial_tests_test_inventory_smp_smpinventorytest",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 76,
+      "community_name": "build_municipal_emitter_network.py",
       "norm_label": "smpinventorytest"
     },
     {
@@ -2273,8 +2361,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "geoespacial_tests_test_inventory_smp_smpinventorytest_test_collapses_repeated_records_at_same_coordinate",
-      "community": 59,
-      "community_name": "inventory",
+      "community": 76,
+      "community_name": "build_municipal_emitter_network.py",
       "norm_label": ".test_collapses_repeated_records_at_same_coordinate()"
     },
     {
@@ -5831,7 +5919,7 @@
       "label": "6. Roadmap orientado por gates",
       "file_type": "document",
       "source_file": "SUMARIO_E_ROADMAP.md",
-      "source_location": "L122",
+      "source_location": "L124",
       "_origin": "ast",
       "id": "sumario_e_roadmap_6_roadmap_orientado_por_gates",
       "community": 11,
@@ -5842,7 +5930,7 @@
       "label": "7. Pr\u00f3ximas a\u00e7\u00f5es priorit\u00e1rias",
       "file_type": "document",
       "source_file": "SUMARIO_E_ROADMAP.md",
-      "source_location": "L137",
+      "source_location": "L139",
       "_origin": "ast",
       "id": "sumario_e_roadmap_7_pr\u00f3ximas_a\u00e7\u00f5es_priorit\u00e1rias",
       "community": 11,
@@ -5853,7 +5941,7 @@
       "label": "8. Crit\u00e9rio de sucesso do programa",
       "file_type": "document",
       "source_file": "SUMARIO_E_ROADMAP.md",
-      "source_location": "L149",
+      "source_location": "L151",
       "_origin": "ast",
       "id": "sumario_e_roadmap_8_crit\u00e9rio_de_sucesso_do_programa",
       "community": 11,
@@ -6700,7 +6788,7 @@
       "label": "Valida\u00e7\u00e3o reproduz\u00edvel",
       "file_type": "document",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L57",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "geoespacial_status_atual_valida\u00e7\u00e3o_reproduz\u00edvel",
       "community": 75,
@@ -6711,7 +6799,7 @@
       "label": "Lacunas controladas",
       "file_type": "document",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L68",
+      "source_location": "L70",
       "_origin": "ast",
       "id": "geoespacial_status_atual_lacunas_controladas",
       "community": 75,
@@ -6722,7 +6810,7 @@
       "label": "Pr\u00f3xima a\u00e7\u00e3o execut\u00e1vel",
       "file_type": "document",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L84",
+      "source_location": "L86",
       "_origin": "ast",
       "id": "geoespacial_status_atual_pr\u00f3xima_a\u00e7\u00e3o_execut\u00e1vel",
       "community": 75,
@@ -6733,7 +6821,7 @@
       "label": "Comando de retomada",
       "file_type": "document",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L90",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "geoespacial_status_atual_comando_de_retomada",
       "community": 75,
@@ -6948,6 +7036,28 @@
       "community": 66,
       "community_name": "inventory",
       "norm_label": "reproducao"
+    },
+    {
+      "label": "anatel_radio_link_candidates/README.md",
+      "file_type": "document",
+      "source_file": "geoespacial/reports/anatel_radio_link_candidates/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_reports_anatel_radio_link_candidates_readme",
+      "community": 82,
+      "community_name": "anatel_radio_link_candidates/README.md",
+      "norm_label": "anatel_radio_link_candidates/readme.md"
+    },
+    {
+      "label": "Candidatos cadastrais de radioenlace",
+      "file_type": "document",
+      "source_file": "geoespacial/reports/anatel_radio_link_candidates/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_reports_anatel_radio_link_candidates_readme_candidatos_cadastrais_de_radioenlace",
+      "community": 82,
+      "community_name": "anatel_radio_link_candidates/README.md",
+      "norm_label": "candidatos cadastrais de radioenlace"
     },
     {
       "label": "anatel_radio_link_keys/README.md",
@@ -10466,6 +10576,171 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_analyze_anatel_radio_link_candidates",
+      "target": "geoespacial_audit_anatel_spectrum",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_analyze_anatel_radio_link_candidates",
+      "target": "geoespacial_build_canonical_smp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_analyze_anatel_radio_link_candidates",
+      "target": "geoespacial_analyze_anatel_radio_link_candidates_analyze",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_analyze_anatel_radio_link_candidates",
+      "target": "geoespacial_analyze_anatel_radio_link_candidates_distance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_analyze_anatel_radio_link_candidates",
+      "target": "geoespacial_analyze_anatel_radio_link_candidates_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_analyze_anatel_radio_link_candidates.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_analyze_anatel_radio_link_candidates",
+      "target": "geoespacial_analyze_anatel_radio_link_candidates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_analyze_anatel_radio_link_candidates_analyze",
+      "target": "geoespacial_analyze_anatel_radio_link_candidates_distance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_analyze_anatel_radio_link_candidates_analyze",
+      "target": "geoespacial_analyze_anatel_radio_link_candidates_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_analyze_anatel_radio_link_candidates_analyze",
+      "target": "geoespacial_audit_anatel_spectrum_number"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_analyze_anatel_radio_link_candidates_analyze",
+      "target": "geoespacial_build_canonical_smp_deterministic_gzip_csv"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_analyze_anatel_radio_link_candidates_analyze",
+      "target": "geoespacial_build_canonical_smp_sha256_file"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_analyze_anatel_radio_link_candidates_analyze",
+      "target": "geoespacial_build_canonical_smp_stable_identifier"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/analyze_anatel_radio_link_candidates.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_analyze_anatel_radio_link_candidates_main",
+      "target": "geoespacial_analyze_anatel_radio_link_candidates_analyze",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/tests/test_analyze_anatel_radio_link_candidates.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_analyze_anatel_radio_link_candidates_candidatetest_test_reciprocal_two_coordinate_group",
+      "target": "geoespacial_analyze_anatel_radio_link_candidates_analyze"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "geoespacial/audit_anatel_general.py",
       "source_location": "L16",
       "weight": 1.0,
@@ -12263,6 +12538,18 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_analyze_anatel_radio_link_candidates.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_analyze_anatel_radio_link_candidates",
+      "target": "geoespacial_build_canonical_smp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "geoespacial/tests/test_build_canonical_fixed_emitters.py",
       "source_location": "L9",
       "weight": 1.0,
@@ -12460,6 +12747,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_extract_anatel_radio_links_extract",
+      "target": "geoespacial_build_canonical_smp_deterministic_gzip_csv"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/tests/test_analyze_anatel_radio_link_candidates.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_analyze_anatel_radio_link_candidates_candidatetest_test_reciprocal_two_coordinate_group",
       "target": "geoespacial_build_canonical_smp_deterministic_gzip_csv"
     },
     {
@@ -12799,6 +13098,18 @@
       "_origin": "ast",
       "source": "geoespacial_extract_anatel_radio_link_keys",
       "target": "geoespacial_extract_anatel_radio_link_keys_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_analyze_anatel_radio_link_candidates.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_analyze_anatel_radio_link_candidates",
+      "target": "geoespacial_extract_anatel_radio_link_keys",
       "confidence_score": 1.0
     },
     {
@@ -14290,6 +14601,28 @@
       "_origin": "ast",
       "source": "geoespacial_tests_test_acquisition_io_acquisitioniotest",
       "target": "geoespacial_tests_test_acquisition_io_acquisitioniotest_test_zip_member_cannot_escape_destination",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_analyze_anatel_radio_link_candidates.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_analyze_anatel_radio_link_candidates",
+      "target": "geoespacial_tests_test_analyze_anatel_radio_link_candidates_candidatetest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_analyze_anatel_radio_link_candidates.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_analyze_anatel_radio_link_candidates_candidatetest",
+      "target": "geoespacial_tests_test_analyze_anatel_radio_link_candidates_candidatetest_test_reciprocal_two_coordinate_group",
       "confidence_score": 1.0
     },
     {
@@ -19279,7 +19612,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "SUMARIO_E_ROADMAP.md",
-      "source_location": "L122",
+      "source_location": "L124",
       "weight": 1.0,
       "_origin": "ast",
       "source": "sumario_e_roadmap_radome_sum\u00e1rio_executivo_e_roadmap_de_pesquisa_e_engenharia",
@@ -19290,7 +19623,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "SUMARIO_E_ROADMAP.md",
-      "source_location": "L137",
+      "source_location": "L139",
       "weight": 1.0,
       "_origin": "ast",
       "source": "sumario_e_roadmap_radome_sum\u00e1rio_executivo_e_roadmap_de_pesquisa_e_engenharia",
@@ -19301,7 +19634,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "SUMARIO_E_ROADMAP.md",
-      "source_location": "L149",
+      "source_location": "L151",
       "weight": 1.0,
       "_origin": "ast",
       "source": "sumario_e_roadmap_radome_sum\u00e1rio_executivo_e_roadmap_de_pesquisa_e_engenharia",
@@ -20049,7 +20382,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L90",
+      "source_location": "L91",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_status_atual_estado_atual_do_subprojeto_geoespacial",
@@ -20071,7 +20404,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L68",
+      "source_location": "L70",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_status_atual_estado_atual_do_subprojeto_geoespacial",
@@ -20082,7 +20415,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L84",
+      "source_location": "L86",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_status_atual_estado_atual_do_subprojeto_geoespacial",
@@ -20093,7 +20426,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L57",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_status_atual_estado_atual_do_subprojeto_geoespacial",
@@ -20285,6 +20618,17 @@
       "_origin": "ast",
       "source": "geoespacial_reports_anatel_general_audit_readme_auditoria_inicial_do_pacote_geral_da_anatel",
       "target": "geoespacial_reports_anatel_general_audit_readme_resultado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/reports/anatel_radio_link_candidates/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_reports_anatel_radio_link_candidates_readme",
+      "target": "geoespacial_reports_anatel_radio_link_candidates_readme_candidatos_cadastrais_de_radioenlace",
       "confidence_score": 1.0
     },
     {
@@ -23347,5 +23691,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "35d742eda6dab08fe27d7cbbf90f21cb92631884"
+  "built_at_commit": "f40a52d29b3e82b64e7ba62e4b7d248dfb6a66ca"
 }

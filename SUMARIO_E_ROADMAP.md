@@ -117,7 +117,9 @@ produtos coincidem byte a byte. O extrato seletivo isolou 100.410 registros de
 enlace — 64.948 STFC, 35.424 SCM e 38 SMP — sem formar pontas. Trinta e oito
 testes passam. As chaves brutas foram recuperadas para todas as linhas e a
 equivalência foi confirmada sem divergências; 39 testes passam. O próximo gate
-mede poder discriminante e testa reciprocidade e geometria.
+mede poder discriminante e testa reciprocidade e geometria. A partição resultou
+em 340 candidatos recíprocos de duas coordenadas, 40 não recíprocos, 175 locais
+e 373 ambíguos; nenhum enlace foi criado. Quarenta testes passam.
 
 ## 6. Roadmap orientado por gates
 

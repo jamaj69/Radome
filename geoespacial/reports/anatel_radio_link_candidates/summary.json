@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "source_file": "outputs/anatel_radio_link_keys/records.csv.gz",
+  "source_sha256": "19557fde4a4aa5e52d128707d53dd9d85e921ec015f854516f702b868b916843",
+  "groups": 928,
+  "partition": {
+    "ambiguous_multiple_coordinates": 373,
+    "single_coordinate": 175,
+    "two_coordinate_nonreciprocal": 40,
+    "two_coordinate_reciprocal": 340
+  },
+  "partition_consistent": true,
+  "reciprocal_frequency_matches": 1027,
+  "pairing_status": "not_performed",
+  "output": "outputs/anatel_radio_link_candidates/groups.csv.gz"
+}

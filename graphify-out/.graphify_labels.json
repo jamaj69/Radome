@@ -80,5 +80,6 @@
   "78": "Emissores fixos SARC/SCM no esquema canônico",
   "79": "Famílias explícitas de radioenlaces Anatel",
   "80": "write_fixture",
-  "81": "anatel_radio_link_keys/README.md"
+  "81": "anatel_radio_link_keys/README.md",
+  "82": "anatel_radio_link_candidates/README.md"
 }

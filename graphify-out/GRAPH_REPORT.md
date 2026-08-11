@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 107 files · ~469,864 words
+- 111 files · ~470,174 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 928 nodes · 1161 edges · 82 communities (73 shown, 9 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 74 edges (avg confidence: 0.79)
+- 938 nodes · 1181 edges · 83 communities (73 shown, 10 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 80 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `35d742ed`
+- Built from commit: `f40a52d2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -96,35 +96,36 @@
 - Famílias explícitas de radioenlaces Anatel
 - write_fixture
 - anatel_radio_link_keys/README.md
+- anatel_radio_link_candidates/README.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
 2. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
 3. `RADOME — Registro de decisões de arquitetura` - 20 edges
-4. `build()` - 13 edges
-5. `Plano Diretor de Infraestrutura Tática` - 13 edges
-6. `RADOME Project Agent Guide` - 12 edges
-7. `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network` - 12 edges
-8. `Fases e gates` - 12 edges
-9. `audit_member()` - 11 edges
-10. `deterministic_gzip_csv()` - 11 edges
+4. `deterministic_gzip_csv()` - 13 edges
+5. `build()` - 13 edges
+6. `Plano Diretor de Infraestrutura Tática` - 13 edges
+7. `RADOME Project Agent Guide` - 12 edges
+8. `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network` - 12 edges
+9. `Fases e gates` - 12 edges
+10. `audit_member()` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `write_network()` --calls--> `terrain_elevation()`  [INFERRED]
-  geoespacial/build_municipal_emitter_network.py → geoespacial/build_candidate_graph.py
+- `analyze()` --calls--> `number()`  [INFERRED]
+  geoespacial/analyze_anatel_radio_link_candidates.py → geoespacial/audit_anatel_spectrum.py
+- `analyze()` --calls--> `deterministic_gzip_csv()`  [INFERRED]
+  geoespacial/analyze_anatel_radio_link_candidates.py → geoespacial/build_canonical_smp.py
+- `analyze()` --calls--> `sha256_file()`  [INFERRED]
+  geoespacial/analyze_anatel_radio_link_candidates.py → geoespacial/build_canonical_smp.py
+- `analyze()` --calls--> `stable_identifier()`  [INFERRED]
+  geoespacial/analyze_anatel_radio_link_candidates.py → geoespacial/build_canonical_smp.py
 - `audit_member()` --calls--> `emission_bandwidth_hz()`  [INFERRED]
   geoespacial/audit_anatel_general.py → geoespacial/audit_anatel_spectrum.py
-- `audit_member()` --calls--> `number()`  [INFERRED]
-  geoespacial/audit_anatel_general.py → geoespacial/audit_anatel_spectrum.py
-- `audit_member()` --calls--> `deterministic_gzip_csv()`  [INFERRED]
-  geoespacial/audit_anatel_general.py → geoespacial/build_canonical_smp.py
-- `audit()` --calls--> `sha256_file()`  [INFERRED]
-  geoespacial/audit_anatel_general.py → geoespacial/build_canonical_smp.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (82 total, 9 thin omitted)
+## Communities (83 total, 10 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -199,8 +200,8 @@ Cohesion: 0.27
 Nodes (9): Any, Candidate, load_instance(), main(), Path, Minimize site count, using candidate score only as a tie-breaker., solve(), candidate() (+1 more)
 
 ### Community 18 - "Seleção geoespacial de sítios RADOME"
-Cohesion: 0.14
-Nodes (21): horizon_km(), main(), node_id(), Path, Lê uma camada com os bindings GDAL, sem conversão externa por shell., read_layer(), terrain_elevation(), tile_pixel() (+13 more)
+Cohesion: 0.09
+Nodes (30): horizon_km(), main(), node_id(), Path, Lê uma camada com os bindings GDAL, sem conversão externa por shell., read_layer(), terrain_elevation(), tile_pixel() (+22 more)
 
 ### Community 20 - "RADOME Project / Projeto RADOME"
 Cohesion: 0.33
@@ -340,7 +341,7 @@ Nodes (9): main(), parse_args(), Path, read_anac_csv(), read_anatel_zip(), read_
 
 ### Community 59 - "inventory"
 Cohesion: 0.05
-Nodes (57): audit(), audit_member(), main(), Counter, Path, rf_role(), sorted_counter(), usable_text() (+49 more)
+Nodes (57): analyze(), distance(), main(), Path, audit(), audit_member(), main(), Counter (+49 more)
 
 ### Community 61 - "build"
 Cohesion: 0.35
@@ -399,8 +400,8 @@ Cohesion: 0.25
 Nodes (7): Comando de retomada, Dados e integrações concluídos, Estado atual do subprojeto geoespacial, Lacunas controladas, Próxima ação executável, Validação reproduzível, Vinculação e governança
 
 ### Community 76 - "build_municipal_emitter_network.py"
-Cohesion: 0.27
-Nodes (9): dominant_code(), main(), municipal_features(), Counter, Path, read_population(), read_smp_sites(), write_network() (+1 more)
+Cohesion: 0.39
+Nodes (5): file_sha256(), inventory(), main(), Path, SmpInventoryTest
 
 ### Community 78 - "Emissores fixos SARC/SCM no esquema canônico"
 Cohesion: 0.50
@@ -415,23 +416,23 @@ Cohesion: 0.47
 Nodes (4): CanonicalSmpTest, Path, read_gzip_csv(), write_fixture()
 
 ## Knowledge Gaps
-- **482 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+477 more)
+- **483 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+478 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 4 inferred relationships involving `build()` (e.g. with `emission_bandwidth_hz()` and `number()`) actually correct?**
-  _`build()` has 4 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 9 inferred relationships involving `deterministic_gzip_csv()` (e.g. with `analyze()` and `audit_member()`) actually correct?**
+  _`deterministic_gzip_csv()` has 9 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _482 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _483 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
