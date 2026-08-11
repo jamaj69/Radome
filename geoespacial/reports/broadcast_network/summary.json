@@ -1,0 +1,24 @@
+{
+  "record_count": 35126,
+  "valid_coordinate_record_count": 35126,
+  "licensed_record_count": 18285,
+  "licensed_site_count": 11921,
+  "municipality_name_matches": 18253,
+  "municipality_spatial_fallback_matches": 32,
+  "sites_without_municipal_code": 0,
+  "sites_with_conflicting_municipal_codes": 117,
+  "active_filter": "Sigla Status == C4 (Canal Licenciado)",
+  "services_all_records": {
+    "RTVD": 17656,
+    "FM": 8466,
+    "PBTVD": 2165,
+    "OM": 2069,
+    "RTV": 1609,
+    "RTRFM": 1391,
+    "GTVD": 1275,
+    "ECRD": 376,
+    "TV": 97,
+    "TVA": 22
+  },
+  "source_sha256": "c921e2d34d8fa4f6f76273d6bc2ce14a8b936cb5700a2a895274c5c72c517cb8"
+}

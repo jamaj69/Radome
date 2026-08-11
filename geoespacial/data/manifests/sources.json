@@ -105,6 +105,22 @@
       "status": "downloaded_verified_not_a_substitute_for_smp_resource"
     },
     {
+      "id": "anatel_broadcast_stations_2026-08-09",
+      "authority": "Anatel",
+      "description": "Estações e canais de TV, RTV, FM, OM e retransmissão de rádio",
+      "catalog_url": "https://dados.gov.br/dados/conjuntos-dados/outorga-e-licenciamento---estaes-licenciadas",
+      "url": "https://www.anatel.gov.br/dadosabertos/paineis_de_dados/radiodifusao/estacoes_radiodifusao.zip",
+      "expected_size_bytes": 1944597,
+      "uncompressed_size_bytes": 9542695,
+      "sha256": "c921e2d34d8fa4f6f76273d6bc2ce14a8b936cb5700a2a895274c5c72c517cb8",
+      "target": "data/raw/anatel/estacoes_radiodifusao.zip",
+      "report": "reports/broadcast_network/summary.json",
+      "record_count": 35126,
+      "licensed_record_count": 18285,
+      "licensed_site_count": 11921,
+      "status": "downloaded_verified_integrated"
+    },
+    {
       "id": "anac_aerodromes_2026-08",
       "authority": "ANAC",
       "description": "Cadastros oficiais de aeródromos públicos, privados, helipontos e helideques",

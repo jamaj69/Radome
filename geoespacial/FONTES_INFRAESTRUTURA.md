@@ -13,6 +13,7 @@ cadastro setorial e usar o IBGE como base cartográfica de integração.
 | Pistas e pontos de pouso | BC250 2025 | ANAC e AISWEB/DECEA | incorporar apenas os subconjuntos necessários |
 | Torres/ERBs celulares | não há camada na BC250 2025 | Anatel, Estações SMP licenciadas | usar Anatel |
 | Radioenlaces celulares | não há camada na BC250 2025 | Anatel, radioenlaces SMP | usar Anatel |
+| TV, RTV, FM, OM e RTR | não há cadastro setorial completo | Anatel, estações de radiodifusão | baixado e integrado por município |
 | Bases/aeródromos militares | aparecem parcialmente como aeroportos, sem classificação confiável | AISWEB/DECEA e AIP/ROTAER | validar e classificar pelo DECEA |
 | Comandos aéreos | não há camada nominal | fonte pública oficial da FAB/DECEA, se disponível | manter pendente |
 
@@ -115,3 +116,16 @@ Fontes:
 O inventário reproduzível está em
 `data/manifests/infrastructure_inventory.json` e é regenerado por
 `inventory_infrastructure.py`. Arquivos brutos continuam fora do Git.
+
+## Radiodifusão
+
+O recurso `estacoes_radiodifusao.zip` da Anatel foi baixado e verificado. Seus
+35.126 registros incluem TV, televisão digital e retransmissoras, FM,
+retransmissoras de FM e ondas médias. Todos possuem coordenadas válidas, mas o
+cadastro mistura estados regulatórios diferentes. O grafo de iluminadores usa
+somente 18.285 registros `C4 — Canal Licenciado`, agregados em 11.921 sítios.
+
+Os 11.647 canais vagos e os canais pendentes, suspensos ou aguardando
+licenciamento não são fontes ativas. Essa separação deve permanecer explícita
+no artigo e nos scripts. Todos os sítios licenciados receberam código IBGE; 117
+coordenadas com códigos conflitantes foram marcadas para revisão.

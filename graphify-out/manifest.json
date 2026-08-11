@@ -460,8 +460,8 @@
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/sources.json": {
-    "mtime": 1786412761.7155719,
-    "ast_hash": "71af7a916cb53422b263ab52b9e0c6ae",
+    "mtime": 1786413378.09267,
+    "ast_hash": "f0ec04fd489e1002337b81d9ce75af09",
     "semantic_hash": ""
   },
   "geoespacial/optimize_sites.py": {
@@ -545,13 +545,13 @@
     "semantic_hash": ""
   },
   "geoespacial/METODOLOGIA_ARTIGO.md": {
-    "mtime": 1786412674.5839827,
-    "ast_hash": "0ea0ec2bd5ba9c4e60afcf373d8e8a78",
+    "mtime": 1786413398.5365741,
+    "ast_hash": "fcc86b960fc4d03651314987e6762386",
     "semantic_hash": ""
   },
   "geoespacial/FONTES_INFRAESTRUTURA.md": {
-    "mtime": 1786411811.9640555,
-    "ast_hash": "bc0b0bfbefe7c7a0dfb991591be4bc8d",
+    "mtime": 1786413378.2406695,
+    "ast_hash": "f2d9c17c2f002f514ac5407ad00c965e",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/infrastructure_inventory.json": {
@@ -602,6 +602,26 @@
   "geoespacial/reports/municipal_emitter_network/README.md": {
     "mtime": 1786412761.5675726,
     "ast_hash": "430470aa0456c4d8be663ef5b3b6b98e",
+    "semantic_hash": ""
+  },
+  "geoespacial/build_broadcast_network.py": {
+    "mtime": 1786413311.196984,
+    "ast_hash": "e924df6de06c8a7a41477309720ff07b",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/broadcast_network/summary.json": {
+    "mtime": 1786413377.8086715,
+    "ast_hash": "b3b01524839c0fadc5c845cd258512d0",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_build_broadcast_network.py": {
+    "mtime": 1786413311.3729832,
+    "ast_hash": "5d8d98046075fbac8990997b086fa8fd",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/broadcast_network/README.md": {
+    "mtime": 1786413377.9486709,
+    "ast_hash": "5be62115d8032ad4c4bd78af760f8243",
     "semantic_hash": ""
   }
 }

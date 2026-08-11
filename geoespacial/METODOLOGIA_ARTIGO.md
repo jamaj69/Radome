@@ -119,6 +119,9 @@ O comando agregado equivalente é `run_pipeline.sh`.
 - não afirmar visada a partir de uma aresta preliminar;
 - não confundir cidades próximas com cidades visíveis;
 - não usar o grafo de infraestrutura para eliminar regiões pouco urbanizadas;
+- citar a versão do manifesto, o commit Git e os parâmetros da execução;
+- regenerar os resultados após qualquer mudança de fonte ou configuração;
+- incorporar metodologia e resultados nas duas árvores linguísticas do artigo.
 
 ## Camada municipal e integração de emissores
 
@@ -161,6 +164,10 @@ aeronáutica. A presença de um emissor não demonstra que seu sinal produz eco
 detectável no radome: frequência, potência irradiada, diagrama, polarização,
 ocupação temporal, perdas, geometria biestática, RCS e ruído pertencem à etapa
 radioelétrica posterior.
-- citar a versão do manifesto, o commit Git e os parâmetros da execução;
-- regenerar os resultados após qualquer mudança de fonte ou configuração;
-- incorporar metodologia e resultados nas duas árvores linguísticas do artigo.
+
+Para radiodifusão, o universo cadastral é separado do conjunto de iluminadores
+ativos. Apenas `C4 — Canal Licenciado` entra no grafo operacional preliminar.
+Canais vagos, suspensos, pendentes ou aguardando outorga, dados, ato de RF ou
+licenciamento permanecem no inventário. Registros licenciados co-localizados
+são agregados por coordenada, preservando serviço, canal, frequência, entidade,
+classe, categoria, finalidade e ERP.
