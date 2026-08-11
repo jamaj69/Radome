@@ -259,6 +259,20 @@ python validate_anatel_radio_link_vertical_geometry.py \
   --report reports/anatel_radio_link_vertical/summary.json
 ```
 
+Por fim, todos os gates são consolidados numa partição cadastral sem arestas:
+
+```bash
+python consolidate_anatel_radio_link_prequalification.py \
+  --audited-paths outputs/anatel_radio_link_heights/paths.csv.gz \
+  --terrain-paths outputs/anatel_radio_link_path_terrain/paths.csv.gz \
+  --vertical-paths outputs/anatel_radio_link_vertical/paths.csv.gz \
+  --keys outputs/anatel_radio_link_keys/records.csv.gz \
+  --emissions outputs/anatel_radio_links/emissions.csv.gz \
+  --output outputs/anatel_radio_link_prequalification/paths.csv.gz \
+  --candidates-output outputs/anatel_radio_link_prequalification/candidates.csv.gz \
+  --report reports/anatel_radio_link_prequalification/summary.json
+```
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;
