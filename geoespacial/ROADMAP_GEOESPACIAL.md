@@ -282,8 +282,9 @@ depois da validação de cada estudo insular.
 12. **em andamento:** selecionar, adquirir e extrair TOPODATA para as lacunas
     continentais foi concluído (141 GeoTIFFs, 10.964.218.374 bytes, nenhuma
     falha); 1.732 sementes máximas por célula foram geradas sem ausência e
-    reproduzem byte a byte; consolidar candidatos por cumeada, escala e distância
-    e depois repetir a triangulação basal e medir o ganho em faces `K3`;
+    reproduzem byte a byte; a triagem a 5/10/25 km reteve preliminarmente 1.484
+    candidatos, mas 69 sementes exigem folhas de borda para completar os anéis;
+    completar a aquisição e depois repetir a triangulação e medir faces `K3`;
 13. normalizar radiodifusão e integrar VOR/NDB/DME por município;
 14. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
    BC250 e DECEA;

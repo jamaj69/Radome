@@ -118,5 +118,7 @@
   "116": "triangular_mesh_baseline/README.md",
   "117": "topodata_gap_tiles/README.md",
   "118": "build_continental_coverage_grid.py",
-  "119": "topodata_gap_seeds/README.md"
+  "119": "topodata_gap_seeds/README.md",
+  "120": "validate_anatel_radio_link_vertical_geometry.py",
+  "121": "topodata_gap_candidates/README.md"
 }

@@ -127,6 +127,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   semente por célula no centro do pixel TOPODATA de maior cota, sem ausência;
   cotas de 29,389--2.131,380 m e relevo relativo celular de
   24,169--2.062,120 m; CSV gzip e GeoJSON reproduziram byte a byte;
+- triagem multiescala preliminar: anéis de 5/10/25 km com 36 azimutes estão
+  completos para 1.709/1.696/1.663 sementes; consolidação a 10 km reteve 1.484
+  candidatos representando todas as 1.732 células; 69 sementes permanecem com
+  ao menos um anel incompleto e não recebem pontuação otimista de clareza;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -163,10 +167,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Consolidar as 1.732 sementes TOPODATA em candidatos multi-escala sem perder
-cobertura potencial: medir proeminência aproximada em janelas declaradas,
-identificar cumeadas, aplicar distância mínima com rastreabilidade das células
-representadas e preservar alternativas empatadas antes de recalcular cobertura.
+Selecionar as folhas TOPODATA adicionais atravessadas pelos anéis de 25 km das
+69 sementes incompletas, adquiri-las e repetir a triagem até obter 36/36
+azimutes nas três escalas. Somente então congelar a consolidação e recalcular a
+cobertura e a malha triangular.
 
 ## Comando de retomada
 
