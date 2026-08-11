@@ -232,6 +232,19 @@ Uma altura única em cada ponta é apenas não ambígua internamente no cadastro
 não equivale a medição física. Ausência ou múltiplas alturas para o mesmo caminho
 permanecem bloqueios explícitos e nenhuma aresta é criada.
 
+O perfil definitivo desta fase é então repetido por caminho não ambíguo:
+
+```bash
+python evaluate_anatel_radio_link_paths_topodata.py \
+  --geometry outputs/anatel_radio_link_geometry/groups.csv.gz \
+  --audited-paths outputs/anatel_radio_link_heights/paths.csv.gz \
+  --terrain-root data/processed/topodata/radio_link_routes \
+  --terrain-index reports/topodata_radio_link_tiles/index.geojson \
+  --paths-output outputs/anatel_radio_link_path_terrain/paths.csv.gz \
+  --candidates-output outputs/anatel_radio_link_path_terrain/candidates.csv.gz \
+  --report reports/anatel_radio_link_path_terrain/summary.json
+```
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;
