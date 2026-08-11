@@ -71,6 +71,23 @@ arestas de visada, condição de exceção insular e pontuação secundária. O 
 MILP minimiza primeiro a quantidade de sítios e usa a pontuação apenas para
 desempatar soluções com a mesma cardinalidade.
 
+## Pré-seleção BC250
+
+A triagem inicial pode ser reproduzida com o Python do sistema, que fornece os
+bindings GDAL/OGR:
+
+```bash
+/usr/bin/python3 preselect_bc250.py \
+  data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
+  --output-dir reports/preselection_bc250
+```
+
+Essa etapa parte dos pontos cotados, agrega pontos separados por menos de 10 km
+e calcula uma pontuação com 60% de altitude, 25% de quantidade de cidades em
+250 km e 15% de ocupação de oito setores azimutais. “Cidade em 250 km” é apenas
+um indicador logístico: somente o MDE permitirá substituir esse indicador por
+cidades efetivamente visíveis.
+
 ## Critério de parada
 
 Não se declarará “cobertura nacional” sem informar, para cada altitude de
