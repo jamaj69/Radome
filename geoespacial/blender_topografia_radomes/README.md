@@ -7,5 +7,6 @@ Essas incidências não demonstram iluminação RF, visada, Fresnel, licenciamen
 ```bash
 cd /home/jamaj/src/Radome
 /home/python/pyenv/bin/python geoespacial/blender_topografia_radomes/select_visual_sites.py --ranking geoespacial/outputs/candidate_ranking/candidate_ranking.csv.gz --output geoespacial/blender_topografia_radomes/build/selected_sites.json
-blender -b --python geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py -- --selection geoespacial/blender_topografia_radomes/build/selected_sites.json --blend geoespacial/blender_topografia_radomes/build/earth_radomes.blend --render geoespacial/blender_topografia_radomes/build/earth_radomes.png
+/usr/bin/python3 geoespacial/blender_topografia_radomes/export_geographic_overlays.py --bc250 geoespacial/data/raw/ibge/bc250/bc250_2026-03-03.gpkg --ranking geoespacial/outputs/candidate_ranking/candidate_ranking.csv.gz --output geoespacial/blender_topografia_radomes/build/overlays.json
+blender -b --python geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py -- --selection geoespacial/blender_topografia_radomes/build/selected_sites.json --overlays geoespacial/blender_topografia_radomes/build/overlays.json --blend geoespacial/blender_topografia_radomes/build/earth_radomes.blend --render geoespacial/blender_topografia_radomes/build/earth_radomes.png
 ```

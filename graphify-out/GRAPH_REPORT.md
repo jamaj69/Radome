@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 231 files · ~538,276 words
+- 232 files · ~538,439 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1350 nodes · 1809 edges · 136 communities (101 shown, 35 thin omitted)
+- 1357 nodes · 1823 edges · 136 communities (101 shown, 35 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 138 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2de3f7f2`
+- Built from commit: `65bc915b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -461,8 +461,8 @@ Cohesion: 0.50
 Nodes (3): Famílias explícitas de radioenlaces Anatel, Reprodução, Resultado
 
 ### Community 83 - "evaluate_anatel_radio_link_terrain.py"
-Cohesion: 0.07
-Nodes (28): candidate_status(), evaluate(), main(), Counter, Path, classify(), evaluate(), interpolate() (+20 more)
+Cohesion: 0.06
+Nodes (35): candidate_status(), evaluate(), main(), Counter, Path, classify(), evaluate(), interpolate() (+27 more)
 
 ### Community 84 - "extract_topodata_route_tiles.py"
 Cohesion: 0.24
@@ -569,16 +569,16 @@ Cohesion: 0.23
 Nodes (9): build(), component_metrics(), edge_key(), face_vertices(), main(), Graph, Path, AnalyzeAugmentedMeshResilienceTests (+1 more)
 
 ### Community 132 - "render_curved_earth_radomes.py"
-Cohesion: 0.67
-Nodes (5): add_radome(), build(), material(), position(), Monta e renderiza uma cena Blender da Terra curva e três sítios candidatos.
+Cohesion: 0.56
+Nodes (8): add_curve(), add_overlays(), add_radome(), build(), geo_position(), material(), position(), Monta e renderiza uma cena Blender da Terra curva e três sítios candidatos.
 
 ### Community 133 - "build"
 Cohesion: 0.33
 Nodes (3): build(), Path, SelectBlenderVisualSitesTests
 
 ### Community 135 - "validate_anatel_radio_link_vertical_geometry.py"
-Cohesion: 0.23
-Nodes (7): VerticalGeometryTest, angular_error(), elevation_angle(), main(), Path, status(), validate()
+Cohesion: 0.67
+Nodes (3): build(), Exporta limites BC250 e amostras de altitude para a cena Blender., rings()
 
 ## Knowledge Gaps
 - **521 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+516 more)
@@ -588,10 +588,12 @@ Nodes (7): VerticalGeometryTest, angular_error(), elevation_angle(), main(), Pat
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Topodata` connect `evaluate_anatel_radio_link_terrain.py` to `validate_anatel_radio_link_vertical_geometry.py`, `validate_anatel_radio_link_geometry.py`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
+- **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `requirements()` connect `validate_anatel_radio_link_geometry.py` to `Cross-search signals`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `Topodata` (e.g. with `evaluate()` and `build()`) actually correct?**
@@ -600,5 +602,3 @@ _Questions this graph is uniquely positioned to answer:_
   _521 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
-- **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
-  _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._

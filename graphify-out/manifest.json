@@ -1440,8 +1440,8 @@
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py": {
-    "mtime": 1786488628.1033685,
-    "ast_hash": "69948457a0cc3a40a7154af7abf8f08d",
+    "mtime": 1786488915.994007,
+    "ast_hash": "5e75c998cbb0e648d4f2f3da64962876",
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/select_visual_sites.py": {
@@ -1450,13 +1450,18 @@
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/README.md": {
-    "mtime": 1786488566.0076623,
-    "ast_hash": "c9a86206aa4d4271da2f82cea9cf96ce",
+    "mtime": 1786488916.1620064,
+    "ast_hash": "48ce80b38675ceab71faea7adec94ff7",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_select_blender_visual_sites.py": {
     "mtime": 1786488682.147113,
     "ast_hash": "c30652a026cba5797933254817aea182",
+    "semantic_hash": ""
+  },
+  "geoespacial/blender_topografia_radomes/export_geographic_overlays.py": {
+    "mtime": 1786488915.826008,
+    "ast_hash": "22f071229d46f64d528bdf896da21348",
     "semantic_hash": ""
   }
 }
