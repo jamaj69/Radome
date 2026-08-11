@@ -8,6 +8,10 @@ O escopo ativo é somente o território continental. Arquipélagos e ilhas
 oceânicas ficam fora da otimização nacional: cada grupo próximo será estudado
 depois como um caso independente, com um único radome em seu ótimo local.
 
+A especificação destinada à futura incorporação no artigo está em
+`METODOLOGIA_ARTIGO.md`. `run_pipeline.sh` reproduz testes, pré-seleção e grafo
+com os dados locais verificados.
+
 ## Hipóteses controladas
 
 - a cobertura é avaliada a 150 m, 3 000 m e 10 000 m acima do terreno;

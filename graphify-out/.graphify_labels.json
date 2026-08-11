@@ -53,5 +53,6 @@
   "51": "inventory_topodata.py",
   "52": "localize_figures.py",
   "53": "Pré-seleção continental baseada na BC250",
-  "54": "Grafo preliminar de capitais e aeroportos"
+  "54": "Grafo preliminar de capitais e aeroportos",
+  "55": "run_pipeline.sh"
 }
