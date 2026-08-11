@@ -15,6 +15,19 @@ com os dados locais verificados.
 O diagnóstico das fontes de torres celulares, aeroportos, bases aéreas e
 comandos está em `FONTES_INFRAESTRUTURA.md`.
 
+O inventário dos cadastros já obtidos é reproduzido com:
+
+```bash
+/home/python/pyenv/bin/python inventory_infrastructure.py \
+  --anac-dir data/raw/anac/aerodromos \
+  --anatel-zip data/raw/anatel/estacoes_licenciadas.zip \
+  --decea-capabilities data/raw/decea/wfs-get-capabilities.xml \
+  --output data/manifests/infrastructure_inventory.json
+```
+
+O WFS do DECEA é um catálogo vivo; o `GetCapabilities` usado em cada execução
+deve ser preservado em `data/raw/` para que a seleção de camadas seja auditável.
+
 ## Hipóteses controladas
 
 - a cobertura é avaliada a 150 m, 3 000 m e 10 000 m acima do terreno;
