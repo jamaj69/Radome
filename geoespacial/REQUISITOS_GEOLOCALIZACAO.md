@@ -75,6 +75,10 @@ qualquer mudança deve ser registrada explicitamente, com justificativa e data.
    diagramas ou modelos geométricos em alegações de desempenho operacional.
 5. A futura redação metodológica deverá existir nas edições portuguesa e
    inglesa, mantendo equivalência técnica.
+6. Toda manipulação autoritativa das bases — aquisição, extração, limpeza,
+   transformação, cruzamento, agregação e exportação — deve ser realizada por
+   script Python versionado. Operações manuais podem apenas inspecionar dados e
+   não podem ser a fonte única de um resultado.
 
 ## Decisões operacionais derivadas
 

@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1786408757.0424922,
-    "ast_hash": "5c9ab71c3bcbaefebe8405973d259f4e",
+    "mtime": 1786416073.739615,
+    "ast_hash": "45318145fc0194c76af7e5c73f1ff4c1",
     "semantic_hash": ""
   },
   "Projeto_Radomes_Multifaixa_Revisado.md": {
@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "geoespacial/README.md": {
-    "mtime": 1786415441.5948646,
-    "ast_hash": "93faffc2ff4566ff435527a59fab7305",
+    "mtime": 1786416074.0836132,
+    "ast_hash": "e39f1e69052f959be313fec4e744f63c",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/topodata_altitude_tiles.json": {
@@ -515,12 +515,12 @@
     "semantic_hash": ""
   },
   "geoespacial/build_candidate_graph.py": {
-    "mtime": 1786409806.4334943,
-    "ast_hash": "cf44846350065b240ab62ae2456d3ec6",
+    "mtime": 1786416039.4037914,
+    "ast_hash": "e88ee08f0db5640d999766c6d2818504",
     "semantic_hash": ""
   },
   "geoespacial/reports/candidate_graph/summary.json": {
-    "mtime": 1786410055.4843001,
+    "mtime": 1786416096.0874999,
     "ast_hash": "3c8abd875e5a21be218d0584672b000e",
     "semantic_hash": ""
   },
@@ -535,18 +535,18 @@
     "semantic_hash": ""
   },
   "geoespacial/reports/candidate_graph/candidate_graph.png": {
-    "mtime": 1786410055.4843001,
-    "ast_hash": "32b6b0998158c3415ee5231226bea23e",
+    "mtime": 1786416096.0874999,
+    "ast_hash": "1916a9e358458bddd05f97aa7438aeee",
     "semantic_hash": ""
   },
   "geoespacial/run_pipeline.sh": {
-    "mtime": 1786410035.0683951,
-    "ast_hash": "1499eaca02f0811b89d1ba6c2627f8de",
+    "mtime": 1786416039.8037894,
+    "ast_hash": "7e8cdf09c6f7c2fead35281cb7b85d3b",
     "semantic_hash": ""
   },
   "geoespacial/METODOLOGIA_ARTIGO.md": {
-    "mtime": 1786414492.0234396,
-    "ast_hash": "56527cdea4b3fa0c50b10b7c63088e7e",
+    "mtime": 1786416074.2356124,
+    "ast_hash": "cf6c51d45495d32c375322ed87010d98",
     "semantic_hash": ""
   },
   "geoespacial/FONTES_INFRAESTRUTURA.md": {
@@ -625,18 +625,18 @@
     "semantic_hash": ""
   },
   "geoespacial/REQUISITOS_GEOLOCALIZACAO.md": {
-    "mtime": 1786413572.6637566,
-    "ast_hash": "838bd1f382ac71860bcdd4cc03a87bf5",
+    "mtime": 1786416073.907614,
+    "ast_hash": "7f3e0988a1b6d5a7f0dfb6f20c2de269",
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786415471.5187106,
-    "ast_hash": "eec7a52dacb02d66a61c131cbb94682d",
+    "mtime": 1786416074.3876116,
+    "ast_hash": "43294698a8dd91e636969118ff37e67d",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
-    "mtime": 1786415471.8107092,
-    "ast_hash": "1cf753736a261b1a8c5951c942d09434",
+    "mtime": 1786416074.5356107,
+    "ast_hash": "958f2f4815a098accad0d19b45e3af80",
     "semantic_hash": ""
   },
   "geoespacial/audit_anatel_spectrum.py": {
@@ -682,6 +682,41 @@
   "geoespacial/CAMADAS_EMISSOES_OFICIAIS.md": {
     "mtime": 1786415441.2468662,
     "ast_hash": "128cfdac947759576feb8aa083feb607",
+    "semantic_hash": ""
+  },
+  "geoespacial/acquire_decea_wfs.py": {
+    "mtime": 1786416039.9557886,
+    "ast_hash": "195f0cfec4bc68bd7c640632027a119d",
+    "semantic_hash": ""
+  },
+  "geoespacial/acquire_http.py": {
+    "mtime": 1786416152.8272083,
+    "ast_hash": "1f52965d42f76f726a25e360a6849064",
+    "semantic_hash": ""
+  },
+  "geoespacial/extract_zip.py": {
+    "mtime": 1786416153.0592072,
+    "ast_hash": "e64e403a98ec8efc2296b84ee80856d4",
+    "semantic_hash": ""
+  },
+  "geoespacial/run_pipeline.py": {
+    "mtime": 1786416039.5877905,
+    "ast_hash": "a9e5b63701786bd87ce10cb57dcc18e5",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_acquire_decea_wfs.py": {
+    "mtime": 1786416040.1237876,
+    "ast_hash": "054dce88311e09d55a583abb86f7beee",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_acquisition_io.py": {
+    "mtime": 1786416153.2272062,
+    "ast_hash": "fa29f57f1c63f999313c9257d201e150",
+    "semantic_hash": ""
+  },
+  "geoespacial/POLITICA_REPRODUTIBILIDADE.md": {
+    "mtime": 1786416153.3792055,
+    "ast_hash": "997159a4cc472e17b036ae0a91ce88e7",
     "semantic_hash": ""
   }
 }

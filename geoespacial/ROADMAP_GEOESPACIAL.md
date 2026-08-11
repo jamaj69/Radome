@@ -25,6 +25,8 @@ disponibilidade de iluminadores. Cada camada recebe um estado controlado:
 
 Os estados detalhados e hashes ficam em `data/manifests/`; relatórios pequenos
 em `reports/`; dados brutos em `data/raw/`; produtos volumosos em `outputs/`.
+Toda transição de estado deve ser produzida por script Python conforme
+`POLITICA_REPRODUTIBILIDADE.md`; manipulação manual não fecha gate.
 
 ## Inventário atual de camadas
 
@@ -267,3 +269,7 @@ Cada fase quantitativa deve produzir:
 - contagem de ausências, conflitos e descartes;
 - versão do software e commit Git;
 - texto de limitações pronto para adaptação ao artigo.
+
+Aquisição e transformação também devem indicar o script Python autoritativo.
+Arquivos shell, projetos QGIS e cenas Blender podem orquestrar ou visualizar,
+mas não podem ser a única implementação de qualquer operação sobre as bases.

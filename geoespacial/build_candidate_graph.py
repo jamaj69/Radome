@@ -8,7 +8,6 @@ import csv
 import io
 import json
 import math
-import subprocess
 import urllib.request
 from pathlib import Path
 
@@ -23,11 +22,34 @@ TERRARIUM_URL = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}
 
 
 def read_layer(gpkg: Path, layer: str, where: str | None = None) -> list[dict[str, object]]:
-    command = ["ogr2ogr", "-f", "GeoJSON", "/vsistdout/", str(gpkg), layer]
+    """Lê uma camada com os bindings GDAL, sem conversão externa por shell."""
+    from osgeo import ogr
+
+    dataset = ogr.Open(str(gpkg))
+    if dataset is None:
+        raise ValueError(f"cannot open GeoPackage: {gpkg}")
+    source = dataset.GetLayerByName(layer)
+    if source is None:
+        raise ValueError(f"missing layer: {layer}")
     if where:
-        command.extend(["-where", where])
-    result = subprocess.run(command, check=True, capture_output=True, text=True)
-    return json.loads(result.stdout)["features"]
+        source.SetAttributeFilter(where)
+    features = []
+    definition = source.GetLayerDefn()
+    for item in source:
+        geometry = item.GetGeometryRef()
+        if geometry is None:
+            continue
+        properties = {
+            definition.GetFieldDefn(index).GetName(): item.GetField(index)
+            for index in range(definition.GetFieldCount())
+        }
+        features.append({
+            "type": "Feature",
+            "id": item.GetFID(),
+            "geometry": json.loads(geometry.ExportToJson()),
+            "properties": properties,
+        })
+    return features
 
 
 def tile_pixel(longitude: float, latitude: float, zoom: int) -> tuple[int, int, int, int]:

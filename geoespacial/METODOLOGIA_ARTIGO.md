@@ -111,7 +111,14 @@ O artigo deve publicar, para cada altitude-alvo:
   --output-dir reports/candidate_graph
 ```
 
-O comando agregado equivalente é `run_pipeline.sh`.
+O comando agregado autoritativo é
+`/home/python/pyenv/bin/python run_pipeline.py`. `run_pipeline.sh` apenas mantém
+compatibilidade e delega imediatamente ao ponto de entrada Python.
+
+Toda manipulação das bases segue `POLITICA_REPRODUTIBILIDADE.md`: dados brutos
+são imutáveis e QGIS, planilhas ou comandos avulsos não constituem etapas
+autoritativas. Cada transformação usada no artigo deve existir em script Python
+versionado, com parâmetros, contagens, proveniência e testes adequados.
 
 ## Regras para incorporação no artigo
 

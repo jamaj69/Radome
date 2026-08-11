@@ -151,6 +151,11 @@ The scenario models ADS-B 1090ES at 1090 MHz, with 978 MHz UAT as contextual alt
 - Do not commit Blender backup files such as `*.blend1`.
 - After changing a shared figure or either language chapter, compile both authoritative masters before claiming completion.
 - Keep the baseline scene untouched; create a new named baseline or branch of the scene for major 3D expansions.
+- In `geoespacial/`, every authoritative download, extraction, transformation,
+  spatial join, aggregation and export of data must be implemented by a
+  versioned Python script. Shell files may only orchestrate Python entry points;
+  QGIS, spreadsheets and ad-hoc CLI commands are inspection tools, never the
+  sole source of a result. Follow `geoespacial/POLITICA_REPRODUTIBILIDADE.md`.
 
 ## Mandatory Commit Per Change
 

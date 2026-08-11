@@ -38,6 +38,9 @@ de implantação e não transforma cobertura geométrica em alegação de detec�
 - `outputs/`: produtos derivados volumosos e regeneráveis;
 - scripts e testes: execução reproduzível do método.
 
+`POLITICA_REPRODUTIBILIDADE.md` é obrigatória: toda manipulação autoritativa das
+bases pertence a scripts Python versionados.
+
 ## Gate de integração com o artigo
 
 Uma afirmação quantitativa geoespacial só pode ser incorporada às duas edições

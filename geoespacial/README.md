@@ -14,8 +14,10 @@ oceânicas ficam fora da otimização nacional: cada grupo próximo será estuda
 depois como um caso independente, com um único radome em seu ótimo local.
 
 A especificação destinada à futura incorporação no artigo está em
-`METODOLOGIA_ARTIGO.md`. `run_pipeline.sh` reproduz testes, pré-seleção e grafo
-com os dados locais verificados.
+`METODOLOGIA_ARTIGO.md`. A política obrigatória de manipulação das bases está em
+`POLITICA_REPRODUTIBILIDADE.md`. `run_pipeline.py` reproduz testes, pré-seleção e
+grafo com os dados locais verificados; `run_pipeline.sh` é apenas um wrapper de
+compatibilidade e não transforma dados.
 
 O diagnóstico das fontes de torres celulares, aeroportos, bases aéreas e
 comandos está em `FONTES_INFRAESTRUTURA.md`.
@@ -37,6 +39,8 @@ O inventário dos cadastros já obtidos é reproduzido com:
 
 O WFS do DECEA é um catálogo vivo; o `GetCapabilities` usado em cada execução
 deve ser preservado em `data/raw/` para que a seleção de camadas seja auditável.
+Camadas WFS são adquiridas de forma atômica e recebem hashes com
+`acquire_decea_wfs.py`.
 
 O cadastro SMP dedicado da Anatel é resumido sem extrair o CSV de quase 1 GB:
 

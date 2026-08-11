@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 76 files · ~458,795 words
+- 83 files · ~460,255 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 792 nodes · 919 edges · 70 communities (63 shown, 7 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 40 edges (avg confidence: 0.79)
+- 826 nodes · 964 edges · 74 communities (67 shown, 7 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 43 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b1b10cae`
+- Built from commit: `6f292e34`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -84,6 +84,10 @@
 - Auditoria de tecnologia e espectro das estações Anatel
 - Auxílios de navegação DECEA/ICA
 - Inventário de camadas oficiais de emissões
+- acquire
+- acquire_decea_wfs.py
+- Política de manipulação reproduzível das bases geoespaciais
+- main
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -112,7 +116,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (70 total, 7 thin omitted)
+## Communities (74 total, 7 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -188,7 +192,7 @@ Nodes (9): Any, Candidate, load_instance(), main(), Path, Minimize site count, u
 
 ### Community 18 - "Seleção geoespacial de sítios RADOME"
 Cohesion: 0.14
-Nodes (20): horizon_km(), main(), node_id(), Path, read_layer(), terrain_elevation(), tile_pixel(), analyse() (+12 more)
+Nodes (21): horizon_km(), main(), node_id(), Path, Lê uma camada com os bindings GDAL, sem conversão externa por shell., read_layer(), terrain_elevation(), tile_pixel() (+13 more)
 
 ### Community 20 - "RADOME Project / Projeto RADOME"
 Cohesion: 0.33
@@ -362,8 +366,24 @@ Nodes (4): Auxílios de navegação DECEA/ICA, Interpretação dos campos, Limit
 Cohesion: 0.25
 Nodes (7): Critério de prontidão, Fontes oficiais adicionais identificadas, Inventário de camadas oficiais de emissões, Matriz reavaliada, Novo gate de emissões oficiais — M2E, Principal descoberta da reanálise, Sequência revisada
 
+### Community 70 - "acquire"
+Cohesion: 0.23
+Nodes (9): acquire(), file_sha256(), main(), Path, extract(), main(), Path, safe_destination() (+1 more)
+
+### Community 71 - "acquire_decea_wfs.py"
+Cohesion: 0.36
+Nodes (6): download_atomic(), main(), Path, request_url(), sha256(), DeceaAcquisitionTest
+
+### Community 72 - "Política de manipulação reproduzível das bases geoespaciais"
+Cohesion: 0.33
+Nodes (5): Contrato de cada script, Gates futuros, Política de manipulação reproduzível das bases geoespaciais, Pontos de entrada atuais, Regra obrigatória
+
+### Community 73 - "main"
+Cohesion: 0.83
+Nodes (3): main(), Path, run()
+
 ## Knowledge Gaps
-- **463 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+458 more)
+- **467 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+462 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -371,11 +391,11 @@ Nodes (7): Critério de prontidão, Fontes oficiais adicionais identificadas, In
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _463 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _467 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
