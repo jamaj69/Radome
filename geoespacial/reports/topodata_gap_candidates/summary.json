@@ -2,8 +2,8 @@
   "schema_version": 1,
   "seeds_file": "geoespacial/outputs/topodata_gap_seeds/gap_seeds.csv.gz",
   "seeds_sha256": "bff3d5d7fffef01feb3a9873c617230862221e3c0be2bc93d8c6505be76e63ee",
-  "terrain_index": "geoespacial/reports/topodata_gap_tiles/index.geojson",
-  "terrain_index_sha256": "16fbf0e7bbff753778849d4042862dcfe1fa18d22ee39d4f5b470ec59e3380b8",
+  "terrain_index": "geoespacial/reports/topodata_gap_ring_tiles/index.geojson",
+  "terrain_index_sha256": "1d29160148c5d4b687655a883a974c483e9d512b34702dbcc711a72a99eb7f8e",
   "input_seed_count": 1732,
   "candidate_count": 1484,
   "represented_cell_count": 1732,
@@ -15,15 +15,15 @@
   ],
   "ring_azimuth_count": 36,
   "complete_ring_counts": {
-    "5": 1709,
-    "10": 1696,
-    "25": 1663
+    "5": 1732,
+    "10": 1732,
+    "25": 1731
   },
   "multiscale_status_counts": {
-    "connected_or_higher_nearby": 86,
-    "ridge_or_summit_partial": 477,
-    "summit_like_all_scales": 1100,
-    "terrain_ring_incomplete": 69
+    "connected_or_higher_nearby": 92,
+    "ridge_or_summit_partial": 497,
+    "summit_like_all_scales": 1142,
+    "terrain_ring_incomplete": 1
   },
   "candidate_count_by_uf": {
     "AM": 301,
@@ -40,11 +40,11 @@
   "outputs": {
     "table": {
       "path": "geoespacial/outputs/topodata_gap_candidates/gap_candidates.csv.gz",
-      "sha256": "456e2822109b0c70d98d919ff316f513ae55b90ceaaa0df7b87324b26f310bfb"
+      "sha256": "dc503a8b62d5fe81bda7a655e69e274437f515052b12a29e6b3e56245bbea841"
     },
     "geojson": {
       "path": "geoespacial/outputs/topodata_gap_candidates/gap_candidates.geojson",
-      "sha256": "cf2bc5f2e5d9e618b00e6514fa4be7f32f4bfed6ed296ae1a1d29cb23db50df1"
+      "sha256": "207f6913b9ea2ab6529542c9645080d9f8c133167e2f0cd67d2acb8e58706a06"
     }
   },
   "semantics": "ring clearance is seed elevation minus maximum TOPODATA sample on a geodesic ring; it is a multi-scale summit/ridge screening proxy, not topographic prominence, viewshed, line of sight, RF coverage, or site approval"

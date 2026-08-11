@@ -127,10 +127,11 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   semente por célula no centro do pixel TOPODATA de maior cota, sem ausência;
   cotas de 29,389--2.131,380 m e relevo relativo celular de
   24,169--2.062,120 m; CSV gzip e GeoJSON reproduziram byte a byte;
-- triagem multiescala preliminar: anéis de 5/10/25 km com 36 azimutes estão
-  completos para 1.709/1.696/1.663 sementes; consolidação a 10 km reteve 1.484
-  candidatos representando todas as 1.732 células; 69 sementes permanecem com
-  ao menos um anel incompleto e não recebem pontuação otimista de clareza;
+- triagem multiescala consolidada: anéis de 5/10/25 km com 36 azimutes estão
+  completos para 1.732/1.732/1.731 sementes; consolidação a 10 km reteve 1.484
+  candidatos representando todas as 1.732 células; somente a semente
+  `gap-seed:cell:+003.8750:-0051.1250` permanece com 33/36 amostras no anel de
+  25 km e não recebe pontuação otimista para esse anel;
 - seleção das folhas de borda concluída: os 188.788 centros e pontos dos anéis
   requerem 175 folhas TOPODATA disponíveis, das quais 143 já são locais e 32
   novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
@@ -178,9 +179,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Repetir a triagem multiescala com o índice de 175 folhas e quantificar a
-incompletude residual causada exclusivamente por `05N51_ZN.zip`. Somente então
-congelar a consolidação e recalcular a cobertura e a malha triangular.
+Integrar os 1.484 candidatos de lacuna ao conjunto continental, recalcular a
+cobertura por discos e a malha triangular e associar as camadas canônicas de
+iluminadores apenas como incidências geométricas, sem antecipar visada ou
+`illuminates` RF.
 
 ## Comando de retomada
 
