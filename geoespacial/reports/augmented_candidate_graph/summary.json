@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "input_graph": "geoespacial/outputs/candidate_ranking/graph.graphml",
+  "input_graph_sha256": "d1cc11effa105d3a54daea9da94eee8d055c33bed259393a73cf98b8f241a09f",
+  "gap_candidates": "geoespacial/outputs/topodata_gap_candidates/gap_candidates.csv.gz",
+  "gap_candidates_sha256": "dc503a8b62d5fe81bda7a655e69e274437f515052b12a29e6b3e56245bbea841",
+  "original_candidate_count": 131,
+  "gap_candidate_count": 1484,
+  "total_candidate_count": 1615,
+  "added_curvature_pair_count": 45137,
+  "added_directed_edge_count": 90274,
+  "total_graph_node_count": 125330,
+  "total_graph_edge_count": 209563,
+  "operational_edge_count": 0,
+  "parameters": {
+    "radome_height_agl_m": 15.0,
+    "target_altitude_m": 3000.0,
+    "effective_earth_radius_factor": 1.3333333333333333
+  },
+  "output_graph": "geoespacial/outputs/augmented_candidate_graph/graph.graphml",
+  "output_graph_sha256": "c5d8e43a019d57532578d1d2467395aa28e8e513cddb55ad196c1a0d0d6e166f",
+  "candidate_table": "geoespacial/outputs/augmented_candidate_graph/gap_candidate_nodes.csv.gz",
+  "candidate_table_sha256": "c7a1a18466921c81d766335317a23ca161c70497993f3df188ebb4201da73e7d",
+  "semantics": "effective-earth curvature upper bound using endpoint elevations; intermediate terrain, viewshed, Fresnel clearance, RF coverage and operational feasibility pending"
+}

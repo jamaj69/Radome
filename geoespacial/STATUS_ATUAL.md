@@ -132,6 +132,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   candidatos representando todas as 1.732 células; somente a semente
   `gap-seed:cell:+003.8750:-0051.1250` permanece com 33/36 amostras no anel de
   25 km e não recebe pontuação otimista para esse anel;
+- grafo aumentado de candidatos: os 1.484 candidatos TOPODATA foram ligados aos
+  131 originais, totalizando 1.615 candidatos; 45.137 pares satisfazem somente
+  o limite geométrico de curvatura e geram 90.274 arcos dirigidos, todos não
+  operacionais e pendentes de terreno intermediário, visada e Fresnel;
 - seleção das folhas de borda concluída: os 188.788 centros e pontos dos anéis
   requerem 175 folhas TOPODATA disponíveis, das quais 143 já são locais e 32
   novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
@@ -150,7 +154,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 90 testes automatizados aprovados na descoberta completa com
+- 91 testes automatizados aprovados na descoberta completa com
   `PYTHONPATH=geoespacial`;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
@@ -179,10 +183,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Integrar os 1.484 candidatos de lacuna ao conjunto continental, recalcular a
-cobertura por discos e a malha triangular e associar as camadas canônicas de
-iluminadores apenas como incidências geométricas, sem antecipar visada ou
-`illuminates` RF.
+Recalcular a cobertura por discos e a malha triangular com os 1.615 candidatos
+e associar as camadas canônicas de iluminadores apenas como incidências
+geométricas, sem antecipar visada ou `illuminates` RF.
 
 ## Comando de retomada
 
