@@ -9,8 +9,8 @@ está em `CAMADAS_EMISSOES_OFICIAIS.md`.
 
 **Checkpoint de retomada:** `STATUS_ATUAL.md`. Os esquemas canônicos SMP e de
 emissores fixos SARC/SCM estão concluídos com partições e cardinalidades
-verificadas. A próxima mudança audita SLE por streaming antes dos arquivos muito
-maiores SLP e Mosaico-STEL.
+verificadas, e SLE já foi auditado sem extração nem pareamento. A próxima mudança
+audita os arquivos de cerca de 5 GB SLP e Mosaico-STEL por streaming.
 
 ## Objetivo e regra de inventário
 
@@ -52,7 +52,8 @@ Toda transição de estado deve ser produzida por script Python conforme
 | SARC | Anatel, pacote geral | canonical_spectrum_partial | 4.228 emissões ativas em esquema canônico; nenhuma quantitativamente pronta por ausência de potência; 2.762 sem frequência | buscar complemento oficial e manter fora de `illuminates` quantitativo |
 | Banda larga fixa/SCM | Anatel, pacote geral | canonical_integrated | 1.850 emissões Tx ativas; 1.849 com frequência, potência e altura presentes; duas sem designação | validar regulamentação/propagação antes de `illuminates` |
 | Telefonia fixa/STFC | Anatel, pacote geral | georeferenced_not_rf_ready | 589 registros, 75 ativos, sem frequência, potência, classe ou direção utilizável | manter apenas como infraestrutura até obter complemento oficial |
-| SLP/SLE/Mosaico-STEL | Anatel, pacote geral | downloaded_verified/unclassified | arquivos maiores preservam frequência, potência, altura, polarização e diagrama | inventariar por streaming e identificar emissores fixos/radioenlaces |
+| SLE | Anatel, pacote geral | inventoried/unpaired | 119.058 registros; 59.484 Tx ativos; 115.458 coordenadas válidas; 118.490 linhas móveis | decidir integração somente após comparação com SLP/STEL; não criar sítios fixos para móveis |
+| SLP/Mosaico-STEL | Anatel, pacote geral | downloaded_verified/unclassified | cerca de 5 GB cada; esquema preserva frequência, potência, altura, polarização e diagrama | inventariar por streaming e identificar chaves explícitas de radioenlace |
 | Estações terrenas/VSAT | Anatel | identified/pending | nova base oficial de estações terrenas em bloco | baixar, inventariar e reconciliar com SLP/SCM/STFC |
 | Aeródromos públicos | ANAC | downloaded_verified | 496 | conciliar com BC250 e DECEA |
 | Aeródromos privados | ANAC | downloaded_verified | 3.856 | conciliar e classificar uso logístico |
@@ -259,15 +260,16 @@ depois da validação de cada estudo insular.
    fixa antes de SLE/SLP/STEL;
 3. **concluído:** migrar ao esquema canônico os registros ativos SARC/SCM com
    evidência de transmissão ou repetição, preservando as lacunas RF;
-4. auditar SLE/SLP/STEL e parear enlaces somente com chaves e geometria;
-5. normalizar radiodifusão e integrar VOR/NDB/DME por município;
-6. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
+4. **concluído:** auditar SLE sem parear enlaces;
+5. auditar SLP/STEL e parear enlaces somente com chaves e geometria;
+6. normalizar radiodifusão e integrar VOR/NDB/DME por município;
+7. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
    BC250 e DECEA;
-7. adquirir VSAT e o inventário oficial de radares meteorológicos;
-8. selecionar e baixar TOPODATA continental por região;
-9. reconstruir o grafo unificado município--sítio--antena--emissão--aeródromo--
+8. adquirir VSAT e o inventário oficial de radares meteorológicos;
+9. selecionar e baixar TOPODATA continental por região;
+10. reconstruir o grafo unificado município--sítio--antena--emissão--aeródromo--
    candidato;
-10. integrar restrições territoriais e iniciar *viewshed* regional.
+11. integrar restrições territoriais e iniciar *viewshed* regional.
 
 ## Artefatos obrigatórios por execução
 

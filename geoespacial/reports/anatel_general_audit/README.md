@@ -1,11 +1,12 @@
 # Auditoria inicial do pacote geral da Anatel
 
 Esta etapa lê diretamente o ZIP oficial, sem extrair seus 10,45 GB, e audita os
-três arquivos menores priorizados pelo gate M2E:
+quatro arquivos priorizados pelo gate M2E:
 
 - `Estacoes_SARC.csv`;
 - `Estacoes_Banda_Larga_Fixa.csv`;
-- `Estacoes_Telefonia_Fixa.csv`.
+- `Estacoes_Telefonia_Fixa.csv`;
+- `Estacoes_SLE.csv`.
 
 O relatório versionado está em `summary.json`; os registros normalizados e
 reproduzíveis ficam em `outputs/anatel_general_audit/`.
@@ -32,10 +33,17 @@ uma confirmação de operação radioelétrica atual.
 - Telefonia fixa/STFC: 589 registros, 75 ativos, todos georreferenciados, porém
   sem frequência, potência, classe ou direção utilizável; essa camada ainda não
   pode fornecer iluminadores RF.
+- SLE: 119.058 registros, 118.968 ativos e 59.484 ativos com direção explícita
+  de transmissão. A camada tem 115.458 coordenadas válidas e código IBGE em
+  todos os registros; 118.968 linhas possuem designação decodificável, potência
+  e altura, com frequências úteis entre 148 e 927,77 MHz. As 118.490 estações
+  móveis e a simetria entre 59.484 linhas de recepção e 59.484 de transmissão
+  exigem preservar o papel cadastral sem transformar cada registro em sítio
+  fixo ou inferir automaticamente uma ponta de enlace.
 
-Nenhum radioenlace foi pareado nesta etapa. O próximo gate migra somente os
-registros com evidência suficiente para o esquema canônico e mantém os demais
-como inventário não quantitativo.
+Nenhum radioenlace foi pareado nesta etapa. SARC/SCM já passaram pela migração
+canônica conservadora; o próximo gate audita SLP e Mosaico-STEL por streaming e
+só depois define regras demonstráveis de pareamento.
 
 ## Reprodução
 

@@ -21,6 +21,7 @@ DATASETS = {
     "sarc": "Estacoes_SARC.csv",
     "fixed_broadband": "Estacoes_Banda_Larga_Fixa.csv",
     "fixed_telephony": "Estacoes_Telefonia_Fixa.csv",
+    "sle": "Estacoes_SLE.csv",
 }
 INVALID_TEXT = {"", "N/I", "USUÁRIO INFORMOU ERRADO", "USUARIO INFORMOU ERRADO"}
 OUTPUT_FIELDS = (

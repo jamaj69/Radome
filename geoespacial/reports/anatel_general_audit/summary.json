@@ -2,11 +2,12 @@
   "schema_version": 1,
   "source_file": "data/raw/anatel/estacoes_licenciadas.zip",
   "source_sha256": "b77abb225b4ad03bc8b8c6a27913e0b6d851873bab3bd483e66d86712dd5eec1",
-  "records": 16876,
+  "records": 135934,
   "scope": [
     "sarc",
     "fixed_broadband",
-    "fixed_telephony"
+    "fixed_telephony",
+    "sle"
   ],
   "classification_rule": "RF role uses explicit communication direction first, then exclusive transmitter/receiver or repeater station class; unknown is not inferred as emission",
   "datasets": {
@@ -177,6 +178,66 @@
         "unknown": 589
       },
       "normalized_output": "outputs/anatel_general_audit/fixed_telephony.csv.gz"
+    },
+    "sle": {
+      "source_member": "Estacoes_SLE.csv",
+      "source_member_crc32": "c3225771",
+      "records": 119058,
+      "valid_coordinate_records": 115458,
+      "valid_ibge_code_records": 119058,
+      "active_potential_emitter_records": 59484,
+      "frequency_min_mhz": 148.0,
+      "frequency_max_mhz": 927.77,
+      "transmitter_power_min_w": 1.0,
+      "transmitter_power_max_w": 270.0,
+      "available_fields": {
+        "antenna_gain_db": 578,
+        "antenna_height_m": 118968,
+        "azimuth_deg": 118964,
+        "elevation_angle_deg": 118964,
+        "emission_designation": 118968,
+        "frequency_mhz": 118954,
+        "front_to_back_db": 118960,
+        "half_power_beamwidth_deg": 118964,
+        "parsed_necessary_bandwidth": 118968,
+        "polarization": 118968,
+        "transmitter_power_w": 118968
+      },
+      "services": {
+        "Serviço Limitado Especializado": 119058
+      },
+      "service_codes": {
+        "017 - Limitado Especializado": 118968,
+        "069 - Serviço de Circuito Especializado": 90
+      },
+      "validity_statuses": {
+        "Ativo": 118968,
+        "Vencido": 90
+      },
+      "station_classes": {
+        "ML": 118490,
+        "BR": 206,
+        "FB": 110,
+        "FX": 108,
+        "N/I": 90,
+        "TX": 28,
+        "XR": 26
+      },
+      "directions": {
+        "Recepção": 59484,
+        "Transmissão": 59484,
+        "N/I": 90
+      },
+      "origins": {
+        "Mosaico": 118968,
+        "STEL": 90
+      },
+      "rf_roles": {
+        "explicit_reception_direction": 59484,
+        "explicit_transmission_direction": 59484,
+        "unknown": 90
+      },
+      "normalized_output": "outputs/anatel_general_audit/sle.csv.gz"
     }
   }
 }

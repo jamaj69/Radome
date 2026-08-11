@@ -1,6 +1,6 @@
 # Estado atual do subprojeto geoespacial
 
-**Checkpoint:** 11 de agosto de 2026, após a migração canônica SARC/SCM.
+**Checkpoint:** 11 de agosto de 2026, após a auditoria streaming de SLE.
 
 ## Vinculação e governança
 
@@ -31,12 +31,15 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   inventariados;
 - DECEA/ICA: VOR, NDB, DME e `navaids` baixados, verificados e inventariados;
 - pacote geral Anatel de 10,45 GB descompactados disponível e com esquema
-  conhecido; SARC, banda larga fixa e telefonia fixa já auditados por streaming;
+  conhecido; SARC, banda larga fixa, telefonia fixa e SLE auditados por streaming;
 - SARC: 8.774 registros, 4.228 ativos potencialmente emissores e 4.583
   frequências utilizáveis, mas sem potência/designação utilizável;
 - banda larga fixa: 7.513 registros, 1.850 ativos com direção Tx, 3.706 com
   frequência/potência e 3.514 com largura decodificada;
 - telefonia fixa: 589 registros georreferenciados, mas sem parâmetros RF úteis.
+- SLE: 119.058 registros, 118.968 ativos, 59.484 ativos com direção Tx,
+  115.458 coordenadas válidas e 118.968 designações, potências e alturas
+  utilizáveis; 118.490 linhas representam estações móveis e não sítios fixos;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -47,7 +50,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - 36 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
-- 22 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
+- 23 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
 - resultado registrado em `reports/reproducibility.json` com
   `byte_reproducible: true` e `differences: {}`.
 
@@ -55,8 +58,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 - a entidade SMP `antena` é proxy cadastral de estação/setor/sítio e ainda não
   representa uma estrutura radiante fisicamente confirmada;
-- SLE/SLP/Mosaico-STEL ainda não foram classificados nem pareados como
-  radioenlaces; SARC/SCM foram classificados, mas permanecem sem pareamento;
+- SLP/Mosaico-STEL ainda não foram classificados nem pareados como
+  radioenlaces; SLE/SARC/SCM foram classificados, mas permanecem sem pareamento;
 - radiodifusão ainda requer normalização regulatória de largura, ERP e HCI;
 - VOR/NDB/DME precisam de recorte brasileiro e vínculo municipal; DME exige
   tabela canal--frequência;
@@ -68,10 +71,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Auditar `Estacoes_SLE.csv` por streaming, aplicando a mesma classificação
-conservadora de validade, direção, classe, coordenadas e completude RF. A etapa
-não deve parear enlaces ainda; ela prepara as regras e a escala antes de processar
-os arquivos SLP e Mosaico-STEL, ambos com cerca de 5 GB descompactados.
+Auditar `Estacoes_SLP.csv` e Mosaico-STEL por streaming, sem extração integral e
+sem parear enlaces. Antes do pareamento, inventariar serviços, classes, direções,
+chaves cadastrais, coordenadas e completude RF nos dois arquivos de cerca de
+5 GB descompactados.
 
 ## Comando de retomada
 

@@ -204,6 +204,14 @@ inválidos permanecem desconhecidos; não são promovidos a iluminadores. O esta
 de validade é mantido separadamente, e o pareamento de pontas de radioenlace é
 adiado até haver chaves cadastrais e verificação geométrica reproduzível.
 
+Essa regra foi aplicada a SLE em leitura streaming do ZIP, sem extração. Foram
+preservadas 119.058 linhas, das quais 59.484 são transmissões ativas e 59.484
+são recepções explícitas. Como 118.490 linhas pertencem à classe móvel terrestre,
+coordenada cadastral não é tratada automaticamente como sítio físico permanente.
+A aparente simetria Tx/Rx também não basta para formar enlaces: o pareamento fica
+condicionado a chaves cadastrais explícitas e validação geométrica posterior com
+SLP e Mosaico-STEL.
+
 A migração canônica usa uma partição exaustiva: cada linha SARC/SCM é incluída
 ou recebe exatamente um motivo de exclusão por inatividade, recepção exclusiva,
 papel RF desconhecido ou coordenada inválida. O marcador de prontidão

@@ -67,7 +67,7 @@ class AnatelGeneralAuditTest(unittest.TestCase):
                     archive.writestr(member, csv_bytes(rows))
             first = audit(source, root / "out1", root / "report1.json")
             second = audit(source, root / "out2", root / "report2.json")
-            self.assertEqual(first["records"], 6)
+            self.assertEqual(first["records"], 2 * len(DATASETS))
             for dataset in DATASETS:
                 self.assertEqual(first["datasets"][dataset]["records"], 2)
                 self.assertEqual(first["datasets"][dataset]["active_potential_emitter_records"], 1)

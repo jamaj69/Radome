@@ -28,6 +28,7 @@ PRODUCTS = (
     "outputs/anatel_general_audit/sarc.csv.gz",
     "outputs/anatel_general_audit/fixed_broadband.csv.gz",
     "outputs/anatel_general_audit/fixed_telephony.csv.gz",
+    "outputs/anatel_general_audit/sle.csv.gz",
     "outputs/anatel_general_audit/summary.json",
     "reports/anatel_general_audit/summary.json",
     "outputs/canonical_fixed_emitters/sites.csv.gz",

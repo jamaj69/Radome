@@ -32,7 +32,8 @@ modelo RF completo.
 | SARC — Anatel | 4.228 emissões ativas em 2.362 sítios | preservada quando disponível | 1.466 com frequência; designação/largura ausentes | ganho/diagrama preservados; potência ausente | esquema canônico; nenhuma quantitativamente pronta | buscar complemento oficial e não criar `illuminates` quantitativo |
 | Banda larga fixa/SCM — Anatel | 1.850 emissões Tx ativas em 973 sítios | 1.849 com altura | frequência e potência em 1.850; duas sem designação | 1.849 atendem presença mínima de frequência/potência/altura | esquema canônico, enlaces não pareados | validar parâmetros e parear somente após auditoria das demais bases |
 | Telefonia fixa/STFC — Anatel | 589/589 coordenadas e municípios | indisponível | indisponível | indisponível | auditado; não pronto para RF | manter como infraestrutura até complemento oficial |
-| SLP/SLE/STEL — Anatel | campos de coordenada e município no pacote geral | campo de altura de antena | frequência e designação de emissão | potência, polarização, ganho, azimute, elevação e abertura disponíveis no esquema | pacote baixado; arquivos grandes ainda não classificados | inventariar serviços, descartar recepção/móveis e reconciliar pontas de radioenlace |
+| SLE — Anatel | 115.458/119.058 coordenadas válidas; código IBGE em todas as linhas | 118.968 com altura | 118.954 frequências úteis; 118.968 designações decodificáveis | 118.968 com potência; ganho disponível em apenas 578 | auditado; 59.484 Tx ativos e 118.490 linhas móveis; sem pareamento | não converter móveis em sítios fixos; definir integração após SLP/STEL |
+| SLP/Mosaico-STEL — Anatel | campos de coordenada e município no pacote geral | campo de altura de antena | frequência e designação de emissão | potência, polarização, ganho, azimute, elevação e abertura disponíveis no esquema | pacote baixado; arquivos de cerca de 5 GB ainda não classificados | inventariar serviços e reconciliar pontas somente com evidência explícita |
 | Radioamador — Anatel | município, sem coordenada precisa no recurso atual | ausente | frequências declaradas de forma agregada | ausentes | baixado, não integrado | baixa prioridade e atividade temporal desconhecida |
 | Estações marítimas — Anatel | predominantemente móveis; arquivo sem coordenada geográfica útil | ausente | frequências/potências agregadas | incompletos | baixado, não integrado | separar estações costeiras fixas de embarcações móveis |
 | Estações terrenas/VSAT — Anatel | fonte oficial identificada | a auditar | a auditar | a auditar | não baixada | adquirir base “Estações Terrenas em Bloco” e cruzar com SLP/SCM/STFC |
@@ -83,11 +84,11 @@ forem desconhecidos.
 
 1. **concluído:** criar o esquema canônico sítio--antena--emissão e migrar as
    3.284.526 emissões SMP sem perdas;
-2. **parcialmente concluído:** SARC, banda larga fixa e telefonia fixa foram
-   auditados; faltam SLE, SLP e Mosaico/STEL;
+2. **parcialmente concluído:** SARC, banda larga fixa, telefonia fixa e SLE
+   foram auditados; faltam SLP e Mosaico/STEL;
 3. **concluído:** migrar 6.078 registros ativos SARC/SCM com evidência de
    transmissão/repetição;
-4. auditar SLE/SLP/STEL e parear radioenlaces somente quando demonstrável;
+4. auditar SLP/STEL e parear radioenlaces somente quando demonstrável;
 5. normalizar ERP/HCI e canalização de radiodifusão;
 6. recortar VOR/NDB/DME ao Brasil, associar municípios e derivar DME por tabela
    oficial;
