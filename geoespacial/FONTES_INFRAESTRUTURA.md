@@ -92,11 +92,16 @@ mantida: helideques não têm coordenadas no arquivo atual e não são candidato
 continentais equivalentes a aeródromos.
 
 O `GetCapabilities` do WFS do GEOAISWEB expõe 421 tipos de feição. A triagem
-selecionou 13 camadas diretamente úteis: aeródromos, helipontos, pistas,
-cabeceiras, obstáculos OPEA, VOR, NDB, auxílios de navegação, CTR, TMA, ZIDA e
+selecionou 14 camadas diretamente úteis: aeródromos, helipontos, pistas,
+cabeceiras, obstáculos OPEA, VOR, NDB, DME, auxílios de navegação, CTR, TMA, ZIDA e
 as visões AIXM correlatas. A camada `ICA:zida`, intitulada “Zona de
 Identificação de Defesa Aérea (ZIDA 80nm)”, é contexto de defesa aérea, não uma
 lista de bases ou comandos.
+
+VOR, NDB, DME e a visão agregada `navaids` já foram baixados e auditados. As
+quatro camadas têm coordenadas completas; elevação está presente em 76/77 VOR,
+19/24 NDB, 158/173 DME e 30/124 feições agregadas. VOR e NDB têm frequência;
+DME tem canal, enquanto sua portadora exige a tabela oficial de pareamento.
 
 Fontes:
 

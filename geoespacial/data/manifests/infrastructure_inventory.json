@@ -765,7 +765,7 @@
   "decea": {
     "capabilities_file": "geoespacial/data/raw/decea/wfs-get-capabilities.xml",
     "feature_type_count": 421,
-    "selected_layer_count": 13,
+    "selected_layer_count": 14,
     "selected_layers": [
       {
         "name": "ICA:airport",
@@ -806,6 +806,11 @@
         "name": "ICA:ndb",
         "title": "Equipamento do Tipo NDB",
         "role": "auxilios_ndb"
+      },
+      {
+        "name": "ICA:dme",
+        "title": "equip_dme",
+        "role": "auxilios_dme"
       },
       {
         "name": "ICA:navaids",

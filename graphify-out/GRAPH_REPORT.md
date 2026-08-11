@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 71 files · ~456,012 words
+- 75 files · ~457,399 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 769 nodes · 892 edges · 68 communities (61 shown, 7 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.78)
+- 784 nodes · 912 edges · 69 communities (62 shown, 7 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 40 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4241a00a`
+- Built from commit: `52272c7b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -82,6 +82,7 @@
 - Subprojeto de seleção geoespacial
 - inventory
 - Auditoria de tecnologia e espectro das estações Anatel
+- Auxílios de navegação DECEA/ICA
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -110,7 +111,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (68 total, 7 thin omitted)
+## Communities (69 total, 7 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -309,8 +310,8 @@ Cohesion: 0.47
 Nodes (3): main(), parse_index(), InventoryTopodataTest
 
 ### Community 52 - "localize_figures.py"
-Cohesion: 0.09
-Nodes (9): build_output(), ensure_build_dir(), Path, Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--11.  Permanent publi, save(), crossed_yagi() (+1 more)
+Cohesion: 0.07
+Nodes (18): build_output(), ensure_build_dir(), Path, Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--11.  Permanent publi, save(), draw_label() (+10 more)
 
 ### Community 56 - "localize_figures.py"
 Cohesion: 0.10
@@ -337,8 +338,8 @@ Cohesion: 0.22
 Nodes (8): Cidades, municípios e logística, Decisões operacionais derivadas, Escopo territorial, Grafo de infraestrutura e iluminadores, Objetivo primário, Relevo, visada e conectividade, Reprodutibilidade e publicação, Requisitos preservados para geolocalização dos radomes
 
 ### Community 64 - "localize_figures.py"
-Cohesion: 0.23
-Nodes (9): draw_label(), draw_text_in_block(), fit_text(), font(), Build language-specific publication figures from the common geometry masters., Return the largest readable multiline setting that fits a region., Draw a padded box whose centre follows the centre of the rendered glyphs., Fit and centre text directly inside an existing coloured diagram block. (+1 more)
+Cohesion: 0.33
+Nodes (6): inventory_layer(), main(), present(), Path, sha256(), DeceaNavaidInventoryTest
 
 ### Community 65 - "Subprojeto de seleção geoespacial"
 Cohesion: 0.29
@@ -352,8 +353,12 @@ Nodes (5): file_sha256(), inventory(), main(), Path, SmpInventoryTest
 Cohesion: 0.29
 Nodes (6): Auditoria de tecnologia e espectro das estações Anatel, Conclusão, Produtos e reprodução, Referências regulatórias para o próximo gate, Rádio e televisão, SMP
 
+### Community 68 - "Auxílios de navegação DECEA/ICA"
+Cohesion: 0.40
+Nodes (4): Auxílios de navegação DECEA/ICA, Interpretação dos campos, Limites e próxima integração, Resultado da aquisição
+
 ## Knowledge Gaps
-- **454 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+449 more)
+- **457 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+452 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -361,11 +366,11 @@ Nodes (6): Auditoria de tecnologia e espectro das estações Anatel, Conclusão,
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
   _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _454 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _457 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**

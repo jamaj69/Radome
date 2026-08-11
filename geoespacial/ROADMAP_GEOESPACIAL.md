@@ -45,9 +45,9 @@ em `reports/`; dados brutos em `data/raw/`; produtos volumosos em `outputs/`.
 | Helipontos | ANAC | downloaded_verified | 1.595 | integrar por município |
 | Helideques | ANAC | downloaded_verified | 203; arquivo atual sem coordenadas suficientes | não usar como ponto continental sem complemento |
 | Aeroportos e pistas BC250 | IBGE | integrated/preliminary | 104 complexos; 3.492 pontos de pouso | validar códigos, elevação e status setorial |
-| Informação aeronáutica WFS | DECEA/ICA GEOAISWEB | inventoried | 421 tipos; 13 selecionados | baixar ciclos AIRAC e congelar versão |
+| Informação aeronáutica WFS | DECEA/ICA GEOAISWEB | partially_downloaded | 421 tipos; 14 selecionados; VOR/NDB/DME/navaids baixados | baixar as dez camadas restantes e congelar versão |
 | Obstáculos OPEA | DECEA/ICA | identified | camada `ICA:opea` | baixar, etiquetar e avaliar alturas |
-| VOR/NDB/navaids | DECEA/ICA | identified | três famílias selecionadas | baixar e integrar como infraestrutura RF |
+| VOR/NDB/DME/navaids | DECEA/ICA | downloaded_verified | 77 VOR, 24 NDB, 173 DME e 124 relações agregadas; coordenadas completas, elevação parcial | recortar Brasil, etiquetar município e derivar portadora DME por fonte oficial |
 | CTR/TMA/ZIDA | DECEA/ICA | identified | espaço aéreo, não emissores | usar como contexto e restrição |
 | Radares aeronáuticos | DECEA/FAB, quando públicos | pending | não inferir de aeródromos | localizar fonte oficial e parâmetros publicáveis |
 | Bases aéreas | FAB/DECEA | blocked_public_source | nomes parciais não bastam | classificar somente com fonte oficial |
@@ -230,7 +230,7 @@ depois da validação de cada estudo insular.
 
 ## Próxima sequência recomendada
 
-1. baixar e congelar as 13 camadas selecionadas do DECEA;
+1. baixar e congelar as dez camadas DECEA ainda pendentes das 14 selecionadas;
 2. reconciliar ANAC, BC250 e DECEA;
 3. fechar em trilha paralela os radioenlaces SMP, conflitos e co-localizações da
    Fase 2;

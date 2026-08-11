@@ -27,6 +27,7 @@ DECEA_RELEVANT_LAYERS = {
     "ICA:opea": "obstaculos_espaco_aereo",
     "ICA:vor": "auxilios_vor",
     "ICA:ndb": "auxilios_ndb",
+    "ICA:dme": "auxilios_dme",
     "ICA:navaids": "auxilios_navegacao",
     "ICA:CTR": "zonas_de_controle",
     "ICA:TMA": "areas_de_controle_terminal",

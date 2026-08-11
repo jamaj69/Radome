@@ -460,8 +460,8 @@
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/sources.json": {
-    "mtime": 1786413378.09267,
-    "ast_hash": "f0ec04fd489e1002337b81d9ce75af09",
+    "mtime": 1786414993.3650851,
+    "ast_hash": "cfe24688d0b03747a016a589ad6a3b04",
     "semantic_hash": ""
   },
   "geoespacial/optimize_sites.py": {
@@ -550,18 +550,18 @@
     "semantic_hash": ""
   },
   "geoespacial/FONTES_INFRAESTRUTURA.md": {
-    "mtime": 1786413378.2406695,
-    "ast_hash": "f2d9c17c2f002f514ac5407ad00c965e",
+    "mtime": 1786415059.3287754,
+    "ast_hash": "4055cb1ea31d4e5e7957eaedac5934ab",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/infrastructure_inventory.json": {
-    "mtime": 1786411417.0179243,
-    "ast_hash": "cb376ee4b6d8a4e78203ec0850f88dff",
+    "mtime": 1786415000.9370496,
+    "ast_hash": "bb0b2482858d31c9717a665a5a5562cc",
     "semantic_hash": ""
   },
   "geoespacial/inventory_infrastructure.py": {
-    "mtime": 1786411353.9622228,
-    "ast_hash": "875f1a47a16016d3eb083e0f5d470f6d",
+    "mtime": 1786414987.8131113,
+    "ast_hash": "8540eb32bb1eef055430564fab69d25c",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_inventory_infrastructure.py": {
@@ -630,13 +630,13 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786414491.8634403,
-    "ast_hash": "7c6c7853f51894416b7088f11ea9bdcf",
+    "mtime": 1786415059.4767747,
+    "ast_hash": "4fd0f42e213d98fb886be00d3622edb2",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
-    "mtime": 1786413823.26258,
-    "ast_hash": "7cdf9f4f619d7cb951701daee1292bc1",
+    "mtime": 1786415059.6247742,
+    "ast_hash": "eb43d0c5d8b62ab7dea3f0af558dbdf4",
     "semantic_hash": ""
   },
   "geoespacial/audit_anatel_spectrum.py": {
@@ -657,6 +657,26 @@
   "geoespacial/reports/ANATEL_SPECTRUM_AUDIT.md": {
     "mtime": 1786414503.0713878,
     "ast_hash": "8d1d7c47cd9bcaa8ada5e51dd2c63276",
+    "semantic_hash": ""
+  },
+  "geoespacial/data/manifests/decea_navaids_inventory.json": {
+    "mtime": 1786415000.2730527,
+    "ast_hash": "9064777f98ebf41d7bb8c8cdd101ce1b",
+    "semantic_hash": ""
+  },
+  "geoespacial/inventory_decea_navaids.py": {
+    "mtime": 1786414987.437113,
+    "ast_hash": "cc3ef08bdbd1de2f0944dd272dc6e3fd",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_inventory_decea_navaids.py": {
+    "mtime": 1786414987.6571121,
+    "ast_hash": "638354dddd1ac2d66ac78ccdb8c91ec7",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/decea_navaids/README.md": {
+    "mtime": 1786415059.1727762,
+    "ast_hash": "8547692b86c6d011be37042ab3a8e254",
     "semantic_hash": ""
   }
 }

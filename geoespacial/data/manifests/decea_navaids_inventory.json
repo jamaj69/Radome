@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "authority": "DECEA / ICA GEOAISWEB",
+  "wfs_url": "https://geoaisweb.decea.mil.br/geoserver/wfs",
+  "source_crs": "EPSG:4326",
+  "layers": {
+    "vor": {
+      "file": "geoespacial/data/raw/decea/navaids/vor.geojson",
+      "size_bytes": 97395,
+      "sha256": "7785d7fdacae79f22d38cf0aa05ab57c52bd00962515b746babc1751ea9fc554",
+      "feature_count": 77,
+      "geometry_count": 77,
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "urn:ogc:def:crs:EPSG::4326"
+        }
+      },
+      "field_mapping": {
+        "latitude": "latitude",
+        "longitude": "longitude",
+        "elevation": "elevation",
+        "elevation_unit": "elevationu",
+        "frequency": "frequency",
+        "frequency_unit": "frequnits",
+        "power": "power",
+        "antenna_height": "antennahei",
+        "kind": "vortype"
+      },
+      "completeness": {
+        "latitude": 77,
+        "longitude": 77,
+        "elevation": 76,
+        "elevation_unit": 76,
+        "frequency": 77,
+        "frequency_unit": 77,
+        "power": 0,
+        "antenna_height": 0,
+        "kind": 77
+      },
+      "kinds": {
+        "VOR": 59,
+        "DVOR": 18
+      },
+      "elevation_range": [
+        2.13,
+        1097.28
+      ],
+      "frequency_range": [
+        112.0,
+        117.7
+      ],
+      "elevation_units": {
+        "M": 76,
+        "N/I": 1
+      },
+      "frequency_units": {
+        "MHZ": 77
+      },
+      "amendment_dates": [
+        "2026-08-06Z"
+      ]
+    },
+    "ndb": {
+      "file": "geoespacial/data/raw/decea/navaids/ndb.geojson",
+      "size_bytes": 30752,
+      "sha256": "4680703b262c5eecc7c7a213eccc6aec2cdfc3cae3e1129db2b3e680e841bb9b",
+      "feature_count": 24,
+      "geometry_count": 24,
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "urn:ogc:def:crs:EPSG::4326"
+        }
+      },
+      "field_mapping": {
+        "latitude": "geolat",
+        "longitude": "geolong",
+        "elevation": "valelev",
+        "elevation_unit": "elevationu",
+        "frequency": "valfreq",
+        "frequency_unit": "uomfreq",
+        "emission_band": "emissionba",
+        "kind": "tipo"
+      },
+      "completeness": {
+        "latitude": 24,
+        "longitude": 24,
+        "elevation": 19,
+        "elevation_unit": 19,
+        "frequency": 24,
+        "frequency_unit": 24,
+        "emission_band": 1,
+        "kind": 24
+      },
+      "kinds": {
+        "NDB": 24
+      },
+      "elevation_range": [
+        1.77,
+        1114.96
+      ],
+      "frequency_range": [
+        114.3,
+        407.0
+      ],
+      "elevation_units": {
+        "M": 19,
+        "N/I": 5
+      },
+      "frequency_units": {
+        "KHZ": 24
+      },
+      "amendment_dates": [
+        "2026-08-06Z"
+      ]
+    },
+    "dme": {
+      "file": "geoespacial/data/raw/decea/navaids/dme.geojson",
+      "size_bytes": 197420,
+      "sha256": "3883985ea4e7632d5a3bfbee753aa72672deb0299c4b9a2d8589d0c2881a51e1",
+      "feature_count": 173,
+      "geometry_count": 173,
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "urn:ogc:def:crs:EPSG::4326"
+        }
+      },
+      "field_mapping": {
+        "latitude": "geolat",
+        "longitude": "geolong",
+        "elevation": "valelev",
+        "elevation_unit": "elevationu",
+        "channel": "valchannel",
+        "paired_frequency": "valghostfr",
+        "paired_frequency_unit": "uomghostfr",
+        "kind": "tipo"
+      },
+      "completeness": {
+        "latitude": 173,
+        "longitude": 173,
+        "elevation": 158,
+        "elevation_unit": 160,
+        "channel": 173,
+        "paired_frequency": 171,
+        "paired_frequency_unit": 173,
+        "kind": 173
+      },
+      "kinds": {
+        "DME": 173
+      },
+      "elevation_range": [
+        1.26,
+        1807.854
+      ],
+      "channel_range": [
+        24.0,
+        124.0
+      ],
+      "paired_frequency_range": [
+        108.7,
+        117.7
+      ],
+      "elevation_units": {
+        "M": 159,
+        "N/I": 13,
+        "FT": 1
+      },
+      "paired_frequency_units": {
+        "MHZ": 173
+      },
+      "amendment_dates": [
+        "2026-08-06Z"
+      ]
+    },
+    "navaids": {
+      "file": "geoespacial/data/raw/decea/navaids/navaids.geojson",
+      "size_bytes": 115571,
+      "sha256": "17fbbe150923461fde44609a4731c492eb1e88d79fa6eb17f69f23c7c3cd111a",
+      "feature_count": 124,
+      "geometry_count": 124,
+      "crs": {
+        "type": "name",
+        "properties": {
+          "name": "urn:ogc:def:crs:EPSG::4326"
+        }
+      },
+      "field_mapping": {
+        "latitude": "latitude",
+        "longitude": "longitude",
+        "elevation": "elevation",
+        "elevation_unit": "elevationu",
+        "kind": "type"
+      },
+      "completeness": {
+        "latitude": 124,
+        "longitude": 124,
+        "elevation": 30,
+        "elevation_unit": 30,
+        "kind": 124
+      },
+      "kinds": {
+        "VOR_DME": 73,
+        "ILS_DME": 45,
+        "ILS": 4,
+        "LOC_DME": 2
+      },
+      "elevation_range": [
+        1.88,
+        1043.884
+      ],
+      "elevation_units": {
+        "N/I": 94,
+        "M": 29,
+        "FT": 1
+      },
+      "amendment_dates": [
+        "2026-08-06Z"
+      ]
+    }
+  },
+  "interpretation": {
+    "vor": "coordinates, elevation and VOR carrier frequency are explicit; power and antenna height fields are empty",
+    "ndb": "coordinates, NDB carrier frequency and partial elevation are explicit; emission bandwidth is almost entirely absent",
+    "dme": "coordinates, partial elevation and channel are explicit; valghostfr is the paired VOR/ILS frequency, not the DME RF carrier",
+    "navaids": "aggregate ILS/VOR-DME relation layer; coordinates are complete but elevation is partial and frequency is absent"
+  }
+}

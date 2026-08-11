@@ -143,8 +143,10 @@
       "wfs_get_capabilities": "https://geoaisweb.decea.mil.br/geoserver/ows?service=WFS&request=GetCapabilities",
       "inventory": "data/manifests/infrastructure_inventory.json",
       "feature_type_count": 421,
-      "selected_layer_count": 13,
-      "status": "wfs_layers_inventoried"
+      "selected_layer_count": 14,
+      "navaid_inventory": "data/manifests/decea_navaids_inventory.json",
+      "downloaded_navaid_layers": ["ICA:vor", "ICA:ndb", "ICA:dme", "ICA:navaids"],
+      "status": "navaid_layers_downloaded_verified"
     }
   ]
 }

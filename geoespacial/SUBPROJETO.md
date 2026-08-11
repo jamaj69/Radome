@@ -56,8 +56,8 @@ do artigo quando possuir:
 
 A próxima fase do subprojeto é a Fase 3. Seu primeiro pacote de trabalho é:
 
-1. baixar e congelar por ciclo AIRAC as 13 camadas já selecionadas no WFS do
-   DECEA;
+1. baixar e congelar por ciclo AIRAC as 14 camadas selecionadas no WFS do
+   DECEA, das quais VOR, NDB, DME e `navaids` já foram adquiridas;
 2. reconciliar aeródromos e pistas de ANAC, IBGE BC250 e DECEA por ICAO, CIAD,
    nome e distância;
 3. integrar helipontos, obstáculos OPEA, VOR, NDB e demais auxílios à navegação;
@@ -70,4 +70,3 @@ grafo reconciliado município--infraestrutura aeronáutica. Os itens ainda abert
 da Fase 2 — radioenlaces SMP, auditoria de conflitos e co-localização de
 emissores — formam uma trilha de fechamento paralela e continuam obrigatórios,
 mas não bloqueiam a aquisição versionada das camadas DECEA.
-
