@@ -245,6 +245,20 @@ python evaluate_anatel_radio_link_paths_topodata.py \
   --report reports/anatel_radio_link_path_terrain/summary.json
 ```
 
+A consistência vertical confronta os ângulos de elevação cadastrados nas duas
+pontas com a geometria esférica derivada do TOPODATA e das alturas:
+
+```bash
+python validate_anatel_radio_link_vertical_geometry.py \
+  --paths outputs/anatel_radio_link_path_terrain/paths.csv.gz \
+  --keys outputs/anatel_radio_link_keys/records.csv.gz \
+  --emissions outputs/anatel_radio_links/emissions.csv.gz \
+  --terrain-root data/processed/topodata/radio_link_routes \
+  --terrain-index reports/topodata_radio_link_tiles/index.geojson \
+  --output outputs/anatel_radio_link_vertical/paths.csv.gz \
+  --report reports/anatel_radio_link_vertical/summary.json
+```
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;
