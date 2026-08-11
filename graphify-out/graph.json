@@ -3081,6 +3081,83 @@
       "norm_label": "run_pipeline.sh script"
     },
     {
+      "label": "select_topodata_gap_ring_tiles.py",
+      "file_type": "code",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_select_topodata_gap_ring_tiles",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": "select_topodata_gap_ring_tiles.py"
+    },
+    {
+      "label": "requirements()",
+      "file_type": "code",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "geoespacial_select_topodata_gap_ring_tiles_requirements",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": "requirements()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "geoespacial_select_topodata_gap_ring_tiles_py_path",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": "path"
+    },
+    {
+      "label": "Counter",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "geoespacial_select_topodata_gap_ring_tiles_py_counter",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": "counter"
+    },
+    {
+      "label": "required_names()",
+      "file_type": "code",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "geoespacial_select_topodata_gap_ring_tiles_required_names",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": "required_names()"
+    },
+    {
+      "label": "select()",
+      "file_type": "code",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "geoespacial_select_topodata_gap_ring_tiles_select",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": "select()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "geoespacial_select_topodata_gap_ring_tiles_main",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": "main()"
+    },
+    {
       "label": "select_topodata_gap_tiles.py",
       "file_type": "code",
       "source_file": "geoespacial/select_topodata_gap_tiles.py",
@@ -4995,6 +5072,61 @@
       "norm_label": ".test_scenario_weights_sum_to_one()"
     },
     {
+      "label": "test_select_topodata_gap_ring_tiles.py",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_select_topodata_gap_ring_tiles",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": "test_select_topodata_gap_ring_tiles.py"
+    },
+    {
+      "label": "SelectTopodataGapRingTilesTests",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": "selecttopodatagapringtilestests"
+    },
+    {
+      "label": ".test_required_names_include_seed_and_ring_tiles()",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests_test_required_names_include_seed_and_ring_tiles",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": ".test_required_names_include_seed_and_ring_tiles()"
+    },
+    {
+      "label": ".test_requirements_count_points_and_affected_seed()",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests_test_requirements_count_points_and_affected_seed",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": ".test_requirements_count_points_and_affected_seed()"
+    },
+    {
+      "label": ".test_rejects_too_few_azimuths()",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests_test_rejects_too_few_azimuths",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": ".test_rejects_too_few_azimuths()"
+    },
+    {
       "label": "test_select_topodata_gap_tiles.py",
       "file_type": "code",
       "source_file": "geoespacial/tests/test_select_topodata_gap_tiles.py",
@@ -5122,8 +5254,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_tests_test_validate_anatel_radio_link_vertical_geometry",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "test_validate_anatel_radio_link_vertical_geometry.py"
     },
     {
@@ -5133,8 +5265,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "geoespacial_tests_test_validate_anatel_radio_link_vertical_geometry_verticalgeometrytest",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "verticalgeometrytest"
     },
     {
@@ -5144,8 +5276,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "geoespacial_tests_test_validate_anatel_radio_link_vertical_geometry_verticalgeometrytest_test_equal_heights_include_earth_curvature_depression",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_equal_heights_include_earth_curvature_depression()"
     },
     {
@@ -5155,8 +5287,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "geoespacial_tests_test_validate_anatel_radio_link_vertical_geometry_verticalgeometrytest_test_reverse_angles_have_expected_height_symmetry",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_reverse_angles_have_expected_height_symmetry()"
     },
     {
@@ -5166,8 +5298,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "geoespacial_tests_test_validate_anatel_radio_link_vertical_geometry_verticalgeometrytest_test_angular_error_wraps",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_angular_error_wraps()"
     },
     {
@@ -5177,8 +5309,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "geoespacial_tests_test_validate_anatel_radio_link_vertical_geometry_verticalgeometrytest_test_missing_fails_closed",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_missing_fails_closed()"
     },
     {
@@ -5287,8 +5419,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "validate_anatel_radio_link_vertical_geometry.py"
     },
     {
@@ -5298,8 +5430,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry_elevation_angle",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "elevation_angle()"
     },
     {
@@ -5309,8 +5441,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry_angular_error",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "angular_error()"
     },
     {
@@ -5320,8 +5452,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry_status",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "status()"
     },
     {
@@ -5331,8 +5463,8 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry_validate",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "validate()"
     },
     {
@@ -5342,8 +5474,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry_py_path",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "path"
     },
     {
@@ -5353,8 +5485,8 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry_main",
-      "community": 120,
-      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "main()"
     },
     {
@@ -9714,7 +9846,7 @@
       "label": "Valida\u00e7\u00e3o reproduz\u00edvel",
       "file_type": "document",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L139",
+      "source_location": "L144",
       "_origin": "ast",
       "id": "geoespacial_status_atual_valida\u00e7\u00e3o_reproduz\u00edvel",
       "community": 75,
@@ -9725,7 +9857,7 @@
       "label": "Lacunas controladas",
       "file_type": "document",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L151",
+      "source_location": "L156",
       "_origin": "ast",
       "id": "geoespacial_status_atual_lacunas_controladas",
       "community": 75,
@@ -9736,7 +9868,7 @@
       "label": "Pr\u00f3xima a\u00e7\u00e3o execut\u00e1vel",
       "file_type": "document",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L168",
+      "source_location": "L173",
       "_origin": "ast",
       "id": "geoespacial_status_atual_pr\u00f3xima_a\u00e7\u00e3o_execut\u00e1vel",
       "community": 75,
@@ -9747,7 +9879,7 @@
       "label": "Comando de retomada",
       "file_type": "document",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L175",
+      "source_location": "L180",
       "_origin": "ast",
       "id": "geoespacial_status_atual_comando_de_retomada",
       "community": 75,
@@ -10534,6 +10666,28 @@
       "community": 121,
       "community_name": "topodata_gap_candidates/README.md",
       "norm_label": "triagem multiescala dos candidatos de lacuna"
+    },
+    {
+      "label": "topodata_gap_ring_tiles/README.md",
+      "file_type": "document",
+      "source_file": "geoespacial/reports/topodata_gap_ring_tiles/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_reports_topodata_gap_ring_tiles_readme",
+      "community": 120,
+      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "norm_label": "topodata_gap_ring_tiles/readme.md"
+    },
+    {
+      "label": "Folhas TOPODATA dos an\u00e9is das lacunas",
+      "file_type": "document",
+      "source_file": "geoespacial/reports/topodata_gap_ring_tiles/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_reports_topodata_gap_ring_tiles_readme_folhas_topodata_dos_an\u00e9is_das_lacunas",
+      "community": 120,
+      "community_name": "validate_anatel_radio_link_vertical_geometry.py",
+      "norm_label": "folhas topodata dos aneis das lacunas"
     },
     {
       "label": "topodata_gap_seeds/README.md",
@@ -16881,6 +17035,18 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles",
+      "target": "geoespacial_build_canonical_smp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "geoespacial/select_topodata_gap_tiles.py",
       "source_location": "L15",
       "weight": 1.0,
@@ -18124,6 +18290,18 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles",
+      "target": "geoespacial_consolidate_topodata_gap_candidates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "geoespacial/tests/test_consolidate_topodata_gap_candidates.py",
       "source_location": "L3",
       "weight": 1.0,
@@ -18143,6 +18321,18 @@
       "source": "geoespacial_consolidate_topodata_gap_candidates_ring_clearance",
       "target": "geoespacial_consolidate_topodata_gap_candidates_destination",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles_requirements",
+      "target": "geoespacial_consolidate_topodata_gap_candidates_destination"
     },
     {
       "relation": "calls",
@@ -21545,6 +21735,206 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_required_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_select",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles",
+      "target": "geoespacial_select_topodata_route_tiles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_select_topodata_gap_ring_tiles",
+      "target": "geoespacial_select_topodata_gap_ring_tiles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles_required_names",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles_requirements",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_py_counter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles_requirements",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles_requirements",
+      "target": "geoespacial_select_topodata_route_tiles_tile_name"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles_select",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests_test_requirements_count_points_and_affected_seed",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_requirements"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles_required_names",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles_select",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests_test_rejects_too_few_azimuths",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_required_names"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests_test_required_names_include_seed_and_ring_tiles",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_required_names"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/select_topodata_gap_ring_tiles.py",
+      "source_location": "L110",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_select_topodata_gap_ring_tiles_main",
+      "target": "geoespacial_select_topodata_gap_ring_tiles_select",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "geoespacial/select_topodata_gap_tiles.py",
       "source_location": "L19",
       "weight": 1.0,
@@ -23544,6 +23934,50 @@
       "_origin": "ast",
       "source": "geoespacial_tests_test_rank_candidate_sites_rankcandidatesitestests",
       "target": "geoespacial_tests_test_rank_candidate_sites_rankcandidatesitestests_test_scenario_weights_sum_to_one",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_select_topodata_gap_ring_tiles",
+      "target": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests",
+      "target": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests_test_rejects_too_few_azimuths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests",
+      "target": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests_test_required_names_include_seed_and_ring_tiles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_select_topodata_gap_ring_tiles.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests",
+      "target": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests_test_requirements_count_points_and_affected_seed",
       "confidence_score": 1.0
     },
     {
@@ -28885,7 +29319,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L175",
+      "source_location": "L180",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_status_atual_estado_atual_do_subprojeto_geoespacial",
@@ -28907,7 +29341,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L151",
+      "source_location": "L156",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_status_atual_estado_atual_do_subprojeto_geoespacial",
@@ -28918,7 +29352,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L168",
+      "source_location": "L173",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_status_atual_estado_atual_do_subprojeto_geoespacial",
@@ -28929,7 +29363,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L139",
+      "source_location": "L144",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_status_atual_estado_atual_do_subprojeto_geoespacial",
@@ -29462,6 +29896,17 @@
       "_origin": "ast",
       "source": "geoespacial_reports_topodata_gap_candidates_readme",
       "target": "geoespacial_reports_topodata_gap_candidates_readme_triagem_multiescala_dos_candidatos_de_lacuna",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/reports/topodata_gap_ring_tiles/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_reports_topodata_gap_ring_tiles_readme",
+      "target": "geoespacial_reports_topodata_gap_ring_tiles_readme_folhas_topodata_dos_an\u00e9is_das_lacunas",
       "confidence_score": 1.0
     },
     {
@@ -32392,5 +32837,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b6ffa53f14f8d588541cf9c8a47b4d87cd211bf9"
+  "built_at_commit": "44dd9270db2ebd2010c9e8c0a0fc3328ce16efff"
 }

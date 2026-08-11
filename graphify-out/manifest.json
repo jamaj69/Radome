@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786468032.12432,
-    "ast_hash": "b84d637c1f1c8bdcfe72a519a07ad18c",
+    "mtime": 1786468714.7691176,
+    "ast_hash": "8754ff46a2d514779c4ef9cea6c5ed60",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786468031.9843206,
-    "ast_hash": "648f2da0b5e027359cea4bdb44ec38c1",
+    "mtime": 1786468724.9650698,
+    "ast_hash": "7bfabc4260df67fc19e333a48aa5189c",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -1257,6 +1257,26 @@
   "geoespacial/reports/topodata_gap_candidates/README.md": {
     "mtime": 1786468031.8363214,
     "ast_hash": "52dd9eaea434873b098c765429f320f8",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/topodata_gap_ring_tiles/selection.json": {
+    "mtime": 1786468732.0330367,
+    "ast_hash": "a6598207063efe6cc229e29ed83b2521",
+    "semantic_hash": ""
+  },
+  "geoespacial/select_topodata_gap_ring_tiles.py": {
+    "mtime": 1786468655.389396,
+    "ast_hash": "67628f86941d8b63361c90c44ebce713",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_select_topodata_gap_ring_tiles.py": {
+    "mtime": 1786468655.5413952,
+    "ast_hash": "ce46c7c2ccd2682102831361a197979d",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/topodata_gap_ring_tiles/README.md": {
+    "mtime": 1786468714.4651191,
+    "ast_hash": "ea96820b52f51f2de05026e98233fca1",
     "semantic_hash": ""
   }
 }

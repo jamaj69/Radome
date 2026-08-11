@@ -131,6 +131,11 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   completos para 1.709/1.696/1.663 sementes; consolidação a 10 km reteve 1.484
   candidatos representando todas as 1.732 células; 69 sementes permanecem com
   ao menos um anel incompleto e não recebem pontuação otimista de clareza;
+- seleção das folhas de borda concluída: os 188.788 centros e pontos dos anéis
+  requerem 175 folhas TOPODATA disponíveis, das quais 143 já são locais e 32
+  novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
+  inventário oficial e afeta somente três pontos de uma semente, mantidos como
+  incompletos de forma conservadora;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -138,7 +143,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 78 testes automatizados aprovados na descoberta completa com
+- 90 testes automatizados aprovados na descoberta completa com
   `PYTHONPATH=geoespacial`;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
@@ -167,9 +172,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Selecionar as folhas TOPODATA adicionais atravessadas pelos anéis de 25 km das
-69 sementes incompletas, adquiri-las e repetir a triagem até obter 36/36
-azimutes nas três escalas. Somente então congelar a consolidação e recalcular a
+Adquirir e extrair as 32 folhas TOPODATA adicionais selecionadas para os anéis,
+repetir a triagem e quantificar a incompletude residual causada exclusivamente
+por `05N51_ZN.zip`. Somente então congelar a consolidação e recalcular a
 cobertura e a malha triangular.
 
 ## Comando de retomada

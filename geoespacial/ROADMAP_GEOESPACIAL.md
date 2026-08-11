@@ -44,7 +44,7 @@ Toda transição de estado deve ser produzida por script Python conforme
 | Estados e país | IBGE BC250 2025 | downloaded_verified | polígonos | usar em máscaras e relatórios |
 | Relevo pontual | IBGE BC250 2025 | integrated/preliminary | picos e pontos cotados | reconciliar com MDE |
 | Elevação preliminar | Mapzen Terrarium | integrated/preliminary | cache z8 | substituir por TOPODATA |
-| MDE nacional | TOPODATA/INPE | route_subset_extracted | 154 GeoTIFFs/12.013.983.756 bytes validados, hasheados e indexados; uma folha requerida ausente do índice | repetir perfis e comparar com z8 |
+| MDE nacional | TOPODATA/INPE | gap_ring_boundary_selected | 154 folhas de rotas e 141 folhas de lacunas extraídas; anéis requerem 32 folhas adicionais (1.945.108.480 bytes listados); `05N51_ZN.zip` ausente do inventário oficial afeta três pontos de uma semente | adquirir/extrair as 32 folhas e repetir a triagem conservadora |
 | MDE local detalhado | IBGE/SGB/estaduais | pending | cobertura variável | adquirir somente para finalistas |
 | Torres celulares SMP | Anatel | canonical_integrated | 3.284.526 emissões, 105.726 sítios e 282.623 proxies cadastrais de antena; perda zero; 23 conflitos municipais preservados | usar junção espacial para revisar conflitos e buscar parâmetros radiométricos físicos |
 | Radiodifusão TV/RTV/FM/OM/RTR | Anatel | integrated/spectrum_partial | 35.126 registros; 18.285 licenciados; centro/canal disponíveis, largura ausente | integrar canalização regulatória; revisar 117 conflitos e ERP |
