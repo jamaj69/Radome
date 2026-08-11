@@ -40,6 +40,22 @@ O total de coordenadas distintas é apenas uma aproximação inicial de sítios
 físicos. A camada de torres deve consolidar co-localizações por distância,
 número de estação e operadora, preservando tecnologias e frequências associadas.
 
+A rede município--emissor é construída com o código IBGE como chave:
+
+```bash
+/usr/bin/python3 build_municipal_emitter_network.py \
+  --bc250 data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
+  --population data/raw/ibge/municipios/populacao_censo_2022.json \
+  --smp data/raw/anatel/estacoes_smp.zip \
+  --terrain-cache data/raw/mapzen/terrarium \
+  --output-dir outputs/municipal_emitter_network
+```
+
+Os nós `municipio` recebem longitude, latitude, altitude da sede, população e
+área. Os nós `torre_smp` preservam estações, operadoras e tecnologias agregadas
+e são ligados ao município por `located_in`. O GraphML e os CSVs produzidos são
+arquivos derivados volumosos e permanecem em `outputs/`.
+
 ## Hipóteses controladas
 
 - a cobertura é avaliada a 150 m, 3 000 m e 10 000 m acima do terreno;

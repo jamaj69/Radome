@@ -1,0 +1,18 @@
+{
+  "municipality_nodes": 5571,
+  "municipalities_without_census_2022_population": 1,
+  "municipality_without_population_code": "5101837",
+  "municipality_without_population_name": "Boa Esperança do Norte",
+  "smp_site_nodes": 105726,
+  "smp_sites_without_municipal_code": 0,
+  "smp_sites_with_unknown_municipal_code": 0,
+  "smp_sites_with_conflicting_codes": 23,
+  "located_in_edges": 105726,
+  "node_size_semantics": "municipal area in square kilometres calculated from BC250 geometry",
+  "altitude_status": "preliminary Mapzen Terrarium terrain sample at municipal seat; TOPODATA replacement pending",
+  "generated_products": {
+    "graphml": "outputs/municipal_emitter_network/municipal_emitter_network.graphml",
+    "municipalities_csv": "outputs/municipal_emitter_network/municipality_nodes.csv",
+    "smp_sites_csv": "outputs/municipal_emitter_network/smp_site_nodes.csv"
+  }
+}

@@ -57,6 +57,27 @@
       "status": "downloaded_verified_no_tower_layer"
     },
     {
+      "id": "ibge_census_2022_municipal_population",
+      "authority": "IBGE",
+      "description": "População residente por município, Censo Demográfico 2022, variável 93",
+      "url": "https://servicodados.ibge.gov.br/api/v3/agregados/4714/periodos/2022/variaveis/93?localidades=N6%5Ball%5D",
+      "expected_size_bytes": 689303,
+      "sha256": "a655584dff46e1c72651a6f752d4315a93817c2a611d12e4f9dd72c8a6e7dcde",
+      "target": "data/raw/ibge/municipios/populacao_censo_2022.json",
+      "municipality_count": 5570,
+      "status": "downloaded_verified"
+    },
+    {
+      "id": "ibge_environmental_grid_municipality_index_2023",
+      "authority": "IBGE",
+      "description": "Índice tabular de municípios da grade estatística ambiental; contém identificadores, não população ou altitude",
+      "url": "https://geoftp.ibge.gov.br/informacoes_ambientais/estudos_ambientais/grade_estatistica_de_dados_ambientais/versao_2023/dados_tabulares/municipios/municipios.csv",
+      "expected_size_bytes": 193438,
+      "sha256": "056850b916aafd3f81fc841cedc3506acc10644663ecf30be04542415a6bf9e0",
+      "target": "data/raw/ibge/municipios/municipios_ambientais_2023.csv",
+      "status": "downloaded_verified_identifier_only"
+    },
+    {
       "id": "anatel_smp_licensed_stations",
       "authority": "Anatel",
       "description": "Licensed personal mobile service base stations with technical data and locations",

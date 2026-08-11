@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 56 files · ~447,637 words
+- 60 files · ~449,056 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 679 nodes · 771 edges · 60 communities (55 shown, 5 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 24 edges (avg confidence: 0.78)
+- 695 nodes · 801 edges · 61 communities (55 shown, 6 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 30 edges (avg confidence: 0.78)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `51583fc6`
+- Built from commit: `74ce1a96`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -74,6 +74,7 @@
 - Fontes de infraestrutura para o grafo de candidatos
 - inventory_infrastructure.py
 - inventory
+- municipal_emitter_network/README.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -85,9 +86,11 @@
 7. `Point` - 11 edges
 8. `RADOME — Roadmap de correções técnicas e documentais` - 11 edges
 9. `tetrahedral_modules()` - 10 edges
-10. `RADOME — Sumário executivo e roadmap de pesquisa e engenharia` - 9 edges
+10. `Metodologia reproduzível para seleção geoespacial de sítios` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `write_network()` --calls--> `terrain_elevation()`  [INFERRED]
+  geoespacial/build_municipal_emitter_network.py → geoespacial/build_candidate_graph.py
 - `main()` --calls--> `distance_km()`  [INFERRED]
   geoespacial/build_candidate_graph.py → geoespacial/preselect_bc250.py
 - `main()` --calls--> `Point`  [INFERRED]
@@ -96,13 +99,11 @@
   geoespacial/tests/test_optimize_sites.py → geoespacial/optimize_sites.py
 - `OptimizeSitesTest` --uses--> `Candidate`  [INFERRED]
   geoespacial/tests/test_optimize_sites.py → geoespacial/optimize_sites.py
-- `PreselectBc250Test` --uses--> `Point`  [INFERRED]
-  geoespacial/tests/test_preselect_bc250.py → geoespacial/preselect_bc250.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (60 total, 5 thin omitted)
+## Communities (61 total, 6 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -285,8 +286,8 @@ Cohesion: 0.67
 Nodes (3): Citation velocity, Cross-search signals, Repeat-hit papers
 
 ### Community 48 - "localize_figures.py"
-Cohesion: 0.20
-Nodes (9): Construção dos candidatos, Fontes e proveniência, Grafo, Hipóteses controladas, Metodologia reproduzível para seleção geoespacial de sítios, Objetivo, Otimização, Regras para incorporação no artigo (+1 more)
+Cohesion: 0.18
+Nodes (10): Camada municipal e integração de emissores, Construção dos candidatos, Fontes e proveniência, Grafo, Hipóteses controladas, Metodologia reproduzível para seleção geoespacial de sítios, Objetivo, Otimização (+2 more)
 
 ### Community 49 - "Seleção geoespacial de sítios RADOME"
 Cohesion: 0.25
@@ -317,23 +318,23 @@ Cohesion: 0.27
 Nodes (9): main(), parse_args(), Path, read_anac_csv(), read_anatel_zip(), read_decea_capabilities(), sha256(), InfrastructureInventoryTest (+1 more)
 
 ### Community 59 - "inventory"
-Cohesion: 0.39
-Nodes (5): file_sha256(), inventory(), main(), Path, SmpInventoryTest
+Cohesion: 0.18
+Nodes (14): Counter, dominant_code(), main(), municipal_features(), Path, read_population(), read_smp_sites(), write_network() (+6 more)
 
 ## Knowledge Gaps
-- **416 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+411 more)
+- **418 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+413 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _416 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _418 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**

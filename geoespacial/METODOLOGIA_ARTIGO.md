@@ -119,6 +119,48 @@ O comando agregado equivalente é `run_pipeline.sh`.
 - não afirmar visada a partir de uma aresta preliminar;
 - não confundir cidades próximas com cidades visíveis;
 - não usar o grafo de infraestrutura para eliminar regiões pouco urbanizadas;
+
+## Camada municipal e integração de emissores
+
+O município é representado como um tipo próprio de nó, identificado pelo código
+IBGE de sete dígitos. Não existe uma única tabela oficial que reúna todos os
+atributos necessários; a camada canônica é uma composição rastreável:
+
+- limite, área e coordenadas da sede municipal: BC250/IBGE;
+- população residente: Censo Demográfico 2022, variável 93 da API de Agregados;
+- altitude da sede: amostra do modelo de elevação na coordenada da sede;
+- emissores e instalações: cadastros setoriais da Anatel, ANAC e DECEA.
+
+Para o nó municipal, `x` é a longitude da sede, `y` é a latitude da sede e `z`
+é a altitude do terreno na sede. Longitude e latitude usam SIRGAS 2000
+(EPSG:4674); a altitude deve registrar fonte, resolução e referência vertical.
+Enquanto o TOPODATA não estiver integrado, a amostra Terrarium é explicitamente
+preliminar e não pode fundamentar uma decisão final de sítio.
+
+O tamanho visual do nó municipal é proporcional à área territorial em
+quilômetros quadrados. A população permanece como atributo independente para
+permitir uma visualização alternativa por população e para ponderar logística,
+manutenção e quantidade potencial de iluminadores. Área e população não devem
+ser combinadas implicitamente em um único indicador.
+
+Torres e demais objetos recebem `ibge_code` e são ligados ao município por uma
+aresta `located_in`. Quando o cadastro setorial contém o código apenas em parte
+dos registros, ele é propagado entre setores, frequências e tecnologias que
+compartilham a mesma instalação. Ausências e conflitos são resolvidos por
+junção espacial com a malha municipal, mantendo uma marca de revisão.
+
+Uma linha do cadastro SMP não equivale a uma torre. O mesmo sítio pode aparecer
+repetidamente por estação, setor, frequência, geração e operadora. A camada de
+sítios físicos agrega coordenadas próximas e preserva conjuntos de estações,
+operadoras, tecnologias e faixas. O limiar espacial e os casos conflitantes
+devem ser informados junto com qualquer contagem de “torres”.
+
+O grafo municipal-emissor serve para analisar disponibilidade geométrica de
+iluminadores celulares, rádio e televisão, bem como infraestrutura
+aeronáutica. A presença de um emissor não demonstra que seu sinal produz eco
+detectável no radome: frequência, potência irradiada, diagrama, polarização,
+ocupação temporal, perdas, geometria biestática, RCS e ruído pertencem à etapa
+radioelétrica posterior.
 - citar a versão do manifesto, o commit Git e os parâmetros da execução;
 - regenerar os resultados após qualquer mudança de fonte ou configuração;
 - incorporar metodologia e resultados nas duas árvores linguísticas do artigo.
