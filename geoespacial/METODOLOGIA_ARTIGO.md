@@ -231,6 +231,12 @@ A recuperação bruta confirmou equivalência das 100.410 linhas e completude de
 Fistel, ato de RF e identificadores homologados. Esses campos são evidência para
 o próximo estágio, mas sua mera presença não comprova unicidade nem contraponta.
 
+Nos 340 grupos com duas coordenadas e reciprocidade espectral, o rumo geodésico
+foi comparado ao azimute cadastral em ambos os sentidos. A sensibilidade é
+publicada a 5, 10, 15 e 30 graus; 15 graus é somente marcador provisório. Foram
+encontrados 328 grupos alinhados nesse marcador e 12 inconsistentes, ainda sem
+arestas. Terreno, curvatura terrestre e Fresnel permanecem gates obrigatórios.
+
 A migração canônica usa uma partição exaustiva: cada linha SARC/SCM é incluída
 ou recebe exatamente um motivo de exclusão por inatividade, recepção exclusiva,
 papel RF desconhecido ou coordenada inválida. O marcador de prontidão

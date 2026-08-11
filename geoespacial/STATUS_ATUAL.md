@@ -51,6 +51,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   homologados de antena/transmissor completos; equivalência linha a linha confirmada;
 - 928 grupos família--Fistel--ato particionados: 340 candidatos recíprocos de
   duas coordenadas, 40 não recíprocos, 175 locais e 373 ambíguos;
+- nos 340 recíprocos, 328 têm caminho alinhado a até 15 graus e 12 não; a
+  sensibilidade é 326/328/328/329 grupos a 5/10/15/30 graus;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -58,7 +60,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 40 testes automatizados aprovados;
+- 41 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
@@ -85,8 +87,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Validar os 340 candidatos recíprocos com azimutes opostos, distância plausível,
-relevo e visada. Somente resultados não ambíguos poderão gerar arestas.
+Calcular perfil de terreno, curvatura terrestre e zona de Fresnel para os 328
+candidatos alinhados no marcador provisório de 15 graus. Revisar separadamente
+os extremos de distância; nenhuma aresta será criada antes dessa validação.
 
 ## Comando de retomada
 

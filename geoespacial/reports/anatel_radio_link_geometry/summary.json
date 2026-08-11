@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "candidate_file": "outputs/anatel_radio_link_candidates/groups.csv.gz",
+  "candidate_sha256": "fe9680c8aedf0ba143ae19b03e33411f87b36de62fee5de9c640ed90dc2a8e56",
+  "key_file": "outputs/anatel_radio_link_keys/records.csv.gz",
+  "key_sha256": "19557fde4a4aa5e52d128707d53dd9d85e921ec015f854516f702b868b916843",
+  "emission_file": "outputs/anatel_radio_links/emissions.csv.gz",
+  "emission_sha256": "0d4fdc04bdc6944a68b45086884ee386084e3be484149db9cc2ff392e10bf96f",
+  "candidate_groups": 340,
+  "status": {
+    "azimuth_consistent_15deg": 328,
+    "azimuth_inconsistent_15deg": 12
+  },
+  "sensitivity_groups_with_at_least_one_aligned_path": {
+    "5": 326,
+    "10": 328,
+    "15": 328,
+    "30": 329
+  },
+  "distance_km": {
+    "min": 0.7697988982409391,
+    "max": 449.9155297113615,
+    "mean": 30.14100523597236
+  },
+  "threshold_semantics": "15 degrees is a provisional reporting marker; all sensitivity thresholds are published",
+  "pairing_status": "not_performed",
+  "output": "outputs/anatel_radio_link_geometry/groups.csv.gz"
+}

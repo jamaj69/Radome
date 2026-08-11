@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786426533.7302349,
-    "ast_hash": "a8a6b68cffdc94f2c7ab09de9b282175",
+    "mtime": 1786426806.8929515,
+    "ast_hash": "f8035fb9ce436ba7e3a15ba10c693063",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "geoespacial/METODOLOGIA_ARTIGO.md": {
-    "mtime": 1786426168.7719505,
-    "ast_hash": "2b5fc24f29ca829db8cd885124723eed",
+    "mtime": 1786426806.7329524,
+    "ast_hash": "d99b8d1569da6ac873e571e7bd0a4256",
     "semantic_hash": ""
   },
   "geoespacial/FONTES_INFRAESTRUTURA.md": {
@@ -700,8 +700,8 @@
     "semantic_hash": ""
   },
   "geoespacial/run_pipeline.py": {
-    "mtime": 1786426533.242237,
-    "ast_hash": "64ee6c7cde583529cda60b55c67394b1",
+    "mtime": 1786426782.3930664,
+    "ast_hash": "a8361fe782d602b56f2702f2a670209a",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_acquire_decea_wfs.py": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786426533.5662355,
-    "ast_hash": "b8c2cd2b0a3f6688d564e4a1263a8166",
+    "mtime": 1786426782.7050648,
+    "ast_hash": "c9558a692c9e2953cd55106d3cb434f2",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -857,6 +857,26 @@
   "geoespacial/reports/anatel_radio_link_candidates/README.md": {
     "mtime": 1786426533.4102364,
     "ast_hash": "fc25f6c46167aaaeb3c1c0cb35131c8d",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/anatel_radio_link_geometry/summary.json": {
+    "mtime": 1786426710.9414017,
+    "ast_hash": "b34516901f4b712cfb8833a582baa236",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_validate_anatel_radio_link_geometry.py": {
+    "mtime": 1786426702.6974406,
+    "ast_hash": "c1301d01a90b8ff0d8a9cca9a6c75992",
+    "semantic_hash": ""
+  },
+  "geoespacial/validate_anatel_radio_link_geometry.py": {
+    "mtime": 1786426702.5254414,
+    "ast_hash": "555a9fe032e5b7d5043596341829986f",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/anatel_radio_link_geometry/README.md": {
+    "mtime": 1786426782.5490656,
+    "ast_hash": "54eb28563fdc963b2c7fb0be6729754c",
     "semantic_hash": ""
   }
 }

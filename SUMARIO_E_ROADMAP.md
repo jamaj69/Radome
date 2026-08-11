@@ -120,6 +120,9 @@ equivalência foi confirmada sem divergências; 39 testes passam. O próximo gat
 mede poder discriminante e testa reciprocidade e geometria. A partição resultou
 em 340 candidatos recíprocos de duas coordenadas, 40 não recíprocos, 175 locais
 e 373 ambíguos; nenhum enlace foi criado. Quarenta testes passam.
+Dos 340 recíprocos, 328 apresentam caminho alinhado a até 15 graus, marcador
+provisório cuja sensibilidade completa foi publicada; 12 não apresentam.
+Quarenta e um testes passam. O próximo gate é terreno, curvatura e Fresnel.
 
 ## 6. Roadmap orientado por gates
 
