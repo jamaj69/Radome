@@ -143,6 +143,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   2.724 `K3` somente por curvatura pendente; a envoltória contém 98,41% da área
   da grade e associa geometricamente 101.500 SMP, 11.703 radiodifusores e 481
   endpoints, sem criar `illuminates` ou visada confirmada;
+- prioridade de perfis: as 3.209 faces contêm 4.823 arestas únicas; 4.262 têm
+  limite de curvatura disponível, 4.228 incidem em ao menos uma face `K3`
+  pendente e 289 combinam geometricamente as três classes de infraestrutura;
 - seleção das folhas de borda concluída: os 188.788 centros e pontos dos anéis
   requerem 175 folhas TOPODATA disponíveis, das quais 143 já são locais e 32
   novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
@@ -161,7 +164,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 93 testes automatizados aprovados na descoberta completa com
+- 95 testes automatizados aprovados na descoberta completa com
   `PYTHONPATH=geoespacial`;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
@@ -190,9 +193,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Priorizar as arestas da malha aumentada para perfis TOPODATA de terreno e
-comparar a conectividade confirmável com a cobertura por discos, mantendo as
-incidências de iluminadores separadas do futuro modelo RF quantitativo.
+Selecionar as folhas TOPODATA atravessadas pelas arestas priorizadas e calcular
+os perfis de terreno em lotes, comparando a conectividade confirmável com a
+cobertura por discos e mantendo iluminadores separados do modelo RF futuro.
 
 ## Comando de retomada
 

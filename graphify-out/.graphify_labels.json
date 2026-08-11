@@ -123,5 +123,6 @@
   "121": "topodata_gap_candidates/README.md",
   "122": "build_continental_coverage_grid.py",
   "123": "augmented_continental_coverage_grid/README.md",
-  "124": "augmented_triangular_mesh/README.md"
+  "124": "augmented_triangular_mesh/README.md",
+  "125": "augmented_mesh_edge_priority/README.md"
 }

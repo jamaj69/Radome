@@ -3007,6 +3007,61 @@
       "norm_label": "main()"
     },
     {
+      "label": "prioritize_augmented_mesh_edges.py",
+      "file_type": "code",
+      "source_file": "geoespacial/prioritize_augmented_mesh_edges.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_prioritize_augmented_mesh_edges",
+      "community": 105,
+      "community_name": "build_canonical_fixed_emitters.py",
+      "norm_label": "prioritize_augmented_mesh_edges.py"
+    },
+    {
+      "label": "face_edges()",
+      "file_type": "code",
+      "source_file": "geoespacial/prioritize_augmented_mesh_edges.py",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "geoespacial_prioritize_augmented_mesh_edges_face_edges",
+      "community": 105,
+      "community_name": "build_canonical_fixed_emitters.py",
+      "norm_label": "face_edges()"
+    },
+    {
+      "label": "build()",
+      "file_type": "code",
+      "source_file": "geoespacial/prioritize_augmented_mesh_edges.py",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "geoespacial_prioritize_augmented_mesh_edges_build",
+      "community": 105,
+      "community_name": "build_canonical_fixed_emitters.py",
+      "norm_label": "build()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "geoespacial_prioritize_augmented_mesh_edges_py_path",
+      "community": 105,
+      "community_name": "build_canonical_fixed_emitters.py",
+      "norm_label": "path"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "geoespacial/prioritize_augmented_mesh_edges.py",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "geoespacial_prioritize_augmented_mesh_edges_main",
+      "community": 105,
+      "community_name": "build_canonical_fixed_emitters.py",
+      "norm_label": "main()"
+    },
+    {
       "label": "rank_candidate_sites.py",
       "file_type": "code",
       "source_file": "geoespacial/rank_candidate_sites.py",
@@ -5147,6 +5202,50 @@
       "community": 102,
       "community_name": "validate_anatel_radio_link_vertical_geometry.py",
       "norm_label": ".test_cardinal_azimuth_sectors_differ()"
+    },
+    {
+      "label": "test_prioritize_augmented_mesh_edges.py",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_prioritize_augmented_mesh_edges.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_prioritize_augmented_mesh_edges",
+      "community": 105,
+      "community_name": "build_canonical_fixed_emitters.py",
+      "norm_label": "test_prioritize_augmented_mesh_edges.py"
+    },
+    {
+      "label": "PrioritizeAugmentedMeshEdgesTests",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_prioritize_augmented_mesh_edges.py",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_prioritize_augmented_mesh_edges_prioritizeaugmentedmeshedgestests",
+      "community": 105,
+      "community_name": "build_canonical_fixed_emitters.py",
+      "norm_label": "prioritizeaugmentedmeshedgestests"
+    },
+    {
+      "label": ".test_face_edges_are_unique_and_stable()",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_prioritize_augmented_mesh_edges.py",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_prioritize_augmented_mesh_edges_prioritizeaugmentedmeshedgestests_test_face_edges_are_unique_and_stable",
+      "community": 105,
+      "community_name": "build_canonical_fixed_emitters.py",
+      "norm_label": ".test_face_edges_are_unique_and_stable()"
+    },
+    {
+      "label": ".test_rejects_invalid_face()",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_prioritize_augmented_mesh_edges.py",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_prioritize_augmented_mesh_edges_prioritizeaugmentedmeshedgestests_test_rejects_invalid_face",
+      "community": 105,
+      "community_name": "build_canonical_fixed_emitters.py",
+      "norm_label": ".test_rejects_invalid_face()"
     },
     {
       "label": "test_rank_candidate_sites.py",
@@ -9978,7 +10077,7 @@
       "label": "Valida\u00e7\u00e3o reproduz\u00edvel",
       "file_type": "document",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L162",
+      "source_location": "L165",
       "_origin": "ast",
       "id": "geoespacial_status_atual_valida\u00e7\u00e3o_reproduz\u00edvel",
       "community": 75,
@@ -9989,7 +10088,7 @@
       "label": "Lacunas controladas",
       "file_type": "document",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L174",
+      "source_location": "L177",
       "_origin": "ast",
       "id": "geoespacial_status_atual_lacunas_controladas",
       "community": 75,
@@ -10000,7 +10099,7 @@
       "label": "Pr\u00f3xima a\u00e7\u00e3o execut\u00e1vel",
       "file_type": "document",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L191",
+      "source_location": "L194",
       "_origin": "ast",
       "id": "geoespacial_status_atual_pr\u00f3xima_a\u00e7\u00e3o_execut\u00e1vel",
       "community": 75,
@@ -10011,7 +10110,7 @@
       "label": "Comando de retomada",
       "file_type": "document",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L197",
+      "source_location": "L200",
       "_origin": "ast",
       "id": "geoespacial_status_atual_comando_de_retomada",
       "community": 75,
@@ -10545,6 +10644,28 @@
       "community": 123,
       "community_name": "augmented_continental_coverage_grid/README.md",
       "norm_label": "cobertura geometrica continental aumentada"
+    },
+    {
+      "label": "augmented_mesh_edge_priority/README.md",
+      "file_type": "document",
+      "source_file": "geoespacial/reports/augmented_mesh_edge_priority/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_reports_augmented_mesh_edge_priority_readme",
+      "community": 125,
+      "community_name": "augmented_mesh_edge_priority/README.md",
+      "norm_label": "augmented_mesh_edge_priority/readme.md"
+    },
+    {
+      "label": "Prioridade de perfis da malha aumentada",
+      "file_type": "document",
+      "source_file": "geoespacial/reports/augmented_mesh_edge_priority/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_reports_augmented_mesh_edge_priority_readme_prioridade_de_perfis_da_malha_aumentada",
+      "community": 125,
+      "community_name": "augmented_mesh_edge_priority/README.md",
+      "norm_label": "prioridade de perfis da malha aumentada"
     },
     {
       "label": "augmented_triangular_mesh/README.md",
@@ -17396,6 +17517,18 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "geoespacial/prioritize_augmented_mesh_edges.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_prioritize_augmented_mesh_edges",
+      "target": "geoespacial_build_canonical_smp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "geoespacial/rank_candidate_sites.py",
       "source_location": "L18",
       "weight": 1.0,
@@ -19065,6 +19198,18 @@
       "_origin": "ast",
       "source": "geoespacial_enrich_candidate_geospatial_context",
       "target": "geoespacial_enrich_candidate_geospatial_context_municipality_polygons",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/prioritize_augmented_mesh_edges.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_prioritize_augmented_mesh_edges",
+      "target": "geoespacial_enrich_candidate_geospatial_context",
       "confidence_score": 1.0
     },
     {
@@ -21934,6 +22079,111 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "geoespacial/prioritize_augmented_mesh_edges.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_prioritize_augmented_mesh_edges",
+      "target": "geoespacial_prioritize_augmented_mesh_edges_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/prioritize_augmented_mesh_edges.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_prioritize_augmented_mesh_edges",
+      "target": "geoespacial_prioritize_augmented_mesh_edges_face_edges",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/prioritize_augmented_mesh_edges.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_prioritize_augmented_mesh_edges",
+      "target": "geoespacial_prioritize_augmented_mesh_edges_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_prioritize_augmented_mesh_edges.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_prioritize_augmented_mesh_edges",
+      "target": "geoespacial_prioritize_augmented_mesh_edges",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/prioritize_augmented_mesh_edges.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_prioritize_augmented_mesh_edges_build",
+      "target": "geoespacial_prioritize_augmented_mesh_edges_face_edges",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/tests/test_prioritize_augmented_mesh_edges.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_prioritize_augmented_mesh_edges_prioritizeaugmentedmeshedgestests_test_face_edges_are_unique_and_stable",
+      "target": "geoespacial_prioritize_augmented_mesh_edges_face_edges"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/tests/test_prioritize_augmented_mesh_edges.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_prioritize_augmented_mesh_edges_prioritizeaugmentedmeshedgestests_test_rejects_invalid_face",
+      "target": "geoespacial_prioritize_augmented_mesh_edges_face_edges"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/prioritize_augmented_mesh_edges.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_prioritize_augmented_mesh_edges_build",
+      "target": "geoespacial_prioritize_augmented_mesh_edges_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/prioritize_augmented_mesh_edges.py",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_prioritize_augmented_mesh_edges_main",
+      "target": "geoespacial_prioritize_augmented_mesh_edges_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "geoespacial/rank_candidate_sites.py",
       "source_location": "L73",
       "weight": 1.0,
@@ -24353,6 +24603,39 @@
       "_origin": "ast",
       "source": "geoespacial_tests_test_preselect_bc250_preselectbc250test",
       "target": "geoespacial_tests_test_preselect_bc250_preselectbc250test_test_distance_is_symmetric",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_prioritize_augmented_mesh_edges.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_prioritize_augmented_mesh_edges",
+      "target": "geoespacial_tests_test_prioritize_augmented_mesh_edges_prioritizeaugmentedmeshedgestests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_prioritize_augmented_mesh_edges.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_prioritize_augmented_mesh_edges_prioritizeaugmentedmeshedgestests",
+      "target": "geoespacial_tests_test_prioritize_augmented_mesh_edges_prioritizeaugmentedmeshedgestests_test_face_edges_are_unique_and_stable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_prioritize_augmented_mesh_edges.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_prioritize_augmented_mesh_edges_prioritizeaugmentedmeshedgestests",
+      "target": "geoespacial_tests_test_prioritize_augmented_mesh_edges_prioritizeaugmentedmeshedgestests_test_rejects_invalid_face",
       "confidence_score": 1.0
     },
     {
@@ -29782,7 +30065,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L197",
+      "source_location": "L200",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_status_atual_estado_atual_do_subprojeto_geoespacial",
@@ -29804,7 +30087,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L174",
+      "source_location": "L177",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_status_atual_estado_atual_do_subprojeto_geoespacial",
@@ -29815,7 +30098,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L191",
+      "source_location": "L194",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_status_atual_estado_atual_do_subprojeto_geoespacial",
@@ -29826,7 +30109,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/STATUS_ATUAL.md",
-      "source_location": "L162",
+      "source_location": "L165",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_status_atual_estado_atual_do_subprojeto_geoespacial",
@@ -30194,6 +30477,17 @@
       "_origin": "ast",
       "source": "geoespacial_reports_augmented_continental_coverage_grid_readme",
       "target": "geoespacial_reports_augmented_continental_coverage_grid_readme_cobertura_geom\u00e9trica_continental_aumentada",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/reports/augmented_mesh_edge_priority/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_reports_augmented_mesh_edge_priority_readme",
+      "target": "geoespacial_reports_augmented_mesh_edge_priority_readme_prioridade_de_perfis_da_malha_aumentada",
       "confidence_score": 1.0
     },
     {
@@ -33355,5 +33649,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "21f608ef6877a1b3c662c726e30d03a300118ec6"
+  "built_at_commit": "45ff95beefc5cdd1d555ceb087da74b9e243ecaa"
 }

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "graph": "geoespacial/outputs/augmented_candidate_graph/graph.graphml",
+  "graph_sha256": "c5d8e43a019d57532578d1d2467395aa28e8e513cddb55ad196c1a0d0d6e166f",
+  "faces": "geoespacial/outputs/augmented_triangular_mesh/triangular_faces.csv.gz",
+  "faces_sha256": "4950e1ebe3d4d262852abf75b0cf2529b5ba37744409f7400086353a115e63a3",
+  "face_count": 3209,
+  "unique_edge_count": 4823,
+  "curvature_upper_bound_edge_count": 4262,
+  "edges_incident_to_k3_count": 4228,
+  "edges_with_three_illuminator_classes_count": 289,
+  "output": "geoespacial/outputs/augmented_mesh_edge_priority/edges.csv.gz",
+  "output_sha256": "1588d86b6772ead24f2aa576cdb6878cb0da67b1afbcfed8471366c3c5ee533c",
+  "semantics": "priority queue for terrain profiling; not line of sight, RF illumination, coverage, or an operational edge"
+}
