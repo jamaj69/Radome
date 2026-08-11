@@ -50,6 +50,11 @@ O total de coordenadas distintas é apenas uma aproximação inicial de sítios
 físicos. A camada de torres deve consolidar co-localizações por distância,
 número de estação e operadora, preservando tecnologias e frequências associadas.
 
+A auditoria registro a registro de geração, tecnologia, frequência e designação
+de emissão está em `reports/ANATEL_SPECTRUM_AUDIT.md`. Ela também documenta a
+limitação da base de radiodifusão, que fornece canal e frequência central, mas
+não largura/designação de emissão.
+
 A rede município--emissor é construída com o código IBGE como chave:
 
 ```bash

@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "geoespacial/README.md": {
-    "mtime": 1786413823.418579,
-    "ast_hash": "d16a6a11468dd1a88058de3b480f8af5",
+    "mtime": 1786414491.695441,
+    "ast_hash": "6632fc8d1bce32beeda1e6022434166f",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/topodata_altitude_tiles.json": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "geoespacial/METODOLOGIA_ARTIGO.md": {
-    "mtime": 1786413398.5365741,
-    "ast_hash": "fcc86b960fc4d03651314987e6762386",
+    "mtime": 1786414492.0234396,
+    "ast_hash": "56527cdea4b3fa0c50b10b7c63088e7e",
     "semantic_hash": ""
   },
   "geoespacial/FONTES_INFRAESTRUTURA.md": {
@@ -630,13 +630,33 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786413823.5665784,
-    "ast_hash": "c0c3d1f8446b0c3e2e891c1123c3c91b",
+    "mtime": 1786414491.8634403,
+    "ast_hash": "7c6c7853f51894416b7088f11ea9bdcf",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
     "mtime": 1786413823.26258,
     "ast_hash": "7cdf9f4f619d7cb951701daee1292bc1",
+    "semantic_hash": ""
+  },
+  "geoespacial/audit_anatel_spectrum.py": {
+    "mtime": 1786414314.4682734,
+    "ast_hash": "64c82d2da0d6b7f1ea2afd95101bbfbe",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/anatel_spectrum_summary.json": {
+    "mtime": 1786414402.9998577,
+    "ast_hash": "bebdc2de3e5a0cda79fdc848639eb91f",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_audit_anatel_spectrum.py": {
+    "mtime": 1786414307.484306,
+    "ast_hash": "3fdfc0c0aa433d292be781f02b66837e",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/ANATEL_SPECTRUM_AUDIT.md": {
+    "mtime": 1786414503.0713878,
+    "ast_hash": "8d1d7c47cd9bcaa8ada5e51dd2c63276",
     "semantic_hash": ""
   }
 }

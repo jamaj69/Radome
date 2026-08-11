@@ -37,8 +37,8 @@ em `reports/`; dados brutos em `data/raw/`; produtos volumosos em `outputs/`.
 | Elevação preliminar | Mapzen Terrarium | integrated/preliminary | cache z8 | substituir por TOPODATA |
 | MDE nacional | TOPODATA/INPE | inventoried | 556 arquivos; ~32,19 GiB compactados | selecionar folhas continentais e baixar |
 | MDE local detalhado | IBGE/SGB/estaduais | pending | cobertura variável | adquirir somente para finalistas |
-| Torres celulares SMP | Anatel | integrated | 3.284.526 registros; 105.726 sítios | consolidar por tolerância espacial e revisar 23 conflitos |
-| Radiodifusão TV/RTV/FM/OM/RTR | Anatel | integrated | 35.126 registros; 18.285 licenciados; 11.921 sítios | revisar 117 conflitos; caracterizar ERP e faixa |
+| Torres celulares SMP | Anatel | integrated/spectrum_audited | 3.284.526 registros; 105.726 sítios; 2G/3G/4G/5G, Tx/Rx e designação disponíveis | incorporar emissões individualizadas aos nós; consolidar sítios e revisar 23 conflitos |
+| Radiodifusão TV/RTV/FM/OM/RTR | Anatel | integrated/spectrum_partial | 35.126 registros; 18.285 licenciados; centro/canal disponíveis, largura ausente | integrar canalização regulatória; revisar 117 conflitos e ERP |
 | Radioenlaces SMP | Anatel | identified/pending | recurso/campos no ecossistema de licenciamento | obter camada dedicada e reconciliar pontas |
 | Aeródromos públicos | ANAC | downloaded_verified | 496 | conciliar com BC250 e DECEA |
 | Aeródromos privados | ANAC | downloaded_verified | 3.856 | conciliar e classificar uso logístico |
@@ -124,7 +124,9 @@ Concluído:
 Pendente:
 
 - radioenlaces SMP;
-- radiodifusão: revisar conflitos e interpretar unidades de ERP/HCI;
+- incorporar ao grafo SMP geração, tecnologia, centro Tx e largura necessária;
+- radiodifusão: integrar largura canalizada por ato técnico, revisar conflitos e
+  interpretar unidades de ERP/HCI;
 - cruzar co-localizações SMP–radiodifusão;
 - adquirir outros serviços RF relevantes sem confundi-los com fontes ativas.
 

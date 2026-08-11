@@ -1,0 +1,467 @@
+{
+  "smp": {
+    "records": 3284526,
+    "records_with_parsed_necessary_bandwidth": 3284526,
+    "normalized_emissions_gzip": "geoespacial/outputs/anatel_spectrum/smp_emissions.csv.gz",
+    "semantics": {
+      "FreqTxMHz": "centro da emissão da estação SMP",
+      "FreqRxMHz": "centro recebido pela estação; não é emissão da ERB",
+      "necessary_bandwidth": "decodificada do prefixo da Designação Emissão ITU",
+      "occupied_interval": "centro Tx ± metade da largura necessária; não inclui máscara fora de faixa"
+    },
+    "generations": {
+      "2G": {
+        "records": 731538,
+        "tx_min_mhz": 785.5,
+        "tx_max_mhz": 2690.0,
+        "rx_min_mhz": 730.5,
+        "rx_max_mhz": 2670.0,
+        "missing_tx": 1326,
+        "missing_rx": 3333,
+        "missing_designation": 0,
+        "unparsed_designation": 0,
+        "nonpositive_tx": 0,
+        "nonpositive_rx": 159,
+        "technologies": {
+          "GSM": 729579,
+          "CDMA": 1947,
+          "EDGE": 12
+        },
+        "technology_5g_types": {
+          "N/I": 731538
+        },
+        "station_bands": {
+          "1800": 520386,
+          "850": 149871,
+          "900": 58659,
+          "2500": 1923,
+          "2100": 522,
+          "700": 177
+        },
+        "top_designations": {
+          "200KG7W": 716103,
+          "10M0G7W": 2817,
+          "5M00G7W": 2709,
+          "200KM7W": 1839,
+          "1M25F9W": 1125,
+          "1M25FXW": 1008,
+          "40K0F1D": 717,
+          "20M0G7W": 714,
+          "1M25G7W": 714,
+          "2M50G7W": 639,
+          "5M00G9W": 549,
+          "15M0G7W": 411,
+          "3M73F9W": 303,
+          "30K0DXW": 270,
+          "200KG9W": 258,
+          "5M00D9W": 213,
+          "7M50G7W": 210,
+          "40K0F8W": 195,
+          "40K0G1D": 147,
+          "40K0F1W": 126
+        }
+      },
+      "3G": {
+        "records": 664536,
+        "tx_min_mhz": 778.0,
+        "tx_max_mhz": 3450.0,
+        "rx_min_mhz": 723.0,
+        "rx_max_mhz": 3450.0,
+        "missing_tx": 18,
+        "missing_rx": 1569,
+        "missing_designation": 0,
+        "unparsed_designation": 0,
+        "nonpositive_tx": 0,
+        "nonpositive_rx": 42,
+        "technologies": {
+          "WCDMA": 664536
+        },
+        "technology_5g_types": {
+          "N/I": 664497,
+          "SA-NSA": 39
+        },
+        "station_bands": {
+          "850": 329436,
+          "2100": 316221,
+          "900": 16440,
+          "1800": 1863,
+          "2500": 357,
+          "700": 216,
+          "3500": 3
+        },
+        "top_designations": {
+          "5M00G7W": 461034,
+          "5M00G9W": 87372,
+          "2M50G7W": 55944,
+          "5M00D9W": 21213,
+          "10M0G7W": 14946,
+          "5M00D7W": 14211,
+          "1M50G7W": 3633,
+          "2M50F9W": 2259,
+          "15M0G7W": 1599,
+          "11M0G7W": 1314,
+          "200KG7W": 429,
+          "20M0G7W": 210,
+          "2M50D7W": 138,
+          "2M50G9W": 51,
+          "1M00G7W": 45,
+          "2M50D9W": 33,
+          "5M00G7W/5M00D7W": 27,
+          "10M0D7W": 21,
+          "1M50D7W": 18,
+          "1M50G9W": 9
+        }
+      },
+      "4G": {
+        "records": 1639455,
+        "tx_min_mhz": 464.5,
+        "tx_max_mhz": 3450.0,
+        "rx_min_mhz": 255.0,
+        "rx_max_mhz": 3450.0,
+        "missing_tx": 63,
+        "missing_rx": 19605,
+        "missing_designation": 0,
+        "unparsed_designation": 0,
+        "nonpositive_tx": 0,
+        "nonpositive_rx": 1725,
+        "technologies": {
+          "LTE": 1639455
+        },
+        "technology_5g_types": {
+          "N/I": 1639209,
+          "SA-NSA": 138,
+          "NSA": 108
+        },
+        "station_bands": {
+          "1800": 590751,
+          "2500": 412776,
+          "700": 337962,
+          "2100": 261345,
+          "2300": 20334,
+          "850": 15981,
+          "3500": 255,
+          "900": 39,
+          "450": 12
+        },
+        "top_designations": {
+          "10M0G7W": 882219,
+          "5M00G7W": 331488,
+          "20M0G7W": 228807,
+          "15M0G7W": 82224,
+          "2M50G7W": 63249,
+          "7M50G7W": 15549,
+          "40M0G7W": 5403,
+          "10M0D7W": 5055,
+          "8M97G7W": 4470,
+          "5M00G9W": 2931,
+          "3M00G7W": 2706,
+          "50M0G7W": 2466,
+          "4M49G7W": 2385,
+          "4M00G7W": 2325,
+          "5M00D7W": 1389,
+          "20M0D7W": 1176,
+          "8M00G7W": 1173,
+          "200KG7W": 900,
+          "1M50G7W": 894,
+          "35M0G7W": 669
+        }
+      },
+      "5G": {
+        "records": 241188,
+        "tx_min_mhz": 778.0,
+        "tx_max_mhz": 25900.0,
+        "rx_min_mhz": 723.0,
+        "rx_max_mhz": 25900.0,
+        "missing_tx": 0,
+        "missing_rx": 1839,
+        "missing_designation": 0,
+        "unparsed_designation": 0,
+        "nonpositive_tx": 0,
+        "nonpositive_rx": 1827,
+        "technologies": {
+          "NR": 241188
+        },
+        "technology_5g_types": {
+          "SA-NSA": 224028,
+          "N/I": 14301,
+          "NSA": 2820,
+          "SA": 39
+        },
+        "station_bands": {
+          "3500": 195639,
+          "2300": 23070,
+          "2100": 20115,
+          "1800": 948,
+          "700": 909,
+          "2500": 462,
+          "26000": 45
+        },
+        "top_designations": {
+          "100MG7W": 187686,
+          "10M0G7W": 17988,
+          "50M0G7W": 12591,
+          "40M0G7W": 9570,
+          "5M00G7W": 4455,
+          "20M0G7W": 3015,
+          "80M0G7W": 2454,
+          "100MD7W": 1731,
+          "80M0D7W": 516,
+          "15M0G7W": 381,
+          "20M0D7W": 327,
+          "30M0G7W": 183,
+          "2M50G7W": 123,
+          "50M0D7W": 57,
+          "7M50G7W": 57,
+          "10M0D7W": 30,
+          "5M00D7W": 9,
+          "200MG7W": 6,
+          "5M00G9W": 6,
+          "200KG7W": 3
+        }
+      },
+      "N/I": {
+        "records": 7809,
+        "tx_min_mhz": 788.0,
+        "tx_max_mhz": 3450.0,
+        "rx_min_mhz": 733.0,
+        "rx_max_mhz": 3450.0,
+        "missing_tx": 0,
+        "missing_rx": 0,
+        "missing_designation": 0,
+        "unparsed_designation": 0,
+        "nonpositive_tx": 0,
+        "nonpositive_rx": 0,
+        "technologies": {
+          "N/I": 7764,
+          "NA": 45
+        },
+        "technology_5g_types": {
+          "N/I": 7767,
+          "SA-NSA": 36,
+          "NSA": 6
+        },
+        "station_bands": {
+          "700": 3876,
+          "2500": 2349,
+          "2300": 1467,
+          "2100": 87,
+          "3500": 30
+        },
+        "top_designations": {
+          "10M0G7W": 3645,
+          "20M0G7W": 2808,
+          "40M0G7W": 501,
+          "50M0G7W": 459,
+          "5M00G7W": 360,
+          "100MG7W": 30,
+          "5M00G9W": 3,
+          "30M0G7W": 3
+        }
+      }
+    }
+  },
+  "broadcast": {
+    "records": 35126,
+    "normalized_emissions_gzip": "geoespacial/outputs/anatel_spectrum/broadcast_emissions.csv.gz",
+    "spectrum_limitation": "a fonte declara canal e frequência, mas não largura/designação de emissão; limites ocupados não são calculáveis só com este CSV",
+    "services": {
+      "ECRD": {
+        "records": 376,
+        "licensed_records": 367,
+        "center_min_mhz": 82.9,
+        "center_max_mhz": 683.0,
+        "licensed_center_min_mhz": 82.9,
+        "licensed_center_max_mhz": 683.0,
+        "missing_center": 0,
+        "missing_licensed_center": 0,
+        "statuses": {
+          "C4": 367,
+          "C7": 7,
+          "L4": 2
+        },
+        "source_units": {
+          "MHz": 376
+        }
+      },
+      "FM": {
+        "records": 8466,
+        "licensed_records": 3658,
+        "center_min_mhz": 76.1,
+        "center_max_mhz": 107.9,
+        "licensed_center_min_mhz": 76.1,
+        "licensed_center_max_mhz": 107.9,
+        "missing_center": 0,
+        "missing_licensed_center": 0,
+        "statuses": {
+          "C4": 3658,
+          "C0": 3519,
+          "C2": 483,
+          "C7": 262,
+          "C1": 244,
+          "C5": 211,
+          "C3": 68,
+          "C8": 20,
+          "N/I": 1
+        },
+        "source_units": {
+          "MHz": 8466
+        }
+      },
+      "GTVD": {
+        "records": 1275,
+        "licensed_records": 609,
+        "center_min_mhz": 177.0,
+        "center_max_mhz": 695.0,
+        "licensed_center_min_mhz": 177.0,
+        "licensed_center_max_mhz": 695.0,
+        "missing_center": 0,
+        "missing_licensed_center": 0,
+        "statuses": {
+          "C4": 609,
+          "C1": 229,
+          "C2": 164,
+          "C0": 164,
+          "C5": 83,
+          "C3": 15,
+          "C7": 11
+        },
+        "source_units": {
+          "MHz": 1275
+        }
+      },
+      "OM": {
+        "records": 2069,
+        "licensed_records": 220,
+        "center_min_mhz": 0.54,
+        "center_max_mhz": 1.6,
+        "licensed_center_min_mhz": 0.54,
+        "licensed_center_max_mhz": 1.59,
+        "missing_center": 0,
+        "missing_licensed_center": 0,
+        "statuses": {
+          "C0": 1437,
+          "C4": 220,
+          "C7": 198,
+          "C2": 100,
+          "C3": 70,
+          "C1": 38,
+          "C5": 3,
+          "C99": 3
+        },
+        "source_units": {
+          "kHz": 2069
+        }
+      },
+      "PBTVD": {
+        "records": 2165,
+        "licensed_records": 0,
+        "center_min_mhz": 177.0,
+        "center_max_mhz": 695.0,
+        "licensed_center_min_mhz": null,
+        "licensed_center_max_mhz": null,
+        "missing_center": 0,
+        "missing_licensed_center": 0,
+        "statuses": {
+          "C0": 2164,
+          "C5": 1
+        },
+        "source_units": {
+          "MHz": 2165
+        }
+      },
+      "RTRFM": {
+        "records": 1391,
+        "licensed_records": 266,
+        "center_min_mhz": 76.1,
+        "center_max_mhz": 107.9,
+        "licensed_center_min_mhz": 76.1,
+        "licensed_center_max_mhz": 107.9,
+        "missing_center": 0,
+        "missing_licensed_center": 0,
+        "statuses": {
+          "C0": 626,
+          "C2": 394,
+          "C4": 266,
+          "C1": 104,
+          "C5": 1
+        },
+        "source_units": {
+          "MHz": 1391
+        }
+      },
+      "RTV": {
+        "records": 1609,
+        "licensed_records": 0,
+        "center_min_mhz": 57.0,
+        "center_max_mhz": 743.0,
+        "licensed_center_min_mhz": null,
+        "licensed_center_max_mhz": null,
+        "missing_center": 0,
+        "missing_licensed_center": 0,
+        "statuses": {
+          "C0": 1598,
+          "N/I": 10,
+          "C7": 1
+        },
+        "source_units": {
+          "MHz": 1609
+        }
+      },
+      "RTVD": {
+        "records": 17656,
+        "licensed_records": 13165,
+        "center_min_mhz": 177.0,
+        "center_max_mhz": 695.0,
+        "licensed_center_min_mhz": 177.0,
+        "licensed_center_max_mhz": 695.0,
+        "missing_center": 0,
+        "missing_licensed_center": 0,
+        "statuses": {
+          "C4": 13165,
+          "C0": 2039,
+          "C2": 1095,
+          "C1": 856,
+          "C3": 363,
+          "C5": 126,
+          "C7": 12
+        },
+        "source_units": {
+          "MHz": 17656
+        }
+      },
+      "TV": {
+        "records": 97,
+        "licensed_records": 0,
+        "center_min_mhz": 57.0,
+        "center_max_mhz": 695.0,
+        "licensed_center_min_mhz": null,
+        "licensed_center_max_mhz": null,
+        "missing_center": 0,
+        "missing_licensed_center": 0,
+        "statuses": {
+          "C0": 97
+        },
+        "source_units": {
+          "MHz": 97
+        }
+      },
+      "TVA": {
+        "records": 22,
+        "licensed_records": 0,
+        "center_min_mhz": 473.0,
+        "center_max_mhz": 695.0,
+        "licensed_center_min_mhz": null,
+        "licensed_center_max_mhz": null,
+        "missing_center": 0,
+        "missing_licensed_center": 0,
+        "statuses": {
+          "C98": 19,
+          "C0": 3
+        },
+        "source_units": {
+          "MHz": 22
+        }
+      }
+    }
+  }
+}

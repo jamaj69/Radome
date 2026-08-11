@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 67 files · ~453,300 words
+- 71 files · ~456,012 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 747 nodes · 858 edges · 66 communities (59 shown, 7 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 32 edges (avg confidence: 0.78)
+- 769 nodes · 892 edges · 68 communities (61 shown, 7 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.78)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d7b0ee5d`
+- Built from commit: `4241a00a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -80,6 +80,8 @@
 - Requisitos preservados para geolocalização dos radomes
 - localize_figures.py
 - Subprojeto de seleção geoespacial
+- inventory
+- Auditoria de tecnologia e espectro das estações Anatel
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -108,7 +110,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (66 total, 7 thin omitted)
+## Communities (68 total, 7 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -323,8 +325,8 @@ Cohesion: 0.27
 Nodes (9): main(), parse_args(), Path, read_anac_csv(), read_anatel_zip(), read_decea_capabilities(), sha256(), InfrastructureInventoryTest (+1 more)
 
 ### Community 59 - "inventory"
-Cohesion: 0.18
-Nodes (14): Counter, dominant_code(), main(), municipal_features(), Path, read_population(), read_smp_sites(), write_network() (+6 more)
+Cohesion: 0.14
+Nodes (19): Counter, audit_broadcast(), audit_smp(), emission_bandwidth_hz(), main(), number(), positive_frequency(), Path (+11 more)
 
 ### Community 61 - "build"
 Cohesion: 0.35
@@ -342,8 +344,16 @@ Nodes (9): draw_label(), draw_text_in_block(), fit_text(), font(), Build languag
 Cohesion: 0.29
 Nodes (6): Documentos de controle, Gate de integração com o artigo, Marco ativo: M3 — infraestrutura aeronáutica e estratégica, Missão e limites, Subprojeto de seleção geoespacial, Vinculação ao projeto principal
 
+### Community 66 - "inventory"
+Cohesion: 0.39
+Nodes (5): file_sha256(), inventory(), main(), Path, SmpInventoryTest
+
+### Community 67 - "Auditoria de tecnologia e espectro das estações Anatel"
+Cohesion: 0.29
+Nodes (6): Auditoria de tecnologia e espectro das estações Anatel, Conclusão, Produtos e reprodução, Referências regulatórias para o próximo gate, Rádio e televisão, SMP
+
 ## Knowledge Gaps
-- **449 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+444 more)
+- **454 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+449 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -351,11 +361,11 @@ Nodes (6): Documentos de controle, Gate de integração com o artigo, Marco ativ
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _449 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _454 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**

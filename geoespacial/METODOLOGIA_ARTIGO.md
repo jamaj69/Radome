@@ -167,6 +167,15 @@ radioelétrica posterior.
 
 Para radiodifusão, o universo cadastral é separado do conjunto de iluminadores
 ativos. Apenas `C4 — Canal Licenciado` entra no grafo operacional preliminar.
+O cadastro fornece serviço, canal e frequência central, mas não a designação ou
+largura necessária de emissão. Esses limites espectrais só serão adicionados
+após integração de canalização regulatória versionada por serviço.
+
+No SMP, cada registro preserva `Geração`, `Tecnologia`, tipo 5G, faixa/subfaixa,
+`FreqTxMHz`, `FreqRxMHz` e `Designação Emissão`. A largura necessária é
+decodificada do prefixo da designação ITU e o intervalo preliminar transmitido é
+o centro Tx mais ou menos metade dessa largura. `FreqRxMHz` não é tratado como
+emissão da ERB, e o cálculo não substitui a máscara espectral regulamentar.
 Canais vagos, suspensos, pendentes ou aguardando outorga, dados, ato de RF ou
 licenciamento permanecem no inventário. Registros licenciados co-localizados
 são agregados por coordenada, preservando serviço, canal, frequência, entidade,
