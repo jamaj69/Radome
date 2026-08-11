@@ -81,5 +81,15 @@
   "79": "Famílias explícitas de radioenlaces Anatel",
   "80": "write_fixture",
   "81": "anatel_radio_link_keys/README.md",
-  "82": "anatel_radio_link_candidates/README.md"
+  "82": "anatel_radio_link_candidates/README.md",
+  "83": "evaluate_anatel_radio_link_terrain.py",
+  "84": "inventory_infrastructure.py",
+  "85": "ZipFile",
+  "86": "test_build_canonical_fixed_emitters.py",
+  "87": "write_fixture",
+  "88": "validate",
+  "89": "analyze",
+  "90": "inventory",
+  "91": "build",
+  "92": "anatel_radio_link_terrain/README.md"
 }

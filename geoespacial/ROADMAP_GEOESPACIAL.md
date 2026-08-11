@@ -48,7 +48,7 @@ Toda transição de estado deve ser produzida por script Python conforme
 | MDE local detalhado | IBGE/SGB/estaduais | pending | cobertura variável | adquirir somente para finalistas |
 | Torres celulares SMP | Anatel | canonical_integrated | 3.284.526 emissões, 105.726 sítios e 282.623 proxies cadastrais de antena; perda zero; 23 conflitos municipais preservados | usar junção espacial para revisar conflitos e buscar parâmetros radiométricos físicos |
 | Radiodifusão TV/RTV/FM/OM/RTR | Anatel | integrated/spectrum_partial | 35.126 registros; 18.285 licenciados; centro/canal disponíveis, largura ausente | integrar canalização regulatória; revisar 117 conflitos e ERP |
-| Radioenlaces STFC/SCM/SMP | Anatel | extracted_unpaired | 100.410 linhas: 64.948 STFC, 35.424 SCM e 38 SMP; toda estação tem Tx e Rx, sem contraponta identificada | recuperar chaves brutas e testar reciprocidade/geometria |
+| Radioenlaces STFC/SCM/SMP | Anatel | terrain_screened_unpaired | 340 recíprocos, 328 alinhados; triagem k=1: 218 Fresnel, 69 só LOS, 40 obstruídos, 1 sem terreno | substituir z8 por TOPODATA e validar alturas antes de parear |
 | SARC | Anatel, pacote geral | canonical_spectrum_partial | 4.228 emissões ativas em esquema canônico; nenhuma quantitativamente pronta por ausência de potência; 2.762 sem frequência | buscar complemento oficial e manter fora de `illuminates` quantitativo |
 | Banda larga fixa/SCM | Anatel, pacote geral | canonical_integrated | 1.850 emissões Tx ativas; 1.849 com frequência, potência e altura presentes; duas sem designação | validar regulamentação/propagação antes de `illuminates` |
 | Telefonia fixa/STFC | Anatel, pacote geral | georeferenced_not_rf_ready | 589 registros, 75 ativos, sem frequência, potência, classe ou direção utilizável | manter apenas como infraestrutura até obter complemento oficial |
@@ -264,15 +264,17 @@ depois da validação de cada estudo insular.
 4. **concluído:** auditar SLE sem parear enlaces;
 5. **concluído:** auditar SLP/STEL e demonstrar a sobreposição do consolidado;
 6. **concluído:** extrair enlaces explícitos STFC/SCM/SMP sem pareá-los;
-7. recuperar chaves brutas e parear somente com reciprocidade e geometria;
-8. normalizar radiodifusão e integrar VOR/NDB/DME por município;
-9. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
+7. **concluído:** recuperar chaves, testar reciprocidade, azimute e terreno z8
+   sem criar arestas;
+8. selecionar TOPODATA para as rotas e validar alturas físicas antes de parear;
+9. normalizar radiodifusão e integrar VOR/NDB/DME por município;
+10. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
    BC250 e DECEA;
-10. adquirir VSAT e o inventário oficial de radares meteorológicos;
-11. selecionar e baixar TOPODATA continental por região;
-12. reconstruir o grafo unificado município--sítio--antena--emissão--aeródromo--
+11. adquirir VSAT e o inventário oficial de radares meteorológicos;
+12. selecionar e baixar TOPODATA continental por região;
+13. reconstruir o grafo unificado município--sítio--antena--emissão--aeródromo--
    candidato;
-13. integrar restrições territoriais e iniciar *viewshed* regional.
+14. integrar restrições territoriais e iniciar *viewshed* regional.
 
 ## Artefatos obrigatórios por execução
 

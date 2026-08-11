@@ -123,6 +123,10 @@ e 373 ambíguos; nenhum enlace foi criado. Quarenta testes passam.
 Dos 340 recíprocos, 328 apresentam caminho alinhado a até 15 graus, marcador
 provisório cuja sensibilidade completa foi publicada; 12 não apresentam.
 Quarenta e um testes passam. O próximo gate é terreno, curvatura e Fresnel.
+A triagem Terrarium z8 classificou, em `k=1`, 218 rotas com 60% de Fresnel livre,
+69 apenas com visada, 40 obstruídas e uma sem terreno; `k=4/3` também foi
+publicado. Quarenta e três testes passam. O próximo gate substitui o MDE por
+TOPODATA e verifica alturas físicas antes de qualquer aresta.
 
 ## 6. Roadmap orientado por gates
 

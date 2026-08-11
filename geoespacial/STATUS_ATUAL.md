@@ -53,6 +53,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   duas coordenadas, 40 não recíprocos, 175 locais e 373 ambíguos;
 - nos 340 recíprocos, 328 têm caminho alinhado a até 15 graus e 12 não; a
   sensibilidade é 326/328/328/329 grupos a 5/10/15/30 graus;
+- triagem Terrarium z8 dos 328 alinhados: em `k=1`, 218 têm 60% de Fresnel livre,
+  69 apenas visada, 40 obstruídos e 1 sem terreno; em `k=4/3`, 228/66/33/1;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -60,7 +62,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 41 testes automatizados aprovados;
+- 43 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
@@ -87,9 +89,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Calcular perfil de terreno, curvatura terrestre e zona de Fresnel para os 328
-candidatos alinhados no marcador provisório de 15 graus. Revisar separadamente
-os extremos de distância; nenhuma aresta será criada antes dessa validação.
+Selecionar e baixar as folhas TOPODATA que intersectam as 328 rotas, substituir
+o Terrarium z8 e repetir perfis com amostragem compatível com a resolução. Obter
+alturas físicas verificadas antes de criar qualquer aresta.
 
 ## Comando de retomada
 

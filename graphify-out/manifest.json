@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786426806.8929515,
-    "ast_hash": "f8035fb9ce436ba7e3a15ba10c693063",
+    "mtime": 1786427247.7268867,
+    "ast_hash": "ec21516a0e40ff7c38ae9b2843c56072",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "geoespacial/METODOLOGIA_ARTIGO.md": {
-    "mtime": 1786426806.7329524,
-    "ast_hash": "d99b8d1569da6ac873e571e7bd0a4256",
+    "mtime": 1786427247.5548875,
+    "ast_hash": "10efb49dd186a4e7c1f202805a9d5c68",
     "semantic_hash": ""
   },
   "geoespacial/FONTES_INFRAESTRUTURA.md": {
@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786425670.0702965,
-    "ast_hash": "dc53085ad2c73b2ef8afdccd730fffe0",
+    "mtime": 1786427274.8307598,
+    "ast_hash": "aae9e32a200824e82683c3d9941c6195",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
@@ -700,8 +700,8 @@
     "semantic_hash": ""
   },
   "geoespacial/run_pipeline.py": {
-    "mtime": 1786426782.3930664,
-    "ast_hash": "a8361fe782d602b56f2702f2a670209a",
+    "mtime": 1786427247.05089,
+    "ast_hash": "325bf8949049d87bd4458481320bafb8",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_acquire_decea_wfs.py": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786426782.7050648,
-    "ast_hash": "c9558a692c9e2953cd55106d3cb434f2",
+    "mtime": 1786427247.3868883,
+    "ast_hash": "f4caf9d3515d63ce8a96af8dbb6b4ca3",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -877,6 +877,26 @@
   "geoespacial/reports/anatel_radio_link_geometry/README.md": {
     "mtime": 1786426782.5490656,
     "ast_hash": "54eb28563fdc963b2c7fb0be6729754c",
+    "semantic_hash": ""
+  },
+  "geoespacial/evaluate_anatel_radio_link_terrain.py": {
+    "mtime": 1786427206.3270807,
+    "ast_hash": "e5410f64d42ef93efe3975e3658eca22",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/anatel_radio_link_terrain/summary.json": {
+    "mtime": 1786427216.2510343,
+    "ast_hash": "ac2bd32dfd378a9abb80a0d8d5171219",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_evaluate_anatel_radio_link_terrain.py": {
+    "mtime": 1786427163.1872828,
+    "ast_hash": "90728a7ad66bcfda34dd083cbf88d6dd",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/anatel_radio_link_terrain/README.md": {
+    "mtime": 1786427247.2188892,
+    "ast_hash": "3dc51d7e13f9948ece4b0aff53a0d065",
     "semantic_hash": ""
   }
 }

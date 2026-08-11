@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "geometry_file": "outputs/anatel_radio_link_geometry/groups.csv.gz",
+  "geometry_sha256": "88c904fb340bfbf12bc4a65764567f85e608512290f6acf0f790010526263d83",
+  "candidate_groups": 328,
+  "status_k1": {
+    "fresnel60_clear": 218,
+    "los_clear_fresnel_obstructed": 69,
+    "terrain_missing": 1,
+    "terrain_or_curvature_obstructed": 40
+  },
+  "status_k4_3": {
+    "fresnel60_clear": 228,
+    "los_clear_fresnel_obstructed": 66,
+    "terrain_missing": 1,
+    "terrain_or_curvature_obstructed": 33
+  },
+  "terrain_zoom": 8,
+  "sample_spacing_km": 1.0,
+  "curvature_models": [
+    1.0,
+    1.3333333333333333
+  ],
+  "fresnel_clearance_fraction": 0.6,
+  "terrain_semantics": "preliminary Mapzen Terrarium; missing tiles fail closed; replace with TOPODATA",
+  "antenna_height_semantics": "maximum per endpoint is optimistic",
+  "pairing_status": "not_performed",
+  "output": "outputs/anatel_radio_link_terrain/groups.csv.gz"
+}

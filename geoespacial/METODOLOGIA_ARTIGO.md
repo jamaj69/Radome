@@ -237,6 +237,13 @@ publicada a 5, 10, 15 e 30 graus; 15 graus é somente marcador provisório. Fora
 encontrados 328 grupos alinhados nesse marcador e 12 inconsistentes, ainda sem
 arestas. Terreno, curvatura terrestre e Fresnel permanecem gates obrigatórios.
 
+A triagem seguinte amostrou Terrarium z8 a cada 1 km, usando a altura máxima
+cadastral por ponta e a menor frequência recíproca. Em `k=1`, 218 rotas mantêm
+60% da primeira zona de Fresnel, 69 preservam apenas a visada, 40 são obstruídas
+e uma não tem terreno; em `k=4/3`, os números são 228, 66, 33 e uma. Por usar MDE
+preliminar e altura máxima, essa triagem não comprova enlace e será substituída
+por TOPODATA e alturas físicas verificadas.
+
 A migração canônica usa uma partição exaustiva: cada linha SARC/SCM é incluída
 ou recebe exatamente um motivo de exclusão por inatividade, recepção exclusiva,
 papel RF desconhecido ou coordenada inválida. O marcador de prontidão
