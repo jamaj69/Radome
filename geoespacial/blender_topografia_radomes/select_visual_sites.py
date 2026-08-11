@@ -6,6 +6,7 @@ from pathlib import Path
 
 SEMANTICS = ("visual selection from preliminary multicriteria ranking and geometric infrastructure incidences; "
              "not terrain visibility, RF illumination, feasibility, or operational siting")
+DISPLAY_NAMES = {"airport:-46.56461878:-21.83849708": "Aeroporto_Juiz_de_Fora", "airport:-48.92682574:-16.35968949": "Aeroporto_Anápolis", "capital:5300108": "Brasília"}
 
 def build(ranking: Path, output: Path, minimum_elevation_m: float = 1000.0, minimum_incidence: int = 500) -> dict:
     with gzip.open(ranking, "rt", encoding="utf-8", newline="") as stream:
@@ -14,7 +15,7 @@ def build(ranking: Path, output: Path, minimum_elevation_m: float = 1000.0, mini
     for row in sorted(rows, key=lambda item: int(item["robust_rank"])):
         incidences = sum(int(row[key]) for key in ("nearby_smp_site_count", "nearby_broadcast_site_count", "nearby_radio_link_endpoint_count"))
         if float(row["terrain_elevation_m"]) >= minimum_elevation_m and incidences >= minimum_incidence:
-            selected.append({"node_id": row["node_id"], "name": row["name"], "longitude": float(row["longitude"]),
+            selected.append({"node_id": row["node_id"], "name": row["name"], "display_name": DISPLAY_NAMES.get(row["node_id"], row["name"]), "longitude": float(row["longitude"]),
                              "latitude": float(row["latitude"]), "terrain_elevation_m": float(row["terrain_elevation_m"]),
                              "robust_rank": int(row["robust_rank"]), "geometric_illuminator_incidence_count": incidences,
                              "smp_site_count": int(row["nearby_smp_site_count"]), "broadcast_site_count": int(row["nearby_broadcast_site_count"]),

@@ -7,6 +7,7 @@
     {
       "node_id": "airport:-46.56461878:-21.83849708",
       "name": "Aeroporto Embaixador Walther Moreira Salles",
+      "display_name": "Aeroporto_Juiz_de_Fora",
       "longitude": -46.56461878307286,
       "latitude": -21.838497081484235,
       "terrain_elevation_m": 1254.0,
@@ -20,6 +21,7 @@
     {
       "node_id": "airport:-48.92682574:-16.35968949",
       "name": "Aeroporto Anápolis",
+      "display_name": "Aeroporto_Anápolis",
       "longitude": -48.92682574407971,
       "latitude": -16.35968948953338,
       "terrain_elevation_m": 1112.0,
@@ -33,6 +35,7 @@
     {
       "node_id": "capital:5300108",
       "name": "Brasília",
+      "display_name": "Brasília",
       "longitude": -47.880611965,
       "latitude": -15.783689652,
       "terrain_elevation_m": 1077.0,
