@@ -67,6 +67,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - auditoria de alturas por direção e frequência: 993 caminhos recíprocos, sendo
   971 com uma altura cadastral em cada ponta, 12 ambíguos e 10 incompletos;
   325 candidatos têm ao menos um caminho utilizável, 1 só ambíguos e 2 só ausentes;
+- recálculo TOPODATA dos 971 caminhos não ambíguos: em `k=1`, 780 têm Fresnel
+  livre, 114 somente visada, 69 são obstruídos e 8 não têm terreno; por candidato,
+  246/57/21/1 têm, respectivamente, ao menos um Fresnel, ao menos um LOS, somente
+  caminhos obstruídos ou somente terreno ausente;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -74,7 +78,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 52 testes automatizados aprovados;
+- 55 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
@@ -102,10 +106,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Recalcular terreno e Fresnel por caminho dirigido usando as 971 combinações com
-altura cadastral não ambígua, sem usar o máximo da estação. Os três candidatos
-sem caminho utilizável e a rota afetada por `26S48_ZN.zip` permanecem bloqueados;
-a verificação física em campo continua obrigatória antes do pareamento final.
+Comparar a geometria vertical derivada de TOPODATA e alturas com os ângulos de
+elevação cadastrados por caminho. Os três candidatos sem altura utilizável e a
+rota afetada por `26S48_ZN.zip` permanecem bloqueados; a verificação física em
+campo continua obrigatória antes do pareamento final.
 
 ## Comando de retomada
 

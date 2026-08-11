@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "geometry_file": "outputs/anatel_radio_link_geometry/groups.csv.gz",
+  "geometry_sha256": "88c904fb340bfbf12bc4a65764567f85e608512290f6acf0f790010526263d83",
+  "audited_paths_file": "outputs/anatel_radio_link_heights/paths.csv.gz",
+  "audited_paths_sha256": "a3259963a48d2bef7c489806f95c18de0963eb64b9859fce7d0aaec479c5636a",
+  "terrain_index": "reports/topodata_radio_link_tiles/index.geojson",
+  "terrain_index_sha256": "a1e452e8dafc878e5ae2770d3d164e5da975a73c14baa0359062b2e54c92ef44",
+  "evaluated_path_count": 971,
+  "evaluated_candidate_count": 325,
+  "excluded_ambiguous_or_missing_path_count": 22,
+  "path_status_k1": {
+    "fresnel60_clear": 780,
+    "los_clear_fresnel_obstructed": 114,
+    "terrain_missing": 8,
+    "terrain_or_curvature_obstructed": 69
+  },
+  "path_status_k4_3": {
+    "fresnel60_clear": 812,
+    "los_clear_fresnel_obstructed": 86,
+    "terrain_missing": 8,
+    "terrain_or_curvature_obstructed": 65
+  },
+  "candidate_status_k1": {
+    "all_evaluable_paths_obstructed": 21,
+    "at_least_one_fresnel60_clear_path": 246,
+    "at_least_one_los_only_path": 57,
+    "terrain_missing_for_all_paths": 1
+  },
+  "candidate_status_k4_3": {
+    "all_evaluable_paths_obstructed": 20,
+    "at_least_one_fresnel60_clear_path": 256,
+    "at_least_one_los_only_path": 48,
+    "terrain_missing_for_all_paths": 1
+  },
+  "sample_spacing_km": 1.0,
+  "curvature_models": [
+    1.0,
+    1.3333333333333333
+  ],
+  "fresnel_clearance_fraction": 0.6,
+  "height_semantics": "internally unambiguous cadastral values, not physical verification",
+  "pairing_status": "not_performed",
+  "paths_output": "outputs/anatel_radio_link_path_terrain/paths.csv.gz",
+  "candidates_output": "outputs/anatel_radio_link_path_terrain/candidates.csv.gz"
+}

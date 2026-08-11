@@ -145,6 +145,10 @@ uma altura cadastral em cada ponta, 12 são ambíguos e 10 incompletos. Dos 328
 candidatos, 325 têm ao menos um caminho cadastral utilizável; três permanecem
 bloqueados. Cinquenta e dois testes passam. O próximo gate recalcula TOPODATA
 por caminho, ainda sujeito à posterior confirmação física.
+O recálculo exato dos 971 caminhos resultou, em `k=1`, em 780 caminhos livres,
+114 somente com visada, 69 obstruídos e 8 sem terreno. Entre 325 candidatos, a
+melhor classe é 246/57/21/1. Cinquenta e cinco testes passam e os artefatos são
+byte a byte reproduzíveis. O próximo gate confronta os ângulos de elevação.
 
 ## 6. Roadmap orientado por gates
 
