@@ -113,6 +113,13 @@ garante propagação, eco ou detectabilidade. A formulação e os experimentos e
 registrados em `HEURISTICA_MALHA_TRIANGULAR.md` e serão comparados ao modelo de
 cobertura por discos com entradas equivalentes.
 
+A linha de base com 131 candidatos usa projeção Lambert azimutal equivalente e
+gera 244 faces Delaunay. Somente 22 possuem os três limites de horizonte por
+curvatura, ainda pendentes de terreno; 6 têm duas arestas e 216 são esparsas.
+Esse resultado demonstra apenas que o conjunto atual não forma automaticamente
+uma malha cooperativa. O método e os hashes estão em
+`reports/triangular_mesh_baseline/`.
+
 ## Sequência reproduzível atual
 
 ```bash

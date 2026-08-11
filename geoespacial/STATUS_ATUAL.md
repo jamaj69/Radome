@@ -108,6 +108,12 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   candidatos, preferência por faces de visada completa `K3`, caso degradado de
   duas arestas e pontuação de iluminadores internos; implementação pendente e
   comparação obrigatória com a cobertura por discos;
+- linha de base triangular executada: 131 vértices e 244 faces Delaunay; somente
+  22 faces têm três arestas de curvatura pendentes, 6 têm duas e 216 são
+  esparsas; 92,92% da área da grade está dentro da envoltória da malha, sem que
+  isso represente cobertura ou visada;
+- dentro da envoltória há 100.967 sítios SMP, 11.608 radiodifusores e 480
+  endpoints; associações são apenas geométricas e nenhuma é `illuminates`;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -115,8 +121,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 75 testes automatizados do conjunto disponível aprovados; a descoberta total
-  registra uma falha preexistente porque `acquire_decea_wfs.py` está ausente;
+- 78 testes automatizados aprovados na descoberta completa com
+  `PYTHONPATH=geoespacial`;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;

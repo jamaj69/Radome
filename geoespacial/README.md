@@ -354,6 +354,19 @@ O diagnóstico continental de lacunas é reproduzido por:
 A grade preserva células impossíveis de cobrir para que o otimizador falhe de
 forma explícita enquanto o conjunto de candidatos for territorialmente incompleto.
 
+A linha de base da heurística triangular é gerada por:
+
+```bash
+/home/python/pyenv/bin/python analyze_triangular_mesh_baseline.py \
+  --graphml outputs/candidate_ranking/graph.graphml \
+  --grid outputs/continental_coverage_grid/continental_grid.csv.gz \
+  --output-dir outputs/triangular_mesh_baseline \
+  --report reports/triangular_mesh_baseline/summary.json
+```
+
+Suas classes `K3` indicam apenas três arestas de curvatura pendentes de terreno;
+nenhuma face possui ainda visada confirmada.
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;

@@ -193,6 +193,11 @@ formam vértices e cada face favorece três enlaces de visada (`K3`) e iluminado
 distribuídos em seu interior, admitindo como caso degradado a observação por dois
 vértices. A formulação será comparada à cobertura por discos e não presume que
 pertença geométrica ao triângulo implique eco detectável.
+A linha de base com os 131 candidatos gerou 244 faces Delaunay: apenas 22 têm as
+três arestas no limite de curvatura ainda pendente de terreno, 6 têm duas e 216
+são esparsas. A envoltória contém 92,92% da área amostrada e quase todos os
+inventários RF, mas isso não constitui cobertura nem visada. O resultado mostra
+que a malha cooperativa exigirá novos vértices e restrições de qualidade angular.
 
 ## 6. Roadmap orientado por gates
 

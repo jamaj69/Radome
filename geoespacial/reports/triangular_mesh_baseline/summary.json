@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "input_graph": "geoespacial/outputs/candidate_ranking/graph.graphml",
+  "input_graph_sha256": "d1cc11effa105d3a54daea9da94eee8d055c33bed259393a73cf98b8f241a09f",
+  "input_grid": "geoespacial/outputs/continental_coverage_grid/continental_grid.csv.gz",
+  "input_grid_sha256": "77de0d9b255052ee8875d34e6c66ffc47b9c6e76e774a0450a39a496dddbc402",
+  "projection": "Lambert azimuthal equal-area sphere R=6371.0088 km, centre 54W 15S",
+  "candidate_vertex_count": 131,
+  "delaunay_face_count": 244,
+  "face_status_counts": {
+    "triangle_k3_curvature_pending": 22,
+    "triangle_sparse_curvature_pending": 216,
+    "triangle_two_edge_curvature_pending": 6
+  },
+  "continental_grid_cell_count": 11363,
+  "grid_cells_inside_mesh_count": 10567,
+  "grid_cells_outside_mesh_count": 796,
+  "area_weighted_mesh_fraction": 0.9292085055253108,
+  "faces_with_smp": 243,
+  "faces_with_broadcast": 237,
+  "faces_with_radio_link_endpoint": 118,
+  "infrastructure_inside_mesh_counts": {
+    "torre_smp": 100967,
+    "radiodifusao": 11608,
+    "anatel_cadastral_endpoint": 480
+  },
+  "outputs": {
+    "table": {
+      "path": "geoespacial/outputs/triangular_mesh_baseline/triangular_faces.csv.gz",
+      "sha256": "979f4b6421436005e491a3a5836be1eb1b78dc8746e50e4d5b7ccb8b915d48fc"
+    },
+    "geojson": {
+      "path": "geoespacial/outputs/triangular_mesh_baseline/triangular_mesh.geojson",
+      "sha256": "fe7cf8e7a1847168ba46a42255cac47f328436c2d1644d72cde9ccc70169333b"
+    }
+  },
+  "mesh_semantics": "Delaunay baseline in Lambert azimuthal equal-area projection; mesh edges use curvature-only candidate upper bounds pending terrain; illuminator membership is geometric and does not assert RF illumination or echo detectability"
+}

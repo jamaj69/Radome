@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786434969.2993925,
-    "ast_hash": "93dd10d15a0543bd6852beb97ff29787",
+    "mtime": 1786435243.5901353,
+    "ast_hash": "aee568a34f86fc4c2c5f988b51bf1015",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "geoespacial/README.md": {
-    "mtime": 1786434261.9546027,
-    "ast_hash": "7b8dca559ff1fda1723f259dfb68519c",
+    "mtime": 1786435243.1221375,
+    "ast_hash": "7c258fa1699ebb338c128b11c5df57ce",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/topodata_altitude_tiles.json": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "geoespacial/METODOLOGIA_ARTIGO.md": {
-    "mtime": 1786434968.6473954,
-    "ast_hash": "f91f6c82650b1f4412cf44af28cc7b0d",
+    "mtime": 1786435242.9661381,
+    "ast_hash": "874a09a8c02ecacc74679d1a824cef4a",
     "semantic_hash": ""
   },
   "geoespacial/FONTES_INFRAESTRUTURA.md": {
@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786434968.8113947,
-    "ast_hash": "52da79cc27541e73bf317c6dead1a114",
+    "mtime": 1786435243.430136,
+    "ast_hash": "e2cc5d89cd947e14adde50af4184dd83",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786434968.979394,
-    "ast_hash": "730520714cb0d755b357604e8f5385cc",
+    "mtime": 1786435264.0260413,
+    "ast_hash": "29039081c171f8d1893e98c816cf4ffb",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -1165,8 +1165,28 @@
     "semantic_hash": ""
   },
   "geoespacial/HEURISTICA_MALHA_TRIANGULAR.md": {
-    "mtime": 1786434968.303397,
-    "ast_hash": "363f4ebe351b60fa0d2ffa2491fc077a",
+    "mtime": 1786435242.8221388,
+    "ast_hash": "5223feeeac44ee8e6d418e57fe836a1f",
+    "semantic_hash": ""
+  },
+  "geoespacial/analyze_triangular_mesh_baseline.py": {
+    "mtime": 1786435161.3025143,
+    "ast_hash": "485dd4beed0c8e6ee803d45ba1c61144",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/triangular_mesh_baseline/summary.json": {
+    "mtime": 1786435190.0623817,
+    "ast_hash": "d71698d729bddaaba2c324c17906fa41",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_analyze_triangular_mesh_baseline.py": {
+    "mtime": 1786435133.2226434,
+    "ast_hash": "400930448ba48eeac473a8407b315317",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/triangular_mesh_baseline/README.md": {
+    "mtime": 1786435242.6701396,
+    "ast_hash": "89fa3ce154a4c49788d695ead13c59ab",
     "semantic_hash": ""
   }
 }

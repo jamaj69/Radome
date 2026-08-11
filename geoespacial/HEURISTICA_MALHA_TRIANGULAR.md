@@ -88,7 +88,9 @@ dos iluminadores.
 
 ## Experimentos previstos
 
-1. Triangulação dos 131 candidatos atuais para estabelecer uma linha de base.
+1. **Concluído:** triangulação dos 131 candidatos atuais para estabelecer uma
+   linha de base; 244 faces, sendo 22 `K3` por curvatura ainda pendentes de
+   terreno, 6 degradadas e 216 esparsas.
 2. Inclusão dos novos candidatos altos gerados nas 1.732 células atualmente
    descobertas.
 3. Triangulação Delaunay não restrita versus triangulação restrita por visada.
@@ -100,5 +102,7 @@ dos iluminadores.
 
 ## Estado
 
-Heurística registrada em 2026-08-11. Implementação e validação pendentes. Nenhum
-resultado operacional ou número de radomes decorre ainda desta formulação.
+Heurística registrada em 2026-08-11. A linha de base Delaunay foi implementada
+em `analyze_triangular_mesh_baseline.py`; validação de terreno, otimização e os
+demais experimentos permanecem pendentes. Nenhum resultado operacional ou
+número de radomes decorre ainda desta formulação.
