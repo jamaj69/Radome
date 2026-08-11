@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audita por streaming os arquivos menores do pacote geral da Anatel."""
+"""Audita por streaming membros selecionados do pacote geral da Anatel."""
 
 from __future__ import annotations
 
@@ -22,6 +22,8 @@ DATASETS = {
     "fixed_broadband": "Estacoes_Banda_Larga_Fixa.csv",
     "fixed_telephony": "Estacoes_Telefonia_Fixa.csv",
     "sle": "Estacoes_SLE.csv",
+    "slp": "Estacoes_SLP.csv",
+    "mosaico_stel": "Estacoes_Mosaico_STEL.csv",
 }
 INVALID_TEXT = {"", "N/I", "USUÁRIO INFORMOU ERRADO", "USUARIO INFORMOU ERRADO"}
 OUTPUT_FIELDS = (

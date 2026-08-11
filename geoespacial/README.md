@@ -81,8 +81,8 @@ Os arquivos menores do pacote geral Anatel são auditados sem extração com:
   --report reports/anatel_general_audit/summary.json
 ```
 
-Os resultados SARC, banda larga fixa, telefonia fixa e SLE estão documentados em
-`reports/anatel_general_audit/README.md`.
+Os resultados SARC, banda larga fixa, telefonia fixa, SLE, SLP e Mosaico-STEL
+estão documentados em `reports/anatel_general_audit/README.md`.
 
 Transmissores/repetidores ativos de SARC e SCM são migrados ao esquema canônico
 com partição exaustiva das exclusões:

@@ -1,12 +1,14 @@
 # Auditoria inicial do pacote geral da Anatel
 
 Esta etapa lê diretamente o ZIP oficial, sem extrair seus 10,45 GB, e audita os
-quatro arquivos priorizados pelo gate M2E:
+seis membros priorizados pelo gate M2E:
 
 - `Estacoes_SARC.csv`;
 - `Estacoes_Banda_Larga_Fixa.csv`;
 - `Estacoes_Telefonia_Fixa.csv`;
-- `Estacoes_SLE.csv`.
+- `Estacoes_SLE.csv`;
+- `Estacoes_SLP.csv`;
+- `Estacoes_Mosaico_STEL.csv`.
 
 O relatório versionado está em `summary.json`; os registros normalizados e
 reproduzíveis ficam em `outputs/anatel_general_audit/`.
@@ -40,10 +42,22 @@ uma confirmação de operação radioelétrica atual.
   móveis e a simetria entre 59.484 linhas de recepção e 59.484 de transmissão
   exigem preservar o papel cadastral sem transformar cada registro em sítio
   fixo ou inferir automaticamente uma ponta de enlace.
+- SLP: 10.580.778 registros, 10.542.118 ativos, 5.271.059 ativos com direção
+  Tx e 10.451.584 coordenadas válidas. As direções são simétricas, com
+  5.290.389 linhas Tx e 5.290.389 Rx, e 9.495.200 linhas são estações móveis.
+  O intervalo cadastral de 0,01 a 4.699.875 MHz contém valores que exigem
+  validação de unidade e outliers antes de qualquer uso quantitativo.
+- Mosaico-STEL: 10.817.122 registros. Ele não constitui uma camada independente:
+  reproduz a contagem SLP de 10.580.778 e também agrega as contagens completas
+  de SLE, SARC, SCM e STFC, além de
+  64.948 registros de radioenlaces STFC, 35.424 SCM e 38 SMP. Portanto, não pode
+  ser somado aos arquivos específicos. A equivalência linha a linha será testada
+  no próximo gate antes de definir a regra de deduplicação.
 
-Nenhum radioenlace foi pareado nesta etapa. SARC/SCM já passaram pela migração
-canônica conservadora; o próximo gate audita SLP e Mosaico-STEL por streaming e
-só depois define regras demonstráveis de pareamento.
+Nenhum radioenlace foi pareado nesta etapa. O próximo gate separa as três
+famílias explícitas de enlaces presentes no consolidado, identifica quais chaves
+cadastrais podem relacionar as pontas e valida geometria e reciprocidade de
+frequência antes de criar qualquer aresta.
 
 ## Reprodução
 

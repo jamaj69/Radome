@@ -212,6 +212,15 @@ A aparente simetria Tx/Rx também não basta para formar enlaces: o pareamento f
 condicionado a chaves cadastrais explícitas e validação geométrica posterior com
 SLP e Mosaico-STEL.
 
+A auditoria posterior demonstrou que Mosaico-STEL é um consolidado, não uma
+camada independente: suas 10.817.122 linhas reproduzem a contagem de 10.580.778
+linhas SLP e agregam as contagens de SLE, SARC, SCM, STFC e três famílias nomeadas
+de radioenlace. A metodologia proíbe somar esses membros. O consolidado serve
+como índice de proveniência, mas a equivalência linha a linha ainda será testada.
+Somente os subconjuntos explicitamente rotulados
+como enlaces STFC, SCM ou SMP seguem para análise de chaves, reciprocidade de
+frequências e geometria. Até essa validação, nenhuma aresta de enlace existe.
+
 A migração canônica usa uma partição exaustiva: cada linha SARC/SCM é incluída
 ou recebe exatamente um motivo de exclusão por inatividade, recepção exclusiva,
 papel RF desconhecido ou coordenada inválida. O marcador de prontidão

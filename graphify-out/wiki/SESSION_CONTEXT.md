@@ -91,6 +91,7 @@ This is a durable log of the chat content visible to the agent. It is not a verb
 67. User ordered continuation. `audit_anatel_general.py` now streams the general Anatel ZIP without extracting 10.45 GB and normalizes 16,876 records from SARC, fixed broadband/SCM and fixed telephony/STFC. Direction is authoritative when explicit; exclusive Tx/Rx and repeater classes are secondary evidence; unknown records are not inferred as emitters. SARC has 4,228 active potential emitters but no usable power/designation, SCM has 1,850 active explicit Tx records with substantially better RF fields, and STFC has no usable RF parameters. No link endpoints were paired. Thirty-three tests pass and 17 products reproduce byte for byte. The next gate migrates only sufficiently evidenced active transmitters/repeaters into the canonical schema.
 68. User ordered continuation. `build_canonical_fixed_emitters.py` partitions every one of the 16,287 SARC/SCM audit rows into selected, inactive, receiver-only, unknown-role or invalid-coordinate outcomes. It migrated 6,078 active transmitter/repeater emissions into 3,335 approximate sites and 3,995 antenna proxies, with one municipal-code conflict preserved and all source/site/antenna cardinalities closed. SARC contributes 4,228 emissions but none have the minimum frequency/power/height trio; SCM contributes 1,850, of which 1,849 meet that presence-only marker. This marker does not authorize quantitative `illuminates`. Thirty-six tests pass and 22 products reproduce byte for byte. The next gate is the streaming audit of SLE before the approximately 5 GB SLP and Mosaico-STEL members.
 69. User ordered continuation. The general-Anatel streaming audit now includes all 119,058 SLE rows without extracting the source ZIP or pairing links. It found 118,968 active rows, split into 59,484 explicit transmissions and 59,484 explicit receptions; 115,458 coordinates are valid, all rows carry an IBGE municipality code, and 118,968 contain parsed emission designation, power and antenna height. Because 118,490 rows are mobile-land stations, a registered coordinate is not promoted to a permanent physical site. Thirty-six tests pass and 23 declared products reproduce byte for byte. The next gate audits the approximately 5 GB SLP and Mosaico-STEL members before any link pairing.
+70. User ordered continuation. The same atomic streaming audit now covers the approximately 5 GB SLP and Mosaico-STEL members. SLP has 10,580,778 rows, including 5,271,059 active Tx candidates and 9,495,200 mobile-station rows. Mosaico-STEL has 10,817,122 rows and is structurally an aggregate: it reproduces the SLP count and adds the full counts of SLE, SARC, SCM, STFC and explicit STFC (64,948), SCM (35,424) and SMP (38) radio-link families. It must not be added to the specific members before row-level equivalence testing. No link was paired; the next gate extracts those explicit families and tests cadastral keys, frequency reciprocity and geometry. Thirty-seven tests pass and 25 products reproduce byte for byte.
 
 ## Commits created in this session
 
@@ -222,8 +223,8 @@ Known remaining LaTeX warnings are pre-existing C6 items: duplicate page anchors
 
 For the geospatial subproject, execute M2E before quantitative RF edges:
 
-1. audit SLP/Mosaico-STEL by streaming without pairing links;
-2. pair radio links only with explicit keys and geometry after both inventories;
+1. extract the explicit STFC/SCM/SMP radio-link families from Mosaico-STEL;
+2. pair links only after cadastral-key, frequency-reciprocity and geometry tests;
 3. continue M3 reconciliation.
 
 The compact restart checkpoint is `geoespacial/STATUS_ATUAL.md`.

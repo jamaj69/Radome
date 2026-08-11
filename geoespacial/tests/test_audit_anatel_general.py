@@ -76,6 +76,10 @@ class AnatelGeneralAuditTest(unittest.TestCase):
                     self.assertEqual(sum(1 for _ in csv.DictReader(stream)), 2)
             self.assertEqual((root / "report1.json").read_bytes(), (root / "report2.json").read_bytes())
 
+    def test_large_radio_link_members_are_in_declared_scope(self):
+        self.assertEqual(DATASETS["slp"], "Estacoes_SLP.csv")
+        self.assertEqual(DATASETS["mosaico_stel"], "Estacoes_Mosaico_STEL.csv")
+
 
 if __name__ == "__main__":
     unittest.main()

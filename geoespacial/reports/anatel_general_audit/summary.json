@@ -2,12 +2,14 @@
   "schema_version": 1,
   "source_file": "data/raw/anatel/estacoes_licenciadas.zip",
   "source_sha256": "b77abb225b4ad03bc8b8c6a27913e0b6d851873bab3bd483e66d86712dd5eec1",
-  "records": 135934,
+  "records": 21533834,
   "scope": [
     "sarc",
     "fixed_broadband",
     "fixed_telephony",
-    "sle"
+    "sle",
+    "slp",
+    "mosaico_stel"
   ],
   "classification_rule": "RF role uses explicit communication direction first, then exclusive transmitter/receiver or repeater station class; unknown is not inferred as emission",
   "datasets": {
@@ -238,6 +240,182 @@
         "unknown": 90
       },
       "normalized_output": "outputs/anatel_general_audit/sle.csv.gz"
+    },
+    "slp": {
+      "source_member": "Estacoes_SLP.csv",
+      "source_member_crc32": "102480b5",
+      "records": 10580778,
+      "valid_coordinate_records": 10451584,
+      "valid_ibge_code_records": 10580024,
+      "active_potential_emitter_records": 5271059,
+      "frequency_min_mhz": 0.01,
+      "frequency_max_mhz": 4699875.0,
+      "transmitter_power_min_w": 0.0,
+      "transmitter_power_max_w": 25000.0,
+      "available_fields": {
+        "antenna_gain_db": 2258750,
+        "antenna_height_m": 10534128,
+        "azimuth_deg": 9167702,
+        "elevation_angle_deg": 9157192,
+        "emission_designation": 8479628,
+        "frequency_mhz": 10559214,
+        "front_to_back_db": 9159134,
+        "half_power_beamwidth_deg": 9174252,
+        "parsed_necessary_bandwidth": 8479626,
+        "polarization": 10576484,
+        "transmitter_power_w": 10579788
+      },
+      "services": {
+        "Limitado Privado": 10580778
+      },
+      "service_codes": {
+        "019 - Limitado Privado": 8833558,
+        "011 - Limitado Privado - Prestação a terceiros": 1642558,
+        "023 - SERVIÇO LIMITADO MOVEL PRIVATIVO": 63602,
+        "078 - Serviço de Radiotáxi Privado": 20394,
+        "125 - Especial de Supervisão e Controle/Terceiros": 11426,
+        "034 - SERVIÇO SLMP PRESTADO A DETERMINADOS GRUPOS DE USUARIOS": 4292,
+        "079 - Serviço de Radiotáxi Especializado": 2978,
+        "124 - Especial de Supervisão e Controle/Uso Próprio": 1604,
+        "108 - Serviço Limitado Privado submodalidade Radiodeterminação": 316,
+        "033 - Radioenlaces Associados ao Serviço de Rádiotaxi": 50
+      },
+      "validity_statuses": {
+        "Ativo": 10542118,
+        "Vencido": 38610,
+        "Nulo": 50
+      },
+      "station_classes": {
+        "ML": 9495200,
+        "FX": 764428,
+        "FB": 224728,
+        "BR": 55782,
+        "XR": 22574,
+        "TX": 11452,
+        "FC": 1968,
+        "OP": 1850,
+        "FP": 754,
+        "FR": 596,
+        "BB": 440,
+        "FA": 440,
+        "RC": 272,
+        "AM": 190,
+        "RP": 60,
+        "LR": 34,
+        "N/I": 6,
+        "TP": 4
+      },
+      "directions": {
+        "Recepção": 5290389,
+        "Transmissão": 5290389
+      },
+      "origins": {
+        "Mosaico": 10580778
+      },
+      "rf_roles": {
+        "explicit_reception_direction": 5290389,
+        "explicit_transmission_direction": 5290389
+      },
+      "normalized_output": "outputs/anatel_general_audit/slp.csv.gz"
+    },
+    "mosaico_stel": {
+      "source_member": "Estacoes_Mosaico_STEL.csv",
+      "source_member_crc32": "e7a7dba3",
+      "records": 10817122,
+      "valid_coordinate_records": 10684318,
+      "valid_ibge_code_records": 10816368,
+      "active_potential_emitter_records": 5386783,
+      "frequency_min_mhz": 0.01,
+      "frequency_max_mhz": 4699875.0,
+      "transmitter_power_min_w": 0.0,
+      "transmitter_power_max_w": 25000.0,
+      "available_fields": {
+        "antenna_gain_db": 2371652,
+        "antenna_height_m": 10765593,
+        "azimuth_deg": 9398661,
+        "elevation_angle_deg": 9384990,
+        "emission_designation": 8698686,
+        "frequency_mhz": 10786867,
+        "front_to_back_db": 9390303,
+        "half_power_beamwidth_deg": 9405445,
+        "parsed_necessary_bandwidth": 8698488,
+        "polarization": 10807840,
+        "transmitter_power_w": 10802872
+      },
+      "services": {
+        "Limitado Privado": 10580778,
+        "Serviço Limitado Especializado": 119058,
+        "Telefonia Fixa - Radioenlace": 64948,
+        "Banda Larga Fixa - Radioenlace": 35424,
+        "Serviços Auxiliares de Radiodifusão e Correlatos": 8774,
+        "Banda Larga Fixa": 7513,
+        "Telefonia Fixa": 589,
+        "Telefonia Móvel - Radioenlace": 38
+      },
+      "service_codes": {
+        "019 - Limitado Privado": 8833558,
+        "011 - Limitado Privado - Prestação a terceiros": 1642558,
+        "017 - Limitado Especializado": 118968,
+        "175 - STFC/RADIOTELEFONICO - ESTACOES TERRESTRES": 64948,
+        "023 - SERVIÇO LIMITADO MOVEL PRIVATIVO": 63602,
+        "046 - Radioenlaces associados ao SCM": 35424,
+        "078 - Serviço de Radiotáxi Privado": 20394,
+        "125 - Especial de Supervisão e Controle/Terceiros": 11426,
+        "251 - AUXILIAR RADIODIF.- TRANSMISS. DE PROGRAMAS": 7870,
+        "045 - Serviço de Comunicação Multimídia": 7513,
+        "034 - SERVIÇO SLMP PRESTADO A DETERMINADOS GRUPOS DE USUARIOS": 4292,
+        "079 - Serviço de Radiotáxi Especializado": 2978,
+        "124 - Especial de Supervisão e Controle/Uso Próprio": 1604,
+        "252 - AUXILIAR RADIODIF.- REPORTAGEM EXTERNA": 711,
+        "171 - SERVICO TELEFONICO FIXO COMUTADO": 589,
+        "108 - Serviço Limitado Privado submodalidade Radiodeterminação": 316,
+        "253 - AUXILIAR RADIODIF.- COM. DE ORDENS INTERNAS": 193,
+        "069 - Serviço de Circuito Especializado": 90,
+        "033 - Radioenlaces Associados ao Serviço de Rádiotaxi": 50,
+        "053 - Radioenlaces Associados ao SMP": 38
+      },
+      "validity_statuses": {
+        "Ativo": 10771114,
+        "Vencido": 45950,
+        "Nulo": 58
+      },
+      "station_classes": {
+        "ML": 9614045,
+        "FX": 802074,
+        "FB": 291536,
+        "BR": 56002,
+        "XR": 22604,
+        "TX": 15417,
+        "FR": 4738,
+        "N/I": 4692,
+        "FC": 1968,
+        "OP": 1850,
+        "FP": 754,
+        "BB": 440,
+        "FA": 440,
+        "RC": 272,
+        "AM": 190,
+        "RP": 60,
+        "LR": 34,
+        "TP": 4,
+        "TE": 2
+      },
+      "directions": {
+        "Recepção": 5404229,
+        "Transmissão": 5404194,
+        "N/I": 8699
+      },
+      "origins": {
+        "Mosaico": 10803870,
+        "STEL": 13252
+      },
+      "rf_roles": {
+        "explicit_reception_direction": 5404229,
+        "explicit_transmission_direction": 5404194,
+        "unknown": 4760,
+        "transmitter_station_class": 3939
+      },
+      "normalized_output": "outputs/anatel_general_audit/mosaico_stel.csv.gz"
     }
   }
 }

@@ -109,8 +109,12 @@ continua incompleto para uso quantitativo. Trinta e seis testes passam e 22
 produtos coincidiam byte a byte em duas execuções. A auditoria SLE preservou
 119.058 linhas: 59.484 transmissões ativas e 59.484 recepções explícitas, com
 118.490 registros de estações móveis que não podem ser promovidos automaticamente
-a sítios fixos. Trinta e seis testes passam e 23 produtos coincidem byte a byte.
-Os próximos arquivos são SLP e Mosaico-STEL, auditados antes de qualquer pareamento.
+a sítios fixos. SLP e Mosaico-STEL também foram auditados: são 10.580.778 e
+10.817.122 linhas, respectivamente. O segundo é um consolidado que reproduz a
+contagem do primeiro e agrega as contagens das demais bases já auditadas; não
+pode ser somado como camada independente. Trinta e sete testes passam e 25
+produtos coincidem byte a byte. O próximo gate isola enlaces STFC/SCM/SMP e
+testa chaves, reciprocidade e geometria.
 
 ## 6. Roadmap orientado por gates
 

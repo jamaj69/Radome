@@ -1,6 +1,6 @@
 # Estado atual do subprojeto geoespacial
 
-**Checkpoint:** 11 de agosto de 2026, após a auditoria streaming de SLE.
+**Checkpoint:** 11 de agosto de 2026, após a auditoria streaming de SLP e Mosaico-STEL.
 
 ## Vinculação e governança
 
@@ -40,6 +40,11 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - SLE: 119.058 registros, 118.968 ativos, 59.484 ativos com direção Tx,
   115.458 coordenadas válidas e 118.968 designações, potências e alturas
   utilizáveis; 118.490 linhas representam estações móveis e não sítios fixos;
+- SLP: 10.580.778 linhas, das quais 10.542.118 ativas e 5.271.059 Tx ativas;
+  9.495.200 linhas móveis e 10.451.584 coordenadas válidas;
+- Mosaico-STEL: consolidado de 10.817.122 linhas que reproduz a contagem SLP e
+  agrega as contagens de SLE, SARC, SCM, STFC e radioenlaces explícitos; não é
+  camada independente e não deve ser somado aos membros específicos;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -47,10 +52,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 36 testes automatizados aprovados;
+- 37 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
-- 23 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
+- 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
 - resultado registrado em `reports/reproducibility.json` com
   `byte_reproducible: true` e `differences: {}`.
 
@@ -58,8 +63,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 - a entidade SMP `antena` é proxy cadastral de estação/setor/sítio e ainda não
   representa uma estrutura radiante fisicamente confirmada;
-- SLP/Mosaico-STEL ainda não foram classificados nem pareados como
-  radioenlaces; SLE/SARC/SCM foram classificados, mas permanecem sem pareamento;
+- SLP/Mosaico-STEL foram classificados, mas nenhum radioenlace foi pareado;
+- o consolidado Mosaico-STEL apresenta sobreposição estrutural com SLP e outras
+  camadas; a equivalência linha a linha ainda precisa ser demonstrada;
 - radiodifusão ainda requer normalização regulatória de largura, ERP e HCI;
 - VOR/NDB/DME precisam de recorte brasileiro e vínculo municipal; DME exige
   tabela canal--frequência;
@@ -71,10 +77,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Auditar `Estacoes_SLP.csv` e Mosaico-STEL por streaming, sem extração integral e
-sem parear enlaces. Antes do pareamento, inventariar serviços, classes, direções,
-chaves cadastrais, coordenadas e completude RF nos dois arquivos de cerca de
-5 GB descompactados.
+Extrair por streaming somente as famílias explícitas de radioenlace STFC
+(64.948 linhas), SCM (35.424) e SMP (38) do consolidado Mosaico-STEL. Auditar
+chaves cadastrais, reciprocidade Tx/Rx e geometria antes de propor um algoritmo
+de pareamento; SLP genérico e estações móveis permanecem fora dessa inferência.
 
 ## Comando de retomada
 
