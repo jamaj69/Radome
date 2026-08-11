@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 131 files · ~482,772 words
+- 133 files · ~483,295 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1026 nodes · 1336 edges · 97 communities (84 shown, 13 thin omitted)
+- 1028 nodes · 1337 edges · 96 communities (82 shown, 14 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 96 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cc0aa779`
+- Built from commit: `0cc52101`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -110,7 +110,6 @@
 - analyze
 - topodata_radio_link_tiles/README.md
 - inventory
-- build_canonical_fixed_emitters.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -139,7 +138,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (97 total, 13 thin omitted)
+## Communities (96 total, 14 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -434,12 +433,12 @@ Cohesion: 0.24
 Nodes (10): atomic_json(), extract_archive(), extract_receipt(), feature(), inspect_geotiff(), main(), Path, sha256_file() (+2 more)
 
 ### Community 85 - "test_build_canonical_fixed_emitters.py"
-Cohesion: 0.47
-Nodes (5): CanonicalFixedEmittersTest, Path, read_rows(), record(), write_input()
+Cohesion: 0.24
+Nodes (11): antenna_signature(), build(), canonical_number(), exclusion_reason(), main(), Path, CanonicalFixedEmittersTest, Path (+3 more)
 
 ### Community 86 - "build_canonical_smp.py"
-Cohesion: 0.25
-Nodes (11): build(), canonical_coordinate(), deterministic_gzip_csv(), dominant_code(), main(), Counter, Path, Abre CSV gzip reproduzível, sem nome ou horário variável no cabeçalho. (+3 more)
+Cohesion: 0.20
+Nodes (14): build(), canonical_coordinate(), deterministic_gzip_csv(), dominant_code(), main(), Counter, Path, Abre CSV gzip reproduzível, sem nome ou horário variável no cabeçalho. (+6 more)
 
 ### Community 87 - "inventory_infrastructure.py"
 Cohesion: 0.27
@@ -450,8 +449,8 @@ Cohesion: 0.27
 Nodes (9): dominant_code(), main(), municipal_features(), Counter, Path, read_population(), read_smp_sites(), write_network() (+1 more)
 
 ### Community 89 - "ZipFile"
-Cohesion: 0.24
-Nodes (9): clean(), extract(), main(), Path, extract(), main(), Path, RawLinkKeysTest (+1 more)
+Cohesion: 0.21
+Nodes (11): clean(), extract(), main(), Path, file_sha256(), inventory(), main(), Path (+3 more)
 
 ### Community 90 - "write_fixture"
 Cohesion: 0.47
@@ -465,33 +464,25 @@ Nodes (6): GeometryTest, angular_error(), bearing(), main(), Path, validate()
 Cohesion: 0.36
 Nodes (5): analyze(), distance(), main(), Path, CandidateTest
 
-### Community 95 - "inventory"
-Cohesion: 0.39
-Nodes (5): file_sha256(), inventory(), main(), Path, SmpInventoryTest
-
-### Community 96 - "build_canonical_fixed_emitters.py"
-Cohesion: 0.48
-Nodes (6): antenna_signature(), build(), canonical_number(), exclusion_reason(), main(), Path
-
 ## Knowledge Gaps
-- **486 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+481 more)
+- **487 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+482 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `deterministic_gzip_csv()` connect `build_canonical_smp.py` to `build_canonical_fixed_emitters.py`, `evaluate_anatel_radio_link_terrain.py`, `test_build_canonical_fixed_emitters.py`, `ZipFile`, `inventory_infrastructure.py`, `validate`, `analyze`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **Why does `deterministic_gzip_csv()` connect `build_canonical_smp.py` to `evaluate_anatel_radio_link_terrain.py`, `test_build_canonical_fixed_emitters.py`, `ZipFile`, `inventory_infrastructure.py`, `validate`, `analyze`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 13 inferred relationships involving `deterministic_gzip_csv()` (e.g. with `analyze()` and `audit_member()`) actually correct?**
   _`deterministic_gzip_csv()` has 13 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _486 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _487 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._

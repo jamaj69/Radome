@@ -48,7 +48,7 @@ Toda transição de estado deve ser produzida por script Python conforme
 | MDE local detalhado | IBGE/SGB/estaduais | pending | cobertura variável | adquirir somente para finalistas |
 | Torres celulares SMP | Anatel | canonical_integrated | 3.284.526 emissões, 105.726 sítios e 282.623 proxies cadastrais de antena; perda zero; 23 conflitos municipais preservados | usar junção espacial para revisar conflitos e buscar parâmetros radiométricos físicos |
 | Radiodifusão TV/RTV/FM/OM/RTR | Anatel | integrated/spectrum_partial | 35.126 registros; 18.285 licenciados; centro/canal disponíveis, largura ausente | integrar canalização regulatória; revisar 117 conflitos e ERP |
-| Radioenlaces STFC/SCM/SMP | Anatel | terrain_screened_unpaired | 340 recíprocos, 328 alinhados; triagem k=1: 218 Fresnel, 69 só LOS, 40 obstruídos, 1 sem terreno | substituir z8 por TOPODATA e validar alturas antes de parear |
+| Radioenlaces STFC/SCM/SMP | Anatel | topodata_screened_unpaired | 340 recíprocos, 328 alinhados; TOPODATA k=1: 247 Fresnel, 59 só LOS, 21 obstruídos, 1 sem terreno | validar alturas físicas antes de parear |
 | SARC | Anatel, pacote geral | canonical_spectrum_partial | 4.228 emissões ativas em esquema canônico; nenhuma quantitativamente pronta por ausência de potência; 2.762 sem frequência | buscar complemento oficial e manter fora de `illuminates` quantitativo |
 | Banda larga fixa/SCM | Anatel, pacote geral | canonical_integrated | 1.850 emissões Tx ativas; 1.849 com frequência, potência e altura presentes; duas sem designação | validar regulamentação/propagação antes de `illuminates` |
 | Telefonia fixa/STFC | Anatel, pacote geral | georeferenced_not_rf_ready | 589 registros, 75 ativos, sem frequência, potência, classe ou direção utilizável | manter apenas como infraestrutura até obter complemento oficial |
@@ -266,8 +266,8 @@ depois da validação de cada estudo insular.
 6. **concluído:** extrair enlaces explícitos STFC/SCM/SMP sem pareá-los;
 7. **concluído:** recuperar chaves, testar reciprocidade, azimute e terreno z8
    sem criar arestas;
-8. **parcial:** 154 folhas TOPODATA selecionadas, baixadas, extraídas e indexadas;
-   recalcular as rotas, mantendo a folha ausente explícita;
+8. **concluído:** 154 folhas TOPODATA selecionadas, baixadas, extraídas e
+   indexadas; 328 rotas recalculadas, mantendo a folha ausente explícita;
 9. normalizar radiodifusão e integrar VOR/NDB/DME por município;
 10. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
    BC250 e DECEA;

@@ -136,6 +136,10 @@ ausente como lacuna em vez de inventar dados.
 Os 154 GeoTIFFs foram extraídos e indexados sem falhas, totalizando
 12.013.983.756 bytes, com extensão, resolução e SHA-256 registrados; 48 testes
 passam. O próximo gate recalcula e compara os perfis TOPODATA e Terrarium.
+O TOPODATA resultou, em `k=1`, em 247 rotas com 60% de Fresnel livre, 59 apenas
+com visada, 21 obstruídas e uma sem terreno; em `k=4/3`, 257/50/20/1. Os produtos
+reproduziram byte a byte e 49 testes passam. Nenhuma aresta foi criada: o próximo
+gate audita as alturas físicas, pois o máximo cadastral é otimista.
 
 ## 6. Roadmap orientado por gates
 

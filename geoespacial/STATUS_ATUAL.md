@@ -61,6 +61,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   zero falhas e SHA-256 individual registrado no recibo incremental;
 - extração TOPODATA concluída: 154 GeoTIFFs georreferenciados, 12.013.983.756
   bytes, zero falhas e índice GeoJSON com extensão e resolução de cada folha;
+- perfis TOPODATA das 328 rotas: em `k=1`, 247 têm 60% de Fresnel livre, 59
+  apenas visada, 21 são obstruídos e 1 permanece sem terreno; em `k=4/3`,
+  257/50/20/1; nenhuma aresta foi criada;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -68,7 +71,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 48 testes automatizados aprovados;
+- 49 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
@@ -96,9 +99,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Repetir os 328 perfis de terreno com o índice TOPODATA, compará-los à triagem
-Terrarium e manter como ausentes as amostras da lacuna `26S48_ZN.zip`. Alturas
-físicas continuam pendentes.
+Auditar as alturas físicas das duas pontas dos 328 candidatos antes de qualquer
+pareamento. O máximo cadastral atualmente usado é um limite superior otimista;
+a rota afetada por `26S48_ZN.zip` deve permanecer com terreno ausente.
 
 ## Comando de retomada
 

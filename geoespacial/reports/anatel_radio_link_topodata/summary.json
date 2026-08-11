@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "geometry_file": "outputs/anatel_radio_link_geometry/groups.csv.gz",
+  "geometry_sha256": "88c904fb340bfbf12bc4a65764567f85e608512290f6acf0f790010526263d83",
+  "terrain_index": "reports/topodata_radio_link_tiles/index.geojson",
+  "terrain_index_sha256": "a1e452e8dafc878e5ae2770d3d164e5da975a73c14baa0359062b2e54c92ef44",
+  "candidate_groups": 328,
+  "status_k1": {
+    "fresnel60_clear": 247,
+    "los_clear_fresnel_obstructed": 59,
+    "terrain_missing": 1,
+    "terrain_or_curvature_obstructed": 21
+  },
+  "status_k4_3": {
+    "fresnel60_clear": 257,
+    "los_clear_fresnel_obstructed": 50,
+    "terrain_missing": 1,
+    "terrain_or_curvature_obstructed": 20
+  },
+  "sample_spacing_km": 1.0,
+  "curvature_models": [
+    1.0,
+    1.3333333333333333
+  ],
+  "fresnel_clearance_fraction": 0.6,
+  "terrain_semantics": "TOPODATA numeric altitude; missing coverage fails closed",
+  "antenna_height_semantics": "maximum per endpoint is optimistic",
+  "pairing_status": "not_performed",
+  "preliminary_file": "outputs/anatel_radio_link_terrain/groups.csv.gz",
+  "transitions_from_preliminary_k1": [
+    {
+      "from": "fresnel60_clear",
+      "to": "fresnel60_clear",
+      "count": 212
+    },
+    {
+      "from": "fresnel60_clear",
+      "to": "los_clear_fresnel_obstructed",
+      "count": 4
+    },
+    {
+      "from": "fresnel60_clear",
+      "to": "terrain_or_curvature_obstructed",
+      "count": 2
+    },
+    {
+      "from": "los_clear_fresnel_obstructed",
+      "to": "fresnel60_clear",
+      "count": 20
+    },
+    {
+      "from": "los_clear_fresnel_obstructed",
+      "to": "los_clear_fresnel_obstructed",
+      "count": 47
+    },
+    {
+      "from": "los_clear_fresnel_obstructed",
+      "to": "terrain_or_curvature_obstructed",
+      "count": 2
+    },
+    {
+      "from": "terrain_missing",
+      "to": "terrain_missing",
+      "count": 1
+    },
+    {
+      "from": "terrain_or_curvature_obstructed",
+      "to": "fresnel60_clear",
+      "count": 15
+    },
+    {
+      "from": "terrain_or_curvature_obstructed",
+      "to": "los_clear_fresnel_obstructed",
+      "count": 8
+    },
+    {
+      "from": "terrain_or_curvature_obstructed",
+      "to": "terrain_or_curvature_obstructed",
+      "count": 17
+    }
+  ],
+  "transitions_from_preliminary_k4_3": [
+    {
+      "from": "fresnel60_clear",
+      "to": "fresnel60_clear",
+      "count": 224
+    },
+    {
+      "from": "fresnel60_clear",
+      "to": "los_clear_fresnel_obstructed",
+      "count": 2
+    },
+    {
+      "from": "fresnel60_clear",
+      "to": "terrain_or_curvature_obstructed",
+      "count": 2
+    },
+    {
+      "from": "los_clear_fresnel_obstructed",
+      "to": "fresnel60_clear",
+      "count": 17
+    },
+    {
+      "from": "los_clear_fresnel_obstructed",
+      "to": "los_clear_fresnel_obstructed",
+      "count": 46
+    },
+    {
+      "from": "los_clear_fresnel_obstructed",
+      "to": "terrain_or_curvature_obstructed",
+      "count": 3
+    },
+    {
+      "from": "terrain_missing",
+      "to": "terrain_missing",
+      "count": 1
+    },
+    {
+      "from": "terrain_or_curvature_obstructed",
+      "to": "fresnel60_clear",
+      "count": 16
+    },
+    {
+      "from": "terrain_or_curvature_obstructed",
+      "to": "los_clear_fresnel_obstructed",
+      "count": 2
+    },
+    {
+      "from": "terrain_or_curvature_obstructed",
+      "to": "terrain_or_curvature_obstructed",
+      "count": 15
+    }
+  ],
+  "output": "outputs/anatel_radio_link_topodata/groups.csv.gz"
+}
