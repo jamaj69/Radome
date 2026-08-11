@@ -74,5 +74,7 @@
   "72": "Política de manipulação reproduzível das bases geoespaciais",
   "73": "main",
   "74": "verify_reproducibility.py",
-  "75": "Estado atual do subprojeto geoespacial"
+  "75": "Estado atual do subprojeto geoespacial",
+  "76": "build_municipal_emitter_network.py",
+  "77": "canonical_smp/README.md"
 }

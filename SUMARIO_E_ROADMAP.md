@@ -96,11 +96,12 @@ VOR, NDB, DME e `navaids` já foram adquiridas, e reconcilia DECEA, ANAC e IBGE
 BC250 com proveniência oficial. A matriz de lacunas está em
 `geoespacial/CAMADAS_EMISSOES_OFICIAIS.md`.
 
-O checkpoint operacional está em `geoespacial/STATUS_ATUAL.md`. O pipeline
-Python foi executado duas vezes sobre entradas idênticas: 26 testes passaram e
-sete produtos tiveram SHA-256 idênticos. A próxima entrega é o esquema
-`sitio_fisico`--`antena`--`emissao`, começando pela migração sem perdas das
-portadoras SMP já auditadas.
+O checkpoint operacional está em `geoespacial/STATUS_ATUAL.md`. O esquema
+`sitio_fisico`--`antena`--`emissao` preserva as 3.284.526 portadoras SMP em
+105.726 sítios e 282.623 proxies cadastrais de antena, sem perda. Trinta testes
+passam e 12 produtos têm SHA-256 idênticos em duas execuções. A próxima entrega
+é a auditoria por streaming de SARC, banda larga fixa e telefonia fixa no pacote
+geral Anatel.
 
 ## 6. Roadmap orientado por gates
 

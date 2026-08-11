@@ -165,6 +165,14 @@ sítios físicos agrega coordenadas próximas e preserva conjuntos de estações
 operadoras, tecnologias e faixas. O limiar espacial e os casos conflitantes
 devem ser informados junto com qualquer contagem de “torres”.
 
+Para impedir perda de portadoras nessa agregação, a implementação canônica
+separa `sitio_fisico`, `antena` e `emissao`. Cada linha da fonte gera exatamente
+uma emissão e mantém o número ordinal de origem. Como o cadastro SMP não fornece
+identidade física inequívoca da antena, o nível intermediário é declarado como
+proxy de estação, setor e sítio arredondado a cinco casas decimais, com baixa
+confiança para identidade física. Ele serve à integridade relacional, não à
+contagem de estruturas radiantes.
+
 O grafo municipal-emissor serve para analisar disponibilidade geométrica de
 iluminadores celulares, rádio e televisão, bem como infraestrutura
 aeronáutica. A presença de um emissor não demonstra que seu sinal produz eco

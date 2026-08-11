@@ -1,11 +1,11 @@
 {
-  "verified_at_utc": "2026-08-11T02:44:37.955912+00:00",
+  "verified_at_utc": "2026-08-11T03:18:26.580281+00:00",
   "pipeline_command": [
     "/home/python/pyenv/bin/python",
     "/home/jamaj/src/Radome/geoespacial/run_pipeline.py",
     "--skip-tests"
   ],
-  "product_count": 7,
+  "product_count": 12,
   "byte_reproducible": true,
   "hashes": {
     "reports/preselection_bc250/candidates.csv": "c6cb6a2aceb9c2a2195ecb0280a850425b52245a57e0e234edab18a59f22d3c0",
@@ -14,7 +14,12 @@
     "reports/candidate_graph/candidate_graph.png": "cb902eb5f176e7039bd5728dc95db136d8b26e4198d2d5e18acc3561b9488179",
     "reports/candidate_graph/candidate_nodes.csv": "12f4db4048682e6ecfd5a2da86afe28c362d0bfe29ebf712b27b9155f5ab007e",
     "reports/candidate_graph/candidate_nodes.geojson": "274cdd20ff65578ec028a786ad0013bb9b202bc76344408be0551b8324153cf3",
-    "reports/candidate_graph/summary.json": "2e23e4a1e802fb39b9f478302b06a56a23bf28fedf73a3f6d4f82d43ee18e7bb"
+    "reports/candidate_graph/summary.json": "2e23e4a1e802fb39b9f478302b06a56a23bf28fedf73a3f6d4f82d43ee18e7bb",
+    "outputs/canonical_smp/sites.csv.gz": "b691c82f7f5cdfe5e5ce47f26ef581fc31fb97786bcefe94595179f5188596be",
+    "outputs/canonical_smp/antennas.csv.gz": "4af4785702610a739e19398328a69ffadb3409259b37c8b3242fc0fa33e0160e",
+    "outputs/canonical_smp/emissions.csv.gz": "1c25f4cb00eb7d294c67586c7ba7e0d5d0cb6d0807f99be5e60847eaaef82b7e",
+    "outputs/canonical_smp/summary.json": "7556c3e3ebb92aa118e20d1d422ad2937027d6ce84cd9bb0caad5451864ed37d",
+    "reports/canonical_smp/summary.json": "7556c3e3ebb92aa118e20d1d422ad2937027d6ce84cd9bb0caad5451864ed37d"
   },
   "differences": {}
 }

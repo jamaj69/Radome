@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786416464.5416586,
-    "ast_hash": "894355d4f1ae9454ac3557ce9c610e14",
+    "mtime": 1786417628.719943,
+    "ast_hash": "6ffb38c55375c878fdfd8e6af49c716e",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "geoespacial/README.md": {
-    "mtime": 1786416464.24566,
-    "ast_hash": "e81688039b2ef4b74d283cd607f2dccc",
+    "mtime": 1786417627.7519476,
+    "ast_hash": "35a56abdc8f8266a0ce39691e47618d0",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/topodata_altitude_tiles.json": {
@@ -520,7 +520,7 @@
     "semantic_hash": ""
   },
   "geoespacial/reports/candidate_graph/summary.json": {
-    "mtime": 1786416277.8265777,
+    "mtime": 1786418153.633381,
     "ast_hash": "3c8abd875e5a21be218d0584672b000e",
     "semantic_hash": ""
   },
@@ -535,7 +535,7 @@
     "semantic_hash": ""
   },
   "geoespacial/reports/candidate_graph/candidate_graph.png": {
-    "mtime": 1786416277.8265777,
+    "mtime": 1786418153.6293807,
     "ast_hash": "1916a9e358458bddd05f97aa7438aeee",
     "semantic_hash": ""
   },
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "geoespacial/METODOLOGIA_ARTIGO.md": {
-    "mtime": 1786416074.2356124,
-    "ast_hash": "cf6c51d45495d32c375322ed87010d98",
+    "mtime": 1786417628.2439454,
+    "ast_hash": "7851484e70eafe77f1ef37d33f349121",
     "semantic_hash": ""
   },
   "geoespacial/FONTES_INFRAESTRUTURA.md": {
@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786416464.3976593,
-    "ast_hash": "bd0ada5d9b517903b700f0fbf34e8548",
+    "mtime": 1786417628.079946,
+    "ast_hash": "a756fb63782505febfca96a7cb67a9bc",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
@@ -680,8 +680,8 @@
     "semantic_hash": ""
   },
   "geoespacial/CAMADAS_EMISSOES_OFICIAIS.md": {
-    "mtime": 1786415441.2468662,
-    "ast_hash": "128cfdac947759576feb8aa083feb607",
+    "mtime": 1786417628.4079444,
+    "ast_hash": "9eb60c2f4fc3efc490a1a51bc9a9844a",
     "semantic_hash": ""
   },
   "geoespacial/acquire_decea_wfs.py": {
@@ -700,8 +700,8 @@
     "semantic_hash": ""
   },
   "geoespacial/run_pipeline.py": {
-    "mtime": 1786416039.5877905,
-    "ast_hash": "a9e5b63701786bd87ce10cb57dcc18e5",
+    "mtime": 1786417992.0581694,
+    "ast_hash": "963af08af61c6550efd1fb26a53e0cea",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_acquire_decea_wfs.py": {
@@ -715,13 +715,13 @@
     "semantic_hash": ""
   },
   "geoespacial/POLITICA_REPRODUTIBILIDADE.md": {
-    "mtime": 1786416265.9906359,
-    "ast_hash": "6224e7de28fad04fdb626686dc0b0a06",
+    "mtime": 1786417627.915947,
+    "ast_hash": "2f2738cd447ee8ceed7e333a959eb8ed",
     "semantic_hash": ""
   },
   "geoespacial/reports/reproducibility.json": {
-    "mtime": 1786416277.950577,
-    "ast_hash": "bdb1af365997185efcf185ae099086af",
+    "mtime": 1786418306.5766351,
+    "ast_hash": "7d78fdb0dcb66551ccd118a59c2afa25",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_verify_reproducibility.py": {
@@ -730,13 +730,33 @@
     "semantic_hash": ""
   },
   "geoespacial/verify_reproducibility.py": {
-    "mtime": 1786416265.6666374,
-    "ast_hash": "9d030614d335f47480a7b66e739fdcba",
+    "mtime": 1786417563.8202598,
+    "ast_hash": "0aa1404e2c32705eda94914a02ef3f68",
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786416552.0772276,
-    "ast_hash": "17e7792cc808bfcc32254892490ab5ca",
+    "mtime": 1786417628.5599437,
+    "ast_hash": "5c3cca0b6413ed67d634fb2b898e7251",
+    "semantic_hash": ""
+  },
+  "geoespacial/build_canonical_smp.py": {
+    "mtime": 1786417991.8581705,
+    "ast_hash": "6ef48ab76934300dcf9faad271031e57",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/canonical_smp/summary.json": {
+    "mtime": 1786418306.1046374,
+    "ast_hash": "4ffab9334a70ade973dea68da0b6a825",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_build_canonical_smp.py": {
+    "mtime": 1786417992.2221687,
+    "ast_hash": "0af1a1b3806da35df7ee50f94b61fb18",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/canonical_smp/README.md": {
+    "mtime": 1786417564.0842583,
+    "ast_hash": "9b8e31538f6aa335bc15ad74c2cdca0e",
     "semantic_hash": ""
   }
 }

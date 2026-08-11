@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "source_dataset": "anatel_estacoes_smp",
+  "source_file": "data/raw/anatel/estacoes_smp.zip",
+  "source_sha256": "6a032a50d842c32f1f2a7d7e052cf82cd383bbeccc7a55d651dd02b5bee3eab8",
+  "coordinate_rounding_decimals": 5,
+  "source_records": 3284526,
+  "site_records": 105726,
+  "antenna_proxy_records": 282623,
+  "emission_records": 3284526,
+  "site_assignment_records": 3284526,
+  "antenna_assignment_records": 3284526,
+  "invalid_coordinate_records": 0,
+  "sites_without_municipal_code": 0,
+  "sites_with_conflicting_municipal_codes": 23,
+  "zero_loss": true,
+  "all_emissions_have_site": true,
+  "all_emissions_have_antenna_proxy": true,
+  "site_cardinality_consistent": true,
+  "antenna_cardinality_consistent": true,
+  "antenna_semantics": "proxy cadastral; estação + setor + sítio arredondado, não identificação física comprovada",
+  "relationships": {
+    "antenna_site": "many-to-one via site_id",
+    "emission_antenna": "many-to-one via antenna_id",
+    "emission_source": "one-to-one via source_row_number"
+  },
+  "products": {
+    "sites": "outputs/canonical_smp/sites.csv.gz",
+    "antennas": "outputs/canonical_smp/antennas.csv.gz",
+    "emissions": "outputs/canonical_smp/emissions.csv.gz"
+  }
+}

@@ -20,6 +20,11 @@ PRODUCTS = (
     "reports/candidate_graph/candidate_nodes.csv",
     "reports/candidate_graph/candidate_nodes.geojson",
     "reports/candidate_graph/summary.json",
+    "outputs/canonical_smp/sites.csv.gz",
+    "outputs/canonical_smp/antennas.csv.gz",
+    "outputs/canonical_smp/emissions.csv.gz",
+    "outputs/canonical_smp/summary.json",
+    "reports/canonical_smp/summary.json",
 )
 
 

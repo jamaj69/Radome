@@ -1,6 +1,6 @@
 # Estado atual do subprojeto geoespacial
 
-**Checkpoint:** 10 de agosto de 2026, após o commit de reprodução byte a byte.
+**Checkpoint:** 11 de agosto de 2026, após a normalização canônica SMP.
 
 ## Vinculação e governança
 
@@ -23,6 +23,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   população censitária em vez de receber zero;
 - Anatel SMP: 3.284.526 registros, 105.726 sítios aproximados, gerações
   2G/3G/4G/5G e espectro individual auditado;
+- esquema SMP canônico: 105.726 sítios, 282.623 proxies cadastrais de antena e
+  3.284.526 emissões, todas ligadas e sem perda de linha da fonte;
 - Anatel radiodifusão: 35.126 registros, 18.285 licenciados C4, agregados em
   11.921 sítios municipais;
 - ANAC: aeródromos públicos/privados, helipontos e helideques baixados e
@@ -33,16 +35,17 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 26 testes automatizados aprovados;
+- 30 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
-- sete produtos CSV, GeoJSON, GraphML, JSON e PNG com SHA-256 idênticos;
+- 12 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
 - resultado registrado em `reports/reproducibility.json` com
   `byte_reproducible: true` e `differences: {}`.
 
 ## Lacunas controladas
 
-- o grafo SMP por sítio ainda não preserva cada antena e emissão como entidade;
+- a entidade SMP `antena` é proxy cadastral de estação/setor/sítio e ainda não
+  representa uma estrutura radiante fisicamente confirmada;
 - SLP/SLE/SARC/STEL ainda não foram classificados nem pareados como
   radioenlaces;
 - radiodifusão ainda requer normalização regulatória de largura, ERP e HCI;
@@ -56,21 +59,11 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Implementar em Python o esquema canônico `sitio_fisico`--`antena`--`emissao` e
-migrar primeiro os registros SMP já auditados, mantendo:
-
-- identificador e coordenada do sítio;
-- código IBGE e conflitos;
-- estação, setor e operadora;
-- geração, tecnologia e subtipo 5G;
-- faixa/subfaixa, centro Tx/Rx e designação de emissão;
-- largura necessária e limites espectrais derivados;
-- proveniência do registro e confiança de cada atributo.
-
-O gate dessa próxima mudança exige testes de cardinalidade e perda zero de
-registros, um resumo JSON, produtos derivados em `outputs/` e nova comparação
-de reprodução. Depois disso, o mesmo esquema será aplicado aos arquivos menores
-do pacote geral Anatel: SARC, banda larga fixa e telefonia fixa.
+Auditar por streaming os arquivos menores do pacote geral Anatel, começando por
+SARC, banda larga fixa e telefonia fixa. A entrega deve inventariar serviço,
+classe, direção, coordenadas, frequência, potência e atributos de antena, sem
+ainda inferir radioenlaces. Depois, os emissores fixos aprovados serão migrados
+ao mesmo esquema canônico usado pela SMP.
 
 ## Comando de retomada
 

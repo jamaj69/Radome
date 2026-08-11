@@ -7,9 +7,10 @@ e M3 — infraestrutura aeronáutica e estratégica. A governança e o gate de
 incorporação científica estão em `SUBPROJETO.md`; a matriz de completude RF
 está em `CAMADAS_EMISSOES_OFICIAIS.md`.
 
-**Checkpoint de retomada:** `STATUS_ATUAL.md`. A próxima mudança implementa o
-esquema canônico `sitio_fisico`--`antena`--`emissao` e migra as emissões SMP com
-testes de cardinalidade, proveniência e reprodução.
+**Checkpoint de retomada:** `STATUS_ATUAL.md`. O esquema canônico
+`sitio_fisico`--`antena`--`emissao` já contém as emissões SMP sem perdas. A
+próxima mudança audita os arquivos menores SARC, banda larga fixa e telefonia
+fixa do pacote geral Anatel.
 
 ## Objetivo e regra de inventário
 
@@ -45,7 +46,7 @@ Toda transição de estado deve ser produzida por script Python conforme
 | Elevação preliminar | Mapzen Terrarium | integrated/preliminary | cache z8 | substituir por TOPODATA |
 | MDE nacional | TOPODATA/INPE | inventoried | 556 arquivos; ~32,19 GiB compactados | selecionar folhas continentais e baixar |
 | MDE local detalhado | IBGE/SGB/estaduais | pending | cobertura variável | adquirir somente para finalistas |
-| Torres celulares SMP | Anatel | integrated/spectrum_audited | 3.284.526 registros; 105.726 sítios; 2G/3G/4G/5G, Tx/Rx e designação disponíveis | incorporar emissões individualizadas aos nós; consolidar sítios e revisar 23 conflitos |
+| Torres celulares SMP | Anatel | canonical_integrated | 3.284.526 emissões, 105.726 sítios e 282.623 proxies cadastrais de antena; perda zero; 23 conflitos municipais preservados | usar junção espacial para revisar conflitos e buscar parâmetros radiométricos físicos |
 | Radiodifusão TV/RTV/FM/OM/RTR | Anatel | integrated/spectrum_partial | 35.126 registros; 18.285 licenciados; centro/canal disponíveis, largura ausente | integrar canalização regulatória; revisar 117 conflitos e ERP |
 | Radioenlaces associados a SMP/SCM | Anatel | downloaded/unclassified | prováveis registros SLP/STEL no pacote geral; vínculo ainda não demonstrado | classificar serviços e direção antes de buscar recurso adicional |
 | SLP/SLE/SARC/STEL e serviços fixos | Anatel, pacote geral | downloaded_verified/unclassified | 10,45 GB descompactados; esquema contém frequência, potência, altura, polarização e diagrama | inventariar por streaming e identificar emissores fixos/radioenlaces |
@@ -80,7 +81,9 @@ Toda transição de estado deve ser produzida por script Python conforme
 - `municipio`: código IBGE, nome, UF, sede `x/y/z`, área e população;
 - `candidato_radome`: relevo, altura, proeminência, horizonte, *viewshed*,
   cidades visíveis, logística, restrições e pontuação;
-- `torre_smp`: coordenada, estações, operadoras, tecnologias, gerações e faixas;
+- `sitio_fisico`: coordenada, código municipal, conflitos e proveniência;
+- `antena`: proxy cadastral por estação, setor e sítio, com confiança explícita;
+- `emissao`: uma linha SMP preservada, com tecnologia, espectro e proveniência;
 - `radiodifusao`: serviço, canal, frequência, ERP, entidade, classe, categoria e
   finalidade;
 - `aerodromo`, `heliporto`, `navaid`, `radar`, `energia`, `porto` e outros tipos

@@ -6,8 +6,8 @@ sítios que satisfaça uma meta explícita de cobertura do espaço aéreo brasil
 O resultado é uma triagem de engenharia, não uma autorização de implantação.
 
 A vinculação, os entregáveis e o gate para incorporar resultados às edições em
-português e inglês estão definidos em `SUBPROJETO.md`. O marco ativo é a Fase 3:
-infraestrutura aeronáutica e estratégica.
+português e inglês estão definidos em `SUBPROJETO.md`. Os marcos ativos são M2E,
+para emissões oficiais, e M3, para infraestrutura aeronáutica e estratégica.
 
 O escopo ativo é somente o território continental. Arquipélagos e ilhas
 oceânicas ficam fora da otimização nacional: cada grupo próximo será estudado
@@ -58,6 +58,19 @@ O cadastro SMP dedicado da Anatel é resumido sem extrair o CSV de quase 1 GB:
 O total de coordenadas distintas é apenas uma aproximação inicial de sítios
 físicos. A camada de torres deve consolidar co-localizações por distância,
 número de estação e operadora, preservando tecnologias e frequências associadas.
+
+O cadastro SMP é normalizado sem perdas no esquema canônico com:
+
+```bash
+/home/python/pyenv/bin/python build_canonical_smp.py \
+  --smp data/raw/anatel/estacoes_smp.zip \
+  --output-dir outputs/canonical_smp \
+  --report reports/canonical_smp/summary.json
+```
+
+A entidade `antena` é um proxy cadastral de estação, setor e sítio, não uma
+contagem física comprovada. O método, as cardinalidades e o gate estão em
+`reports/canonical_smp/README.md`.
 
 A auditoria registro a registro de geração, tecnologia, frequência e designação
 de emissão está em `reports/ANATEL_SPECTRUM_AUDIT.md`. Ela também documenta a

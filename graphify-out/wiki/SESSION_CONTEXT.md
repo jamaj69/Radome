@@ -87,6 +87,7 @@ This is a durable log of the chat content visible to the agent. It is not a verb
 63. User required every manipulation of geospatial databases to be performed by Python scripts for repeatability. `geoespacial/POLITICA_REPRODUTIBILIDADE.md` now makes raw inputs immutable and requires versioned Python for acquisition, extraction, cleaning, joins, aggregation and export. `run_pipeline.py` replaces shell orchestration as the authoritative entry point; the shell file is only a compatibility wrapper. `build_candidate_graph.py` now reads GeoPackage layers through Python GDAL bindings instead of invoking `ogr2ogr`, and `acquire_decea_wfs.py` provides atomic WFS downloads with per-layer hashes and manifests. The rule was added to `AGENTS.md` and the normative geolocation requirements.
 64. User asked whether reproduction had actually been tested. `verify_reproducibility.py` now executes the authoritative Python pipeline twice over unchanged inputs and compares SHA-256 for seven CSV, GeoJSON, GraphML, JSON and PNG products, writing a versioned machine-readable report and failing if any byte differs.
 65. User requested a documentation checkpoint so work can continue without context loss. `geoespacial/STATUS_ATUAL.md` now consolidates parent-project linkage, M2E/M3 status, acquired and integrated layers, 26-test and seven-product byte-reproducibility evidence, controlled gaps and the exact next implementation: a canonical `sitio_fisico`--`antena`--`emissao` model populated first from the audited SMP records with zero-loss/cardinality tests.
+66. User ordered continuation of the next M2E gate. `build_canonical_smp.py` now streams the official SMP ZIP into deterministic gzip tables for 105,726 sites, 282,623 antenna proxies and all 3,284,526 source emissions. The intermediate antenna identity is explicitly low-confidence and means station plus sector at a five-decimal rounded site, not a physically verified radiator. Thirty tests pass, no source row or relation was lost, all records have valid site/antenna links, 23 municipal conflicts remain explicit, and 12 pipeline products reproduce byte for byte. The next M2E action is the streaming audit of smaller general-Anatel files, beginning with SARC, fixed broadband and fixed telephony.
 
 ## Commits created in this session
 
@@ -218,10 +219,9 @@ Known remaining LaTeX warnings are pre-existing C6 items: duplicate page anchors
 
 For the geospatial subproject, execute M2E before quantitative RF edges:
 
-1. implement the canonical `sitio_fisico`--`antena`--`emissao` schema in Python;
-2. migrate all audited SMP emissions with zero-loss/cardinality tests;
-3. audit the smaller general-Anatel files (SARC, fixed broadband and fixed telephony);
-4. then classify SLE/SLP/STEL, pair radio links and continue M3 reconciliation.
+1. audit the smaller general-Anatel files (SARC, fixed broadband and fixed telephony);
+2. migrate approved fixed emitters into the canonical schema;
+3. then classify SLE/SLP/STEL, pair radio links and continue M3 reconciliation.
 
 The compact restart checkpoint is `geoespacial/STATUS_ATUAL.md`.
 

@@ -23,7 +23,7 @@ modelo RF completo.
 
 | Camada oficial | Localização | Altitude/altura | Espectro | Potência/diagrama | Integração atual | Lacuna decisiva |
 |---|---|---|---|---|---|---|
-| SMP 2G/3G/4G/5G — Anatel | coordenadas e município | altitude de terreno preliminar; sem altura radiante no recurso dedicado | Tx/Rx, faixa, tecnologia e largura ITU por registro | ausentes no recurso SMP dedicado | sítios e municípios integrados; emissões auditadas fora do grafo | preservar portadoras por sítio e buscar parâmetros radiométricos complementares |
+| SMP 2G/3G/4G/5G — Anatel | coordenadas e município | altitude de terreno preliminar; sem altura radiante no recurso dedicado | Tx/Rx, faixa, tecnologia e largura ITU por registro | ausentes no recurso SMP dedicado | esquema canônico: 105.726 sítios, 282.623 proxies de antena e 3.284.526 emissões sem perdas | revisar 23 conflitos municipais e buscar parâmetros radiométricos complementares |
 | TV/RTV/GTVD/RTVD/FM/RTRFM/OM — Anatel | coordenadas e município | HCI existe, unidade/semântica por serviço ainda não fechada | centro e canal; largura não declarada no CSV | ERP existe, unidade/semântica ainda não fechada | licenciadas C4 integradas por sítio | congelar atos de canalização e normalizar ERP/HCI |
 | VOR/DVOR — DECEA/ICA | 77/77 | elevação 76/77; altura de antena 0/77 | frequência 77/77, 112–117,7 MHz | potência e diagrama ausentes | baixada e inventariada | recortar Brasil, ligar município e obter potência/altura por AIP/ROTAER ou outra fonte oficial |
 | NDB — DECEA/ICA | 24/24 | elevação 19/24 | frequência 24/24, 114,3–407 kHz; banda de emissão 1/24 | potência/diagrama ausentes | baixada e inventariada | completar elevação e parâmetros RF oficiais |
@@ -78,7 +78,8 @@ forem desconhecidos.
 
 ## Sequência revisada
 
-1. criar o esquema canônico sítio--antena--emissão e migrar as emissões SMP;
+1. **concluído:** criar o esquema canônico sítio--antena--emissão e migrar as
+   3.284.526 emissões SMP sem perdas;
 2. auditar por streaming o pacote geral Anatel, começando por SARC, banda larga
    fixa e telefonia fixa, depois SLE, SLP e Mosaico/STEL;
 3. identificar classes fixas transmissoras e parear radioenlaces;
@@ -95,4 +96,3 @@ forem desconhecidos.
 - [Anatel — Regulamento Geral de Licenciamento](https://www.gov.br/anatel/pt-br/regulado/outorga/regulamento-geral-de-licenciamento);
 - [Anatel — licenciamento de estações terrenas](https://www.gov.br/anatel/pt-br/regulado/satelite/licenciamento-de-estacoes-terrenas);
 - [Cemaden — Plano Diretor 2024–2027, com inventário interinstitucional de radares meteorológicos](https://www.gov.br/cemaden/pt-br/acesso-a-informacao/institucional-1/planodiretor_2024_2027_revisado_bs08.pdf).
-
