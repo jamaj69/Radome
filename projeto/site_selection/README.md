@@ -51,6 +51,17 @@ versionados. Metadados, URLs, hashes e licenças pertencem a
 8. refinar candidatos com MDE de maior resolução e restrições territoriais;
 9. exportar GeoPackage para QGIS e malhas locais para Blender.
 
+O núcleo discreto já pode ser executado independentemente do QGIS:
+
+```bash
+/home/python/pyenv/bin/python optimize_sites.py instancia.json --output solucao.json
+```
+
+A instância contém células obrigatórias e candidatos com as células cobertas,
+arestas de visada, condição de exceção insular e pontuação secundária. O modelo
+MILP minimiza primeiro a quantidade de sítios e usa a pontuação apenas para
+desempatar soluções com a mesma cardinalidade.
+
 ## Critério de parada
 
 Não se declarará “cobertura nacional” sem informar, para cada altitude de

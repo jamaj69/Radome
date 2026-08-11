@@ -470,8 +470,18 @@
     "semantic_hash": ""
   },
   "projeto/site_selection/README.md": {
-    "mtime": 1786406911.9912481,
-    "ast_hash": "734a777368793b3117a9c28b37b6dac9",
+    "mtime": 1786406988.1588938,
+    "ast_hash": "9b9d1ee652e83d3ba19ccfd5a67508e0",
+    "semantic_hash": ""
+  },
+  "projeto/site_selection/optimize_sites.py": {
+    "mtime": 1786406987.7228959,
+    "ast_hash": "46ec63bfcdf6e6e4d29bcc4e22ec290f",
+    "semantic_hash": ""
+  },
+  "projeto/site_selection/tests/test_optimize_sites.py": {
+    "mtime": 1786406988.0028946,
+    "ast_hash": "c1bfc076f2c92a6c2480eaad492fcff4",
     "semantic_hash": ""
   }
 }

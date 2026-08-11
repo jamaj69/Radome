@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 35 files · ~418,196 words
+- 37 files · ~418,857 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 579 nodes · 619 edges · 50 communities (48 shown, 2 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.8)
+- 593 nodes · 643 edges · 51 communities (49 shown, 2 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.76)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0964f876`
+- Built from commit: `607d6298`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -62,6 +62,7 @@
 - Sub-area guide 5: integration, calibration, and operational validation
 - Cross-search signals
 - Cross-search signals
+- localize_figures.py
 - verify_tetrahedral_face_geometry.py
 - localize_figures.py
 
@@ -75,18 +76,22 @@
 7. `RADOME — Roadmap de correções técnicas e documentais` - 11 edges
 8. `tetrahedral_modules()` - 10 edges
 9. `RADOME — Sumário executivo e roadmap de pesquisa e engenharia` - 9 edges
-10. `27. Exemplo operacional` - 8 edges
+10. `solve()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `select_contiguous_cluster()` --calls--> `face_edge_key()`  [INFERRED]
-  projeto/figures/render_tetrahedral_face_cluster_blender.py → projeto/geometry/verify_tetrahedral_face_geometry.py
 - `save()` --calls--> `build_output()`  [INFERRED]
   projeto/figures/generate_updated_figures.py → projeto/figures/build_paths.py
+- `select_contiguous_cluster()` --calls--> `face_edge_key()`  [INFERRED]
+  projeto/figures/render_tetrahedral_face_cluster_blender.py → projeto/geometry/verify_tetrahedral_face_geometry.py
+- `candidate()` --calls--> `Candidate`  [INFERRED]
+  projeto/site_selection/tests/test_optimize_sites.py → projeto/site_selection/optimize_sites.py
+- `OptimizeSitesTest` --uses--> `Candidate`  [INFERRED]
+  projeto/site_selection/tests/test_optimize_sites.py → projeto/site_selection/optimize_sites.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (50 total, 2 thin omitted)
+## Communities (51 total, 2 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -157,8 +162,8 @@ Cohesion: 0.38
 Nodes (10): clip_polygon_to_cut(), clip_segment_to_cut(), clipped_mesh(), distance(), face_edges(), grouped_lengths(), main(), normalize() (+2 more)
 
 ### Community 17 - "render_tetrahedral_face_cluster_blender.py"
-Cohesion: 0.24
-Nodes (5): arrow(), cylinder_between(), dot(), Render a contiguous cluster of 2 m tetrahedral radome face modules., select_contiguous_cluster()
+Cohesion: 0.27
+Nodes (9): Any, Candidate, load_instance(), main(), Path, Minimize site count, using candidate score only as a tie-breaker., solve(), candidate() (+1 more)
 
 ### Community 18 - "Seleção geoespacial de sítios RADOME"
 Cohesion: 0.33
@@ -268,13 +273,17 @@ Nodes (3): Citation velocity, Cross-search signals, Repeat-hit papers
 Cohesion: 0.67
 Nodes (3): Citation velocity, Cross-search signals, Repeat-hit papers
 
+### Community 48 - "localize_figures.py"
+Cohesion: 0.23
+Nodes (9): draw_label(), draw_text_in_block(), fit_text(), font(), Build language-specific publication figures from the common geometry masters., Return the largest readable multiline setting that fits a region., Draw a padded box whose centre follows the centre of the rendered glyphs., Fit and centre text directly inside an existing coloured diagram block. (+1 more)
+
 ### Community 50 - "verify_tetrahedral_face_geometry.py"
-Cohesion: 0.34
-Nodes (17): add(), centroid(), cross(), dot(), face_edge_key(), length(), main(), midpoint() (+9 more)
+Cohesion: 0.17
+Nodes (22): arrow(), cylinder_between(), dot(), Render a contiguous cluster of 2 m tetrahedral radome face modules., select_contiguous_cluster(), add(), centroid(), cross() (+14 more)
 
 ### Community 52 - "localize_figures.py"
-Cohesion: 0.07
-Nodes (19): Path, build_output(), ensure_build_dir(), Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--11.  Permanent publi, save(), draw_label() (+11 more)
+Cohesion: 0.09
+Nodes (9): build_output(), ensure_build_dir(), Path, Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--11.  Permanent publi, save(), crossed_yagi() (+1 more)
 
 ## Knowledge Gaps
 - **397 isolated node(s):** `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout`, `LaTeX Article Commands` (+392 more)
@@ -285,9 +294,9 @@ Nodes (19): Path, build_output(), ensure_build_dir(), Shared paths for temporary
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.033) - this node is a cross-community bridge._
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.028) - this node is a cross-community bridge._
+  _High betweenness centrality (0.027) - this node is a cross-community bridge._
 - **What connects `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` to the rest of the system?**
   _397 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**

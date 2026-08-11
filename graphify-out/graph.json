@@ -97,7 +97,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "id": "path",
+      "id": "projeto_figures_build_paths_py_path",
       "community": 52,
       "community_name": "localize_figures.py",
       "norm_label": "path"
@@ -219,7 +219,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures",
-      "community": 52,
+      "community": 48,
       "community_name": "localize_figures.py",
       "norm_label": "localize_figures.py"
     },
@@ -230,7 +230,7 @@
       "source_location": "L129",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_font",
-      "community": 52,
+      "community": 48,
       "community_name": "localize_figures.py",
       "norm_label": "font()"
     },
@@ -241,7 +241,7 @@
       "source_location": "L134",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_source_for",
-      "community": 52,
+      "community": 48,
       "community_name": "localize_figures.py",
       "norm_label": "source_for()"
     },
@@ -252,7 +252,7 @@
       "source_location": "L142",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_load_image",
-      "community": 52,
+      "community": 48,
       "community_name": "localize_figures.py",
       "norm_label": "load_image()"
     },
@@ -263,7 +263,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_wrap",
-      "community": 52,
+      "community": 48,
       "community_name": "localize_figures.py",
       "norm_label": "wrap()"
     },
@@ -274,7 +274,7 @@
       "source_location": "L173",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_fit_text",
-      "community": 52,
+      "community": 48,
       "community_name": "localize_figures.py",
       "norm_label": "fit_text()"
     },
@@ -285,7 +285,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_draw_label",
-      "community": 52,
+      "community": 48,
       "community_name": "localize_figures.py",
       "norm_label": "draw_label()"
     },
@@ -296,7 +296,7 @@
       "source_location": "L240",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_draw_text_in_block",
-      "community": 52,
+      "community": 48,
       "community_name": "localize_figures.py",
       "norm_label": "draw_text_in_block()"
     },
@@ -307,7 +307,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_rationale_1",
-      "community": 52,
+      "community": 48,
       "community_name": "localize_figures.py",
       "norm_label": "build language-specific publication figures from the common geometry masters."
     },
@@ -318,7 +318,7 @@
       "source_location": "L174",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_rationale_174",
-      "community": 52,
+      "community": 48,
       "community_name": "localize_figures.py",
       "norm_label": "return the largest readable multiline setting that fits a region."
     },
@@ -329,7 +329,7 @@
       "source_location": "L192",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_rationale_192",
-      "community": 52,
+      "community": 48,
       "community_name": "localize_figures.py",
       "norm_label": "draw a padded box whose centre follows the centre of the rendered glyphs."
     },
@@ -340,7 +340,7 @@
       "source_location": "L241",
       "_origin": "ast",
       "id": "projeto_figures_localize_figures_rationale_241",
-      "community": 52,
+      "community": 48,
       "community_name": "localize_figures.py",
       "norm_label": "fit and centre text directly inside an existing coloured diagram block."
     },
@@ -483,8 +483,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "projeto_figures_render_tetrahedral_face_cluster_blender",
-      "community": 17,
-      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "community": 50,
+      "community_name": "verify_tetrahedral_face_geometry.py",
       "norm_label": "render_tetrahedral_face_cluster_blender.py"
     },
     {
@@ -494,8 +494,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "projeto_figures_render_tetrahedral_face_cluster_blender_material",
-      "community": 17,
-      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "community": 50,
+      "community_name": "verify_tetrahedral_face_geometry.py",
       "norm_label": "material()"
     },
     {
@@ -505,8 +505,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "projeto_figures_render_tetrahedral_face_cluster_blender_triangle",
-      "community": 17,
-      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "community": 50,
+      "community_name": "verify_tetrahedral_face_geometry.py",
       "norm_label": "triangle()"
     },
     {
@@ -516,8 +516,8 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "projeto_figures_render_tetrahedral_face_cluster_blender_cylinder_between",
-      "community": 17,
-      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "community": 50,
+      "community_name": "verify_tetrahedral_face_geometry.py",
       "norm_label": "cylinder_between()"
     },
     {
@@ -527,8 +527,8 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "projeto_figures_render_tetrahedral_face_cluster_blender_arrow",
-      "community": 17,
-      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "community": 50,
+      "community_name": "verify_tetrahedral_face_geometry.py",
       "norm_label": "arrow()"
     },
     {
@@ -538,8 +538,8 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "projeto_figures_render_tetrahedral_face_cluster_blender_oriented_box",
-      "community": 17,
-      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "community": 50,
+      "community_name": "verify_tetrahedral_face_geometry.py",
       "norm_label": "oriented_box()"
     },
     {
@@ -549,8 +549,8 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "projeto_figures_render_tetrahedral_face_cluster_blender_select_contiguous_cluster",
-      "community": 17,
-      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "community": 50,
+      "community_name": "verify_tetrahedral_face_geometry.py",
       "norm_label": "select_contiguous_cluster()"
     },
     {
@@ -560,8 +560,8 @@
       "source_location": "L127",
       "_origin": "ast",
       "id": "projeto_figures_render_tetrahedral_face_cluster_blender_dot",
-      "community": 17,
-      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "community": 50,
+      "community_name": "verify_tetrahedral_face_geometry.py",
       "norm_label": "dot()"
     },
     {
@@ -571,8 +571,8 @@
       "source_location": "L131",
       "_origin": "ast",
       "id": "projeto_figures_render_tetrahedral_face_cluster_blender_point_camera",
-      "community": 17,
-      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "community": 50,
+      "community_name": "verify_tetrahedral_face_geometry.py",
       "norm_label": "point_camera()"
     },
     {
@@ -582,8 +582,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "projeto_figures_render_tetrahedral_face_cluster_blender_rationale_1",
-      "community": 17,
-      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "community": 50,
+      "community_name": "verify_tetrahedral_face_geometry.py",
       "norm_label": "render a contiguous cluster of 2 m tetrahedral radome face modules."
     },
     {
@@ -904,6 +904,160 @@
       "community": 50,
       "community_name": "verify_tetrahedral_face_geometry.py",
       "norm_label": "main()"
+    },
+    {
+      "label": "optimize_sites.py",
+      "file_type": "code",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "projeto_site_selection_optimize_sites",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": "optimize_sites.py"
+    },
+    {
+      "label": "Candidate",
+      "file_type": "code",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "projeto_site_selection_optimize_sites_candidate",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": "candidate"
+    },
+    {
+      "label": "load_instance()",
+      "file_type": "code",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "projeto_site_selection_optimize_sites_load_instance",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": "load_instance()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "projeto_site_selection_optimize_sites_py_path",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": "path"
+    },
+    {
+      "label": "solve()",
+      "file_type": "code",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "projeto_site_selection_optimize_sites_solve",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": "solve()"
+    },
+    {
+      "label": "Any",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "any",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": "any"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "projeto_site_selection_optimize_sites_main",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": "main()"
+    },
+    {
+      "label": "Minimize site count, using candidate score only as a tie-breaker.",
+      "file_type": "rationale",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "projeto_site_selection_optimize_sites_rationale_53",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": "minimize site count, using candidate score only as a tie-breaker."
+    },
+    {
+      "label": "test_optimize_sites.py",
+      "file_type": "code",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "projeto_site_selection_tests_test_optimize_sites",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": "test_optimize_sites.py"
+    },
+    {
+      "label": "candidate()",
+      "file_type": "code",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "projeto_site_selection_tests_test_optimize_sites_candidate",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": "candidate()"
+    },
+    {
+      "label": "OptimizeSitesTest",
+      "file_type": "code",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": "optimizesitestest"
+    },
+    {
+      "label": ".test_minimum_pair_and_independent_island()",
+      "file_type": "code",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest_test_minimum_pair_and_independent_island",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": ".test_minimum_pair_and_independent_island()"
+    },
+    {
+      "label": ".test_non_exempt_isolated_candidate_cannot_be_selected()",
+      "file_type": "code",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest_test_non_exempt_isolated_candidate_cannot_be_selected",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": ".test_non_exempt_isolated_candidate_cannot_be_selected()"
+    },
+    {
+      "label": ".test_uncoverable_cell_is_reported()",
+      "file_type": "code",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest_test_uncoverable_cell_is_reported",
+      "community": 17,
+      "community_name": "render_tetrahedral_face_cluster_blender.py",
+      "norm_label": ".test_uncoverable_cell_is_reported()"
     },
     {
       "label": "verify_c3_acquisition_budget.py",
@@ -4492,7 +4646,7 @@
       "label": "Crit\u00e9rio de parada",
       "file_type": "document",
       "source_file": "projeto/site_selection/README.md",
-      "source_location": "L54",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "projeto_site_selection_readme_crit\u00e9rio_de_parada",
       "community": 18,
@@ -6563,7 +6717,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_figures_build_paths_ensure_build_dir",
-      "target": "path",
+      "target": "projeto_figures_build_paths_py_path",
       "confidence_score": 1.0
     },
     {
@@ -6575,20 +6729,8 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_figures_build_paths_build_output",
-      "target": "path",
+      "target": "projeto_figures_build_paths_py_path",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "projeto/figures/localize_figures.py",
-      "source_location": "L146",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "projeto_figures_localize_figures_load_image",
-      "target": "path"
     },
     {
       "relation": "calls",
@@ -7953,6 +8095,295 @@
       "_origin": "ast",
       "source": "projeto_geometry_verify_tetrahedral_face_geometry_main",
       "target": "projeto_geometry_verify_tetrahedral_face_geometry_face_edge_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_optimize_sites",
+      "target": "projeto_site_selection_optimize_sites_candidate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_optimize_sites",
+      "target": "projeto_site_selection_optimize_sites_load_instance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L124",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_optimize_sites",
+      "target": "projeto_site_selection_optimize_sites_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_optimize_sites",
+      "target": "projeto_site_selection_optimize_sites_solve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites",
+      "target": "projeto_site_selection_optimize_sites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_optimize_sites_load_instance",
+      "target": "projeto_site_selection_optimize_sites_candidate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_optimize_sites_solve",
+      "target": "projeto_site_selection_optimize_sites_candidate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites_candidate",
+      "target": "projeto_site_selection_optimize_sites_candidate"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L7",
+      "weight": 0.8,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest",
+      "target": "projeto_site_selection_optimize_sites_candidate",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_optimize_sites_load_instance",
+      "target": "projeto_site_selection_optimize_sites_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L129",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_optimize_sites_main",
+      "target": "projeto_site_selection_optimize_sites_load_instance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L130",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_optimize_sites_main",
+      "target": "projeto_site_selection_optimize_sites_solve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_optimize_sites_rationale_53",
+      "target": "projeto_site_selection_optimize_sites_solve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/optimize_sites.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_optimize_sites_solve",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest_test_minimum_pair_and_independent_island",
+      "target": "projeto_site_selection_optimize_sites_solve"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest_test_non_exempt_isolated_candidate_cannot_be_selected",
+      "target": "projeto_site_selection_optimize_sites_solve"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest_test_uncoverable_cell_is_reported",
+      "target": "projeto_site_selection_optimize_sites_solve"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites",
+      "target": "projeto_site_selection_tests_test_optimize_sites_candidate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites",
+      "target": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest_test_minimum_pair_and_independent_island",
+      "target": "projeto_site_selection_tests_test_optimize_sites_candidate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest_test_non_exempt_isolated_candidate_cannot_be_selected",
+      "target": "projeto_site_selection_tests_test_optimize_sites_candidate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest_test_uncoverable_cell_is_reported",
+      "target": "projeto_site_selection_tests_test_optimize_sites_candidate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest",
+      "target": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest_test_minimum_pair_and_independent_island",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest",
+      "target": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest_test_non_exempt_isolated_candidate_cannot_be_selected",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "projeto/site_selection/tests/test_optimize_sites.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest",
+      "target": "projeto_site_selection_tests_test_optimize_sites_optimizesitestest_test_uncoverable_cell_is_reported",
       "confidence_score": 1.0
     },
     {
@@ -11383,7 +11814,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "projeto/site_selection/README.md",
-      "source_location": "L54",
+      "source_location": "L65",
       "weight": 1.0,
       "_origin": "ast",
       "source": "projeto_site_selection_readme_sele\u00e7\u00e3o_geoespacial_de_s\u00edtios_radome",
@@ -13262,5 +13693,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0964f8767ca2ce4e77ef3c5ae4453cdb1888262d"
+  "built_at_commit": "607d6298baec511eb035d9763631168a50944db4"
 }
