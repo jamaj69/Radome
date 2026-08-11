@@ -96,7 +96,14 @@ def feature(item: dict) -> dict:
     }
 
 
-def extract_receipt(receipt_path: Path, archive_dir: Path, target_dir: Path, report_path: Path, index_path: Path) -> dict:
+def extract_receipt(
+    receipt_path: Path,
+    archive_dir: Path,
+    target_dir: Path,
+    report_path: Path,
+    index_path: Path,
+    index_name: str = "topodata_radio_link_tiles",
+) -> dict:
     receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
     results: list[dict] = []
     for source in receipt["archives"]:
@@ -128,7 +135,7 @@ def extract_receipt(receipt_path: Path, archive_dir: Path, target_dir: Path, rep
         "tiles": results,
     }
     atomic_json(report_path, report)
-    index = {"type": "FeatureCollection", "name": "topodata_radio_link_tiles", "crs": {"type": "name", "properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}}, "features": [feature(item) for item in results if item["status"] in {"extracted", "reused"}]}
+    index = {"type": "FeatureCollection", "name": index_name, "crs": {"type": "name", "properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}}, "features": [feature(item) for item in results if item["status"] in {"extracted", "reused"}]}
     atomic_json(index_path, index)
     return report
 
@@ -140,8 +147,9 @@ def main() -> None:
     parser.add_argument("--target-dir", type=Path, required=True)
     parser.add_argument("--report", type=Path, required=True)
     parser.add_argument("--index", type=Path, required=True)
+    parser.add_argument("--index-name", default="topodata_radio_link_tiles")
     args = parser.parse_args()
-    result = extract_receipt(args.receipt, args.archive_dir, args.target_dir, args.report, args.index)
+    result = extract_receipt(args.receipt, args.archive_dir, args.target_dir, args.report, args.index, args.index_name)
     print(json.dumps(result, ensure_ascii=False, indent=2))
     raise SystemExit(0 if result["complete"] else 1)
 

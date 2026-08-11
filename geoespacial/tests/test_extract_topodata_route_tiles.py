@@ -41,13 +41,15 @@ class ExtractTopodataRouteTilesTest(unittest.TestCase):
         report = self.root / "report.json"
         index = self.root / "index.geojson"
 
-        first = extract_receipt(receipt, archive_dir, target, report, index)
-        second = extract_receipt(receipt, archive_dir, target, report, index)
+        first = extract_receipt(receipt, archive_dir, target, report, index, "topodata_gap_tiles")
+        second = extract_receipt(receipt, archive_dir, target, report, index, "topodata_gap_tiles")
 
         self.assertTrue(first["complete"])
         self.assertEqual(first["tiles"][0]["status"], "extracted")
         self.assertEqual(second["tiles"][0]["status"], "reused")
-        feature = json.loads(index.read_text(encoding="utf-8"))["features"][0]
+        index_value = json.loads(index.read_text(encoding="utf-8"))
+        self.assertEqual(index_value["name"], "topodata_gap_tiles")
+        feature = index_value["features"][0]
         self.assertEqual(feature["geometry"]["coordinates"][0][0], [-46.5, -23.0])
         self.assertEqual(first["missing_archive_names_from_selection"], ["26S48_ZN.zip"])
 

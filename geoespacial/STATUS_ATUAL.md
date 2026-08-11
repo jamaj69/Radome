@@ -120,6 +120,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - aquisição dessas lacunas concluída: 141 ZIPs validados por CRC, totalizando
   8.743.661.110 bytes reais, com SHA-256 individual; uma segunda passagem local
   marcou e revalidou os 141 como reutilizados, sem falhas;
+- extração das lacunas concluída: 141 GeoTIFFs georreferenciados, com
+  10.964.218.374 bytes, SHA-256 individual e índice GeoJSON próprio; a segunda
+  passagem revalidou todos como reutilizados;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -156,10 +159,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Extrair atomicamente e indexar os GeoTIFFs das 141 folhas TOPODATA adquiridas
-para as 1.732 células descobertas. Depois gerar pontos altos/cumeadas. Não
-executar cobertura mínima antes de cada célula possuir ao menos um candidato;
-não promover cota BC250 a relevo validado.
+Gerar candidatos de terreno alto/cumeadas dentro das 1.732 células descobertas,
+usando os 141 GeoTIFFs TOPODATA extraídos, e preservar critérios de distância
+mínima e proeminência antes de recalcular a cobertura e a malha. Não executar
+cobertura mínima antes de cada célula possuir ao menos um candidato.
 
 ## Comando de retomada
 
