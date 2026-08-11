@@ -116,8 +116,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   endpoints; associações são apenas geométricas e nenhuma é `illuminates`;
 - seleção TOPODATA das lacunas continentais concluída: as 1.732 células
   descobertas intersectam 141 arquivos disponíveis, com 8.737.783.808 bytes
-  listados e nenhuma folha requerida ausente do índice oficial; nenhuma
-  transferência foi executada neste gate;
+  listados e nenhuma folha requerida ausente do índice oficial;
+- aquisição dessas lacunas concluída: 141 ZIPs validados por CRC, totalizando
+  8.743.661.110 bytes reais, com SHA-256 individual; uma segunda passagem local
+  marcou e revalidou os 141 como reutilizados, sem falhas;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -154,11 +156,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Baixar atomicamente e validar por ZIP CRC e SHA-256 as 141 folhas TOPODATA já
-selecionadas para as 1.732 células descobertas. Depois extrair e indexar os
-GeoTIFFs antes de gerar pontos altos/cumeadas. Não executar cobertura mínima
-antes de cada célula possuir ao menos um candidato; não promover cota BC250 a
-relevo validado.
+Extrair atomicamente e indexar os GeoTIFFs das 141 folhas TOPODATA adquiridas
+para as 1.732 células descobertas. Depois gerar pontos altos/cumeadas. Não
+executar cobertura mínima antes de cada célula possuir ao menos um candidato;
+não promover cota BC250 a relevo validado.
 
 ## Comando de retomada
 

@@ -5,12 +5,20 @@ preliminar com o inventário oficial TOPODATA. Centro e quatro cantos internos d
 cada célula de 0,25° evitam perder uma folha atravessada pela célula.
 
 Resultado: 141 arquivos disponíveis, 8.737.783.808 bytes listados e nenhuma
-folha requerida ausente do índice oficial. A seleção é apenas um plano de
-aquisição; não comprova relevo favorável, *viewshed* ou cobertura RF.
+folha requerida ausente do índice oficial. Todos foram adquiridos e validados:
+8.743.661.110 bytes reais, CRC ZIP íntegro e SHA-256 individual no recibo
+`acquisition.json`. Uma segunda passagem local reutilizou e revalidou as 141
+folhas sem tráfego de rede. Isso ainda não comprova relevo favorável, *viewshed*
+ou cobertura RF.
 
 ```bash
 /home/python/pyenv/bin/python select_topodata_gap_tiles.py \
   --grid outputs/continental_coverage_grid/continental_grid.csv.gz \
   --manifest data/manifests/topodata_altitude_tiles.json \
   --output reports/topodata_gap_tiles/selection.json
+
+/home/python/pyenv/bin/python acquire_topodata_route_tiles.py \
+  --selection reports/topodata_gap_tiles/selection.json \
+  --output-dir data/raw/topodata/radio_link_routes \
+  --report reports/topodata_gap_tiles/acquisition.json
 ```
