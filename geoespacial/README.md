@@ -43,6 +43,11 @@ versionados. Metadados, URLs, hashes e licenças pertencem a
 `data/manifests/` e devem ser versionados. Produtos intermediários ficam em
 `data/processed/`; tabelas e mapas finais, em `outputs/`.
 
+O inventário oficial atual contém 556 arquivos TOPODATA de altitude numérica,
+com aproximadamente 32,19 GiB compactados. Por isso a seleção continental de
+folhas deve preceder o download; baixar todo o índice sem máscara desperdiçaria
+armazenamento e tempo de processamento.
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;

@@ -4,6 +4,39 @@
   "graph": {},
   "nodes": [
     {
+      "label": "inventory_topodata.py",
+      "file_type": "code",
+      "source_file": "geoespacial/inventory_topodata.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_inventory_topodata",
+      "community": 51,
+      "community_name": "inventory_topodata.py",
+      "norm_label": "inventory_topodata.py"
+    },
+    {
+      "label": "parse_index()",
+      "file_type": "code",
+      "source_file": "geoespacial/inventory_topodata.py",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "geoespacial_inventory_topodata_parse_index",
+      "community": 51,
+      "community_name": "inventory_topodata.py",
+      "norm_label": "parse_index()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "geoespacial/inventory_topodata.py",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "geoespacial_inventory_topodata_main",
+      "community": 51,
+      "community_name": "inventory_topodata.py",
+      "norm_label": "main()"
+    },
+    {
       "label": "optimize_sites.py",
       "file_type": "code",
       "source_file": "geoespacial/optimize_sites.py",
@@ -90,6 +123,39 @@
       "community": 17,
       "community_name": "render_tetrahedral_face_cluster_blender.py",
       "norm_label": "minimize site count, using candidate score only as a tie-breaker."
+    },
+    {
+      "label": "test_inventory_topodata.py",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_inventory_topodata.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_inventory_topodata",
+      "community": 51,
+      "community_name": "inventory_topodata.py",
+      "norm_label": "test_inventory_topodata.py"
+    },
+    {
+      "label": "InventoryTopodataTest",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_inventory_topodata.py",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_inventory_topodata_inventorytopodatatest",
+      "community": 51,
+      "community_name": "inventory_topodata.py",
+      "norm_label": "inventorytopodatatest"
+    },
+    {
+      "label": ".test_selects_only_numeric_altitude_archives()",
+      "file_type": "code",
+      "source_file": "geoespacial/tests/test_inventory_topodata.py",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "geoespacial_tests_test_inventory_topodata_inventorytopodatatest_test_selects_only_numeric_altitude_archives",
+      "community": 51,
+      "community_name": "inventory_topodata.py",
+      "norm_label": ".test_selects_only_numeric_altitude_archives()"
     },
     {
       "label": "test_optimize_sites.py",
@@ -3535,7 +3601,7 @@
       "label": "Etapas",
       "file_type": "document",
       "source_file": "geoespacial/README.md",
-      "source_location": "L46",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "geoespacial_readme_etapas",
       "community": 49,
@@ -3546,7 +3612,7 @@
       "label": "Crit\u00e9rio de parada",
       "file_type": "document",
       "source_file": "geoespacial/README.md",
-      "source_location": "L69",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "geoespacial_readme_crit\u00e9rio_de_parada",
       "community": 49,
@@ -6539,6 +6605,64 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "geoespacial/inventory_topodata.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_inventory_topodata",
+      "target": "geoespacial_inventory_topodata_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/inventory_topodata.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_inventory_topodata",
+      "target": "geoespacial_inventory_topodata_parse_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_inventory_topodata.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_inventory_topodata",
+      "target": "geoespacial_inventory_topodata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/inventory_topodata.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_inventory_topodata_main",
+      "target": "geoespacial_inventory_topodata_parse_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/tests/test_inventory_topodata.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_inventory_topodata_inventorytopodatatest_test_selects_only_numeric_altitude_archives",
+      "target": "geoespacial_inventory_topodata_parse_index"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "geoespacial/optimize_sites.py",
       "source_location": "L23",
       "weight": 1.0,
@@ -6733,6 +6857,28 @@
       "_origin": "ast",
       "source": "geoespacial_tests_test_optimize_sites_optimizesitestest_test_uncoverable_cell_is_reported",
       "target": "geoespacial_optimize_sites_solve"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_inventory_topodata.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_inventory_topodata",
+      "target": "geoespacial_tests_test_inventory_topodata_inventorytopodatatest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/tests/test_inventory_topodata.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_tests_test_inventory_topodata_inventorytopodatatest",
+      "target": "geoespacial_tests_test_inventory_topodata_inventorytopodatatest_test_selects_only_numeric_altitude_archives",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10791,7 +10937,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/README.md",
-      "source_location": "L69",
+      "source_location": "L74",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_readme_sele\u00e7\u00e3o_geoespacial_de_s\u00edtios_radome",
@@ -10802,7 +10948,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/README.md",
-      "source_location": "L46",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_readme_sele\u00e7\u00e3o_geoespacial_de_s\u00edtios_radome",
@@ -13693,5 +13839,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1a469023b164a41c1a47a0d6b1dcaf4744b594d1"
+  "built_at_commit": "a0d2a25986e1d6f60d174dd7ade277ac095fe70f"
 }

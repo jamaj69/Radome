@@ -460,8 +460,8 @@
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/sources.json": {
-    "mtime": 1786408751.5305178,
-    "ast_hash": "8b32c112e42534631040c361ed17aec9",
+    "mtime": 1786409002.6413455,
+    "ast_hash": "6c76c0a623ee5eb159f36ad39aa1f7ec",
     "semantic_hash": ""
   },
   "geoespacial/optimize_sites.py": {
@@ -480,8 +480,23 @@
     "semantic_hash": ""
   },
   "geoespacial/README.md": {
-    "mtime": 1786408718.726671,
-    "ast_hash": "38cf1397dcf3e214fa31e5cce6788b67",
+    "mtime": 1786409002.7893448,
+    "ast_hash": "d5679f743cef4f1f55a74a04b0ef2cee",
+    "semantic_hash": ""
+  },
+  "geoespacial/data/manifests/topodata_altitude_tiles.json": {
+    "mtime": 1786408987.9974139,
+    "ast_hash": "8bdc34e1af6c1d32fe08eb24ce248258",
+    "semantic_hash": ""
+  },
+  "geoespacial/inventory_topodata.py": {
+    "mtime": 1786408973.8934796,
+    "ast_hash": "848cd56fca6bc02010cec27cdcc51f48",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_inventory_topodata.py": {
+    "mtime": 1786408974.049479,
+    "ast_hash": "45d269e1a00009e0bbd1090c3394226e",
     "semantic_hash": ""
   }
 }

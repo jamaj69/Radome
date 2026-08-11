@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 37 files · ~418,960 words
+- 40 files · ~423,699 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 593 nodes · 643 edges · 52 communities (50 shown, 2 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.76)
+- 599 nodes · 650 edges · 53 communities (51 shown, 2 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.76)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1a469023`
+- Built from commit: `a0d2a259`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -65,6 +65,7 @@
 - localize_figures.py
 - Seleção geoespacial de sítios RADOME
 - verify_tetrahedral_face_geometry.py
+- inventory_topodata.py
 - localize_figures.py
 
 ## God Nodes (most connected - your core abstractions)
@@ -92,7 +93,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (52 total, 2 thin omitted)
+## Communities (53 total, 2 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -285,6 +286,10 @@ Nodes (5): Critério de parada, Etapas, Fontes previstas, Hipóteses controladas
 ### Community 50 - "verify_tetrahedral_face_geometry.py"
 Cohesion: 0.34
 Nodes (17): add(), centroid(), cross(), dot(), face_edge_key(), length(), main(), midpoint() (+9 more)
+
+### Community 51 - "inventory_topodata.py"
+Cohesion: 0.47
+Nodes (3): main(), parse_index(), InventoryTopodataTest
 
 ### Community 52 - "localize_figures.py"
 Cohesion: 0.09

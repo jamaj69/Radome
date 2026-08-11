@@ -28,10 +28,13 @@
       "authority": "INPE",
       "description": "MDE TOPODATA em folhas GeoTIFF; inventario de folhas sera gerado antes do download nacional",
       "url": "https://www.dsr.inpe.br/topodata/acesso.php",
-      "expected_size_bytes": null,
+      "index_url": "https://www.dsr.inpe.br/topodata/data/geotiff/",
+      "inventory": "data/manifests/topodata_altitude_tiles.json",
+      "inventory_archive_count": 556,
+      "inventory_listed_size_bytes": 34558967808,
       "sha256": null,
       "target": "data/raw/inpe/topodata/",
-      "status": "inventory_pending"
+      "status": "inventory_complete_download_pending"
     }
   ]
 }
