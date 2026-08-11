@@ -72,6 +72,18 @@ A entidade `antena` é um proxy cadastral de estação, setor e sítio, não uma
 contagem física comprovada. O método, as cardinalidades e o gate estão em
 `reports/canonical_smp/README.md`.
 
+Os arquivos menores do pacote geral Anatel são auditados sem extração com:
+
+```bash
+/home/python/pyenv/bin/python audit_anatel_general.py \
+  --source data/raw/anatel/estacoes_licenciadas.zip \
+  --output-dir outputs/anatel_general_audit \
+  --report reports/anatel_general_audit/summary.json
+```
+
+Os resultados SARC, banda larga fixa e telefonia fixa estão documentados em
+`reports/anatel_general_audit/README.md`.
+
 A auditoria registro a registro de geração, tecnologia, frequência e designação
 de emissão está em `reports/ANATEL_SPECTRUM_AUDIT.md`. Ela também documenta a
 limitação da base de radiodifusão, que fornece canal e frequência central, mas

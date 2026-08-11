@@ -98,10 +98,12 @@ BC250 com proveniência oficial. A matriz de lacunas está em
 
 O checkpoint operacional está em `geoespacial/STATUS_ATUAL.md`. O esquema
 `sitio_fisico`--`antena`--`emissao` preserva as 3.284.526 portadoras SMP em
-105.726 sítios e 282.623 proxies cadastrais de antena, sem perda. Trinta testes
-passam e 12 produtos têm SHA-256 idênticos em duas execuções. A próxima entrega
-é a auditoria por streaming de SARC, banda larga fixa e telefonia fixa no pacote
-geral Anatel.
+105.726 sítios e 282.623 proxies cadastrais de antena, sem perda. A etapa seguinte
+auditou por streaming 16.876 registros de SARC, banda larga fixa e telefonia
+fixa. SARC fornece 4.228 candidatos ativos a emissão; SCM fornece 1.850 Tx ativos;
+STFC permanece sem parâmetros RF úteis. A próxima entrega migra somente os
+registros com evidência suficiente ao esquema canônico. Trinta e três testes
+passam e 17 produtos coincidem byte a byte em duas execuções.
 
 ## 6. Roadmap orientado por gates
 

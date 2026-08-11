@@ -1,6 +1,6 @@
 # Estado atual do subprojeto geoespacial
 
-**Checkpoint:** 11 de agosto de 2026, após a normalização canônica SMP.
+**Checkpoint:** 11 de agosto de 2026, após a auditoria inicial do pacote geral Anatel.
 
 ## Vinculação e governança
 
@@ -31,14 +31,19 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   inventariados;
 - DECEA/ICA: VOR, NDB, DME e `navaids` baixados, verificados e inventariados;
 - pacote geral Anatel de 10,45 GB descompactados disponível e com esquema
-  conhecido, ainda não classificado por serviço/emissor.
+  conhecido; SARC, banda larga fixa e telefonia fixa já auditados por streaming;
+- SARC: 8.774 registros, 4.228 ativos potencialmente emissores e 4.583
+  frequências utilizáveis, mas sem potência/designação utilizável;
+- banda larga fixa: 7.513 registros, 1.850 ativos com direção Tx, 3.706 com
+  frequência/potência e 3.514 com largura decodificada;
+- telefonia fixa: 589 registros georreferenciados, mas sem parâmetros RF úteis.
 
 ## Validação reproduzível
 
-- 30 testes automatizados aprovados;
+- 33 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
-- 12 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
+- 17 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
 - resultado registrado em `reports/reproducibility.json` com
   `byte_reproducible: true` e `differences: {}`.
 
@@ -46,8 +51,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 - a entidade SMP `antena` é proxy cadastral de estação/setor/sítio e ainda não
   representa uma estrutura radiante fisicamente confirmada;
-- SLP/SLE/SARC/STEL ainda não foram classificados nem pareados como
-  radioenlaces;
+- SLE/SLP/Mosaico-STEL ainda não foram classificados nem pareados como
+  radioenlaces; SARC/SCM foram classificados, mas permanecem sem pareamento;
 - radiodifusão ainda requer normalização regulatória de largura, ERP e HCI;
 - VOR/NDB/DME precisam de recorte brasileiro e vínculo municipal; DME exige
   tabela canal--frequência;
@@ -59,11 +64,11 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Auditar por streaming os arquivos menores do pacote geral Anatel, começando por
-SARC, banda larga fixa e telefonia fixa. A entrega deve inventariar serviço,
-classe, direção, coordenadas, frequência, potência e atributos de antena, sem
-ainda inferir radioenlaces. Depois, os emissores fixos aprovados serão migrados
-ao mesmo esquema canônico usado pela SMP.
+Migrar ao esquema canônico apenas registros ativos com evidência suficiente de
+transmissão/repetição em SARC e banda larga fixa. Receptores e registros com
+papel desconhecido permanecem no inventário; telefonia fixa não entra como
+emissor RF. Nenhum radioenlace será pareado sem chaves cadastrais e verificação
+geométrica explícitas.
 
 ## Comando de retomada
 

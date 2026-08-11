@@ -25,6 +25,11 @@ PRODUCTS = (
     "outputs/canonical_smp/emissions.csv.gz",
     "outputs/canonical_smp/summary.json",
     "reports/canonical_smp/summary.json",
+    "outputs/anatel_general_audit/sarc.csv.gz",
+    "outputs/anatel_general_audit/fixed_broadband.csv.gz",
+    "outputs/anatel_general_audit/fixed_telephony.csv.gz",
+    "outputs/anatel_general_audit/summary.json",
+    "reports/anatel_general_audit/summary.json",
 )
 
 

@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "source_file": "data/raw/anatel/estacoes_licenciadas.zip",
+  "source_sha256": "b77abb225b4ad03bc8b8c6a27913e0b6d851873bab3bd483e66d86712dd5eec1",
+  "records": 16876,
+  "scope": [
+    "sarc",
+    "fixed_broadband",
+    "fixed_telephony"
+  ],
+  "classification_rule": "RF role uses explicit communication direction first, then exclusive transmitter/receiver or repeater station class; unknown is not inferred as emission",
+  "datasets": {
+    "sarc": {
+      "source_member": "Estacoes_SARC.csv",
+      "source_member_crc32": "f4af7522",
+      "records": 8774,
+      "valid_coordinate_records": 8774,
+      "valid_ibge_code_records": 8774,
+      "active_potential_emitter_records": 4228,
+      "frequency_min_mhz": 153.02,
+      "frequency_max_mhz": 12751.0,
+      "transmitter_power_min_w": null,
+      "transmitter_power_max_w": null,
+      "available_fields": {
+        "antenna_gain_db": 8436,
+        "antenna_height_m": 8479,
+        "azimuth_deg": 7887,
+        "elevation_angle_deg": 4764,
+        "emission_designation": 0,
+        "frequency_mhz": 4583,
+        "front_to_back_db": 8093,
+        "half_power_beamwidth_deg": 8113,
+        "parsed_necessary_bandwidth": 0,
+        "polarization": 8532,
+        "transmitter_power_w": 0
+      },
+      "services": {
+        "Serviços Auxiliares de Radiodifusão e Correlatos": 8774
+      },
+      "service_codes": {
+        "251 - AUXILIAR RADIODIF.- TRANSMISS. DE PROGRAMAS": 7870,
+        "252 - AUXILIAR RADIODIF.- REPORTAGEM EXTERNA": 711,
+        "253 - AUXILIAR RADIODIF.- COM. DE ORDENS INTERNAS": 193
+      },
+      "validity_statuses": {
+        "Ativo": 5926,
+        "Vencido": 2848
+      },
+      "station_classes": {
+        "FR": 4142,
+        "TX": 3937,
+        "ML": 355,
+        "N/I": 200,
+        "FX": 94,
+        "FB": 28,
+        "BR": 12,
+        "XR": 4,
+        "TE": 2
+      },
+      "directions": {
+        "N/I": 4221,
+        "Recepção": 2294,
+        "Transmissão": 2259
+      },
+      "origins": {
+        "STEL": 8774
+      },
+      "rf_roles": {
+        "transmitter_station_class": 3939,
+        "explicit_reception_direction": 2294,
+        "explicit_transmission_direction": 2259,
+        "unknown": 282
+      },
+      "normalized_output": "outputs/anatel_general_audit/sarc.csv.gz"
+    },
+    "fixed_broadband": {
+      "source_member": "Estacoes_Banda_Larga_Fixa.csv",
+      "source_member_crc32": "287b289c",
+      "records": 7513,
+      "valid_coordinate_records": 7513,
+      "valid_ibge_code_records": 7513,
+      "active_potential_emitter_records": 1850,
+      "frequency_min_mhz": 705.5,
+      "frequency_max_mhz": 2625.0,
+      "transmitter_power_min_w": 0.0,
+      "transmitter_power_max_w": 501.0,
+      "available_fields": {
+        "antenna_gain_db": 3518,
+        "antenna_height_m": 3704,
+        "azimuth_deg": 3706,
+        "elevation_angle_deg": 3706,
+        "emission_designation": 3710,
+        "frequency_mhz": 3706,
+        "front_to_back_db": 3706,
+        "half_power_beamwidth_deg": 3706,
+        "parsed_necessary_bandwidth": 3514,
+        "polarization": 3446,
+        "transmitter_power_w": 3706
+      },
+      "services": {
+        "Banda Larga Fixa": 7513
+      },
+      "service_codes": {
+        "045 - Serviço de Comunicação Multimídia": 7513
+      },
+      "validity_statuses": {
+        "Vencido": 3802,
+        "Ativo": 3703,
+        "Nulo": 8
+      },
+      "station_classes": {
+        "N/I": 3807,
+        "FX": 1880,
+        "FB": 1824,
+        "BR": 2
+      },
+      "directions": {
+        "N/I": 3799,
+        "Recepção": 1857,
+        "Transmissão": 1857
+      },
+      "origins": {
+        "STEL": 3799,
+        "Mosaico": 3714
+      },
+      "rf_roles": {
+        "unknown": 3799,
+        "explicit_reception_direction": 1857,
+        "explicit_transmission_direction": 1857
+      },
+      "normalized_output": "outputs/anatel_general_audit/fixed_broadband.csv.gz"
+    },
+    "fixed_telephony": {
+      "source_member": "Estacoes_Telefonia_Fixa.csv",
+      "source_member_crc32": "a0bd5a17",
+      "records": 589,
+      "valid_coordinate_records": 589,
+      "valid_ibge_code_records": 589,
+      "active_potential_emitter_records": 0,
+      "frequency_min_mhz": null,
+      "frequency_max_mhz": null,
+      "transmitter_power_min_w": null,
+      "transmitter_power_max_w": null,
+      "available_fields": {
+        "antenna_gain_db": 0,
+        "antenna_height_m": 0,
+        "azimuth_deg": 0,
+        "elevation_angle_deg": 0,
+        "emission_designation": 0,
+        "frequency_mhz": 0,
+        "front_to_back_db": 0,
+        "half_power_beamwidth_deg": 0,
+        "parsed_necessary_bandwidth": 0,
+        "polarization": 0,
+        "transmitter_power_w": 0
+      },
+      "services": {
+        "Telefonia Fixa": 589
+      },
+      "service_codes": {
+        "171 - SERVICO TELEFONICO FIXO COMUTADO": 589
+      },
+      "validity_statuses": {
+        "Vencido": 514,
+        "Ativo": 75
+      },
+      "station_classes": {
+        "N/I": 589
+      },
+      "directions": {
+        "N/I": 589
+      },
+      "origins": {
+        "STEL": 589
+      },
+      "rf_roles": {
+        "unknown": 589
+      },
+      "normalized_output": "outputs/anatel_general_audit/fixed_telephony.csv.gz"
+    }
+  }
+}

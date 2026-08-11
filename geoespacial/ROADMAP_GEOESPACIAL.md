@@ -7,10 +7,10 @@ e M3 — infraestrutura aeronáutica e estratégica. A governança e o gate de
 incorporação científica estão em `SUBPROJETO.md`; a matriz de completude RF
 está em `CAMADAS_EMISSOES_OFICIAIS.md`.
 
-**Checkpoint de retomada:** `STATUS_ATUAL.md`. O esquema canônico
-`sitio_fisico`--`antena`--`emissao` já contém as emissões SMP sem perdas. A
-próxima mudança audita os arquivos menores SARC, banda larga fixa e telefonia
-fixa do pacote geral Anatel.
+**Checkpoint de retomada:** `STATUS_ATUAL.md`. O esquema canônico SMP está
+concluído e os arquivos menores SARC, banda larga fixa e telefonia fixa foram
+auditados por streaming. A próxima mudança migra os transmissores fixos com
+evidência suficiente ao esquema canônico, sem promover registros desconhecidos.
 
 ## Objetivo e regra de inventário
 
@@ -48,8 +48,11 @@ Toda transição de estado deve ser produzida por script Python conforme
 | MDE local detalhado | IBGE/SGB/estaduais | pending | cobertura variável | adquirir somente para finalistas |
 | Torres celulares SMP | Anatel | canonical_integrated | 3.284.526 emissões, 105.726 sítios e 282.623 proxies cadastrais de antena; perda zero; 23 conflitos municipais preservados | usar junção espacial para revisar conflitos e buscar parâmetros radiométricos físicos |
 | Radiodifusão TV/RTV/FM/OM/RTR | Anatel | integrated/spectrum_partial | 35.126 registros; 18.285 licenciados; centro/canal disponíveis, largura ausente | integrar canalização regulatória; revisar 117 conflitos e ERP |
-| Radioenlaces associados a SMP/SCM | Anatel | downloaded/unclassified | prováveis registros SLP/STEL no pacote geral; vínculo ainda não demonstrado | classificar serviços e direção antes de buscar recurso adicional |
-| SLP/SLE/SARC/STEL e serviços fixos | Anatel, pacote geral | downloaded_verified/unclassified | 10,45 GB descompactados; esquema contém frequência, potência, altura, polarização e diagrama | inventariar por streaming e identificar emissores fixos/radioenlaces |
+| Radioenlaces associados a SMP/SCM | Anatel | partially_classified/unpaired | banda larga fixa tem 1.857 direções Tx e 1.857 Rx, mas nenhuma ponta foi pareada; SLP/STEL seguem não classificados | migrar registros com evidência e só depois parear por chaves e geometria |
+| SARC | Anatel, pacote geral | spectrum_partial/audited | 8.774 registros; 4.228 ativos potencialmente emissores; 4.583 frequências; potência/designação ausentes | migrar candidatos conservadores e manter lacunas explícitas |
+| Banda larga fixa/SCM | Anatel, pacote geral | spectrum_audited | 7.513 registros; 1.850 ativos transmissores; frequência/potência em 3.706 e largura decodificada em 3.514 | migrar Tx ativos e preservar 3.799 registros sem direção como desconhecidos |
+| Telefonia fixa/STFC | Anatel, pacote geral | georeferenced_not_rf_ready | 589 registros, 75 ativos, sem frequência, potência, classe ou direção utilizável | manter apenas como infraestrutura até obter complemento oficial |
+| SLP/SLE/Mosaico-STEL | Anatel, pacote geral | downloaded_verified/unclassified | arquivos maiores preservam frequência, potência, altura, polarização e diagrama | inventariar por streaming e identificar emissores fixos/radioenlaces |
 | Estações terrenas/VSAT | Anatel | identified/pending | nova base oficial de estações terrenas em bloco | baixar, inventariar e reconciliar com SLP/SCM/STFC |
 | Aeródromos públicos | ANAC | downloaded_verified | 496 | conciliar com BC250 e DECEA |
 | Aeródromos privados | ANAC | downloaded_verified | 3.856 | conciliar e classificar uso logístico |
@@ -250,18 +253,21 @@ depois da validação de cada estudo insular.
 
 ## Próxima sequência recomendada
 
-1. definir o esquema canônico sítio--antena--emissão e incorporar as portadoras
-   SMP já auditadas;
-2. auditar o pacote geral Anatel por serviço, começando pelos arquivos menores
-   SARC, banda larga fixa e telefonia fixa antes de SLE/SLP/STEL;
-3. normalizar radiodifusão e integrar VOR/NDB/DME por município;
-4. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
+1. **concluído:** definir o esquema canônico sítio--antena--emissão e incorporar
+   as portadoras SMP já auditadas;
+2. **concluído:** auditar os arquivos menores SARC, banda larga fixa e telefonia
+   fixa antes de SLE/SLP/STEL;
+3. migrar ao esquema canônico os registros ativos SARC/SCM com evidência de
+   transmissão ou repetição, preservando as lacunas RF;
+4. auditar SLE/SLP/STEL e parear enlaces somente com chaves e geometria;
+5. normalizar radiodifusão e integrar VOR/NDB/DME por município;
+6. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
    BC250 e DECEA;
-5. adquirir VSAT e o inventário oficial de radares meteorológicos;
-6. selecionar e baixar TOPODATA continental por região;
-7. reconstruir o grafo unificado município--sítio--antena--emissão--aeródromo--
+7. adquirir VSAT e o inventário oficial de radares meteorológicos;
+8. selecionar e baixar TOPODATA continental por região;
+9. reconstruir o grafo unificado município--sítio--antena--emissão--aeródromo--
    candidato;
-8. integrar restrições territoriais e iniciar *viewshed* regional.
+10. integrar restrições territoriais e iniciar *viewshed* regional.
 
 ## Artefatos obrigatórios por execução
 

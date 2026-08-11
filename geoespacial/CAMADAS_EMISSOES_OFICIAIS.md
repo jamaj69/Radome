@@ -29,7 +29,10 @@ modelo RF completo.
 | NDB — DECEA/ICA | 24/24 | elevação 19/24 | frequência 24/24, 114,3–407 kHz; banda de emissão 1/24 | potência/diagrama ausentes | baixada e inventariada | completar elevação e parâmetros RF oficiais |
 | DME — DECEA/ICA | 173/173 | elevação 158/173 | canal 173/173; portadora UHF ainda não derivada | potência/diagrama ausentes | baixada e inventariada | versionar tabela oficial canal--frequência e reconciliar DME pareados |
 | ILS/LOC e relações `navaids` — DECEA/ICA | 124/124 | elevação 30/124 | frequência ausente na visão agregada | ausentes | baixada como relação | obter componentes/frequências oficiais e evitar contar o mesmo conjunto duas vezes |
-| SLP/SLE/SARC/STEL/SCM/STFC — Anatel | campos de coordenada e município no pacote geral | campo de altura de antena | frequência e designação de emissão | potência, polarização, ganho, azimute, elevação e abertura disponíveis no esquema | pacote baixado, mas 10,45 GB descompactados ainda não classificados | inventariar serviços, descartar recepção/móveis e reconciliar pontas de radioenlace |
+| SARC — Anatel | 8.774/8.774 coordenadas e municípios | altura em 8.479 | frequência em 4.583; designação/largura indisponíveis | ganho/diagrama amplamente presentes; potência indisponível | auditado; 4.228 ativos com evidência de transmissão/repetição | migrar candidatos sem criar potência ou largura inexistente |
+| Banda larga fixa/SCM — Anatel | 7.513/7.513 coordenadas e municípios | altura em 3.704 | frequência em 3.706; largura decodificada em 3.514 | potência e diagrama em cerca de 3.706 | auditado; 1.850 ativos com direção Tx; 3.799 desconhecidos | migrar Tx ativos e manter desconhecidos fora de `illuminates` |
+| Telefonia fixa/STFC — Anatel | 589/589 coordenadas e municípios | indisponível | indisponível | indisponível | auditado; não pronto para RF | manter como infraestrutura até complemento oficial |
+| SLP/SLE/STEL — Anatel | campos de coordenada e município no pacote geral | campo de altura de antena | frequência e designação de emissão | potência, polarização, ganho, azimute, elevação e abertura disponíveis no esquema | pacote baixado; arquivos grandes ainda não classificados | inventariar serviços, descartar recepção/móveis e reconciliar pontas de radioenlace |
 | Radioamador — Anatel | município, sem coordenada precisa no recurso atual | ausente | frequências declaradas de forma agregada | ausentes | baixado, não integrado | baixa prioridade e atividade temporal desconhecida |
 | Estações marítimas — Anatel | predominantemente móveis; arquivo sem coordenada geográfica útil | ausente | frequências/potências agregadas | incompletos | baixado, não integrado | separar estações costeiras fixas de embarcações móveis |
 | Estações terrenas/VSAT — Anatel | fonte oficial identificada | a auditar | a auditar | a auditar | não baixada | adquirir base “Estações Terrenas em Bloco” e cruzar com SLP/SCM/STFC |
@@ -80,14 +83,15 @@ forem desconhecidos.
 
 1. **concluído:** criar o esquema canônico sítio--antena--emissão e migrar as
    3.284.526 emissões SMP sem perdas;
-2. auditar por streaming o pacote geral Anatel, começando por SARC, banda larga
-   fixa e telefonia fixa, depois SLE, SLP e Mosaico/STEL;
-3. identificar classes fixas transmissoras e parear radioenlaces;
-4. normalizar ERP/HCI e canalização de radiodifusão;
-5. recortar VOR/NDB/DME ao Brasil, associar municípios e derivar DME por tabela
+2. **parcialmente concluído:** SARC, banda larga fixa e telefonia fixa foram
+   auditados; faltam SLE, SLP e Mosaico/STEL;
+3. migrar os registros ativos SARC/SCM com evidência de transmissão/repetição;
+4. auditar SLE/SLP/STEL e parear radioenlaces somente quando demonstrável;
+5. normalizar ERP/HCI e canalização de radiodifusão;
+6. recortar VOR/NDB/DME ao Brasil, associar municípios e derivar DME por tabela
    oficial;
-6. obter frequências/componentes ILS/LOC e decidir VSAT/radares meteorológicos;
-7. somente então calcular disponibilidade e qualidade de iluminadores na Fase 6.
+7. obter frequências/componentes ILS/LOC e decidir VSAT/radares meteorológicos;
+8. somente então calcular disponibilidade e qualidade de iluminadores na Fase 6.
 
 ## Fontes oficiais adicionais identificadas
 

@@ -1,11 +1,11 @@
 {
-  "verified_at_utc": "2026-08-11T03:18:26.580281+00:00",
+  "verified_at_utc": "2026-08-11T03:30:41.767149+00:00",
   "pipeline_command": [
     "/home/python/pyenv/bin/python",
     "/home/jamaj/src/Radome/geoespacial/run_pipeline.py",
     "--skip-tests"
   ],
-  "product_count": 12,
+  "product_count": 17,
   "byte_reproducible": true,
   "hashes": {
     "reports/preselection_bc250/candidates.csv": "c6cb6a2aceb9c2a2195ecb0280a850425b52245a57e0e234edab18a59f22d3c0",
@@ -19,7 +19,12 @@
     "outputs/canonical_smp/antennas.csv.gz": "4af4785702610a739e19398328a69ffadb3409259b37c8b3242fc0fa33e0160e",
     "outputs/canonical_smp/emissions.csv.gz": "1c25f4cb00eb7d294c67586c7ba7e0d5d0cb6d0807f99be5e60847eaaef82b7e",
     "outputs/canonical_smp/summary.json": "7556c3e3ebb92aa118e20d1d422ad2937027d6ce84cd9bb0caad5451864ed37d",
-    "reports/canonical_smp/summary.json": "7556c3e3ebb92aa118e20d1d422ad2937027d6ce84cd9bb0caad5451864ed37d"
+    "reports/canonical_smp/summary.json": "7556c3e3ebb92aa118e20d1d422ad2937027d6ce84cd9bb0caad5451864ed37d",
+    "outputs/anatel_general_audit/sarc.csv.gz": "d69170b3c154ac8358b412b3f3fcf9f858df89f8f774cbd97795c7994a323f89",
+    "outputs/anatel_general_audit/fixed_broadband.csv.gz": "d33677eed9fc15ac4441fa0a84ed99b460ca8b326b9f41f54c7ce24a490ae1fd",
+    "outputs/anatel_general_audit/fixed_telephony.csv.gz": "ed05c4d2b0f30439b3c68980e6ccce27b0fbb6aac01dbcf48d9298984781b228",
+    "outputs/anatel_general_audit/summary.json": "8bd3643596e606ecb302762ac8227606d2a99303157031ed1030f6129fe4611c",
+    "reports/anatel_general_audit/summary.json": "8bd3643596e606ecb302762ac8227606d2a99303157031ed1030f6129fe4611c"
   },
   "differences": {}
 }

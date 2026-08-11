@@ -88,6 +88,7 @@ This is a durable log of the chat content visible to the agent. It is not a verb
 64. User asked whether reproduction had actually been tested. `verify_reproducibility.py` now executes the authoritative Python pipeline twice over unchanged inputs and compares SHA-256 for seven CSV, GeoJSON, GraphML, JSON and PNG products, writing a versioned machine-readable report and failing if any byte differs.
 65. User requested a documentation checkpoint so work can continue without context loss. `geoespacial/STATUS_ATUAL.md` now consolidates parent-project linkage, M2E/M3 status, acquired and integrated layers, 26-test and seven-product byte-reproducibility evidence, controlled gaps and the exact next implementation: a canonical `sitio_fisico`--`antena`--`emissao` model populated first from the audited SMP records with zero-loss/cardinality tests.
 66. User ordered continuation of the next M2E gate. `build_canonical_smp.py` now streams the official SMP ZIP into deterministic gzip tables for 105,726 sites, 282,623 antenna proxies and all 3,284,526 source emissions. The intermediate antenna identity is explicitly low-confidence and means station plus sector at a five-decimal rounded site, not a physically verified radiator. Thirty tests pass, no source row or relation was lost, all records have valid site/antenna links, 23 municipal conflicts remain explicit, and 12 pipeline products reproduce byte for byte. The next M2E action is the streaming audit of smaller general-Anatel files, beginning with SARC, fixed broadband and fixed telephony.
+67. User ordered continuation. `audit_anatel_general.py` now streams the general Anatel ZIP without extracting 10.45 GB and normalizes 16,876 records from SARC, fixed broadband/SCM and fixed telephony/STFC. Direction is authoritative when explicit; exclusive Tx/Rx and repeater classes are secondary evidence; unknown records are not inferred as emitters. SARC has 4,228 active potential emitters but no usable power/designation, SCM has 1,850 active explicit Tx records with substantially better RF fields, and STFC has no usable RF parameters. No link endpoints were paired. Thirty-three tests pass and 17 products reproduce byte for byte. The next gate migrates only sufficiently evidenced active transmitters/repeaters into the canonical schema.
 
 ## Commits created in this session
 
@@ -219,9 +220,9 @@ Known remaining LaTeX warnings are pre-existing C6 items: duplicate page anchors
 
 For the geospatial subproject, execute M2E before quantitative RF edges:
 
-1. audit the smaller general-Anatel files (SARC, fixed broadband and fixed telephony);
-2. migrate approved fixed emitters into the canonical schema;
-3. then classify SLE/SLP/STEL, pair radio links and continue M3 reconciliation.
+1. migrate sufficiently evidenced active SARC/SCM transmitters or repeaters into the canonical schema;
+2. classify SLE/SLP/STEL and pair radio links only with explicit keys and geometry;
+3. continue M3 reconciliation.
 
 The compact restart checkpoint is `geoespacial/STATUS_ATUAL.md`.
 

@@ -195,3 +195,11 @@ Canais vagos, suspensos, pendentes ou aguardando outorga, dados, ato de RF ou
 licenciamento permanecem no inventário. Registros licenciados co-localizados
 são agregados por coordenada, preservando serviço, canal, frequência, entidade,
 classe, categoria, finalidade e ERP.
+
+No pacote geral Anatel, a classificação de papel RF usa primeiro a direção de
+comunicação explicitamente declarada. Na ausência dela, apenas classes
+exclusivamente transmissoras, exclusivamente receptoras ou repetidoras são
+usadas como evidência secundária. Classes fixas ou de base sem direção e valores
+inválidos permanecem desconhecidos; não são promovidos a iluminadores. O estado
+de validade é mantido separadamente, e o pareamento de pontas de radioenlace é
+adiado até haver chaves cadastrais e verificação geométrica reproduzível.
