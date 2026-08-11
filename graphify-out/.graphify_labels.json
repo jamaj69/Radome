@@ -108,5 +108,7 @@
   "106": "validate_anatel_radio_link_geometry.py",
   "107": "build_canonical_fixed_emitters.py",
   "108": "validate_anatel_radio_link_geometry.py",
-  "109": "unified_geospatial_graph/README.md"
+  "109": "unified_geospatial_graph/README.md",
+  "110": "validate_anatel_radio_link_vertical_geometry.py",
+  "111": "candidate_ranking/README.md"
 }

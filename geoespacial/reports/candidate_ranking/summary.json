@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "input_graph": "geoespacial/outputs/unified_candidate_context/graph.graphml",
+  "input_graph_sha256": "27558153fe7d9aede1a1ce2ba7f3811850be199194399c6ea2e5dbaf8533596c",
+  "bc250": "geoespacial/data/raw/ibge/bc250/bc250_2026-03-03.gpkg",
+  "bc250_sha256": "87ceffdfb894d9f034812a3ad25126a831f8f6016f01e412ca487edccb208a7d",
+  "candidate_count": 131,
+  "city_point_count": 5583,
+  "scenarios": {
+    "balanced": {
+      "elevation": 0.4,
+      "city_count": 0.15,
+      "city_sectors": 0.1,
+      "smp": 0.08,
+      "broadcast": 0.08,
+      "radio_link": 0.08,
+      "connectivity": 0.11
+    },
+    "altitude_priority": {
+      "elevation": 0.6,
+      "city_count": 0.1,
+      "city_sectors": 0.08,
+      "smp": 0.04,
+      "broadcast": 0.04,
+      "radio_link": 0.04,
+      "connectivity": 0.1
+    },
+    "logistics_rf_priority": {
+      "elevation": 0.25,
+      "city_count": 0.2,
+      "city_sectors": 0.15,
+      "smp": 0.1,
+      "broadcast": 0.1,
+      "radio_link": 0.1,
+      "connectivity": 0.1
+    }
+  },
+  "outputs": {
+    "table": {
+      "path": "geoespacial/outputs/candidate_ranking/candidate_ranking.csv.gz",
+      "sha256": "098da265e5e0142be27b7e348596919f52007498dc746af7560ce8cd5728d1b4"
+    },
+    "geojson": {
+      "path": "geoespacial/outputs/candidate_ranking/candidate_ranking.geojson",
+      "sha256": "eef45afa7cb7489dc64c97406b0177369f1255a9981dbedd86d718a03af477f4"
+    },
+    "graph": {
+      "path": "geoespacial/outputs/candidate_ranking/graph.graphml",
+      "sha256": "d1cc11effa105d3a54daea9da94eee8d055c33bed259393a73cf98b8f241a09f"
+    }
+  },
+  "top_10_robust": [
+    {
+      "robust_rank": 1,
+      "node_id": "airport:-46.56461878:-21.83849708",
+      "name": "Aeroporto Embaixador Walther Moreira Salles",
+      "kind": "airport",
+      "mean_scenario_rank": 1,
+      "rank_range": 0,
+      "rank_balanced": 1,
+      "rank_altitude_priority": 1,
+      "rank_logistics_rf_priority": 1
+    },
+    {
+      "robust_rank": 2,
+      "node_id": "airport:-48.92682574:-16.35968949",
+      "name": "Aeroporto Anápolis",
+      "kind": "airport",
+      "mean_scenario_rank": 3.333333,
+      "rank_range": 4,
+      "rank_balanced": 2,
+      "rank_altitude_priority": 2,
+      "rank_logistics_rf_priority": 6
+    },
+    {
+      "robust_rank": 3,
+      "node_id": "capital:3550308",
+      "name": "São Paulo",
+      "kind": "capital",
+      "mean_scenario_rank": 4,
+      "rank_range": 3,
+      "rank_balanced": 5,
+      "rank_altitude_priority": 5,
+      "rank_logistics_rf_priority": 2
+    },
+    {
+      "robust_rank": 4,
+      "node_id": "capital:3106200",
+      "name": "Belo Horizonte",
+      "kind": "capital",
+      "mean_scenario_rank": 5.333333,
+      "rank_range": 4,
+      "rank_balanced": 6,
+      "rank_altitude_priority": 7,
+      "rank_logistics_rf_priority": 3
+    },
+    {
+      "robust_rank": 5,
+      "node_id": "capital:5300108",
+      "name": "Brasília",
+      "kind": "capital",
+      "mean_scenario_rank": 5.333333,
+      "rank_range": 7,
+      "rank_balanced": 3,
+      "rank_altitude_priority": 3,
+      "rank_logistics_rf_priority": 10
+    },
+    {
+      "robust_rank": 6,
+      "node_id": "airport:-47.92067784:-15.86963786",
+      "name": "Aeroporto Internacional Presidente Juscelino Kubitscheck",
+      "kind": "airport",
+      "mean_scenario_rank": 6.666667,
+      "rank_range": 8,
+      "rank_balanced": 4,
+      "rank_altitude_priority": 4,
+      "rank_logistics_rf_priority": 12
+    },
+    {
+      "robust_rank": 7,
+      "node_id": "airport:-42.18289619:-20.26392624",
+      "name": "Aeroporto Elias Breder",
+      "kind": "airport",
+      "mean_scenario_rank": 7,
+      "rank_range": 6,
+      "rank_balanced": 7,
+      "rank_altitude_priority": 10,
+      "rank_logistics_rf_priority": 4
+    },
+    {
+      "robust_rank": 8,
+      "node_id": "airport:-46.65946677:-23.62616514",
+      "name": "Aeroporto de Congonhas",
+      "kind": "airport",
+      "mean_scenario_rank": 8,
+      "rank_range": 6,
+      "rank_balanced": 8,
+      "rank_altitude_priority": 11,
+      "rank_logistics_rf_priority": 5
+    },
+    {
+      "robust_rank": 9,
+      "node_id": "capital:4106902",
+      "name": "Curitiba",
+      "kind": "capital",
+      "mean_scenario_rank": 10.333333,
+      "rank_range": 6,
+      "rank_balanced": 9,
+      "rank_altitude_priority": 8,
+      "rank_logistics_rf_priority": 14
+    },
+    {
+      "robust_rank": 10,
+      "node_id": "airport:-46.48162768:-23.42600608",
+      "name": "Aeroporto Internacional  Governador André Franco Montoro",
+      "kind": "airport",
+      "mean_scenario_rank": 10.666667,
+      "rank_range": 8,
+      "rank_balanced": 10,
+      "rank_altitude_priority": 15,
+      "rank_logistics_rf_priority": 7
+    }
+  ],
+  "screening_semantics": "preliminary multicriteria screening; curvature-only radii and proximity counts; no terrain visibility, RF illumination, feasibility, or operational performance"
+}

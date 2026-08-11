@@ -270,15 +270,17 @@ depois da validação de cada estudo insular.
    indexadas; 328 rotas recalculadas, mantendo a folha ausente explícita;
 9. **concluído:** associar os 131 candidatos aos municípios BC250 e contar SMP,
    radiodifusão e endpoints dentro do raio geométrico, sem alegar visibilidade;
-10. ordenar os candidatos por critérios normalizados e análise de sensibilidade;
-11. normalizar radiodifusão e integrar VOR/NDB/DME por município;
-12. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
+10. **concluído:** ordenar candidatos em três cenários normalizados e registrar
+    a amplitude de posições como análise de sensibilidade;
+11. construir a grade continental, matriz candidato--célula e mapa de lacunas;
+12. normalizar radiodifusão e integrar VOR/NDB/DME por município;
+13. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
    BC250 e DECEA;
-13. adquirir VSAT e o inventário oficial de radares meteorológicos;
-14. selecionar e baixar TOPODATA continental por região;
-15. reconstruir o grafo unificado município--sítio--antena--emissão--aeródromo--
+14. adquirir VSAT e o inventário oficial de radares meteorológicos;
+15. selecionar e baixar TOPODATA continental por região;
+16. reconstruir o grafo unificado município--sítio--antena--emissão--aeródromo--
    candidato;
-16. integrar restrições territoriais e iniciar *viewshed* regional.
+17. integrar restrições territoriais e iniciar *viewshed* regional.
 
 ## Artefatos obrigatórios por execução
 

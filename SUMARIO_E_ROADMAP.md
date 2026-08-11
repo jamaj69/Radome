@@ -177,6 +177,11 @@ canônicos e acrescentou 131 vínculos administrativos. Nos raios geométricos h
 se sobrepor entre candidatos e não comprovam visada ou iluminação. O GraphML e a
 tabela gzip reproduziram byte a byte. O próximo gate ordena os candidatos com
 componentes normalizados e análise de sensibilidade, antes de qualquer *viewshed*.
+A ordenação usa três cenários e mantém sete componentes auditáveis. O Aeroporto
+Embaixador Walther Moreira Salles lidera todos; Anápolis, São Paulo, Belo Horizonte
+e Brasília completam os cinco primeiros robustos. Essa concentração evidencia o
+viés urbano do conjunto e não resolve cobertura nacional. O próximo gate constrói
+uma grade continental e quantifica lacunas geométricas antes da cobertura mínima.
 
 ## 6. Roadmap orientado por gates
 

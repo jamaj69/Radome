@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786432973.9565213,
-    "ast_hash": "d03f8211008db8203d1a143ff653820a",
+    "mtime": 1786433251.0592444,
+    "ast_hash": "812f18e804e8363707ffa890bbee4cd7",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "geoespacial/README.md": {
-    "mtime": 1786432973.4725235,
-    "ast_hash": "d114d5c7212c8f420469e02f829f9ce4",
+    "mtime": 1786433250.551247,
+    "ast_hash": "bb795e02525b60e0aeca815ac0c5c1f0",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/topodata_altitude_tiles.json": {
@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786432973.792522,
-    "ast_hash": "8f25da3c62e00892b46734a37db4fdbd",
+    "mtime": 1786433250.8912454,
+    "ast_hash": "77c1b7ce879fe1cc3b9932f5f7ca93f2",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786432973.6285229,
-    "ast_hash": "fe882e1efb8e85c191d7f64a73775d5c",
+    "mtime": 1786433250.727246,
+    "ast_hash": "4f1ffaae72b10cfa05384d9107e366c5",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -1122,6 +1122,26 @@
   "geoespacial/reports/unified_candidate_context/README.md": {
     "mtime": 1786432973.3085244,
     "ast_hash": "5bdecb4ff2de4d2c55463288a2422fbe",
+    "semantic_hash": ""
+  },
+  "geoespacial/rank_candidate_sites.py": {
+    "mtime": 1786433131.5117955,
+    "ast_hash": "0d4f670e7e17a7b66ee301c484956013",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/candidate_ranking/summary.json": {
+    "mtime": 1786433211.1634283,
+    "ast_hash": "dfca58d8b8a7239709c6926998febbdb",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_rank_candidate_sites.py": {
+    "mtime": 1786433175.899591,
+    "ast_hash": "22a52dc6074b62b17872b7b178719715",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/candidate_ranking/README.md": {
+    "mtime": 1786433250.3792477,
+    "ast_hash": "8a82acc8fa3b4f687d4c6078d7f5fdc1",
     "semantic_hash": ""
   }
 }

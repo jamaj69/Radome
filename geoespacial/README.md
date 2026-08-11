@@ -327,6 +327,19 @@ são calculados sem criar arestas RF ou alegar visibilidade:
   --report reports/unified_candidate_context/summary.json
 ```
 
+A análise de sensibilidade da ordenação preliminar é gerada por:
+
+```bash
+/usr/bin/python3 rank_candidate_sites.py \
+  --graphml outputs/unified_candidate_context/graph.graphml \
+  --bc250 data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
+  --output-dir outputs/candidate_ranking \
+  --report reports/candidate_ranking/summary.json
+```
+
+Os pesos e componentes permanecem no relatório; o escore não representa
+visibilidade, cobertura RF ou aptidão operacional.
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;

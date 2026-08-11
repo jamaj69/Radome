@@ -93,6 +93,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - dentro dos raios geométricos preliminares há 790.026 incidências candidato--SMP,
   80.682 candidato--radiodifusor e 3.623 candidato--endpoint; são incidências
   sobrepostas, não objetos únicos nem confirmação de visada/iluminação;
+- ordenação preliminar: três cenários preservam separadamente altitude, cidades,
+  oito setores azimutais, SMP, radiodifusão, endpoints e conectividade; Aeroporto
+  Embaixador Walther Moreira Salles lidera os três, seguido na ordenação robusta
+  por Anápolis, São Paulo, Belo Horizonte e Brasília;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -100,7 +104,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 70 testes automatizados do conjunto disponível aprovados; a descoberta total
+- 73 testes automatizados do conjunto disponível aprovados; a descoberta total
   registra uma falha preexistente porque `acquire_decea_wfs.py` está ausente;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
@@ -129,11 +133,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Produzir uma ordenação multicritério preliminar dos 131 candidatos, normalizando
-altitude, logística municipal, diversidade azimutal de cidades e densidade das
-três classes RF. Preservar cada componente e executar análise de sensibilidade;
-não converter o escore, proximidade ou horizonte geométrico em visibilidade de
-terreno ou desempenho operacional.
+Construir uma grade continental de análise, calcular a incidência geométrica dos
+131 candidatos sobre suas células e diagnosticar regiões não cobertas antes de
+resolver cobertura mínima. Não interpretar célula dentro do raio como *viewshed*
+ou cobertura RF; o resultado apenas mede a insuficiência do conjunto inicial.
 
 ## Comando de retomada
 
