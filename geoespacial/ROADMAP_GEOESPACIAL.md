@@ -279,8 +279,10 @@ depois da validação de cada estudo insular.
     a amplitude de posições como análise de sensibilidade;
 11. **concluído:** construir grade continental de 0,25°, matriz candidato--célula
     e diagnóstico de 1.732 células descobertas;
-12. gerar candidatos adicionais orientados pelas lacunas e por terreno alto;
-    depois repetir a triangulação basal e medir o ganho em faces `K3`;
+12. **em andamento:** selecionar TOPODATA para as lacunas continentais foi
+    concluído (141 folhas, 8.737.783.808 bytes listados, nenhuma ausência);
+    baixar/extrair as folhas, gerar candidatos adicionais orientados por terreno
+    alto e depois repetir a triangulação basal e medir o ganho em faces `K3`;
 13. normalizar radiodifusão e integrar VOR/NDB/DME por município;
 14. baixar e congelar as dez camadas DECEA ainda pendentes e reconciliar ANAC,
    BC250 e DECEA;

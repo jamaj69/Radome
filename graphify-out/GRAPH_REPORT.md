@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 177 files · ~497,740 words
+- 181 files · ~499,595 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1195 nodes · 1580 edges · 117 communities (93 shown, 24 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 111 edges (avg confidence: 0.79)
+- 1208 nodes · 1598 edges · 118 communities (93 shown, 25 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 114 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `33665e92`
+- Built from commit: `77589d55`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -131,6 +131,7 @@
 - extract_anatel_radio_links.py
 - Methodological gaps
 - triangular_mesh_baseline/README.md
+- topodata_gap_tiles/README.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -159,7 +160,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (117 total, 24 thin omitted)
+## Communities (118 total, 25 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -190,8 +191,8 @@ Cohesion: 0.18
 Nodes (11): Expected Development Path, Functional Architecture, Mission Statement, Notes, Operational Scenario, Overview, RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network, Repository Contents (+3 more)
 
 ### Community 7 - "Conceptual and theoretical gaps"
-Cohesion: 0.12
-Nodes (16): Airborne and curved-platform field datasets, Antenna bandwidth versus receiver observability, Closed-set and dataset-leakage risks, Conceptual and theoretical gaps, Emitter identity versus signal deviation, Environmental and structural aging, Inconsistent metrics, Insufficient adversarial testing (+8 more)
+Cohesion: 0.18
+Nodes (11): Airborne and curved-platform field datasets, Antenna bandwidth versus receiver observability, Conceptual and theoretical gaps, Emitter identity versus signal deviation, Environmental and structural aging, No demonstrated seamless multi-octave system, Open questions and gaps, Population and context gaps (+3 more)
 
 ### Community 8 - "Conceptual and theoretical gaps"
 Cohesion: 0.18
@@ -210,8 +211,8 @@ Cohesion: 0.18
 Nodes (10): 1. Síntese executiva, 2. Mapa compacto do sistema, 3. Linha de evolução documental, 4. Verificação da revisão de literatura via Consensus, 5. Estado técnico e lacunas decisivas, 6. Roadmap orientado por gates, 7. Próximas ações prioritárias, 8. Critério de sucesso do programa (+2 more)
 
 ### Community 12 - "radome_antenna_literature_review/review.md"
-Cohesion: 0.22
-Nodes (8): Broadband Antennas Integrated with Radome Faces for Passive Detection of Clandestine or Anomalous RF Signals, How the field got here, Limitations of this review, Recommended research architecture, References, Search method, Terminology shifts, Topic overview
+Cohesion: 0.17
+Nodes (11): Broadband Antennas Integrated with Radome Faces for Passive Detection of Clandestine or Anomalous RF Signals, Citation velocity, Cross-search signals, How the field got here, Limitations of this review, Recommended research architecture, References, Repeat-hit papers (+3 more)
 
 ### Community 13 - "review.md"
 Cohesion: 0.17
@@ -334,12 +335,12 @@ Cohesion: 0.40
 Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 5: integration, calibration, and operational validation, What the research shows
 
 ### Community 46 - "Cross-search signals"
-Cohesion: 0.29
-Nodes (8): approximate_cell_area_km2(), build(), containing_unit(), covering_candidates(), federation_units(), main(), Path, ContinentalCoverageGridTests
+Cohesion: 0.15
+Nodes (11): cell_sample_points(), main(), Path, Retorna centro e cantos internos suficientes para células menores que uma folha., select(), main(), Path, select() (+3 more)
 
 ### Community 47 - "Cross-search signals"
-Cohesion: 0.67
-Nodes (3): Citation velocity, Cross-search signals, Repeat-hit papers
+Cohesion: 0.40
+Nodes (5): Closed-set and dataset-leakage risks, Inconsistent metrics, Insufficient adversarial testing, Lack of end-to-end evaluation, Methodological gaps
 
 ### Community 48 - "localize_figures.py"
 Cohesion: 0.17
@@ -442,8 +443,8 @@ Cohesion: 0.50
 Nodes (3): Famílias explícitas de radioenlaces Anatel, Reprodução, Resultado
 
 ### Community 83 - "evaluate_anatel_radio_link_terrain.py"
-Cohesion: 0.07
-Nodes (27): candidate_status(), evaluate(), main(), Counter, Path, classify(), evaluate(), interpolate() (+19 more)
+Cohesion: 0.09
+Nodes (22): candidate_status(), evaluate(), main(), Counter, Path, classify(), evaluate(), interpolate() (+14 more)
 
 ### Community 84 - "extract_topodata_route_tiles.py"
 Cohesion: 0.24
@@ -506,8 +507,8 @@ Cohesion: 0.36
 Nodes (5): analyze(), distance(), main(), Path, CandidateTest
 
 ### Community 105 - "build_canonical_fixed_emitters.py"
-Cohesion: 0.13
-Nodes (18): build(), face_status(), lambert_azimuthal_equal_area(), main(), Path, read_grid(), triangle_quality(), build() (+10 more)
+Cohesion: 0.09
+Nodes (26): build(), face_status(), lambert_azimuthal_equal_area(), main(), Path, read_grid(), triangle_quality(), approximate_cell_area_km2() (+18 more)
 
 ### Community 107 - "build_canonical_fixed_emitters.py"
 Cohesion: 0.48
@@ -530,24 +531,24 @@ Cohesion: 0.40
 Nodes (5): Closed-set and dataset-leakage risks, Inconsistent metrics, Insufficient adversarial testing, Lack of end-to-end evaluation, Methodological gaps
 
 ## Knowledge Gaps
-- **505 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+500 more)
+- **506 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+501 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network` connect `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network` to `Projeto_Radomes_Multifaixa_Revisado.md`, `Key Technical Themes`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Why does `number()` connect `audit_anatel_spectrum.py` to `analyze`, `build_canonical_fixed_emitters.py`, `evaluate_anatel_radio_link_terrain.py`, `build_canonical_smp.py`, `inventory_infrastructure.py`, `extract_anatel_radio_link_keys.py`, `consolidate_anatel_radio_link_prequalification.py`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 10 inferred relationships involving `number()` (e.g. with `analyze()` and `audit_member()`) actually correct?**
   _`number()` has 10 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _505 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _506 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
