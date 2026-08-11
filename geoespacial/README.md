@@ -284,6 +284,20 @@ python build_anatel_radio_link_hypothesis_graph.py \
   --report reports/anatel_radio_link_hypothesis_graph/summary.json
 ```
 
+O enriquecimento liga cada ponta aos municípios canônicos e preserva conjuntos
+de estações, entidades e códigos IBGE:
+
+```bash
+python enrich_anatel_radio_link_hypothesis_graph.py \
+  --graphml outputs/anatel_radio_link_hypothesis_graph/graph.graphml \
+  --prequalification outputs/anatel_radio_link_prequalification/paths.csv.gz \
+  --keys outputs/anatel_radio_link_keys/records.csv.gz \
+  --emissions outputs/anatel_radio_links/emissions.csv.gz \
+  --municipality-graphml outputs/municipal_emitter_network/municipal_emitter_network.graphml \
+  --output outputs/anatel_radio_link_hypothesis_graph/enriched.graphml \
+  --report reports/anatel_radio_link_hypothesis_graph/enrichment.json
+```
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;

@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 153 files · ~488,898 words
+- 155 files · ~489,554 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1096 nodes · 1443 edges · 107 communities (88 shown, 19 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 116 edges (avg confidence: 0.79)
+- 1107 nodes · 1459 edges · 109 communities (90 shown, 19 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 118 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `85b15485`
+- Built from commit: `82484b55`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -121,6 +121,8 @@
 - analyze
 - build_canonical_fixed_emitters.py
 - validate_anatel_radio_link_geometry.py
+- build_canonical_fixed_emitters.py
+- validate_anatel_radio_link_geometry.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -149,7 +151,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (107 total, 19 thin omitted)
+## Communities (109 total, 19 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -444,8 +446,8 @@ Cohesion: 0.47
 Nodes (4): CanonicalSmpTest, Path, read_gzip_csv(), write_fixture()
 
 ### Community 86 - "build_canonical_smp.py"
-Cohesion: 0.20
-Nodes (12): build(), canonical_coordinate(), deterministic_gzip_csv(), dominant_code(), main(), Counter, Path, Abre CSV gzip reproduzível, sem nome ou horário variável no cabeçalho. (+4 more)
+Cohesion: 0.16
+Nodes (15): build(), canonical_coordinate(), deterministic_gzip_csv(), dominant_code(), main(), Counter, Path, Abre CSV gzip reproduzível, sem nome ou horário variável no cabeçalho. (+7 more)
 
 ### Community 87 - "inventory_infrastructure.py"
 Cohesion: 0.27
@@ -460,24 +462,24 @@ Cohesion: 0.25
 Nodes (10): audit_broadcast(), audit_smp(), emission_bandwidth_hz(), main(), number(), positive_frequency(), Path, Decodifica a largura necessária no início da designação ITU. (+2 more)
 
 ### Community 90 - "build_anatel_radio_link_hypothesis_graph.py"
-Cohesion: 0.27
-Nodes (8): build(), build_graph(), component_summary(), main(), node_id(), Path, RadioLinkHypothesisGraphTest, MultiDiGraph
+Cohesion: 0.13
+Nodes (15): build(), build_graph(), component_summary(), main(), node_id(), MultiDiGraph, Path, apply_context() (+7 more)
 
 ### Community 91 - "extract_anatel_radio_link_keys.py"
-Cohesion: 0.23
-Nodes (8): clean(), extract(), main(), Path, extract(), main(), Path, RawLinkKeysTest
+Cohesion: 0.36
+Nodes (6): clean(), extract(), main(), Path, RawLinkKeysTest, ZipFile
 
 ### Community 93 - "consolidate_anatel_radio_link_prequalification.py"
-Cohesion: 0.20
-Nodes (10): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest, angular_error(), bearing(), main() (+2 more)
+Cohesion: 0.31
+Nodes (5): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest
 
 ### Community 96 - "ZipFile"
-Cohesion: 0.42
-Nodes (6): file_sha256(), inventory(), main(), Path, SmpInventoryTest, ZipFile
+Cohesion: 0.39
+Nodes (5): file_sha256(), inventory(), main(), Path, SmpInventoryTest
 
 ### Community 97 - "test_build_canonical_fixed_emitters.py"
-Cohesion: 0.24
-Nodes (11): antenna_signature(), build(), canonical_number(), exclusion_reason(), main(), Path, CanonicalFixedEmittersTest, Path (+3 more)
+Cohesion: 0.47
+Nodes (5): CanonicalFixedEmittersTest, Path, read_rows(), record(), write_input()
 
 ### Community 100 - "Projeto_Radomes_Multifaixa_Revisado.md"
 Cohesion: 0.33
@@ -499,6 +501,14 @@ Nodes (5): analyze(), distance(), main(), Path, CandidateTest
 Cohesion: 0.27
 Nodes (9): dominant_code(), main(), municipal_features(), Counter, Path, read_population(), read_smp_sites(), write_network() (+1 more)
 
+### Community 107 - "build_canonical_fixed_emitters.py"
+Cohesion: 0.48
+Nodes (6): antenna_signature(), build(), canonical_number(), exclusion_reason(), main(), Path
+
+### Community 108 - "validate_anatel_radio_link_geometry.py"
+Cohesion: 0.53
+Nodes (5): angular_error(), bearing(), main(), Path, validate()
+
 ## Knowledge Gaps
 - **492 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+487 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -507,12 +517,12 @@ Nodes (9): dominant_code(), main(), municipal_features(), Counter, Path, read_po
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `deterministic_gzip_csv()` connect `build_canonical_smp.py` to `test_build_canonical_fixed_emitters.py`, `validate_anatel_radio_link_vertical_geometry.py`, `analyze`, `evaluate_anatel_radio_link_terrain.py`, `build_municipal_emitter_network.py`, `inventory_infrastructure.py`, `extract_anatel_radio_link_keys.py`, `consolidate_anatel_radio_link_prequalification.py`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `deterministic_gzip_csv()` connect `build_canonical_smp.py` to `test_build_canonical_fixed_emitters.py`, `validate_anatel_radio_link_vertical_geometry.py`, `analyze`, `build_canonical_fixed_emitters.py`, `validate_anatel_radio_link_geometry.py`, `evaluate_anatel_radio_link_terrain.py`, `build_municipal_emitter_network.py`, `inventory_infrastructure.py`, `extract_anatel_radio_link_keys.py`, `consolidate_anatel_radio_link_prequalification.py`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 17 inferred relationships involving `deterministic_gzip_csv()` (e.g. with `analyze()` and `audit_member()`) actually correct?**
