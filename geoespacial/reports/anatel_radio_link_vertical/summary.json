@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "paths_file": "outputs/anatel_radio_link_path_terrain/paths.csv.gz",
+  "paths_sha256": "8fd9341548c6b482c7155cba98e884a98a6008421a4deb4a0157c7c052b3596d",
+  "keys_file": "outputs/anatel_radio_link_keys/records.csv.gz",
+  "keys_sha256": "19557fde4a4aa5e52d128707d53dd9d85e921ec015f854516f702b868b916843",
+  "emissions_file": "outputs/anatel_radio_links/emissions.csv.gz",
+  "emissions_sha256": "0d4fdc04bdc6944a68b45086884ee386084e3be484149db9cc2ff392e10bf96f",
+  "terrain_index": "reports/topodata_radio_link_tiles/index.geojson",
+  "terrain_index_sha256": "a1e452e8dafc878e5ae2770d3d164e5da975a73c14baa0359062b2e54c92ef44",
+  "path_count": 971,
+  "complete_vertical_geometry_count": 963,
+  "missing_vertical_geometry_count": 8,
+  "sensitivity_k1": [
+    {
+      "threshold_deg": 0.5,
+      "consistent_paths": 860,
+      "inconsistent_paths": 103,
+      "candidates_with_consistent_path": 286
+    },
+    {
+      "threshold_deg": 1.0,
+      "consistent_paths": 933,
+      "inconsistent_paths": 30,
+      "candidates_with_consistent_path": 311
+    },
+    {
+      "threshold_deg": 2.0,
+      "consistent_paths": 941,
+      "inconsistent_paths": 22,
+      "candidates_with_consistent_path": 315
+    },
+    {
+      "threshold_deg": 5.0,
+      "consistent_paths": 955,
+      "inconsistent_paths": 8,
+      "candidates_with_consistent_path": 322
+    }
+  ],
+  "sensitivity_k4_3": [
+    {
+      "threshold_deg": 0.5,
+      "consistent_paths": 884,
+      "inconsistent_paths": 79,
+      "candidates_with_consistent_path": 292
+    },
+    {
+      "threshold_deg": 1.0,
+      "consistent_paths": 933,
+      "inconsistent_paths": 30,
+      "candidates_with_consistent_path": 311
+    },
+    {
+      "threshold_deg": 2.0,
+      "consistent_paths": 943,
+      "inconsistent_paths": 20,
+      "candidates_with_consistent_path": 316
+    },
+    {
+      "threshold_deg": 5.0,
+      "consistent_paths": 957,
+      "inconsistent_paths": 6,
+      "candidates_with_consistent_path": 323
+    }
+  ],
+  "provisional_threshold_deg": 1.0,
+  "vertical_model": "spherical effective Earth endpoint elevation from TOPODATA ground plus cadastral antenna height",
+  "pairing_status": "not_performed",
+  "output": "outputs/anatel_radio_link_vertical/paths.csv.gz"
+}

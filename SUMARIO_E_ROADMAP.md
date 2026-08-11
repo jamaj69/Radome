@@ -149,6 +149,10 @@ O recálculo exato dos 971 caminhos resultou, em `k=1`, em 780 caminhos livres,
 114 somente com visada, 69 obstruídos e 8 sem terreno. Entre 325 candidatos, a
 melhor classe é 246/57/21/1. Cinquenta e cinco testes passam e os artefatos são
 byte a byte reproduzíveis. O próximo gate confronta os ângulos de elevação.
+A geometria vertical foi calculada para 963 caminhos; oito ficaram sem terreno.
+No limiar provisório de 1°, 933 caminhos de 311 candidatos concordam nas duas
+pontas em ambos os modelos de Terra efetiva. Cinquenta e nove testes passam.
+O próximo gate consolida todas as condições numa pré-qualificação cadastral.
 
 ## 6. Roadmap orientado por gates
 
