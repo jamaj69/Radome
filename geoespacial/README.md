@@ -298,6 +298,23 @@ python enrich_anatel_radio_link_hypothesis_graph.py \
   --report reports/anatel_radio_link_hypothesis_graph/enrichment.json
 ```
 
+O grafo unificado compõe SMP, radiodifusão, candidatos e hipóteses RF:
+
+```bash
+python build_unified_geospatial_graph.py \
+  --municipal outputs/municipal_emitter_network/municipal_emitter_network.graphml \
+  --broadcast outputs/broadcast_network/broadcast_municipal_network.graphml \
+  --candidates reports/candidate_graph/candidate_graph.graphml \
+  --hypotheses outputs/anatel_radio_link_hypothesis_graph/enriched.graphml \
+  --output outputs/unified_geospatial_graph/graph.graphml \
+  --report reports/unified_geospatial_graph/summary.json
+```
+
+Como GraphML não mistura arestas dirigidas e não dirigidas no mesmo grafo, cada
+visibilidade geométrica de candidato é armazenada como dois arcos com
+`bidirectional_semantics=true`; isso não altera a contagem lógica nem remove o
+marcador de terreno pendente.
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;

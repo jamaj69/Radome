@@ -106,5 +106,6 @@
   "104": "analyze",
   "105": "build_canonical_fixed_emitters.py",
   "106": "validate_anatel_radio_link_geometry.py",
-  "107": "build_canonical_fixed_emitters.py"
+  "107": "build_canonical_fixed_emitters.py",
+  "108": "validate_anatel_radio_link_geometry.py"
 }
