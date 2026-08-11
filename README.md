@@ -144,6 +144,9 @@ This repository includes:
 - technical notes and consolidated architectural descriptions;
 - conceptual system diagrams;
 - literature-based review material on radome systems, passive sensing, and electromagnetic surveillance;
+- `geoespacial/`: reproducible continental site-selection analysis, source
+  manifests, ignored raw GIS data, optimization code and future QGIS/Blender
+  products;
 - a structured proposal suitable for further development into a formal technical report or engineering specification.
 
 Relevant source materials in the repository include:

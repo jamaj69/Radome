@@ -47,6 +47,8 @@ If Graphify is unavailable, continue with `rg` and the stable context files, sta
 - `projeto/chapters/pt-BR/` and `projeto/chapters/en/`: language-specific chapter files;
 - `projeto/figures/`: technical figures, Blender scenes and render scripts;
 - `projeto/references.bib`: bibliography used by the master document;
+- `geoespacial/`: continental radome-site analysis, GIS source manifests,
+  optimization code and ignored raw geospatial data;
 - `projeto/radome-pt-br.pdf` and `projeto/radome-en.pdf`: compiled technical editions;
 - `projeto/figures/build/radome_v1_3d.blend`: current generated Blender scene;
 - `projeto/figures/baseline_35S_concrete_base/`: preserved 3D baseline before later scene expansions.

@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "AGENTS.md": {
-    "mtime": 1786403061.0250928,
-    "ast_hash": "7d0af3b55a08ef1b5776b396cc2dba2e",
+    "mtime": 1786408757.0424922,
+    "ast_hash": "5c9ab71c3bcbaefebe8405973d259f4e",
     "semantic_hash": ""
   },
   "Projeto_Radomes_Multifaixa_Revisado.md": {
@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786235320.230883,
-    "ast_hash": "2b5b7b18d2a409f45432e74c1acca4b5",
+    "mtime": 1786408751.3865185,
+    "ast_hash": "59eae50a4149a92fe508ccc30a03c6a6",
     "semantic_hash": ""
   },
   "ROADMAP_CORRECOES.md": {
@@ -459,29 +459,29 @@
     "ast_hash": "c534ece49e04b746d77465541efbe511",
     "semantic_hash": ""
   },
-  "projeto/site_selection/data/manifests/sources.json": {
-    "mtime": 1786406912.4072464,
-    "ast_hash": "373a804c94cb0f8cddff13c5190629b5",
+  "geoespacial/data/manifests/sources.json": {
+    "mtime": 1786408751.5305178,
+    "ast_hash": "8b32c112e42534631040c361ed17aec9",
     "semantic_hash": ""
   },
-  "projeto/site_selection/site_selection.json": {
-    "mtime": 1786406912.1432474,
-    "ast_hash": "4a0aee2ee9a13ae0df5bc643bd067875",
-    "semantic_hash": ""
-  },
-  "projeto/site_selection/README.md": {
-    "mtime": 1786406988.1588938,
-    "ast_hash": "9b9d1ee652e83d3ba19ccfd5a67508e0",
-    "semantic_hash": ""
-  },
-  "projeto/site_selection/optimize_sites.py": {
+  "geoespacial/optimize_sites.py": {
     "mtime": 1786406987.7228959,
     "ast_hash": "46ec63bfcdf6e6e4d29bcc4e22ec290f",
     "semantic_hash": ""
   },
-  "projeto/site_selection/tests/test_optimize_sites.py": {
+  "geoespacial/site_selection.json": {
+    "mtime": 1786408718.5586717,
+    "ast_hash": "282a4529bc1d01de3b71649bd4484124",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_optimize_sites.py": {
     "mtime": 1786406988.0028946,
     "ast_hash": "c1bfc076f2c92a6c2480eaad492fcff4",
+    "semantic_hash": ""
+  },
+  "geoespacial/README.md": {
+    "mtime": 1786408718.726671,
+    "ast_hash": "38cf1397dcf3e214fa31e5cce6788b67",
     "semantic_hash": ""
   }
 }

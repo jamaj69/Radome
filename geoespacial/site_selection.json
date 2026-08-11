@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
   "coverage": {
+    "active_scope": "continental_brazil",
     "target_heights_agl_m": [150, 3000, 10000],
     "required_fraction": 1.0,
     "continental_peer_los_required": true,
@@ -28,18 +29,27 @@
   },
   "regions": {
     "continental": {
+      "included_in_current_optimization": true,
       "peer_los_exempt": false
     },
     "fernando_de_noronha": {
+      "included_in_current_optimization": false,
+      "future_radome_count": 1,
       "peer_los_exempt": true
     },
     "sao_pedro_e_sao_paulo": {
+      "included_in_current_optimization": false,
+      "future_radome_count": 1,
       "peer_los_exempt": true
     },
     "trindade_martim_vaz": {
+      "included_in_current_optimization": false,
+      "future_radome_count": 1,
       "peer_los_exempt": true
     },
     "atol_das_rocas": {
+      "included_in_current_optimization": false,
+      "future_radome_count": 1,
       "peer_los_exempt": true
     }
   }

@@ -6,10 +6,22 @@
       "authority": "IBGE",
       "description": "Base Cartografica Continua do Brasil 1:250.000, GeoPackage",
       "url": "https://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2025/geopackage/bc250_gpkg_2026-03-03.zip",
-      "expected_size_bytes": null,
-      "sha256": null,
+      "expected_size_bytes": 863971886,
+      "sha256": "ff223482c743b81fff6b422378e6ada9406abedcff3f9768afb7cbef1da80781",
       "target": "data/raw/ibge/bc250/bc250_gpkg_2026-03-03.zip",
-      "status": "pending"
+      "extracted": "data/raw/ibge/bc250/bc250_2026-03-03.gpkg",
+      "layer_count": 71,
+      "required_layers_verified": [
+        "lml_cidade_p",
+        "lml_capital_p",
+        "lml_municipio_a",
+        "lml_unidade_federacao_a",
+        "rel_pico_p",
+        "rel_ponto_cotado_altimetrico_p",
+        "rod_trecho_rodoviario_l",
+        "enc_trecho_energia_l"
+      ],
+      "status": "downloaded_verified"
     },
     {
       "id": "inpe_topodata",

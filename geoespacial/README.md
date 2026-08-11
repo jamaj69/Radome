@@ -4,6 +4,10 @@ Este diretório contém o fluxo reproduzível para selecionar o menor conjunto d
 sítios que satisfaça uma meta explícita de cobertura do espaço aéreo brasileiro.
 O resultado é uma triagem de engenharia, não uma autorização de implantação.
 
+O escopo ativo é somente o território continental. Arquipélagos e ilhas
+oceânicas ficam fora da otimização nacional: cada grupo próximo será estudado
+depois como um caso independente, com um único radome em seu ótimo local.
+
 ## Hipóteses controladas
 
 - a cobertura é avaliada a 150 m, 3 000 m e 10 000 m acima do terreno;

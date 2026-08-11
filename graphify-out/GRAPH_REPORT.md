@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 37 files · ~418,857 words
+- 37 files · ~418,960 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 593 nodes · 643 edges · 51 communities (49 shown, 2 thin omitted)
+- 593 nodes · 643 edges · 52 communities (50 shown, 2 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.76)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `607d6298`
+- Built from commit: `1a469023`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -63,6 +63,7 @@
 - Cross-search signals
 - Cross-search signals
 - localize_figures.py
+- Seleção geoespacial de sítios RADOME
 - verify_tetrahedral_face_geometry.py
 - localize_figures.py
 
@@ -79,19 +80,19 @@
 10. `solve()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `save()` --calls--> `build_output()`  [INFERRED]
-  projeto/figures/generate_updated_figures.py → projeto/figures/build_paths.py
 - `select_contiguous_cluster()` --calls--> `face_edge_key()`  [INFERRED]
   projeto/figures/render_tetrahedral_face_cluster_blender.py → projeto/geometry/verify_tetrahedral_face_geometry.py
 - `candidate()` --calls--> `Candidate`  [INFERRED]
-  projeto/site_selection/tests/test_optimize_sites.py → projeto/site_selection/optimize_sites.py
+  geoespacial/tests/test_optimize_sites.py → geoespacial/optimize_sites.py
 - `OptimizeSitesTest` --uses--> `Candidate`  [INFERRED]
-  projeto/site_selection/tests/test_optimize_sites.py → projeto/site_selection/optimize_sites.py
+  geoespacial/tests/test_optimize_sites.py → geoespacial/optimize_sites.py
+- `save()` --calls--> `build_output()`  [INFERRED]
+  projeto/figures/generate_updated_figures.py → projeto/figures/build_paths.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (51 total, 2 thin omitted)
+## Communities (52 total, 2 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -166,8 +167,8 @@ Cohesion: 0.27
 Nodes (9): Any, Candidate, load_instance(), main(), Path, Minimize site count, using candidate score only as a tie-breaker., solve(), candidate() (+1 more)
 
 ### Community 18 - "Seleção geoespacial de sítios RADOME"
-Cohesion: 0.33
-Nodes (5): Critério de parada, Etapas, Fontes previstas, Hipóteses controladas, Seleção geoespacial de sítios RADOME
+Cohesion: 0.24
+Nodes (5): arrow(), cylinder_between(), dot(), Render a contiguous cluster of 2 m tetrahedral radome face modules., select_contiguous_cluster()
 
 ### Community 20 - "RADOME Project / Projeto RADOME"
 Cohesion: 0.33
@@ -277,9 +278,13 @@ Nodes (3): Citation velocity, Cross-search signals, Repeat-hit papers
 Cohesion: 0.23
 Nodes (9): draw_label(), draw_text_in_block(), fit_text(), font(), Build language-specific publication figures from the common geometry masters., Return the largest readable multiline setting that fits a region., Draw a padded box whose centre follows the centre of the rendered glyphs., Fit and centre text directly inside an existing coloured diagram block. (+1 more)
 
+### Community 49 - "Seleção geoespacial de sítios RADOME"
+Cohesion: 0.33
+Nodes (5): Critério de parada, Etapas, Fontes previstas, Hipóteses controladas, Seleção geoespacial de sítios RADOME
+
 ### Community 50 - "verify_tetrahedral_face_geometry.py"
-Cohesion: 0.17
-Nodes (22): arrow(), cylinder_between(), dot(), Render a contiguous cluster of 2 m tetrahedral radome face modules., select_contiguous_cluster(), add(), centroid(), cross() (+14 more)
+Cohesion: 0.34
+Nodes (17): add(), centroid(), cross(), dot(), face_edge_key(), length(), main(), midpoint() (+9 more)
 
 ### Community 52 - "localize_figures.py"
 Cohesion: 0.09
