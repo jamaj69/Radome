@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "source_graphml": "outputs/anatel_radio_link_hypothesis_graph/graph.graphml",
+  "source_graphml_sha256": "d984ee5119369fbbfb00af663d41ff4743adb02ea8fb2e0523b6482c718278f7",
+  "prequalification_file": "outputs/anatel_radio_link_prequalification/paths.csv.gz",
+  "prequalification_sha256": "3ce9ec53519aceb9e6762a6dd2ed0fac8135a4f032d58bd6bdc56fdb076dab8b",
+  "municipality_graphml": "outputs/municipal_emitter_network/municipal_emitter_network.graphml",
+  "municipality_graphml_sha256": "289c82a20477281cadbf36176ea5bdb47f77628e6332fa3bba7505df79986739",
+  "output_graphml": "outputs/anatel_radio_link_hypothesis_graph/enriched.graphml",
+  "output_graphml_sha256": "82d68f59ef015ee4d3cfc97ebca2b736463e7fd0e019a1ff3c3eca67b6621319",
+  "endpoint_node_count": 497,
+  "endpoints_without_context_count": 0,
+  "endpoint_municipality_conflict_count": 0,
+  "referenced_municipality_count": 365,
+  "municipality_membership_edge_count": 497,
+  "missing_municipality_codes": [],
+  "total_node_count": 862,
+  "total_edge_count": 1293,
+  "radio_link_hypothesis_edge_count": 796,
+  "operational_edge_count": 0,
+  "physical_verification": false,
+  "pairing_status": "not_performed"
+}

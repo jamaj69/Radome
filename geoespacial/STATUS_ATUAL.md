@@ -80,6 +80,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - GraphML de hipóteses: multigrafo dirigido com 497 nós, 796 arestas cadastrais,
   250 candidatos e 135 frequências; zero arestas operacionais, com 237 componentes
   em `k=1` e 247 em `k=4/3`, maior componente com três nós;
+- enriquecimento do GraphML: 497 pontas vinculadas a 365 municípios por 497
+  arestas administrativas, sem código ausente ou conflito municipal; grafo total
+  com 862 nós e 1.293 arestas, das quais nenhuma é operacional;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -87,7 +90,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 64 testes automatizados aprovados;
+- 66 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
@@ -115,8 +118,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Enriquecer os 497 nós de ponta com código IBGE, estação, entidade e vínculo ao
-grafo municipal já existente, preservando conflitos e multiplicidade. Manter
+Integrar as 497 pontas como infraestrutura RF no grafo unificado de municípios,
+emissores e candidatos a sítio, sem promover as 796 hipóteses a enlaces. Manter
 em tabela separada os 88/78 candidatos bloqueados em `k=1`/`k=4/3` e preservar
 a verificação física como gate anterior a qualquer enlace confirmado.
 

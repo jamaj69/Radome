@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 155 files · ~489,554 words
+- 156 files · ~489,801 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1107 nodes · 1459 edges · 109 communities (90 shown, 19 thin omitted)
+- 1108 nodes · 1460 edges · 108 communities (89 shown, 19 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 118 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `82484b55`
+- Built from commit: `24d9a9fb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -122,7 +122,6 @@
 - build_canonical_fixed_emitters.py
 - validate_anatel_radio_link_geometry.py
 - build_canonical_fixed_emitters.py
-- validate_anatel_radio_link_geometry.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -151,7 +150,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (109 total, 19 thin omitted)
+## Communities (108 total, 19 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -470,8 +469,8 @@ Cohesion: 0.36
 Nodes (6): clean(), extract(), main(), Path, RawLinkKeysTest, ZipFile
 
 ### Community 93 - "consolidate_anatel_radio_link_prequalification.py"
-Cohesion: 0.31
-Nodes (5): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest
+Cohesion: 0.20
+Nodes (10): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest, angular_error(), bearing(), main() (+2 more)
 
 ### Community 96 - "ZipFile"
 Cohesion: 0.39
@@ -505,10 +504,6 @@ Nodes (9): dominant_code(), main(), municipal_features(), Counter, Path, read_po
 Cohesion: 0.48
 Nodes (6): antenna_signature(), build(), canonical_number(), exclusion_reason(), main(), Path
 
-### Community 108 - "validate_anatel_radio_link_geometry.py"
-Cohesion: 0.53
-Nodes (5): angular_error(), bearing(), main(), Path, validate()
-
 ## Knowledge Gaps
 - **492 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+487 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -519,7 +514,7 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `deterministic_gzip_csv()` connect `build_canonical_smp.py` to `test_build_canonical_fixed_emitters.py`, `validate_anatel_radio_link_vertical_geometry.py`, `analyze`, `build_canonical_fixed_emitters.py`, `validate_anatel_radio_link_geometry.py`, `evaluate_anatel_radio_link_terrain.py`, `build_municipal_emitter_network.py`, `inventory_infrastructure.py`, `extract_anatel_radio_link_keys.py`, `consolidate_anatel_radio_link_prequalification.py`?**
+- **Why does `deterministic_gzip_csv()` connect `build_canonical_smp.py` to `test_build_canonical_fixed_emitters.py`, `validate_anatel_radio_link_vertical_geometry.py`, `analyze`, `build_canonical_fixed_emitters.py`, `evaluate_anatel_radio_link_terrain.py`, `build_municipal_emitter_network.py`, `inventory_infrastructure.py`, `extract_anatel_radio_link_keys.py`, `consolidate_anatel_radio_link_prequalification.py`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._

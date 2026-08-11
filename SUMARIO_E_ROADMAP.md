@@ -161,6 +161,11 @@ O GraphML de hipóteses contém 497 nós, 796 arestas cadastrais, 250 candidatos
 135 frequências; possui zero arestas operacionais. Em `k=1`/`k=4/3` há 237/247
 componentes, com no máximo três nós. Sessenta e quatro testes passam. O próximo
 gate vincula as pontas aos municípios e entidades antes da validação física.
+O enriquecimento vinculou todas as 497 pontas a 365 municípios, sem códigos
+ausentes ou conflitos. O grafo resultante possui 862 nós e 1.293 arestas — 796
+hipóteses RF e 497 vínculos administrativos —, ainda com zero arestas operacionais.
+Sessenta e seis testes passam. O próximo gate integra essas pontas ao grafo
+unificado de municípios, emissores e candidatos a sítio.
 
 ## 6. Roadmap orientado por gates
 
