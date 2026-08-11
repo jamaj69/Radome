@@ -67,6 +67,7 @@ def main() -> None:
     run([sys.executable,"analyze_anatel_radio_link_candidates.py","--source","outputs/anatel_radio_link_keys/records.csv.gz","--output","outputs/anatel_radio_link_candidates/groups.csv.gz","--report","reports/anatel_radio_link_candidates/summary.json"],root)
     run([sys.executable,"validate_anatel_radio_link_geometry.py","--candidates","outputs/anatel_radio_link_candidates/groups.csv.gz","--keys","outputs/anatel_radio_link_keys/records.csv.gz","--emissions","outputs/anatel_radio_links/emissions.csv.gz","--output","outputs/anatel_radio_link_geometry/groups.csv.gz","--report","reports/anatel_radio_link_geometry/summary.json"],root)
     run([sys.executable,"evaluate_anatel_radio_link_terrain.py","--geometry","outputs/anatel_radio_link_geometry/groups.csv.gz","--keys","outputs/anatel_radio_link_keys/records.csv.gz","--emissions","outputs/anatel_radio_links/emissions.csv.gz","--terrain-cache","data/raw/mapzen/terrarium","--output","outputs/anatel_radio_link_terrain/groups.csv.gz","--report","reports/anatel_radio_link_terrain/summary.json"],root)
+    run([sys.executable,"select_topodata_route_tiles.py","--routes","outputs/anatel_radio_link_geometry/groups.csv.gz","--manifest","data/manifests/topodata_altitude_tiles.json","--output","reports/topodata_radio_link_tiles/selection.json"],root)
     run([
         sys.executable, "build_canonical_fixed_emitters.py",
         "--sarc", "outputs/anatel_general_audit/sarc.csv.gz",

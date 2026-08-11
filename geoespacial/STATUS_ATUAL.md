@@ -55,6 +55,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   sensibilidade é 326/328/328/329 grupos a 5/10/15/30 graus;
 - triagem Terrarium z8 dos 328 alinhados: em `k=1`, 218 têm 60% de Fresnel livre,
   69 apenas visada, 40 obstruídos e 1 sem terreno; em `k=4/3`, 228/66/33/1;
+- seleção TOPODATA das 328 rotas: 154 arquivos, cerca de 9,07 GiB listados;
+  `26S48_ZN.zip` ausente do índice oficial e preservado como lacuna;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -62,7 +64,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 43 testes automatizados aprovados;
+- 44 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
@@ -89,9 +91,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Selecionar e baixar as folhas TOPODATA que intersectam as 328 rotas, substituir
-o Terrarium z8 e repetir perfis com amostragem compatível com a resolução. Obter
-alturas físicas verificadas antes de criar qualquer aresta.
+Baixar atomicamente os 154 arquivos TOPODATA selecionados, registrar SHA-256 e
+validar os ZIPs. Não inventar substituto para `26S48_ZN.zip`; depois extrair os
+GeoTIFFs e repetir os perfis. Alturas físicas continuam pendentes.
 
 ## Comando de retomada
 

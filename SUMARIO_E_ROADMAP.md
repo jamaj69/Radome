@@ -127,6 +127,9 @@ A triagem Terrarium z8 classificou, em `k=1`, 218 rotas com 60% de Fresnel livre
 69 apenas com visada, 40 obstruídas e uma sem terreno; `k=4/3` também foi
 publicado. Quarenta e três testes passam. O próximo gate substitui o MDE por
 TOPODATA e verifica alturas físicas antes de qualquer aresta.
+Para as 328 rotas foram selecionadas 154 folhas TOPODATA, cerca de 9,07 GiB;
+uma folha requerida está ausente do índice oficial. Quarenta e quatro testes
+passam. O próximo gate baixa e valida atomicamente esse subconjunto.
 
 ## 6. Roadmap orientado por gates
 

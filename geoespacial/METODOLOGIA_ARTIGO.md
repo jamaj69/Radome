@@ -244,6 +244,11 @@ e uma não tem terreno; em `k=4/3`, os números são 228, 66, 33 e uma. Por usar
 preliminar e altura máxima, essa triagem não comprova enlace e será substituída
 por TOPODATA e alturas físicas verificadas.
 
+As rotas foram amostradas em grandes círculos a cada 1 km e mapeadas à
+articulação oficial TOPODATA de 1 grau por 1,5 grau. O subconjunto mínimo contém
+154 arquivos, cerca de 9,07 GiB listados; uma folha requerida não existe no
+índice oficial e permanece lacuna. Seleção não equivale a aquisição nem validação.
+
 A migração canônica usa uma partição exaustiva: cada linha SARC/SCM é incluída
 ou recebe exatamente um motivo de exclusão por inatividade, recepção exclusiva,
 papel RF desconhecido ou coordenada inválida. O marcador de prontidão

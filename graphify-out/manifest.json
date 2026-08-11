@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786427247.7268867,
-    "ast_hash": "ec21516a0e40ff7c38ae9b2843c56072",
+    "mtime": 1786427463.4418764,
+    "ast_hash": "8ed9f0723ca73b6fcd6a595af3a2b320",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "geoespacial/METODOLOGIA_ARTIGO.md": {
-    "mtime": 1786427247.5548875,
-    "ast_hash": "10efb49dd186a4e7c1f202805a9d5c68",
+    "mtime": 1786427463.277877,
+    "ast_hash": "fa749024fb1153d50a132c372d094d5c",
     "semantic_hash": ""
   },
   "geoespacial/FONTES_INFRAESTRUTURA.md": {
@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786427274.8307598,
-    "ast_hash": "aae9e32a200824e82683c3d9941c6195",
+    "mtime": 1786427463.097878,
+    "ast_hash": "cd9c35d7e3ec22a3b83a03456bdc9fb8",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
@@ -700,8 +700,8 @@
     "semantic_hash": ""
   },
   "geoespacial/run_pipeline.py": {
-    "mtime": 1786427247.05089,
-    "ast_hash": "325bf8949049d87bd4458481320bafb8",
+    "mtime": 1786427462.5658805,
+    "ast_hash": "f09cd0669e04dacf46c67fba12a24e36",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_acquire_decea_wfs.py": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786427247.3868883,
-    "ast_hash": "f4caf9d3515d63ce8a96af8dbb6b4ca3",
+    "mtime": 1786427462.9338787,
+    "ast_hash": "a45e738550ac2f893b9af410759056b0",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -897,6 +897,26 @@
   "geoespacial/reports/anatel_radio_link_terrain/README.md": {
     "mtime": 1786427247.2188892,
     "ast_hash": "3dc51d7e13f9948ece4b0aff53a0d065",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/topodata_radio_link_tiles/selection.json": {
+    "mtime": 1786427425.474054,
+    "ast_hash": "490c412fe6dc8dc9517d821899291499",
+    "semantic_hash": ""
+  },
+  "geoespacial/select_topodata_route_tiles.py": {
+    "mtime": 1786427417.9900892,
+    "ast_hash": "77e7f57534f66acf3b9848ecb110d8aa",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_select_topodata_route_tiles.py": {
+    "mtime": 1786427418.1460886,
+    "ast_hash": "de84c1e1a837c00a07966fdcad088646",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/topodata_radio_link_tiles/README.md": {
+    "mtime": 1786427462.7778795,
+    "ast_hash": "4dbf57ca373fa07fca54f374471aa792",
     "semantic_hash": ""
   }
 }
