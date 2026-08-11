@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 64 files · ~450,167 words
+- 66 files · ~452,601 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 709 nodes · 823 edges · 63 communities (56 shown, 7 thin omitted)
+- 739 nodes · 851 edges · 64 communities (57 shown, 7 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 32 edges (avg confidence: 0.78)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `980bd9e8`
+- Built from commit: `a7093e67`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -77,6 +77,7 @@
 - municipal_emitter_network/README.md
 - build
 - broadcast_network/README.md
+- Requisitos preservados para geolocalização dos radomes
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -85,10 +86,10 @@
 4. `Plano Diretor de Infraestrutura Tática` - 13 edges
 5. `RADOME Project Agent Guide` - 12 edges
 6. `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network` - 12 edges
-7. `Point` - 11 edges
-8. `RADOME — Roadmap de correções técnicas e documentais` - 11 edges
-9. `tetrahedral_modules()` - 10 edges
-10. `Metodologia reproduzível para seleção geoespacial de sítios` - 10 edges
+7. `Fases e gates` - 12 edges
+8. `Point` - 11 edges
+9. `RADOME — Roadmap de correções técnicas e documentais` - 11 edges
+10. `tetrahedral_modules()` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `write_network()` --calls--> `terrain_elevation()`  [INFERRED]
@@ -105,7 +106,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (63 total, 7 thin omitted)
+## Communities (64 total, 7 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -304,12 +305,12 @@ Cohesion: 0.47
 Nodes (3): main(), parse_index(), InventoryTopodataTest
 
 ### Community 52 - "localize_figures.py"
-Cohesion: 0.09
-Nodes (9): build_output(), ensure_build_dir(), Path, Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--11.  Permanent publi, save(), crossed_yagi() (+1 more)
+Cohesion: 0.07
+Nodes (18): build_output(), ensure_build_dir(), Path, Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--11.  Permanent publi, save(), draw_label() (+10 more)
 
 ### Community 56 - "localize_figures.py"
-Cohesion: 0.23
-Nodes (9): draw_label(), draw_text_in_block(), fit_text(), font(), Build language-specific publication figures from the common geometry masters., Return the largest readable multiline setting that fits a region., Draw a padded box whose centre follows the centre of the rendered glyphs., Fit and centre text directly inside an existing coloured diagram block. (+1 more)
+Cohesion: 0.10
+Nodes (20): Artefatos obrigatórios por execução, Fase 0 — requisitos e proveniência — concluída, Fase 10 — arquipélagos e ilhas oceânicas — adiada, Fase 1 — base territorial municipal — concluída preliminarmente, Fase 2 — inventário de iluminadores — em andamento, Fase 3 — infraestrutura aeronáutica e estratégica — pendente, Fase 4 — relevo nacional e candidatos — pendente, Fase 5 — visada e cobertura 3D — pendente (+12 more)
 
 ### Community 57 - "Fontes de infraestrutura para o grafo de candidatos"
 Cohesion: 0.22
@@ -327,8 +328,12 @@ Nodes (14): Counter, dominant_code(), main(), municipal_features(), Path, read_p
 Cohesion: 0.35
 Nodes (8): build(), main(), municipality_index(), normalize_name(), Path, sha256(), spatial_code(), BroadcastNetworkTest
 
+### Community 63 - "Requisitos preservados para geolocalização dos radomes"
+Cohesion: 0.22
+Nodes (8): Cidades, municípios e logística, Decisões operacionais derivadas, Escopo territorial, Grafo de infraestrutura e iluminadores, Objetivo primário, Relevo, visada e conectividade, Reprodutibilidade e publicação, Requisitos preservados para geolocalização dos radomes
+
 ## Knowledge Gaps
-- **420 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+415 more)
+- **444 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+439 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -336,11 +341,11 @@ Nodes (8): build(), main(), municipality_index(), normalize_name(), Path, sha256
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _420 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _444 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**

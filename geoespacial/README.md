@@ -15,6 +15,11 @@ com os dados locais verificados.
 O diagnóstico das fontes de torres celulares, aeroportos, bases aéreas e
 comandos está em `FONTES_INFRAESTRUTURA.md`.
 
+O plano completo de aquisição, integração, validação e otimização está em
+`ROADMAP_GEOESPACIAL.md`. As instruções normativas fornecidas pelo usuário estão
+preservadas em `REQUISITOS_GEOLOCALIZACAO.md`; esses requisitos devem ser
+consultados antes de alterar critérios ou preparar o texto metodológico.
+
 O inventário dos cadastros já obtidos é reproduzido com:
 
 ```bash

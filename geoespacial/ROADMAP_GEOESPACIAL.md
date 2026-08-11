@@ -1,0 +1,246 @@
+# Roadmap geoespacial da rede RADOME
+
+## Objetivo e regra de inventário
+
+O fluxo deve produzir uma seleção continental auditável do menor conjunto de
+radomes, respeitando cobertura, conectividade visual, relevo, logística e
+disponibilidade de iluminadores. Cada camada recebe um estado controlado:
+
+- `identified`: fonte oficial localizada;
+- `downloaded_verified`: arquivo baixado, tamanho e hash verificados;
+- `inventoried`: esquema, contagem e qualidade conhecidos;
+- `municipally_linked`: objetos etiquetados com código IBGE;
+- `integrated`: nós e arestas gerados;
+- `validated`: conflitos tratados e amostras verificadas;
+- `selection_ready`: adequada à otimização;
+- `pending`: trabalho ainda não executado;
+- `blocked_public_source`: falta fonte pública oficial suficiente.
+
+Os estados detalhados e hashes ficam em `data/manifests/`; relatórios pequenos
+em `reports/`; dados brutos em `data/raw/`; produtos volumosos em `outputs/`.
+
+## Inventário atual de camadas
+
+| Tema/camada | Fonte autoritativa | Estado atual | Quantidade/observação | Próxima ação |
+|---|---|---|---|---|
+| Limites municipais | IBGE BC250 2025 | integrated | 5.571 polígonos | validar área contra área territorial oficial |
+| Sedes municipais | IBGE BC250 2025 | integrated | 5.571 pontos | substituir altitude preliminar |
+| População municipal | IBGE Censo 2022, variável 93 | integrated | 5.570 municípios | incorporar fonte pós-2022 para Boa Esperança do Norte |
+| Capitais e cidades | IBGE BC250 2025 | integrated/preliminary | 27 capitais; cidades usadas na logística | calcular cidades realmente visíveis |
+| Estados e país | IBGE BC250 2025 | downloaded_verified | polígonos | usar em máscaras e relatórios |
+| Relevo pontual | IBGE BC250 2025 | integrated/preliminary | picos e pontos cotados | reconciliar com MDE |
+| Elevação preliminar | Mapzen Terrarium | integrated/preliminary | cache z8 | substituir por TOPODATA |
+| MDE nacional | TOPODATA/INPE | inventoried | 556 arquivos; ~32,19 GiB compactados | selecionar folhas continentais e baixar |
+| MDE local detalhado | IBGE/SGB/estaduais | pending | cobertura variável | adquirir somente para finalistas |
+| Torres celulares SMP | Anatel | integrated | 3.284.526 registros; 105.726 sítios | consolidar por tolerância espacial e revisar 23 conflitos |
+| Radiodifusão TV/RTV/FM/OM/RTR | Anatel | integrated | 35.126 registros; 18.285 licenciados; 11.921 sítios | revisar 117 conflitos; caracterizar ERP e faixa |
+| Radioenlaces SMP | Anatel | identified/pending | recurso/campos no ecossistema de licenciamento | obter camada dedicada e reconciliar pontas |
+| Aeródromos públicos | ANAC | downloaded_verified | 496 | conciliar com BC250 e DECEA |
+| Aeródromos privados | ANAC | downloaded_verified | 3.856 | conciliar e classificar uso logístico |
+| Helipontos | ANAC | downloaded_verified | 1.595 | integrar por município |
+| Helideques | ANAC | downloaded_verified | 203; arquivo atual sem coordenadas suficientes | não usar como ponto continental sem complemento |
+| Aeroportos e pistas BC250 | IBGE | integrated/preliminary | 104 complexos; 3.492 pontos de pouso | validar códigos, elevação e status setorial |
+| Informação aeronáutica WFS | DECEA/ICA GEOAISWEB | inventoried | 421 tipos; 13 selecionados | baixar ciclos AIRAC e congelar versão |
+| Obstáculos OPEA | DECEA/ICA | identified | camada `ICA:opea` | baixar, etiquetar e avaliar alturas |
+| VOR/NDB/navaids | DECEA/ICA | identified | três famílias selecionadas | baixar e integrar como infraestrutura RF |
+| CTR/TMA/ZIDA | DECEA/ICA | identified | espaço aéreo, não emissores | usar como contexto e restrição |
+| Radares aeronáuticos | DECEA/FAB, quando públicos | pending | não inferir de aeródromos | localizar fonte oficial e parâmetros publicáveis |
+| Bases aéreas | FAB/DECEA | blocked_public_source | nomes parciais não bastam | classificar somente com fonte oficial |
+| Comandos aéreos | FAB | blocked_public_source | ausentes na BC250 | localizar cadastro público oficial |
+| Energia elétrica | IBGE BC250 | downloaded_verified | linhas, usinas e subestações | integrar como logística e viabilidade |
+| Rodovias/ferrovias/hidrovias | IBGE BC250 | downloaded_verified | redes nacionais | calcular acessibilidade e custo logístico |
+| Portos/terminais | IBGE BC250 | downloaded_verified | pontos e linhas | integrar onde relevante |
+| Hidrografia/inundação | IBGE BC250 | downloaded_verified | rios, massas d'água, ilhas e áreas inundáveis | aplicar restrições territoriais |
+| Mineração e alterações antrópicas | IBGE BC250 | downloaded_verified | polígonos/pontos | avaliar restrições e acessos |
+| Unidades de conservação e terras protegidas | MMA/ICMBio/Funai | pending | ainda não adquiridas | baixar e aplicar restrições legais |
+| Uso/cobertura do solo | MapBiomas/IBGE | pending | ainda não adquirido | avaliar implantação e obstrução local |
+| Clima, vento e descargas | INMET/INPE | pending | ainda não adquirido | usar no refinamento estrutural e operacional |
+| Ilhas oceânicas | IBGE/SGB/DHN | deferred | fora da otimização continental | estudo independente por arquipélago |
+
+## Modelo canônico do grafo
+
+### Tipos de nó
+
+- `municipio`: código IBGE, nome, UF, sede `x/y/z`, área e população;
+- `candidato_radome`: relevo, altura, proeminência, horizonte, *viewshed*,
+  cidades visíveis, logística, restrições e pontuação;
+- `torre_smp`: coordenada, estações, operadoras, tecnologias, gerações e faixas;
+- `radiodifusao`: serviço, canal, frequência, ERP, entidade, classe, categoria e
+  finalidade;
+- `aerodromo`, `heliporto`, `navaid`, `radar`, `energia`, `porto` e outros tipos
+  setoriais, sempre com fonte e confiança.
+
+### Tipos de aresta
+
+- `located_in`: objeto contido em município;
+- `line_of_sight`: visada topográfica confirmada entre candidatos;
+- `curvature_candidate`: ligação limitada por horizonte, ainda sem relevo;
+- `covers`: candidato cobre célula, município ou volume aéreo sob hipótese dada;
+- `illuminates`: emissor pode iluminar região/candidato após análise RF;
+- `accessible_by`: relação logística com infraestrutura de transporte;
+- `powered_by`: proximidade/viabilidade de energia;
+- `same_physical_site`: co-localização reconciliada entre cadastros.
+
+Toda aresta analítica deve registrar método, parâmetros, data e estado de
+validação. `located_in` não implica visibilidade; `illuminates` não implica eco
+detectável; `curvature_candidate` não implica visada.
+
+## Fases e gates
+
+### Fase 0 — requisitos e proveniência — concluída
+
+Entregas:
+
+- escopo continental e exceção insular documentados;
+- critérios de mínimo número, altitude, cidades e conectividade registrados;
+- diretório `geoespacial/`, manifestos e documentação criados.
+
+Gate: requisitos recuperáveis do Git e fontes com URL, estado e hash quando
+baixadas.
+
+### Fase 1 — base territorial municipal — concluída preliminarmente
+
+Entregas:
+
+- municípios, sedes, população, área e altitude preliminar;
+- código IBGE como chave canônica;
+- nós municipais e produtos GraphML/CSV.
+
+Gate pendente para validação: substituir `z` por TOPODATA, validar áreas e
+resolver população do município criado após o Censo 2022.
+
+### Fase 2 — inventário de iluminadores — em andamento
+
+Concluído:
+
+- SMP agregado e ligado a municípios;
+- TV/RTV/FM/OM/RTR filtrados por status, agregados e ligados a municípios.
+
+Pendente:
+
+- radioenlaces SMP;
+- radiodifusão: revisar conflitos e interpretar unidades de ERP/HCI;
+- cruzar co-localizações SMP–radiodifusão;
+- adquirir outros serviços RF relevantes sem confundi-los com fontes ativas.
+
+Gate: cada sítio com código IBGE, status operacional explícito, registros de
+origem preservados e conflitos quantificados.
+
+### Fase 3 — infraestrutura aeronáutica e estratégica — pendente
+
+Passos:
+
+1. importar ANAC e WFS DECEA congelado por ciclo AIRAC;
+2. reconciliar ICAO/CIAD, nome, coordenada e proximidade;
+3. integrar pistas, helipontos, OPEA, VOR, NDB e navaids;
+4. buscar fontes públicas de radares, bases e comandos;
+5. impedir classificação militar baseada apenas em nome.
+
+Gate: proveniência oficial por objeto e separação entre aeródromo, auxílio RF,
+radar e instalação militar.
+
+### Fase 4 — relevo nacional e candidatos — pendente
+
+Passos:
+
+1. selecionar folhas TOPODATA pela máscara continental;
+2. baixar, verificar e mosaicar por regiões;
+3. derivar cumeadas, máximos locais, declividade e proeminência;
+4. remover áreas inviáveis ou legalmente restritas;
+5. produzir candidatos multi-escala com altitude e acesso.
+
+Gate: MDE versionado, resolução declarada e candidatos reproduzíveis.
+
+### Fase 5 — visada e cobertura 3D — pendente
+
+Passos:
+
+1. calcular *viewshed* para 150 m, 3.000 m e 10.000 m;
+2. gerar perfis entre candidatos e confirmar `line_of_sight`;
+3. considerar curvatura e `k=4/3`, com análise de sensibilidade;
+4. calcular zona de Fresnel por faixa;
+5. contar municípios/cidades realmente visíveis por azimute;
+6. separar cobertura territorial de detectabilidade RF.
+
+Gate: mapas de lacunas e matriz de visada confirmada, com parâmetros completos.
+
+### Fase 6 — iluminação RF passiva — pendente
+
+Passos:
+
+1. associar emissores às faixas do receptor;
+2. modelar ERP/EIRP, altura, polarização, diagrama e terreno;
+3. estimar disponibilidade temporal e densidade espectral;
+4. construir geometria bistática emissor–alvo–radome;
+5. manter testes de emissor direto separados de reflexões;
+6. produzir uma pontuação de diversidade e qualidade de iluminadores.
+
+Gate: `illuminates` sustentado por modelo RF documentado, sem alegar detecção
+operacional antes de simulação ou medição.
+
+### Fase 7 — logística, energia e restrições — pendente
+
+Passos:
+
+- integrar vias, energia, cidades, portos e restrições ambientais/territoriais;
+- calcular acessibilidade sem impor distância máxima arbitrária;
+- pontuar cidades ao redor e abaixo dos candidatos;
+- registrar disponibilidade de manutenção, segurança e comunicação.
+
+Gate: cada candidato com vetor de custos e restrições auditável.
+
+### Fase 8 — otimização mínima e análise de sensibilidade — pendente
+
+Passos:
+
+1. montar células/volumes obrigatórios por altitude;
+2. resolver mínimo número de sítios com conectividade;
+3. desempatar por relevo, visibilidade, iluminadores e logística;
+4. variar MDE, refração, pesos e resolução;
+5. publicar alternativas de mesma cardinalidade e causas das lacunas.
+
+Gate: solução reproduzível, cobertura quantificada e nenhum sítio continental
+isolado.
+
+### Fase 9 — refinamento, QGIS, Blender e artigo — pendente
+
+Passos:
+
+- refinar finalistas com MDE e cartografia de maior resolução;
+- exportar GeoPackage/QGIS com simbologia e metadados;
+- gerar terrenos locais e cenas 3D no Blender;
+- realizar inspeção local e levantamento geodésico;
+- redigir método, resultados, limitações e sensibilidade em português e inglês.
+
+Gate: todos os números do artigo ligados a commit, configuração, fonte e
+relatório reproduzível.
+
+### Fase 10 — arquipélagos e ilhas oceânicas — adiada
+
+Cada grupo próximo será otimizado separadamente para um único radome local,
+sem exigir visada com a rede continental. A integração nacional ocorrerá apenas
+depois da validação de cada estudo insular.
+
+## Próxima sequência recomendada
+
+1. baixar e congelar as 13 camadas selecionadas do DECEA;
+2. reconciliar ANAC, BC250 e DECEA;
+3. adquirir radioenlaces SMP;
+4. selecionar e baixar TOPODATA continental por região;
+5. integrar restrições ambientais e territoriais;
+6. reconstruir o grafo unificado município–emissor–aeródromo–candidato;
+7. iniciar *viewshed* regional antes do processamento nacional completo.
+
+## Artefatos obrigatórios por execução
+
+Cada fase quantitativa deve produzir:
+
+- manifesto de entrada com hashes e datas;
+- configuração congelada;
+- comando ou script reexecutável;
+- resumo JSON legível por máquina;
+- tabela CSV/GeoPackage com proveniência por objeto;
+- mapa ou grafo de inspeção;
+- contagem de ausências, conflitos e descartes;
+- versão do software e commit Git;
+- texto de limitações pronto para adaptação ao artigo.
