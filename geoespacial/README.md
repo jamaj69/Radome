@@ -12,6 +12,9 @@ A especificação destinada à futura incorporação no artigo está em
 `METODOLOGIA_ARTIGO.md`. `run_pipeline.sh` reproduz testes, pré-seleção e grafo
 com os dados locais verificados.
 
+O diagnóstico das fontes de torres celulares, aeroportos, bases aéreas e
+comandos está em `FONTES_INFRAESTRUTURA.md`.
+
 ## Hipóteses controladas
 
 - a cobertura é avaliada a 150 m, 3 000 m e 10 000 m acima do terreno;

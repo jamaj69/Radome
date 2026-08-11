@@ -54,5 +54,7 @@
   "52": "localize_figures.py",
   "53": "Pré-seleção continental baseada na BC250",
   "54": "Grafo preliminar de capitais e aeroportos",
-  "55": "run_pipeline.sh"
+  "55": "run_pipeline.sh",
+  "56": "localize_figures.py",
+  "57": "Fontes de infraestrutura para o grafo de candidatos"
 }

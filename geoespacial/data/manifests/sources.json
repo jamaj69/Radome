@@ -46,6 +46,29 @@
       "target": "data/raw/mapzen/terrarium/",
       "status": "preliminary_node_samples_downloaded",
       "superseded_by": "TOPODATA viewshed refinement"
+    },
+    {
+      "id": "ibge_bc250_2015_energy_communication",
+      "authority": "IBGE",
+      "description": "Historical BC250 energy and communication package inspected for tower data",
+      "url": "https://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/Energia_Comunicacao_v2015.zip",
+      "sha256": "e8a698b4ff1f767723ad7a7e7644d3a6a6dd3e7ac2ed53b9aceedd560994d0cc",
+      "target": "data/raw/ibge/bc250_2015/Energia_Comunicacao_v2015.zip",
+      "status": "downloaded_verified_no_tower_layer"
+    },
+    {
+      "id": "anatel_smp_licensed_stations",
+      "authority": "Anatel",
+      "description": "Licensed personal mobile service base stations with technical data and locations",
+      "catalog_url": "https://dados.gov.br/dados/conjuntos-dados/outorga-e-licenciamento---estaes-licenciadas",
+      "status": "resource_url_and_download_pending"
+    },
+    {
+      "id": "decea_aisweb_aeronautical_data",
+      "authority": "DECEA / ICA",
+      "description": "Official aeronautical information, AIP, ROTAER and geographic services",
+      "url": "https://aisweb.decea.mil.br/?i=publicacoes&p=api",
+      "status": "wfs_layer_inventory_pending"
     }
   ]
 }

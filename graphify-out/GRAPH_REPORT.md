@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 49 files · ~443,122 words
+- 50 files · ~443,758 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 649 nodes · 728 edges · 56 communities (51 shown, 5 thin omitted)
+- 657 nodes · 735 edges · 58 communities (53 shown, 5 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 20 edges (avg confidence: 0.77)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5080ee01`
+- Built from commit: `8433868b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -70,6 +70,8 @@
 - Pré-seleção continental baseada na BC250
 - Grafo preliminar de capitais e aeroportos
 - run_pipeline.sh
+- localize_figures.py
+- Fontes de infraestrutura para o grafo de candidatos
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -98,7 +100,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (56 total, 5 thin omitted)
+## Communities (58 total, 5 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -297,11 +299,19 @@ Cohesion: 0.47
 Nodes (3): main(), parse_index(), InventoryTopodataTest
 
 ### Community 52 - "localize_figures.py"
-Cohesion: 0.07
-Nodes (18): build_output(), ensure_build_dir(), Path, Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--11.  Permanent publi, save(), draw_label() (+10 more)
+Cohesion: 0.09
+Nodes (9): build_output(), ensure_build_dir(), Path, Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--11.  Permanent publi, save(), crossed_yagi() (+1 more)
+
+### Community 56 - "localize_figures.py"
+Cohesion: 0.23
+Nodes (9): draw_label(), draw_text_in_block(), fit_text(), font(), Build language-specific publication figures from the common geometry masters., Return the largest readable multiline setting that fits a region., Draw a padded box whose centre follows the centre of the rendered glyphs., Fit and centre text directly inside an existing coloured diagram block. (+1 more)
+
+### Community 57 - "Fontes de infraestrutura para o grafo de candidatos"
+Cohesion: 0.25
+Nodes (7): ANAC e DECEA, Anatel, Comunicação nas bases históricas do IBGE, Fontes de infraestrutura para o grafo de candidatos, IBGE BC250 2025, Ordem de integração, Resultado por tema
 
 ## Knowledge Gaps
-- **410 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+405 more)
+- **416 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+411 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -309,11 +319,11 @@ Nodes (18): build_output(), ensure_build_dir(), Path, Shared paths for temporary
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _410 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _416 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
