@@ -219,6 +219,13 @@ Diagnosticar as células fora de faces `K3`, identificar os gargalos responsáve
 e formular a próxima expansão/seleção de candidatos, mantendo iluminadores
 separados do futuro modelo RF/Fresnel.
 
+## Visualização Blender experimental
+
+`blender_topografia_radomes/` seleciona três candidatos com cota mínima de
+1.000 m e incidências geométricas combinadas mínimas de 500, posicionando-os
+numa Terra esférica em Blender. A cena é comunicação visual: incidências não
+provam iluminação RF e a esfera ainda não é um mosaico TOPODATA nacional.
+
 ## Comando de retomada
 
 ```bash

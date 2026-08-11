@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "ranking": "geoespacial/outputs/candidate_ranking/candidate_ranking.csv.gz",
+  "minimum_elevation_m": 1000.0,
+  "minimum_geometric_illuminator_incidence": 500,
+  "selected_sites": [
+    {
+      "node_id": "airport:-46.56461878:-21.83849708",
+      "name": "Aeroporto Embaixador Walther Moreira Salles",
+      "longitude": -46.56461878307286,
+      "latitude": -21.838497081484235,
+      "terrain_elevation_m": 1254.0,
+      "robust_rank": 1,
+      "geometric_illuminator_incidence_count": 39393,
+      "smp_site_count": 36392,
+      "broadcast_site_count": 2878,
+      "radio_link_endpoint_count": 123,
+      "semantics": "visual selection from preliminary multicriteria ranking and geometric infrastructure incidences; not terrain visibility, RF illumination, feasibility, or operational siting"
+    },
+    {
+      "node_id": "airport:-48.92682574:-16.35968949",
+      "name": "Aeroporto Anápolis",
+      "longitude": -48.92682574407971,
+      "latitude": -16.35968948953338,
+      "terrain_elevation_m": 1112.0,
+      "robust_rank": 2,
+      "geometric_illuminator_incidence_count": 7566,
+      "smp_site_count": 6885,
+      "broadcast_site_count": 623,
+      "radio_link_endpoint_count": 58,
+      "semantics": "visual selection from preliminary multicriteria ranking and geometric infrastructure incidences; not terrain visibility, RF illumination, feasibility, or operational siting"
+    },
+    {
+      "node_id": "capital:5300108",
+      "name": "Brasília",
+      "longitude": -47.880611965,
+      "latitude": -15.783689652,
+      "terrain_elevation_m": 1077.0,
+      "robust_rank": 5,
+      "geometric_illuminator_incidence_count": 7092,
+      "smp_site_count": 6496,
+      "broadcast_site_count": 542,
+      "radio_link_endpoint_count": 54,
+      "semantics": "visual selection from preliminary multicriteria ranking and geometric infrastructure incidences; not terrain visibility, RF illumination, feasibility, or operational siting"
+    }
+  ],
+  "semantics": "visual selection from preliminary multicriteria ranking and geometric infrastructure incidences; not terrain visibility, RF illumination, feasibility, or operational siting"
+}

@@ -1,0 +1,41 @@
+"""Monta e renderiza uma cena Blender da Terra curva e três sítios candidatos."""
+import argparse, json, math, sys
+from pathlib import Path
+
+import bpy
+from mathutils import Vector
+
+EARTH_RADIUS_UNITS = 25.0
+
+def position(latitude, longitude, elevation_m):
+    lat, lon = math.radians(latitude), math.radians(longitude)
+    radius = EARTH_RADIUS_UNITS + elevation_m / 120000.0
+    return Vector((radius * math.cos(lat) * math.cos(lon), radius * math.cos(lat) * math.sin(lon), radius * math.sin(lat)))
+
+def material(name, color, metallic=0.0):
+    item = bpy.data.materials.new(name); item.diffuse_color = (*color, 1); item.metallic = metallic; item.roughness = 0.55; return item
+
+def add_radome(site, earth):
+    point = position(site["latitude"], site["longitude"], site["terrain_elevation_m"]); normal = point.normalized()
+    bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=2, radius=0.24, location=point + normal * 0.20)
+    dome = bpy.context.object; dome.name = f"RADOME | {site['name']}"; dome.data.materials.append(material("Radome white", (0.92, .94, .96)))
+    dome.rotation_mode = "QUATERNION"; dome.rotation_quaternion = normal.to_track_quat("Z", "Y")
+    bpy.ops.mesh.primitive_cylinder_add(vertices=16, radius=.055, depth=.42, location=point + normal * .05)
+    mast = bpy.context.object; mast.name = f"Mast | {site['name']}"; mast.data.materials.append(material("Mast", (.12,.16,.18), .7)); mast.rotation_mode="QUATERNION"; mast.rotation_quaternion=normal.to_track_quat("Z","Y")
+    bpy.ops.object.text_add(location=point + normal * .55); label=bpy.context.object; label.name=f"Label | {site['name']}"; label.data.body=f"{site['name']}\\n{site['terrain_elevation_m']:.0f} m | incidências: {site['geometric_illuminator_incidence_count']}"; label.data.align_x="CENTER"; label.data.size=.22; label.data.materials.append(material("Label", (1,.82,.2))); label.rotation_mode="QUATERNION"; label.rotation_quaternion=normal.to_track_quat("Z","Y")
+
+def build(selection, blend, render):
+    bpy.ops.object.select_all(action="SELECT"); bpy.ops.object.delete(use_global=False)
+    bpy.ops.mesh.primitive_uv_sphere_add(segments=128, ring_count=64, radius=EARTH_RADIUS_UNITS, location=(0,0,0)); earth=bpy.context.object; earth.name="Earth | spherical topographic context"; earth.data.materials.append(material("Earth", (.055,.18,.09)))
+    site_points = [position(site["latitude"], site["longitude"], site["terrain_elevation_m"]) for site in selection["selected_sites"]]
+    for site in selection["selected_sites"]: add_radome(site, earth)
+    bpy.ops.object.light_add(type="SUN", location=(0,0,0)); bpy.context.object.data.energy=2.2; bpy.context.object.rotation_euler=(math.radians(25), math.radians(-20), math.radians(-30))
+    bpy.ops.object.light_add(type="AREA", location=(35,-35,30)); bpy.context.object.data.energy=900; bpy.context.object.data.shape="DISK"; bpy.context.object.data.size=25
+    target = sum(site_points, Vector()) / len(site_points); outward = target.normalized()
+    bpy.ops.object.camera_add(location=outward * 55 + Vector((7, -7, 5))); camera=bpy.context.object; bpy.context.scene.camera=camera; direction=target-camera.location; camera.rotation_euler=direction.to_track_quat("-Z","Y").to_euler(); camera.data.lens=52
+    scene=bpy.context.scene; scene.render.engine="BLENDER_EEVEE"; scene.render.resolution_x=1600; scene.render.resolution_y=1000; scene.render.resolution_percentage=100; scene.render.image_settings.file_format="PNG"; scene.render.filepath=str(render); scene.world.color=(.008,.012,.025)
+    bpy.ops.wm.save_as_mainfile(filepath=str(blend)); bpy.ops.render.render(write_still=True)
+
+if __name__ == "__main__":
+    parser=argparse.ArgumentParser(); parser.add_argument("--selection",type=Path,required=True); parser.add_argument("--blend",type=Path,required=True); parser.add_argument("--render",type=Path,required=True)
+    args=parser.parse_args(sys.argv[sys.argv.index("--") + 1:]); args.blend=args.blend.resolve(); args.render=args.render.resolve(); args.selection=args.selection.resolve(); args.blend.parent.mkdir(parents=True,exist_ok=True); args.render.parent.mkdir(parents=True,exist_ok=True); build(json.loads(args.selection.read_text(encoding="utf-8")),args.blend,args.render)
