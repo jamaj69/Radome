@@ -116,5 +116,7 @@
   "114": "extract_anatel_radio_links.py",
   "115": "Methodological gaps",
   "116": "triangular_mesh_baseline/README.md",
-  "117": "topodata_gap_tiles/README.md"
+  "117": "topodata_gap_tiles/README.md",
+  "118": "build_continental_coverage_grid.py",
+  "119": "topodata_gap_seeds/README.md"
 }

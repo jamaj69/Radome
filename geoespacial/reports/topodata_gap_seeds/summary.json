@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "grid_file": "geoespacial/outputs/continental_coverage_grid/continental_grid.csv.gz",
+  "grid_sha256": "77de0d9b255052ee8875d34e6c66ffc47b9c6e76e774a0450a39a496dddbc402",
+  "terrain_index": "geoespacial/reports/topodata_gap_tiles/index.geojson",
+  "terrain_index_sha256": "16fbf0e7bbff753778849d4042862dcfe1fa18d22ee39d4f5b470ec59e3380b8",
+  "resolution_deg": 0.25,
+  "uncovered_cell_count": 1732,
+  "seed_count": 1732,
+  "status_counts": {
+    "available": 1732
+  },
+  "seed_count_by_uf": {
+    "AM": 337,
+    "AP": 73,
+    "GO": 7,
+    "MA": 19,
+    "MT": 330,
+    "PA": 817,
+    "PI": 73,
+    "RO": 19,
+    "RR": 44,
+    "TO": 13
+  },
+  "elevation_range_m": [
+    29.389,
+    2131.38
+  ],
+  "relative_relief_range_m": [
+    24.169,
+    2062.12
+  ],
+  "outputs": {
+    "table": {
+      "path": "geoespacial/outputs/topodata_gap_seeds/gap_seeds.csv.gz",
+      "sha256": "bff3d5d7fffef01feb3a9873c617230862221e3c0be2bc93d8c6505be76e63ee"
+    },
+    "geojson": {
+      "path": "geoespacial/outputs/topodata_gap_seeds/gap_seeds.geojson",
+      "sha256": "96e850c7da4134b483b84cfb877f06bfecbffab601d277ee3629edf49a9c6b6c"
+    }
+  },
+  "semantics": "highest valid TOPODATA pixel centre inside each uncovered grid cell; relative relief is cell maximum minus cell minimum, not topographic prominence; not a validated radome site, viewshed, line of sight, or RF coverage"
+}

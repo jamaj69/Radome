@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 183 files · ~506,429 words
+- 187 files · ~507,693 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1208 nodes · 1598 edges · 118 communities (93 shown, 25 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 114 edges (avg confidence: 0.79)
+- 1224 nodes · 1623 edges · 120 communities (94 shown, 26 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 117 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1c024561`
+- Built from commit: `df4ffd60`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -132,6 +132,8 @@
 - Methodological gaps
 - triangular_mesh_baseline/README.md
 - topodata_gap_tiles/README.md
+- build_continental_coverage_grid.py
+- topodata_gap_seeds/README.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -160,7 +162,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (118 total, 25 thin omitted)
+## Communities (120 total, 26 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -443,8 +445,8 @@ Cohesion: 0.50
 Nodes (3): Famílias explícitas de radioenlaces Anatel, Reprodução, Resultado
 
 ### Community 83 - "evaluate_anatel_radio_link_terrain.py"
-Cohesion: 0.09
-Nodes (22): candidate_status(), evaluate(), main(), Counter, Path, classify(), evaluate(), interpolate() (+14 more)
+Cohesion: 0.07
+Nodes (29): candidate_status(), evaluate(), main(), Counter, Path, classify(), evaluate(), interpolate() (+21 more)
 
 ### Community 84 - "extract_topodata_route_tiles.py"
 Cohesion: 0.24
@@ -507,16 +509,16 @@ Cohesion: 0.36
 Nodes (5): analyze(), distance(), main(), Path, CandidateTest
 
 ### Community 105 - "build_canonical_fixed_emitters.py"
-Cohesion: 0.09
-Nodes (26): build(), face_status(), lambert_azimuthal_equal_area(), main(), Path, read_grid(), triangle_quality(), approximate_cell_area_km2() (+18 more)
+Cohesion: 0.13
+Nodes (18): build(), face_status(), lambert_azimuthal_equal_area(), main(), Path, read_grid(), triangle_quality(), build() (+10 more)
 
 ### Community 107 - "build_canonical_fixed_emitters.py"
 Cohesion: 0.48
 Nodes (6): antenna_signature(), build(), canonical_number(), exclusion_reason(), main(), Path
 
 ### Community 110 - "validate_anatel_radio_link_vertical_geometry.py"
-Cohesion: 0.24
-Nodes (7): VerticalGeometryTest, angular_error(), elevation_angle(), main(), Path, status(), validate()
+Cohesion: 0.25
+Nodes (9): generate(), intersecting(), load_tiles(), main(), pixel_window(), Path, Retorna janela semiaberta de pixels cujos centros caem dentro da célula., seed_cell() (+1 more)
 
 ### Community 112 - "inventory"
 Cohesion: 0.22
@@ -530,25 +532,29 @@ Nodes (4): extract(), main(), Path, RadioLinkExtractionTest
 Cohesion: 0.40
 Nodes (5): Closed-set and dataset-leakage risks, Inconsistent metrics, Insufficient adversarial testing, Lack of end-to-end evaluation, Methodological gaps
 
+### Community 118 - "build_continental_coverage_grid.py"
+Cohesion: 0.29
+Nodes (8): approximate_cell_area_km2(), build(), containing_unit(), covering_candidates(), federation_units(), main(), Path, ContinentalCoverageGridTests
+
 ## Knowledge Gaps
-- **506 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+501 more)
+- **507 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+502 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Why does `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network` connect `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network` to `Projeto_Radomes_Multifaixa_Revisado.md`, `Key Technical Themes`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `number()` connect `audit_anatel_spectrum.py` to `analyze`, `build_canonical_fixed_emitters.py`, `evaluate_anatel_radio_link_terrain.py`, `build_canonical_smp.py`, `inventory_infrastructure.py`, `extract_anatel_radio_link_keys.py`, `consolidate_anatel_radio_link_prequalification.py`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `Point` connect `validate_anatel_radio_link_vertical_geometry.py` to `Seleção geoespacial de sítios RADOME`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 10 inferred relationships involving `number()` (e.g. with `analyze()` and `audit_member()`) actually correct?**
   _`number()` has 10 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _506 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _507 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._

@@ -123,6 +123,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - extração das lacunas concluída: 141 GeoTIFFs georreferenciados, com
   10.964.218.374 bytes, SHA-256 individual e índice GeoJSON próprio; a segunda
   passagem revalidou todos como reutilizados;
+- sementes de terreno alto geradas para as 1.732 células descobertas: uma
+  semente por célula no centro do pixel TOPODATA de maior cota, sem ausência;
+  cotas de 29,389--2.131,380 m e relevo relativo celular de
+  24,169--2.062,120 m; CSV gzip e GeoJSON reproduziram byte a byte;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -159,10 +163,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Gerar candidatos de terreno alto/cumeadas dentro das 1.732 células descobertas,
-usando os 141 GeoTIFFs TOPODATA extraídos, e preservar critérios de distância
-mínima e proeminência antes de recalcular a cobertura e a malha. Não executar
-cobertura mínima antes de cada célula possuir ao menos um candidato.
+Consolidar as 1.732 sementes TOPODATA em candidatos multi-escala sem perder
+cobertura potencial: medir proeminência aproximada em janelas declaradas,
+identificar cumeadas, aplicar distância mínima com rastreabilidade das células
+representadas e preservar alternativas empatadas antes de recalcular cobertura.
 
 ## Comando de retomada
 
