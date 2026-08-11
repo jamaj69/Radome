@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 32 files · ~417,595 words
+- 35 files · ~418,196 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 573 nodes · 614 edges · 42 communities (40 shown, 2 thin omitted)
+- 579 nodes · 619 edges · 50 communities (48 shown, 2 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `87cf88e3`
+- Built from commit: `0964f876`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -33,6 +33,7 @@
 - RADOME — Registro central de parâmetros
 - verify_radome_geometry.py
 - render_tetrahedral_face_cluster_blender.py
+- Seleção geoespacial de sítios RADOME
 - RADOME Project / Projeto RADOME
 - English
 - RADOME — Registro de decisões de arquitetura
@@ -46,13 +47,20 @@
 - Sub-area guide 3: passive emitter detection, direction finding, and localization
 - Sub-area guide 4: clandestine, anomalous, and deviated-signal identification
 - Sub-area guide 5: integration, calibration, and operational validation
+- Key research groups
 - Blender Baseline: 35S Radome and Concrete Base
+- Sub-area guide 1: broadband antenna architectures and radome-face placement
+- Sub-area guide 2: electromagnetic effects and functional radome technologies
 - 17. Recalibração constante do relógio
 - RADOME V3
 - 24. Dois planos de comunicação
 - 5. Casco externo e estrutura interna
+- Sub-area guide 3: passive emitter detection, direction finding, and localization
 - build.sh
 - 2. Geometria fundamental
+- Sub-area guide 4: clandestine, anomalous, and deviated-signal identification
+- Sub-area guide 5: integration, calibration, and operational validation
+- Cross-search signals
 - Cross-search signals
 - verify_tetrahedral_face_geometry.py
 - localize_figures.py
@@ -78,7 +86,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (42 total, 2 thin omitted)
+## Communities (50 total, 2 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -133,8 +141,8 @@ Cohesion: 0.22
 Nodes (8): Broadband Antennas Integrated with Radome Faces for Passive Detection of Clandestine or Anomalous RF Signals, How the field got here, Limitations of this review, Recommended research architecture, References, Search method, Terminology shifts, Topic overview
 
 ### Community 13 - "review.md"
-Cohesion: 0.05
-Nodes (42): Boolean searches, Boolean searches, Boolean searches, Boolean searches, Boolean searches, Broadband Antennas Integrated with Radome Faces for Passive Detection of Clandestine or Anomalous RF Signals, Citation velocity, Cross-search signals (+34 more)
+Cohesion: 0.22
+Nodes (8): Broadband Antennas Integrated with Radome Faces for Passive Detection of Clandestine or Anomalous RF Signals, How the field got here, Limitations of this review, Recommended research architecture, References, Search method, Terminology shifts, Topic overview
 
 ### Community 14 - "Start here: priority reading order"
 Cohesion: 0.25
@@ -151,6 +159,10 @@ Nodes (10): clip_polygon_to_cut(), clip_segment_to_cut(), clipped_mesh(), distan
 ### Community 17 - "render_tetrahedral_face_cluster_blender.py"
 Cohesion: 0.24
 Nodes (5): arrow(), cylinder_between(), dot(), Render a contiguous cluster of 2 m tetrahedral radome face modules., select_contiguous_cluster()
+
+### Community 18 - "Seleção geoespacial de sítios RADOME"
+Cohesion: 0.33
+Nodes (5): Critério de parada, Etapas, Fontes previstas, Hipóteses controladas, Seleção geoespacial de sítios RADOME
 
 ### Community 20 - "RADOME Project / Projeto RADOME"
 Cohesion: 0.33
@@ -204,9 +216,21 @@ Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 4: clandes
 Cohesion: 0.40
 Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 5: integration, calibration, and operational validation, What the research shows
 
+### Community 33 - "Key research groups"
+Cohesion: 0.33
+Nodes (6): F. Costa, A. Monorchio, and G. Manara, I. Liberal, D. Caratelli, and A. Yarovoy, Key research groups, M. Sorecau, E. Sorecau, P. Bechet, and collaborators, X. Sheng, Ning Liu, and collaborators, Zhongxiang Shen and collaborators
+
 ### Community 34 - "Blender Baseline: 35S Radome and Concrete Base"
 Cohesion: 0.50
 Nodes (3): Blender Baseline: 35S Radome and Concrete Base, Geometry, Known presentation issues for the next revision
+
+### Community 35 - "Sub-area guide 1: broadband antenna architectures and radome-face placement"
+Cohesion: 0.40
+Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 1: broadband antenna architectures and radome-face placement, What the research shows
+
+### Community 36 - "Sub-area guide 2: electromagnetic effects and functional radome technologies"
+Cohesion: 0.40
+Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 2: electromagnetic effects and functional radome technologies, What the research shows
 
 ### Community 37 - "17. Recalibração constante do relógio"
 Cohesion: 0.67
@@ -224,6 +248,22 @@ Nodes (3): 24. Dois planos de comunicação, Capture Plane, Control/Event Plane
 Cohesion: 0.67
 Nodes (3): 5. Casco externo e estrutura interna, Estrutura mecânica, Superfície aerodinâmica
 
+### Community 41 - "Sub-area guide 3: passive emitter detection, direction finding, and localization"
+Cohesion: 0.40
+Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 3: passive emitter detection, direction finding, and localization, What the research shows
+
+### Community 44 - "Sub-area guide 4: clandestine, anomalous, and deviated-signal identification"
+Cohesion: 0.40
+Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 4: clandestine, anomalous, and deviated-signal identification, What the research shows
+
+### Community 45 - "Sub-area guide 5: integration, calibration, and operational validation"
+Cohesion: 0.40
+Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 5: integration, calibration, and operational validation, What the research shows
+
+### Community 46 - "Cross-search signals"
+Cohesion: 0.67
+Nodes (3): Citation velocity, Cross-search signals, Repeat-hit papers
+
 ### Community 47 - "Cross-search signals"
 Cohesion: 0.67
 Nodes (3): Citation velocity, Cross-search signals, Repeat-hit papers
@@ -237,7 +277,7 @@ Cohesion: 0.07
 Nodes (19): Path, build_output(), ensure_build_dir(), Shared paths for temporary figure-master build artifacts., Generate a language-neutral exploded 3D face illustration., Generate the shared, language-neutral technical figures 01--11.  Permanent publi, save(), draw_label() (+11 more)
 
 ## Knowledge Gaps
-- **393 isolated node(s):** `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout`, `LaTeX Article Commands` (+388 more)
+- **397 isolated node(s):** `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout`, `LaTeX Article Commands` (+392 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -247,9 +287,9 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
   _High betweenness centrality (0.033) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `RADOME — Geodetic Multiband Passive Electromagnetic Sensing Network`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+  _High betweenness centrality (0.028) - this node is a cross-community bridge._
 - **What connects `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` to the rest of the system?**
-  _393 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _397 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**

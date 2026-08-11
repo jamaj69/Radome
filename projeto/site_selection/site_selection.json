@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "coverage": {
+    "target_heights_agl_m": [150, 3000, 10000],
+    "required_fraction": 1.0,
+    "continental_peer_los_required": true,
+    "oceanic_islands_peer_los_exempt": true
+  },
+  "propagation": {
+    "effective_earth_radius_factor": 1.3333333333333333,
+    "radome_phase_center_agl_m": 15.0,
+    "fresnel_clearance_fraction": 0.6
+  },
+  "candidate_generation": {
+    "elevation_percentile_by_region": 0.9,
+    "local_maximum_radius_m": 5000,
+    "prominence_radius_m": 25000,
+    "minimum_candidate_spacing_m": 10000
+  },
+  "score_weights": {
+    "visible_area": 1.0,
+    "visible_population": 1.0,
+    "visible_city_count": 1.0,
+    "city_azimuth_balance": 1.0,
+    "relative_prominence": 1.0,
+    "peer_los_count": 1.0,
+    "logistics_access": 0.5
+  },
+  "regions": {
+    "continental": {
+      "peer_los_exempt": false
+    },
+    "fernando_de_noronha": {
+      "peer_los_exempt": true
+    },
+    "sao_pedro_e_sao_paulo": {
+      "peer_los_exempt": true
+    },
+    "trindade_martim_vaz": {
+      "peer_los_exempt": true
+    },
+    "atol_das_rocas": {
+      "peer_los_exempt": true
+    }
+  }
+}

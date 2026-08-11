@@ -458,5 +458,20 @@
     "mtime": 1786395860.1622815,
     "ast_hash": "c534ece49e04b746d77465541efbe511",
     "semantic_hash": ""
+  },
+  "projeto/site_selection/data/manifests/sources.json": {
+    "mtime": 1786406912.4072464,
+    "ast_hash": "373a804c94cb0f8cddff13c5190629b5",
+    "semantic_hash": ""
+  },
+  "projeto/site_selection/site_selection.json": {
+    "mtime": 1786406912.1432474,
+    "ast_hash": "4a0aee2ee9a13ae0df5bc643bd067875",
+    "semantic_hash": ""
+  },
+  "projeto/site_selection/README.md": {
+    "mtime": 1786406911.9912481,
+    "ast_hash": "734a777368793b3117a9c28b37b6dac9",
+    "semantic_hash": ""
   }
 }
