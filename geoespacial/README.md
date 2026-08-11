@@ -214,6 +214,24 @@ python evaluate_anatel_radio_link_topodata.py \
   --report reports/anatel_radio_link_topodata/summary.json
 ```
 
+Antes de usar as alturas no perfil definitivo, a auditoria as associa a cada
+direção e frequência recíproca, mantendo também os códigos de produto:
+
+```bash
+python audit_anatel_radio_link_heights.py \
+  --geometry outputs/anatel_radio_link_geometry/groups.csv.gz \
+  --keys outputs/anatel_radio_link_keys/records.csv.gz \
+  --emissions outputs/anatel_radio_links/emissions.csv.gz \
+  --terrain outputs/anatel_radio_link_topodata/groups.csv.gz \
+  --paths-output outputs/anatel_radio_link_heights/paths.csv.gz \
+  --candidates-output outputs/anatel_radio_link_heights/candidates.csv.gz \
+  --report reports/anatel_radio_link_heights/summary.json
+```
+
+Uma altura única em cada ponta é apenas não ambígua internamente no cadastro;
+não equivale a medição física. Ausência ou múltiplas alturas para o mesmo caminho
+permanecem bloqueios explícitos e nenhuma aresta é criada.
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;
