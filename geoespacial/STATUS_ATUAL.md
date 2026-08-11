@@ -139,6 +139,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - aquisição das folhas de borda concluída: 175 ZIPs validados por CRC e
   SHA-256, totalizando 10.819.492.567 bytes reais, sem falhas; uma segunda
   passagem marcou e revalidou todos como reutilizados, sem nova transferência;
+- extração das folhas de borda concluída: 175 GeoTIFFs georreferenciados,
+  totalizando 13.608.072.450 bytes, sem falhas, com índice GeoJSON próprio; uma
+  segunda passagem marcou e revalidou todos como reutilizados;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -175,10 +178,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Extrair e indexar as 175 folhas TOPODATA dos anéis, repetir a triagem e
-quantificar a incompletude residual causada exclusivamente por `05N51_ZN.zip`.
-Somente então congelar a consolidação e recalcular a cobertura e a malha
-triangular.
+Repetir a triagem multiescala com o índice de 175 folhas e quantificar a
+incompletude residual causada exclusivamente por `05N51_ZN.zip`. Somente então
+congelar a consolidação e recalcular a cobertura e a malha triangular.
 
 ## Comando de retomada
 

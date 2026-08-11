@@ -45,3 +45,22 @@ cd /home/jamaj/src/Radome
 A ausência externa `05N51_ZN.zip` continua registrada em
 `missing_archive_names_from_selection`; ela não é contada entre os 175 arquivos
 disponíveis solicitados pelo recibo.
+
+## Extração e índice
+
+`extraction.json` registra 175 GeoTIFFs georreferenciados em EPSG:4326,
+totalizando 13.608.072.450 bytes, sem falhas. `index.geojson` contém uma feição
+por folha, com extensão, resolução e hashes, sob o nome
+`topodata_gap_ring_tiles`. Uma segunda execução marcou e revalidou todos os 175
+GeoTIFFs como `reused`.
+
+```bash
+cd /home/jamaj/src/Radome
+/home/python/pyenv/bin/python geoespacial/extract_topodata_route_tiles.py \
+  --receipt geoespacial/reports/topodata_gap_ring_tiles/acquisition.json \
+  --archive-dir geoespacial/data/raw/topodata/radio_link_routes \
+  --target-dir geoespacial/data/processed/topodata/radio_link_routes \
+  --report geoespacial/reports/topodata_gap_ring_tiles/extraction.json \
+  --index geoespacial/reports/topodata_gap_ring_tiles/index.geojson \
+  --index-name topodata_gap_ring_tiles
+```
