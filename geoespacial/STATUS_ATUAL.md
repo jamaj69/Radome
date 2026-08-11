@@ -45,6 +45,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - Mosaico-STEL: consolidado de 10.817.122 linhas que reproduz a contagem SLP e
   agrega as contagens de SLE, SARC, SCM, STFC e radioenlaces explícitos; não é
   camada independente e não deve ser somado aos membros específicos;
+- radioenlaces explícitos extraídos sem pareamento: 64.948 STFC, 35.424 SCM e
+  38 SMP, totalizando 100.410 registros e 17.214 números de estação por família;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -52,12 +54,14 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 37 testes automatizados aprovados;
+- 38 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
 - resultado registrado em `reports/reproducibility.json` com
   `byte_reproducible: true` e `differences: {}`.
+- o novo extrato e seu relatório foram reproduzidos separadamente com hashes
+  idênticos; sua inclusão na prova integral ocorrerá após o gate de chaves brutas.
 
 ## Lacunas controladas
 
@@ -77,10 +81,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Extrair por streaming somente as famílias explícitas de radioenlace STFC
-(64.948 linhas), SCM (35.424) e SMP (38) do consolidado Mosaico-STEL. Auditar
-chaves cadastrais, reciprocidade Tx/Rx e geometria antes de propor um algoritmo
-de pareamento; SLP genérico e estações móveis permanecem fora dessa inferência.
+Recuperar por streaming do membro bruto, somente para as 100.410 linhas já
+selecionadas, Fistel, ato de RF e identificadores homologados de antena e
+transmissor. Testar equivalência com o extrato normalizado e avaliar quais chaves
+podem sustentar reciprocidade Tx/Rx e geometria sem pareamento ambíguo.
 
 ## Comando de retomada
 

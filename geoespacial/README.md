@@ -84,6 +84,10 @@ Os arquivos menores do pacote geral Anatel são auditados sem extração com:
 Os resultados SARC, banda larga fixa, telefonia fixa, SLE, SLP e Mosaico-STEL
 estão documentados em `reports/anatel_general_audit/README.md`.
 
+As famílias explicitamente denominadas radioenlace são extraídas, ainda sem
+pareamento, por `extract_anatel_radio_links.py`; resultados e limites estão em
+`reports/anatel_radio_links/README.md`.
+
 Transmissores/repetidores ativos de SARC e SCM são migrados ao esquema canônico
 com partição exaustiva das exclusões:
 

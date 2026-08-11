@@ -52,6 +52,12 @@ def main() -> None:
         "--report", "reports/anatel_general_audit/summary.json",
     ], root)
     run([
+        sys.executable, "extract_anatel_radio_links.py",
+        "--source", "outputs/anatel_general_audit/mosaico_stel.csv.gz",
+        "--output", "outputs/anatel_radio_links/emissions.csv.gz",
+        "--report", "reports/anatel_radio_links/summary.json",
+    ], root)
+    run([
         sys.executable, "build_canonical_fixed_emitters.py",
         "--sarc", "outputs/anatel_general_audit/sarc.csv.gz",
         "--fixed-broadband", "outputs/anatel_general_audit/fixed_broadband.csv.gz",

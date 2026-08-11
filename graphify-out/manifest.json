@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "SUMARIO_E_ROADMAP.md": {
-    "mtime": 1786425169.6686614,
-    "ast_hash": "7f140e42c322906507597c6016281658",
+    "mtime": 1786425670.370295,
+    "ast_hash": "dde7451cf5ec3821254516d0b3733295",
     "semantic_hash": ""
   },
   "plano_diretor_complexo_vigilancia_alta_montanha.md": {
@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "geoespacial/README.md": {
-    "mtime": 1786422431.3655078,
-    "ast_hash": "26dd6ec587741890dea43449149be987",
+    "mtime": 1786425670.5222943,
+    "ast_hash": "f39d578f1d494cd466a257a158d08b5f",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/topodata_altitude_tiles.json": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "geoespacial/METODOLOGIA_ARTIGO.md": {
-    "mtime": 1786425155.356729,
-    "ast_hash": "16dc24c856327f69dae0596c351e31ed",
+    "mtime": 1786425670.2182958,
+    "ast_hash": "b93a19ec1407bc4688463d992fb1de08",
     "semantic_hash": ""
   },
   "geoespacial/FONTES_INFRAESTRUTURA.md": {
@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786425141.8047931,
-    "ast_hash": "ad4b0c52740df89ca5cbd6cc5b2f5fe9",
+    "mtime": 1786425670.0702965,
+    "ast_hash": "dc53085ad2c73b2ef8afdccd730fffe0",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
@@ -700,8 +700,8 @@
     "semantic_hash": ""
   },
   "geoespacial/run_pipeline.py": {
-    "mtime": 1786419343.307629,
-    "ast_hash": "321ec1b48a4b3c9b8685761b751bb2b9",
+    "mtime": 1786425582.8947086,
+    "ast_hash": "0785dbd5d14bcb9147f73423b580c464",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_acquire_decea_wfs.py": {
@@ -735,8 +735,8 @@
     "semantic_hash": ""
   },
   "geoespacial/STATUS_ATUAL.md": {
-    "mtime": 1786425141.5087945,
-    "ast_hash": "72eef0314dfbabdde4a7ed0717d38a19",
+    "mtime": 1786425669.9102974,
+    "ast_hash": "8300e8e55bf8607c87737b8ce419f862",
     "semantic_hash": ""
   },
   "geoespacial/build_canonical_smp.py": {
@@ -797,6 +797,26 @@
   "geoespacial/reports/canonical_fixed_emitters/README.md": {
     "mtime": 1786419757.7176538,
     "ast_hash": "c08a620d30f69387ff86e1e83b856f29",
+    "semantic_hash": ""
+  },
+  "geoespacial/extract_anatel_radio_links.py": {
+    "mtime": 1786425685.1342254,
+    "ast_hash": "8e818228ff7183354814f72063a9ed5f",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/anatel_radio_links/summary.json": {
+    "mtime": 1786425658.0303535,
+    "ast_hash": "15f4576015d0be3d431006b7f4067c3d",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_extract_anatel_radio_links.py": {
+    "mtime": 1786425483.979176,
+    "ast_hash": "3ad81b5f0266e35929ba003f24ad174b",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/anatel_radio_links/README.md": {
+    "mtime": 1786425583.042708,
+    "ast_hash": "634acd4117dee0ec93ecc5a5e0bdb508",
     "semantic_hash": ""
   }
 }

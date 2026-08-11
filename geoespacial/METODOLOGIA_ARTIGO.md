@@ -221,6 +221,12 @@ Somente os subconjuntos explicitamente rotulados
 como enlaces STFC, SCM ou SMP seguem para análise de chaves, reciprocidade de
 frequências e geometria. Até essa validação, nenhuma aresta de enlace existe.
 
+A primeira extração seletiva preserva 100.410 linhas explicitamente rotuladas:
+64.948 STFC, 35.424 SCM e 38 SMP. Todos os números de estação possuem registros
+Tx e Rx, mas isso descreve a estação local, não identifica a contraponta. Fistel,
+ato de RF e identificadores homologados serão recuperados da fonte bruta antes
+de testar reciprocidade espectral e compatibilidade geométrica.
+
 A migração canônica usa uma partição exaustiva: cada linha SARC/SCM é incluída
 ou recebe exatamente um motivo de exclusão por inatividade, recepção exclusiva,
 papel RF desconhecido ou coordenada inválida. O marcador de prontidão

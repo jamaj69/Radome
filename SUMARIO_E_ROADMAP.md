@@ -113,8 +113,10 @@ a sítios fixos. SLP e Mosaico-STEL também foram auditados: são 10.580.778 e
 10.817.122 linhas, respectivamente. O segundo é um consolidado que reproduz a
 contagem do primeiro e agrega as contagens das demais bases já auditadas; não
 pode ser somado como camada independente. Trinta e sete testes passam e 25
-produtos coincidem byte a byte. O próximo gate isola enlaces STFC/SCM/SMP e
-testa chaves, reciprocidade e geometria.
+produtos coincidem byte a byte. O extrato seletivo isolou 100.410 registros de
+enlace — 64.948 STFC, 35.424 SCM e 38 SMP — sem formar pontas. Trinta e oito
+testes passam; o próximo gate recupera chaves brutas e testa reciprocidade e
+geometria.
 
 ## 6. Roadmap orientado por gates
 

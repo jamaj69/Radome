@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "source_file": "outputs/anatel_general_audit/mosaico_stel.csv.gz",
+  "source_sha256": "008e0dc0fbf3e10fbd1d1bd8f838b62d9e14d1fea24ebc2e0a2b363937b57f45",
+  "selection_rule": "exact service label in STFC/SCM/SMP radio-link families; no endpoint pairing",
+  "records": 100410,
+  "families": {
+    "scm": {
+      "records": 35424,
+      "unique_station_numbers": 7190,
+      "unique_coordinate_pairs": 6954,
+      "station_numbers_with_tx_and_rx": 7190,
+      "directions": {
+        "Recepção": 17712,
+        "Transmissão": 17712
+      },
+      "station_classes": {
+        "FX": 35424
+      },
+      "validity_statuses": {
+        "Ativo": 35424
+      }
+    },
+    "smp": {
+      "records": 38,
+      "unique_station_numbers": 4,
+      "unique_coordinate_pairs": 4,
+      "station_numbers_with_tx_and_rx": 4,
+      "directions": {
+        "Recepção": 19,
+        "Transmissão": 19
+      },
+      "station_classes": {
+        "FX": 38
+      },
+      "validity_statuses": {
+        "Ativo": 38
+      }
+    },
+    "stfc": {
+      "records": 64948,
+      "unique_station_numbers": 10020,
+      "unique_coordinate_pairs": 9983,
+      "station_numbers_with_tx_and_rx": 10020,
+      "directions": {
+        "Recepção": 32474,
+        "Transmissão": 32474
+      },
+      "station_classes": {
+        "FB": 64846,
+        "FX": 102
+      },
+      "validity_statuses": {
+        "Ativo": 64862,
+        "Vencido": 86
+      }
+    }
+  },
+  "pairing_status": "not_performed",
+  "pairing_gate": "requires source cadastral keys, Tx/Rx reciprocity and geometric validation",
+  "output": "outputs/anatel_radio_links/emissions.csv.gz"
+}
