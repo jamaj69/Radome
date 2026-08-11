@@ -167,6 +167,20 @@ com aproximadamente 32,19 GiB compactados. Por isso a seleção continental de
 folhas deve preceder o download; baixar todo o índice sem máscara desperdiçaria
 armazenamento e tempo de processamento.
 
+As folhas selecionadas para as rotas candidatas são adquiridas separadamente,
+com retomada por arquivo, validação integral do ZIP e recibo incremental:
+
+```bash
+python acquire_topodata_route_tiles.py \
+  --selection reports/topodata_radio_link_tiles/selection.json \
+  --output-dir data/raw/topodata/radio_link_routes \
+  --report reports/topodata_radio_link_tiles/acquisition.json
+```
+
+O arquivo somente recebe o nome definitivo depois da validação de CRC e da
+confirmação de que contém um GeoTIFF. Uma nova execução reutiliza arquivos já
+válidos; falhas e folhas ainda pendentes permanecem explícitas no recibo.
+
 ## Etapas
 
 1. baixar e verificar as fontes registradas no manifesto;
