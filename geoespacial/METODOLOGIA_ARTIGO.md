@@ -227,6 +227,10 @@ Tx e Rx, mas isso descreve a estação local, não identifica a contraponta. Fis
 ato de RF e identificadores homologados serão recuperados da fonte bruta antes
 de testar reciprocidade espectral e compatibilidade geométrica.
 
+A recuperação bruta confirmou equivalência das 100.410 linhas e completude de
+Fistel, ato de RF e identificadores homologados. Esses campos são evidência para
+o próximo estágio, mas sua mera presença não comprova unicidade nem contraponta.
+
 A migração canônica usa uma partição exaustiva: cada linha SARC/SCM é incluída
 ou recebe exatamente um motivo de exclusão por inatividade, recepção exclusiva,
 papel RF desconhecido ou coordenada inválida. O marcador de prontidão

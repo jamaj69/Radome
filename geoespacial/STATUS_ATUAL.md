@@ -47,6 +47,8 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   camada independente e não deve ser somado aos membros específicos;
 - radioenlaces explícitos extraídos sem pareamento: 64.948 STFC, 35.424 SCM e
   38 SMP, totalizando 100.410 registros e 17.214 números de estação por família;
+- chaves brutas recuperadas para as 100.410 linhas: Fistel, ato de RF e códigos
+  homologados de antena/transmissor completos; equivalência linha a linha confirmada;
 - emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
   antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
 - 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
@@ -54,7 +56,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 38 testes automatizados aprovados;
+- 39 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
 - 25 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
@@ -81,10 +83,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Recuperar por streaming do membro bruto, somente para as 100.410 linhas já
-selecionadas, Fistel, ato de RF e identificadores homologados de antena e
-transmissor. Testar equivalência com o extrato normalizado e avaliar quais chaves
-podem sustentar reciprocidade Tx/Rx e geometria sem pareamento ambíguo.
+Medir cardinalidade e poder discriminante de Fistel, ato de RF, equipamento,
+frequência e estação. Gerar candidatos de contraponta somente quando houver
+reciprocidade Tx/Rx e compatibilidade geométrica, mantendo ambiguidades sem aresta.
 
 ## Comando de retomada
 

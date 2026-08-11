@@ -115,8 +115,9 @@ contagem do primeiro e agrega as contagens das demais bases já auditadas; não
 pode ser somado como camada independente. Trinta e sete testes passam e 25
 produtos coincidem byte a byte. O extrato seletivo isolou 100.410 registros de
 enlace — 64.948 STFC, 35.424 SCM e 38 SMP — sem formar pontas. Trinta e oito
-testes passam; o próximo gate recupera chaves brutas e testa reciprocidade e
-geometria.
+testes passam. As chaves brutas foram recuperadas para todas as linhas e a
+equivalência foi confirmada sem divergências; 39 testes passam. O próximo gate
+mede poder discriminante e testa reciprocidade e geometria.
 
 ## 6. Roadmap orientado por gates
 

@@ -78,5 +78,7 @@
   "76": "build_municipal_emitter_network.py",
   "77": "canonical_smp/README.md",
   "78": "Emissores fixos SARC/SCM no esquema canônico",
-  "79": "Famílias explícitas de radioenlaces Anatel"
+  "79": "Famílias explícitas de radioenlaces Anatel",
+  "80": "write_fixture",
+  "81": "anatel_radio_link_keys/README.md"
 }

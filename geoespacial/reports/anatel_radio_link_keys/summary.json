@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "source_file": "data/raw/anatel/estacoes_licenciadas.zip",
+  "source_sha256": "b77abb225b4ad03bc8b8c6a27913e0b6d851873bab3bd483e66d86712dd5eec1",
+  "source_member": "Estacoes_Mosaico_STEL.csv",
+  "normalized_file": "outputs/anatel_radio_links/emissions.csv.gz",
+  "normalized_sha256": "0d4fdc04bdc6944a68b45086884ee386084e3be484149db9cc2ff392e10bf96f",
+  "records": 100410,
+  "family_records": {
+    "scm": 35424,
+    "smp": 38,
+    "stfc": 64948
+  },
+  "normalized_records": 100410,
+  "row_equivalence_mismatches": {},
+  "row_equivalence_confirmed": true,
+  "key_availability": {
+    "antenna_homologation_code": 100410,
+    "antenna_product_code": 100410,
+    "rf_act_number": 100410,
+    "service_fistel": 100410,
+    "transmitter_homologation_code": 100410,
+    "transmitter_product_code": 100410
+  },
+  "pairing_status": "not_performed",
+  "output": "outputs/anatel_radio_link_keys/records.csv.gz"
+}
