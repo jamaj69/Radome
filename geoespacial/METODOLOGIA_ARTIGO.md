@@ -203,3 +203,10 @@ usadas como evidência secundária. Classes fixas ou de base sem direção e val
 inválidos permanecem desconhecidos; não são promovidos a iluminadores. O estado
 de validade é mantido separadamente, e o pareamento de pontas de radioenlace é
 adiado até haver chaves cadastrais e verificação geométrica reproduzível.
+
+A migração canônica usa uma partição exaustiva: cada linha SARC/SCM é incluída
+ou recebe exatamente um motivo de exclusão por inatividade, recepção exclusiva,
+papel RF desconhecido ou coordenada inválida. O marcador de prontidão
+quantitativa exige presença de frequência, potência e altura, mas não comprova
+operação, conformidade regulatória, máscara espectral ou propagação e, sozinho,
+não autoriza uma aresta `illuminates`.

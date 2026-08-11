@@ -29,8 +29,8 @@ modelo RF completo.
 | NDB — DECEA/ICA | 24/24 | elevação 19/24 | frequência 24/24, 114,3–407 kHz; banda de emissão 1/24 | potência/diagrama ausentes | baixada e inventariada | completar elevação e parâmetros RF oficiais |
 | DME — DECEA/ICA | 173/173 | elevação 158/173 | canal 173/173; portadora UHF ainda não derivada | potência/diagrama ausentes | baixada e inventariada | versionar tabela oficial canal--frequência e reconciliar DME pareados |
 | ILS/LOC e relações `navaids` — DECEA/ICA | 124/124 | elevação 30/124 | frequência ausente na visão agregada | ausentes | baixada como relação | obter componentes/frequências oficiais e evitar contar o mesmo conjunto duas vezes |
-| SARC — Anatel | 8.774/8.774 coordenadas e municípios | altura em 8.479 | frequência em 4.583; designação/largura indisponíveis | ganho/diagrama amplamente presentes; potência indisponível | auditado; 4.228 ativos com evidência de transmissão/repetição | migrar candidatos sem criar potência ou largura inexistente |
-| Banda larga fixa/SCM — Anatel | 7.513/7.513 coordenadas e municípios | altura em 3.704 | frequência em 3.706; largura decodificada em 3.514 | potência e diagrama em cerca de 3.706 | auditado; 1.850 ativos com direção Tx; 3.799 desconhecidos | migrar Tx ativos e manter desconhecidos fora de `illuminates` |
+| SARC — Anatel | 4.228 emissões ativas em 2.362 sítios | preservada quando disponível | 1.466 com frequência; designação/largura ausentes | ganho/diagrama preservados; potência ausente | esquema canônico; nenhuma quantitativamente pronta | buscar complemento oficial e não criar `illuminates` quantitativo |
+| Banda larga fixa/SCM — Anatel | 1.850 emissões Tx ativas em 973 sítios | 1.849 com altura | frequência e potência em 1.850; duas sem designação | 1.849 atendem presença mínima de frequência/potência/altura | esquema canônico, enlaces não pareados | validar parâmetros e parear somente após auditoria das demais bases |
 | Telefonia fixa/STFC — Anatel | 589/589 coordenadas e municípios | indisponível | indisponível | indisponível | auditado; não pronto para RF | manter como infraestrutura até complemento oficial |
 | SLP/SLE/STEL — Anatel | campos de coordenada e município no pacote geral | campo de altura de antena | frequência e designação de emissão | potência, polarização, ganho, azimute, elevação e abertura disponíveis no esquema | pacote baixado; arquivos grandes ainda não classificados | inventariar serviços, descartar recepção/móveis e reconciliar pontas de radioenlace |
 | Radioamador — Anatel | município, sem coordenada precisa no recurso atual | ausente | frequências declaradas de forma agregada | ausentes | baixado, não integrado | baixa prioridade e atividade temporal desconhecida |
@@ -85,7 +85,8 @@ forem desconhecidos.
    3.284.526 emissões SMP sem perdas;
 2. **parcialmente concluído:** SARC, banda larga fixa e telefonia fixa foram
    auditados; faltam SLE, SLP e Mosaico/STEL;
-3. migrar os registros ativos SARC/SCM com evidência de transmissão/repetição;
+3. **concluído:** migrar 6.078 registros ativos SARC/SCM com evidência de
+   transmissão/repetição;
 4. auditar SLE/SLP/STEL e parear radioenlaces somente quando demonstrável;
 5. normalizar ERP/HCI e canalização de radiodifusão;
 6. recortar VOR/NDB/DME ao Brasil, associar municípios e derivar DME por tabela

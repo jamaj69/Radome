@@ -102,8 +102,11 @@ O checkpoint operacional está em `geoespacial/STATUS_ATUAL.md`. O esquema
 auditou por streaming 16.876 registros de SARC, banda larga fixa e telefonia
 fixa. SARC fornece 4.228 candidatos ativos a emissão; SCM fornece 1.850 Tx ativos;
 STFC permanece sem parâmetros RF úteis. A próxima entrega migra somente os
-registros com evidência suficiente ao esquema canônico. Trinta e três testes
-passam e 17 produtos coincidem byte a byte em duas execuções.
+registros com evidência suficiente ao esquema canônico. Essa migração produziu
+6.078 emissões, 3.335 sítios e 3.995 proxies de antena, com partição sem perdas;
+1.849 emissões SCM têm frequência, potência e altura presentes, enquanto SARC
+continua incompleto para uso quantitativo. Trinta e seis testes passam e 22
+produtos coincidem byte a byte em duas execuções. O próximo arquivo é SLE.
 
 ## 6. Roadmap orientado por gates
 

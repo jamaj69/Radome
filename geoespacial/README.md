@@ -84,6 +84,19 @@ Os arquivos menores do pacote geral Anatel são auditados sem extração com:
 Os resultados SARC, banda larga fixa e telefonia fixa estão documentados em
 `reports/anatel_general_audit/README.md`.
 
+Transmissores/repetidores ativos de SARC e SCM são migrados ao esquema canônico
+com partição exaustiva das exclusões:
+
+```bash
+/home/python/pyenv/bin/python build_canonical_fixed_emitters.py \
+  --sarc outputs/anatel_general_audit/sarc.csv.gz \
+  --fixed-broadband outputs/anatel_general_audit/fixed_broadband.csv.gz \
+  --output-dir outputs/canonical_fixed_emitters \
+  --report reports/canonical_fixed_emitters/summary.json
+```
+
+O resultado e suas limitações estão em `reports/canonical_fixed_emitters/`.
+
 A auditoria registro a registro de geração, tecnologia, frequência e designação
 de emissão está em `reports/ANATEL_SPECTRUM_AUDIT.md`. Ela também documenta a
 limitação da base de radiodifusão, que fornece canal e frequência central, mas

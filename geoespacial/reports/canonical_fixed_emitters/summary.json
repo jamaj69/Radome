@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "source_dataset": "anatel_general_fixed_emitters",
+  "input_files": {
+    "sarc": {
+      "path": "outputs/anatel_general_audit/sarc.csv.gz",
+      "sha256": "d69170b3c154ac8358b412b3f3fcf9f858df89f8f774cbd97795c7994a323f89"
+    },
+    "fixed_broadband": {
+      "path": "outputs/anatel_general_audit/fixed_broadband.csv.gz",
+      "sha256": "d33677eed9fc15ac4441fa0a84ed99b460ca8b326b9f41f54c7ce24a490ae1fd"
+    }
+  },
+  "selection_rule": "validity_status=Ativo and RF role evidence is explicit transmission, transmitter class, or repeater class",
+  "site_records": 3335,
+  "antenna_proxy_records": 3995,
+  "emission_records": 6078,
+  "site_assignment_records": 6078,
+  "antenna_assignment_records": 6078,
+  "sites_with_conflicting_municipal_codes": 1,
+  "site_cardinality_consistent": true,
+  "antenna_cardinality_consistent": true,
+  "all_partitions_consistent": true,
+  "datasets": {
+    "sarc": {
+      "source_records": 8774,
+      "selected_emission_records": 4228,
+      "site_records": 2362,
+      "antenna_proxy_records": 2743,
+      "quantitative_rf_ready_records": 0,
+      "excluded_records": 4546,
+      "exclusion_reasons": {
+        "not_active": 2848,
+        "receiver_only": 1544,
+        "unknown_rf_role": 154
+      },
+      "selected_missing_fields": {
+        "emission_designation": 4228,
+        "frequency_mhz": 2762,
+        "transmitter_power_w": 4228
+      },
+      "partition_consistent": true
+    },
+    "fixed_broadband": {
+      "source_records": 7513,
+      "selected_emission_records": 1850,
+      "site_records": 973,
+      "antenna_proxy_records": 1252,
+      "quantitative_rf_ready_records": 1849,
+      "excluded_records": 5663,
+      "exclusion_reasons": {
+        "not_active": 3810,
+        "receiver_only": 1850,
+        "unknown_rf_role": 3
+      },
+      "selected_missing_fields": {
+        "emission_designation": 2,
+        "frequency_mhz": 0,
+        "transmitter_power_w": 0
+      },
+      "partition_consistent": true
+    }
+  },
+  "antenna_semantics": "proxy cadastral por estação e atributos de antena no sítio arredondado; não identidade física comprovada",
+  "quantitative_rf_ready_semantics": "frequência, potência e altura de antena presentes; ainda requer validação regulatória e de propagação"
+}

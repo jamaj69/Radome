@@ -30,6 +30,11 @@ PRODUCTS = (
     "outputs/anatel_general_audit/fixed_telephony.csv.gz",
     "outputs/anatel_general_audit/summary.json",
     "reports/anatel_general_audit/summary.json",
+    "outputs/canonical_fixed_emitters/sites.csv.gz",
+    "outputs/canonical_fixed_emitters/antennas.csv.gz",
+    "outputs/canonical_fixed_emitters/emissions.csv.gz",
+    "outputs/canonical_fixed_emitters/summary.json",
+    "reports/canonical_fixed_emitters/summary.json",
 )
 
 

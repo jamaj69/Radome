@@ -51,6 +51,13 @@ def main() -> None:
         "--output-dir", "outputs/anatel_general_audit",
         "--report", "reports/anatel_general_audit/summary.json",
     ], root)
+    run([
+        sys.executable, "build_canonical_fixed_emitters.py",
+        "--sarc", "outputs/anatel_general_audit/sarc.csv.gz",
+        "--fixed-broadband", "outputs/anatel_general_audit/fixed_broadband.csv.gz",
+        "--output-dir", "outputs/canonical_fixed_emitters",
+        "--report", "reports/canonical_fixed_emitters/summary.json",
+    ], root)
     print("Pipeline geoespacial preliminar concluído.")
 
 

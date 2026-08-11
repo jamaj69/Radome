@@ -49,6 +49,7 @@ Todo script que manipule bases deve, conforme aplicável:
 | auditoria espectral Anatel | `audit_anatel_spectrum.py` |
 | auditoria streaming do pacote geral Anatel | `audit_anatel_general.py` |
 | modelo canônico sítio--antena--emissão SMP | `build_canonical_smp.py` |
+| modelo canônico de emissores fixos SARC/SCM | `build_canonical_fixed_emitters.py` |
 | rede municipal SMP | `build_municipal_emitter_network.py` |
 | rede municipal de radiodifusão | `build_broadcast_network.py` |
 | inventário TOPODATA | `inventory_topodata.py` |

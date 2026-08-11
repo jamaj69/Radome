@@ -1,6 +1,6 @@
 # Estado atual do subprojeto geoespacial
 
-**Checkpoint:** 11 de agosto de 2026, após a auditoria inicial do pacote geral Anatel.
+**Checkpoint:** 11 de agosto de 2026, após a migração canônica SARC/SCM.
 
 ## Vinculação e governança
 
@@ -37,13 +37,17 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 - banda larga fixa: 7.513 registros, 1.850 ativos com direção Tx, 3.706 com
   frequência/potência e 3.514 com largura decodificada;
 - telefonia fixa: 589 registros georreferenciados, mas sem parâmetros RF úteis.
+- emissores fixos canônicos: 6.078 emissões, 3.335 sítios e 3.995 proxies de
+  antena; 4.228 SARC e 1.850 SCM selecionados com partição sem perdas;
+- 1.849 emissões SCM têm frequência, potência e altura presentes; nenhuma SARC
+  atende esse mínimo devido à ausência de potência.
 
 ## Validação reproduzível
 
-- 33 testes automatizados aprovados;
+- 36 testes automatizados aprovados;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
-- 17 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
+- 22 produtos CSV, GeoJSON, GraphML, JSON, PNG e gzip com SHA-256 idênticos;
 - resultado registrado em `reports/reproducibility.json` com
   `byte_reproducible: true` e `differences: {}`.
 
@@ -64,11 +68,10 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Migrar ao esquema canônico apenas registros ativos com evidência suficiente de
-transmissão/repetição em SARC e banda larga fixa. Receptores e registros com
-papel desconhecido permanecem no inventário; telefonia fixa não entra como
-emissor RF. Nenhum radioenlace será pareado sem chaves cadastrais e verificação
-geométrica explícitas.
+Auditar `Estacoes_SLE.csv` por streaming, aplicando a mesma classificação
+conservadora de validade, direção, classe, coordenadas e completude RF. A etapa
+não deve parear enlaces ainda; ela prepara as regras e a escala antes de processar
+os arquivos SLP e Mosaico-STEL, ambos com cerca de 5 GB descompactados.
 
 ## Comando de retomada
 
