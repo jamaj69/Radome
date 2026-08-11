@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "faces": "geoespacial/outputs/augmented_triangular_mesh/triangular_faces.csv.gz",
+  "faces_sha256": "4950e1ebe3d4d262852abf75b0cf2529b5ba37744409f7400086353a115e63a3",
+  "profiles": "geoespacial/outputs/augmented_mesh_topodata_profiles/profiles.csv.gz",
+  "profiles_sha256": "7e6e4a4d4a1815e2ba2736ddb9de69fba259055091d2201b266864fd54b3f2b5",
+  "face_count": 3209,
+  "profiled_edge_count": 4262,
+  "face_status_k1": {
+    "triangle_k3_terrain_los": 2033,
+    "triangle_sparse_terrain_los": 766,
+    "triangle_two_edge_terrain_los": 410
+  },
+  "face_status_k4_3": {
+    "triangle_k3_terrain_los": 2248,
+    "triangle_sparse_terrain_los": 641,
+    "triangle_two_edge_terrain_los": 320
+  },
+  "faces_with_missing_terrain_k1": 3,
+  "faces_with_missing_terrain_k4_3": 3,
+  "outputs": {
+    "table": {
+      "path": "geoespacial/outputs/augmented_mesh_topodata_faces/triangular_faces_topodata.csv.gz",
+      "sha256": "4172e465e1703c5b9d7262a85f0f578162ce04a2bdac08f1075b27de07171b5f"
+    },
+    "geojson": {
+      "path": "geoespacial/outputs/augmented_mesh_topodata_faces/triangular_mesh_topodata.geojson",
+      "sha256": "94646e41ef102a7bc3f18bb1f5f76d6ca792234a26fd8b247700efbd3a6b77cd"
+    }
+  },
+  "semantics": "triangle edge counts from TOPODATA terrain LOS only; no Fresnel, RF illumination, coverage, or operational claim"
+}

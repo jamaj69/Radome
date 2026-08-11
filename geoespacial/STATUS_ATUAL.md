@@ -159,6 +159,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
   topográfica, 607 são obstruídas e 2 não têm terreno completo; em `k=4/3`,
   são 3.849/411/2; não há teste de Fresnel sem frequência selecionada e nenhuma
   aresta foi promovida a operacional;
+- faces TOPODATA: em `k=1`, 2.033 das 3.209 faces têm três arestas LOS, 410
+  têm duas e 766 são esparsas; em `k=4/3`, são 2.248/320/641; três faces tocam
+  arestas sem terreno e nenhuma classificação inclui Fresnel ou RF;
 - seleção das folhas de borda concluída: os 188.788 centros e pontos dos anéis
   requerem 175 folhas TOPODATA disponíveis, das quais 143 já são locais e 32
   novas somam 1.945.108.480 bytes listados; `05N51_ZN.zip` não consta no
@@ -177,7 +180,7 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Validação reproduzível
 
-- 99 testes automatizados aprovados na descoberta completa com
+- 100 testes automatizados aprovados na descoberta completa com
   `PYTHONPATH=geoespacial`;
 - `run_pipeline.py` executado integralmente;
 - duas execuções consecutivas comparadas por `verify_reproducibility.py`;
@@ -206,9 +209,9 @@ planilhas e comandos avulsos são ferramentas de inspeção ou apresentação.
 
 ## Próxima ação executável
 
-Reclassificar as 3.209 faces com as arestas de visada TOPODATA em `k=1` e
-`k=4/3`, comparar a conectividade da malha com os discos geométricos e manter
-os iluminadores separados do futuro modelo RF/Fresnel.
+Comparar a cobertura e redundância das faces `K3` TOPODATA com os discos
+geométricos, quantificar componentes e falhas de vértice e manter iluminadores
+separados do futuro modelo RF/Fresnel.
 
 ## Comando de retomada
 
