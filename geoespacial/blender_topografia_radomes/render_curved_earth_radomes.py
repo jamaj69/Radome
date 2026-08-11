@@ -27,6 +27,11 @@ def add_overlays(overlays):
     for point in overlays["altitude_samples"]:
         t=(point["elevation_m"]-low)/max(1,high-low); color=(t,.08,1-t)
         bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=1,radius=.045,location=geo_position(point["longitude"],point["latitude"],.08)); bpy.context.object.data.materials.append(material("Altitude heat",color))
+def add_terrain(terrain):
+    for site in terrain["sites"]:
+        vertices=[position(lat,lon,elevation*2) for lon,lat,elevation in site["vertices"]]; width,height=site["width"],site["height"]
+        faces=[(y*width+x,y*width+x+1,(y+1)*width+x+1,(y+1)*width+x) for y in range(height-1) for x in range(width-1)]
+        mesh=bpy.data.meshes.new(f"TOPODATA | {site['name']}"); mesh.from_pydata(vertices,[],faces); obj=bpy.data.objects.new(f"TOPODATA terrain | {site['name']}",mesh); bpy.context.collection.objects.link(obj); obj.data.materials.append(material("TOPODATA terrain",(.20,.36,.12)))
 
 def add_radome(site, earth):
     point = position(site["latitude"], site["longitude"], site["terrain_elevation_m"]); normal = point.normalized()
@@ -37,10 +42,10 @@ def add_radome(site, earth):
     mast = bpy.context.object; mast.name = f"Mast | {site['name']}"; mast.data.materials.append(material("Mast", (.12,.16,.18), .7)); mast.rotation_mode="QUATERNION"; mast.rotation_quaternion=normal.to_track_quat("Z","Y")
     bpy.ops.object.text_add(location=point + normal * .55); label=bpy.context.object; label.name=f"Label | {site['name']}"; label.data.body=f"{site['name']}\\n{site['terrain_elevation_m']:.0f} m | incidências: {site['geometric_illuminator_incidence_count']}"; label.data.align_x="CENTER"; label.data.size=.22; label.data.materials.append(material("Label", (1,.82,.2))); label.rotation_mode="QUATERNION"; label.rotation_quaternion=normal.to_track_quat("Z","Y")
 
-def build(selection, overlays, blend, render):
+def build(selection, overlays, terrain, blend, render):
     bpy.ops.object.select_all(action="SELECT"); bpy.ops.object.delete(use_global=False)
     bpy.ops.mesh.primitive_uv_sphere_add(segments=128, ring_count=64, radius=EARTH_RADIUS_UNITS, location=(0,0,0)); earth=bpy.context.object; earth.name="Earth | spherical topographic context"; earth.data.materials.append(material("Earth", (.055,.18,.09)))
-    add_overlays(overlays); site_points = [position(site["latitude"], site["longitude"], site["terrain_elevation_m"]) for site in selection["selected_sites"]]
+    add_overlays(overlays); add_terrain(terrain); site_points = [position(site["latitude"], site["longitude"], site["terrain_elevation_m"]*2) for site in selection["selected_sites"]]
     for site in selection["selected_sites"]: add_radome(site, earth)
     bpy.ops.object.light_add(type="SUN", location=(0,0,0)); bpy.context.object.data.energy=2.2; bpy.context.object.rotation_euler=(math.radians(25), math.radians(-20), math.radians(-30))
     bpy.ops.object.light_add(type="AREA", location=(35,-35,30)); bpy.context.object.data.energy=900; bpy.context.object.data.shape="DISK"; bpy.context.object.data.size=25
@@ -50,5 +55,5 @@ def build(selection, overlays, blend, render):
     bpy.ops.wm.save_as_mainfile(filepath=str(blend)); bpy.ops.render.render(write_still=True)
 
 if __name__ == "__main__":
-    parser=argparse.ArgumentParser(); parser.add_argument("--selection",type=Path,required=True); parser.add_argument("--overlays",type=Path,required=True); parser.add_argument("--blend",type=Path,required=True); parser.add_argument("--render",type=Path,required=True)
-    args=parser.parse_args(sys.argv[sys.argv.index("--") + 1:]); args.blend=args.blend.resolve(); args.render=args.render.resolve(); args.selection=args.selection.resolve(); args.overlays=args.overlays.resolve(); args.blend.parent.mkdir(parents=True,exist_ok=True); args.render.parent.mkdir(parents=True,exist_ok=True); build(json.loads(args.selection.read_text(encoding="utf-8")),json.loads(args.overlays.read_text(encoding="utf-8")),args.blend,args.render)
+    parser=argparse.ArgumentParser(); parser.add_argument("--selection",type=Path,required=True); parser.add_argument("--overlays",type=Path,required=True); parser.add_argument("--terrain",type=Path,required=True); parser.add_argument("--blend",type=Path,required=True); parser.add_argument("--render",type=Path,required=True)
+    args=parser.parse_args(sys.argv[sys.argv.index("--") + 1:]); args.blend=args.blend.resolve(); args.render=args.render.resolve(); args.selection=args.selection.resolve(); args.overlays=args.overlays.resolve(); args.terrain=args.terrain.resolve(); args.blend.parent.mkdir(parents=True,exist_ok=True); args.render.parent.mkdir(parents=True,exist_ok=True); build(json.loads(args.selection.read_text(encoding="utf-8")),json.loads(args.overlays.read_text(encoding="utf-8")),json.loads(args.terrain.read_text(encoding="utf-8")),args.blend,args.render)
