@@ -19,6 +19,10 @@ A especificação destinada à futura incorporação no artigo está em
 grafo com os dados locais verificados; `run_pipeline.sh` é apenas um wrapper de
 compatibilidade e não transforma dados.
 
+A reprodução byte a byte é verificada executando o pipeline duas vezes com
+`verify_reproducibility.py`. O último resultado e os hashes ficam em
+`reports/reproducibility.json`.
+
 O diagnóstico das fontes de torres celulares, aeroportos, bases aéreas e
 comandos está em `FONTES_INFRAESTRUTURA.md`.
 

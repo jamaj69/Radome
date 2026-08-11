@@ -54,6 +54,7 @@ Todo script que manipule bases deve, conforme aplicável:
 | grafo de candidatos | `build_candidate_graph.py` |
 | otimização discreta | `optimize_sites.py` |
 | pipeline preliminar | `run_pipeline.py` |
+| comparação byte a byte de duas execuções | `verify_reproducibility.py` |
 
 ## Gates futuros
 

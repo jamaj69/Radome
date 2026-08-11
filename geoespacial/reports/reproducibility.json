@@ -1,0 +1,20 @@
+{
+  "verified_at_utc": "2026-08-11T02:44:37.955912+00:00",
+  "pipeline_command": [
+    "/home/python/pyenv/bin/python",
+    "/home/jamaj/src/Radome/geoespacial/run_pipeline.py",
+    "--skip-tests"
+  ],
+  "product_count": 7,
+  "byte_reproducible": true,
+  "hashes": {
+    "reports/preselection_bc250/candidates.csv": "c6cb6a2aceb9c2a2195ecb0280a850425b52245a57e0e234edab18a59f22d3c0",
+    "reports/preselection_bc250/candidates.geojson": "6bba4a2bfe2f0327e270fe9b66a36eb89de03f60fba124e6b1225042c78fc2dc",
+    "reports/candidate_graph/candidate_graph.graphml": "44a4c67244ce07b5c456428ff3f6ba3c8923afb03053fa64993a77a15fd96892",
+    "reports/candidate_graph/candidate_graph.png": "cb902eb5f176e7039bd5728dc95db136d8b26e4198d2d5e18acc3561b9488179",
+    "reports/candidate_graph/candidate_nodes.csv": "12f4db4048682e6ecfd5a2da86afe28c362d0bfe29ebf712b27b9155f5ab007e",
+    "reports/candidate_graph/candidate_nodes.geojson": "274cdd20ff65578ec028a786ad0013bb9b202bc76344408be0551b8324153cf3",
+    "reports/candidate_graph/summary.json": "2e23e4a1e802fb39b9f478302b06a56a23bf28fedf73a3f6d4f82d43ee18e7bb"
+  },
+  "differences": {}
+}

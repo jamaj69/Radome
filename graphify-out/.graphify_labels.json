@@ -72,5 +72,6 @@
   "70": "acquire",
   "71": "acquire_decea_wfs.py",
   "72": "Política de manipulação reproduzível das bases geoespaciais",
-  "73": "main"
+  "73": "main",
+  "74": "verify_reproducibility.py"
 }

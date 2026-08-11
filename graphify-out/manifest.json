@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "geoespacial/README.md": {
-    "mtime": 1786416074.0836132,
-    "ast_hash": "e39f1e69052f959be313fec4e744f63c",
+    "mtime": 1786416285.1625416,
+    "ast_hash": "cdc7269058bf86cedf302fa39810f363",
     "semantic_hash": ""
   },
   "geoespacial/data/manifests/topodata_altitude_tiles.json": {
@@ -520,7 +520,7 @@
     "semantic_hash": ""
   },
   "geoespacial/reports/candidate_graph/summary.json": {
-    "mtime": 1786416096.0874999,
+    "mtime": 1786416277.8265777,
     "ast_hash": "3c8abd875e5a21be218d0584672b000e",
     "semantic_hash": ""
   },
@@ -535,7 +535,7 @@
     "semantic_hash": ""
   },
   "geoespacial/reports/candidate_graph/candidate_graph.png": {
-    "mtime": 1786416096.0874999,
+    "mtime": 1786416277.8265777,
     "ast_hash": "1916a9e358458bddd05f97aa7438aeee",
     "semantic_hash": ""
   },
@@ -715,8 +715,23 @@
     "semantic_hash": ""
   },
   "geoespacial/POLITICA_REPRODUTIBILIDADE.md": {
-    "mtime": 1786416153.3792055,
-    "ast_hash": "997159a4cc472e17b036ae0a91ce88e7",
+    "mtime": 1786416265.9906359,
+    "ast_hash": "6224e7de28fad04fdb626686dc0b0a06",
+    "semantic_hash": ""
+  },
+  "geoespacial/reports/reproducibility.json": {
+    "mtime": 1786416277.950577,
+    "ast_hash": "bdb1af365997185efcf185ae099086af",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_verify_reproducibility.py": {
+    "mtime": 1786416265.8306367,
+    "ast_hash": "967e5a8ed9283ae786598d9f47cb36ae",
+    "semantic_hash": ""
+  },
+  "geoespacial/verify_reproducibility.py": {
+    "mtime": 1786416265.6666374,
+    "ast_hash": "9d030614d335f47480a7b66e739fdcba",
     "semantic_hash": ""
   }
 }

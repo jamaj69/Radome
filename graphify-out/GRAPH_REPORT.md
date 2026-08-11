@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-10)
 
 ## Corpus Check
-- 83 files · ~460,255 words
+- 86 files · ~460,565 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 826 nodes · 964 edges · 74 communities (67 shown, 7 thin omitted)
+- 834 nodes · 975 edges · 75 communities (68 shown, 7 thin omitted)
 - Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 43 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6f292e34`
+- Built from commit: `457ddd5c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -88,6 +88,7 @@
 - acquire_decea_wfs.py
 - Política de manipulação reproduzível das bases geoespaciais
 - main
+- verify_reproducibility.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -116,7 +117,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (74 total, 7 thin omitted)
+## Communities (75 total, 7 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -381,6 +382,10 @@ Nodes (5): Contrato de cada script, Gates futuros, Política de manipulação re
 ### Community 73 - "main"
 Cohesion: 0.83
 Nodes (3): main(), Path, run()
+
+### Community 74 - "verify_reproducibility.py"
+Cohesion: 0.39
+Nodes (5): ReproducibilityTest, main(), Path, sha256(), snapshot()
 
 ## Knowledge Gaps
 - **467 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+462 more)
