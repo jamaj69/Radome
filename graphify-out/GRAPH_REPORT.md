@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 147 files · ~487,640 words
+- 149 files · ~487,998 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1080 nodes · 1423 edges · 103 communities (86 shown, 17 thin omitted)
+- 1082 nodes · 1424 edges · 97 communities (79 shown, 18 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 115 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0ba70054`
+- Built from commit: `fa5d7623`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -99,17 +99,11 @@
 - anatel_radio_link_candidates/README.md
 - evaluate_anatel_radio_link_terrain.py
 - extract_topodata_route_tiles.py
-- test_build_canonical_fixed_emitters.py
 - build_canonical_smp.py
 - inventory_infrastructure.py
 - build_municipal_emitter_network.py
-- ZipFile
-- write_fixture
-- validate
 - anatel_radio_link_terrain/README.md
-- analyze
 - topodata_radio_link_tiles/README.md
-- inventory
 - inventory
 - anatel_radio_link_heights/README.md
 - build_municipal_emitter_network.py
@@ -131,21 +125,21 @@
 10. `Fases e gates` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `analyze()` --calls--> `number()`  [INFERRED]
-  geoespacial/analyze_anatel_radio_link_candidates.py → geoespacial/audit_anatel_spectrum.py
-- `analyze()` --calls--> `deterministic_gzip_csv()`  [INFERRED]
-  geoespacial/analyze_anatel_radio_link_candidates.py → geoespacial/build_canonical_smp.py
-- `analyze()` --calls--> `stable_identifier()`  [INFERRED]
-  geoespacial/analyze_anatel_radio_link_candidates.py → geoespacial/build_canonical_smp.py
 - `audit_member()` --calls--> `emission_bandwidth_hz()`  [INFERRED]
   geoespacial/audit_anatel_general.py → geoespacial/audit_anatel_spectrum.py
 - `audit_member()` --calls--> `number()`  [INFERRED]
   geoespacial/audit_anatel_general.py → geoespacial/audit_anatel_spectrum.py
+- `audit_member()` --calls--> `deterministic_gzip_csv()`  [INFERRED]
+  geoespacial/audit_anatel_general.py → geoespacial/build_canonical_smp.py
+- `audit()` --calls--> `deterministic_gzip_csv()`  [INFERRED]
+  geoespacial/audit_anatel_radio_link_heights.py → geoespacial/build_canonical_smp.py
+- `evaluate()` --calls--> `number()`  [INFERRED]
+  geoespacial/evaluate_anatel_radio_link_terrain.py → geoespacial/audit_anatel_spectrum.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (103 total, 17 thin omitted)
+## Communities (97 total, 18 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -356,12 +350,8 @@ Cohesion: 0.22
 Nodes (8): ANAC e DECEA, Anatel, Comunicação nas bases históricas do IBGE, Fontes de infraestrutura para o grafo de candidatos, IBGE BC250 2025, Ordem de integração, Radiodifusão, Resultado por tema
 
 ### Community 58 - "inventory_infrastructure.py"
-Cohesion: 0.20
-Nodes (11): audit(), audit_member(), main(), Counter, Path, rf_role(), sorted_counter(), usable_text() (+3 more)
-
-### Community 59 - "inventory"
-Cohesion: 0.25
-Nodes (10): audit_broadcast(), audit_smp(), emission_bandwidth_hz(), main(), number(), positive_frequency(), Path, Decodifica a largura necessária no início da designação ITU. (+2 more)
+Cohesion: 0.14
+Nodes (16): audit(), audit_member(), main(), Counter, Path, rf_role(), sorted_counter(), usable_text() (+8 more)
 
 ### Community 61 - "build"
 Cohesion: 0.35
@@ -439,41 +429,17 @@ Nodes (27): candidate_status(), evaluate(), main(), Counter, Path, classify(), e
 Cohesion: 0.24
 Nodes (10): atomic_json(), extract_archive(), extract_receipt(), feature(), inspect_geotiff(), main(), Path, sha256_file() (+2 more)
 
-### Community 85 - "test_build_canonical_fixed_emitters.py"
-Cohesion: 0.24
-Nodes (11): antenna_signature(), build(), canonical_number(), exclusion_reason(), main(), Path, CanonicalFixedEmittersTest, Path (+3 more)
-
 ### Community 86 - "build_canonical_smp.py"
-Cohesion: 0.20
-Nodes (12): build(), canonical_coordinate(), deterministic_gzip_csv(), dominant_code(), main(), Counter, Path, Abre CSV gzip reproduzível, sem nome ou horário variável no cabeçalho. (+4 more)
+Cohesion: 0.05
+Nodes (51): analyze(), distance(), main(), Path, audit_broadcast(), audit_smp(), emission_bandwidth_hz(), main() (+43 more)
 
 ### Community 87 - "inventory_infrastructure.py"
-Cohesion: 0.27
-Nodes (9): main(), parse_args(), Path, read_anac_csv(), read_anatel_zip(), read_decea_capabilities(), sha256(), InfrastructureInventoryTest (+1 more)
+Cohesion: 0.13
+Nodes (19): main(), parse_args(), Path, read_anac_csv(), read_anatel_zip(), read_decea_capabilities(), sha256(), file_sha256() (+11 more)
 
 ### Community 88 - "build_municipal_emitter_network.py"
 Cohesion: 0.27
 Nodes (7): audit(), classify_heights(), coordinate(), main(), Path, value_set(), AuditRadioLinkHeightsTest
-
-### Community 89 - "ZipFile"
-Cohesion: 0.23
-Nodes (8): clean(), extract(), main(), Path, extract(), main(), Path, RawLinkKeysTest
-
-### Community 90 - "write_fixture"
-Cohesion: 0.47
-Nodes (4): CanonicalSmpTest, Path, read_gzip_csv(), write_fixture()
-
-### Community 91 - "validate"
-Cohesion: 0.20
-Nodes (10): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest, angular_error(), bearing(), main() (+2 more)
-
-### Community 93 - "analyze"
-Cohesion: 0.36
-Nodes (5): analyze(), distance(), main(), Path, CandidateTest
-
-### Community 97 - "inventory"
-Cohesion: 0.42
-Nodes (6): file_sha256(), inventory(), main(), Path, SmpInventoryTest, ZipFile
 
 ### Community 100 - "Projeto_Radomes_Multifaixa_Revisado.md"
 Cohesion: 0.33
@@ -488,14 +454,14 @@ Cohesion: 0.24
 Nodes (7): VerticalGeometryTest, angular_error(), elevation_angle(), main(), Path, status(), validate()
 
 ## Knowledge Gaps
-- **490 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+485 more)
+- **491 isolated node(s):** `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify`, `Project Layout` (+486 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `deterministic_gzip_csv()` connect `build_canonical_smp.py` to `validate_anatel_radio_link_vertical_geometry.py`, `evaluate_anatel_radio_link_terrain.py`, `test_build_canonical_fixed_emitters.py`, `build_municipal_emitter_network.py`, `ZipFile`, `inventory_infrastructure.py`, `validate`, `analyze`?**
+- **Why does `deterministic_gzip_csv()` connect `build_canonical_smp.py` to `build_municipal_emitter_network.py`, `inventory_infrastructure.py`, `evaluate_anatel_radio_link_terrain.py`, `validate_anatel_radio_link_vertical_geometry.py`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
@@ -506,6 +472,6 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 17 inferred relationships involving `deterministic_gzip_csv()` (e.g. with `analyze()` and `audit_member()`) actually correct?**
   _`deterministic_gzip_csv()` has 17 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery` to the rest of the system?**
-  _490 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _491 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._

@@ -153,6 +153,10 @@ A geometria vertical foi calculada para 963 caminhos; oito ficaram sem terreno.
 No limiar provisório de 1°, 933 caminhos de 311 candidatos concordam nas duas
 pontas em ambos os modelos de Terra efetiva. Cinquenta e nove testes passam.
 O próximo gate consolida todas as condições numa pré-qualificação cadastral.
+A consolidação retém, em `k=1`, 764 caminhos de 240 candidatos e, em `k=4/3`,
+796 caminhos de 250 candidatos. Sessenta e dois testes passam; todos continuam
+com pareamento não realizado. O próximo gate cria somente um grafo de hipóteses
+cadastrais, separado de qualquer enlace fisicamente confirmado.
 
 ## 6. Roadmap orientado por gates
 
