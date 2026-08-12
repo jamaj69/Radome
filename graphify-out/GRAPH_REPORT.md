@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 234 files · ~625,809 words
+- 234 files · ~625,835 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1373 nodes · 1849 edges · 138 communities (102 shown, 36 thin omitted)
+- 1375 nodes · 1852 edges · 138 communities (102 shown, 36 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 138 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `09272f05`
+- Built from commit: `bd32acf0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -355,8 +355,8 @@ Cohesion: 0.40
 Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 5: integration, calibration, and operational validation, What the research shows
 
 ### Community 46 - "Cross-search signals"
-Cohesion: 0.31
-Nodes (6): GeometryTest, angular_error(), bearing(), main(), Path, validate()
+Cohesion: 0.23
+Nodes (7): VerticalGeometryTest, angular_error(), elevation_angle(), main(), Path, status(), validate()
 
 ### Community 47 - "Cross-search signals"
 Cohesion: 0.40
@@ -464,7 +464,7 @@ Nodes (3): Famílias explícitas de radioenlaces Anatel, Reprodução, Resultado
 
 ### Community 83 - "evaluate_anatel_radio_link_terrain.py"
 Cohesion: 0.06
-Nodes (35): candidate_status(), evaluate(), main(), Counter, Path, classify(), evaluate(), interpolate() (+27 more)
+Nodes (36): consolidate(), destination(), main(), normalize(), Path, ring_clearance(), screen(), candidate_status() (+28 more)
 
 ### Community 84 - "extract_topodata_route_tiles.py"
 Cohesion: 0.24
@@ -499,8 +499,8 @@ Cohesion: 0.21
 Nodes (11): clean(), extract(), main(), Path, file_sha256(), inventory(), main(), Path (+3 more)
 
 ### Community 93 - "consolidate_anatel_radio_link_prequalification.py"
-Cohesion: 0.31
-Nodes (5): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest
+Cohesion: 0.16
+Nodes (11): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest, GeometryTest, angular_error(), bearing() (+3 more)
 
 ### Community 96 - "ZipFile"
 Cohesion: 0.30
@@ -563,16 +563,16 @@ Cohesion: 0.50
 Nodes (3): Aquisição, Extração e índice, Folhas TOPODATA das arestas priorizadas
 
 ### Community 127 - "validate_anatel_radio_link_geometry.py"
-Cohesion: 0.06
-Nodes (31): consolidate(), destination(), main(), normalize(), Path, ring_clearance(), screen(), edge_tile_names() (+23 more)
+Cohesion: 0.08
+Nodes (23): edge_tile_names(), main(), Path, select(), main(), Counter, Path, required_names() (+15 more)
 
 ### Community 131 - "analyze_augmented_mesh_resilience.py"
 Cohesion: 0.23
 Nodes (9): build(), component_metrics(), edge_key(), face_vertices(), main(), Graph, Path, AnalyzeAugmentedMeshResilienceTests (+1 more)
 
 ### Community 132 - "render_curved_earth_radomes.py"
-Cohesion: 0.38
-Nodes (12): add_camera(), add_curve(), add_overlays(), add_radome(), add_terrain(), build(), earth_material(), geo_position() (+4 more)
+Cohesion: 0.31
+Nodes (14): add_camera(), add_curve(), add_label_text(), add_overlays(), add_radome(), add_terrain(), build(), earth_material() (+6 more)
 
 ### Community 133 - "build"
 Cohesion: 0.33
@@ -594,11 +594,7 @@ Nodes (3): build(), Extrai malhas TOPODATA locais, com altitude real, para a cen
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Topodata` connect `evaluate_anatel_radio_link_terrain.py` to `validate_anatel_radio_link_geometry.py`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `build()` connect `build_canonical_smp.py` to `audit_anatel_spectrum.py`, `extract_anatel_radio_link_keys.py`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
@@ -608,3 +604,7 @@ _Questions this graph is uniquely positioned to answer:_
   _522 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
+- **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
+  _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
+- **Should `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` be split into smaller, more focused modules?**
+  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._

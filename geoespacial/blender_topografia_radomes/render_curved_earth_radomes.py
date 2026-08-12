@@ -119,6 +119,30 @@ def add_terrain(terrain):
         obj.data.materials.append(material("TOPODATA terrain", (.20, .36, .12)))
 
 
+def add_label_text(name, body, location, facing, size, text_material, halo_material):
+    """Adds a black text label with a fine white glyph halo for map contrast."""
+    bpy.ops.object.text_add(location=location + facing * .006)
+    label = bpy.context.object
+    label.name = name
+    label.data.body = body
+    label.data.align_x = "CENTER"
+    label.data.align_y = "CENTER"
+    label.data.size = size
+    label.data.resolution_u = 24
+    label.data.materials.append(text_material)
+    label.rotation_mode = "QUATERNION"
+    label.rotation_quaternion = facing.to_track_quat("Z", "Y")
+
+    halo = label.copy()
+    halo.data = label.data.copy()
+    halo.name = f"Halo | {name}"
+    halo.location = location + facing * .003
+    halo.data.materials.clear()
+    halo.data.materials.append(halo_material)
+    halo.data.offset = .008
+    bpy.context.collection.objects.link(halo)
+
+
 def add_radome(site, camera, label_index, label_text, label_halo):
     point = position(site["latitude"], site["longitude"], site["terrain_elevation_m"])
     normal = point.normalized()
@@ -153,30 +177,14 @@ def add_radome(site, camera, label_index, label_text, label_halo):
     label_position = anchor + right * horizontal + up * vertical + camera_depth * 1.20
     facing = (camera.location - label_position).normalized()
 
-    bpy.ops.object.text_add(location=label_position + facing * .006)
-    label = bpy.context.object
-    label.name = f"Label | {site['name']}"
-    label.data.body = f"{site['display_name']}\n{site['terrain_elevation_m']:.0f} m"
-    label.data.align_x = "CENTER"
-    label.data.align_y = "CENTER"
-    label.data.size = .28
-    label.data.resolution_u = 24
-    label.data.space_line = .82
-    label.data.materials.append(label_text)
-    bpy.context.view_layer.update()
-    label.rotation_mode = "QUATERNION"
-    label.rotation_quaternion = facing.to_track_quat("Z", "Y")
-
-    # A white glyph outline provides cartographic contrast without reverting to
-    # opaque callout panels over the satellite texture.
-    halo = label.copy()
-    halo.data = label.data.copy()
-    halo.name = f"Label halo | {site['name']}"
-    halo.location = label_position + facing * .003
-    halo.data.materials.clear()
-    halo.data.materials.append(label_halo)
-    halo.data.offset = .008
-    bpy.context.collection.objects.link(halo)
+    add_label_text(
+        f"Label | {site['name']}", site["display_name"],
+        label_position + up * .12, facing, .28, label_text, label_halo,
+    )
+    add_label_text(
+        f"Altitude | {site['name']}", f"({site['terrain_elevation_m']:.0f} m)",
+        label_position - up * .12, facing, .18, label_text, label_halo,
+    )
 
 
 def add_camera(target, overview):
