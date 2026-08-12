@@ -59,6 +59,10 @@ A vista ampliada também recorta do BC250/IBGE as divisas municipais (linhas
 escuras) e estaduais (linhas amarelas). Elas são sobreposições cartográficas
 acima do relevo, sem alterar as cotas do DEM.
 
+A câmera zenital enquadra somente a região central da janela DEM, deixando uma
+margem de superfície TOPODATA real ao redor da área visível. Não há extensão
+plana ou extrapolação de cotas além da folha disponível.
+
 ### Visão zenital com ortoimagem
 
 Por padrão, a visão zenital usa a textura global NASA Blue Marble já versionada

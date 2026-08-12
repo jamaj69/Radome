@@ -136,7 +136,9 @@ def add_camera(target, span, top_down):
         camera = bpy.context.object
         camera.name = "Top-down terrain inspection camera"
         camera.data.type = "ORTHO"
-        camera.data.ortho_scale = span * 1.38
+        # Keep the rendered view inside the actual TOPODATA mesh.  The remaining
+        # border is real DEM surface, not a flat or extrapolated apron.
+        camera.data.ortho_scale = span * .80
         camera.data.clip_end = span * 4
         camera.rotation_euler = (target - camera.location).to_track_quat("-Z", "Y").to_euler()
         bpy.context.scene.camera = camera

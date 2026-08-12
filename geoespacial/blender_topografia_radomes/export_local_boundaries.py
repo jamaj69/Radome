@@ -18,10 +18,16 @@ def line_parts(geometry, stride=3):
 
 
 def boundary_parts(layer, west, south, east, north, stride):
+    from osgeo import ogr
     layer.SetSpatialFilterRect(west, south, east, north)
+    window = ogr.CreateGeometryFromWkt(
+        f"POLYGON (({west} {south}, {east} {south}, {east} {north}, {west} {north}, {west} {south}))"
+    )
     parts = []
     for feature in layer:
-        parts.extend(line_parts(feature.GetGeometryRef().Boundary(), stride))
+        boundary = feature.GetGeometryRef().Boundary()
+        clipped = boundary.Intersection(window)
+        parts.extend(line_parts(clipped, stride))
     layer.SetSpatialFilter(None)
     return parts
 
