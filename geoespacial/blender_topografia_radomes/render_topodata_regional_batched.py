@@ -131,11 +131,12 @@ def build(terrain, boundaries, texture, blend, render, exaggeration=1.5, samples
     bpy.ops.object.camera_add(location=(0, 0, target.z + span * 1.3))
     camera = bpy.context.object; bpy.context.scene.camera = camera; camera.data.type = "ORTHO"
     # Na câmera ortográfica do Blender, ``ortho_scale`` corresponde à altura
-    # visível. A resolução usa a mesma razão geográfica da malha: com margem
-    # idêntica nos dois eixos, não há faixas de fundo cinza.
+    # visível. A moldura WGS84 já contém a margem cartográfica desejada; não
+    # acrescentamos uma segunda margem de câmera, que deixaria o fundo cinza
+    # aparente ao redor da superfície.
     image_height = 2400
     image_width = max(1, round(image_height * x_span / y_span))
-    camera.data.ortho_scale = y_span * 1.12
+    camera.data.ortho_scale = y_span
     # A cena regional mede centenas de quilômetros. O padrão de 1 km do
     # Blender recortava toda a superfície antes da câmera, produzindo apenas
     # o fundo cinza. Mantemos uma folga para relevo, marcadores e divisas.

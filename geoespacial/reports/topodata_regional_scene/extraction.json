@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "acquisition_receipt": "geoespacial/reports/topodata_regional_scene/acquisition.json",
-  "acquisition_receipt_sha256": "aa2a61b06ac6b9c3f2ed98c4d0173e8e4ae2fce239fb8678cdfc3b4f69e23206",
-  "requested_archive_count": 24,
-  "completed_archive_count": 24,
+  "acquisition_receipt_sha256": "2eaab49daf8c6a2e756cba45c02142bb78d26bc0e42d63e103c9faa31955f3ec",
+  "requested_archive_count": 21,
+  "completed_archive_count": 21,
   "failed_archive_count": 0,
   "complete": true,
-  "geotiff_size_bytes": 1866249936,
+  "geotiff_size_bytes": 1632968694,
   "missing_archive_names_from_selection": [],
   "crs": "EPSG:4326",
   "pixel_interpretation": "PixelIsArea",
-  "updated_at_utc": "2026-08-12T03:59:02.054944+00:00",
+  "updated_at_utc": "2026-08-12T04:29:45.424832+00:00",
   "tiles": [
     {
       "archive": "15S465ZN.zip",
@@ -410,63 +410,6 @@
         -21.0
       ],
       "center_sample_m": 538.0369873046875
-    },
-    {
-      "archive": "22S465ZN.zip",
-      "archive_sha256": "4048a681b38707d8b1f4e5c7e5f3d21ec1e5aa39110a98737c0632697a45b897",
-      "status": "reused",
-      "geotiff": "22S465ZN.tif",
-      "geotiff_size_bytes": 77760414,
-      "geotiff_sha256": "b74089e8291d615cec8cef9ceee84221f57ba0f0d5b04b66c9a4f1a4749efb53",
-      "width": 5400,
-      "height": 3600,
-      "pixel_size_x_degrees": 0.0002777784814814818,
-      "pixel_size_y_degrees": 0.0002777777777777778,
-      "bbox_wgs84": [
-        -46.5,
-        -23.0,
-        -44.9999962,
-        -22.0
-      ],
-      "center_sample_m": 875.9730224609375
-    },
-    {
-      "archive": "22S48_ZN.zip",
-      "archive_sha256": "bc0a483d667222c8884b21813a1585b92f342fccd93510d2af8c36d50c0642d6",
-      "status": "reused",
-      "geotiff": "22S48_ZN.tif",
-      "geotiff_size_bytes": 77760414,
-      "geotiff_sha256": "d4325cc1843e28f9a5dd18db2fbab42af19722f2c5722868ca2e9b504db47c76",
-      "width": 5400,
-      "height": 3600,
-      "pixel_size_x_degrees": 0.0002777784814814818,
-      "pixel_size_y_degrees": 0.0002777777777777778,
-      "bbox_wgs84": [
-        -48.0,
-        -23.0,
-        -46.4999962,
-        -22.0
-      ],
-      "center_sample_m": 670.875
-    },
-    {
-      "archive": "22S495ZN.zip",
-      "archive_sha256": "8b9b9fe0a98144fc11772f70a101a49b38e639de4bcd5ef46876225c41ff85fa",
-      "status": "reused",
-      "geotiff": "22S495ZN.tif",
-      "geotiff_size_bytes": 77760414,
-      "geotiff_sha256": "18a1592ad3903af466a6942489fad180db9e4a771bb1cbd19bb058656319afe9",
-      "width": 5400,
-      "height": 3600,
-      "pixel_size_x_degrees": 0.0002777784814814818,
-      "pixel_size_y_degrees": 0.0002777777777777778,
-      "bbox_wgs84": [
-        -49.5,
-        -23.0,
-        -47.9999962,
-        -22.0
-      ],
-      "center_sample_m": 529.8480224609375
     }
   ]
 }

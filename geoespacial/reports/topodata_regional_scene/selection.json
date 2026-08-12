@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "selection": "/tmp/selected_sites.json",
+  "selection": "geoespacial/blender_topografia_radomes/build/selected_sites.json",
   "manifest": "geoespacial/data/manifests/topodata_altitude_tiles.json",
   "existing_directory": "geoespacial/data/raw/topodata/radio_link_routes",
   "bbox_wgs84": [
-    -49.17682574407971,
-    -22.088497081484235,
-    -46.31461878307286,
-    -15.533689652
+    -49.45,
+    -21.95,
+    -45.05,
+    -15.05
   ],
   "sample_spacing_degrees": 0.02,
-  "required_archive_count": 24,
-  "already_local_archive_count": 24,
+  "required_archive_count": 21,
+  "already_local_archive_count": 21,
   "new_archive_count": 0,
   "new_listed_size_bytes": 0,
   "required_archive_names": [
@@ -35,10 +35,7 @@
     "20S495ZN.zip",
     "21S465ZN.zip",
     "21S48_ZN.zip",
-    "21S495ZN.zip",
-    "22S465ZN.zip",
-    "22S48_ZN.zip",
-    "22S495ZN.zip"
+    "21S495ZN.zip"
   ],
   "missing_archive_names": [],
   "archives": [
@@ -146,21 +143,6 @@
       "name": "21S495ZN.zip",
       "url": "https://www.dsr.inpe.br/topodata/data/geotiff/21S495ZN.zip",
       "listed_size_bytes": 62914560
-    },
-    {
-      "name": "22S465ZN.zip",
-      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/22S465ZN.zip",
-      "listed_size_bytes": 60817408
-    },
-    {
-      "name": "22S48_ZN.zip",
-      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/22S48_ZN.zip",
-      "listed_size_bytes": 62914560
-    },
-    {
-      "name": "22S495ZN.zip",
-      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/22S495ZN.zip",
-      "listed_size_bytes": 63963136
     }
   ],
   "selection_semantics": "Folhas ZN oficiais necessárias à moldura regional. A aquisição reutiliza ZIPs presentes, mas a extração revalida todas as folhas requeridas; o processo não altera cotas nem infere adequação de sítio."

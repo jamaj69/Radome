@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
   "selection_file": "geoespacial/reports/topodata_regional_scene/selection.json",
-  "selection_sha256": "7fae0ba0a76016ac777dee93faed592c90841531d58f87c536e05062adb10cf8",
+  "selection_sha256": "2bcbd0f1f1f24900cc82e2b4528c548015945b1e1751ec7b0fd3b97dbe081c64",
   "output_directory": "geoespacial/data/raw/topodata/radio_link_routes",
-  "requested_archive_count": 24,
-  "selection_archive_count": 24,
-  "completed_archive_count": 24,
+  "requested_archive_count": 21,
+  "selection_archive_count": 21,
+  "completed_archive_count": 21,
   "failed_archive_count": 0,
   "pending_archive_count": 0,
   "complete": true,
-  "actual_size_bytes": 1486685274,
+  "actual_size_bytes": 1299410346,
   "missing_archive_names_from_selection": [],
-  "updated_at_utc": "2026-08-12T03:58:51.050379+00:00",
+  "updated_at_utc": "2026-08-12T04:29:36.584717+00:00",
   "archives": [
     {
       "name": "15S465ZN.zip",
@@ -200,33 +200,6 @@
       "status": "reused",
       "actual_size_bytes": 63403441,
       "sha256": "976a893251c96697ccd7f60402bcad7614c30b1b23d657bd5526685a8ad45396",
-      "zip_member_count": 1
-    },
-    {
-      "name": "22S465ZN.zip",
-      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/22S465ZN.zip",
-      "listed_size_bytes": 60817408,
-      "status": "reused",
-      "actual_size_bytes": 60957705,
-      "sha256": "4048a681b38707d8b1f4e5c7e5f3d21ec1e5aa39110a98737c0632697a45b897",
-      "zip_member_count": 1
-    },
-    {
-      "name": "22S48_ZN.zip",
-      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/22S48_ZN.zip",
-      "listed_size_bytes": 62914560,
-      "status": "reused",
-      "actual_size_bytes": 62762592,
-      "sha256": "bc0a483d667222c8884b21813a1585b92f342fccd93510d2af8c36d50c0642d6",
-      "zip_member_count": 1
-    },
-    {
-      "name": "22S495ZN.zip",
-      "url": "https://www.dsr.inpe.br/topodata/data/geotiff/22S495ZN.zip",
-      "listed_size_bytes": 63963136,
-      "status": "reused",
-      "actual_size_bytes": 63554631,
-      "sha256": "8b9b9fe0a98144fc11772f70a101a49b38e639de4bcd5ef46876225c41ff85fa",
       "zip_member_count": 1
     }
   ]
