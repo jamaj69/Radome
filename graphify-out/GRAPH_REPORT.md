@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-12)
 
 ## Corpus Check
-- 243 files · ~628,621 words
+- 244 files · ~629,037 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1433 nodes · 1938 edges · 140 communities (104 shown, 36 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 147 edges (avg confidence: 0.79)
+- 1437 nodes · 1946 edges · 140 communities (104 shown, 36 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 149 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6d0e135a`
+- Built from commit: `4196cec8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -585,8 +585,8 @@ Cohesion: 0.33
 Nodes (9): brazil_international_boundaries(), build(), coordinate_key(), line_parts(), merge_line_parts(), polygon_boundaries(), Exporta limites BC250 e amostras diagnósticas para a cena Blender., Extrai segmentos de LineString/MultiLineString, preservando só linhas. (+1 more)
 
 ### Community 136 - "export_topodata_terrain_mesh.py"
-Cohesion: 0.08
-Nodes (33): available_window_size(), build(), hillshade_path(), Exporta grades TOPODATA para malhas Blender com uma cota por vértice., Abre a folha que contém a coordenada geográfica solicitada., Maior janela quadrada ímpar, centrada, que permanece na mesma folha., terrain_color(), tile_for() (+25 more)
+Cohesion: 0.07
+Nodes (36): available_window_size(), build(), hillshade_path(), Exporta grades TOPODATA para malhas Blender com uma cota por vértice., Abre a folha que contém a coordenada geográfica solicitada., Maior janela quadrada ímpar, centrada, que permanece na mesma folha., terrain_color(), tile_for() (+28 more)
 
 ### Community 140 - "build_augmented_candidate_graph.py"
 Cohesion: 0.11
@@ -604,10 +604,6 @@ Nodes (6): boundary_parts(), bounds(), build(), line_parts(), Recorta divisas mu
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `build()` connect `build_canonical_smp.py` to `audit_anatel_spectrum.py`, `extract_anatel_radio_link_keys.py`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `build()` connect `build` to `extract_anatel_radio_link_keys.py`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
@@ -618,3 +614,7 @@ _Questions this graph is uniquely positioned to answer:_
   _523 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
+- **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
+  _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
+- **Should `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` be split into smaller, more focused modules?**
+  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._

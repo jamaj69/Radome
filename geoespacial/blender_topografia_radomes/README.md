@@ -93,6 +93,15 @@ aparência sombreada alinhada, sem alegar cobertura do solo ou imagem de satéli
 bash geoespacial/blender_topografia_radomes/render_on_host.sh --topodata-rs 0
 ```
 
+Para a alternativa acelerada por `foreach_set`, que preserva o renderizador
+original como referência, execute:
+
+```bash
+bash geoespacial/blender_topografia_radomes/render_on_host.sh --topodata-rs-batched 0
+```
+
+Ela grava `topodata_rs_batched.blend` e `topodata_rs_batched.png`.
+
 Para não inicializar dois processos gráficos, o wrapper renderiza diretamente.
 Durante o render, acompanhe `nvidia-smi` em outro terminal para confirmar o uso
 e a memória da RTX.

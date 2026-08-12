@@ -1475,6 +1475,50 @@
       "norm_label": "aplica textura cartografica ja combinada com as cotas e o rs."
     },
     {
+      "label": "render_topodata_local_terrain_batched.py",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain_batched.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "render_topodata_local_terrain_batched.py"
+    },
+    {
+      "label": "add_terrain_batched()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain_batched.py",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched_add_terrain_batched",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "add_terrain_batched()"
+    },
+    {
+      "label": "build()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain_batched.py",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched_build",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "build()"
+    },
+    {
+      "label": "Alternativa acelerada: constr\u00f3i a malha TOPODATA com ``foreach_set``.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain_batched.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched_rationale_1",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "alternativa acelerada: constroi a malha topodata com ``foreach_set``."
+    },
+    {
       "label": "select_visual_sites.py",
       "file_type": "code",
       "source_file": "geoespacial/blender_topografia_radomes/select_visual_sites.py",
@@ -19208,6 +19252,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain_batched.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain.py",
@@ -19407,6 +19463,87 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_build",
+      "target": "geoespacial_blender_topografia_radomes_terrain_mesh_geometry_terrain_geometry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain_batched.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched_add_terrain_batched",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain_batched.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain_batched.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched",
+      "target": "geoespacial_blender_topografia_radomes_terrain_mesh_geometry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain_batched.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched_rationale_1",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain_batched.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched_add_terrain_batched",
+      "target": "geoespacial_blender_topografia_radomes_terrain_mesh_geometry_terrain_geometry"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain_batched.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched_build",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched_add_terrain_batched",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_local_terrain_batched.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain_batched_build",
       "target": "geoespacial_blender_topografia_radomes_terrain_mesh_geometry_terrain_geometry"
     },
     {
@@ -37870,5 +38007,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "6d0e135af7bd59ac90a3b0aa707837d7913120ed"
+  "built_at_commit": "4196cec8c720e31d87bbafe67fe7c6971d40307c"
 }

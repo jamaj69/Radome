@@ -48,7 +48,7 @@ fi
     --bc250 geoespacial/data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
     --terrain "$build/topodata_terrain.json" --output "$build/topodata_local_boundaries.json"
 
-if [[ "${1:-}" == "--topodata-rs" ]]; then
+if [[ "${1:-}" == "--topodata-rs" || "${1:-}" == "--topodata-rs-batched" ]]; then
     "$python_bin" "$subproject/acquire_topodata_hillshade.py" \
         --selection "$build/selected_sites.json" --terrain "$build/topodata_terrain.json" \
         --output-dir "$hillshade_raw" --receipt "$build/topodata_hillshade_receipt.json"
@@ -63,9 +63,17 @@ if [[ "${1:-}" == "--topodata-rs" ]]; then
     "$system_python" "$subproject/export_local_boundaries.py" \
         --bc250 geoespacial/data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
         --terrain "$build/topodata_terrain.json" --output "$build/topodata_local_boundaries.json"
-    exec blender -b --python "$subproject/render_topodata_local_terrain.py" -- \
-        --terrain "$build/topodata_terrain.json" --blend "$build/topodata_rs_terrain.blend" \
-        --render "$build/topodata_rs_terrain.png" --site-index "${2:-0}" \
+    renderer="$subproject/render_topodata_local_terrain.py"
+    blend="$build/topodata_rs_terrain.blend"
+    image="$build/topodata_rs_terrain.png"
+    if [[ "${1:-}" == "--topodata-rs-batched" ]]; then
+        renderer="$subproject/render_topodata_local_terrain_batched.py"
+        blend="$build/topodata_rs_batched.blend"
+        image="$build/topodata_rs_batched.png"
+    fi
+    exec blender -b --python "$renderer" -- \
+        --terrain "$build/topodata_terrain.json" --blend "$blend" \
+        --render "$image" --site-index "${2:-0}" \
         --vertical-exaggeration 1.5 --samples 128 --top-down --boundaries "$build/topodata_local_boundaries.json"
 fi
 
