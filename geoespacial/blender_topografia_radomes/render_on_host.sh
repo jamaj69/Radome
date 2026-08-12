@@ -19,7 +19,8 @@ command -v blender >/dev/null || { echo "Blender não encontrado no PATH." >&2; 
 
 if command -v nvidia-smi >/dev/null; then
     echo "GPU disponível no host:"
-    nvidia-smi --query-gpu=name,driver_version --format=csv,noheader
+    nvidia-smi --query-gpu=name,driver_version --format=csv,noheader || \
+        echo "GPU não acessível neste processo; continuando com o Blender." >&2
 fi
 
 "$python_bin" "$subproject/select_visual_sites.py" \
