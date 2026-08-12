@@ -103,7 +103,20 @@ def add_radome(site, reference_elevation, vertical_exaggeration):
     return Vector((east, north, ground))
 
 
-def add_boundary(points, site, height, name, color, thickness):
+def terrain_height(site, longitude, latitude, vertical_exaggeration):
+    """Amostra a célula TOPODATA mais próxima para assentar a divisa no relevo."""
+    longitudes = [vertex[0] for vertex in site["vertices"]]
+    latitudes = [vertex[1] for vertex in site["vertices"]]
+    west, east, south, north = min(longitudes), max(longitudes), min(latitudes), max(latitudes)
+    column = min(site["width"] - 1, max(0, round((longitude - west) / max(east - west, 1e-12) * (site["width"] - 1))))
+    row = min(site["height"] - 1, max(0, round((latitude - south) / max(north - south, 1e-12) * (site["height"] - 1))))
+    # Vertices are exported north-to-south while the local latitude formula runs south-to-north.
+    elevation = site["vertices"][(site["height"] - 1 - row) * site["width"] + column][2]
+    reference = min(vertex[2] for vertex in site["vertices"])
+    return (elevation - reference) * vertical_exaggeration + 8
+
+
+def add_boundary(points, site, name, color, thickness, vertical_exaggeration):
     curve = bpy.data.curves.new(name, "CURVE")
     curve.dimensions = "3D"
     curve.bevel_depth = thickness
@@ -111,10 +124,15 @@ def add_boundary(points, site, height, name, color, thickness):
     spline.points.add(len(points) - 1)
     for point, coordinate in zip(spline.points, points):
         east, north = local_coordinates(coordinate[0], coordinate[1], site["longitude"], site["latitude"])
-        point.co = (east, north, height, 1)
+        point.co = (east, north, terrain_height(site, coordinate[0], coordinate[1], vertical_exaggeration), 1)
     object_ = bpy.data.objects.new(name, curve)
     bpy.context.collection.objects.link(object_)
-    object_.data.materials.append(material(name, color, roughness=.35))
+    item = material(name, color, roughness=.35)
+    item.use_nodes = True
+    shader = item.node_tree.nodes.get("Principled BSDF")
+    shader.inputs["Emission"].default_value = (*color, 1)
+    shader.inputs["Emission Strength"].default_value = .8
+    object_.data.materials.append(item)
 
 
 def add_boundaries(boundaries, site, vertical_exaggeration):
@@ -123,11 +141,10 @@ def add_boundaries(boundaries, site, vertical_exaggeration):
     record = next((item for item in boundaries["sites"] if item["display_name"] == site["display_name"]), None)
     if record is None:
         return
-    height = (max(vertex[2] for vertex in site["vertices"]) - min(vertex[2] for vertex in site["vertices"])) * vertical_exaggeration + 35
     for points in record["municipal_boundaries"]:
-        add_boundary(points, site, height, "Municipal boundary", (.12, .12, .10), 2.0)
+        add_boundary(points, site, "Municipal boundary", (.98, .98, .94), 4.5, vertical_exaggeration)
     for points in record["state_boundaries"]:
-        add_boundary(points, site, height + 2, "State boundary", (1.0, .68, .05), 4.0)
+        add_boundary(points, site, "State boundary", (1.0, .62, .02), 7.0, vertical_exaggeration)
 
 
 def add_camera(target, span, top_down):

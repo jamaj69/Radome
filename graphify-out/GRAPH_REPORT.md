@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-12)
 
 ## Corpus Check
-- 244 files · ~629,121 words
+- 244 files · ~629,237 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1437 nodes · 1946 edges · 140 communities (104 shown, 36 thin omitted)
+- 1439 nodes · 1949 edges · 140 communities (104 shown, 36 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 149 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `06d437b2`
+- Built from commit: `026937de`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -586,7 +586,7 @@ Nodes (9): brazil_international_boundaries(), build(), coordinate_key(), line_pa
 
 ### Community 136 - "export_topodata_terrain_mesh.py"
 Cohesion: 0.07
-Nodes (36): available_window_size(), build(), hillshade_path(), Exporta grades TOPODATA para malhas Blender com uma cota por vértice., Abre a folha que contém a coordenada geográfica solicitada., Maior janela quadrada ímpar, centrada, que permanece na mesma folha., terrain_color(), tile_for() (+28 more)
+Nodes (38): available_window_size(), build(), hillshade_path(), Exporta grades TOPODATA para malhas Blender com uma cota por vértice., Abre a folha que contém a coordenada geográfica solicitada., Maior janela quadrada ímpar, centrada, que permanece na mesma folha., terrain_color(), tile_for() (+30 more)
 
 ### Community 140 - "build_augmented_candidate_graph.py"
 Cohesion: 0.11
