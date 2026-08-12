@@ -37,7 +37,7 @@ def elevation_material():
 
 
 def orthophoto_material(image_path):
-    """Materializa uma ortoimagem georreferenciada na mesma janela da malha."""
+    """Combina a textura sombreada com cores hipsométricas do próprio DEM."""
     image_path = Path(image_path).resolve()
     if not image_path.is_file():
         raise FileNotFoundError(f"Textura de terreno ausente: {image_path}")
@@ -47,8 +47,15 @@ def orthophoto_material(image_path):
     image = nodes.new("ShaderNodeTexImage")
     image.image = bpy.data.images.load(str(image_path), check_existing=True)
     image.image.pack()
+    elevation = nodes.new("ShaderNodeVertexColor")
+    elevation.layer_name = "TOPODATA elevation"
+    mix = nodes.new("ShaderNodeMixRGB")
+    mix.blend_type = "MULTIPLY"
+    mix.inputs["Fac"].default_value = .68
+    links.new(image.outputs["Color"], mix.inputs[1])
+    links.new(elevation.outputs["Color"], mix.inputs[2])
     shader = nodes.get("Principled BSDF")
-    links.new(image.outputs["Color"], shader.inputs["Base Color"])
+    links.new(mix.outputs["Color"], shader.inputs["Base Color"])
     shader.inputs["Roughness"].default_value = .68
     return item
 
@@ -101,6 +108,14 @@ def add_radome(site, reference_elevation, vertical_exaggeration):
     dome.name = f"Radome | {site['display_name']}"
     dome.scale = (14, 14, 14)
     dome.data.materials.append(material("Radome shell", (.92, .94, .96), .05, .3))
+    bpy.ops.mesh.primitive_torus_add(major_radius=42, minor_radius=4, major_segments=48, minor_segments=12,
+                                     location=(east, north, ground + 5))
+    locator = bpy.context.object
+    locator.name = f"Radome locator | {site['display_name']}"
+    locator.data.materials.append(material("Radome locator amber", (1.0, .16, .005), .0, .28))
+    locator.active_material.use_nodes = True
+    locator.active_material.node_tree.nodes["Principled BSDF"].inputs["Emission"].default_value = (1.0, .08, .0, 1)
+    locator.active_material.node_tree.nodes["Principled BSDF"].inputs["Emission Strength"].default_value = .8
     return Vector((east, north, ground))
 
 

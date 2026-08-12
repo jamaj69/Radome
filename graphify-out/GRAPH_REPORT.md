@@ -1,7 +1,7 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 240 files · ~627,925 words
+- 240 files · ~627,987 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `408dac18`
+- Built from commit: `0bcf0260`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -608,12 +608,12 @@ Cohesion: 0.25
 Nodes (6): cell_sample_points(), main(), Path, Retorna centro e cantos internos suficientes para células menores que uma folha., select(), TopodataGapTileTests
 
 ### Community 141 - "build_municipal_emitter_network.py"
-Cohesion: 0.33
-Nodes (5): edge_tile_names(), main(), Path, select(), SelectAugmentedMeshTopodataTilesTests
+Cohesion: 0.29
+Nodes (6): interpolate(), edge_tile_names(), main(), Path, select(), SelectAugmentedMeshTopodataTilesTests
 
 ### Community 142 - "MunicipalEmitterNetworkTest"
-Cohesion: 0.31
-Nodes (6): interpolate(), main(), Path, select(), tile_name(), TopodataTileTest
+Cohesion: 0.36
+Nodes (5): main(), Path, select(), tile_name(), TopodataTileTest
 
 ## Knowledge Gaps
 - **523 isolated node(s):** `render_on_host.sh script`, `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` (+518 more)
