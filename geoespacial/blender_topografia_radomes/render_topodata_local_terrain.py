@@ -112,13 +112,40 @@ def add_radome(site, reference_elevation, vertical_exaggeration):
     return Vector((east, north, ground))
 
 
+def add_boundary(points, site, height, name, color, thickness):
+    curve = bpy.data.curves.new(name, "CURVE")
+    curve.dimensions = "3D"
+    curve.bevel_depth = thickness
+    spline = curve.splines.new("POLY")
+    spline.points.add(len(points) - 1)
+    for point, coordinate in zip(spline.points, points):
+        east, north = local_coordinates(coordinate[0], coordinate[1], site["longitude"], site["latitude"])
+        point.co = (east, north, height, 1)
+    object_ = bpy.data.objects.new(name, curve)
+    bpy.context.collection.objects.link(object_)
+    object_.data.materials.append(material(name, color, roughness=.35))
+
+
+def add_boundaries(boundaries, site, vertical_exaggeration):
+    if not boundaries:
+        return
+    record = next((item for item in boundaries["sites"] if item["display_name"] == site["display_name"]), None)
+    if record is None:
+        return
+    height = (max(vertex[2] for vertex in site["vertices"]) - min(vertex[2] for vertex in site["vertices"])) * vertical_exaggeration + 35
+    for points in record["municipal_boundaries"]:
+        add_boundary(points, site, height, "Municipal boundary", (.12, .12, .10), 2.0)
+    for points in record["state_boundaries"]:
+        add_boundary(points, site, height + 2, "State boundary", (1.0, .68, .05), 4.0)
+
+
 def add_camera(target, span, top_down):
     if top_down:
         bpy.ops.object.camera_add(location=target + Vector((0, 0, span * 1.35)))
         camera = bpy.context.object
         camera.name = "Top-down terrain inspection camera"
         camera.data.type = "ORTHO"
-        camera.data.ortho_scale = span * 1.15
+        camera.data.ortho_scale = span * 1.38
         camera.data.clip_end = span * 4
         camera.rotation_euler = (target - camera.location).to_track_quat("-Z", "Y").to_euler()
         bpy.context.scene.camera = camera
@@ -134,7 +161,7 @@ def add_camera(target, span, top_down):
 
 
 def build(terrain, blend, render, site_index=0, vertical_exaggeration=1.5, samples=128,
-          top_down=False, orthophoto=None):
+          top_down=False, orthophoto=None, boundaries=None):
     if not 0 <= site_index < len(terrain["sites"]):
         raise ValueError("site-index fora do intervalo")
     bpy.ops.object.select_all(action="SELECT")
@@ -144,6 +171,7 @@ def build(terrain, blend, render, site_index=0, vertical_exaggeration=1.5, sampl
         orthophoto = Path(site["hillshade_texture"]).resolve()
     _, reference = add_terrain(site, vertical_exaggeration, orthophoto)
     target = add_radome(site, reference, vertical_exaggeration)
+    add_boundaries(boundaries, site, vertical_exaggeration)
     vertices, _, _ = terrain_geometry(site, vertical_exaggeration)
     span = max(max(abs(vertex[0]), abs(vertex[1])) for vertex in vertices) * 2
     camera = add_camera(target, span, top_down)
@@ -179,5 +207,6 @@ if __name__ == "__main__":
     parser.add_argument("--samples", type=int, default=128)
     parser.add_argument("--top-down", action="store_true")
     parser.add_argument("--orthophoto", type=Path, help="Imagem ortorretificada da mesma janela DEM")
+    parser.add_argument("--boundaries", type=Path, help="Limites BC250 recortados na janela local")
     arguments = parser.parse_args(sys.argv[sys.argv.index("--") + 1:])
-    build(json.loads(arguments.terrain.read_text(encoding="utf-8")), arguments.blend.resolve(), arguments.render.resolve(), arguments.site_index, arguments.vertical_exaggeration, arguments.samples, arguments.top_down, arguments.orthophoto.resolve() if arguments.orthophoto else None)
+    build(json.loads(arguments.terrain.read_text(encoding="utf-8")), arguments.blend.resolve(), arguments.render.resolve(), arguments.site_index, arguments.vertical_exaggeration, arguments.samples, arguments.top_down, arguments.orthophoto.resolve() if arguments.orthophoto else None, json.loads(arguments.boundaries.read_text(encoding="utf-8")) if arguments.boundaries else None)

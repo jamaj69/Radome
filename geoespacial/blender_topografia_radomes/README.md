@@ -34,12 +34,14 @@ modo não deve ser usado no render continental de apresentação.
 
 ## Superfície 3D TOPODATA
 
-O modo local exporta uma janela de 241×241 células TOPODATA por sítio, sem
+O modo local solicita uma janela de até 721×721 células TOPODATA por sítio, sem
 subamostragem: cada célula vira um vértice, e cada quadrícula recebe duas faces
 triangulares. A coordenada Z de cada vértice é derivada diretamente da cota
 TOPODATA da respectiva célula. A cena usa coordenadas locais em metros e uma
 exageração vertical de 1,5×, explicitamente visual; portanto, o relevo é
 geométrico, enquanto a escala vertical não é uma medição de engenharia.
+Quando o sítio está junto à borda de uma folha, a janela é reduzida ao maior
+quadrado centrado disponível, em vez de extrapolar a folha.
 
 Para criar e renderizar a inspeção do sítio de Juiz de Fora (índice 0):
 
@@ -52,6 +54,10 @@ Use os índices `1` para Anápolis e `2` para Brasília. As saídas são
 `build/topodata_local_terrain.blend` e `build/topodata_local_terrain.png`.
 O arquivo `.blend` preserva a superfície, a grade e o marcador simbólico de
 radome para inspeção e ajustes no Blender.
+
+A vista ampliada também recorta do BC250/IBGE as divisas municipais (linhas
+escuras) e estaduais (linhas amarelas). Elas são sobreposições cartográficas
+acima do relevo, sem alterar as cotas do DEM.
 
 ### Visão zenital com ortoimagem
 

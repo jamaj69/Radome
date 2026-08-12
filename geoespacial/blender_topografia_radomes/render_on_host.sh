@@ -35,7 +35,11 @@ fi
 "$system_python" "$subproject/export_topodata_terrain_mesh.py" \
     --selection "$build/selected_sites.json" \
     --terrain-root "$terrain_root" \
-    --output "$build/topodata_terrain.json"
+    --output "$build/topodata_terrain.json" --size 721
+
+"$system_python" "$subproject/export_local_boundaries.py" \
+    --bc250 geoespacial/data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
+    --terrain "$build/topodata_terrain.json" --output "$build/topodata_local_boundaries.json"
 
 if [[ "${1:-}" == "--topodata-rs" ]]; then
     "$python_bin" "$subproject/acquire_topodata_hillshade.py" \
@@ -47,12 +51,15 @@ if [[ "${1:-}" == "--topodata-rs" ]]; then
         --index "$build/topodata_hillshade_index.geojson" --index-name topodata_hillshade
     "$system_python" "$subproject/export_topodata_terrain_mesh.py" \
         --selection "$build/selected_sites.json" --terrain-root "$terrain_root" \
-        --output "$build/topodata_terrain.json" --shade-root "$hillshade_processed" \
+        --output "$build/topodata_terrain.json" --size 721 --shade-root "$hillshade_processed" \
         --shade-output-dir "$build/topodata_hillshade_windows"
+    "$system_python" "$subproject/export_local_boundaries.py" \
+        --bc250 geoespacial/data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
+        --terrain "$build/topodata_terrain.json" --output "$build/topodata_local_boundaries.json"
     exec blender -b --python "$subproject/render_topodata_local_terrain.py" -- \
         --terrain "$build/topodata_terrain.json" --blend "$build/topodata_rs_terrain.blend" \
         --render "$build/topodata_rs_terrain.png" --site-index "${2:-0}" \
-        --vertical-exaggeration 1.5 --samples 128 --top-down
+        --vertical-exaggeration 1.5 --samples 128 --top-down --boundaries "$build/topodata_local_boundaries.json"
 fi
 
 if [[ "${1:-}" == "--local-terrain" ]]; then
@@ -62,7 +69,7 @@ if [[ "${1:-}" == "--local-terrain" ]]; then
         --render "$build/topodata_local_terrain.png" \
         --site-index "${2:-0}" \
         --vertical-exaggeration 1.5 \
-        --samples 128
+        --samples 128 --boundaries "$build/topodata_local_boundaries.json"
 fi
 
 if [[ "${1:-}" == "--top-down" ]]; then
@@ -74,6 +81,7 @@ if [[ "${1:-}" == "--top-down" ]]; then
         --vertical-exaggeration 1.5 \
         --samples 128 \
         --top-down \
+        --boundaries "$build/topodata_local_boundaries.json" \
         --orthophoto "${3:-$subproject/assets/nasa_blue_marble_topography_bathymetry_april_5400x2700.jpg}"
 fi
 

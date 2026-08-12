@@ -28,6 +28,13 @@ def hillshade_path(shade_root, altitude_tile):
     return shade_root / f"{stem[:-2]}RS.tif"
 
 
+def available_window_size(dataset, column, row, requested_size):
+    """Maior janela quadrada ímpar, centrada, que permanece na mesma folha."""
+    radius = min(requested_size // 2, column, row,
+                 dataset.RasterXSize - column - 1, dataset.RasterYSize - row - 1)
+    return radius * 2 + 1
+
+
 def terrain_color(elevation, low, high):
     ratio = (elevation - low) / max(high - low, 1)
     if ratio < .18:
@@ -58,7 +65,7 @@ def write_hillshade(dataset, elevations, first_column, first_row, size, output):
     image.save(output)
 
 
-def build(selection, terrain_root, output, size=241, step=1, shade_root=None, shade_output_dir=None):
+def build(selection, terrain_root, output, size=721, step=1, shade_root=None, shade_output_dir=None):
     if size < 3 or step < 1:
         raise ValueError("size deve ser pelo menos 3 e step deve ser positivo")
     sites = []
@@ -67,25 +74,24 @@ def build(selection, terrain_root, output, size=241, step=1, shade_root=None, sh
         transform = dataset.GetGeoTransform()
         column = int((site["longitude"] - transform[0]) / transform[1])
         row = int((site["latitude"] - transform[3]) / transform[5])
-        half = size // 2
+        actual_size = available_window_size(dataset, column, row, size)
+        half = actual_size // 2
         first_column, first_row = column - half, row - half
-        if first_column < 0 or first_row < 0 or first_column + size > dataset.RasterXSize or first_row + size > dataset.RasterYSize:
-            raise ValueError(f"Janela {size}x{size} excede os limites de {path.name}")
-        values = dataset.GetRasterBand(1).ReadAsArray(first_column, first_row, size, size)
+        values = dataset.GetRasterBand(1).ReadAsArray(first_column, first_row, actual_size, actual_size)
         vertices, width, height = vertices_from_window(values, transform, first_column, first_row, step)
         item = {
             "name": site["name"], "display_name": site["display_name"],
             "longitude": site["longitude"], "latitude": site["latitude"],
             "tile": path.name, "width": width, "height": height,
             "sample_spacing_arc_seconds": abs(transform[1]) * 3600 * step,
-            "vertices": vertices,
+            "vertices": vertices, "requested_window_cells": size, "window_cells": actual_size,
         }
         if shade_root and shade_output_dir:
             source = hillshade_path(shade_root, path.name)
             if not source.exists():
                 raise ValueError(f"Relevo sombreado RS ausente: {source}")
             texture = shade_output_dir / f"{Path(path.name).stem[:-2]}RS_window.png"
-            write_hillshade(gdal.Open(str(source)), values, first_column, first_row, size, texture)
+            write_hillshade(gdal.Open(str(source)), values, first_column, first_row, actual_size, texture)
             item["hillshade_texture"] = str(texture.resolve())
         sites.append(item)
     result = {
@@ -103,7 +109,7 @@ if __name__ == "__main__":
     parser.add_argument("--selection", type=Path, required=True)
     parser.add_argument("--terrain-root", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--size", type=int, default=241, help="Lado da janela DEM em celulas")
+    parser.add_argument("--size", type=int, default=721, help="Lado da janela DEM em celulas")
     parser.add_argument("--step", type=int, default=1, help="Passo de amostragem em celulas")
     parser.add_argument("--shade-root", type=Path)
     parser.add_argument("--shade-output-dir", type=Path)
