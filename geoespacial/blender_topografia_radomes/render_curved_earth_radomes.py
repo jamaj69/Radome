@@ -149,14 +149,18 @@ def add_radome(site, camera, label_index, label_plate, label_text):
     right = camera_basis @ Vector((1, 0, 0))
     up = camera_basis @ Vector((0, 1, 0))
     horizontal, vertical = LABEL_LAYOUT[label_index]
-    label_position = point + normal * .16 + right * horizontal + up * vertical
+    anchor = point + normal * .055
+    # Keep callouts in a common plane in front of the globe.  Moving them only
+    # along a local surface tangent can put the far edge behind the Earth.
+    camera_depth = (camera.location - point).normalized()
+    label_position = anchor + right * horizontal + up * vertical + camera_depth * 1.20
     facing = (camera.location - label_position).normalized()
-    add_line(point + normal * .055, label_position - facing * .012, f"Leader | {site['name']}", (.96, .96, .92), .002)
+    add_line(anchor, label_position - facing * .012, f"Leader | {site['name']}", (.96, .96, .92), .002)
 
     bpy.ops.mesh.primitive_plane_add(size=1, location=label_position)
     plate = bpy.context.object
     plate.name = f"Label backing | {site['name']}"
-    plate.scale = (1.45, .36, 1)
+    plate.scale = (1.65, .40, 1)
     plate.rotation_mode = "QUATERNION"
     plate.rotation_quaternion = facing.to_track_quat("Z", "Y")
     plate.data.materials.append(label_plate)
@@ -167,7 +171,7 @@ def add_radome(site, camera, label_index, label_plate, label_text):
     label.data.body = f"{site['display_name']}\\n{site['terrain_elevation_m']:.0f} m"
     label.data.align_x = "CENTER"
     label.data.align_y = "CENTER"
-    label.data.size = .21
+    label.data.size = .23
     label.data.resolution_u = 16
     label.data.space_line = .82
     label.data.materials.append(label_text)
