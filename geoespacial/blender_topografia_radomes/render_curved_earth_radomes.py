@@ -157,14 +157,6 @@ def add_radome(site, camera, label_index, label_plate, label_text):
     facing = (camera.location - label_position).normalized()
     add_line(anchor, label_position - facing * .012, f"Leader | {site['name']}", (.96, .96, .92), .002)
 
-    bpy.ops.mesh.primitive_plane_add(size=1, location=label_position)
-    plate = bpy.context.object
-    plate.name = f"Label backing | {site['name']}"
-    plate.scale = (1.65, .40, 1)
-    plate.rotation_mode = "QUATERNION"
-    plate.rotation_quaternion = facing.to_track_quat("Z", "Y")
-    plate.data.materials.append(label_plate)
-
     bpy.ops.object.text_add(location=label_position + facing * .003)
     label = bpy.context.object
     label.name = f"Label | {site['name']}"
@@ -175,8 +167,21 @@ def add_radome(site, camera, label_index, label_plate, label_text):
     label.data.resolution_u = 16
     label.data.space_line = .82
     label.data.materials.append(label_text)
+    # Compute the backing in local text coordinates before its camera-facing
+    # rotation.  A fixed-width panel let long airport names spill onto terrain.
+    bpy.context.view_layer.update()
+    plate_width = label.dimensions.x + .18
+    plate_height = label.dimensions.y + .14
     label.rotation_mode = "QUATERNION"
     label.rotation_quaternion = facing.to_track_quat("Z", "Y")
+
+    bpy.ops.mesh.primitive_plane_add(size=1, location=label_position - facing * .003)
+    plate = bpy.context.object
+    plate.name = f"Label backing | {site['name']}"
+    plate.dimensions = (plate_width, plate_height, 0)
+    plate.rotation_mode = "QUATERNION"
+    plate.rotation_quaternion = facing.to_track_quat("Z", "Y")
+    plate.data.materials.append(label_plate)
 
 
 def add_camera(target, overview):

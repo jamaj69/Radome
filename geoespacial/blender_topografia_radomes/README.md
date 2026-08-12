@@ -18,6 +18,16 @@ cd /home/jamaj/src/Radome
 blender -b --python geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py -- --selection geoespacial/blender_topografia_radomes/build/selected_sites.json --overlays geoespacial/blender_topografia_radomes/build/overlays.json --terrain geoespacial/blender_topografia_radomes/build/topodata_terrain.json --texture geoespacial/blender_topografia_radomes/assets/nasa_blue_marble_topography_bathymetry_april_5400x2700.jpg --blend geoespacial/blender_topografia_radomes/build/earth_radomes.blend --render geoespacial/blender_topografia_radomes/build/earth_radomes.png --overview
 ```
 
+No terminal do host — isto é, fora de qualquer sandbox de agente — prefira o
+wrapper abaixo. Ele reexporta as entradas e entrega o processo final ao Blender,
+permitindo que o Eevee use o contexto gráfico e a GPU disponíveis para o seu
+usuário:
+
+```bash
+cd /home/jamaj/src/Radome
+bash geoespacial/blender_topografia_radomes/render_on_host.sh
+```
+
 Para inspeção técnica local, acrescente `--include-local-terrain`. Para depurar
 os pontos de cota preliminares, acrescente `--show-altitude-points`; esse último
 modo não deve ser usado no render continental de apresentação.

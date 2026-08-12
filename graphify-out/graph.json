@@ -1052,7 +1052,7 @@
       "label": "add_camera()",
       "file_type": "code",
       "source_file": "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py",
-      "source_location": "L182",
+      "source_location": "L187",
       "_origin": "ast",
       "id": "geoespacial_blender_topografia_radomes_render_curved_earth_radomes_add_camera",
       "community": 132,
@@ -1063,7 +1063,7 @@
       "label": "build()",
       "file_type": "code",
       "source_file": "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py",
-      "source_location": "L193",
+      "source_location": "L198",
       "_origin": "ast",
       "id": "geoespacial_blender_topografia_radomes_render_curved_earth_radomes_build",
       "community": 132,
@@ -1080,6 +1080,36 @@
       "community": 132,
       "community_name": "render_curved_earth_radomes.py",
       "norm_label": "monta uma visao continental cartografica da terra curva e tres candidatos.  o re"
+    },
+    {
+      "label": "render_on_host.sh",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_on_host.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_on_host",
+      "community": 137,
+      "community_name": "render_on_host.sh",
+      "norm_label": "render_on_host.sh"
+    },
+    {
+      "label": "render_on_host.sh script",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_on_host.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_on_host_sh__entry",
+      "community": 137,
+      "community_name": "render_on_host.sh",
+      "norm_label": "render_on_host.sh script"
     },
     {
       "label": "select_visual_sites.py",
@@ -2408,8 +2438,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_terrain_terrarium_call",
-      "community": 83,
-      "community_name": "evaluate_anatel_radio_link_terrain.py",
+      "community": 18,
+      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
       "norm_label": ".__call__()"
     },
     {
@@ -17661,7 +17691,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py",
-      "source_location": "L182",
+      "source_location": "L187",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_curved_earth_radomes",
@@ -17727,7 +17757,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py",
-      "source_location": "L193",
+      "source_location": "L198",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_curved_earth_radomes",
@@ -17829,7 +17859,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py",
-      "source_location": "L204",
+      "source_location": "L209",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_curved_earth_radomes_build",
@@ -17913,7 +17943,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py",
-      "source_location": "L200",
+      "source_location": "L205",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_curved_earth_radomes_build",
@@ -17925,7 +17955,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py",
-      "source_location": "L208",
+      "source_location": "L213",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_curved_earth_radomes_build",
@@ -17985,7 +18015,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py",
-      "source_location": "L201",
+      "source_location": "L206",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_curved_earth_radomes_build",
@@ -17997,7 +18027,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py",
-      "source_location": "L203",
+      "source_location": "L208",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_curved_earth_radomes_build",
@@ -18009,7 +18039,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py",
-      "source_location": "L211",
+      "source_location": "L216",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_curved_earth_radomes_build",
@@ -18021,11 +18051,22 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py",
-      "source_location": "L207",
+      "source_location": "L212",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_curved_earth_radomes_build",
       "target": "geoespacial_blender_topografia_radomes_render_curved_earth_radomes_add_camera",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_on_host.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_on_host",
+      "target": "geoespacial_blender_topografia_radomes_render_on_host_sh__entry",
       "confidence_score": 1.0
     },
     {
@@ -36186,5 +36227,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "512d3ab521996779d7fcd2b42564750c697ecc49"
+  "built_at_commit": "d5fc20dd118db9934f95100cec3c9f8f9f540ca5"
 }

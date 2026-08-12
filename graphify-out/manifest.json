@@ -1440,8 +1440,8 @@
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py": {
-    "mtime": 1786492641.5204415,
-    "ast_hash": "0c7cf1f18ccc3fa9d4e2352cad85b75b",
+    "mtime": 1786493114.2662106,
+    "ast_hash": "dcb2961e48dde102a489a9b646a259cc",
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/select_visual_sites.py": {
@@ -1450,8 +1450,8 @@
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/README.md": {
-    "mtime": 1786492007.6594272,
-    "ast_hash": "b077217446d5ad2cfa529c9a179b27aa",
+    "mtime": 1786493471.976517,
+    "ast_hash": "85848dda8a460bce987a002be8afd2fd",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_select_blender_visual_sites.py": {
@@ -1472,6 +1472,11 @@
   "geoespacial/blender_topografia_radomes/assets/nasa_blue_marble_topography_bathymetry_april_5400x2700.jpg": {
     "mtime": 1786490095.4884322,
     "ast_hash": "a629ee17a013fa66433e69735968b94b",
+    "semantic_hash": ""
+  },
+  "geoespacial/blender_topografia_radomes/render_on_host.sh": {
+    "mtime": 1786493478.6844852,
+    "ast_hash": "1dd9a18f2c644a6b445544e9a3632496",
     "semantic_hash": ""
   }
 }

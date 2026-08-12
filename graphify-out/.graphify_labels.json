@@ -135,5 +135,6 @@
   "133": "build",
   "134": "blender_topografia_radomes/README.md",
   "135": "validate_anatel_radio_link_vertical_geometry.py",
-  "136": "export_topodata_terrain_mesh.py"
+  "136": "export_topodata_terrain_mesh.py",
+  "137": "render_on_host.sh"
 }
