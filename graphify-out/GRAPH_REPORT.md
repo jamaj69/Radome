@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-12)
 
 ## Corpus Check
-- 257 files · ~634,509 words
+- 257 files · ~634,545 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1503 nodes · 2047 edges · 144 communities (108 shown, 36 thin omitted)
+- 1505 nodes · 2049 edges · 147 communities (111 shown, 36 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 164 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `858c0aeb`
+- Built from commit: `4973bd32`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -99,7 +99,9 @@
 - anatel_radio_link_candidates/README.md
 - evaluate_anatel_radio_link_terrain.py
 - extract_topodata_route_tiles.py
+- extract_zip.py
 - build_canonical_smp.py
+- inventory_infrastructure.py
 - build_municipal_emitter_network.py
 - audit_anatel_spectrum.py
 - build_anatel_radio_link_hypothesis_graph.py
@@ -126,6 +128,7 @@
 - candidate_ranking/README.md
 - inventory
 - continental_coverage_grid/README.md
+- write_fixture
 - Methodological gaps
 - triangular_mesh_baseline/README.md
 - topodata_gap_tiles/README.md
@@ -157,7 +160,7 @@
 - select_augmented_mesh_topodata_tiles.py
 - profile_augmented_mesh_edges_topodata.py
 - select_topodata_route_tiles.py
-- validate_anatel_radio_link_geometry.py
+- extract_anatel_radio_links.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -186,7 +189,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (144 total, 36 thin omitted)
+## Communities (147 total, 36 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -393,8 +396,8 @@ Cohesion: 0.22
 Nodes (8): ANAC e DECEA, Anatel, Comunicação nas bases históricas do IBGE, Fontes de infraestrutura para o grafo de candidatos, IBGE BC250 2025, Ordem de integração, Radiodifusão, Resultado por tema
 
 ### Community 58 - "inventory_infrastructure.py"
-Cohesion: 0.06
-Nodes (39): acquire(), file_sha256(), main(), Path, audit(), audit_member(), main(), Counter (+31 more)
+Cohesion: 0.20
+Nodes (11): audit(), audit_member(), main(), Counter, Path, rf_role(), sorted_counter(), usable_text() (+3 more)
 
 ### Community 61 - "build"
 Cohesion: 0.35
@@ -409,8 +412,8 @@ Cohesion: 0.33
 Nodes (6): inventory_layer(), main(), present(), Path, sha256(), DeceaNavaidInventoryTest
 
 ### Community 65 - "Subprojeto de seleção geoespacial"
-Cohesion: 0.29
-Nodes (6): Documentos de controle, Gate de integração com o artigo, Marcos ativos: M2E e M3, Missão e limites, Subprojeto de seleção geoespacial, Vinculação ao projeto principal
+Cohesion: 0.25
+Nodes (7): Documentos de controle, Gate de integração com o artigo, Marcos ativos: M2E e M3, Missão e limites, Subprojeto de seleção geoespacial, Vinculação ao projeto principal, Visualização topográfica e WebGL
 
 ### Community 66 - "inventory"
 Cohesion: 0.40
@@ -472,9 +475,17 @@ Nodes (8): evaluate(), main(), prior_statuses(), Path, Amostrador de GeoTIFFs co
 Cohesion: 0.24
 Nodes (10): atomic_json(), extract_archive(), extract_receipt(), feature(), inspect_geotiff(), main(), Path, sha256_file() (+2 more)
 
+### Community 85 - "extract_zip.py"
+Cohesion: 0.22
+Nodes (9): acquire(), file_sha256(), main(), Path, extract(), main(), Path, safe_destination() (+1 more)
+
 ### Community 86 - "build_canonical_smp.py"
 Cohesion: 0.35
 Nodes (10): build(), canonical_coordinate(), deterministic_gzip_csv(), dominant_code(), main(), Counter, Path, Abre CSV gzip reproduzível, sem nome ou horário variável no cabeçalho. (+2 more)
+
+### Community 87 - "inventory_infrastructure.py"
+Cohesion: 0.27
+Nodes (9): main(), parse_args(), Path, read_anac_csv(), read_anatel_zip(), read_decea_capabilities(), sha256(), InfrastructureInventoryTest (+1 more)
 
 ### Community 88 - "build_municipal_emitter_network.py"
 Cohesion: 0.27
@@ -489,12 +500,12 @@ Cohesion: 0.13
 Nodes (15): build(), build_graph(), component_summary(), main(), node_id(), MultiDiGraph, Path, apply_context() (+7 more)
 
 ### Community 91 - "extract_anatel_radio_link_keys.py"
-Cohesion: 0.17
-Nodes (9): clean(), extract(), main(), Path, extract(), main(), Path, RawLinkKeysTest (+1 more)
+Cohesion: 0.21
+Nodes (11): clean(), extract(), main(), Path, file_sha256(), inventory(), main(), Path (+3 more)
 
 ### Community 93 - "consolidate_anatel_radio_link_prequalification.py"
-Cohesion: 0.31
-Nodes (5): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest
+Cohesion: 0.16
+Nodes (11): consolidate(), main(), Path, qualification(), RadioLinkPrequalificationTest, GeometryTest, angular_error(), bearing() (+3 more)
 
 ### Community 96 - "ZipFile"
 Cohesion: 0.30
@@ -536,6 +547,10 @@ Nodes (9): generate(), intersecting(), load_tiles(), main(), pixel_window(), Pat
 Cohesion: 0.22
 Nodes (8): Construção proposta, Estado, Experimentos previstos, Heurística de malha triangular cooperativa, Iluminadores dentro dos triângulos, Métricas mínimas, Objetivos e restrições a testar, Origem e objetivo
 
+### Community 114 - "write_fixture"
+Cohesion: 0.47
+Nodes (4): CanonicalSmpTest, Path, read_gzip_csv(), write_fixture()
+
 ### Community 115 - "Methodological gaps"
 Cohesion: 0.40
 Nodes (5): Closed-set and dataset-leakage risks, Inconsistent metrics, Insufficient adversarial testing, Lack of end-to-end evaluation, Methodological gaps
@@ -569,8 +584,8 @@ Cohesion: 0.33
 Nodes (3): build(), Path, SelectBlenderVisualSitesTests
 
 ### Community 134 - "blender_topografia_radomes/README.md"
-Cohesion: 0.29
-Nodes (6): Superfície 3D TOPODATA, Textura TOPODATA RS, Varredura nacional por blocos TOPODATA nativos, Visualização Blender: Terra curva e três candidatos RADOME, Visão regional dos três sítios, Visão zenital com ortoimagem
+Cohesion: 0.25
+Nodes (7): Evolução para navegação WebGL, Superfície 3D TOPODATA, Textura TOPODATA RS, Varredura nacional por blocos TOPODATA nativos, Visualização Blender: Terra curva e três candidatos RADOME, Visão regional dos três sítios, Visão zenital com ortoimagem
 
 ### Community 135 - "validate_anatel_radio_link_vertical_geometry.py"
 Cohesion: 0.33
@@ -612,12 +627,12 @@ Nodes (7): interpolate(), build(), los_profile(), main(), Path, status(), Profil
 Cohesion: 0.32
 Nodes (5): main(), Path, select(), tile_name(), TopodataTileTest
 
-### Community 147 - "validate_anatel_radio_link_geometry.py"
-Cohesion: 0.31
-Nodes (6): GeometryTest, angular_error(), bearing(), main(), Path, validate()
+### Community 146 - "extract_anatel_radio_links.py"
+Cohesion: 0.33
+Nodes (4): extract(), main(), Path, RadioLinkExtractionTest
 
 ## Knowledge Gaps
-- **525 isolated node(s):** `render_on_host.sh script`, `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` (+520 more)
+- **527 isolated node(s):** `render_on_host.sh script`, `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` (+522 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **36 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -631,7 +646,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 5 inferred relationships involving `Topodata` (e.g. with `evaluate()` and `build()`) actually correct?**
   _`Topodata` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `render_on_host.sh script`, `run_pipeline.sh script`, `build.sh script` to the rest of the system?**
-  _525 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _527 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**

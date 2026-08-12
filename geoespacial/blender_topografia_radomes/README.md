@@ -2,7 +2,7 @@
 
 Este subprojeto cria uma cena de comunicação, não uma análise operacional. A Terra é esférica e cada marcador é colocado em latitude, longitude e cota; os três sítios são escolhidos da classificação reproduzível com cota mínima de 1.000 m e pelo menos 500 incidências geométricas combinadas de SMP, radiodifusão e pontas de enlace.
 
-Essas incidências não demonstram iluminação RF, visada, Fresnel, licenciamento ou viabilidade. A esfera fornece o contexto de curvatura terrestre; uma superfície TOPODATA contínua nacional permanece uma extensão futura, pois as folhas atualmente extraídas foram selecionadas para rotas, não para um mosaico nacional de renderização.
+Essas incidências não demonstram iluminação RF, visada, Fresnel, licenciamento ou viabilidade. A esfera fornece o contexto de curvatura terrestre. O terreno é processado por folhas e blocos TOPODATA, nunca como uma malha nacional simultânea.
 
 A renderização padrão é deliberadamente cartográfica: usa a textura Blue Marble,
 limites estaduais discretos, fronteiras terrestres internacionais do Brasil e
@@ -66,12 +66,10 @@ plana ou extrapolação de cotas além da folha disponível.
 ### Visão regional dos três sítios
 
 Para enquadrar Juiz de Fora, Anápolis e Brasília em uma única superfície, use a
-grade regional subamostrada. Ela consulta as folhas disponíveis, preserva a
-cota TOPODATA mais próxima em cada vértice e cria uma cena com margem, os três
-radomes e as divisas BC250. Caso uma folha não esteja no acervo local, a cena
-mantém uma lacuna sem faces; nunca interpola ou inventa cotas. A resolução padrão de 0,02° é deliberadamente
-cartográfica (~2 km), pois uma união desses sítios em 30 m seria grande demais
-para uma cena única.
+grade regional subamostrada. Ela preserva a cota TOPODATA mais próxima em cada
+vértice e cria uma cena com os três radomes e as divisas BC250. A resolução
+padrão de 0,02° é deliberadamente cartográfica (~2 km), pois uma união desses
+sítios em 30 m seria grande demais para uma cena única.
 
 A aparência da superfície é a NASA Blue Marble global já versionada. Seus UVs
 são calculados de longitude/latitude pela projeção equiretangular (``u=(lon+
@@ -101,21 +99,10 @@ oficiais necessárias, reutiliza ZIPs válidos, baixa somente as ausentes,
 revalida/extrai os GeoTIFFs e só então monta a malha. Se uma folha não estiver
 publicada no inventário oficial, o fluxo falha explicitamente, sem inventar
 elevação. A resolução é derivada automaticamente da proporção geográfica da
-moldura, com 2.400 pixels no eixo vertical e largura proporcional.
-
-Antes desse render, complete de forma auditável as folhas ZN eventualmente
-ausentes da moldura — no acervo atual, são quatro folhas oficiais ao norte da
-folha `18S48_ZN`, que já estava presente:
-
-```bash
-bash geoespacial/blender_topografia_radomes/render_on_host.sh --acquire-regional-terrain
-```
-
-O comando escreve seleção, recibo com SHA-256, extração e índice em
-`geoespacial/reports/topodata_regional_scene/`, preservando ZIPs e GeoTIFFs nas
-áreas ignoradas de dados. ZIPs já presentes são revalidados e reutilizados; toda
-folha necessária passa novamente pela extração. Em seguida, inicia o render
-regional sem lacunas de dados locais.
+moldura, com 2.400 pixels no eixo vertical e largura proporcional. A superfície
+ocupa integralmente o PNG: a margem visual deve ser definida apenas pela moldura
+WGS84, não por faixas de fundo da câmera. A seleção, recibo SHA-256, extração e
+índice ficam em `geoespacial/reports/topodata_regional_scene/`.
 
 ### Visão zenital com ortoimagem
 
@@ -202,3 +189,14 @@ bash geoespacial/blender_topografia_radomes/render_on_host.sh --topodata-tile-ra
 O comando acima renderiza somente os índices 0, 1 e 2. O lote é deliberadamente
 finito: varrer as 13 mil janelas do subconjunto atualmente extraído gera muitos
 arquivos e deve ser agendado por faixa, folha ou área de interesse.
+
+## Evolução para navegação WebGL
+
+Blender é a ferramenta de inspeção e render estático. Uma visualização contínua
+na internet deve reutilizar as folhas e blocos TOPODATA, mas empregar uma
+pirâmide de níveis de detalhe: carregar apenas os blocos visíveis, usar 30 m
+próximo à câmera e resoluções inferiores à distância, com cache em RAM/VRAM.
+O caminho recomendado é um visualizador WebGL baseado em CesiumJS e terreno
+quantized-mesh/3D Tiles; a transformação, hash, metadados e semântica continuam
+em scripts Python versionados. A Blue Marble permanece uma textura contextual,
+e não substitui cobertura do solo nem a altitude TOPODATA.

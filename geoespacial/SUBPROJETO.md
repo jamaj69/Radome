@@ -56,6 +56,23 @@ do artigo quando possuir:
 7. redação equivalente em português e inglês, seguida da compilação dos dois
    documentos autoritativos.
 
+## Visualização topográfica e WebGL
+
+`blender_topografia_radomes/` é uma camada de comunicação e inspeção, não uma
+fonte de decisão operacional. Ela preserva uma malha local TOPODATA a 30 m por
+vértice e uma cena regional subamostrada para os três marcadores atuais. O modo
+regional recebe uma moldura WGS84, seleciona/baixa/valida/extrai automaticamente
+as folhas ZN necessárias, aplica Blue Marble por UV equiretangular geográfico e
+renderiza na proporção da moldura, sem uma moldura artificial de fundo.
+
+O Brasil não deve ser materializado em uma única malha ou PNG a 30 m: seriam
+bilhões de vértices/pixels e centenas de gigabytes a terabytes de memória de
+trabalho. Para navegação interativa na internet, a evolução aprovada é um
+visualizador WebGL paginado por blocos, com LOD, streaming e descarte de tiles
+fora do campo de visão. CesiumJS com quantized-mesh ou 3D Tiles é o candidato
+preferencial; Blender permanece destinado a renders estáticos. Essa evolução não
+autoriza inferências sobre visada, RF, implantação ou desempenho operacional.
+
 ## Marcos ativos: M2E e M3
 
 O fechamento das emissões oficiais (M2E) e a infraestrutura aeronáutica (M3)

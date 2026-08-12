@@ -630,13 +630,13 @@
     "semantic_hash": ""
   },
   "geoespacial/ROADMAP_GEOESPACIAL.md": {
-    "mtime": 1786488021.250238,
-    "ast_hash": "d5d3f7d7c6b73484b64e9d49267e85e8",
+    "mtime": 1786512859.9031348,
+    "ast_hash": "14844c2361743983db61d83fc8c0a8f8",
     "semantic_hash": ""
   },
   "geoespacial/SUBPROJETO.md": {
-    "mtime": 1786434969.1433933,
-    "ast_hash": "7ef7987fe183f2eff4e5a52b02e2006d",
+    "mtime": 1786512859.7391355,
+    "ast_hash": "9b61368def9beac785c9e4e2237f1272",
     "semantic_hash": ""
   },
   "geoespacial/audit_anatel_spectrum.py": {
@@ -1450,8 +1450,8 @@
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/README.md": {
-    "mtime": 1786508674.318427,
-    "ast_hash": "6b58617215a51a3d46419be337286d9d",
+    "mtime": 1786512859.5431364,
+    "ast_hash": "f7243ab9c0b6b42bdd2675c82258d331",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_select_blender_visual_sites.py": {

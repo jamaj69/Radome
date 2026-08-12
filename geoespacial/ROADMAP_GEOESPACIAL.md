@@ -246,6 +246,9 @@ Passos:
 - refinar finalistas com MDE e cartografia de maior resolução;
 - exportar GeoPackage/QGIS com simbologia e metadados;
 - gerar terrenos locais e cenas 3D no Blender;
+- produzir pirâmide de blocos TOPODATA e metadados para visualizador WebGL;
+- validar streaming, LOD, cache e recorte geográfico em CesiumJS/3D Tiles sem
+  transformar visualização em alegação de visada ou cobertura RF;
 - realizar inspeção local e levantamento geodésico;
 - redigir método, resultados, limitações e sensibilidade em português e inglês.
 
