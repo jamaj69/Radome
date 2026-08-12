@@ -136,5 +136,10 @@
   "134": "blender_topografia_radomes/README.md",
   "135": "validate_anatel_radio_link_vertical_geometry.py",
   "136": "export_topodata_terrain_mesh.py",
-  "137": "render_on_host.sh"
+  "137": "render_on_host.sh",
+  "138": "evaluate",
+  "139": "profile_augmented_mesh_edges_topodata.py",
+  "140": "build_augmented_candidate_graph.py",
+  "141": "build_municipal_emitter_network.py",
+  "142": "MunicipalEmitterNetworkTest"
 }

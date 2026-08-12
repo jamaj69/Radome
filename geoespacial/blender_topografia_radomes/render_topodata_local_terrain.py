@@ -36,18 +36,38 @@ def elevation_material():
     return item
 
 
-def add_terrain(site, vertical_exaggeration):
+def orthophoto_material(image_path):
+    """Materializa uma ortoimagem georreferenciada na mesma janela da malha."""
+    item = bpy.data.materials.new("Local orthophoto texture")
+    item.use_nodes = True
+    nodes, links = item.node_tree.nodes, item.node_tree.links
+    image = nodes.new("ShaderNodeTexImage")
+    image.image = bpy.data.images.load(str(image_path), check_existing=True)
+    shader = nodes.get("Principled BSDF")
+    links.new(image.outputs["Color"], shader.inputs["Base Color"])
+    shader.inputs["Roughness"].default_value = .68
+    return item
+
+
+def add_terrain(site, vertical_exaggeration, orthophoto=None):
     vertices, faces, reference = terrain_geometry(site, vertical_exaggeration)
     mesh = bpy.data.meshes.new(f"TOPODATA grid | {site['display_name']}")
     mesh.from_pydata(vertices, [], faces)
     mesh.update()
+    uv_map = mesh.uv_layers.new(name="Orthophoto UV")
+    x_values, y_values = [vertex[0] for vertex in vertices], [vertex[1] for vertex in vertices]
+    min_x, max_x, min_y, max_y = min(x_values), max(x_values), min(y_values), max(y_values)
+    for polygon in mesh.polygons:
+        for loop_index, vertex_index in zip(polygon.loop_indices, polygon.vertices):
+            x, y, _ = vertices[vertex_index]
+            uv_map.data[loop_index].uv = ((x - min_x) / max(max_x - min_x, 1), (y - min_y) / max(max_y - min_y, 1))
     elevations = [vertex[2] for vertex in site["vertices"]]
     colors = mesh.color_attributes.new("TOPODATA elevation", "BYTE_COLOR", "POINT")
     for index, elevation in enumerate(elevations):
         colors.data[index].color = elevation_color(elevation, min(elevations), max(elevations))
     terrain = bpy.data.objects.new(f"Terrain surface | {site['display_name']}", mesh)
     bpy.context.collection.objects.link(terrain)
-    terrain.data.materials.append(elevation_material())
+    terrain.data.materials.append(orthophoto_material(orthophoto) if orthophoto else elevation_material())
     wire = terrain.copy()
     wire.data = terrain.data.copy()
     wire.name = f"Terrain grid | {site['display_name']}"
@@ -80,7 +100,16 @@ def add_radome(site, reference_elevation, vertical_exaggeration):
     return Vector((east, north, ground))
 
 
-def add_camera(target, span):
+def add_camera(target, span, top_down):
+    if top_down:
+        bpy.ops.object.camera_add(location=target + Vector((0, 0, span * 1.35)))
+        camera = bpy.context.object
+        camera.name = "Top-down terrain inspection camera"
+        camera.data.type = "ORTHO"
+        camera.data.ortho_scale = span * 1.15
+        camera.rotation_euler = (target - camera.location).to_track_quat("-Z", "Y").to_euler()
+        bpy.context.scene.camera = camera
+        return camera
     bpy.ops.object.camera_add(location=target + Vector((span * .85, -span * 1.05, span * .72)))
     camera = bpy.context.object
     camera.name = "Local terrain inspection camera"
@@ -90,17 +119,18 @@ def add_camera(target, span):
     return camera
 
 
-def build(terrain, blend, render, site_index=0, vertical_exaggeration=1.5, samples=128):
+def build(terrain, blend, render, site_index=0, vertical_exaggeration=1.5, samples=128,
+          top_down=False, orthophoto=None):
     if not 0 <= site_index < len(terrain["sites"]):
         raise ValueError("site-index fora do intervalo")
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.object.delete(use_global=False)
     site = terrain["sites"][site_index]
-    _, reference = add_terrain(site, vertical_exaggeration)
+    _, reference = add_terrain(site, vertical_exaggeration, orthophoto)
     target = add_radome(site, reference, vertical_exaggeration)
     vertices, _, _ = terrain_geometry(site, vertical_exaggeration)
     span = max(max(abs(vertex[0]), abs(vertex[1])) for vertex in vertices) * 2
-    camera = add_camera(target, span)
+    camera = add_camera(target, span, top_down)
     bpy.ops.object.light_add(type="SUN", location=camera.location * 3)
     sun = bpy.context.object
     sun.name = "Sun | camera-side local terrain"
@@ -131,5 +161,7 @@ if __name__ == "__main__":
     parser.add_argument("--site-index", type=int, default=0)
     parser.add_argument("--vertical-exaggeration", type=float, default=1.5)
     parser.add_argument("--samples", type=int, default=128)
+    parser.add_argument("--top-down", action="store_true")
+    parser.add_argument("--orthophoto", type=Path, help="Imagem ortorretificada da mesma janela DEM")
     arguments = parser.parse_args(sys.argv[sys.argv.index("--") + 1:])
-    build(json.loads(arguments.terrain.read_text(encoding="utf-8")), arguments.blend.resolve(), arguments.render.resolve(), arguments.site_index, arguments.vertical_exaggeration, arguments.samples)
+    build(json.loads(arguments.terrain.read_text(encoding="utf-8")), arguments.blend.resolve(), arguments.render.resolve(), arguments.site_index, arguments.vertical_exaggeration, arguments.samples, arguments.top_down, arguments.orthophoto.resolve() if arguments.orthophoto else None)

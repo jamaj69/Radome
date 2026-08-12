@@ -44,6 +44,18 @@ if [[ "${1:-}" == "--local-terrain" ]]; then
         --samples 128
 fi
 
+if [[ "${1:-}" == "--top-down" ]]; then
+    exec blender -b --python "$subproject/render_topodata_local_terrain.py" -- \
+        --terrain "$build/topodata_terrain.json" \
+        --blend "$build/topodata_top_down.blend" \
+        --render "$build/topodata_top_down.png" \
+        --site-index "${2:-0}" \
+        --vertical-exaggeration 1.5 \
+        --samples 128 \
+        --top-down \
+        --orthophoto "${3:-$subproject/assets/nasa_blue_marble_topography_bathymetry_april_5400x2700.jpg}"
+fi
+
 exec blender -b --python "$subproject/render_curved_earth_radomes.py" -- \
     --selection "$build/selected_sites.json" \
     --overlays "$build/overlays.json" \

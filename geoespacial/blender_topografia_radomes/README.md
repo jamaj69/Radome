@@ -52,3 +52,26 @@ Use os índices `1` para Anápolis e `2` para Brasília. As saídas são
 `build/topodata_local_terrain.blend` e `build/topodata_local_terrain.png`.
 O arquivo `.blend` preserva a superfície, a grade e o marcador simbólico de
 radome para inspeção e ajustes no Blender.
+
+### Visão zenital com ortoimagem
+
+Por padrão, a visão zenital usa a textura global NASA Blue Marble já versionada
+no subprojeto. Ela é livre e fornece cor contextual, mas seus 5.400×2.700 pixels
+não têm resolução espacial adequada para uma janela TOPODATA local. Uma
+ortoimagem da mesma janela geográfica pode substituí-la por UV sobre a
+superfície deformada. Forneça uma imagem que você esteja autorizado a usar e que
+cubra exatamente a janela exportada; o programa não baixa nem redistribui
+imagens do Google. Para a visão zenital de Anápolis:
+
+```bash
+bash geoespacial/blender_topografia_radomes/render_on_host.sh --top-down 1
+```
+
+Opcionalmente, substitua a textura NASA por uma ortoimagem local:
+
+```bash
+bash geoespacial/blender_topografia_radomes/render_on_host.sh --top-down 1 /caminho/para/ortofoto_anapolis.png
+```
+
+O resultado é `build/topodata_top_down.blend` e `build/topodata_top_down.png`.
+O radome permanece acima do terreno e a câmera ortográfica fica no zênite.
