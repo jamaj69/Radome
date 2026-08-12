@@ -68,7 +68,7 @@ def build(selection, terrain_root, output, size=241, step=1, shade_root=None, sh
                 raise ValueError(f"Relevo sombreado RS ausente: {source}")
             texture = shade_output_dir / f"{Path(path.name).stem[:-2]}RS_window.png"
             write_hillshade(gdal.Open(str(source)), first_column, first_row, size, texture)
-            item["hillshade_texture"] = str(texture)
+            item["hillshade_texture"] = str(texture.resolve())
         sites.append(item)
     result = {
         "schema_version": 2,

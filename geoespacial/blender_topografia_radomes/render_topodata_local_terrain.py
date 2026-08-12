@@ -38,11 +38,15 @@ def elevation_material():
 
 def orthophoto_material(image_path):
     """Materializa uma ortoimagem georreferenciada na mesma janela da malha."""
+    image_path = Path(image_path).resolve()
+    if not image_path.is_file():
+        raise FileNotFoundError(f"Textura de terreno ausente: {image_path}")
     item = bpy.data.materials.new("Local orthophoto texture")
     item.use_nodes = True
     nodes, links = item.node_tree.nodes, item.node_tree.links
     image = nodes.new("ShaderNodeTexImage")
     image.image = bpy.data.images.load(str(image_path), check_existing=True)
+    image.image.pack()
     shader = nodes.get("Principled BSDF")
     links.new(image.outputs["Color"], shader.inputs["Base Color"])
     shader.inputs["Roughness"].default_value = .68
@@ -129,7 +133,7 @@ def build(terrain, blend, render, site_index=0, vertical_exaggeration=1.5, sampl
     bpy.ops.object.delete(use_global=False)
     site = terrain["sites"][site_index]
     if orthophoto is None and site.get("hillshade_texture"):
-        orthophoto = Path(site["hillshade_texture"])
+        orthophoto = Path(site["hillshade_texture"]).resolve()
     _, reference = add_terrain(site, vertical_exaggeration, orthophoto)
     target = add_radome(site, reference, vertical_exaggeration)
     vertices, _, _ = terrain_geometry(site, vertical_exaggeration)
