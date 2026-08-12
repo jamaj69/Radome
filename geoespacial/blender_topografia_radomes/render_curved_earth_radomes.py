@@ -15,7 +15,9 @@ from mathutils import Vector
 
 EARTH_RADIUS_UNITS = 25.0
 ELEVATION_UNITS_PER_M = 1 / 5000
-LABEL_LAYOUT = ((-1.10, 0.72), (1.12, 0.22), (0.02, -0.92))
+# Screen-plane placements (right, up) keep the three nearby central-Brazil
+# callouts in independent sectors instead of crossing one another.
+LABEL_LAYOUT = ((-2.20, -1.20), (1.85, 1.55), (1.85, -1.15))
 
 
 def position(latitude, longitude, elevation_m):
@@ -164,7 +166,6 @@ def add_radome(site, camera, label_index, label_text, label_halo):
     camera_depth = (camera.location - point).normalized()
     label_position = anchor + right * horizontal + up * vertical + camera_depth * 1.20
     facing = (camera.location - label_position).normalized()
-    add_line(anchor, label_position - facing * .012, f"Leader | {site['name']}", (.96, .96, .92), .002)
 
     bpy.ops.object.text_add(location=label_position + facing * .006)
     label = bpy.context.object
@@ -176,8 +177,16 @@ def add_radome(site, camera, label_index, label_text, label_halo):
     label.data.resolution_u = 24
     label.data.space_line = .82
     label.data.materials.append(label_text)
+    bpy.context.view_layer.update()
+    to_anchor = anchor - label_position
+    label_clearance = min(
+        max(.35, label.dimensions.x * .55),
+        max(.10, to_anchor.length - .10),
+    )
     label.rotation_mode = "QUATERNION"
     label.rotation_quaternion = facing.to_track_quat("Z", "Y")
+    leader_end = label_position + to_anchor.normalized() * label_clearance
+    add_line(anchor, leader_end, f"Leader | {site['name']}", (.96, .96, .92), .002)
 
     # A white glyph outline provides cartographic contrast without reverting to
     # opaque callout panels over the satellite texture.
