@@ -1,7 +1,7 @@
 # Graph Report - Radome  (2026-08-12)
 
 ## Corpus Check
-- 257 files · ~633,885 words
+- 257 files · ~633,992 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9aa98c52`
+- Built from commit: `70d0e64b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -615,12 +615,12 @@ Cohesion: 0.24
 Nodes (8): boundary_parts(), bounds(), build(), line_parts(), Recorta divisas municipais e estaduais do BC250 para cada janela TOPODATA., build(), Exporta divisas BC250 para a extensão inteira da cena regional., ExportLocalBoundariesTests
 
 ### Community 143 - "select_augmented_mesh_topodata_tiles.py"
-Cohesion: 0.29
-Nodes (6): interpolate(), edge_tile_names(), main(), Path, select(), SelectAugmentedMeshTopodataTilesTests
+Cohesion: 0.33
+Nodes (5): edge_tile_names(), main(), Path, select(), SelectAugmentedMeshTopodataTilesTests
 
 ### Community 144 - "profile_augmented_mesh_edges_topodata.py"
-Cohesion: 0.31
-Nodes (6): build(), los_profile(), main(), Path, status(), ProfileAugmentedMeshEdgesTopodataTests
+Cohesion: 0.27
+Nodes (7): interpolate(), build(), los_profile(), main(), Path, status(), ProfileAugmentedMeshEdgesTopodataTests
 
 ### Community 145 - "select_topodata_route_tiles.py"
 Cohesion: 0.32
@@ -638,7 +638,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `profile()` connect `evaluate_anatel_radio_link_terrain.py` to `evaluate_anatel_radio_link_terrain.py`, `evaluate`, `select_augmented_mesh_topodata_tiles.py`?**
+- **Why does `profile()` connect `evaluate_anatel_radio_link_terrain.py` to `profile_augmented_mesh_edges_topodata.py`, `evaluate_anatel_radio_link_terrain.py`, `evaluate`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._

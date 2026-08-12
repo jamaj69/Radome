@@ -3604,8 +3604,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_terrain_interpolate",
-      "community": 143,
-      "community_name": "select_augmented_mesh_topodata_tiles.py",
+      "community": 144,
+      "community_name": "profile_augmented_mesh_edges_topodata.py",
       "norm_label": "interpolate()"
     },
     {
@@ -20912,7 +20912,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
-      "source_location": "L117",
+      "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_build",
@@ -20936,7 +20936,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
-      "source_location": "L116",
+      "source_location": "L118",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_build",
@@ -20948,7 +20948,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
-      "source_location": "L119",
+      "source_location": "L121",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_build",
@@ -39709,5 +39709,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9aa98c52210b53e9f3949af9ef11170d9de1dc9e"
+  "built_at_commit": "70d0e64bbbfef4d5397d475a710cb39564e78a34"
 }

@@ -112,20 +112,32 @@ def add_radome(site, terrain, reference, exaggeration, radius, label_material):
 def build(terrain, boundaries, blend, render, exaggeration=1.5, samples=128):
     bpy.ops.object.select_all(action="SELECT"); bpy.ops.object.delete(use_global=False)
     _, reference, vertices = make_mesh(terrain, exaggeration)
-    span = max(max(abs(vertex[0]), abs(vertex[1])) for vertex in vertices) * 2
+    x_values, y_values = [vertex[0] for vertex in vertices], [vertex[1] for vertex in vertices]
+    x_span, y_span = max(x_values) - min(x_values), max(y_values) - min(y_values)
+    span = max(x_span, y_span)
     add_boundaries(boundaries, terrain, reference, exaggeration, span)
     labels = emission("Rótulos", (1, 1, 1), 1.5)
     for site in terrain["sites"]:
         add_radome(site, terrain, reference, exaggeration, span / 115, labels)
     target = Vector((0, 0, max(vertex[2] for vertex in vertices) / 2))
     bpy.ops.object.camera_add(location=(0, 0, target.z + span * 1.3))
-    camera = bpy.context.object; bpy.context.scene.camera = camera; camera.data.type = "ORTHO"; camera.data.ortho_scale = span * 1.12
+    camera = bpy.context.object; bpy.context.scene.camera = camera; camera.data.type = "ORTHO"
+    # A moldura dos três sítios é quase três vezes mais alta que larga. Usamos
+    # a maior dimensão como escala base, com margem suficiente para que a
+    # convenção de orientação do Blender não corte os marcadores nas extremidades.
+    image_width, image_height = 1800, 2400
+    camera.data.ortho_scale = max(x_span, y_span) * 1.18
+    # A cena regional mede centenas de quilômetros. O padrão de 1 km do
+    # Blender recortava toda a superfície antes da câmera, produzindo apenas
+    # o fundo cinza. Mantemos uma folga para relevo, marcadores e divisas.
+    camera.data.clip_start = 1.0
+    camera.data.clip_end = span * 4.0
     camera.rotation_euler = (target - camera.location).to_track_quat("-Z", "Y").to_euler()
     bpy.ops.object.light_add(type="SUN", location=camera.location)
     sun = bpy.context.object; sun.data.energy = 2.2; sun.rotation_euler = (target - sun.location).to_track_quat("-Z", "Y").to_euler()
     output = bpy.context.scene; output.render.engine = "BLENDER_EEVEE"; output.eevee.taa_render_samples = samples
     output.view_settings.look = "Medium High Contrast"; output.world.color = (.018, .025, .035)
-    output.render.resolution_x, output.render.resolution_y, output.render.resolution_percentage = 2400, 1700, 100
+    output.render.resolution_x, output.render.resolution_y, output.render.resolution_percentage = image_width, image_height, 100
     output.render.image_settings.file_format = "PNG"; output.render.filepath = str(render)
     bpy.ops.wm.save_as_mainfile(filepath=str(blend)); bpy.ops.render.render(write_still=True)
 
