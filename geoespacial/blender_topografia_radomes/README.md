@@ -93,10 +93,6 @@ aparência sombreada alinhada, sem alegar cobertura do solo ou imagem de satéli
 bash geoespacial/blender_topografia_radomes/render_on_host.sh --topodata-rs 0
 ```
 
-O wrapper informa antes do renderizador o dispositivo OpenGL/EGL efetivamente
-visto pelo Eevee. Para a RTX, a linha deve conter `BLENDER_GPU_RENDERER=NVIDIA`;
-`llvmpipe` ou `Mesa` indica renderização por software, mesmo que `nvidia-smi`
-liste a placa.
-Se a sonda não conseguir iniciar o contexto gráfico, ela apenas emite um aviso e
-o render continua; acompanhe `nvidia-smi` durante a renderização para confirmar
-uso e memória da RTX.
+Para não inicializar dois processos gráficos, o wrapper renderiza diretamente.
+Durante o render, acompanhe `nvidia-smi` em outro terminal para confirmar o uso
+e a memória da RTX.

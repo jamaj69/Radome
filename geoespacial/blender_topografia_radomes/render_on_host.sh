@@ -30,10 +30,6 @@ if command -v nvidia-smi >/dev/null; then
     fi
 fi
 
-echo "Renderizador que o Blender/Eevee enxerga:"
-blender -b --factory-startup --python "$subproject/probe_blender_gpu.py" 2>&1 | \
-    grep '^BLENDER_GPU_' || echo "Sonda indisponível; o render continuará e poderá ser verificado com nvidia-smi." >&2
-
 "$python_bin" "$subproject/select_visual_sites.py" \
     --ranking geoespacial/outputs/candidate_ranking/candidate_ranking.csv.gz \
     --output "$build/selected_sites.json"
