@@ -7,7 +7,7 @@ Essas incidências não demonstram iluminação RF, visada, Fresnel, licenciamen
 A renderização padrão é deliberadamente cartográfica: usa a textura Blue Marble,
 limites estaduais discretos, fronteiras terrestres internacionais do Brasil e
 somente três marcadores. Os rótulos são texto preto ampliado, voltado para a
-câmera, com fino halo branco de contraste e ligado ao marcador por uma linha-guia. A saída padrão é 2400×1500, com 128 amostras Eevee. Malhas TOPODATA locais e pontos de altitude são
+câmera, com fino halo branco de contraste e posicionado junto ao marcador. A saída padrão é 2400×1500, com 128 amostras Eevee. Malhas TOPODATA locais e pontos de altitude são
 diagnósticos separados, habilitados apenas pelos parâmetros explícitos abaixo;
 eles não são adequados à escala continental.
 

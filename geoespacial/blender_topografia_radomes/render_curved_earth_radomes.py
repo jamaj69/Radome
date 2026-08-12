@@ -15,9 +15,9 @@ from mathutils import Vector
 
 EARTH_RADIUS_UNITS = 25.0
 ELEVATION_UNITS_PER_M = 1 / 5000
-# Screen-plane placements (right, up) keep the three nearby central-Brazil
-# callouts in independent sectors instead of crossing one another.
-LABEL_LAYOUT = ((-2.20, -1.20), (1.85, 1.55), (1.85, -1.15))
+# Compact screen-plane placements keep each label adjacent to its own marker.
+# The two nearby Central-West sites use opposite sectors to remain distinct.
+LABEL_LAYOUT = ((-.60, -.45), (-.85, -.55), (.70, .42))
 
 
 def position(latitude, longitude, elevation_m):
@@ -77,20 +77,6 @@ def add_curve(points, name, color, bevel_depth):
     spline.points.add(len(points) - 1)
     for point, coordinate in zip(spline.points, points):
         point.co = (*geo_position(*coordinate), 1)
-    obj = bpy.data.objects.new(name, curve)
-    bpy.context.collection.objects.link(obj)
-    obj.data.materials.append(material(name, color))
-    return obj
-
-
-def add_line(start, end, name, color, bevel_depth):
-    curve = bpy.data.curves.new(name, "CURVE")
-    curve.dimensions = "3D"
-    curve.bevel_depth = bevel_depth
-    spline = curve.splines.new("POLY")
-    spline.points.add(1)
-    spline.points[0].co = (*start, 1)
-    spline.points[1].co = (*end, 1)
     obj = bpy.data.objects.new(name, curve)
     bpy.context.collection.objects.link(obj)
     obj.data.materials.append(material(name, color))
@@ -178,15 +164,8 @@ def add_radome(site, camera, label_index, label_text, label_halo):
     label.data.space_line = .82
     label.data.materials.append(label_text)
     bpy.context.view_layer.update()
-    to_anchor = anchor - label_position
-    label_clearance = min(
-        max(.35, label.dimensions.x * .55),
-        max(.10, to_anchor.length - .10),
-    )
     label.rotation_mode = "QUATERNION"
     label.rotation_quaternion = facing.to_track_quat("Z", "Y")
-    leader_end = label_position + to_anchor.normalized() * label_clearance
-    add_line(anchor, leader_end, f"Leader | {site['name']}", (.96, .96, .92), .002)
 
     # A white glyph outline provides cartographic contrast without reverting to
     # opaque callout panels over the satellite texture.
