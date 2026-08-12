@@ -73,6 +73,11 @@ mantém uma lacuna sem faces; nunca interpola ou inventa cotas. A resolução pa
 cartográfica (~2 km), pois uma união desses sítios em 30 m seria grande demais
 para uma cena única.
 
+A aparência da superfície é a NASA Blue Marble global já versionada. Seus UVs
+são calculados de longitude/latitude pela projeção equiretangular (``u=(lon+
+180)/360``, ``v=(lat+90)/180``), portanto o render usa o recorte geográfico
+correto da imagem, enquanto as elevações continuam vindas do TOPODATA.
+
 ```bash
 bash geoespacial/blender_topografia_radomes/render_on_host.sh --regional-terrain
 ```

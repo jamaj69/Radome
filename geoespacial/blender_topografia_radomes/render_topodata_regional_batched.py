@@ -14,7 +14,12 @@ from terrain_mesh_geometry import local_coordinates
 import render_topodata_local_terrain as local_scene
 
 
-def make_mesh(terrain, exaggeration):
+def blue_marble_uv(longitude, latitude):
+    """UV equiretangular da Blue Marble global para uma coordenada WGS84."""
+    return (longitude + 180.0) / 360.0, (latitude + 90.0) / 180.0
+
+
+def make_mesh(terrain, exaggeration, texture):
     """Monta vértices, faces e cores por ``foreach_set`` em uma única etapa."""
     longitudes, latitudes = terrain["longitude_samples"], terrain["latitude_samples"]
     elevations = terrain["elevations_m"]
@@ -23,7 +28,7 @@ def make_mesh(terrain, exaggeration):
     valid = [value for row in elevations for value in row if value is not None]
     reference_elevation = min(valid)
     low, high = min(valid), max(valid)
-    vertices, colors, index = [], [], {}
+    vertices, colors, uvs, index = [], [], [], {}
     for row, latitude in enumerate(latitudes):
         for column, longitude in enumerate(longitudes):
             elevation = elevations[row][column]
@@ -33,6 +38,7 @@ def make_mesh(terrain, exaggeration):
             index[(row, column)] = len(vertices)
             vertices.append((east, north, (elevation - reference_elevation) * exaggeration))
             colors.extend(local_scene.elevation_color(elevation, low, high))
+            uvs.append(blue_marble_uv(longitude, latitude))
     faces = []
     for row in range(len(latitudes) - 1):
         for column in range(len(longitudes) - 1):
@@ -46,11 +52,13 @@ def make_mesh(terrain, exaggeration):
     mesh.loops.foreach_set("vertex_index", [item for face in faces for item in face])
     mesh.polygons.foreach_set("loop_start", [number * 4 for number in range(len(faces))])
     mesh.polygons.foreach_set("loop_total", [4] * len(faces)); mesh.update(calc_edges=True)
+    uv_layer = mesh.uv_layers.new(name="NASA Blue Marble WGS84")
+    uv_layer.data.foreach_set("uv", [component for face in faces for vertex in face for component in uvs[vertex]])
     attribute = mesh.color_attributes.new("TOPODATA elevation", "BYTE_COLOR", "POINT")
     attribute.data.foreach_set("color", colors)
     object_ = bpy.data.objects.new("Superfície regional TOPODATA", mesh)
     bpy.context.collection.objects.link(object_)
-    object_.data.materials.append(local_scene.elevation_material())
+    object_.data.materials.append(local_scene.orthophoto_material(texture))
     return object_, (reference_lon, reference_lat, reference_elevation), vertices
 
 
@@ -109,9 +117,9 @@ def add_radome(site, terrain, reference, exaggeration, radius, label_material):
     label.data.align_x = "LEFT"; label.data.size = radius * .75; label.data.extrude = radius * .025; label.data.materials.append(label_material)
 
 
-def build(terrain, boundaries, blend, render, exaggeration=1.5, samples=128):
+def build(terrain, boundaries, texture, blend, render, exaggeration=1.5, samples=128):
     bpy.ops.object.select_all(action="SELECT"); bpy.ops.object.delete(use_global=False)
-    _, reference, vertices = make_mesh(terrain, exaggeration)
+    _, reference, vertices = make_mesh(terrain, exaggeration, texture)
     x_values, y_values = [vertex[0] for vertex in vertices], [vertex[1] for vertex in vertices]
     x_span, y_span = max(x_values) - min(x_values), max(y_values) - min(y_values)
     span = max(x_span, y_span)
@@ -145,7 +153,8 @@ def build(terrain, boundaries, blend, render, exaggeration=1.5, samples=128):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--terrain", type=Path, required=True); parser.add_argument("--boundaries", type=Path, required=True)
+    parser.add_argument("--texture", type=Path, required=True, help="Blue Marble global em projeção equiretangular")
     parser.add_argument("--blend", type=Path, required=True); parser.add_argument("--render", type=Path, required=True)
     parser.add_argument("--vertical-exaggeration", type=float, default=1.5); parser.add_argument("--samples", type=int, default=128)
     arguments = parser.parse_args(sys.argv[sys.argv.index("--") + 1:])
-    build(json.loads(arguments.terrain.read_text()), json.loads(arguments.boundaries.read_text()), arguments.blend.resolve(), arguments.render.resolve(), arguments.vertical_exaggeration, arguments.samples)
+    build(json.loads(arguments.terrain.read_text()), json.loads(arguments.boundaries.read_text()), arguments.texture.resolve(), arguments.blend.resolve(), arguments.render.resolve(), arguments.vertical_exaggeration, arguments.samples)

@@ -48,6 +48,7 @@ if [[ "${1:-}" == "--regional-terrain" ]]; then
         --terrain "$build/topodata_regional_terrain.json" --output "$build/topodata_regional_boundaries.json"
     exec blender -b --python "$subproject/render_topodata_regional_batched.py" -- \
         --terrain "$build/topodata_regional_terrain.json" --boundaries "$build/topodata_regional_boundaries.json" \
+        --texture "$subproject/assets/nasa_blue_marble_topography_bathymetry_april_5400x2700.jpg" \
         --blend "$build/topodata_regional_radomes.blend" --render "$build/topodata_regional_radomes.png" \
         --vertical-exaggeration 1.5 --samples 128
 fi

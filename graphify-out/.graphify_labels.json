@@ -144,5 +144,7 @@
   "142": "export_local_boundaries.py",
   "143": "select_augmented_mesh_topodata_tiles.py",
   "144": "profile_augmented_mesh_edges_topodata.py",
-  "145": "select_topodata_route_tiles.py"
+  "145": "select_topodata_route_tiles.py",
+  "146": "validate_anatel_radio_link_vertical_geometry.py",
+  "147": "validate_anatel_radio_link_geometry.py"
 }
