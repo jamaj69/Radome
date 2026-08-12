@@ -137,6 +137,12 @@
   "135": "validate_anatel_radio_link_vertical_geometry.py",
   "136": "export_topodata_terrain_mesh.py",
   "137": "render_on_host.sh",
+  "138": "evaluate_anatel_radio_link_terrain.py",
+  "139": "evaluate",
   "140": "build_augmented_candidate_graph.py",
-  "142": "export_local_boundaries.py"
+  "141": "select_topodata_gap_tiles.py",
+  "142": "export_local_boundaries.py",
+  "143": "select_augmented_mesh_topodata_tiles.py",
+  "144": "profile_augmented_mesh_edges_topodata.py",
+  "145": "select_topodata_route_tiles.py"
 }

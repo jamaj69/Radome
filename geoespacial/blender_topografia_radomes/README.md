@@ -81,6 +81,20 @@ Os parâmetros opcionais são espaçamento e margem em graus, por exemplo
 `--regional-terrain 0.01 0.25`. A saída é
 `build/topodata_regional_radomes.blend` e `build/topodata_regional_radomes.png`.
 
+Antes desse render, complete de forma auditável as folhas ZN eventualmente
+ausentes da moldura — no acervo atual, são quatro folhas oficiais ao norte da
+folha `18S48_ZN`, que já estava presente:
+
+```bash
+bash geoespacial/blender_topografia_radomes/render_on_host.sh --acquire-regional-terrain
+```
+
+O comando escreve seleção, recibo com SHA-256, extração e índice em
+`geoespacial/reports/topodata_regional_scene/`, preservando ZIPs e GeoTIFFs nas
+áreas ignoradas de dados. ZIPs já presentes são revalidados e reutilizados; toda
+folha necessária passa novamente pela extração. Em seguida, inicia o render
+regional sem lacunas de dados locais.
+
 ### Visão zenital com ortoimagem
 
 Por padrão, a visão zenital usa a textura global NASA Blue Marble já versionada

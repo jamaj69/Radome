@@ -52,6 +52,21 @@ if [[ "${1:-}" == "--regional-terrain" ]]; then
         --vertical-exaggeration 1.5 --samples 128
 fi
 
+if [[ "${1:-}" == "--acquire-regional-terrain" ]]; then
+    regional_report="geoespacial/reports/topodata_regional_scene"
+    "$system_python" "$subproject/select_regional_topodata_tiles.py" \
+        --selection "$build/selected_sites.json" --manifest geoespacial/data/manifests/topodata_altitude_tiles.json \
+        --existing-dir geoespacial/data/raw/topodata/radio_link_routes --output "$regional_report/selection.json"
+    "$python_bin" geoespacial/acquire_topodata_route_tiles.py \
+        --selection "$regional_report/selection.json" --output-dir geoespacial/data/raw/topodata/radio_link_routes \
+        --report "$regional_report/acquisition.json"
+    "$python_bin" geoespacial/extract_topodata_route_tiles.py \
+        --receipt "$regional_report/acquisition.json" --archive-dir geoespacial/data/raw/topodata/radio_link_routes \
+        --target-dir "$terrain_root" --report "$regional_report/extraction.json" \
+        --index "$regional_report/index.geojson" --index-name topodata_regional_scene
+    exec "$0" --regional-terrain
+fi
+
 if [[ "${1:-}" == "--topodata-tile" ]]; then
     "$system_python" "$subproject/export_topodata_tile_manifest.py" \
         --terrain-root "$terrain_root" --output "$build/topodata_tile_manifest.json" --cells "${2:-720}"
