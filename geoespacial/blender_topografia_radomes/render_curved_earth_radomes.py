@@ -134,11 +134,20 @@ def add_terrain(terrain):
 def add_radome(site, camera, label_index, label_text, label_halo):
     point = position(site["latitude"], site["longitude"], site["terrain_elevation_m"])
     normal = point.normalized()
-    bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=2, radius=.035, location=point + normal * .04)
+    bpy.ops.mesh.primitive_torus_add(
+        major_radius=.080, minor_radius=.009, major_segments=32, minor_segments=8,
+        location=point + normal * .016,
+    )
+    locator = bpy.context.object
+    locator.name = f"Locator ring | {site['name']}"
+    locator.rotation_mode = "QUATERNION"
+    locator.rotation_quaternion = normal.to_track_quat("Z", "Y")
+    locator.data.materials.append(label_material("Amber radome locator", (1.0, .38, .03), .35))
+    bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=2, radius=.075, location=point + normal * .070)
     dome = bpy.context.object
     dome.name = f"RADOME | {site['name']}"
-    dome.data.materials.append(material("Radome white", (.92, .94, .96)))
-    bpy.ops.mesh.primitive_cylinder_add(vertices=16, radius=.010, depth=.07, location=point + normal * .015)
+    dome.data.materials.append(label_material("Radome white", (.92, .94, .96), .18))
+    bpy.ops.mesh.primitive_cylinder_add(vertices=16, radius=.018, depth=.14, location=point + normal * .025)
     mast = bpy.context.object
     mast.name = f"Mast | {site['name']}"
     mast.data.materials.append(material("Mast", (.12, .16, .18), .7))
@@ -149,7 +158,7 @@ def add_radome(site, camera, label_index, label_text, label_halo):
     right = camera_basis @ Vector((1, 0, 0))
     up = camera_basis @ Vector((0, 1, 0))
     horizontal, vertical = LABEL_LAYOUT[label_index]
-    anchor = point + normal * .055
+    anchor = point + normal * .145
     # Keep callouts in a common plane in front of the globe.  Moving them only
     # along a local surface tangent can put the far edge behind the Earth.
     camera_depth = (camera.location - point).normalized()

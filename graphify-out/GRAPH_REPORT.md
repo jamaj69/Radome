@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 234 files · ~625,801 words
+- 234 files · ~625,836 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1374 nodes · 1851 edges · 138 communities (102 shown, 36 thin omitted)
+- 1374 nodes · 1852 edges · 143 communities (107 shown, 36 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 138 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `20ec8033`
+- Built from commit: `13bb5784`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -152,6 +152,11 @@
 - validate_anatel_radio_link_vertical_geometry.py
 - export_topodata_terrain_mesh.py
 - render_on_host.sh
+- evaluate_anatel_radio_link_terrain.py
+- evaluate
+- profile_augmented_mesh_edges_topodata.py
+- select_topodata_route_tiles.py
+- select_augmented_mesh_topodata_tiles.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -180,7 +185,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (138 total, 36 thin omitted)
+## Communities (143 total, 36 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -255,8 +260,8 @@ Cohesion: 0.27
 Nodes (9): Any, Candidate, load_instance(), main(), Path, Minimize site count, using candidate score only as a tie-breaker., solve(), candidate() (+1 more)
 
 ### Community 18 - "Seleção geoespacial de sítios RADOME"
-Cohesion: 0.09
-Nodes (23): build(), candidate_attributes(), main(), Path, horizon_km(), main(), node_id(), Path (+15 more)
+Cohesion: 0.07
+Nodes (30): build(), candidate_attributes(), main(), Path, horizon_km(), main(), node_id(), Path (+22 more)
 
 ### Community 20 - "RADOME Project / Projeto RADOME"
 Cohesion: 0.33
@@ -355,8 +360,8 @@ Cohesion: 0.40
 Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 5: integration, calibration, and operational validation, What the research shows
 
 ### Community 46 - "Cross-search signals"
-Cohesion: 0.11
-Nodes (16): edge_tile_names(), main(), Path, select(), cell_sample_points(), main(), Path, Retorna centro e cantos internos suficientes para células menores que uma folha. (+8 more)
+Cohesion: 0.25
+Nodes (6): cell_sample_points(), main(), Path, Retorna centro e cantos internos suficientes para células menores que uma folha., select(), TopodataGapTileTests
 
 ### Community 47 - "Cross-search signals"
 Cohesion: 0.40
@@ -463,8 +468,8 @@ Cohesion: 0.50
 Nodes (3): Famílias explícitas de radioenlaces Anatel, Reprodução, Resultado
 
 ### Community 83 - "evaluate_anatel_radio_link_terrain.py"
-Cohesion: 0.06
-Nodes (35): candidate_status(), evaluate(), main(), Counter, Path, classify(), evaluate(), interpolate() (+27 more)
+Cohesion: 0.23
+Nodes (8): evaluate(), main(), prior_statuses(), Path, Amostrador de GeoTIFFs com cache LRU limitado., Topodata, TopodataSamplerTest, Image
 
 ### Community 84 - "extract_topodata_route_tiles.py"
 Cohesion: 0.24
@@ -571,7 +576,7 @@ Cohesion: 0.23
 Nodes (9): build(), component_metrics(), edge_key(), face_vertices(), main(), Graph, Path, AnalyzeAugmentedMeshResilienceTests (+1 more)
 
 ### Community 132 - "render_curved_earth_radomes.py"
-Cohesion: 0.35
+Cohesion: 0.36
 Nodes (13): add_camera(), add_curve(), add_line(), add_overlays(), add_radome(), add_terrain(), build(), earth_material() (+5 more)
 
 ### Community 133 - "build"
@@ -585,6 +590,26 @@ Nodes (9): brazil_international_boundaries(), build(), coordinate_key(), line_pa
 ### Community 136 - "export_topodata_terrain_mesh.py"
 Cohesion: 0.67
 Nodes (3): build(), Extrai malhas TOPODATA locais, com altitude real, para a cena Blender., tile_for()
+
+### Community 138 - "evaluate_anatel_radio_link_terrain.py"
+Cohesion: 0.26
+Nodes (7): classify(), evaluate(), main(), profile(), Path, Terrarium, TerrainTest
+
+### Community 139 - "evaluate"
+Cohesion: 0.29
+Nodes (6): candidate_status(), evaluate(), main(), Counter, Path, CandidatePathTerrainStatusTest
+
+### Community 140 - "profile_augmented_mesh_edges_topodata.py"
+Cohesion: 0.31
+Nodes (6): build(), los_profile(), main(), Path, status(), ProfileAugmentedMeshEdgesTopodataTests
+
+### Community 141 - "select_topodata_route_tiles.py"
+Cohesion: 0.31
+Nodes (6): interpolate(), main(), Path, select(), tile_name(), TopodataTileTest
+
+### Community 142 - "select_augmented_mesh_topodata_tiles.py"
+Cohesion: 0.33
+Nodes (5): edge_tile_names(), main(), Path, select(), SelectAugmentedMeshTopodataTilesTests
 
 ## Knowledge Gaps
 - **522 isolated node(s):** `render_on_host.sh script`, `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` (+517 more)
