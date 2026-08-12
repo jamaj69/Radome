@@ -131,7 +131,7 @@ def add_terrain(terrain):
         obj.data.materials.append(material("TOPODATA terrain", (.20, .36, .12)))
 
 
-def add_radome(site, camera, label_index, label_plate, label_text):
+def add_radome(site, camera, label_index, label_text):
     point = position(site["latitude"], site["longitude"], site["terrain_elevation_m"])
     normal = point.normalized()
     bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=2, radius=.035, location=point + normal * .04)
@@ -163,25 +163,12 @@ def add_radome(site, camera, label_index, label_plate, label_text):
     label.data.body = f"{site['display_name']}\\n{site['terrain_elevation_m']:.0f} m"
     label.data.align_x = "CENTER"
     label.data.align_y = "CENTER"
-    label.data.size = .23
+    label.data.size = .32
     label.data.resolution_u = 16
     label.data.space_line = .82
     label.data.materials.append(label_text)
-    # Compute the backing in local text coordinates before its camera-facing
-    # rotation.  A fixed-width panel let long airport names spill onto terrain.
-    bpy.context.view_layer.update()
-    plate_width = label.dimensions.x + .18
-    plate_height = label.dimensions.y + .14
     label.rotation_mode = "QUATERNION"
     label.rotation_quaternion = facing.to_track_quat("Z", "Y")
-
-    bpy.ops.mesh.primitive_plane_add(size=1, location=label_position - facing * .003)
-    plate = bpy.context.object
-    plate.name = f"Label backing | {site['name']}"
-    plate.dimensions = (plate_width, plate_height, 0)
-    plate.rotation_mode = "QUATERNION"
-    plate.rotation_quaternion = facing.to_track_quat("Z", "Y")
-    plate.data.materials.append(label_plate)
 
 
 def add_camera(target, overview):
@@ -210,10 +197,9 @@ def build(selection, overlays, terrain, texture, blend, render, overview=False,
                    for site in selection["selected_sites"]]
     target = sum(site_points, Vector()) / len(site_points)
     camera = add_camera(target, overview)
-    plate = label_material("Label backing", (.94, .94, .90), .06)
     text = label_material("Black labels", (.003, .003, .003), 0.0)
     for index, site in enumerate(selection["selected_sites"]):
-        add_radome(site, camera, index, plate, text)
+        add_radome(site, camera, index, text)
     bpy.ops.object.light_add(type="SUN", location=camera.location * 8)
     sun = bpy.context.object
     sun.name = "Sun | camera-side illumination"

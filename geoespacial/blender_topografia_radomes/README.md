@@ -6,8 +6,8 @@ Essas incidências não demonstram iluminação RF, visada, Fresnel, licenciamen
 
 A renderização padrão é deliberadamente cartográfica: usa a textura Blue Marble,
 limites estaduais discretos, fronteiras terrestres internacionais do Brasil e
-somente três marcadores. Os rótulos são painéis claros voltados para a câmera,
-com texto preto e linhas-guia. Malhas TOPODATA locais e pontos de altitude são
+somente três marcadores. Os rótulos são texto preto ampliado, voltado para a
+câmera e ligado ao marcador por uma linha-guia. Malhas TOPODATA locais e pontos de altitude são
 diagnósticos separados, habilitados apenas pelos parâmetros explícitos abaixo;
 eles não são adequados à escala continental.
 
