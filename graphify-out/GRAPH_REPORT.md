@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-12)
 
 ## Corpus Check
-- 244 files · ~629,264 words
+- 252 files · ~631,937 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1439 nodes · 1949 edges · 140 communities (104 shown, 36 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 149 edges (avg confidence: 0.79)
+- 1487 nodes · 2025 edges · 140 communities (104 shown, 36 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 161 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `22a45558`
+- Built from commit: `71dc045c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -561,8 +561,8 @@ Cohesion: 0.50
 Nodes (3): Aquisição, Extração e índice, Folhas TOPODATA das arestas priorizadas
 
 ### Community 127 - "validate_anatel_radio_link_geometry.py"
-Cohesion: 0.13
-Nodes (15): consolidate(), destination(), main(), normalize(), Path, ring_clearance(), screen(), main() (+7 more)
+Cohesion: 0.10
+Nodes (21): build(), covering_tile(), Mosaica amostras TOPODATA para uma superfície regional Blender.  Não produz uma, Abre uma vez as folhas e registra suas extensões geográficas., Lê blocos por folha, evitando uma chamada GDAL por vértice., sample_grid(), tile_catalog(), build() (+13 more)
 
 ### Community 131 - "analyze_augmented_mesh_resilience.py"
 Cohesion: 0.23
@@ -577,44 +577,44 @@ Cohesion: 0.33
 Nodes (3): build(), Path, SelectBlenderVisualSitesTests
 
 ### Community 134 - "blender_topografia_radomes/README.md"
-Cohesion: 0.40
-Nodes (4): Superfície 3D TOPODATA, Textura TOPODATA RS, Visualização Blender: Terra curva e três candidatos RADOME, Visão zenital com ortoimagem
+Cohesion: 0.29
+Nodes (6): Superfície 3D TOPODATA, Textura TOPODATA RS, Varredura nacional por blocos TOPODATA nativos, Visualização Blender: Terra curva e três candidatos RADOME, Visão regional dos três sítios, Visão zenital com ortoimagem
 
 ### Community 135 - "validate_anatel_radio_link_vertical_geometry.py"
 Cohesion: 0.33
 Nodes (9): brazil_international_boundaries(), build(), coordinate_key(), line_parts(), merge_line_parts(), polygon_boundaries(), Exporta limites BC250 e amostras diagnósticas para a cena Blender., Extrai segmentos de LineString/MultiLineString, preservando só linhas. (+1 more)
 
 ### Community 136 - "export_topodata_terrain_mesh.py"
-Cohesion: 0.07
-Nodes (38): available_window_size(), build(), hillshade_path(), Exporta grades TOPODATA para malhas Blender com uma cota por vértice., Abre a folha que contém a coordenada geográfica solicitada., Maior janela quadrada ímpar, centrada, que permanece na mesma folha., terrain_color(), tile_for() (+30 more)
+Cohesion: 0.06
+Nodes (50): available_window_size(), build(), hillshade_path(), Exporta grades TOPODATA para malhas Blender com uma cota por vértice., Abre a folha que contém a coordenada geográfica solicitada., Maior janela quadrada ímpar, centrada, que permanece na mesma folha., terrain_color(), tile_for() (+42 more)
 
 ### Community 140 - "build_augmented_candidate_graph.py"
-Cohesion: 0.11
-Nodes (16): edge_tile_names(), main(), Path, select(), cell_sample_points(), main(), Path, Retorna centro e cantos internos suficientes para células menores que uma folha. (+8 more)
+Cohesion: 0.06
+Nodes (31): consolidate(), destination(), main(), normalize(), Path, ring_clearance(), screen(), edge_tile_names() (+23 more)
 
 ### Community 142 - "export_local_boundaries.py"
-Cohesion: 0.33
-Nodes (6): boundary_parts(), bounds(), build(), line_parts(), Recorta divisas municipais e estaduais do BC250 para cada janela TOPODATA., ExportLocalBoundariesTests
+Cohesion: 0.24
+Nodes (8): boundary_parts(), bounds(), build(), line_parts(), Recorta divisas municipais e estaduais do BC250 para cada janela TOPODATA., build(), Exporta divisas BC250 para a extensão inteira da cena regional., ExportLocalBoundariesTests
 
 ## Knowledge Gaps
-- **523 isolated node(s):** `render_on_host.sh script`, `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` (+518 more)
+- **525 isolated node(s):** `render_on_host.sh script`, `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` (+520 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **36 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
+- **Why does `Topodata` connect `evaluate_anatel_radio_link_terrain.py` to `build_augmented_candidate_graph.py`?**
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `Topodata` (e.g. with `evaluate()` and `build()`) actually correct?**
   _`Topodata` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `render_on_host.sh script`, `run_pipeline.sh script`, `build.sh script` to the rest of the system?**
-  _523 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _525 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
   _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
-- **Should `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` be split into smaller, more focused modules?**
-  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._

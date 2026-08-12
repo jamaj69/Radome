@@ -63,6 +63,24 @@ A câmera zenital enquadra somente a região central da janela DEM, deixando uma
 margem de superfície TOPODATA real ao redor da área visível. Não há extensão
 plana ou extrapolação de cotas além da folha disponível.
 
+### Visão regional dos três sítios
+
+Para enquadrar Juiz de Fora, Anápolis e Brasília em uma única superfície, use a
+grade regional subamostrada. Ela consulta as folhas disponíveis, preserva a
+cota TOPODATA mais próxima em cada vértice e cria uma cena com margem, os três
+radomes e as divisas BC250. Caso uma folha não esteja no acervo local, a cena
+mantém uma lacuna sem faces; nunca interpola ou inventa cotas. A resolução padrão de 0,02° é deliberadamente
+cartográfica (~2 km), pois uma união desses sítios em 30 m seria grande demais
+para uma cena única.
+
+```bash
+bash geoespacial/blender_topografia_radomes/render_on_host.sh --regional-terrain
+```
+
+Os parâmetros opcionais são espaçamento e margem em graus, por exemplo
+`--regional-terrain 0.01 0.25`. A saída é
+`build/topodata_regional_radomes.blend` e `build/topodata_regional_radomes.png`.
+
 ### Visão zenital com ortoimagem
 
 Por padrão, a visão zenital usa a textura global NASA Blue Marble já versionada
@@ -109,3 +127,42 @@ Ela grava `topodata_rs_batched.blend` e `topodata_rs_batched.png`.
 Para não inicializar dois processos gráficos, o wrapper renderiza diretamente.
 Durante o render, acompanhe `nvidia-smi` em outro terminal para confirmar o uso
 e a memória da RTX.
+
+## Varredura nacional por blocos TOPODATA nativos
+
+Uma cena nacional com cada vértice a aproximadamente 30 m excede com folga a
+memória de uma estação de trabalho e a VRAM da GPU. Em vez disso, o fluxo de
+varredura divide **cada folha** TOPODATA em blocos adjacentes de 720×720
+quadrículas (721×721 vértices), compartilhando uma borda entre blocos vizinhos.
+O manifesto é leve: contém apenas os recortes e a proveniência. A ferramenta lê
+uma única janela do GeoTIFF, monta sua malha no Blender com `foreach_set`,
+renderiza-a e encerra o processo; o próximo bloco só é aberto em uma nova
+execução. Assim, a resolução nativa é preservada localmente sem somar folhas em
+RAM ou VRAM.
+
+Exemplo: gerar o manifesto e renderizar o primeiro bloco com 720 quadrículas por
+lado:
+
+```bash
+cd /home/jamaj/src/Radome
+bash geoespacial/blender_topografia_radomes/render_on_host.sh --topodata-tile 720 0
+```
+
+O segundo argumento é o tamanho do bloco em quadrículas; o terceiro é seu índice
+no manifesto, que é ordenado por nome de folha, linha e coluna. As saídas são
+`build/topodata_tile_manifest.json`, `build/topodata_tile_<índice>.blend` e
+`build/topodata_tile_<índice>.png`. Para avançar, altere apenas o índice; cada
+render é independente e libera a memória ao terminar. Este mecanismo é de
+visualização topográfica e não faz alegações de cobertura RF, visada ou
+viabilidade de implantação.
+
+Para percorrer uma faixa finita sem manter duas malhas abertas, informe também a
+quantidade. O Blender é iniciado e finalizado uma vez por bloco:
+
+```bash
+bash geoespacial/blender_topografia_radomes/render_on_host.sh --topodata-tile-range 720 0 3
+```
+
+O comando acima renderiza somente os índices 0, 1 e 2. O lote é deliberadamente
+finito: varrer as 13 mil janelas do subconjunto atualmente extraído gera muitos
+arquivos e deve ser agendado por faixa, folha ou área de interesse.

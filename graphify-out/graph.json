@@ -994,6 +994,127 @@
       "norm_label": "recorta divisas municipais e estaduais do bc250 para cada janela topodata."
     },
     {
+      "label": "export_regional_boundaries.py",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_boundaries.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_regional_boundaries",
+      "community": 142,
+      "community_name": "export_local_boundaries.py",
+      "norm_label": "export_regional_boundaries.py"
+    },
+    {
+      "label": "build()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_boundaries.py",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_regional_boundaries_build",
+      "community": 142,
+      "community_name": "export_local_boundaries.py",
+      "norm_label": "build()"
+    },
+    {
+      "label": "Exporta divisas BC250 para a extens\u00e3o inteira da cena regional.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_boundaries.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_regional_boundaries_rationale_1",
+      "community": 142,
+      "community_name": "export_local_boundaries.py",
+      "norm_label": "exporta divisas bc250 para a extensao inteira da cena regional."
+    },
+    {
+      "label": "export_regional_topodata_terrain.py",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "export_regional_topodata_terrain.py"
+    },
+    {
+      "label": "tile_catalog()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_tile_catalog",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "tile_catalog()"
+    },
+    {
+      "label": "covering_tile()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_covering_tile",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "covering_tile()"
+    },
+    {
+      "label": "sample_grid()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_sample_grid",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "sample_grid()"
+    },
+    {
+      "label": "build()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_build",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "build()"
+    },
+    {
+      "label": "Mosaica amostras TOPODATA para uma superf\u00edcie regional Blender.  N\u00e3o produz uma",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_rationale_1",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "mosaica amostras topodata para uma superficie regional blender.  nao produz uma"
+    },
+    {
+      "label": "Abre uma vez as folhas e registra suas extens\u00f5es geogr\u00e1ficas.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_rationale_20",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "abre uma vez as folhas e registra suas extensoes geograficas."
+    },
+    {
+      "label": "L\u00ea blocos por folha, evitando uma chamada GDAL por v\u00e9rtice.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_rationale_43",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "le blocos por folha, evitando uma chamada gdal por vertice."
+    },
+    {
       "label": "export_topodata_terrain_mesh.py",
       "file_type": "code",
       "source_file": "geoespacial/blender_topografia_radomes/export_topodata_terrain_mesh.py",
@@ -1104,6 +1225,72 @@
       "norm_label": "maior janela quadrada impar, centrada, que permanece na mesma folha."
     },
     {
+      "label": "export_topodata_tile_manifest.py",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_manifest.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_topodata_tile_manifest",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "export_topodata_tile_manifest.py"
+    },
+    {
+      "label": "build()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_manifest.py",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_topodata_tile_manifest_build",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "build()"
+    },
+    {
+      "label": "Indexa folhas TOPODATA em blocos de 30 m que cabem no Blender.  O manifesto cont",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_manifest.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_topodata_tile_manifest_rationale_1",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "indexa folhas topodata em blocos de 30 m que cabem no blender.  o manifesto cont"
+    },
+    {
+      "label": "export_topodata_tile_window.py",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_window.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_topodata_tile_window",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "export_topodata_tile_window.py"
+    },
+    {
+      "label": "build()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_window.py",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_topodata_tile_window_build",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "build()"
+    },
+    {
+      "label": "Materializa sob demanda um \u00fanico bloco do manifesto TOPODATA.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_window.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_export_topodata_tile_window_rationale_1",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "materializa sob demanda um unico bloco do manifesto topodata."
+    },
+    {
       "label": "probe_blender_gpu.py",
       "file_type": "code",
       "source_file": "geoespacial/blender_topografia_radomes/probe_blender_gpu.py",
@@ -1124,6 +1311,83 @@
       "community": 46,
       "community_name": "Cross-search signals",
       "norm_label": "imprime o renderizador gpu efetivamente visivel ao blender/eevee."
+    },
+    {
+      "label": "regional_terrain_geometry.py",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_regional_terrain_geometry",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "regional_terrain_geometry.py"
+    },
+    {
+      "label": "regional_bounds()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_regional_bounds",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "regional_bounds()"
+    },
+    {
+      "label": "axis()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_axis",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "axis()"
+    },
+    {
+      "label": "grid_shape()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_grid_shape",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "grid_shape()"
+    },
+    {
+      "label": "Geometria pura da cena regional TOPODATA de baixa resolu\u00e7\u00e3o.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_rationale_1",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "geometria pura da cena regional topodata de baixa resolucao."
+    },
+    {
+      "label": "Retorna a caixa geogr\u00e1fica dos s\u00edtios, expandida por uma margem.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_rationale_6",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "retorna a caixa geografica dos sitios, expandida por uma margem."
+    },
+    {
+      "label": "Amostras regulares que incluem exatamente as duas extremidades.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_rationale_20",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "amostras regulares que incluem exatamente as duas extremidades."
     },
     {
       "label": "render_curved_earth_radomes.py",
@@ -1541,6 +1805,127 @@
       "norm_label": "alternativa acelerada: constroi a malha topodata com ``foreach_set``."
     },
     {
+      "label": "render_topodata_regional_batched.py",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "render_topodata_regional_batched.py"
+    },
+    {
+      "label": "make_mesh()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_make_mesh",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "make_mesh()"
+    },
+    {
+      "label": "grid_elevation()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_grid_elevation",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "grid_elevation()"
+    },
+    {
+      "label": "position()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_position",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "position()"
+    },
+    {
+      "label": "emission()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_emission",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "emission()"
+    },
+    {
+      "label": "add_curve()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_curve",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "add_curve()"
+    },
+    {
+      "label": "add_boundaries()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_boundaries",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "add_boundaries()"
+    },
+    {
+      "label": "add_radome()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_radome",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "add_radome()"
+    },
+    {
+      "label": "build()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_build",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "build()"
+    },
+    {
+      "label": "Renderiza a superf\u00edcie regional TOPODATA com montagem batelada no Blender.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_rationale_1",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "renderiza a superficie regional topodata com montagem batelada no blender."
+    },
+    {
+      "label": "Monta v\u00e9rtices, faces e cores por ``foreach_set`` em uma \u00fanica etapa.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_rationale_18",
+      "community": 136,
+      "community_name": "export_topodata_terrain_mesh.py",
+      "norm_label": "monta vertices, faces e cores por ``foreach_set`` em uma unica etapa."
+    },
+    {
       "label": "select_visual_sites.py",
       "file_type": "code",
       "source_file": "geoespacial/blender_topografia_radomes/select_visual_sites.py",
@@ -1671,6 +2056,127 @@
       "community": 136,
       "community_name": "export_topodata_terrain_mesh.py",
       "norm_label": "gera vertices e quadrilateros, preservando cada cota dem em z."
+    },
+    {
+      "label": "test_topodata_tile_plan.py",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "test_topodata_tile_plan.py"
+    },
+    {
+      "label": "TopodataTilePlanTest",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "topodatatileplantest"
+    },
+    {
+      "label": ".test_blocks_share_their_border_and_cover_the_full_leaf()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest_test_blocks_share_their_border_and_cover_the_full_leaf",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": ".test_blocks_share_their_border_and_cover_the_full_leaf()"
+    },
+    {
+      "label": ".test_invalid_block_size_fails()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest_test_invalid_block_size_fails",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": ".test_invalid_block_size_fails()"
+    },
+    {
+      "label": ".test_regional_grid_has_margin_and_exact_edges()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest_test_regional_grid_has_margin_and_exact_edges",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": ".test_regional_grid_has_margin_and_exact_edges()"
+    },
+    {
+      "label": "topodata_tile_plan.py",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/topodata_tile_plan.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_topodata_tile_plan",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "topodata_tile_plan.py"
+    },
+    {
+      "label": "starts()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/topodata_tile_plan.py",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_topodata_tile_plan_starts",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "starts()"
+    },
+    {
+      "label": "windows()",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/topodata_tile_plan.py",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_topodata_tile_plan_windows",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "windows()"
+    },
+    {
+      "label": "Planejamento puro de blocos sobrepostos de uma folha TOPODATA.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/topodata_tile_plan.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_topodata_tile_plan_rationale_1",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "planejamento puro de blocos sobrepostos de uma folha topodata."
+    },
+    {
+      "label": "In\u00edcios de blocos que compartilham a borda, sem lacunas.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/topodata_tile_plan.py",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_topodata_tile_plan_rationale_5",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "inicios de blocos que compartilham a borda, sem lacunas."
+    },
+    {
+      "label": "Janelas [coluna, linha, largura, altura] com at\u00e9 ``cells`` quadr\u00edculas.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/topodata_tile_plan.py",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_topodata_tile_plan_rationale_12",
+      "community": 127,
+      "community_name": "validate_anatel_radio_link_geometry.py",
+      "norm_label": "janelas [coluna, linha, largura, altura] com ate ``cells`` quadriculas."
     },
     {
       "label": "build_anatel_radio_link_hypothesis_graph.py",
@@ -2592,8 +3098,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_consolidate_topodata_gap_candidates",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "consolidate_topodata_gap_candidates.py"
     },
     {
@@ -2603,8 +3109,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "geoespacial_consolidate_topodata_gap_candidates_destination",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "destination()"
     },
     {
@@ -2614,8 +3120,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "geoespacial_consolidate_topodata_gap_candidates_ring_clearance",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "ring_clearance()"
     },
     {
@@ -2625,8 +3131,8 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "geoespacial_consolidate_topodata_gap_candidates_normalize",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "normalize()"
     },
     {
@@ -2636,8 +3142,8 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "geoespacial_consolidate_topodata_gap_candidates_consolidate",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "consolidate()"
     },
     {
@@ -2647,8 +3153,8 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "geoespacial_consolidate_topodata_gap_candidates_screen",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "screen()"
     },
     {
@@ -2658,8 +3164,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_consolidate_topodata_gap_candidates_py_path",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "path"
     },
     {
@@ -2669,8 +3175,8 @@
       "source_location": "L195",
       "_origin": "ast",
       "id": "geoespacial_consolidate_topodata_gap_candidates_main",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "main()"
     },
     {
@@ -4382,8 +4888,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_select_topodata_gap_ring_tiles",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "select_topodata_gap_ring_tiles.py"
     },
     {
@@ -4393,8 +4899,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "geoespacial_select_topodata_gap_ring_tiles_requirements",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "requirements()"
     },
     {
@@ -4404,8 +4910,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_select_topodata_gap_ring_tiles_py_path",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "path"
     },
     {
@@ -4415,8 +4921,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_select_topodata_gap_ring_tiles_py_counter",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "counter"
     },
     {
@@ -4426,8 +4932,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "geoespacial_select_topodata_gap_ring_tiles_required_names",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "required_names()"
     },
     {
@@ -4437,8 +4943,8 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "geoespacial_select_topodata_gap_ring_tiles_select",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "select()"
     },
     {
@@ -4448,8 +4954,8 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "geoespacial_select_topodata_gap_ring_tiles_main",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "main()"
     },
     {
@@ -5702,8 +6208,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_tests_test_consolidate_topodata_gap_candidates",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "test_consolidate_topodata_gap_candidates.py"
     },
     {
@@ -5713,8 +6219,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "geoespacial_tests_test_consolidate_topodata_gap_candidates_consolidatetopodatagapcandidatestests",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "consolidatetopodatagapcandidatestests"
     },
     {
@@ -5724,8 +6230,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "geoespacial_tests_test_consolidate_topodata_gap_candidates_consolidatetopodatagapcandidatestests_test_destination_zero_distance_preserves_point",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": ".test_destination_zero_distance_preserves_point()"
     },
     {
@@ -5735,8 +6241,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "geoespacial_tests_test_consolidate_topodata_gap_candidates_consolidatetopodatagapcandidatestests_test_consolidation_keeps_higher_score_and_assigns_every_seed",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": ".test_consolidation_keeps_higher_score_and_assigns_every_seed()"
     },
     {
@@ -5746,8 +6252,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "geoespacial_tests_test_consolidate_topodata_gap_candidates_consolidatetopodatagapcandidatestests_test_ring_clearance_reports_partial_sampling",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": ".test_ring_clearance_reports_partial_sampling()"
     },
     {
@@ -6846,8 +7352,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_tests_test_select_topodata_gap_ring_tiles",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "test_select_topodata_gap_ring_tiles.py"
     },
     {
@@ -6857,8 +7363,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "selecttopodatagapringtilestests"
     },
     {
@@ -6868,8 +7374,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests_test_required_names_include_seed_and_ring_tiles",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": ".test_required_names_include_seed_and_ring_tiles()"
     },
     {
@@ -6879,8 +7385,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests_test_requirements_count_points_and_affected_seed",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": ".test_requirements_count_points_and_affected_seed()"
     },
     {
@@ -6890,8 +7396,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "geoespacial_tests_test_select_topodata_gap_ring_tiles_selecttopodatagapringtilestests_test_rejects_too_few_azimuths",
-      "community": 127,
-      "community_name": "validate_anatel_radio_link_geometry.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": ".test_rejects_too_few_azimuths()"
     },
     {
@@ -11776,10 +12282,21 @@
       "norm_label": "superficie 3d topodata"
     },
     {
-      "label": "Vis\u00e3o zenital com ortoimagem",
+      "label": "Vis\u00e3o regional dos tr\u00eas s\u00edtios",
       "file_type": "document",
       "source_file": "geoespacial/blender_topografia_radomes/README.md",
       "source_location": "L66",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_readme_vis\u00e3o_regional_dos_tr\u00eas_s\u00edtios",
+      "community": 134,
+      "community_name": "blender_topografia_radomes/README.md",
+      "norm_label": "visao regional dos tres sitios"
+    },
+    {
+      "label": "Vis\u00e3o zenital com ortoimagem",
+      "file_type": "document",
+      "source_file": "geoespacial/blender_topografia_radomes/README.md",
+      "source_location": "L84",
       "_origin": "ast",
       "id": "geoespacial_blender_topografia_radomes_readme_vis\u00e3o_zenital_com_ortoimagem",
       "community": 134,
@@ -11790,12 +12307,23 @@
       "label": "Textura TOPODATA RS",
       "file_type": "document",
       "source_file": "geoespacial/blender_topografia_radomes/README.md",
-      "source_location": "L89",
+      "source_location": "L107",
       "_origin": "ast",
       "id": "geoespacial_blender_topografia_radomes_readme_textura_topodata_rs",
       "community": 134,
       "community_name": "blender_topografia_radomes/README.md",
       "norm_label": "textura topodata rs"
+    },
+    {
+      "label": "Varredura nacional por blocos TOPODATA nativos",
+      "file_type": "document",
+      "source_file": "geoespacial/blender_topografia_radomes/README.md",
+      "source_location": "L131",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_readme_varredura_nacional_por_blocos_topodata_nativos",
+      "community": 134,
+      "community_name": "blender_topografia_radomes/README.md",
+      "norm_label": "varredura nacional por blocos topodata nativos"
     },
     {
       "label": "ANATEL_SPECTRUM_AUDIT.md",
@@ -18497,6 +19025,18 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_boundaries.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_boundaries",
+      "target": "geoespacial_blender_topografia_radomes_export_local_boundaries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "geoespacial/tests/test_export_local_boundaries.py",
       "source_location": "L3",
       "weight": 1.0,
@@ -18532,6 +19072,18 @@
     {
       "relation": "calls",
       "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_boundaries.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_boundaries_build",
+      "target": "geoespacial_blender_topografia_radomes_export_local_boundaries_boundary_parts"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/export_local_boundaries.py",
       "source_location": "L50",
@@ -18552,6 +19104,177 @@
       "_origin": "ast",
       "source": "geoespacial_tests_test_export_local_boundaries_exportlocalboundariestests_test_derives_window_bounds_from_terrain_vertices",
       "target": "geoespacial_blender_topografia_radomes_export_local_boundaries_bounds"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_boundaries.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_boundaries",
+      "target": "geoespacial_blender_topografia_radomes_export_regional_boundaries_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_boundaries.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_boundaries_rationale_1",
+      "target": "geoespacial_blender_topografia_radomes_export_regional_boundaries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain",
+      "target": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain",
+      "target": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_covering_tile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain",
+      "target": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_sample_grid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain",
+      "target": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_tile_catalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_rationale_1",
+      "target": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_build",
+      "target": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_tile_catalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_rationale_20",
+      "target": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_tile_catalog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_sample_grid",
+      "target": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_covering_tile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_build",
+      "target": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_sample_grid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_rationale_43",
+      "target": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_sample_grid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_build",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_grid_shape"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/export_regional_topodata_terrain.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_regional_topodata_terrain_build",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_regional_bounds"
     },
     {
       "relation": "contains",
@@ -18737,6 +19460,98 @@
       "target": "geoespacial_blender_topografia_radomes_terrain_mesh_geometry_vertices_from_window"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_manifest.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_topodata_tile_manifest",
+      "target": "geoespacial_blender_topografia_radomes_export_topodata_tile_manifest_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_manifest.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_topodata_tile_manifest",
+      "target": "geoespacial_blender_topografia_radomes_topodata_tile_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_manifest.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_topodata_tile_manifest_rationale_1",
+      "target": "geoespacial_blender_topografia_radomes_export_topodata_tile_manifest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_manifest.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_topodata_tile_manifest_build",
+      "target": "geoespacial_blender_topografia_radomes_topodata_tile_plan_windows"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_window.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_topodata_tile_window",
+      "target": "geoespacial_blender_topografia_radomes_export_topodata_tile_window_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_window.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_topodata_tile_window",
+      "target": "geoespacial_blender_topografia_radomes_terrain_mesh_geometry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_window.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_topodata_tile_window_rationale_1",
+      "target": "geoespacial_blender_topografia_radomes_export_topodata_tile_window",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/export_topodata_tile_window.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_export_topodata_tile_window_build",
+      "target": "geoespacial_blender_topografia_radomes_terrain_mesh_geometry_vertices_from_window"
+    },
+    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/probe_blender_gpu.py",
@@ -18746,6 +19561,120 @@
       "source": "geoespacial_blender_topografia_radomes_probe_blender_gpu_rationale_1",
       "target": "geoespacial_blender_topografia_radomes_probe_blender_gpu",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_regional_terrain_geometry",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_axis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_regional_terrain_geometry",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_grid_shape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_regional_terrain_geometry",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_regional_bounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_rationale_1",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_rationale_6",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_regional_bounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest_test_regional_grid_has_margin_and_exact_edges",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_regional_bounds"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_grid_shape",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_axis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/regional_terrain_geometry.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_rationale_20",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_axis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest_test_regional_grid_has_margin_and_exact_edges",
+      "target": "geoespacial_blender_topografia_radomes_regional_terrain_geometry_grid_shape"
     },
     {
       "relation": "contains",
@@ -19308,6 +20237,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_local_terrain",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -19605,6 +20546,284 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_boundaries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_curve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_radome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_emission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_grid_elevation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_make_mesh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched",
+      "target": "geoespacial_blender_topografia_radomes_terrain_mesh_geometry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_rationale_1",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L114",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_build",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_make_mesh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_make_mesh",
+      "target": "geoespacial_blender_topografia_radomes_terrain_mesh_geometry_local_coordinates"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_rationale_18",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_make_mesh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_curve",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_grid_elevation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_radome",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_grid_elevation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_curve",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_radome",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_position",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_position",
+      "target": "geoespacial_blender_topografia_radomes_terrain_mesh_geometry_local_coordinates"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L92",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_boundaries",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_emission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_radome",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_emission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_build",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_emission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_boundaries",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_curve",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L116",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_build",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_boundaries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_build",
+      "target": "geoespacial_blender_topografia_radomes_render_topodata_regional_batched_add_radome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/select_visual_sites.py",
       "source_location": "L11",
       "weight": 1.0,
@@ -19796,6 +21015,165 @@
       "_origin": "ast",
       "source": "geoespacial_tests_test_render_topodata_local_terrain_rendertopodatalocalterraintests_test_faces_and_z_follow_the_dem_elevations",
       "target": "geoespacial_blender_topografia_radomes_terrain_mesh_geometry_terrain_geometry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan",
+      "target": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan",
+      "target": "geoespacial_blender_topografia_radomes_topodata_tile_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest",
+      "target": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest_test_blocks_share_their_border_and_cover_the_full_leaf",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest",
+      "target": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest_test_invalid_block_size_fails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest",
+      "target": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest_test_regional_grid_has_margin_and_exact_edges",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest_test_blocks_share_their_border_and_cover_the_full_leaf",
+      "target": "geoespacial_blender_topografia_radomes_topodata_tile_plan_starts"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest_test_blocks_share_their_border_and_cover_the_full_leaf",
+      "target": "geoespacial_blender_topografia_radomes_topodata_tile_plan_windows"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_tests_test_topodata_tile_plan_topodatatileplantest_test_invalid_block_size_fails",
+      "target": "geoespacial_blender_topografia_radomes_topodata_tile_plan_windows"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/topodata_tile_plan.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_topodata_tile_plan",
+      "target": "geoespacial_blender_topografia_radomes_topodata_tile_plan_starts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/topodata_tile_plan.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_topodata_tile_plan",
+      "target": "geoespacial_blender_topografia_radomes_topodata_tile_plan_windows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/topodata_tile_plan.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_topodata_tile_plan_rationale_1",
+      "target": "geoespacial_blender_topografia_radomes_topodata_tile_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/topodata_tile_plan.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_topodata_tile_plan_rationale_5",
+      "target": "geoespacial_blender_topografia_radomes_topodata_tile_plan_starts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/topodata_tile_plan.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_topodata_tile_plan_windows",
+      "target": "geoespacial_blender_topografia_radomes_topodata_tile_plan_starts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/topodata_tile_plan.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_topodata_tile_plan_rationale_12",
+      "target": "geoespacial_blender_topografia_radomes_topodata_tile_plan_windows",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -34523,7 +35901,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/README.md",
-      "source_location": "L89",
+      "source_location": "L131",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_readme_visualiza\u00e7\u00e3o_blender_terra_curva_e_tr\u00eas_candidatos_radome",
+      "target": "geoespacial_blender_topografia_radomes_readme_varredura_nacional_por_blocos_topodata_nativos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/README.md",
+      "source_location": "L107",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_readme_superf\u00edcie_3d_topodata",
@@ -34535,6 +35924,17 @@
       "confidence": "EXTRACTED",
       "source_file": "geoespacial/blender_topografia_radomes/README.md",
       "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_readme_superf\u00edcie_3d_topodata",
+      "target": "geoespacial_blender_topografia_radomes_readme_vis\u00e3o_regional_dos_tr\u00eas_s\u00edtios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/README.md",
+      "source_location": "L84",
       "weight": 1.0,
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_readme_superf\u00edcie_3d_topodata",
@@ -38063,5 +39463,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "22a4555857b139d5a5d252750502497e318aad7f"
+  "built_at_commit": "71dc045ca76363864da6f59ba5f1122a7b554b88"
 }

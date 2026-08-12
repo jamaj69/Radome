@@ -39,6 +39,52 @@ fi
     --ranking geoespacial/outputs/candidate_ranking/candidate_ranking.csv.gz \
     --output "$build/overlays.json"
 
+if [[ "${1:-}" == "--regional-terrain" ]]; then
+    "$system_python" "$subproject/export_regional_topodata_terrain.py" \
+        --selection "$build/selected_sites.json" --terrain-root "$terrain_root" \
+        --output "$build/topodata_regional_terrain.json" --spacing-degrees "${2:-0.02}" --margin-degrees "${3:-0.25}" --allow-gaps
+    "$system_python" "$subproject/export_regional_boundaries.py" \
+        --bc250 geoespacial/data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
+        --terrain "$build/topodata_regional_terrain.json" --output "$build/topodata_regional_boundaries.json"
+    exec blender -b --python "$subproject/render_topodata_regional_batched.py" -- \
+        --terrain "$build/topodata_regional_terrain.json" --boundaries "$build/topodata_regional_boundaries.json" \
+        --blend "$build/topodata_regional_radomes.blend" --render "$build/topodata_regional_radomes.png" \
+        --vertical-exaggeration 1.5 --samples 128
+fi
+
+if [[ "${1:-}" == "--topodata-tile" ]]; then
+    "$system_python" "$subproject/export_topodata_tile_manifest.py" \
+        --terrain-root "$terrain_root" --output "$build/topodata_tile_manifest.json" --cells "${2:-720}"
+    "$system_python" "$subproject/export_topodata_tile_window.py" \
+        --manifest "$build/topodata_tile_manifest.json" --tile-index "${3:-0}" \
+        --output "$build/topodata_tile_window.json"
+    exec blender -b --python "$subproject/render_topodata_local_terrain_batched.py" -- \
+        --terrain "$build/topodata_tile_window.json" \
+        --blend "$build/topodata_tile_${3:-0}.blend" \
+        --render "$build/topodata_tile_${3:-0}.png" \
+        --site-index 0 --vertical-exaggeration 1.5 --samples 128 --top-down
+fi
+
+if [[ "${1:-}" == "--topodata-tile-range" ]]; then
+    cells="${2:-720}"
+    first="${3:-0}"
+    count="${4:?Informe a quantidade finita de blocos a renderizar.}"
+    "$system_python" "$subproject/export_topodata_tile_manifest.py" \
+        --terrain-root "$terrain_root" --output "$build/topodata_tile_manifest.json" --cells "$cells"
+    last=$((first + count - 1))
+    for index in $(seq "$first" "$last"); do
+        "$system_python" "$subproject/export_topodata_tile_window.py" \
+            --manifest "$build/topodata_tile_manifest.json" --tile-index "$index" \
+            --output "$build/topodata_tile_window.json"
+        blender -b --python "$subproject/render_topodata_local_terrain_batched.py" -- \
+            --terrain "$build/topodata_tile_window.json" \
+            --blend "$build/topodata_tile_${index}.blend" \
+            --render "$build/topodata_tile_${index}.png" \
+            --site-index 0 --vertical-exaggeration 1.5 --samples 128 --top-down
+    done
+    exit 0
+fi
+
 "$system_python" "$subproject/export_topodata_terrain_mesh.py" \
     --selection "$build/selected_sites.json" \
     --terrain-root "$terrain_root" \
