@@ -107,6 +107,7 @@ def add_camera(target, span, top_down):
         camera.name = "Top-down terrain inspection camera"
         camera.data.type = "ORTHO"
         camera.data.ortho_scale = span * 1.15
+        camera.data.clip_end = span * 4
         camera.rotation_euler = (target - camera.location).to_track_quat("-Z", "Y").to_euler()
         bpy.context.scene.camera = camera
         return camera
@@ -114,6 +115,7 @@ def add_camera(target, span, top_down):
     camera = bpy.context.object
     camera.name = "Local terrain inspection camera"
     camera.data.lens = 48
+    camera.data.clip_end = span * 4
     camera.rotation_euler = (target - camera.location).to_track_quat("-Z", "Y").to_euler()
     bpy.context.scene.camera = camera
     return camera
