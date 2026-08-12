@@ -10,6 +10,7 @@ python_bin="/home/python/pyenv/bin/python"
 system_python="/usr/bin/python3"
 subproject="geoespacial/blender_topografia_radomes"
 build="$subproject/build"
+terrain_root="geoespacial/data/processed/topodata/radio_link_routes"
 
 command -v blender >/dev/null || { echo "Blender não encontrado no PATH." >&2; exit 1; }
 "$system_python" -c "import osgeo" || { echo "GDAL/OSGeo não disponível em $system_python." >&2; exit 1; }
@@ -27,6 +28,21 @@ fi
     --bc250 geoespacial/data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
     --ranking geoespacial/outputs/candidate_ranking/candidate_ranking.csv.gz \
     --output "$build/overlays.json"
+
+"$system_python" "$subproject/export_topodata_terrain_mesh.py" \
+    --selection "$build/selected_sites.json" \
+    --terrain-root "$terrain_root" \
+    --output "$build/topodata_terrain.json"
+
+if [[ "${1:-}" == "--local-terrain" ]]; then
+    exec blender -b --python "$subproject/render_topodata_local_terrain.py" -- \
+        --terrain "$build/topodata_terrain.json" \
+        --blend "$build/topodata_local_terrain.blend" \
+        --render "$build/topodata_local_terrain.png" \
+        --site-index "${2:-0}" \
+        --vertical-exaggeration 1.5 \
+        --samples 128
+fi
 
 exec blender -b --python "$subproject/render_curved_earth_radomes.py" -- \
     --selection "$build/selected_sites.json" \

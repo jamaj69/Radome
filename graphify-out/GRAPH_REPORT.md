@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-11)
 
 ## Corpus Check
-- 234 files · ~625,835 words
+- 238 files · ~627,082 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1375 nodes · 1852 edges · 138 communities (102 shown, 36 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 138 edges (avg confidence: 0.79)
+- 1404 nodes · 1897 edges · 138 communities (102 shown, 36 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 144 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bd32acf0`
+- Built from commit: `e8285a1f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -583,8 +583,8 @@ Cohesion: 0.33
 Nodes (9): brazil_international_boundaries(), build(), coordinate_key(), line_parts(), merge_line_parts(), polygon_boundaries(), Exporta limites BC250 e amostras diagnósticas para a cena Blender., Extrai segmentos de LineString/MultiLineString, preservando só linhas. (+1 more)
 
 ### Community 136 - "export_topodata_terrain_mesh.py"
-Cohesion: 0.67
-Nodes (3): build(), Extrai malhas TOPODATA locais, com altitude real, para a cena Blender., tile_for()
+Cohesion: 0.10
+Nodes (24): build(), Exporta grades TOPODATA para malhas Blender com uma cota por vértice., Abre a folha que contém a coordenada geográfica solicitada., tile_for(), add_camera(), add_radome(), add_terrain(), build() (+16 more)
 
 ## Knowledge Gaps
 - **522 isolated node(s):** `render_on_host.sh script`, `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` (+517 more)
@@ -595,6 +595,8 @@ Nodes (3): build(), Extrai malhas TOPODATA locais, com altitude real, para a cen
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
@@ -606,5 +608,3 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
   _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
-- **Should `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` be split into smaller, more focused modules?**
-  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._

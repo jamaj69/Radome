@@ -31,3 +31,24 @@ bash geoespacial/blender_topografia_radomes/render_on_host.sh
 Para inspeção técnica local, acrescente `--include-local-terrain`. Para depurar
 os pontos de cota preliminares, acrescente `--show-altitude-points`; esse último
 modo não deve ser usado no render continental de apresentação.
+
+## Superfície 3D TOPODATA
+
+O modo local exporta uma janela de 241×241 células TOPODATA por sítio, sem
+subamostragem: cada célula vira um vértice, e cada quadrícula recebe duas faces
+triangulares. A coordenada Z de cada vértice é derivada diretamente da cota
+TOPODATA da respectiva célula. A cena usa coordenadas locais em metros e uma
+exageração vertical de 1,5×, explicitamente visual; portanto, o relevo é
+geométrico, enquanto a escala vertical não é uma medição de engenharia.
+
+Para criar e renderizar a inspeção do sítio de Juiz de Fora (índice 0):
+
+```bash
+cd /home/jamaj/src/Radome
+bash geoespacial/blender_topografia_radomes/render_on_host.sh --local-terrain 0
+```
+
+Use os índices `1` para Anápolis e `2` para Brasília. As saídas são
+`build/topodata_local_terrain.blend` e `build/topodata_local_terrain.png`.
+O arquivo `.blend` preserva a superfície, a grade e o marcador simbólico de
+radome para inspeção e ajustes no Blender.
