@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-12)
 
 ## Corpus Check
-- 243 files · ~628,725 words
+- 243 files · ~628,621 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1433 nodes · 1939 edges · 140 communities (104 shown, 36 thin omitted)
+- 1433 nodes · 1938 edges · 140 communities (104 shown, 36 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 147 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `69d3baa2`
+- Built from commit: `6d0e135a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

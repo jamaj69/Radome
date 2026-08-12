@@ -29,7 +29,7 @@ def local_coordinates(longitude, latitude, reference_longitude, reference_latitu
 
 
 def terrain_geometry(site, vertical_exaggeration):
-    """Gera vertices e faces triangulares, preservando a grade DEM em Z."""
+    """Gera vértices e quadriláteros, preservando cada cota DEM em Z."""
     reference = min(vertex[2] for vertex in site["vertices"])
     vertices = []
     for longitude, latitude, elevation in site["vertices"]:
@@ -43,5 +43,5 @@ def terrain_geometry(site, vertical_exaggeration):
             lower_right = lower_left + 1
             upper_left = (row + 1) * width + column
             upper_right = upper_left + 1
-            faces.extend(((lower_left, lower_right, upper_right), (lower_left, upper_right, upper_left)))
+            faces.append((lower_left, lower_right, upper_right, upper_left))
     return vertices, faces, reference

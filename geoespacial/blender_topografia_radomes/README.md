@@ -35,8 +35,8 @@ modo não deve ser usado no render continental de apresentação.
 ## Superfície 3D TOPODATA
 
 O modo local solicita uma janela de até 721×721 células TOPODATA por sítio, sem
-subamostragem: cada célula vira um vértice, e cada quadrícula recebe duas faces
-triangulares. A coordenada Z de cada vértice é derivada diretamente da cota
+subamostragem: cada célula vira um vértice, e cada quadrícula recebe uma face
+quadrilateral. A coordenada Z de cada vértice é derivada diretamente da cota
 TOPODATA da respectiva célula. A cena usa coordenadas locais em metros e uma
 exageração vertical de 1,5×, explicitamente visual; portanto, o relevo é
 geométrico, enquanto a escala vertical não é uma medição de engenharia.

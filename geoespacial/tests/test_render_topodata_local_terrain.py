@@ -12,4 +12,4 @@ class RenderTopodataLocalTerrainTests(unittest.TestCase):
         vertices, faces, reference = terrain_geometry(site, 2.0)
         self.assertEqual(reference, 100)
         self.assertEqual([vertex[2] for vertex in vertices], [0, 20, 40, 60])
-        self.assertEqual(faces, [(0, 1, 3), (0, 3, 2)])
+        self.assertEqual(faces, [(0, 1, 3, 2)])

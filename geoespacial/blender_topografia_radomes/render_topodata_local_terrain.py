@@ -72,15 +72,6 @@ def add_terrain(site, vertical_exaggeration, orthophoto=None):
     terrain = bpy.data.objects.new(f"Terrain surface | {site['display_name']}", mesh)
     bpy.context.collection.objects.link(terrain)
     terrain.data.materials.append(orthophoto_material(orthophoto) if orthophoto else elevation_material())
-    wire = terrain.copy()
-    wire.data = terrain.data.copy()
-    wire.name = f"Terrain grid | {site['display_name']}"
-    wire.data.materials.clear()
-    wire.data.materials.append(material("Terrain grid material", (.04, .055, .025), roughness=.42))
-    modifier = wire.modifiers.new("Grid edges", "WIREFRAME")
-    modifier.thickness = .65
-    modifier.use_even_offset = True
-    bpy.context.collection.objects.link(wire)
     return terrain, reference
 
 
