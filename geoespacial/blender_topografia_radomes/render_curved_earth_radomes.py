@@ -131,7 +131,7 @@ def add_terrain(terrain):
         obj.data.materials.append(material("TOPODATA terrain", (.20, .36, .12)))
 
 
-def add_radome(site, camera, label_index, label_text):
+def add_radome(site, camera, label_index, label_text, label_halo):
     point = position(site["latitude"], site["longitude"], site["terrain_elevation_m"])
     normal = point.normalized()
     bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=2, radius=.035, location=point + normal * .04)
@@ -157,18 +157,29 @@ def add_radome(site, camera, label_index, label_text):
     facing = (camera.location - label_position).normalized()
     add_line(anchor, label_position - facing * .012, f"Leader | {site['name']}", (.96, .96, .92), .002)
 
-    bpy.ops.object.text_add(location=label_position + facing * .003)
+    bpy.ops.object.text_add(location=label_position + facing * .006)
     label = bpy.context.object
     label.name = f"Label | {site['name']}"
     label.data.body = f"{site['display_name']}\\n{site['terrain_elevation_m']:.0f} m"
     label.data.align_x = "CENTER"
     label.data.align_y = "CENTER"
-    label.data.size = .32
-    label.data.resolution_u = 16
+    label.data.size = .36
+    label.data.resolution_u = 24
     label.data.space_line = .82
     label.data.materials.append(label_text)
     label.rotation_mode = "QUATERNION"
     label.rotation_quaternion = facing.to_track_quat("Z", "Y")
+
+    # A white glyph outline provides cartographic contrast without reverting to
+    # opaque callout panels over the satellite texture.
+    halo = label.copy()
+    halo.data = label.data.copy()
+    halo.name = f"Label halo | {site['name']}"
+    halo.location = label_position + facing * .003
+    halo.data.materials.clear()
+    halo.data.materials.append(label_halo)
+    halo.data.offset = .018
+    bpy.context.collection.objects.link(halo)
 
 
 def add_camera(target, overview):
@@ -198,8 +209,9 @@ def build(selection, overlays, terrain, texture, blend, render, overview=False,
     target = sum(site_points, Vector()) / len(site_points)
     camera = add_camera(target, overview)
     text = label_material("Black labels", (.003, .003, .003), 0.0)
+    halo = label_material("White label halo", (1.0, 1.0, 1.0), .35)
     for index, site in enumerate(selection["selected_sites"]):
-        add_radome(site, camera, index, text)
+        add_radome(site, camera, index, text, halo)
     bpy.ops.object.light_add(type="SUN", location=camera.location * 8)
     sun = bpy.context.object
     sun.name = "Sun | camera-side illumination"
@@ -214,11 +226,11 @@ def build(selection, overlays, terrain, texture, blend, render, overview=False,
     fill.rotation_euler = (target - fill.location).to_track_quat("-Z", "Y").to_euler()
     scene = bpy.context.scene
     scene.render.engine = "BLENDER_EEVEE"
-    scene.eevee.taa_render_samples = 64
+    scene.eevee.taa_render_samples = 128
     scene.view_settings.look = "Medium High Contrast"
     scene.view_settings.exposure = .25
-    scene.render.resolution_x = 1600
-    scene.render.resolution_y = 1000
+    scene.render.resolution_x = 2400
+    scene.render.resolution_y = 1500
     scene.render.resolution_percentage = 100
     scene.render.image_settings.file_format = "PNG"
     scene.render.filepath = str(render)
