@@ -1104,6 +1104,28 @@
       "norm_label": "maior janela quadrada impar, centrada, que permanece na mesma folha."
     },
     {
+      "label": "probe_blender_gpu.py",
+      "file_type": "code",
+      "source_file": "geoespacial/blender_topografia_radomes/probe_blender_gpu.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_probe_blender_gpu",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": "probe_blender_gpu.py"
+    },
+    {
+      "label": "Imprime o renderizador GPU efetivamente vis\u00edvel ao Blender/Eevee.",
+      "file_type": "rationale",
+      "source_file": "geoespacial/blender_topografia_radomes/probe_blender_gpu.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "geoespacial_blender_topografia_radomes_probe_blender_gpu_rationale_1",
+      "community": 46,
+      "community_name": "Cross-search signals",
+      "norm_label": "imprime o renderizador gpu efetivamente visivel ao blender/eevee."
+    },
+    {
       "label": "render_curved_earth_radomes.py",
       "file_type": "code",
       "source_file": "geoespacial/blender_topografia_radomes/render_curved_earth_radomes.py",
@@ -2768,8 +2790,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_paths_topodata",
-      "community": 138,
-      "community_name": "evaluate",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "evaluate_anatel_radio_link_paths_topodata.py"
     },
     {
@@ -2779,8 +2801,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_paths_topodata_candidate_status",
-      "community": 138,
-      "community_name": "evaluate",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "candidate_status()"
     },
     {
@@ -2790,8 +2812,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_paths_topodata_py_counter",
-      "community": 138,
-      "community_name": "evaluate",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "counter"
     },
     {
@@ -2801,8 +2823,8 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_paths_topodata_evaluate",
-      "community": 138,
-      "community_name": "evaluate",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "evaluate()"
     },
     {
@@ -2812,8 +2834,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_paths_topodata_py_path",
-      "community": 138,
-      "community_name": "evaluate",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "path"
     },
     {
@@ -2823,8 +2845,8 @@
       "source_location": "L149",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_paths_topodata_main",
-      "community": 138,
-      "community_name": "evaluate",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "main()"
     },
     {
@@ -2834,8 +2856,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_terrain",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "evaluate_anatel_radio_link_terrain.py"
     },
     {
@@ -2845,8 +2867,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_terrain_terrarium",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "terrarium"
     },
     {
@@ -2856,8 +2878,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_terrain_terrarium_init",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".__init__()"
     },
     {
@@ -2867,8 +2889,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_terrain_py_path",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "path"
     },
     {
@@ -2889,8 +2911,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_terrain_terrarium_close",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".close()"
     },
     {
@@ -2900,8 +2922,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_terrain_interpolate",
-      "community": 141,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "interpolate()"
     },
     {
@@ -2911,8 +2933,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_terrain_profile",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "profile()"
     },
     {
@@ -2922,8 +2944,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_terrain_classify",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "classify()"
     },
     {
@@ -2933,8 +2955,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_terrain_evaluate",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "evaluate()"
     },
     {
@@ -2944,8 +2966,8 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "geoespacial_evaluate_anatel_radio_link_terrain_main",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "main()"
     },
     {
@@ -3967,8 +3989,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_profile_augmented_mesh_edges_topodata",
-      "community": 139,
-      "community_name": "profile_augmented_mesh_edges_topodata.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "profile_augmented_mesh_edges_topodata.py"
     },
     {
@@ -3978,8 +4000,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "geoespacial_profile_augmented_mesh_edges_topodata_los_profile",
-      "community": 139,
-      "community_name": "profile_augmented_mesh_edges_topodata.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "los_profile()"
     },
     {
@@ -3989,8 +4011,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "geoespacial_profile_augmented_mesh_edges_topodata_status",
-      "community": 139,
-      "community_name": "profile_augmented_mesh_edges_topodata.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "status()"
     },
     {
@@ -4000,8 +4022,8 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "geoespacial_profile_augmented_mesh_edges_topodata_build",
-      "community": 139,
-      "community_name": "profile_augmented_mesh_edges_topodata.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "build()"
     },
     {
@@ -4011,8 +4033,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_profile_augmented_mesh_edges_topodata_py_path",
-      "community": 139,
-      "community_name": "profile_augmented_mesh_edges_topodata.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "path"
     },
     {
@@ -4022,8 +4044,8 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "geoespacial_profile_augmented_mesh_edges_topodata_main",
-      "community": 139,
-      "community_name": "profile_augmented_mesh_edges_topodata.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "main()"
     },
     {
@@ -4239,8 +4261,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_select_augmented_mesh_topodata_tiles",
-      "community": 141,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "select_augmented_mesh_topodata_tiles.py"
     },
     {
@@ -4250,8 +4272,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "geoespacial_select_augmented_mesh_topodata_tiles_edge_tile_names",
-      "community": 141,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "edge_tile_names()"
     },
     {
@@ -4261,8 +4283,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "geoespacial_select_augmented_mesh_topodata_tiles_select",
-      "community": 141,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "select()"
     },
     {
@@ -4272,8 +4294,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_select_augmented_mesh_topodata_tiles_py_path",
-      "community": 141,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "path"
     },
     {
@@ -4283,8 +4305,8 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "geoespacial_select_augmented_mesh_topodata_tiles_main",
-      "community": 141,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "main()"
     },
     {
@@ -4437,8 +4459,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_select_topodata_route_tiles",
-      "community": 143,
-      "community_name": "select_topodata_route_tiles.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "select_topodata_route_tiles.py"
     },
     {
@@ -4448,8 +4470,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "geoespacial_select_topodata_route_tiles_tile_name",
-      "community": 143,
-      "community_name": "select_topodata_route_tiles.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "tile_name()"
     },
     {
@@ -4459,8 +4481,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "geoespacial_select_topodata_route_tiles_select",
-      "community": 143,
-      "community_name": "select_topodata_route_tiles.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "select()"
     },
     {
@@ -4470,8 +4492,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_select_topodata_route_tiles_py_path",
-      "community": 143,
-      "community_name": "select_topodata_route_tiles.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "path"
     },
     {
@@ -4481,8 +4503,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "geoespacial_select_topodata_route_tiles_main",
-      "community": 143,
-      "community_name": "select_topodata_route_tiles.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "main()"
     },
     {
@@ -5757,8 +5779,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_tests_test_evaluate_anatel_radio_link_paths_topodata",
-      "community": 138,
-      "community_name": "evaluate",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "test_evaluate_anatel_radio_link_paths_topodata.py"
     },
     {
@@ -5768,8 +5790,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "geoespacial_tests_test_evaluate_anatel_radio_link_paths_topodata_candidatepathterrainstatustest",
-      "community": 138,
-      "community_name": "evaluate",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "candidatepathterrainstatustest"
     },
     {
@@ -5779,8 +5801,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "geoespacial_tests_test_evaluate_anatel_radio_link_paths_topodata_candidatepathterrainstatustest_test_any_fresnel_path_has_priority",
-      "community": 138,
-      "community_name": "evaluate",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_any_fresnel_path_has_priority()"
     },
     {
@@ -5790,8 +5812,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "geoespacial_tests_test_evaluate_anatel_radio_link_paths_topodata_candidatepathterrainstatustest_test_los_only_precedes_obstructed",
-      "community": 138,
-      "community_name": "evaluate",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_los_only_precedes_obstructed()"
     },
     {
@@ -5801,8 +5823,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "geoespacial_tests_test_evaluate_anatel_radio_link_paths_topodata_candidatepathterrainstatustest_test_all_missing_fails_closed",
-      "community": 138,
-      "community_name": "evaluate",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_all_missing_fails_closed()"
     },
     {
@@ -5812,8 +5834,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_tests_test_evaluate_anatel_radio_link_terrain",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "test_evaluate_anatel_radio_link_terrain.py"
     },
     {
@@ -5823,8 +5845,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "geoespacial_tests_test_evaluate_anatel_radio_link_terrain_terraintest",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "terraintest"
     },
     {
@@ -5834,8 +5856,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "geoespacial_tests_test_evaluate_anatel_radio_link_terrain_terraintest_test_flat_short_route_is_clear",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_flat_short_route_is_clear()"
     },
     {
@@ -5845,8 +5867,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "geoespacial_tests_test_evaluate_anatel_radio_link_terrain_terraintest_test_missing_terrain_fails_closed",
-      "community": 46,
-      "community_name": "Cross-search signals",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_missing_terrain_fails_closed()"
     },
     {
@@ -6516,8 +6538,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_tests_test_profile_augmented_mesh_edges_topodata",
-      "community": 139,
-      "community_name": "profile_augmented_mesh_edges_topodata.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "test_profile_augmented_mesh_edges_topodata.py"
     },
     {
@@ -6527,8 +6549,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "geoespacial_tests_test_profile_augmented_mesh_edges_topodata_profileaugmentedmeshedgestopodatatests",
-      "community": 139,
-      "community_name": "profile_augmented_mesh_edges_topodata.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "profileaugmentedmeshedgestopodatatests"
     },
     {
@@ -6538,8 +6560,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "geoespacial_tests_test_profile_augmented_mesh_edges_topodata_profileaugmentedmeshedgestopodatatests_test_flat_short_profile_is_clear",
-      "community": 139,
-      "community_name": "profile_augmented_mesh_edges_topodata.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_flat_short_profile_is_clear()"
     },
     {
@@ -6549,8 +6571,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "geoespacial_tests_test_profile_augmented_mesh_edges_topodata_profileaugmentedmeshedgestopodatatests_test_missing_terrain_fails_closed",
-      "community": 139,
-      "community_name": "profile_augmented_mesh_edges_topodata.py",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_missing_terrain_fails_closed()"
     },
     {
@@ -6681,8 +6703,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_tests_test_select_augmented_mesh_topodata_tiles",
-      "community": 141,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "test_select_augmented_mesh_topodata_tiles.py"
     },
     {
@@ -6692,8 +6714,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "geoespacial_tests_test_select_augmented_mesh_topodata_tiles_selectaugmentedmeshtopodatatilestests",
-      "community": 141,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "selectaugmentedmeshtopodatatilestests"
     },
     {
@@ -6703,8 +6725,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "geoespacial_tests_test_select_augmented_mesh_topodata_tiles_selectaugmentedmeshtopodatatilestests_test_short_edge_includes_both_endpoints",
-      "community": 141,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": ".test_short_edge_includes_both_endpoints()"
     },
     {
@@ -6714,8 +6736,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "geoespacial_tests_test_select_augmented_mesh_topodata_tiles_selectaugmentedmeshtopodatatilestests_test_spacing_must_be_positive",
-      "community": 141,
-      "community_name": "build_municipal_emitter_network.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": ".test_spacing_must_be_positive()"
     },
     {
@@ -6868,8 +6890,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_tests_test_select_topodata_route_tiles",
-      "community": 143,
-      "community_name": "select_topodata_route_tiles.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "test_select_topodata_route_tiles.py"
     },
     {
@@ -6879,8 +6901,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "geoespacial_tests_test_select_topodata_route_tiles_topodatatiletest",
-      "community": 143,
-      "community_name": "select_topodata_route_tiles.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": "topodatatiletest"
     },
     {
@@ -6890,8 +6912,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "geoespacial_tests_test_select_topodata_route_tiles_topodatatiletest_test_official_upper_left_naming",
-      "community": 143,
-      "community_name": "select_topodata_route_tiles.py",
+      "community": 140,
+      "community_name": "build_augmented_candidate_graph.py",
       "norm_label": ".test_official_upper_left_naming()"
     },
     {
@@ -6934,8 +6956,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_tests_test_validate_anatel_radio_link_vertical_geometry",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "test_validate_anatel_radio_link_vertical_geometry.py"
     },
     {
@@ -6945,8 +6967,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "geoespacial_tests_test_validate_anatel_radio_link_vertical_geometry_verticalgeometrytest",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "verticalgeometrytest"
     },
     {
@@ -6956,8 +6978,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "geoespacial_tests_test_validate_anatel_radio_link_vertical_geometry_verticalgeometrytest_test_equal_heights_include_earth_curvature_depression",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_equal_heights_include_earth_curvature_depression()"
     },
     {
@@ -6967,8 +6989,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "geoespacial_tests_test_validate_anatel_radio_link_vertical_geometry_verticalgeometrytest_test_reverse_angles_have_expected_height_symmetry",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_reverse_angles_have_expected_height_symmetry()"
     },
     {
@@ -6978,8 +7000,8 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "geoespacial_tests_test_validate_anatel_radio_link_vertical_geometry_verticalgeometrytest_test_angular_error_wraps",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_angular_error_wraps()"
     },
     {
@@ -6989,8 +7011,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "geoespacial_tests_test_validate_anatel_radio_link_vertical_geometry_verticalgeometrytest_test_missing_fails_closed",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": ".test_missing_fails_closed()"
     },
     {
@@ -7099,8 +7121,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "validate_anatel_radio_link_vertical_geometry.py"
     },
     {
@@ -7110,8 +7132,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry_elevation_angle",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "elevation_angle()"
     },
     {
@@ -7121,8 +7143,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry_angular_error",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "angular_error()"
     },
     {
@@ -7132,8 +7154,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry_status",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "status()"
     },
     {
@@ -7143,8 +7165,8 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry_validate",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "validate()"
     },
     {
@@ -7154,8 +7176,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry_py_path",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "path"
     },
     {
@@ -7165,8 +7187,8 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "geoespacial_validate_anatel_radio_link_vertical_geometry_main",
-      "community": 18,
-      "community_name": "Sele\u00e7\u00e3o geoespacial de s\u00edtios RADOME",
+      "community": 83,
+      "community_name": "evaluate_anatel_radio_link_terrain.py",
       "norm_label": "main()"
     },
     {
@@ -18647,6 +18669,17 @@
       "_origin": "ast",
       "source": "geoespacial_blender_topografia_radomes_export_topodata_terrain_mesh_build",
       "target": "geoespacial_blender_topografia_radomes_terrain_mesh_geometry_vertices_from_window"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "geoespacial/blender_topografia_radomes/probe_blender_gpu.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "geoespacial_blender_topografia_radomes_probe_blender_gpu_rationale_1",
+      "target": "geoespacial_blender_topografia_radomes_probe_blender_gpu",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -37849,5 +37882,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0c631e5195b68ba6399c7677a9bd43615b9d53bf"
+  "built_at_commit": "69d3baa20cdee42843284cb3c58b1b1273b44b8a"
 }

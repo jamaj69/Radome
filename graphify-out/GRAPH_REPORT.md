@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-12)
 
 ## Corpus Check
-- 242 files · ~628,589 words
+- 243 files · ~628,725 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1431 nodes · 1938 edges · 144 communities (109 shown, 35 thin omitted)
+- 1433 nodes · 1939 edges · 140 communities (104 shown, 36 thin omitted)
 - Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 147 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0c631e51`
+- Built from commit: `69d3baa2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -152,12 +152,8 @@
 - validate_anatel_radio_link_vertical_geometry.py
 - export_topodata_terrain_mesh.py
 - render_on_host.sh
-- evaluate
-- profile_augmented_mesh_edges_topodata.py
 - build_augmented_candidate_graph.py
-- build_municipal_emitter_network.py
 - export_local_boundaries.py
-- select_topodata_route_tiles.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` - 29 edges
@@ -186,7 +182,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (144 total, 35 thin omitted)
+## Communities (140 total, 36 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -261,8 +257,8 @@ Cohesion: 0.27
 Nodes (9): Any, Candidate, load_instance(), main(), Path, Minimize site count, using candidate score only as a tie-breaker., solve(), candidate() (+1 more)
 
 ### Community 18 - "Seleção geoespacial de sítios RADOME"
-Cohesion: 0.07
-Nodes (30): build(), candidate_attributes(), main(), Path, horizon_km(), main(), node_id(), Path (+22 more)
+Cohesion: 0.09
+Nodes (23): build(), candidate_attributes(), main(), Path, horizon_km(), main(), node_id(), Path (+15 more)
 
 ### Community 20 - "RADOME Project / Projeto RADOME"
 Cohesion: 0.33
@@ -359,10 +355,6 @@ Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 4: clandes
 ### Community 45 - "Sub-area guide 5: integration, calibration, and operational validation"
 Cohesion: 0.40
 Nodes (5): Boolean searches, Key papers, Search terms, Sub-area guide 5: integration, calibration, and operational validation, What the research shows
-
-### Community 46 - "Cross-search signals"
-Cohesion: 0.26
-Nodes (7): classify(), evaluate(), main(), profile(), Path, Terrarium, TerrainTest
 
 ### Community 47 - "Cross-search signals"
 Cohesion: 0.40
@@ -469,8 +461,8 @@ Cohesion: 0.50
 Nodes (3): Famílias explícitas de radioenlaces Anatel, Reprodução, Resultado
 
 ### Community 83 - "evaluate_anatel_radio_link_terrain.py"
-Cohesion: 0.23
-Nodes (8): evaluate(), main(), prior_statuses(), Path, Amostrador de GeoTIFFs com cache LRU limitado., Topodata, TopodataSamplerTest, Image
+Cohesion: 0.06
+Nodes (35): candidate_status(), evaluate(), main(), Counter, Path, classify(), evaluate(), interpolate() (+27 more)
 
 ### Community 84 - "extract_topodata_route_tiles.py"
 Cohesion: 0.24
@@ -596,38 +588,24 @@ Nodes (9): brazil_international_boundaries(), build(), coordinate_key(), line_pa
 Cohesion: 0.08
 Nodes (33): available_window_size(), build(), hillshade_path(), Exporta grades TOPODATA para malhas Blender com uma cota por vértice., Abre a folha que contém a coordenada geográfica solicitada., Maior janela quadrada ímpar, centrada, que permanece na mesma folha., terrain_color(), tile_for() (+25 more)
 
-### Community 138 - "evaluate"
-Cohesion: 0.29
-Nodes (6): candidate_status(), evaluate(), main(), Counter, Path, CandidatePathTerrainStatusTest
-
-### Community 139 - "profile_augmented_mesh_edges_topodata.py"
-Cohesion: 0.31
-Nodes (6): build(), los_profile(), main(), Path, status(), ProfileAugmentedMeshEdgesTopodataTests
-
 ### Community 140 - "build_augmented_candidate_graph.py"
-Cohesion: 0.25
-Nodes (6): cell_sample_points(), main(), Path, Retorna centro e cantos internos suficientes para células menores que uma folha., select(), TopodataGapTileTests
-
-### Community 141 - "build_municipal_emitter_network.py"
-Cohesion: 0.29
-Nodes (6): interpolate(), edge_tile_names(), main(), Path, select(), SelectAugmentedMeshTopodataTilesTests
+Cohesion: 0.11
+Nodes (16): edge_tile_names(), main(), Path, select(), cell_sample_points(), main(), Path, Retorna centro e cantos internos suficientes para células menores que uma folha. (+8 more)
 
 ### Community 142 - "export_local_boundaries.py"
 Cohesion: 0.33
 Nodes (6): boundary_parts(), bounds(), build(), line_parts(), Recorta divisas municipais e estaduais do BC250 para cada janela TOPODATA., ExportLocalBoundariesTests
 
-### Community 143 - "select_topodata_route_tiles.py"
-Cohesion: 0.36
-Nodes (5): main(), Path, select(), tile_name(), TopodataTileTest
-
 ## Knowledge Gaps
 - **523 isolated node(s):** `render_on_host.sh script`, `run_pipeline.sh script`, `build.sh script`, `Mandatory Startup Context Recovery`, `Graphify` (+518 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **35 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **36 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `build()` connect `build_canonical_smp.py` to `audit_anatel_spectrum.py`, `extract_anatel_radio_link_keys.py`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Why does `build()` connect `build` to `extract_anatel_radio_link_keys.py`?**
   _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Why does `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` connect `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
@@ -640,5 +618,3 @@ _Questions this graph is uniquely positioned to answer:_
   _523 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `RADOME V3.md` be split into smaller, more focused modules?**
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
-- **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
-  _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._

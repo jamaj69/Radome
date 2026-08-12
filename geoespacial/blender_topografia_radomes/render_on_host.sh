@@ -19,9 +19,20 @@ command -v blender >/dev/null || { echo "Blender não encontrado no PATH." >&2; 
 
 if command -v nvidia-smi >/dev/null; then
     echo "GPU disponível no host:"
-    nvidia-smi --query-gpu=name,driver_version --format=csv,noheader || \
+    if nvidia-smi --query-gpu=name,driver_version --format=csv,noheader; then
+        # Eevee usa o contexto OpenGL/EGL. Estas variáveis selecionam explicitamente
+        # a implementação NVIDIA em hosts híbridos ou com múltiplas GPUs.
+        export __NV_PRIME_RENDER_OFFLOAD=1
+        export __GLX_VENDOR_LIBRARY_NAME=nvidia
+        export DRI_PRIME=1
+    else
         echo "GPU não acessível neste processo; continuando com o Blender." >&2
+    fi
 fi
+
+echo "Renderizador que o Blender/Eevee enxerga:"
+blender -b --factory-startup --python "$subproject/probe_blender_gpu.py" 2>&1 | \
+    grep '^BLENDER_GPU_' || echo "Sonda indisponível; o render continuará e poderá ser verificado com nvidia-smi." >&2
 
 "$python_bin" "$subproject/select_visual_sites.py" \
     --ranking geoespacial/outputs/candidate_ranking/candidate_ranking.csv.gz \
