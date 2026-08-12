@@ -160,10 +160,10 @@ def add_radome(site, camera, label_index, label_text, label_halo):
     bpy.ops.object.text_add(location=label_position + facing * .006)
     label = bpy.context.object
     label.name = f"Label | {site['name']}"
-    label.data.body = f"{site['display_name']}\\n{site['terrain_elevation_m']:.0f} m"
+    label.data.body = f"{site['display_name']}\n{site['terrain_elevation_m']:.0f} m"
     label.data.align_x = "CENTER"
     label.data.align_y = "CENTER"
-    label.data.size = .36
+    label.data.size = .28
     label.data.resolution_u = 24
     label.data.space_line = .82
     label.data.materials.append(label_text)
@@ -178,7 +178,7 @@ def add_radome(site, camera, label_index, label_text, label_halo):
     halo.location = label_position + facing * .003
     halo.data.materials.clear()
     halo.data.materials.append(label_halo)
-    halo.data.offset = .018
+    halo.data.offset = .008
     bpy.context.collection.objects.link(halo)
 
 
