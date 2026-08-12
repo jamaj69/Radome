@@ -27,7 +27,7 @@ def boundary_parts(layer, west, south, east, north, stride):
     for feature in layer:
         boundary = feature.GetGeometryRef().Boundary()
         clipped = boundary.Intersection(window)
-        parts.extend(line_parts(clipped, stride))
+        parts.extend(part for part in line_parts(clipped, stride) if len(part) >= 3)
     layer.SetSpatialFilter(None)
     return parts
 

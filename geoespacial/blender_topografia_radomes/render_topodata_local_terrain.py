@@ -92,14 +92,18 @@ def add_radome(site, reference_elevation, vertical_exaggeration):
     dome.name = f"Radome | {site['display_name']}"
     dome.scale = (14, 14, 14)
     dome.data.materials.append(material("Radome shell", (.92, .94, .96), .05, .3))
-    bpy.ops.mesh.primitive_torus_add(major_radius=42, minor_radius=4, major_segments=48, minor_segments=12,
-                                     location=(east, north, ground + 5))
+    bpy.ops.mesh.primitive_torus_add(major_radius=80, minor_radius=7, major_segments=48, minor_segments=12,
+                                     location=(east, north, ground + 28))
     locator = bpy.context.object
     locator.name = f"Radome locator | {site['display_name']}"
     locator.data.materials.append(material("Radome locator amber", (1.0, .16, .005), .0, .28))
     locator.active_material.use_nodes = True
     locator.active_material.node_tree.nodes["Principled BSDF"].inputs["Emission"].default_value = (1.0, .08, .0, 1)
-    locator.active_material.node_tree.nodes["Principled BSDF"].inputs["Emission Strength"].default_value = .8
+    locator.active_material.node_tree.nodes["Principled BSDF"].inputs["Emission Strength"].default_value = 1.5
+    bpy.ops.mesh.primitive_cone_add(vertices=32, radius1=36, radius2=0, depth=90, location=(east, north, ground + 52))
+    beacon = bpy.context.object
+    beacon.name = f"Radome beacon | {site['display_name']}"
+    beacon.data.materials.append(locator.active_material)
     return Vector((east, north, ground))
 
 
