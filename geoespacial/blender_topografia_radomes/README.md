@@ -96,9 +96,12 @@ bash geoespacial/blender_topografia_radomes/render_on_host.sh \
   --regional-terrain 0.02 0.25 -50.0 -22.2 -45.5 -15.5
 ```
 
-As folhas que cubram a moldura precisam existir localmente. Se a moldura maior
-introduzir lacunas, rode primeiro o fluxo de aquisição regional e confirme as
-folhas indicadas pelo relatório.
+O modo regional é autônomo: para qualquer moldura, ele determina as folhas ZN
+oficiais necessárias, reutiliza ZIPs válidos, baixa somente as ausentes,
+revalida/extrai os GeoTIFFs e só então monta a malha. Se uma folha não estiver
+publicada no inventário oficial, o fluxo falha explicitamente, sem inventar
+elevação. A resolução é derivada automaticamente da proporção geográfica da
+moldura, com 2.400 pixels no eixo vertical e largura proporcional.
 
 Antes desse render, complete de forma auditável as folhas ZN eventualmente
 ausentes da moldura — no acervo atual, são quatro folhas oficiais ao norte da

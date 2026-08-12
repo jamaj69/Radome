@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-12)
 
 ## Corpus Check
-- 257 files · ~634,302 words
+- 257 files · ~634,509 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1502 nodes · 2045 edges · 144 communities (108 shown, 36 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 163 edges (avg confidence: 0.79)
+- 1503 nodes · 2047 edges · 144 communities (108 shown, 36 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 164 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c32d71da`
+- Built from commit: `858c0aeb`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -261,8 +261,8 @@ Cohesion: 0.27
 Nodes (9): Any, Candidate, load_instance(), main(), Path, Minimize site count, using candidate score only as a tie-breaker., solve(), candidate() (+1 more)
 
 ### Community 18 - "Seleção geoespacial de sítios RADOME"
-Cohesion: 0.07
-Nodes (30): build(), candidate_attributes(), main(), Path, horizon_km(), main(), node_id(), Path (+22 more)
+Cohesion: 0.09
+Nodes (23): build(), candidate_attributes(), main(), Path, horizon_km(), main(), node_id(), Path (+15 more)
 
 ### Community 20 - "RADOME Project / Projeto RADOME"
 Cohesion: 0.33
@@ -393,8 +393,8 @@ Cohesion: 0.22
 Nodes (8): ANAC e DECEA, Anatel, Comunicação nas bases históricas do IBGE, Fontes de infraestrutura para o grafo de candidatos, IBGE BC250 2025, Ordem de integração, Radiodifusão, Resultado por tema
 
 ### Community 58 - "inventory_infrastructure.py"
-Cohesion: 0.08
-Nodes (30): audit(), audit_member(), main(), Counter, Path, rf_role(), sorted_counter(), usable_text() (+22 more)
+Cohesion: 0.06
+Nodes (39): acquire(), file_sha256(), main(), Path, audit(), audit_member(), main(), Counter (+31 more)
 
 ### Community 61 - "build"
 Cohesion: 0.35
@@ -429,8 +429,8 @@ Cohesion: 0.25
 Nodes (7): Critério de prontidão, Fontes oficiais adicionais identificadas, Inventário de camadas oficiais de emissões, Matriz reavaliada, Novo gate de emissões oficiais — M2E, Principal descoberta da reanálise, Sequência revisada
 
 ### Community 70 - "acquire"
-Cohesion: 0.22
-Nodes (9): acquire(), file_sha256(), main(), Path, extract(), main(), Path, safe_destination() (+1 more)
+Cohesion: 0.23
+Nodes (7): VerticalGeometryTest, angular_error(), elevation_angle(), main(), Path, status(), validate()
 
 ### Community 71 - "acquire_decea_wfs.py"
 Cohesion: 0.36
@@ -601,12 +601,12 @@ Cohesion: 0.24
 Nodes (8): boundary_parts(), bounds(), build(), line_parts(), Recorta divisas municipais e estaduais do BC250 para cada janela TOPODATA., build(), Exporta divisas BC250 para a extensão inteira da cena regional., ExportLocalBoundariesTests
 
 ### Community 143 - "select_augmented_mesh_topodata_tiles.py"
-Cohesion: 0.29
-Nodes (6): interpolate(), edge_tile_names(), main(), Path, select(), SelectAugmentedMeshTopodataTilesTests
+Cohesion: 0.33
+Nodes (5): edge_tile_names(), main(), Path, select(), SelectAugmentedMeshTopodataTilesTests
 
 ### Community 144 - "profile_augmented_mesh_edges_topodata.py"
-Cohesion: 0.31
-Nodes (6): build(), los_profile(), main(), Path, status(), ProfileAugmentedMeshEdgesTopodataTests
+Cohesion: 0.27
+Nodes (7): interpolate(), build(), los_profile(), main(), Path, status(), ProfileAugmentedMeshEdgesTopodataTests
 
 ### Community 145 - "select_topodata_route_tiles.py"
 Cohesion: 0.32
@@ -625,9 +625,7 @@ Nodes (6): GeometryTest, angular_error(), bearing(), main(), Path, validate()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **Why does `build()` connect `build` to `inventory_infrastructure.py`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `Topodata` (e.g. with `evaluate()` and `build()`) actually correct?**
@@ -638,3 +636,5 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
 - **Should `Plano Diretor de Infraestrutura Tática` be split into smaller, more focused modules?**
   _Cohesion score 0.058823529411764705 - nodes in this community are weakly interconnected._
+- **Should `Rede Distribuida de Radomes Conformais Multifaixa e Polarimetricos` be split into smaller, more focused modules?**
+  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._

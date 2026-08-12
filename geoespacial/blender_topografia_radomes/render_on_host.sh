@@ -44,9 +44,24 @@ if [[ "${1:-}" == "--regional-terrain" ]]; then
     if [[ "$#" -ge 7 ]]; then
         bbox=(--bbox "$4" "$5" "$6" "$7")
     fi
+    # Qualquer moldura é autoatendida: primeiro determina as folhas ZN
+    # oficiais, baixa somente as ausentes, revalida ZIPs presentes e extrai
+    # os GeoTIFFs necessários antes de montar a malha regional.
+    regional_report="geoespacial/reports/topodata_regional_scene"
+    "$system_python" "$subproject/select_regional_topodata_tiles.py" \
+        --selection "$build/selected_sites.json" --manifest geoespacial/data/manifests/topodata_altitude_tiles.json \
+        --existing-dir geoespacial/data/raw/topodata/radio_link_routes --output "$regional_report/selection.json" \
+        --margin-degrees "${3:-0.25}" --spacing-degrees "${2:-0.02}" "${bbox[@]}"
+    "$python_bin" geoespacial/acquire_topodata_route_tiles.py \
+        --selection "$regional_report/selection.json" --output-dir geoespacial/data/raw/topodata/radio_link_routes \
+        --report "$regional_report/acquisition.json"
+    "$python_bin" geoespacial/extract_topodata_route_tiles.py \
+        --receipt "$regional_report/acquisition.json" --archive-dir geoespacial/data/raw/topodata/radio_link_routes \
+        --target-dir "$terrain_root" --report "$regional_report/extraction.json" \
+        --index "$regional_report/index.geojson" --index-name topodata_regional_scene
     "$system_python" "$subproject/export_regional_topodata_terrain.py" \
         --selection "$build/selected_sites.json" --terrain-root "$terrain_root" \
-        --output "$build/topodata_regional_terrain.json" --spacing-degrees "${2:-0.02}" --margin-degrees "${3:-0.25}" --allow-gaps "${bbox[@]}"
+        --output "$build/topodata_regional_terrain.json" --spacing-degrees "${2:-0.02}" --margin-degrees "${3:-0.25}" "${bbox[@]}"
     "$system_python" "$subproject/export_regional_boundaries.py" \
         --bc250 geoespacial/data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
         --terrain "$build/topodata_regional_terrain.json" --output "$build/topodata_regional_boundaries.json"

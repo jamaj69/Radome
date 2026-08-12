@@ -1450,8 +1450,8 @@
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/README.md": {
-    "mtime": 1786508207.1245787,
-    "ast_hash": "1fcf9f2dc0cf9fb970e29b9eeae38748",
+    "mtime": 1786508674.318427,
+    "ast_hash": "6b58617215a51a3d46419be337286d9d",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_select_blender_visual_sites.py": {
@@ -1475,8 +1475,8 @@
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/render_on_host.sh": {
-    "mtime": 1786508206.9365795,
-    "ast_hash": "f93b90f54c3ea85f6b6065106297d403",
+    "mtime": 1786508674.0064287,
+    "ast_hash": "ad912eba53130449898981c0c181338f",
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/render_topodata_local_terrain.py": {
@@ -1555,8 +1555,8 @@
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/render_topodata_regional_batched.py": {
-    "mtime": 1786507955.2737367,
-    "ast_hash": "53043dfb15a7bf3f5f513502a613ea8f",
+    "mtime": 1786508674.162428,
+    "ast_hash": "57987564de5f5e3c930ffcef3f5b37d0",
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/tests/test_topodata_tile_plan.py": {
@@ -1570,13 +1570,13 @@
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/select_regional_topodata_tiles.py": {
-    "mtime": 1786507100.9416566,
-    "ast_hash": "c74f3e675a88c88b57416b3b1800a18b",
+    "mtime": 1786508673.8424294,
+    "ast_hash": "04005008da8877ae66c8deabf6f27908",
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/tests/test_select_regional_topodata_tiles.py": {
-    "mtime": 1786506978.1742136,
-    "ast_hash": "ad83f6cd833c4c37febc0219ecaf0afb",
+    "mtime": 1786508726.3541875,
+    "ast_hash": "2c21a2c91af4ac5bfdeeabfc00251b42",
     "semantic_hash": ""
   },
   "geoespacial/reports/topodata_regional_scene/acquisition.json": {

@@ -127,14 +127,15 @@ def build(terrain, boundaries, texture, blend, render, exaggeration=1.5, samples
     labels = emission("Rótulos", (1, 1, 1), 1.5)
     for site in terrain["sites"]:
         add_radome(site, terrain, reference, exaggeration, span / 115, labels)
-    target = Vector((0, 0, max(vertex[2] for vertex in vertices) / 2))
+    target = Vector(((min(x_values) + max(x_values)) / 2, (min(y_values) + max(y_values)) / 2, max(vertex[2] for vertex in vertices) / 2))
     bpy.ops.object.camera_add(location=(0, 0, target.z + span * 1.3))
     camera = bpy.context.object; bpy.context.scene.camera = camera; camera.data.type = "ORTHO"
-    # A moldura dos três sítios é quase três vezes mais alta que larga. Usamos
-    # a maior dimensão como escala base, com margem suficiente para que a
-    # convenção de orientação do Blender não corte os marcadores nas extremidades.
-    image_width, image_height = 1800, 2400
-    camera.data.ortho_scale = max(x_span, y_span) * 1.18
+    # Na câmera ortográfica do Blender, ``ortho_scale`` corresponde à altura
+    # visível. A resolução usa a mesma razão geográfica da malha: com margem
+    # idêntica nos dois eixos, não há faixas de fundo cinza.
+    image_height = 2400
+    image_width = max(1, round(image_height * x_span / y_span))
+    camera.data.ortho_scale = y_span * 1.12
     # A cena regional mede centenas de quilômetros. O padrão de 1 km do
     # Blender recortava toda a superfície antes da câmera, produzindo apenas
     # o fundo cinza. Mantemos uma folga para relevo, marcadores e divisas.

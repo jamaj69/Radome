@@ -3,7 +3,7 @@ import argparse
 import json
 from pathlib import Path
 
-from regional_terrain_geometry import regional_bounds
+from regional_terrain_geometry import checked_bounds, regional_bounds
 
 
 def tile_name(latitude, longitude):
@@ -31,9 +31,9 @@ def required_names(bounds, spacing=.02):
     return sorted(names)
 
 
-def build(selection, manifest, existing_dir, output, margin_degrees=.25, spacing=.02):
+def build(selection, manifest, existing_dir, output, margin_degrees=.25, spacing=.02, bbox=None):
     sites = json.loads(selection.read_text(encoding="utf-8"))["selected_sites"]
-    bounds = regional_bounds(sites, margin_degrees)
+    bounds = checked_bounds(bbox) if bbox is not None else regional_bounds(sites, margin_degrees)
     inventory = {item["name"]: item for item in json.loads(manifest.read_text(encoding="utf-8"))["archives"]}
     required = required_names(bounds, spacing)
     unavailable = sorted(name for name in required if name not in inventory)
@@ -60,5 +60,6 @@ if __name__ == "__main__":
     parser.add_argument("--selection", type=Path, required=True); parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--existing-dir", type=Path, required=True); parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--margin-degrees", type=float, default=.25); parser.add_argument("--spacing-degrees", type=float, default=.02)
+    parser.add_argument("--bbox", type=float, nargs=4, metavar=("WEST", "SOUTH", "EAST", "NORTH"))
     arguments = parser.parse_args()
-    build(arguments.selection, arguments.manifest, arguments.existing_dir, arguments.output, arguments.margin_degrees, arguments.spacing_degrees)
+    build(arguments.selection, arguments.manifest, arguments.existing_dir, arguments.output, arguments.margin_degrees, arguments.spacing_degrees, arguments.bbox)
