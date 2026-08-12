@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 def line_parts(geometry, stride=3):
+    from osgeo import ogr
     if geometry is None or geometry.IsEmpty():
         return []
     flat = ogr.GT_Flatten(geometry.GetGeometryType())
