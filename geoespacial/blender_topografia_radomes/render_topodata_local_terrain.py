@@ -37,7 +37,7 @@ def elevation_material():
 
 
 def orthophoto_material(image_path):
-    """Combina a textura sombreada com cores hipsométricas do próprio DEM."""
+    """Aplica textura cartográfica já combinada com as cotas e o RS."""
     image_path = Path(image_path).resolve()
     if not image_path.is_file():
         raise FileNotFoundError(f"Textura de terreno ausente: {image_path}")
@@ -47,15 +47,8 @@ def orthophoto_material(image_path):
     image = nodes.new("ShaderNodeTexImage")
     image.image = bpy.data.images.load(str(image_path), check_existing=True)
     image.image.pack()
-    elevation = nodes.new("ShaderNodeVertexColor")
-    elevation.layer_name = "TOPODATA elevation"
-    mix = nodes.new("ShaderNodeMixRGB")
-    mix.blend_type = "MULTIPLY"
-    mix.inputs["Fac"].default_value = .68
-    links.new(image.outputs["Color"], mix.inputs[1])
-    links.new(elevation.outputs["Color"], mix.inputs[2])
     shader = nodes.get("Principled BSDF")
-    links.new(mix.outputs["Color"], shader.inputs["Base Color"])
+    links.new(image.outputs["Color"], shader.inputs["Base Color"])
     shader.inputs["Roughness"].default_value = .68
     return item
 

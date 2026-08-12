@@ -28,14 +28,32 @@ def hillshade_path(shade_root, altitude_tile):
     return shade_root / f"{stem[:-2]}RS.tif"
 
 
-def write_hillshade(dataset, first_column, first_row, size, output):
+def terrain_color(elevation, low, high):
+    ratio = (elevation - low) / max(high - low, 1)
+    if ratio < .18:
+        return (184, 166, 112)  # low, dry terrain
+    if ratio < .48:
+        return (91, 143, 71)    # lowland vegetation
+    if ratio < .76:
+        return (139, 119, 74)   # upland and slopes
+    return (190, 184, 160)      # high terrain
+
+
+def write_hillshade(dataset, elevations, first_column, first_row, size, output):
     values = dataset.GetRasterBand(1).ReadAsArray(first_column, first_row, size, size)
     low, high = float(values.min()), float(values.max())
     if high <= low:
-        pixels = values * 0 + 127
+        shade = values * 0 + 127
     else:
-        pixels = (values - low) * (255 / (high - low))
-    image = Image.fromarray(pixels.astype("uint8"))
+        shade = (values - low) * (255 / (high - low))
+    altitude_low, altitude_high = float(elevations.min()), float(elevations.max())
+    rgb = []
+    for elevation, lightness in zip(elevations.flat, shade.flat):
+        red, green, blue = terrain_color(float(elevation), altitude_low, altitude_high)
+        factor = .42 + .58 * float(lightness) / 255
+        rgb.append((int(red * factor), int(green * factor), int(blue * factor)))
+    image = Image.new("RGB", (size, size))
+    image.putdata(rgb)
     output.parent.mkdir(parents=True, exist_ok=True)
     image.save(output)
 
@@ -67,7 +85,7 @@ def build(selection, terrain_root, output, size=241, step=1, shade_root=None, sh
             if not source.exists():
                 raise ValueError(f"Relevo sombreado RS ausente: {source}")
             texture = shade_output_dir / f"{Path(path.name).stem[:-2]}RS_window.png"
-            write_hillshade(gdal.Open(str(source)), first_column, first_row, size, texture)
+            write_hillshade(gdal.Open(str(source)), values, first_column, first_row, size, texture)
             item["hillshade_texture"] = str(texture.resolve())
         sites.append(item)
     result = {
