@@ -40,9 +40,13 @@ fi
     --output "$build/overlays.json"
 
 if [[ "${1:-}" == "--regional-terrain" ]]; then
+    bbox=()
+    if [[ "$#" -ge 7 ]]; then
+        bbox=(--bbox "$4" "$5" "$6" "$7")
+    fi
     "$system_python" "$subproject/export_regional_topodata_terrain.py" \
         --selection "$build/selected_sites.json" --terrain-root "$terrain_root" \
-        --output "$build/topodata_regional_terrain.json" --spacing-degrees "${2:-0.02}" --margin-degrees "${3:-0.25}" --allow-gaps
+        --output "$build/topodata_regional_terrain.json" --spacing-degrees "${2:-0.02}" --margin-degrees "${3:-0.25}" --allow-gaps "${bbox[@]}"
     "$system_python" "$subproject/export_regional_boundaries.py" \
         --bc250 geoespacial/data/raw/ibge/bc250/bc250_2026-03-03.gpkg \
         --terrain "$build/topodata_regional_terrain.json" --output "$build/topodata_regional_boundaries.json"

@@ -86,6 +86,20 @@ Os parâmetros opcionais são espaçamento e margem em graus, por exemplo
 `--regional-terrain 0.01 0.25`. A saída é
 `build/topodata_regional_radomes.blend` e `build/topodata_regional_radomes.png`.
 
+Para controlar integralmente o corte, informe uma moldura WGS84 explícita na
+ordem `oeste sul leste norte`. Ela determina a extensão da malha, o recorte das
+divisas, a câmera e os UVs da Blue Marble; assim, ampliar oeste/leste preenche
+mais a largura da figura sem esticar a textura:
+
+```bash
+bash geoespacial/blender_topografia_radomes/render_on_host.sh \
+  --regional-terrain 0.02 0.25 -50.0 -22.2 -45.5 -15.5
+```
+
+As folhas que cubram a moldura precisam existir localmente. Se a moldura maior
+introduzir lacunas, rode primeiro o fluxo de aquisição regional e confirme as
+folhas indicadas pelo relatório.
+
 Antes desse render, complete de forma auditável as folhas ZN eventualmente
 ausentes da moldura — no acervo atual, são quatro folhas oficiais ao norte da
 folha `18S48_ZN`, que já estava presente:

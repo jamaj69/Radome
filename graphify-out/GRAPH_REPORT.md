@@ -1,16 +1,16 @@
 # Graph Report - Radome  (2026-08-12)
 
 ## Corpus Check
-- 257 files · ~634,097 words
+- 257 files · ~634,302 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1499 nodes · 2040 edges · 148 communities (112 shown, 36 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 161 edges (avg confidence: 0.79)
+- 1502 nodes · 2045 edges · 144 communities (108 shown, 36 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 163 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f50cba05`
+- Built from commit: `c32d71da`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -99,9 +99,7 @@
 - anatel_radio_link_candidates/README.md
 - evaluate_anatel_radio_link_terrain.py
 - extract_topodata_route_tiles.py
-- write_fixture
 - build_canonical_smp.py
-- inventory_infrastructure.py
 - build_municipal_emitter_network.py
 - audit_anatel_spectrum.py
 - build_anatel_radio_link_hypothesis_graph.py
@@ -128,7 +126,6 @@
 - candidate_ranking/README.md
 - inventory
 - continental_coverage_grid/README.md
-- extract_anatel_radio_links.py
 - Methodological gaps
 - triangular_mesh_baseline/README.md
 - topodata_gap_tiles/README.md
@@ -160,7 +157,6 @@
 - select_augmented_mesh_topodata_tiles.py
 - profile_augmented_mesh_edges_topodata.py
 - select_topodata_route_tiles.py
-- validate_anatel_radio_link_vertical_geometry.py
 - validate_anatel_radio_link_geometry.py
 
 ## God Nodes (most connected - your core abstractions)
@@ -190,7 +186,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (148 total, 36 thin omitted)
+## Communities (144 total, 36 thin omitted)
 
 ### Community 0 - "RADOME V3.md"
 Cohesion: 0.05
@@ -265,8 +261,8 @@ Cohesion: 0.27
 Nodes (9): Any, Candidate, load_instance(), main(), Path, Minimize site count, using candidate score only as a tie-breaker., solve(), candidate() (+1 more)
 
 ### Community 18 - "Seleção geoespacial de sítios RADOME"
-Cohesion: 0.09
-Nodes (23): build(), candidate_attributes(), main(), Path, horizon_km(), main(), node_id(), Path (+15 more)
+Cohesion: 0.07
+Nodes (30): build(), candidate_attributes(), main(), Path, horizon_km(), main(), node_id(), Path (+22 more)
 
 ### Community 20 - "RADOME Project / Projeto RADOME"
 Cohesion: 0.33
@@ -397,8 +393,8 @@ Cohesion: 0.22
 Nodes (8): ANAC e DECEA, Anatel, Comunicação nas bases históricas do IBGE, Fontes de infraestrutura para o grafo de candidatos, IBGE BC250 2025, Ordem de integração, Radiodifusão, Resultado por tema
 
 ### Community 58 - "inventory_infrastructure.py"
-Cohesion: 0.20
-Nodes (11): audit(), audit_member(), main(), Counter, Path, rf_role(), sorted_counter(), usable_text() (+3 more)
+Cohesion: 0.08
+Nodes (30): audit(), audit_member(), main(), Counter, Path, rf_role(), sorted_counter(), usable_text() (+22 more)
 
 ### Community 61 - "build"
 Cohesion: 0.35
@@ -476,17 +472,9 @@ Nodes (8): evaluate(), main(), prior_statuses(), Path, Amostrador de GeoTIFFs co
 Cohesion: 0.24
 Nodes (10): atomic_json(), extract_archive(), extract_receipt(), feature(), inspect_geotiff(), main(), Path, sha256_file() (+2 more)
 
-### Community 85 - "write_fixture"
-Cohesion: 0.47
-Nodes (4): CanonicalSmpTest, Path, read_gzip_csv(), write_fixture()
-
 ### Community 86 - "build_canonical_smp.py"
 Cohesion: 0.35
 Nodes (10): build(), canonical_coordinate(), deterministic_gzip_csv(), dominant_code(), main(), Counter, Path, Abre CSV gzip reproduzível, sem nome ou horário variável no cabeçalho. (+2 more)
-
-### Community 87 - "inventory_infrastructure.py"
-Cohesion: 0.27
-Nodes (9): main(), parse_args(), Path, read_anac_csv(), read_anatel_zip(), read_decea_capabilities(), sha256(), InfrastructureInventoryTest (+1 more)
 
 ### Community 88 - "build_municipal_emitter_network.py"
 Cohesion: 0.27
@@ -501,8 +489,8 @@ Cohesion: 0.13
 Nodes (15): build(), build_graph(), component_summary(), main(), node_id(), MultiDiGraph, Path, apply_context() (+7 more)
 
 ### Community 91 - "extract_anatel_radio_link_keys.py"
-Cohesion: 0.21
-Nodes (11): clean(), extract(), main(), Path, file_sha256(), inventory(), main(), Path (+3 more)
+Cohesion: 0.17
+Nodes (9): clean(), extract(), main(), Path, extract(), main(), Path, RawLinkKeysTest (+1 more)
 
 ### Community 93 - "consolidate_anatel_radio_link_prequalification.py"
 Cohesion: 0.31
@@ -548,10 +536,6 @@ Nodes (9): generate(), intersecting(), load_tiles(), main(), pixel_window(), Pat
 Cohesion: 0.22
 Nodes (8): Construção proposta, Estado, Experimentos previstos, Heurística de malha triangular cooperativa, Iluminadores dentro dos triângulos, Métricas mínimas, Objetivos e restrições a testar, Origem e objetivo
 
-### Community 114 - "extract_anatel_radio_links.py"
-Cohesion: 0.33
-Nodes (4): extract(), main(), Path, RadioLinkExtractionTest
-
 ### Community 115 - "Methodological gaps"
 Cohesion: 0.40
 Nodes (5): Closed-set and dataset-leakage risks, Inconsistent metrics, Insufficient adversarial testing, Lack of end-to-end evaluation, Methodological gaps
@@ -569,8 +553,8 @@ Cohesion: 0.50
 Nodes (3): Aquisição, Extração e índice, Folhas TOPODATA das arestas priorizadas
 
 ### Community 127 - "validate_anatel_radio_link_geometry.py"
-Cohesion: 0.08
-Nodes (27): build(), covering_tile(), Mosaica amostras TOPODATA para uma superfície regional Blender.  Não produz uma, Abre uma vez as folhas e registra suas extensões geográficas., Lê blocos por folha, evitando uma chamada GDAL por vértice., sample_grid(), tile_catalog(), build() (+19 more)
+Cohesion: 0.07
+Nodes (29): build(), covering_tile(), Mosaica amostras TOPODATA para uma superfície regional Blender.  Não produz uma, Abre uma vez as folhas e registra suas extensões geográficas., Lê blocos por folha, evitando uma chamada GDAL por vértice., sample_grid(), tile_catalog(), build() (+21 more)
 
 ### Community 131 - "analyze_augmented_mesh_resilience.py"
 Cohesion: 0.23
@@ -628,10 +612,6 @@ Nodes (6): build(), los_profile(), main(), Path, status(), ProfileAugmentedMeshE
 Cohesion: 0.32
 Nodes (5): main(), Path, select(), tile_name(), TopodataTileTest
 
-### Community 146 - "validate_anatel_radio_link_vertical_geometry.py"
-Cohesion: 0.23
-Nodes (7): VerticalGeometryTest, angular_error(), elevation_angle(), main(), Path, status(), validate()
-
 ### Community 147 - "validate_anatel_radio_link_geometry.py"
 Cohesion: 0.31
 Nodes (6): GeometryTest, angular_error(), bearing(), main(), Path, validate()
@@ -645,8 +625,8 @@ Nodes (6): GeometryTest, angular_error(), bearing(), main(), Path, validate()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plano Diretor de Infraestrutura Tática` connect `Plano Diretor de Infraestrutura Tática` to `Projeto_Radomes_Multifaixa_Revisado.md`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Why does `requirements()` connect `build_augmented_candidate_graph.py` to `select_topodata_route_tiles.py`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **Why does `build()` connect `build` to `inventory_infrastructure.py`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **Are the 14 inferred relationships involving `ZipFile` (e.g. with `audit_broadcast()` and `audit_smp()`) actually correct?**
   _`ZipFile` has 14 INFERRED edges - model-reasoned connections that need verification._

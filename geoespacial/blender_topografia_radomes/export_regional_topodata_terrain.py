@@ -11,7 +11,7 @@ from pathlib import Path
 
 from osgeo import gdal
 
-from regional_terrain_geometry import grid_shape, regional_bounds
+from regional_terrain_geometry import checked_bounds, grid_shape, regional_bounds
 
 gdal.PushErrorHandler("CPLQuietErrorHandler")
 
@@ -74,9 +74,9 @@ def sample_grid(catalog, longitudes, latitudes, allow_gaps=False):
     return elevations
 
 
-def build(selection, terrain_root, output, spacing_degrees=.02, margin_degrees=.25, allow_gaps=False):
+def build(selection, terrain_root, output, spacing_degrees=.02, margin_degrees=.25, allow_gaps=False, bbox=None):
     selected = json.loads(selection.read_text(encoding="utf-8"))["selected_sites"]
-    bounds = regional_bounds(selected, margin_degrees)
+    bounds = checked_bounds(bbox) if bbox is not None else regional_bounds(selected, margin_degrees)
     longitudes, latitudes = grid_shape(bounds, spacing_degrees)
     catalog = tile_catalog(terrain_root)
     if not catalog:
@@ -112,6 +112,7 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--spacing-degrees", type=float, default=.02)
     parser.add_argument("--margin-degrees", type=float, default=.25)
+    parser.add_argument("--bbox", type=float, nargs=4, metavar=("WEST", "SOUTH", "EAST", "NORTH"), help="Moldura WGS84 explícita; substitui a margem automática")
     parser.add_argument("--allow-gaps", action="store_true", help="Registra lacunas como faces ausentes, sem interpolar cotas")
     arguments = parser.parse_args()
-    build(arguments.selection, arguments.terrain_root, arguments.output, arguments.spacing_degrees, arguments.margin_degrees, arguments.allow_gaps)
+    build(arguments.selection, arguments.terrain_root, arguments.output, arguments.spacing_degrees, arguments.margin_degrees, arguments.allow_gaps, arguments.bbox)

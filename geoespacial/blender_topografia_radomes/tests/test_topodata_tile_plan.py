@@ -1,7 +1,7 @@
 import unittest
 
 from topodata_tile_plan import starts, windows
-from regional_terrain_geometry import grid_shape, regional_bounds
+from regional_terrain_geometry import checked_bounds, grid_shape, regional_bounds
 
 
 class TopodataTilePlanTest(unittest.TestCase):
@@ -23,6 +23,11 @@ class TopodataTilePlanTest(unittest.TestCase):
         longitudes, latitudes = grid_shape(bounds, .2)
         self.assertEqual((longitudes[0], longitudes[-1]), (-48.25, -45.75))
         self.assertEqual((latitudes[0], latitudes[-1]), (-22.25, -15.75))
+
+    def test_explicit_regional_bounds_are_validated(self):
+        self.assertEqual(checked_bounds((-50, -22, -45, -15)), (-50.0, -22.0, -45.0, -15.0))
+        with self.assertRaises(ValueError):
+            checked_bounds((-45, -22, -50, -15))
 
 
 if __name__ == "__main__":
