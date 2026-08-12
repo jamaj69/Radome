@@ -75,3 +75,14 @@ bash geoespacial/blender_topografia_radomes/render_on_host.sh --top-down 1 /cami
 
 O resultado é `build/topodata_top_down.blend` e `build/topodata_top_down.png`.
 O radome permanece acima do terreno e a câmera ortográfica fica no zênite.
+
+### Textura TOPODATA RS
+
+O modo `--topodata-rs` baixa de forma validada as folhas oficiais `RS` de relevo
+sombreado correspondentes às três folhas `ZN`, extrai os GeoTIFFs e recorta cada
+textura à janela exata da malha. Assim, `ZN` determina os vértices e `RS` a
+aparência sombreada alinhada, sem alegar cobertura do solo ou imagem de satélite.
+
+```bash
+bash geoespacial/blender_topografia_radomes/render_on_host.sh --topodata-rs 0
+```

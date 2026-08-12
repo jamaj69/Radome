@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "acquisition_receipt": "geoespacial/blender_topografia_radomes/build/topodata_hillshade_receipt.json",
+  "acquisition_receipt_sha256": "433b2ee3323378a3b91c14028d50c2e3feb56049460250f7be5c586f6a17e308",
+  "requested_archive_count": 3,
+  "completed_archive_count": 3,
+  "failed_archive_count": 0,
+  "complete": true,
+  "geotiff_size_bytes": 233281242,
+  "missing_archive_names_from_selection": [],
+  "crs": "EPSG:4326",
+  "pixel_interpretation": "PixelIsArea",
+  "updated_at_utc": "2026-08-12T02:36:07.215545+00:00",
+  "tiles": [
+    {
+      "archive": "15S48_RS.zip",
+      "archive_sha256": "3bf5903149e0f05b6ac62cea7e5b73b42b105ef09140284ecb2f5950a1bd3adc",
+      "status": "extracted",
+      "geotiff": "15S48_RS.tif",
+      "geotiff_size_bytes": 77760414,
+      "geotiff_sha256": "8aee2d7694e77ec6982273808569315607f976e8724e91b8995a31464acce3a5",
+      "width": 5400,
+      "height": 3600,
+      "pixel_size_x_degrees": 0.0002777784814814818,
+      "pixel_size_y_degrees": 0.0002777775000000002,
+      "bbox_wgs84": [
+        -48.0,
+        -15.999999,
+        -46.4999962,
+        -15.0
+      ],
+      "center_sample_m": 0.7056630253791809
+    },
+    {
+      "archive": "16S495RS.zip",
+      "archive_sha256": "a1a9f65068593a570a0e19d1524546726a2301f34d585f0dc69a0a58e5d12887",
+      "status": "extracted",
+      "geotiff": "16S495RS.tif",
+      "geotiff_size_bytes": 77760414,
+      "geotiff_sha256": "5cd21b2e569dc35ee5b55cc5b24146ae14d38c082404c67ff571ba89634f4c97",
+      "width": 5400,
+      "height": 3600,
+      "pixel_size_x_degrees": 0.0002777784814814818,
+      "pixel_size_y_degrees": 0.0002777777777777778,
+      "bbox_wgs84": [
+        -49.5,
+        -17.0,
+        -47.9999962,
+        -16.0
+      ],
+      "center_sample_m": 0.6712877154350281
+    },
+    {
+      "archive": "21S48_RS.zip",
+      "archive_sha256": "0143d9e19805316234fe3de6d48fc1920b98c478c701d68fb9297456fbc6b82a",
+      "status": "extracted",
+      "geotiff": "21S48_RS.tif",
+      "geotiff_size_bytes": 77760414,
+      "geotiff_sha256": "f63954a65b32b2bd95f9f6b26df6c7069d3bc96d42e96bb1bfdaf8380bd22e85",
+      "width": 5400,
+      "height": 3600,
+      "pixel_size_x_degrees": 0.0002777784814814818,
+      "pixel_size_y_degrees": 0.0002777777777777778,
+      "bbox_wgs84": [
+        -48.0,
+        -22.0,
+        -46.4999962,
+        -21.0
+      ],
+      "center_sample_m": 0.7756845355033875
+    }
+  ]
+}

@@ -126,6 +126,8 @@ def build(terrain, blend, render, site_index=0, vertical_exaggeration=1.5, sampl
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.object.delete(use_global=False)
     site = terrain["sites"][site_index]
+    if orthophoto is None and site.get("hillshade_texture"):
+        orthophoto = Path(site["hillshade_texture"])
     _, reference = add_terrain(site, vertical_exaggeration, orthophoto)
     target = add_radome(site, reference, vertical_exaggeration)
     vertices, _, _ = terrain_geometry(site, vertical_exaggeration)

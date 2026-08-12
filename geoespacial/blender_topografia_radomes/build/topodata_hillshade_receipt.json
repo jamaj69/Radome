@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "product": "TOPODATA_RS_hillshade",
+  "selection": "geoespacial/blender_topografia_radomes/build/selected_sites.json",
+  "selection_sha256": "ca0fb63b96234573f133262d0decd3710ce06bcd482cc95175e16c8795a1324c",
+  "terrain": "geoespacial/blender_topografia_radomes/build/topodata_terrain.json",
+  "terrain_sha256": "9601cac3db97939a6be8a09912c28a3d1c84e2ed8605dffe82c49f7bee6a4f00",
+  "archives": [
+    {
+      "name": "15S48_RS.zip",
+      "url": "http://www.dsr.inpe.br/topodata/data/geotiff/15S48_RS.zip",
+      "site": "Brasília",
+      "status": "downloaded",
+      "actual_size_bytes": 66090771,
+      "sha256": "3bf5903149e0f05b6ac62cea7e5b73b42b105ef09140284ecb2f5950a1bd3adc",
+      "zip_member_count": 1
+    },
+    {
+      "name": "16S495RS.zip",
+      "url": "http://www.dsr.inpe.br/topodata/data/geotiff/16S495RS.zip",
+      "site": "Aeroporto_Anápolis",
+      "status": "downloaded",
+      "actual_size_bytes": 66955548,
+      "sha256": "a1a9f65068593a570a0e19d1524546726a2301f34d585f0dc69a0a58e5d12887",
+      "zip_member_count": 1
+    },
+    {
+      "name": "21S48_RS.zip",
+      "url": "http://www.dsr.inpe.br/topodata/data/geotiff/21S48_RS.zip",
+      "site": "Aeroporto_Juiz_de_Fora",
+      "status": "downloaded",
+      "actual_size_bytes": 66843191,
+      "sha256": "0143d9e19805316234fe3de6d48fc1920b98c478c701d68fb9297456fbc6b82a",
+      "zip_member_count": 1
+    }
+  ],
+  "complete": true,
+  "semantics": "TOPODATA relevo sombreado (RS), apenas para textura cartografica; Z continua derivado de ZN."
+}

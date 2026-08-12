@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from osgeo import gdal
+from PIL import Image
 from terrain_mesh_geometry import vertices_from_window
 
 gdal.PushErrorHandler("CPLQuietErrorHandler")
@@ -22,7 +23,24 @@ def tile_for(root, longitude, latitude):
     raise ValueError(f"Nenhuma folha TOPODATA cobre {longitude}, {latitude}")
 
 
-def build(selection, terrain_root, output, size=241, step=1):
+def hillshade_path(shade_root, altitude_tile):
+    stem = Path(altitude_tile).stem
+    return shade_root / f"{stem[:-2]}RS.tif"
+
+
+def write_hillshade(dataset, first_column, first_row, size, output):
+    values = dataset.GetRasterBand(1).ReadAsArray(first_column, first_row, size, size)
+    low, high = float(values.min()), float(values.max())
+    if high <= low:
+        pixels = values * 0 + 127
+    else:
+        pixels = (values - low) * (255 / (high - low))
+    image = Image.fromarray(pixels.astype("uint8"))
+    output.parent.mkdir(parents=True, exist_ok=True)
+    image.save(output)
+
+
+def build(selection, terrain_root, output, size=241, step=1, shade_root=None, shade_output_dir=None):
     if size < 3 or step < 1:
         raise ValueError("size deve ser pelo menos 3 e step deve ser positivo")
     sites = []
@@ -37,13 +55,21 @@ def build(selection, terrain_root, output, size=241, step=1):
             raise ValueError(f"Janela {size}x{size} excede os limites de {path.name}")
         values = dataset.GetRasterBand(1).ReadAsArray(first_column, first_row, size, size)
         vertices, width, height = vertices_from_window(values, transform, first_column, first_row, step)
-        sites.append({
+        item = {
             "name": site["name"], "display_name": site["display_name"],
             "longitude": site["longitude"], "latitude": site["latitude"],
             "tile": path.name, "width": width, "height": height,
             "sample_spacing_arc_seconds": abs(transform[1]) * 3600 * step,
             "vertices": vertices,
-        })
+        }
+        if shade_root and shade_output_dir:
+            source = hillshade_path(shade_root, path.name)
+            if not source.exists():
+                raise ValueError(f"Relevo sombreado RS ausente: {source}")
+            texture = shade_output_dir / f"{Path(path.name).stem[:-2]}RS_window.png"
+            write_hillshade(gdal.Open(str(source)), first_column, first_row, size, texture)
+            item["hillshade_texture"] = str(texture)
+        sites.append(item)
     result = {
         "schema_version": 2,
         "sites": sites,
@@ -61,5 +87,7 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--size", type=int, default=241, help="Lado da janela DEM em celulas")
     parser.add_argument("--step", type=int, default=1, help="Passo de amostragem em celulas")
+    parser.add_argument("--shade-root", type=Path)
+    parser.add_argument("--shade-output-dir", type=Path)
     arguments = parser.parse_args()
-    build(arguments.selection, arguments.terrain_root, arguments.output, arguments.size, arguments.step)
+    build(arguments.selection, arguments.terrain_root, arguments.output, arguments.size, arguments.step, arguments.shade_root, arguments.shade_output_dir)

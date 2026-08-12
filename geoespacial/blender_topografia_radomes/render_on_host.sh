@@ -11,6 +11,8 @@ system_python="/usr/bin/python3"
 subproject="geoespacial/blender_topografia_radomes"
 build="$subproject/build"
 terrain_root="geoespacial/data/processed/topodata/radio_link_routes"
+hillshade_raw="geoespacial/data/raw/topodata/hillshade"
+hillshade_processed="geoespacial/data/processed/topodata/hillshade"
 
 command -v blender >/dev/null || { echo "Blender não encontrado no PATH." >&2; exit 1; }
 "$system_python" -c "import osgeo" || { echo "GDAL/OSGeo não disponível em $system_python." >&2; exit 1; }
@@ -33,6 +35,24 @@ fi
     --selection "$build/selected_sites.json" \
     --terrain-root "$terrain_root" \
     --output "$build/topodata_terrain.json"
+
+if [[ "${1:-}" == "--topodata-rs" ]]; then
+    "$python_bin" "$subproject/acquire_topodata_hillshade.py" \
+        --selection "$build/selected_sites.json" --terrain "$build/topodata_terrain.json" \
+        --output-dir "$hillshade_raw" --receipt "$build/topodata_hillshade_receipt.json"
+    "$python_bin" geoespacial/extract_topodata_route_tiles.py \
+        --receipt "$build/topodata_hillshade_receipt.json" --archive-dir "$hillshade_raw" \
+        --target-dir "$hillshade_processed" --report "$build/topodata_hillshade_extraction.json" \
+        --index "$build/topodata_hillshade_index.geojson" --index-name topodata_hillshade
+    "$system_python" "$subproject/export_topodata_terrain_mesh.py" \
+        --selection "$build/selected_sites.json" --terrain-root "$terrain_root" \
+        --output "$build/topodata_terrain.json" --shade-root "$hillshade_processed" \
+        --shade-output-dir "$build/topodata_hillshade_windows"
+    exec blender -b --python "$subproject/render_topodata_local_terrain.py" -- \
+        --terrain "$build/topodata_terrain.json" --blend "$build/topodata_rs_terrain.blend" \
+        --render "$build/topodata_rs_terrain.png" --site-index "${2:-0}" \
+        --vertical-exaggeration 1.5 --samples 128 --top-down
+fi
 
 if [[ "${1:-}" == "--local-terrain" ]]; then
     exec blender -b --python "$subproject/render_topodata_local_terrain.py" -- \

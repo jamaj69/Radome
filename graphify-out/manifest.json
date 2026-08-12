@@ -1450,8 +1450,8 @@
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/README.md": {
-    "mtime": 1786501696.4020286,
-    "ast_hash": "7193c94e83903bf178ef5207bab9a2a7",
+    "mtime": 1786502086.288213,
+    "ast_hash": "96520d043a20c62964e85edbd8411306",
     "semantic_hash": ""
   },
   "geoespacial/tests/test_select_blender_visual_sites.py": {
@@ -1465,8 +1465,8 @@
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/export_topodata_terrain_mesh.py": {
-    "mtime": 1786501058.2249937,
-    "ast_hash": "edcd07c8b7c595faf15afb61cc6ecb3b",
+    "mtime": 1786502260.955404,
+    "ast_hash": "854a91002522f73b6cc3df45010d14fd",
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/assets/nasa_blue_marble_topography_bathymetry_april_5400x2700.jpg": {
@@ -1475,13 +1475,13 @@
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/render_on_host.sh": {
-    "mtime": 1786501696.2340293,
-    "ast_hash": "0e4c3bbbaa1d7ea3b78090a19474c102",
+    "mtime": 1786502086.1122139,
+    "ast_hash": "f3d1be65a28645f3469bdaedf286cbeb",
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/render_topodata_local_terrain.py": {
-    "mtime": 1786501715.3139405,
-    "ast_hash": "ed50806267b1148e42a297531e8618d2",
+    "mtime": 1786502085.9402146,
+    "ast_hash": "c676670db43c4c38f343d7a95d3f3b61",
     "semantic_hash": ""
   },
   "geoespacial/blender_topografia_radomes/terrain_mesh_geometry.py": {
@@ -1497,6 +1497,16 @@
   "geoespacial/tests/test_render_topodata_local_terrain.py": {
     "mtime": 1786501023.441154,
     "ast_hash": "8eadd5a6616b3f3bb2662b752c5b9e49",
+    "semantic_hash": ""
+  },
+  "geoespacial/blender_topografia_radomes/acquire_topodata_hillshade.py": {
+    "mtime": 1786502099.9281495,
+    "ast_hash": "70aa55debdb3d6ed62b04300311a6001",
+    "semantic_hash": ""
+  },
+  "geoespacial/tests/test_acquire_topodata_hillshade.py": {
+    "mtime": 1786502100.0921488,
+    "ast_hash": "c8af88b2536203f168ed3449cbe0e7a2",
     "semantic_hash": ""
   }
 }
